@@ -973,7 +973,7 @@ msgid "Scroll by sort letter"
 msgstr ""
 
 #/16x9/Content_Settings.xml
-msgctxt "#31553
+msgctxt "#31553"
 msgid "When enabled, press down on horizontal scrollbars and right on vertical scrollbars to scroll by sort letter/number. This is dependent on the sort method currently selected. You can scroll by Name, File, Artist, Artist/Year, Album, Title, Original title, Rating, User rating, Play count, Number of discs, Duration, Appearances."
 msgstr ""
 
