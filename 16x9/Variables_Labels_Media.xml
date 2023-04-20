@@ -57,8 +57,8 @@
 	</variable>
 
 	<variable name="Auto_Update_Label">
-		<value condition="String.Contains(Skin.String(AutoUpdate),off)">$LOCALIZE[31475]</value>
-		<value>$LOCALIZE[31474]</value>
+		<value condition="String.Contains(Skin.String(AutoUpdate),off)">$LOCALIZE[31474] $VAR[Copacetic_Divider] $LOCALIZE[351]</value>
+		<value>$LOCALIZE[31474] $VAR[Copacetic_Divider] $LOCALIZE[34222]</value>
 	</variable>
 
 	<variable name="Info_Label">

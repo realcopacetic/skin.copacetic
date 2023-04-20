@@ -13,3 +13,16 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 * __jurialmunkey__ for all the best-practice code examples and forum support.
 
 * __sualfred__ for plenty of inspiration and [script.embuary.helper](https://github.com/sualfred/script.embuary.helper), which provided some key functionality before the release of new Nexus features.
+
+### Changelog
+**1.0.2**
+- Fixed 2 msgstr formatting errors in language\resource.language.en_gb\strings.po
+- Fixed auto-update button on DialogAddonInfo.xml. Previously even though the label was updating between on/off, it wasn't actually changing the underlying status of the control.
+- Fixed label for audo-update button on DialogAddonInfo.xml adding a forward slash between the name and the value.
+
+**1.0.1**
+- Fix for fontset issue causing some users to have issues switching to the skin. Thanks to **beatmasterRS** for providing the fix.
+- Fix for a bug that caused folder names in gridview for containers with files to sometimes get stuck on the name of a previously focused listitem.
+
+**1.0.0** 
+- Initial release.

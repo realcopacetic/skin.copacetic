@@ -782,12 +782,12 @@ msgstr ""
 #/16x9/Content_Settings.xml
 msgctxt "#31429"
 msgid "Enable home screen widgets"
-msgstr "
+msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31529"
 msgid "Add widgets to your homescreen. To configure, go to the Widgets tab in the left menu. Choose from preset widgets, such as 'Continue watching', 'Next up' and 'Liked songs', or configure your own using any plugin source. Then select the view and display type you want to use for each widget. For custom widgets, you can also set the name, sort method and limit."
-msgstr "
+msgstr ""
 
 #: NEW
 #/16x9/Variables_Labels_Media.xml
@@ -1155,12 +1155,7 @@ msgstr ""
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31474"
-msgid "Auto-update on"
-msgstr ""
-
-#/16x9/Variables_Labels_Media.xml
-msgctxt "#31475"
-msgid "Auto-update off"
+msgid "Auto-update"
 msgstr ""
 
 
