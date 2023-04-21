@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-04-20 13:41+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2023-04-21 08:56+0000\n"
+"Last-Translator: Alfonso Cachero <alfonso.cachero@gmail.com>\n"
 "Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/es_es/>\n"
 "Language: es_es\n"
 "MIME-Version: 1.0\n"
@@ -38,22 +38,22 @@ msgstr "Lista"
 #Common
 msgctxt "#31001"
 msgid "Billboard"
-msgstr ""
+msgstr "Cartelera"
 
 #Common
 msgctxt "#31002"
 msgid "Showcase"
-msgstr ""
+msgstr "Escaparate"
 
 #Common
 msgctxt "#31003"
 msgid "Strip"
-msgstr ""
+msgstr "Tira"
 
 #Common
 msgctxt "#31004"
 msgid "Grid"
-msgstr ""
+msgstr "Parrilla"
 
 #Common
 msgctxt "#31005"
@@ -79,23 +79,23 @@ msgstr "Cuadrado"
 #: T
 msgctxt "#31009"
 msgid "Like song"
-msgstr ""
+msgstr "Me gusta la canción"
 
 #/16x9/Templates_Dialogs.xml, /16x9/Notifications.xml
 msgctxt "#31010"
 msgid "Unlike song"
-msgstr ""
+msgstr "No me gusta la canción"
 
 #/16x9/Templates_Dialogs.xml, /16x9/Content_Infoscreens.xml
 msgctxt "#31011"
 msgid "Create radio station"
-msgstr ""
+msgstr "Crear emisora de radio"
 
 #/16x9/Content_Viewtype_Options.xml
 #: V
 msgctxt "#31012"
 msgid "Sort"
-msgstr ""
+msgstr "Ordenar"
 
 #/16x9/Content_Viewtype_Options.xml
 msgctxt "#31013"
@@ -105,7 +105,7 @@ msgstr "Orden"
 #/16x9/Content_Viewtype_Options.xml
 msgctxt "#31014"
 msgid "Include"
-msgstr ""
+msgstr "Incluir"
 
 #/16x9/Content_Viewtype_Options.xml
 msgctxt "#31015"
@@ -120,42 +120,42 @@ msgstr "Detalles"
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31017"
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31018"
 msgid "Title and Info"
-msgstr ""
+msgstr "Título e Información"
 
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31019"
 msgid "Title and Plot"
-msgstr ""
+msgstr "Título y Trama"
 
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31020"
 msgid "Title and Biography"
-msgstr ""
+msgstr "Título y Biografía"
 
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31021"
 msgid "Title and Review"
-msgstr ""
+msgstr "Título y Crítica"
 
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31022"
 msgid "Title and Description"
-msgstr ""
+msgstr "Título y Descripción"
 
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31023"
 msgid "Clearlogos"
-msgstr ""
+msgstr "Clearlogos"
 
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31024"
 msgid "Flags"
-msgstr ""
+msgstr "Banderas"
 
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31025"
@@ -165,7 +165,7 @@ msgstr "Estudio"
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31026"
 msgid "Age rating"
-msgstr ""
+msgstr "Clasificación de edad"
 
 #/16x9/Content_Viewtype_Options_List.xml
 msgctxt "#31027"
@@ -180,12 +180,12 @@ msgstr "Lateral"
 #/16x9/Content_Viewtype_Options_Showcase.xml
 msgctxt "#31029"
 msgid "Overlay"
-msgstr ""
+msgstr "Cubierta"
 
 #/16x9/Content_Viewtype_Options_Grid.xml
 msgctxt "#31030"
 msgid "Breadcrumb"
-msgstr ""
+msgstr "Miga de pan"
 
 #########################################################################################################
 #########################################################################################################
@@ -199,12 +199,12 @@ msgstr "Termina"
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31101"
 msgid "Rating"
-msgstr ""
+msgstr "Clasificación"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31102"
 msgid "Credit"
-msgstr ""
+msgstr "Crédito"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31103"
@@ -214,22 +214,22 @@ msgstr "para"
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31104"
 msgid "including"
-msgstr ""
+msgstr "incluyendo"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31105"
 msgid "8K"
-msgstr ""
+msgstr "8K"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31106"
 msgid "4K"
-msgstr ""
+msgstr "4K"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31107"
 msgid "Dolby Vision"
-msgstr ""
+msgstr "Dolby Vision"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31108"
@@ -239,52 +239,52 @@ msgstr "HDR"
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31109"
 msgid "Ultra HD"
-msgstr ""
+msgstr "UltraHD"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31110"
 msgid "Full HD"
-msgstr ""
+msgstr "FullHD"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31111"
 msgid "HD"
-msgstr ""
+msgstr "HD"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31112"
 msgid "SD"
-msgstr ""
+msgstr "SD"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31113"
 msgid "HLG"
-msgstr ""
+msgstr "HLG"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31114"
 msgid "mins"
-msgstr ""
+msgstr "mins"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31115"
 msgid "pics"
-msgstr ""
+msgstr "fotos"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31116"
 msgid "pic"
-msgstr ""
+msgstr "foto"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31117"
 msgid "channels"
-msgstr ""
+msgstr "canales"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31118"
 msgid "channel"
-msgstr ""
+msgstr "canal"
 
 #########################################################################################################
 #########################################################################################################
@@ -344,7 +344,7 @@ msgstr "Últimos álbumes"
 #/16x9/Variables_Labels_Widgets.xml
 msgctxt "#31207"
 msgid "Recently played albums"
-msgstr ""
+msgstr "Álbumes reproducidos recientemente"
 
 #/16x9/Components_Settings.xml
 #/16x9/Templates_Widgets.xml

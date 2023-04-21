@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-04-20 13:41+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2023-04-21 04:17+0000\n"
+"Last-Translator: Massimo Pissarello <mapi68@gmail.com>\n"
 "Language-Team: Italian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/it_it/>\n"
 "Language: it_it\n"
 "MIME-Version: 1.0\n"
@@ -38,22 +38,22 @@ msgstr "Elenco"
 #Common
 msgctxt "#31001"
 msgid "Billboard"
-msgstr ""
+msgstr "Tabellone"
 
 #Common
 msgctxt "#31002"
 msgid "Showcase"
-msgstr ""
+msgstr "Vetrina"
 
 #Common
 msgctxt "#31003"
 msgid "Strip"
-msgstr ""
+msgstr "Striscia"
 
 #Common
 msgctxt "#31004"
 msgid "Grid"
-msgstr ""
+msgstr "Griglia"
 
 #Common
 msgctxt "#31005"
@@ -79,23 +79,23 @@ msgstr "Quadrato"
 #: T
 msgctxt "#31009"
 msgid "Like song"
-msgstr ""
+msgstr "Brano piaciuto"
 
 #/16x9/Templates_Dialogs.xml, /16x9/Notifications.xml
 msgctxt "#31010"
 msgid "Unlike song"
-msgstr ""
+msgstr "Brano non piaciuto"
 
 #/16x9/Templates_Dialogs.xml, /16x9/Content_Infoscreens.xml
 msgctxt "#31011"
 msgid "Create radio station"
-msgstr ""
+msgstr "Crea stazione radio"
 
 #/16x9/Content_Viewtype_Options.xml
 #: V
 msgctxt "#31012"
 msgid "Sort"
-msgstr ""
+msgstr "Ordina"
 
 #/16x9/Content_Viewtype_Options.xml
 msgctxt "#31013"
@@ -105,7 +105,7 @@ msgstr "Ordinamento"
 #/16x9/Content_Viewtype_Options.xml
 msgctxt "#31014"
 msgid "Include"
-msgstr ""
+msgstr "Includi"
 
 #/16x9/Content_Viewtype_Options.xml
 msgctxt "#31015"
@@ -120,42 +120,42 @@ msgstr "Dettagli"
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31017"
 msgid "Title"
-msgstr ""
+msgstr "Titolo"
 
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31018"
 msgid "Title and Info"
-msgstr ""
+msgstr "Titolo e Info"
 
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31019"
 msgid "Title and Plot"
-msgstr ""
+msgstr "Titolo e trama"
 
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31020"
 msgid "Title and Biography"
-msgstr ""
+msgstr "Titolo e biografia"
 
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31021"
 msgid "Title and Review"
-msgstr ""
+msgstr "Titolo e recensione"
 
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31022"
 msgid "Title and Description"
-msgstr ""
+msgstr "Titolo e descrizione"
 
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31023"
 msgid "Clearlogos"
-msgstr ""
+msgstr "Loghi trasparenti"
 
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31024"
 msgid "Flags"
-msgstr ""
+msgstr "Bandiere"
 
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31025"
@@ -165,7 +165,7 @@ msgstr "Studio"
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31026"
 msgid "Age rating"
-msgstr ""
+msgstr "Classificazione per età"
 
 #/16x9/Content_Viewtype_Options_List.xml
 msgctxt "#31027"
@@ -180,12 +180,12 @@ msgstr "Laterale"
 #/16x9/Content_Viewtype_Options_Showcase.xml
 msgctxt "#31029"
 msgid "Overlay"
-msgstr ""
+msgstr "Sovrapposizione"
 
 #/16x9/Content_Viewtype_Options_Grid.xml
 msgctxt "#31030"
 msgid "Breadcrumb"
-msgstr ""
+msgstr "Percorso di navigazione"
 
 #########################################################################################################
 #########################################################################################################
@@ -199,12 +199,12 @@ msgstr "Fine"
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31101"
 msgid "Rating"
-msgstr ""
+msgstr "Valutazione"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31102"
 msgid "Credit"
-msgstr ""
+msgstr "Crediti"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31103"
@@ -214,22 +214,22 @@ msgstr "per"
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31104"
 msgid "including"
-msgstr ""
+msgstr "Compreso"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31105"
 msgid "8K"
-msgstr ""
+msgstr "8K"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31106"
 msgid "4K"
-msgstr ""
+msgstr "4K"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31107"
 msgid "Dolby Vision"
-msgstr ""
+msgstr "Dolby Vision"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31108"
@@ -239,52 +239,52 @@ msgstr "HDR"
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31109"
 msgid "Ultra HD"
-msgstr ""
+msgstr "Ultra HD"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31110"
 msgid "Full HD"
-msgstr ""
+msgstr "Full HD"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31111"
 msgid "HD"
-msgstr ""
+msgstr "HD"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31112"
 msgid "SD"
-msgstr ""
+msgstr "SD"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31113"
 msgid "HLG"
-msgstr ""
+msgstr "HLG"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31114"
 msgid "mins"
-msgstr ""
+msgstr "min"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31115"
 msgid "pics"
-msgstr ""
+msgstr "foto"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31116"
 msgid "pic"
-msgstr ""
+msgstr "foto"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31117"
 msgid "channels"
-msgstr ""
+msgstr "canali"
 
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31118"
 msgid "channel"
-msgstr ""
+msgstr "canale"
 
 #########################################################################################################
 #########################################################################################################
@@ -344,7 +344,7 @@ msgstr "Ultimi album"
 #/16x9/Variables_Labels_Widgets.xml
 msgctxt "#31207"
 msgid "Recently played albums"
-msgstr ""
+msgstr "Album riprodotti di recente"
 
 #/16x9/Components_Settings.xml
 #/16x9/Templates_Widgets.xml
@@ -358,7 +358,7 @@ msgstr "Album casuali"
 #/16x9/Variables_Labels_Widgets.xml
 msgctxt "#31209"
 msgid "Liked songs"
-msgstr ""
+msgstr "Brani piaciuti"
 
 #/16x9/Components_Settings.xml, 16x9/Content_Settings.xml
 #/16x9/Variables_Labels_Widgets.xml
@@ -375,7 +375,7 @@ msgstr "Altri"
 #/16x9/Templates_Widgets.xml
 msgctxt "#31212"
 msgid "Most played"
-msgstr ""
+msgstr "Più riprodotti"
 
 #/16x9/Templates_Widgets.xml
 msgctxt "#31213"
@@ -390,18 +390,18 @@ msgstr "Artisti simili"
 #/16x9/Variables_Labels_Widgets.xml
 msgctxt "#31215"
 msgid "Similar songs"
-msgstr ""
+msgstr "Brani simili"
 
 #/16x9/Variables_Labels_Widgets.xml
 #: V
 msgctxt "#31216"
 msgid "More from Season"
-msgstr ""
+msgstr "Altro dalla stagione"
 
 #/16x9/Variables_Labels_Widgets.xml
 msgctxt "#31217"
 msgid "Episodes from Season"
-msgstr ""
+msgstr "Episodi dalla stagione"
 
 #/16x9/Variables_Labels_Widgets.xml
 msgctxt "#31218"
@@ -416,17 +416,17 @@ msgstr "Altri di"
 #/16x9/Variables_Labels_Widgets.xml
 msgctxt "#31220"
 msgid "More soundtracks"
-msgstr ""
+msgstr "Altre colonne sonore"
 
 #/16x9/Variables_Labels_Widgets.xml
 msgctxt "#31221"
 msgid "Similar albums"
-msgstr ""
+msgstr "Album simili"
 
 #/16x9/Variables_Labels_Widgets.xml
 msgctxt "#31222"
 msgid "Featuring"
-msgstr ""
+msgstr "Con"
 
 #########################################################################################################
 #########################################################################################################
@@ -451,12 +451,12 @@ msgstr "Indietro veloce"
 #/16x9/Content_OSD.xml
 msgctxt "#31303"
 msgid "Forward"
-msgstr ""
+msgstr "Avanti veloce"
 
 #/16x9/Content_OSD.xml
 msgctxt "#31304"
 msgid "Rating"
-msgstr ""
+msgstr "Valutazione"
 
 #/16x9/Content_OSD.xml
 msgctxt "#31305"
@@ -477,12 +477,12 @@ msgstr "A schermo intero"
 #: C
 msgctxt "#31400"
 msgid "General"
-msgstr "MenuGenerale"
+msgstr "Generale"
 
 #/16x9/Content_Settings.xml
 msgctxt "#31500"
 msgid "Configure your Copacetic theme, menus and the background art service."
-msgstr ""
+msgstr "Configura il tuo tema Copacetic, i menu e il servizio di background art."
 
 #/16x9/Content_Settings.xml
 #/16x9/Content.xml
@@ -493,7 +493,7 @@ msgstr "Home"
 #/16x9/Content_Settings.xml
 msgctxt "#31501"
 msgid "Get your home screen looking just the way you want it."
-msgstr ""
+msgstr "Fai in modo che la tua schermata iniziale abbia l'aspetto che preferisci."
 
 #/16x9/Content_Settings.xml
 msgctxt "#31402"
@@ -503,27 +503,27 @@ msgstr "Widget"
 #/16x9/Content_Settings.xml
 msgctxt "#31502"
 msgid "Build out your home screen with up to nine fully customisable widgets."
-msgstr ""
+msgstr "Crea la tua schermata iniziale con un massimo di nove widget completamente personalizzabili."
 
 #/16x9/Content_Settings.xml
 msgctxt "#31403"
 msgid "Views"
-msgstr "Viste"
+msgstr "Visualizzazioni"
 
 #/16x9/Content_Settings.xml
 msgctxt "#31503"
 msgid "Choose which views to enable for different parts of Kodi. Views can be customised for each individual content type from the options menu when browsing your media."
-msgstr ""
+msgstr "Scegli quali visualizzazioni abilitare per le diverse parti di Kodi. Le visualizzazioni possono essere personalizzate per ogni singolo tipo di contenuto dal menu delle opzioni durante la navigazione dei file multimediali."
 
 #/16x9/Content_Settings.xml
 msgctxt "#31404"
 msgid "Customisations"
-msgstr ""
+msgstr "Personalizzazioni"
 
 #/16x9/Content_Settings.xml
 msgctxt "#31504"
 msgid "Make Copacetic your own with tweaks that change the functionality of the skin."
-msgstr ""
+msgstr "Personalizza Copacetic con modifiche che cambiano la funzionalità della skin."
 
 #/16x9/Content_Settings.xml
 msgctxt "#31405"
@@ -533,35 +533,35 @@ msgstr "Extra"
 #/16x9/Content_Settings.xml
 msgctxt "#31505"
 msgid "Configure exclusive Copacetic features including embedded lists, the music player widget, in-view multiart slideshows and automatic trailer playback."
-msgstr ""
+msgstr "Configura le funzionalità esclusive di Copacetic, inclusi gli elenchi incorporati, il widget del lettore musicale, le presentazioni multimediali a più viste e la riproduzione automatica del trailer."
 
 #/16x9/Content_Settings.xml
 msgctxt "#31406"
 msgid "Experiments"
-msgstr ""
+msgstr "Esperimenti"
 
 #/16x9/Content_Settings.xml
 msgctxt "#31506"
 msgid "New features being tested or those requested by users that don't necessarily meet the desisgn ethos of the rest of Copacetic. It's recommended to leave these off for optimal user experience."
-msgstr ""
+msgstr "Nuove funzionalità in fase di test o richieste degli utenti che non soddisfano necessariamente l'etica del design del resto di Copacetic. Si consiglia di lasciarli disattivati per un'esperienza utente ottimale."
 
 # General
 #/16x9/Content.xml
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31407"
 msgid "Night"
-msgstr ""
+msgstr "Scuro"
 
 #/16x9/Content_Settings.xml
 msgctxt "#31507"
 msgid "Select 'Night' or 'Light' theme. Switch between themes on the fly via the shutdown menu."
-msgstr ""
+msgstr "Seleziona il tema \"Scuro\" o \"Chiaro\". Passa al volo da un tema all'altro tramite il menu di spegnimento."
 
 #/16x9/Content.xml
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31408"
 msgid "Light"
-msgstr "Leggera"
+msgstr "Leggero"
 
 #/16x9/Content_Settings.xml
 msgctxt "#31409"
@@ -1085,7 +1085,7 @@ msgstr "Limite"
 #/16x9/Content.xml
 msgctxt "#31602"
 msgid "Sort"
-msgstr ""
+msgstr "Ordina"
 
 #/16x9/Content.xml
 msgctxt "#31603"
@@ -1150,7 +1150,7 @@ msgstr "Formato pixel"
 #/16x9/Content.xml
 msgctxt "#31615"
 msgid "Screen resolution"
-msgstr "Risoluzione dello schermo"
+msgstr "Risoluzione schermo"
 
 #/16x9/Content.xml
 msgctxt "#31616"

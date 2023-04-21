@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-04-20 13:40+0000\n"
+"PO-Revision-Date: 2023-04-21 08:59+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Danish <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/da_dk/>\n"
 "Language: da_dk\n"
@@ -53,7 +53,7 @@ msgstr ""
 #Common
 msgctxt "#31004"
 msgid "Grid"
-msgstr ""
+msgstr "Gitter"
 
 #Common
 msgctxt "#31005"
@@ -95,7 +95,7 @@ msgstr ""
 #: V
 msgctxt "#31012"
 msgid "Sort"
-msgstr ""
+msgstr "Sorter"
 
 #/16x9/Content_Viewtype_Options.xml
 msgctxt "#31013"
@@ -105,7 +105,7 @@ msgstr "Rækkefølge"
 #/16x9/Content_Viewtype_Options.xml
 msgctxt "#31014"
 msgid "Include"
-msgstr ""
+msgstr "Inkluder"
 
 #/16x9/Content_Viewtype_Options.xml
 msgctxt "#31015"
@@ -120,12 +120,12 @@ msgstr "Detaljer"
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31017"
 msgid "Title"
-msgstr ""
+msgstr "Titel"
 
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31018"
 msgid "Title and Info"
-msgstr ""
+msgstr "Titel og info"
 
 #/16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31019"
