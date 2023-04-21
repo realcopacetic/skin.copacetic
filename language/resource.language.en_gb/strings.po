@@ -10,6 +10,14 @@ msgstr ""
 "Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgctxt "Addon Summary"
+msgid "A real good time with your media."
+msgstr ""
+
+msgctxt "Addon Description"
+msgid "Clear away the clutter with a minimal skin designed to bring maximum impact to the artwork that you curate for your favourite movies, shows and music. Copacetic is a labour of love more than five years in the making. I hope you enjoy it."
+msgstr ""
+
 
 
 
