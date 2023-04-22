@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-04-21 04:17+0000\n"
+"PO-Revision-Date: 2023-04-22 01:31+0000\n"
 "Last-Translator: Massimo Pissarello <mapi68@gmail.com>\n"
 "Language-Team: Italian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/it_it/>\n"
 "Language: it_it\n"
@@ -17,11 +17,11 @@ msgstr ""
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
-msgstr ""
+msgstr "Un vero divertimento con i tuoi media."
 
 msgctxt "Addon Description"
 msgid "Clear away the clutter with a minimal skin designed to bring maximum impact to the artwork that you curate for your favourite movies, shows and music. Copacetic is a labour of love more than five years in the making. I hope you enjoy it."
-msgstr ""
+msgstr "Elimina il disordine con una skin minimale progettata per dare il massimo impatto alle artwork per i tuoi film, serie e musica preferiti. Copacetic è un lavoro d'amore che dura da più di cinque anni. Spero che vi piaccia."
 
 # ########################################################################################################
 # ########################################################################################################
@@ -144,7 +144,7 @@ msgstr "Titolo e descrizione"
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31023"
 msgid "Clearlogos"
-msgstr "Loghi trasparenti"
+msgstr "Clearlogo"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31024"
@@ -548,42 +548,42 @@ msgstr "Leggero"
 # /16x9/Content_Settings.xml
 msgctxt "#31409"
 msgid "Accent colour"
-msgstr ""
+msgstr "Colore di contrasto"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31509"
 msgid "Personalise Copacetic with your own accent colour. Where info is displayed on top of this colour, such as the episodes count icon in Grid view, Copacetic will automatically select between white and black text to maximise contrast."
-msgstr ""
+msgstr "Personalizza Copacetic con il tuo colore di contrasto. Laddove le informazioni vengono visualizzate sopra questo colore, come l'icona del conteggio degli episodi nella vista griglia, Copacetic selezionerà automaticamente tra testo bianco e nero per massimizzare il contrasto."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31410"
 msgid "Choose accent colour"
-msgstr ""
+msgstr "Scegli colore di contrasto"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31411"
 msgid "Reset accent colour"
-msgstr ""
+msgstr "Reimposta colore di contrasto"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31412"
 msgid "Recommended Kodi settings"
-msgstr ""
+msgstr "Impostazioni consigliate di Kodi"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31512"
 msgid "Highlights the Kodi settings recommended to change for optimal Copacetic user experience. Toggle each proposed change on/off to your liking, then accept the changes you wish to keep."
-msgstr ""
+msgstr "Evidenzia le impostazioni di Kodi che si consiglia di modificare per un'esperienza utente Copacetic ottimale. Attiva/disattiva ogni modifica proposta a tuo piacimento, quindi accetta le modifiche che desideri mantenere."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31413"
 msgid "Copacetic recommends changing the following Kodi settings for optimal user experience. Disable settings if you wish to keep their current value. Faded settings are disabled and show the current value."
-msgstr ""
+msgstr "Copacetic consiglia di modificare le seguenti impostazioni di Kodi per un'esperienza utente ottimale. Disabilita le impostazioni se desideri mantenere il loro valore attuale. Le impostazioni sbiadite sono disabilitate e mostrano il valore corrente."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31414"
 msgid "These will not be changed."
-msgstr ""
+msgstr "Queste non verranno modificate."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31416"
@@ -598,37 +598,37 @@ msgstr "Menu principale"
 # /16x9/Content_Settings.xml
 msgctxt "#31517"
 msgid "Configure your home menu shortcuts. For each shortcut, you can select an optional background to override the default slideshows."
-msgstr ""
+msgstr "Configura le scorciatoie del menu principale. Per ogni scorciatoia, puoi selezionare uno sfondo facoltativo per sovrascrivere le presentazioni predefinite."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31418"
 msgid "Shutdown menu"
-msgstr ""
+msgstr "Menu di spegnimento"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31518"
 msgid "Configure your shutdown menu shortcuts. Context-dependent 'Home', 'Theme' and 'Settings' shortcuts cannot be removed."
-msgstr ""
+msgstr "Configura le scorciatoie del menu di spegnimento. Le scorciatoie \"Home\", \"Tema\" e \"Impostazioni\" dipendono dal contesto e non possono essere rimosse."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31419"
 msgid "Reset all menus"
-msgstr ""
+msgstr "Reimposta tutti i menu"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31420"
 msgid "Background service"
-msgstr ""
+msgstr "Servizio in background"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31421"
 msgid "Enable clearlogo cropper"
-msgstr ""
+msgstr "Abilita ritaglio clearlogo"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31521"
 msgid "Clearlogos cached in Kodi's texture library will be cropped as they are required. Cropped versions are saved to a separate cache. Once a cropped clearlogo is cached, performance impact should be minimal. No changes are made to the original artwork. This process is run by Copacetic as a background service. Disable to improve performance."
-msgstr ""
+msgstr "I clearlogo memorizzati nella cache nella libreria delle texture di Kodi verranno ritagliati quando richiesto. Le versioni ritagliate vengono salvate in una cache separata. Una volta che un clearlogo ritagliato viene memorizzato nella cache, l'impatto sulle prestazioni dovrebbe essere minimo. Non vengono apportate modifiche all'artwork originale. Questo processo è gestito da Copacetic come servizio in background. Disattivalo per migliorare le prestazioni."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31422"
@@ -638,7 +638,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31522"
 msgid "This will delete the cropped clearlogo cache. To prevent cropped clearlogos from being cached, make sure to disable the clearlogo cropping background service above."
-msgstr ""
+msgstr "Elimina la cache dei clearlogo ritagliati. Per evitare che i clearlogo ritagliati vengano memorizzati nella cache, assicurati di disabilitare il servizio in background di ritaglio dei clearlogo qui sopra."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31423"
@@ -648,7 +648,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31523"
 msgid "Media flags are colourised using the dominant colour from the processed clearlogo. The dominant colour will be used as long as there is enough contrast with the current background colour. You can adjust the contrast thresholds for dark and light backgrounds below."
-msgstr ""
+msgstr "indicatori multimedialiGli indicatori multimediali sono colorati utilizzando il colore dominante del clearlogo elaborato. Verrà utilizzato il colore dominante purché vi sia sufficiente contrasto con il colore di sfondo corrente. Di seguito puoi regolare le soglie di contrasto per sfondi scuri e chiari."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31424"
@@ -709,7 +709,7 @@ msgstr ""
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31476"
 msgid "Enable clearlogos for home screen widgets"
-msgstr ""
+msgstr "Abilita clearlogos per i widget della schermata iniziale"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31430"
@@ -800,12 +800,12 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31443"
 msgid "Show clearlogos"
-msgstr ""
+msgstr "Mostra clearlogo"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31543"
 msgid "Clearlogos will be displayed as part of the screensaver when they are available."
-msgstr ""
+msgstr "I clearlogo verranno visualizzati come parte del salvaschermo quando sono disponibili."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31444"
