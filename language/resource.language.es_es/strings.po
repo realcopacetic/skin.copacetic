@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-04-21 08:56+0000\n"
-"Last-Translator: Alfonso Cachero <alfonso.cachero@gmail.com>\n"
+"PO-Revision-Date: 2023-04-22 01:31+0000\n"
+"Last-Translator: José Antonio Alvarado <jalvarado0.eses@gmail.com>\n"
 "Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/es_es/>\n"
 "Language: es_es\n"
 "MIME-Version: 1.0\n"
@@ -17,11 +17,11 @@ msgstr ""
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
-msgstr ""
+msgstr "Un buen rato con tu contenido multimedia."
 
 msgctxt "Addon Description"
 msgid "Clear away the clutter with a minimal skin designed to bring maximum impact to the artwork that you curate for your favourite movies, shows and music. Copacetic is a labour of love more than five years in the making. I hope you enjoy it."
-msgstr ""
+msgstr "Elimina el desorden con un skin minimalista diseñado para dar el máximo impacto a las ilustraciones que creas para tus películas, series y música favoritas. Copacetic es un trabajo realizado con amor durante más de cinco años. Espero que lo disfrutes."
 
 # ########################################################################################################
 # ########################################################################################################
@@ -348,7 +348,7 @@ msgstr "Álbumes aleatorios"
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31209"
 msgid "Liked songs"
-msgstr ""
+msgstr "Canciones que te gustan"
 
 # /16x9/Components_Settings.xml, 16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Widgets.xml
@@ -364,7 +364,7 @@ msgstr "Más"
 # /16x9/Templates_Widgets.xml
 msgctxt "#31212"
 msgid "Most played"
-msgstr ""
+msgstr "Más reproducidas"
 
 # /16x9/Templates_Widgets.xml
 msgctxt "#31213"
@@ -379,17 +379,17 @@ msgstr "Intérpretes similares"
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31215"
 msgid "Similar songs"
-msgstr ""
+msgstr "Canciones similares"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31216"
 msgid "More from Season"
-msgstr ""
+msgstr "Más de la temporada"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31217"
 msgid "Episodes from Season"
-msgstr ""
+msgstr "Episodios de la temporada"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31218"
@@ -404,17 +404,17 @@ msgstr "Más desde"
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31220"
 msgid "More soundtracks"
-msgstr ""
+msgstr "Más bandas sonoras"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31221"
 msgid "Similar albums"
-msgstr ""
+msgstr "Álbumes similares"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31222"
 msgid "Featuring"
-msgstr ""
+msgstr "Presentando"
 
 # ########################################################################################################
 # ########################################################################################################
@@ -437,12 +437,12 @@ msgstr "Rebobinar"
 # /16x9/Content_OSD.xml
 msgctxt "#31303"
 msgid "Forward"
-msgstr ""
+msgstr "Adelante"
 
 # /16x9/Content_OSD.xml
 msgctxt "#31304"
 msgid "Rating"
-msgstr ""
+msgstr "Clasificación"
 
 # /16x9/Content_OSD.xml
 msgctxt "#31305"
@@ -464,7 +464,7 @@ msgstr "General"
 # /16x9/Content_Settings.xml
 msgctxt "#31500"
 msgid "Configure your Copacetic theme, menus and the background art service."
-msgstr ""
+msgstr "Configura tu tema Copacetic, los menús y el servicio de arte de fondo."
 
 # /16x9/Content_Settings.xml
 # /16x9/Content.xml
@@ -475,7 +475,7 @@ msgstr "Inicio"
 # /16x9/Content_Settings.xml
 msgctxt "#31501"
 msgid "Get your home screen looking just the way you want it."
-msgstr ""
+msgstr "Consigue que tu pantalla de inicio tenga el aspecto que deseas."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31402"
@@ -485,7 +485,7 @@ msgstr "Widgets"
 # /16x9/Content_Settings.xml
 msgctxt "#31502"
 msgid "Build out your home screen with up to nine fully customisable widgets."
-msgstr ""
+msgstr "Crea tu pantalla de inicio con hasta nueve widgets totalmente personalizables."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31403"
@@ -495,17 +495,17 @@ msgstr "Vistas"
 # /16x9/Content_Settings.xml
 msgctxt "#31503"
 msgid "Choose which views to enable for different parts of Kodi. Views can be customised for each individual content type from the options menu when browsing your media."
-msgstr ""
+msgstr "Elige qué vistas activar para las distintas partes de Kodi. Las vistas se pueden personalizar para cada tipo de contenido individual desde el menú de opciones cuando se navega por el contenido multimedia."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31404"
 msgid "Customisations"
-msgstr ""
+msgstr "Personalizaciones"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31504"
 msgid "Make Copacetic your own with tweaks that change the functionality of the skin."
-msgstr ""
+msgstr "Adapta Copacetic a tu gusto con ajustes que cambian la funcionalidad de la piel."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31405"
@@ -515,12 +515,12 @@ msgstr "Extras"
 # /16x9/Content_Settings.xml
 msgctxt "#31505"
 msgid "Configure exclusive Copacetic features including embedded lists, the music player widget, in-view multiart slideshows and automatic trailer playback."
-msgstr ""
+msgstr "Configura las funciones exclusivas de Copacetic, como las listas incrustadas, el widget del reproductor de música, los pases de diapositivas con varias imágenes a la vista y la reproducción automática de tráilers."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31406"
 msgid "Experiments"
-msgstr ""
+msgstr "Experimentos"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31506"
@@ -864,7 +864,7 @@ msgstr ""
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31452"
 msgid "Preferred classification ratings"
-msgstr ""
+msgstr "Clasificación preferente"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31552"
