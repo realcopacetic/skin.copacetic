@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-04-23 01:21+0000\n"
-"Last-Translator: José Antonio Alvarado <jalvarado0.eses@gmail.com>\n"
+"PO-Revision-Date: 2023-04-24 11:39+0000\n"
+"Last-Translator: Alfonso Cachero <alfonso.cachero@gmail.com>\n"
 "Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/es_es/>\n"
 "Language: es_es\n"
 "MIME-Version: 1.0\n"
@@ -889,12 +889,12 @@ msgstr "Umbral de valoración de la canción Me gusta"
 # /16x9/Content_Settings.xml
 msgctxt "#31554"
 msgid "Overlay a binary user rating system (liked or not) on top of standard song user ratings. User ratings equal to or above this threshold are 'liked'. You can 'like' (set a user rating equivalent to the threshold) or 'unlike' (clear user rating) a song via the context menu, or embedded music player if enabled under Extras. The threshold will also be used by the 'Liked songs' widget. Set to 'Off' to disable."
-msgstr ""
+msgstr "Superponer un sistema de valoración binario (me gusta o no) encima de las valoraciones estándar. Las valoraciones mayores o iguales al umbral son 'me gusta'. Puedes marcar como 'me gusta' (pone una valoración equivalente al umbral) o 'no me gusta' (borra la valoración) una canción en el menú contextual, o en el propio reproductor si se habilita en Extras. El umbral también se usará en el widget 'Canciones que me gustan'. 'Apagado' lo desactiva."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31455"
 msgid "Instantly hide progress bar on pause screen"
-msgstr ""
+msgstr "Oculta inmediatamente la barra de progreso en la pantalla de pausa"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31555"
