@@ -15,6 +15,13 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 * __sualfred__ for plenty of inspiration and [script.embuary.helper](https://github.com/sualfred/script.embuary.helper), which provided some key functionality before the release of new Nexus features.
 
 ### Changelog
+
+**1.0.3**
+- Connected to Weblate for submission of future translations as automated pull requests.
+- Majority of Italian and French translations submitted via Weblate
+- Fixed issue when setting up a custom widget where focus would get stuck on Display and you couldn't select Path/Name/Sort method etc.
+- Added end time for currently playing video to Fullscreen Info / Pause screen (if info on pause screen is enabled in settings)
+
 **1.0.2**
 - Fixed 2 msgstr formatting errors in language\resource.language.en_gb\strings.po
 - Fixed auto-update button on DialogAddonInfo.xml. Previously even though the label was updating between on/off, it wasn't actually changing the underlying status of the control.
