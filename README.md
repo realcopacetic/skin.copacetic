@@ -16,6 +16,14 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 
+**1.0.4**
+- Rebuilt artwork controls and animations for List and Billboard views to make more lightweight and improve scrolling when multiart is visible.
+- Removed duplicate 'ends' label from infoscreen during video playback for video files that are not movies or episodes.
+- Added System.AddonIsEnabled(xyz) conditions for all use of scripts and plugins including dependencies that are required to be present.
+- Dependencies for script.copacetic.helper and resource.fonts.copacetic bumped to latest versions.
+- Added missing progress backing gradient to secondary artwork for Listview Thumbnail / Showcaseview
+- Updated MAX logo for new streaming service.
+
 **1.0.3**
 - Connected to Weblate for submission of future translations as automated pull requests.
 - Majority of Italian and French translations submitted via Weblate

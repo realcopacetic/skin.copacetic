@@ -305,6 +305,7 @@
 		<value condition="!String.IsEmpty(ListItem(-1).Icon)">$INFO[ListItem(-1).Icon]</value>
 	</variable>
 	<variable name="Thumbnail(0)Content">
+		<value condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Window(home).Property(Multiart_Fadeout),true)">$INFO[Control.GetLabel(3400)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(thumb)) + [String.IsEqual(ListItem(0).DBType,episode) | [String.IsEqual(ListItem(0).DBType,artist) + $EXP[ListView_Display_IsThumbnails_Artists]] | [String.IsEqual(ListItem(0).DBType,album) + !$EXP[ListView_Display_IsBackground_Albums]] | [String.IsEqual(ListItem(0).DBType,song) + !$EXP[ListView_Display_IsBackground_Songs]] | [Container.Content(addons) + $EXP[ListView_IsVisible]]]">$INFO[ListItem(0).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(album.fanart)) + !$EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(album.fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(fanart)) + !$EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(fanart)]</value>
