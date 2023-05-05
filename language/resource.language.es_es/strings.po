@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-04-24 11:39+0000\n"
-"Last-Translator: Alfonso Cachero <alfonso.cachero@gmail.com>\n"
+"PO-Revision-Date: 2023-04-29 18:16+0000\n"
+"Last-Translator: José Antonio Alvarado <jalvarado0.eses@gmail.com>\n"
 "Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/es_es/>\n"
 "Language: es_es\n"
 "MIME-Version: 1.0\n"
@@ -889,7 +889,7 @@ msgstr "Umbral de valoración de la canción Me gusta"
 # /16x9/Content_Settings.xml
 msgctxt "#31554"
 msgid "Overlay a binary user rating system (liked or not) on top of standard song user ratings. User ratings equal to or above this threshold are 'liked'. You can 'like' (set a user rating equivalent to the threshold) or 'unlike' (clear user rating) a song via the context menu, or embedded music player if enabled under Extras. The threshold will also be used by the 'Liked songs' widget. Set to 'Off' to disable."
-msgstr "Superponer un sistema de valoración binario (me gusta o no) encima de las valoraciones estándar. Las valoraciones mayores o iguales al umbral son 'me gusta'. Puedes marcar como 'me gusta' (pone una valoración equivalente al umbral) o 'no me gusta' (borra la valoración) una canción en el menú contextual, o en el propio reproductor si se habilita en Extras. El umbral también se usará en el widget 'Canciones que me gustan'. 'Apagado' lo desactiva."
+msgstr "Superponer un sistema binario de valoración de usuarios (me gusta o no me gusta) sobre las valoraciones estándar de usuarios de canciones. Las valoraciones de usuario iguales o superiores a este umbral son \"me gusta\". Puedes \"gustar\" (establecer una valoración de usuario equivalente al umbral) o \"no gustar\" (borrar la valoración de usuario) una canción a través del menú contextual, o del reproductor de música integrado si está habilitado en Extras. El umbral también será utilizado por el widget \"Canciones que han gustado\". Para desactivarlo, selecciona \"Desactivado\"."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31455"
@@ -899,144 +899,144 @@ msgstr "Oculta inmediatamente la barra de progreso en la pantalla de pausa"
 # /16x9/Content_Settings.xml
 msgctxt "#31555"
 msgid "Subtitles will not be obscured when video playback is paused."
-msgstr ""
+msgstr "Los subtítulos no se oscurecerán cuando se ponga en pausa la reproducción del vídeo."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31456"
 msgid "Show info on pause screen"
-msgstr ""
+msgstr "Mostrar información en la pantalla de pausa"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31556"
 msgid "Video information, which can be displayed during fullscreen video playback by pressing <i>, will also be displayed automatically when the video is paused."
-msgstr ""
+msgstr "La información del vídeo, que puede mostrarse durante la reproducción de vídeo a pantalla completa pulsando <i>, también se mostrará automáticamente cuando el vídeo esté en pausa."
 
 # Extras
 # /16x9/Content_Settings.xml
 msgctxt "#31457"
 msgid "Embedded lists"
-msgstr ""
+msgstr "Listas incrustadas"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31458"
 msgid "Enable embedded lists for sets, tv shows and artists"
-msgstr ""
+msgstr "Activar listas incrustadas para sagas, series y artistas"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31558"
 msgid "Enrich video and music views by enabling embedded secondary lists that allow you to scroll through the movies in a set, the seasons in a tv show and the albums by an artist without clicking into an item. Instead, just press down on a listitem in horizontal views or left in vertical views to navigate the secondary list."
-msgstr ""
+msgstr "Enriquece las vistas de vídeo y música habilitando listas secundarias incrustadas que te permitan desplazarte por las películas de una saga, las temporadas de una serie de televisión y los álbumes de un artista sin hacer clic en un elemento. En su lugar, basta con pulsar hacia abajo en un elemento de la lista en las vistas horizontales o hacia la izquierda en las verticales para navegar por la lista secundaria."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31459"
 msgid "Music player"
-msgstr ""
+msgstr "Reproductor de música"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31460"
 msgid "Enable embedded music player"
-msgstr ""
+msgstr "Activar el reproductor de música integrado"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31560"
 msgid "View and control music playback from anywhere in Kodi with the music player widget, which is embedded into each unique Copacetic view. If you've set a 'Liked song rating threshold' under Customisations, you'll also be able to mark songs as 'Liked' straight from the widget or jump straight to a view of the currently playing artist."
-msgstr ""
+msgstr "Visualiza y controla la reproducción de música desde cualquier lugar de Kodi con el widget del reproductor de música, integrado en cada vista única de Copacetic. Si has establecido un \"umbral de clasificación de canciones que te gustan\" en Personalizaciones, también podrás marcar canciones como \"Me gusta\" directamente desde el widget o saltar directamente a una vista del artista que se esté reproduciendo en ese momento."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31461"
 msgid "Multiart"
-msgstr ""
+msgstr "Multiart"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31462"
 msgid "Enable multiart slideshows"
-msgstr ""
+msgstr "Habilitar presentaciones de diapositivas multiart"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31562"
 msgid "Enjoy more artwork with multiart slideshows, embedded directly into each view. Copacetic will play a slideshow of all available multiart in your library for a given listitem and art type. To add multiart, simply add additional artwork to the same folder as your main artwork with a number appended to the end then rescan the item, e.g. keyart.jpg, keyart1.jpg, keyart2.jpg or filename-poster.jpg, filename-poster1.jpg."
-msgstr ""
+msgstr "Disfruta de más obras de arte con los pases de diapositivas multiart, integrados directamente en cada vista. Copacetic reproducirá un pase de diapositivas de todas las ilustraciones disponibles en tu biblioteca para un determinado elemento de la lista y tipo de ilustración. Para añadir multiart, simplemente añada ilustraciones adicionales a la misma carpeta que su ilustración principal con un número añadido al final y luego vuelva a escanear el elemento, por ejemplo keyart.jpg, keyart1.jpg, keyart2.jpg o filename-poster.jpg, filename-poster1.jpg."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31563"
 msgid "Choose how long to display each artwork in the slideshow."
-msgstr ""
+msgstr "Elige cuánto tiempo quieres que aparezca cada ilustración en el pase de diapositivas."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31464"
 msgid "Trailer autoplay"
-msgstr ""
+msgstr "Reproducción automática del tráiler"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31465"
 msgid "Enable trailers to autoplay"
-msgstr ""
+msgstr "Activar la reproducción automática de tráilers"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31565"
 msgid "Automatically start fullscreen playback of trailers after a short delay, which you can set below. Stop playback by pressing any direction button. In horizontal views, up/down ends playback with no further action until you scroll. Left/right ends playback and scrolls to the previous/next item, meaning the next trailer will begin automatically after the set delay. Directions are switched in vertical views."
-msgstr ""
+msgstr "Inicia automáticamente la reproducción a pantalla completa de los tráilers tras un breve retardo, que puedes configurar a continuación. Detener la reproducción pulsando cualquier botón de dirección. En las vistas horizontales, arriba/abajo finaliza la reproducción sin más acciones hasta que te desplaces. Izquierda/derecha finaliza la reproducción y se desplaza al elemento anterior/siguiente, lo que significa que el siguiente tráiler comenzará automáticamente tras el retardo establecido. Las direcciones se cambian en las vistas verticales."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31466"
 msgid "Delay before playback starts (seconds)"
-msgstr ""
+msgstr "Retardo antes de que comience la reproducción (segundos)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31566"
 msgid "Choose how long you must wait on a selected movie or tv show before playback of the trailer starts."
-msgstr ""
+msgstr "Elige cuánto tiempo debes esperar en una película o serie de televisión seleccionada antes de que comience la reproducción del tráiler."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31467"
 msgid "Play trailers for home widget movies and tv shows"
-msgstr ""
+msgstr "Reproducir tráilers de películas y series de televisión con el widget de inicio"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31567"
 msgid "Trailers will be played back automatically from any widgets showing movies or tv shows. Trailers cannot be played back from episodes currently."
-msgstr ""
+msgstr "Los tráilers se reproducirán automáticamente desde cualquier widget que muestre películas o series de televisión. Actualmente no se pueden reproducir tráilers de episodios."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31468"
 msgid "Play trailers for movies in video library"
-msgstr ""
+msgstr "Reproducir tráilers de películas en la biblioteca de vídeos"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31568"
 msgid "Trailer autoplay can be quickly toggled on/off from the options menu within the video library."
-msgstr ""
+msgstr "La reproducción automática del tráiler puede activarse y desactivarse rápidamente desde el menú de opciones de la biblioteca de vídeos."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31469"
 msgid "Play trailers for tv shows in video library"
-msgstr ""
+msgstr "Reproducir tráilers de series de televisión en la biblioteca de vídeos"
 
 # Experiments
 # /16x9/Content_Settings.xml
 msgctxt "#31470"
 msgid "Use unwatched count in info details"
-msgstr ""
+msgstr "Usar el recuento de no vistos en la información detallada"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31570"
 msgid "Replaced 'A/B watched' with 'X/Y unwatched' in all info lines. This information duplicates the unwatched episode count indicator, which can be enabled under Customisations and is integrated into the progress bar."
-msgstr ""
+msgstr "Se ha sustituido \"A/B vistos\" por \"X/Y no vistos\" en todas las líneas de información. Esta información duplica el indicador de episodios no vistos, que puede activarse en Personalizaciones y está integrado en la barra de progreso."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31471"
 msgid "Enable fanart display for Grid view in pictures window"
-msgstr ""
+msgstr "Activar la visualización de fanart para la vista de cuadrícula en la ventana de imágenes"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31571"
 msgid "Enables Grid view fanart layout for the pictures window. Because pictures can take any aspect ratio, it is recommended to stick to square layouts for the optimal experience. Keep disabled to improve performance."
-msgstr ""
+msgstr "Activa la vista de cuadrícula para la ventana de imágenes. Debido a que las imágenes pueden tomar cualquier relación de aspecto, se recomienda atenerse a diseños cuadrados para una experiencia óptima. Mantenlo desactivado para mejorar el rendimiento."
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31472"
 msgid "Copacetic"
-msgstr ""
+msgstr "Copacetic"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31473"
@@ -1046,14 +1046,14 @@ msgstr "Pausar"
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31474"
 msgid "Auto-update"
-msgstr ""
+msgstr "Actualización automática"
 
 # ########################################################################################################
 # ########################################################################################################
 # /16x9/Content.xml
 msgctxt "#31600"
 msgid "Match"
-msgstr ""
+msgstr "Coincidir"
 
 # /16x9/Content.xml
 msgctxt "#31601"
@@ -1063,12 +1063,12 @@ msgstr "Límite"
 # /16x9/Content.xml
 msgctxt "#31602"
 msgid "Sort"
-msgstr ""
+msgstr "Ordenar"
 
 # /16x9/Content.xml
 msgctxt "#31603"
 msgid "Direction"
-msgstr ""
+msgstr "Dirección"
 
 # /16x9/Content.xml
 msgctxt "#31604"
@@ -1088,7 +1088,7 @@ msgstr "Resolución de Vídeo"
 # /16x9/Content.xml
 msgctxt "#31607"
 msgid "Video aspect ratio"
-msgstr ""
+msgstr "Relación de aspecto del vídeo"
 
 # /16x9/Content.xml
 msgctxt "#31608"
@@ -1174,27 +1174,27 @@ msgstr "elemento"
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31624"
 msgid "Choose preferred classification ratings..."
-msgstr ""
+msgstr "Elija el sistema de clasificación preferido..."
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31625"
 msgid "No items"
-msgstr ""
+msgstr "Sin elementos"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31626"
 msgid "songs"
-msgstr ""
+msgstr "canciones"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31627"
 msgid "song"
-msgstr ""
+msgstr "canción"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31628"
 msgid "No songs added"
-msgstr ""
+msgstr "No se han añadido canciones"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31629"
@@ -1204,12 +1204,12 @@ msgstr "Silenciado"
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31630"
 msgid "On first entry"
-msgstr ""
+msgstr "En la primera entrada"
 
 # /16x9/VideoOSDBookmarks.xml
 msgctxt "#31631"
 msgid "Add"
-msgstr ""
+msgstr "Añadir"
 
 # /16x9/VideoOSDBookmarks.xml
 msgctxt "#31632"
@@ -1219,7 +1219,7 @@ msgstr "Limpiar"
 # /16x9/VideoOSDBookmarks.xml
 msgctxt "#31633"
 msgid "Use selected as episode thumb"
-msgstr ""
+msgstr "Usar seleccionado como miniatura del episodio"
 
 # ########################################################################################################
 # ########################################################################################################
@@ -1227,129 +1227,129 @@ msgstr ""
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31701"
 msgid "BBFC (UK)"
-msgstr ""
+msgstr "BBFC (UK)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31702"
 msgid "MPAA / TV-PG (US / others)"
-msgstr ""
+msgstr "MPAA / TV-PG (EE.UU. / otros)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31703"
 msgid "ACB (Australia)"
-msgstr ""
+msgstr "ACB (Australia)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31704"
 msgid "CHVRS / CBSC (Canada)"
-msgstr ""
+msgstr "CHVRS / CBSC (Canadá)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31705"
 msgid "DJCTQ (Brazil)"
-msgstr ""
+msgstr "DJCTQ (Brasil)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31706"
 msgid "EIRIN (Japan)"
-msgstr ""
+msgstr "EIRIN (Japón)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31707"
 msgid "FSK (Austria / Germany / Switzerland)"
-msgstr ""
+msgstr "FSK (Austria / Alemania / Suiza)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31708"
 msgid "IFCO (Ireland)"
-msgstr ""
+msgstr "IFCO (Irlanda)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31709"
 msgid "KIJKWIJZER (Luxembourg / Netherlands)"
-msgstr ""
+msgstr "KIJKWIJZER (Luxemburgo / Países Bajos)"
 
 # ########################################################################################################
 # ########################################################################################################
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31900"
 msgid "Who's watching?"
-msgstr ""
+msgstr "¿Quién lo está viendo?"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31901"
 msgid "Good evening"
-msgstr ""
+msgstr "Buenas noches"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31902"
 msgid "Good afternoon"
-msgstr ""
+msgstr "Buenas tardes"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31903"
 msgid "Good morning"
-msgstr ""
+msgstr "Buenos días"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31904"
 msgid "Happy New Year"
-msgstr ""
+msgstr "Feliz Año Nuevo"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31905"
 msgid "Happy National Popcorn Day"
-msgstr ""
+msgstr "Feliz día nacional de las palomitas"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31906"
 msgid "Happy Global Movie Day"
-msgstr ""
+msgstr "Feliz día internacional del cine"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31907"
 msgid "Happy Baftas Day"
-msgstr ""
+msgstr "Feliz día de los Baftas"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31908"
 msgid "Happy International Women's Day"
-msgstr ""
+msgstr "Feliz día internacional de la mujer"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31909"
 msgid "Happy Razzies Day"
-msgstr ""
+msgstr "Feliz día de los Razzies"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31910"
 msgid "Happy Oscars Day"
-msgstr ""
+msgstr "Feliz día de los Óscar"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31911"
 msgid "Happy Xmas"
-msgstr ""
+msgstr "Feliz Navidad"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31912"
 msgid "Ramadan Mubarak"
-msgstr ""
+msgstr "Ramadan Mubarak"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31913"
 msgid "Eid Mubarak"
-msgstr ""
+msgstr "Eid Mubarak"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31914"
 msgid "Happy Earth Day"
-msgstr ""
+msgstr "Feliz día de la Tierra"
