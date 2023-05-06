@@ -16,22 +16,28 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 
+**1.0.5**
+- DialogAddonSettings.xml hidden when keyboard or numeric input opened on top.
+- Fixed GridView being enabled for AddonBrowser.xml even when disabled in skin settings.
+- Fixed StripView details being hidden during transition between widgets on info screens.
+- Added addon version number to ListView info breadcrumb in AddonBrowser.xml.
+
 **1.0.4**
 - Rebuilt artwork controls and animations for List and Billboard views to make more lightweight and improve scrolling when multiart is visible.
 - Removed duplicate 'ends' label from infoscreen during video playback for video files that are not movies or episodes.
 - Added System.AddonIsEnabled(xyz) conditions for all use of scripts and plugins including dependencies that are required to be present.
 - Dependencies for script.copacetic.helper and resource.fonts.copacetic bumped to latest versions.
-- Added missing progress backing gradient to secondary artwork for Listview Thumbnail / Showcaseview
+- Added missing progress backing gradient to secondary artwork for Listview Thumbnail / Showcaseview.
 - Updated MAX logo for new streaming service.
 
 **1.0.3**
 - Connected to Weblate for submission of future translations as automated pull requests.
-- Majority of Italian and French translations submitted via Weblate
+- Majority of Italian and French translations submitted via Weblate.
 - Fixed issue when setting up a custom widget where focus would get stuck on Display and you couldn't select Path/Name/Sort method etc.
-- Added end time for currently playing video to Fullscreen Info / Pause screen (if info on pause screen is enabled in settings)
+- Added end time for currently playing video to Fullscreen Info / Pause screen (if info on pause screen is enabled in settings).
 
 **1.0.2**
-- Fixed 2 msgstr formatting errors in language\resource.language.en_gb\strings.po
+- Fixed 2 msgstr formatting errors in language\resource.language.en_gb\strings.po.
 - Fixed auto-update button on DialogAddonInfo.xml. Previously even though the label was updating between on/off, it wasn't actually changing the underlying status of the control.
 - Fixed label for audo-update button on DialogAddonInfo.xml adding a forward slash between the name and the value.
 
