@@ -16,6 +16,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 
+**1.0.6**
+- Keyart will now only show in place of posters if 'Prefer keyart for poster views' is selected in skin settings. Previously it would show whenever a clearlogo was present, regardless of this setting.
+
 **1.0.5**
 - DialogAddonSettings.xml hidden when keyboard or numeric input opened on top.
 - Fixed GridView being enabled for AddonBrowser.xml even when disabled in skin settings.
