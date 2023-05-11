@@ -4,11 +4,16 @@
 # Addon Provider: realcopacetic
 msgid ""
 msgstr ""
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
+"PO-Revision-Date: 2023-05-10 12:16+0000\n"
+"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"Language-Team: Uzbek <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/uz_uz/>\n"
 "Language: uz_uz\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.15.2\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -24,7 +29,7 @@ msgstr ""
 # Common
 msgctxt "#31000"
 msgid "List"
-msgstr ""
+msgstr "Ro'yxat"
 
 # Common
 msgctxt "#31001"
@@ -442,19 +447,19 @@ msgstr ""
 # /16x9/Content_OSD.xml
 msgctxt "#31305"
 msgid "Playlist"
-msgstr ""
+msgstr "Ijro ro'yxati"
 
 # /16x9/Notifications.xml
 msgctxt "#31306"
 msgid "Fullscreen"
-msgstr ""
+msgstr "To'liq ekran"
 
 # ########################################################################################################
 # ########################################################################################################
 # /16x9/Content_Settings.xml
 msgctxt "#31400"
 msgid "General"
-msgstr ""
+msgstr "Umumiy"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31500"
@@ -1068,7 +1073,7 @@ msgstr ""
 # /16x9/Content.xml
 msgctxt "#31604"
 msgid "System"
-msgstr ""
+msgstr "Tizim"
 
 # /16x9/Content.xml
 msgctxt "#31605"
