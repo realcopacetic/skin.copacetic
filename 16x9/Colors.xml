@@ -201,7 +201,7 @@
 
 	<!-- Labels -->
 	<variable name="Breadcrumb_Label_Color">
-		<value condition="VideoPlayer.IsFullscreen">$VAR[Light_Color]</value>
+		<value condition="VideoPlayer.IsFullscreen | $EXP[Trailer_Autoplay_IsVisible]">$VAR[Light_Color]</value>
 		<value condition="[$EXP[Background_Global_Windows] | $EXP[PanelDialog_IsVisible]] + Skin.HasSetting(Background_Disabled)">$VAR[Primary_Color]</value>
 		<value condition="[$EXP[Background_Global_Windows] | $EXP[PanelDialog_IsVisible]] + !Skin.HasSetting(Background_Disabled)">$VAR[Light_Color]</value>
 		<value condition="$EXP[Infoscreen_IsVisible] + [String.IsEqual(System.CurrentControlID,50) | String.IsEqual(System.CurrentControlID,3201) | String.IsEqual(System.CurrentControlID,3202) | String.IsEqual(System.CurrentControlID,3203) | String.IsEqual(System.CurrentControlID,3206) | String.IsEqual(System.CurrentControlID,3207)]">$VAR[Primary_Color]</value>
