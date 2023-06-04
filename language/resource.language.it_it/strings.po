@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-05-22 14:42+0000\n"
+"PO-Revision-Date: 2023-06-03 02:42+0000\n"
 "Last-Translator: Massimo Pissarello <mapi68@gmail.com>\n"
 "Language-Team: Italian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/it_it/>\n"
 "Language: it_it\n"
@@ -822,12 +822,12 @@ msgstr "Widget"
 # /16x9/Content_Settings.xml
 msgctxt "#31475"
 msgid "Kiosk mode"
-msgstr ""
+msgstr "Modalità Kiosk"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31575"
 msgid "When kiosk mode is enabled, all view customisation options in the hidden menu will be removed so no further changes can be made."
-msgstr ""
+msgstr "Quando la modalità kiosk è abilitata, tutte le opzioni di personalizzazione della visualizzazione nel menu nascosto verranno rimosse in modo che non possano essere apportate ulteriori modifiche."
 
 # Views
 # /16x9/Content_Settings.xml
