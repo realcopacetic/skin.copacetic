@@ -16,6 +16,11 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 
+**1.1.1**
+- Option for thumb or tv show artwork on widgets containing episodes
+- New widget settings screen with ability to easily reorder widgets
+- cropped clearlogo window properties are cleared each time a widget is unfocused to avoid issue where clearlogo from previous widget would sometimes be shown momentarily before updating
+
 **1.1.0**
 - Dependency added back in for resource.fonts.copacetic.
 - Fixed colour of notification label when light theme is selected and background slideshow is visible on.container-less screens in myvideonav/mymusicnav.
