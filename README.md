@@ -17,6 +17,10 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ### Changelog
 
 **1.1.2**
+- Fixed issue with wrong multiart displaying on some widgets
+- Fixed issue where disabled/empty widgets could not be changed in skinsettings
+
+**1.1.2**
 - Fixed issue affecting wrong artwork sometimes being shown in widgets using grid and fanart layout when scrolling backwards.
 - Fixed multiart behaviour on list/billboard view when main container loses focus
 - Fixed artwork displayed on secondary lists for list/billboard view when multiart visible
