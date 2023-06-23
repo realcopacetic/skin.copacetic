@@ -5,7 +5,7 @@
 	<controls>
 		<control type="label">
 			<align>right</align>
-			<label>$INFO[Player.Time]</label>
+			<label>$INFO[Window(home).Property(Multiart_Fadeout)]</label>
 			<visible>true</visible>
 		</control>
 	</controls>

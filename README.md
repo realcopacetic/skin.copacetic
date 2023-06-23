@@ -16,6 +16,13 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 
+**1.1.2**
+- Fixed issue affecting wrong artwork sometimes being shown in widgets using grid and fanart layout when scrolling backwards.
+- Fixed multiart behaviour on list/billboard view when main container loses focus
+- Fixed artwork displayed on secondary lists for list/billboard view when multiart visible
+- Refined user experience of widget settings screen. It should now be easier to see how to configure widgets
+- Removed inactive icons from dialogselect window when accessed via skinsettings
+
 **1.1.1**
 - Option for thumb or tv show artwork on widgets containing episodes
 - New widget settings screen with ability to easily reorder widgets
