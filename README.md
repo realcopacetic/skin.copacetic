@@ -16,6 +16,10 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 
+**1.1.5**
+- Removed visualisation.waveform dependency as this addon is not available on Linux
+- Fixed movie infoscreen widget for corresponding set.
+
 **1.1.4**
 - Added studio flag for Neon
 - Changed navigation on home menu to wrap on additional direction press so at the end of the list if you press right again, it will take you back to the list. And at the start, pressing left will take you to the end.

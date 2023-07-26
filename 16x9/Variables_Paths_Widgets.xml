@@ -23,8 +23,8 @@
 
 	<!-- Info -->
 	<variable name="Path_MovieSet">
-		<value condition="!String.IsEqual(ListItem.SetID)]">videodb://movies/titles/?setid=$INFO[ListItem.SetID]</value>
-		<value condition="System.AddonIsEnabled(plugin.video.themoviedb.helper) + !String.IsEmpty(ListItem.Set)">plugin://plugin.video.themoviedb.helper?info=collection&amp;type=movie&amp;query=$INFO[ListItem.Set]&amp;$VAR[TMDBHelper_Default_Params]</value>
+		<value condition="!String.IsEmpty(ListItem.SetID)">videodb://movies/titles/?setid=$INFO[ListItem.SetID]</value>
+		<value condition="!String.IsEmpty(ListItem.Set) + System.AddonIsEnabled(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper?info=collection&amp;type=movie&amp;query=$INFO[ListItem.Set]&amp;$VAR[TMDBHelper_Default_Params]</value>
 	</variable>
 
 	<variable name="Path_Episodes">
