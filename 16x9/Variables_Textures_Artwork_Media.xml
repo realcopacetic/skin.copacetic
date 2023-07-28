@@ -8,7 +8,6 @@
 		<value condition="VideoPlayer.IsFullscreen + Skin.HasSetting(Crop_Clearlogos) + !String.IsEmpty(Window(home).Property(clearlogo_cropped))">$INFO[Window(home).Property(clearlogo_cropped)]</value>
 		<value condition="VideoPlayer.IsFullscreen + !String.IsEmpty(VideoPlayer.Art(clearlogo))">$INFO[VideoPlayer.Art(clearlogo)]</value>
 		<!-- Secondary list -->
-		
 		<value condition="Control.HasFocus(3100) + $EXP[BillboardView_IsVisible] + Skin.HasSetting(Crop_Clearlogos) + !String.IsEmpty(Window(home).Property(clearlogo-billboard_cropped))">$INFO[Window(home).Property(clearlogo-billboard_cropped)]</value>
 		<value condition="Control.HasFocus(3100) + $EXP[BillboardView_IsVisible] + !String.IsEmpty(Container(3100).ListItem.Art(clearlogo-billboard))">$INFO[Container(3100).ListItem.Art(clearlogo-billboard)]</value>
 		<value condition="Control.HasFocus(3100) + !$EXP[BillboardView_IsVisible] + Skin.HasSetting(Crop_Clearlogos) + Skin.String(Theme,Light) + !String.IsEmpty(Window(home).Property(clearlogo-alt_cropped))">$INFO[Window(home).Property(clearlogo-alt_cropped)]</value>
@@ -90,7 +89,7 @@
 		<value condition="!String.IsEmpty(ListItem(0).Art(square)) + $EXP[GridView_Display_IsSquare]">$INFO[ListItem(0).Art(square)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(snap)) + $EXP[GridView_Display_IsSquare]">$INFO[ListItem(0).Art(snap)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(icon)) + $EXP[GridView_Display_IsSquare] + $EXP[Container_Programs_IsFolders]">$INFO[ListItem(0).Art(icon)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Art(thumb)) + [[$EXP[GridView_Display_IsSquare] + String.IsEqual(ListItem(0).DBType,artist)] | String.IsEqual(ListItem(0).DBType,episode) | String.IsEqual(ListItem(0).DBType,album) | Container.Content(addons)]">$INFO[ListItem(0).Art(thumb)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(thumb)) + [[$EXP[GridView_Display_IsSquare] + String.IsEqual(ListItem(0).DBType,artist)] | String.IsEqual(ListItem(0).DBType,episode) | String.IsEqual(ListItem(0).DBType,album) | Container.Content(addons) | [Container.Content(songs) + !String.IsEmpty(Container.PluginName)]]">$INFO[ListItem(0).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(fanart)) + !$EXP[GridView_Display_IsPosters]">$INFO[ListItem(0).Art(fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.fanart)) + !$EXP[GridView_Display_IsPosters]">$INFO[ListItem(0).Art(tvshow.fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.square)) + !$EXP[GridView_Display_IsPosters]">$INFO[ListItem(0).Art(tvshow.square)]</value>
@@ -344,7 +343,7 @@
 	</variable>
 
 	<variable name="Default(0)Content">
-		<value condition="!String.IsEmpty(ListItem(0).Art(thumb)) + [String.IsEqual(ListItem(0).DBType,episode) | [String.IsEqual(ListItem(0).DBType,artist) + $EXP[ListView_Display_IsThumbnails_Artists]] | [String.IsEqual(ListItem(0).DBType,album) + !$EXP[ListView_Display_IsBackground_Albums]] | [String.IsEqual(ListItem(0).DBType,song) + !$EXP[ListView_Display_IsBackground_Songs]] | [Container.Content(addons) + $EXP[ListView_IsVisible]]]">$INFO[ListItem(0).Art(thumb)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(thumb)) + [String.IsEqual(ListItem(0).DBType,episode) | [String.IsEqual(ListItem(0).DBType,artist) + $EXP[ListView_Display_IsThumbnails_Artists]] | [String.IsEqual(ListItem(0).DBType,album) + !$EXP[ListView_Display_IsBackground_Albums]] | [String.IsEqual(ListItem(0).DBType,song) + !$EXP[ListView_Display_IsBackground_Songs]] | [Container.Content(songs) + !String.IsEmpty(Container.PluginName)] | [Container.Content(addons) + $EXP[ListView_IsVisible]]]">$INFO[ListItem(0).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(album.fanart)) + !$EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(album.fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(fanart)) + !$EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.fanart)) + !$EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(tvshow.fanart)]</value>

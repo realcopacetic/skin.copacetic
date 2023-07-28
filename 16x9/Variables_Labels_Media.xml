@@ -752,6 +752,7 @@
 		<value condition="String.IsEqual(ListItem.DBType,artist) + $EXP[ListView_IsVisible] + !String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre]</value>
 		<value condition="String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
 		<value condition="String.IsEqual(ListItem.DBType,song) + !String.IsEmpty(ListItem.Album)">$INFO[ListItem.Album]</value>
+		<value condition="Container.Content(songs) + !String.IsEmpty(Container.PluginName) + $EXP[GridView_IsVisible]">$INFO[ListItem.Label]</value>
 		<value condition="Container.Content(images) + $EXP[GridView_IsVisible] + $EXP[GridView_Details_Breadcrumb_Images]">$INFO[ListItem.Label]</value>
 		<value condition="Container.Content(images)">$INFO[ListItem.FolderName]</value>
 		<value condition="Container.Content(addons) + $EXP[GridView_IsVisible] + $EXP[GridView_Details_Breadcrumb_Addons]">$INFO[ListItem.Label]</value>
