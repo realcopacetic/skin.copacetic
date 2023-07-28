@@ -30,7 +30,7 @@
 				<!-- List -->
 				<control type="panel" id="505">
 					<viewtype label="Grid">icon</viewtype>
-					<visible>![Container.Content() + !Window.Is(programs)] + ![Container.Content(songs) + String.IsEmpty(Container.PluginName)] + !Container.Content(playlists) + !$EXP[Containers_Background]</visible>
+					<visible>![Container.Content() + String.IsEmpty(Container.PluginName)] + ![Container.Content(songs) + String.IsEmpty(Container.PluginName)] + !Container.Content(playlists) + !$EXP[Containers_Background]</visible>
 					<left>50</left>
 					<top>180</top>
 					<width>1920</width>

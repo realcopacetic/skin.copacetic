@@ -16,7 +16,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 
-**1.1.5**
+**1.1.6**
 - Fixed music OSD label when Previous button selected.
 - Started work on adding better view support for plugins
 

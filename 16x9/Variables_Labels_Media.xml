@@ -761,6 +761,7 @@
 		<value condition="Container.Content(actors) + $EXP[GridView_IsVisible]">$LOCALIZE[344]</value>
 		<value condition="Container.Content(actors) + !String.IsEmpty(ListItem.Appearances)">$INFO[ListItem.Appearances]$VAR[Appearances_Label, ]</value>
 		<value condition="Container.Content(files)">$INFO[ListItem.FolderName]</value>
+		<value condition="$EXP[Container_Plugin_Empty]">$INFO[ListItem.Label]</value>
 		<value condition="Window.Is(skinsettings)">$LOCALIZE[31472]</value>
 		<value condition="Window.Is(interfacesettings)">$LOCALIZE[14206]</value>
 		<value condition="Window.Is(mediasettings)">$LOCALIZE[14211]</value>

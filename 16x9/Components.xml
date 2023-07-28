@@ -217,7 +217,7 @@
 
 	<include name="Background_Media">
 		<include content="Background_Global">
-			<param name="visible" value="$EXP[Containers_Background] | Container.Content()" />
+			<param name="visible" value="[$EXP[Containers_Background] | Container.Content()] + $EXP[ListView_Display_IsBackground]" />
 			<param name="local_list_content" value="true" />
 			<param name="content_source" value="Media" />
 		</include>
