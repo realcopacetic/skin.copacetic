@@ -23,7 +23,7 @@
 	<include name="Busy_Spinner">
 		<param name="visible" />
 		<param name="size" default="90" />
-		<param name="color" default="$VAR[Primary_Color]" />
+		<param name="color" default="$VAR[Light_Color]" />
 		<definition>
 			<control type="image">
 				<visible>$PARAM[visible]</visible>
@@ -192,8 +192,7 @@
 		<param name="animate_slideshow" default="true" />
 		<definition>
 			<control type="group">
-				<visible>!VideoPlayer.IsFullscreen + !Skin.HasSetting(Background_Disabled)</visible>
-				<visible>$PARAM[visible]</visible>
+				<visible>!VideoPlayer.IsFullscreen + $PARAM[visible]</visible>
 				<include content="VisibleHidden_Fade_Animation" />
 				<control type="videowindow">
 					<include content="Hidden_Control" />
@@ -217,7 +216,7 @@
 
 	<include name="Background_Media">
 		<include content="Background_Global">
-			<param name="visible" value="[$EXP[Containers_Background] | Container.Content()] + $EXP[ListView_Display_IsBackground]" />
+			<param name="visible" value="[$EXP[Containers_Background] | Container.Content()] + !$EXP[ListView_Display_IsThumbnails] + !$EXP[GridView_IsVisible]" />
 			<param name="local_list_content" value="true" />
 			<param name="content_source" value="Media" />
 		</include>

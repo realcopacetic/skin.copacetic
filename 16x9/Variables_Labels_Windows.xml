@@ -150,8 +150,8 @@
 		<!-- Home -->
 		<value condition="Control.HasFocus(1101)">$LOCALIZE[31529]</value>
 		<value condition="Control.HasFocus(1103)">$LOCALIZE[31530]</value>
-		<value condition="Control.HasFocus(1105) + !Skin.HasSetting(Background_Disabled)">$LOCALIZE[31533]</value>
-		<value condition="Control.HasFocus(1105) + Skin.HasSetting(Background_Disabled)">$LOCALIZE[31534]</value>
+		<value condition="Control.HasFocus(1105) + $EXP[Library_Has_Content]">$LOCALIZE[31533]</value>
+		<value condition="Control.HasFocus(1105) + !$EXP[Library_Has_Content]">$LOCALIZE[31534]</value>
 		<value condition="Control.HasFocus(11060) | Control.HasFocus(11061)">$LOCALIZE[31535]</value>
 		<value condition="Control.HasFocus(1109)">$LOCALIZE[31541]</value>
 		<value condition="Control.HasFocus(1110)">$LOCALIZE[31542]</value>

@@ -6,8 +6,7 @@
 	<include content="WindowOpenClose_Fade_Delayed_Animation" />
 	<controls>
 		<include content="loginscreen_Hidden" />
-		<include content="Light_Theme_Background" condition="Skin.HasSetting(Background_Disabled)" />
-		<include content="Background_Global" condition="!Skin.HasSetting(Background_Disabled)">
+		<include content="Background_Global">
 			<include content="Background_List" condition="$PARAM[local_list_content]">
 				<param name="content_source" value="$PARAM[content_source]" />
 			</include>
@@ -45,8 +44,8 @@
 				<param name="button1" value="true" />
 				<param name="button1_texture" value="Power" />
 				<param name="button1_onclick" value="ActivateWindow(shutdownmenu)" />
-				<param name="color" value="$VAR[Settings_Label_Color]" />
-				<param name="unfocused_color" value="$VAR[Settings_Label_Color]" />
+				<param name="color" value="$VAR[Light_Color]" />
+				<param name="unfocused_color" value="$VAR[Light_Color]" />
 			</include>
 		</include>
 		<include content="StripView_Art_loginscreen" />

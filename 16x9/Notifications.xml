@@ -566,7 +566,7 @@
 					<param name="center_label_visible" value="true" />
 				</include>
 				<!-- Strip -->
-				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music)] + Skin.HasSetting(StripView_Enabled)">
+				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(addonbrowser) | Window.IsVisible(programs)] + Skin.HasSetting(StripView_Enabled)">
 					<param name="id" value="6503" />
 					<param name="visible" value="$EXP[StripView_IsVisible] + !$EXP[Infoscreen_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible]" />
 					<param name="content_visible" value="$PARAM[content_visible]" />

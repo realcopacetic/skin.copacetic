@@ -107,6 +107,7 @@
 					<param name="visible" value="!Container.Content(sets) + !Container.Content(movies) + !Container.Content(tvshows) + ![Container.Content(seasons) + $EXP[ListView_Details_Info_Seasons]] + ![Container.Content(actors) + String.IsEmpty(ListItem.Appearances)] + ![Container.Content(files) + !String.IsEmpty(ListItem.Art(poster))] + ![$EXP[ListView_Display_IsBackground] + $EXP[Notification_Widget_IsVisible]]" />
 					<param name="animation" value="VisibleHidden_Fade_Delayed_Animation" />
 					<param name="info_label_visible" value="true" />
+					<param name="label_color" value="$VAR[Breadcrumb_Label_Color]" />
 				</include>
 			</include>
 		</definition>

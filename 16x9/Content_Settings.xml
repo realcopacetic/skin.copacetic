@@ -331,29 +331,20 @@
 			<param name="category" value="10" />
 			<param name="previous" value="1015" />
 			<param name="id" value="1016" />
-			<param name="next" value="1017" />
+			<param name="next" value="1018" />
 		</include>
-		<control type="radiobutton" id="1017">
-			<description>Enable background fanart slideshow</description>
-			<visible>ControlGroup(9).HasFocus(10)</visible>
-			<label>$LOCALIZE[31425]</label>
-			<onclick>Skin.ToggleSetting(Background_Disabled)</onclick>
-			<selected>!Skin.HasSetting(Background_Disabled)</selected>
-		</control>
 		<include content="skinsettings_Slider_Button">
 			<param name="info" value="Background_Slideshow" />
-			<param name="visible" value="!Skin.HasSetting(Background_Disabled)" />
-			<param name="label" value="- $LOCALIZE[31426]" />
+			<param name="label" value="$LOCALIZE[31426]" />
 			<param name="label2" value="$VAR[skinsettings_Background_Slideshow_Label]" />
 			<param name="category" value="10" />
-			<param name="previous" value="1017" />
+			<param name="previous" value="1016" />
 			<param name="id" value="1018" />
 			<param name="next" value="1019" />
 		</include>
 		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="!Skin.HasSetting(Background_Disabled)" />
 			<param name="info" value="Background_Interval" />
-			<param name="label" value="- $LOCALIZE[31427]" />
+			<param name="label" value="$LOCALIZE[31427]" />
 			<param name="label2" value="$VAR[skinsettings_Background_Interval_Label]" />
 			<param name="category" value="10" />
 			<param name="previous" value="1018" />
@@ -380,7 +371,7 @@
 			<visible>ControlGroup(9).HasFocus(10)</visible>
 		</control>
 
-		<!--Home-->
+			<!--Home-->
 		<control type="label" id="1100">
 			<description>Widgets</description>
 			<visible>ControlGroup(9).HasFocus(11)</visible>
@@ -422,7 +413,7 @@
 		</control>
 		<include content="skinsettings_Slider_Button">
 			<param name="info" value="Home_Background_Override_Source" />
-			<param name="visible" value="Skin.HasSetting(Home_Background_Override_Enabled) + !Skin.HasSetting(Background_Disabled)" />
+			<param name="visible" value="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content]" />
 			<param name="label" value="- $LOCALIZE[31426]" />
 			<param name="label2" value="$VAR[skinsettings_Home_Background_Override_Source_Label]" />
 			<param name="category" value="11" />
@@ -434,7 +425,7 @@
 			<description>- Choose a custom path</description>
 			<label>$VAR[skinsettings_Home_Background_Override_Path_Label,- ]</label>
 			<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;custom=True&amp;showNone=False&amp;skinList=Home_Background_Override_Path)</onclick>
-			<visible>ControlGroup(9).HasFocus(11) + Skin.HasSetting(Home_Background_Override_Enabled) + [Skin.String(Home_Background_Override_Source,Custom) | Skin.HasSetting(Background_Disabled)]</visible>
+			<visible>ControlGroup(9).HasFocus(11) + Skin.HasSetting(Home_Background_Override_Enabled) + [Skin.String(Home_Background_Override_Source,Custom) | !$EXP[Library_Has_Content]]</visible>
 		</control>
 		<include content="skinsettings_Slider_Button">
 			<param name="info" value="Home_Background_Brightness" />
@@ -474,7 +465,7 @@
 			<visible>ControlGroup(9).HasFocus(11)</visible>
 		</control>
 
-		<!-- Widgets -->
+			<!-- Widgets -->
 		<include content="Widget_Settings_Content">
 			<param name="previous_widget_position" value="9" />
 			<param name="widget_position" value="1" />
@@ -521,7 +512,7 @@
 			<param name="next_widget_position" value="1" />
 		</include>
 
-		<!-- Views -->
+			<!-- Views -->
 		<control type="radiobutton" id="1338">
 			<description>Kiosk mode</description>
 			<visible>ControlGroup(9).HasFocus(13)</visible>
@@ -675,7 +666,7 @@
 			<selected>Skin.HasSetting(GridView_Enabled_Addons)</selected>
 		</control>
 
-		<!-- Customisations -->
+			<!-- Customisations -->
 		<control type="label" id="1400">
 			<description>Library</description>
 			<include content="skinsettings_Default_Label" />
@@ -741,7 +732,7 @@
 			<visible>ControlGroup(9).HasFocus(14)</visible>
 		</control>
 
-		<!-- Extras -->
+			<!-- Extras -->
 		<control type="label" id="1500">
 			<description>Embedded lists</description>
 			<visible>ControlGroup(9).HasFocus(15)</visible>
@@ -880,7 +871,7 @@
 			<visible>ControlGroup(9).HasFocus(15) + Skin.HasSetting(Trailer_Autoplay)</visible>
 		</control>
 
-		<!-- Experiments -->
+			<!-- Experiments -->
 		<control type="radiobutton" id="1600">
 			<description>Use unwatched count in info details</description>
 			<visible>ControlGroup(9).HasFocus(16)</visible>

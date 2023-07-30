@@ -33,7 +33,7 @@
 				<font>Description</font>
 				<align>left</align>
 				<aligny>center</aligny>
-				<textcolor>$VAR[Settings_Label_Color]</textcolor>
+				<textcolor>$VAR[Light_Color]</textcolor>
 				<label>$LOCALIZE[31413] [B]$LOCALIZE[31414][/B]</label>
 			</control>
 			<include content="Settings_Grouplist_Template">

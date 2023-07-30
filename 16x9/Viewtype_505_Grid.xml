@@ -69,6 +69,7 @@
 						<param name="visible" value="!$EXP[GridView_Details_Off] + !$EXP[Notification_Widget_IsVisible]" />
 						<param name="animation" value="VisibleHidden_Fade_Delayed_Animation" />
 						<param name="info_label_visible" value="true" />
+						<param name="label_color" value="$VAR[Breadcrumb_Label_Color]" />
 					</include>
 				</control>
 			</control>

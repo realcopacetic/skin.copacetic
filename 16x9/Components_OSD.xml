@@ -162,7 +162,7 @@
 		<param name="fadein" default="true" />
 		<param name="width" default="120" />
 		<param name="size" default="Medium" />
-		<param name="color" default="$VAR[Common_List_Label_Color]" />
+		<param name="color" default="$VAR[Light_Color]" />
 		<definition>
 			<control type="group">
 				<visible>!$EXP[TransparentDialog_IsVisible]</visible>

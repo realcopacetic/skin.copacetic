@@ -756,7 +756,7 @@ msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31426"
-msgid "Limit artwork to..."
+msgid "Limit background slideshow artwork to..."
 msgstr ""
 
 #/16x9/Content_Settings.xml
@@ -766,7 +766,7 @@ msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31427"
-msgid "Slideshow speed (seconds)"
+msgid "Background slideshow speed (seconds)"
 msgstr ""
 
 #/16x9/Content_Settings.xml

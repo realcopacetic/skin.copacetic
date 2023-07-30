@@ -17,7 +17,6 @@
 				<param name="title_label" value="$INFO[Container(11).ListItem.Label]" />
 				<param name="info_label_visible" value="true" />
 				<param name="info_label" value="$VAR[11_ListItem_Label2_Divider_Bold,, ]$INFO[Container(11).ListItem.Label2]" />
-				<param name="label_color" value="$VAR[Light_Color]" />
 				<animation effect="slide" start="0" end="12,911" time="0" condition="true">Conditional</animation>
 			</include>
 			<include content="Button_Group_Template">

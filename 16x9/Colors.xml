@@ -185,7 +185,6 @@
 	</variable>
 	<!-- Alpha overlay masks -->
 	<variable name="Panel_Mask">
-		<value condition="$EXP[Background_Global_Windows] + Skin.HasSetting(Background_Disabled)">$VAR[Dark_Grey_Color]</value>
 		<value condition="Window.IsVisible(songinformation) | [Window.IsVisible(musicinformation) + String.IsEqual(Window(musicinformation).Property(Info_Type),album)] | Window.IsVisible(addoninformation)">$VAR[Dark_Grey_Color]</value>
 		<value condition="Window.IsVisible(pictureinfo)">$VAR[Alpha_90]$VAR[Dark_Grey_Hex]</value>
 		<value condition="Window.Is(addonbrowser) + Window.Is(filebrowser)">$VAR[Alpha_75]$VAR[Dark_Grey_Hex]</value>
@@ -201,29 +200,19 @@
 
 	<!-- Labels -->
 	<variable name="Breadcrumb_Label_Color">
-		<value condition="VideoPlayer.IsFullscreen | $EXP[Trailer_Autoplay_IsVisible]">$VAR[Light_Color]</value>
-		<value condition="[$EXP[Background_Global_Windows] | $EXP[PanelDialog_IsVisible]] + Skin.HasSetting(Background_Disabled)">$VAR[Primary_Color]</value>
-		<value condition="[$EXP[Background_Global_Windows] | $EXP[PanelDialog_IsVisible]] + !Skin.HasSetting(Background_Disabled)">$VAR[Light_Color]</value>
 		<value condition="$EXP[Infoscreen_IsVisible] + [String.IsEqual(System.CurrentControlID,50) | String.IsEqual(System.CurrentControlID,3201) | String.IsEqual(System.CurrentControlID,3202) | String.IsEqual(System.CurrentControlID,3203) | String.IsEqual(System.CurrentControlID,3206) | String.IsEqual(System.CurrentControlID,3207)]">$VAR[Primary_Color]</value>
-		<value condition="Window.IsVisible(movieinformation)">$VAR[Light_Color]</value>
 		<value condition="Window.IsVisible(musicinformation) + String.IsEqual(Window(musicinformation).Property(Info_Type),album) + !String.IsEqual(System.CurrentControlID,12)">$VAR[Primary_Color]</value>
 		<value condition="Window.IsVisible(songinformation) | Window.IsVisible(addoninformation) | Window.IsVisible(pictureinfo) | Window.IsVisible(addoninformation)">$VAR[Primary_Color]</value>
-		<value condition="Window.IsVisible(addonbrowser) + Container.Content(addons)">$VAR[Primary_Color]</value>
-		<value condition="Window.IsVisible(home) + [Skin.String(Widget1_View,Strip) | Skin.String(Widget1_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3201)">$VAR[Primary_Color]</value>
-		<value condition="Window.IsVisible(home) + [Skin.String(Widget2_View,Strip) | Skin.String(Widget2_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3202)">$VAR[Primary_Color]</value>
-		<value condition="Window.IsVisible(home) + [Skin.String(Widget3_View,Strip) | Skin.String(Widget3_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3203)">$VAR[Primary_Color]</value>
-		<value condition="Window.IsVisible(home) + [Skin.String(Widget4_View,Strip) | Skin.String(Widget4_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3204)">$VAR[Primary_Color]</value>
-		<value condition="Window.IsVisible(home) + [Skin.String(Widget5_View,Strip) | Skin.String(Widget5_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3205)">$VAR[Primary_Color]</value>
-		<value condition="Window.IsVisible(home) + [Skin.String(Widget6_View,Strip) | Skin.String(Widget6_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3206)">$VAR[Primary_Color]</value>
-		<value condition="Window.IsVisible(home) + [Skin.String(Widget7_View,Strip) | Skin.String(Widget7_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3207)">$VAR[Primary_Color]</value>
-		<value condition="Window.IsVisible(home) + [Skin.String(Widget8_View,Strip) | Skin.String(Widget8_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3208)">$VAR[Primary_Color]</value>
-		<value condition="Window.IsVisible(home) + [Skin.String(Widget9_View,Strip) | Skin.String(Widget9_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3209)">$VAR[Primary_Color]</value>
-		<value condition="!Window.IsVisible(home) + !$EXP[Infoscreen_IsVisible] + !$EXP[Background_IsFanart]">$VAR[Primary_Color]</value>
-		<value>$VAR[Light_Color]</value>
-	</variable>
-	<variable name="shutdownmenu_Label_Color">
-		<value condition="$EXP[Infoscreen_Background_IsLight] + [Window.IsVisible(selectdialog) | Window.IsVisible(filebrowser)]">$VAR[Primary_Color]</value>
-		<value condition="$EXP[Background_Global_Windows] + Skin.HasSetting(Background_Disabled)">$VAR[Primary_Color]</value>
+		<value condition="!$EXP[Infoscreen_IsVisible] + Window.Is(home) + [Skin.String(Widget1_View,Strip) | Skin.String(Widget1_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3201)">$VAR[Primary_Color]</value>
+		<value condition="!$EXP[Infoscreen_IsVisible] + Window.Is(home) + [Skin.String(Widget2_View,Strip) | Skin.String(Widget2_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3202)">$VAR[Primary_Color]</value>
+		<value condition="!$EXP[Infoscreen_IsVisible] + Window.Is(home) + [Skin.String(Widget3_View,Strip) | Skin.String(Widget3_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3203)">$VAR[Primary_Color]</value>
+		<value condition="!$EXP[Infoscreen_IsVisible] + Window.Is(home) + [Skin.String(Widget4_View,Strip) | Skin.String(Widget4_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3204)">$VAR[Primary_Color]</value>
+		<value condition="!$EXP[Infoscreen_IsVisible] + Window.Is(home) + [Skin.String(Widget5_View,Strip) | Skin.String(Widget5_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3205)">$VAR[Primary_Color]</value>
+		<value condition="!$EXP[Infoscreen_IsVisible] + Window.Is(home) + [Skin.String(Widget6_View,Strip) | Skin.String(Widget6_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3206)">$VAR[Primary_Color]</value>
+		<value condition="!$EXP[Infoscreen_IsVisible] + Window.Is(home) + [Skin.String(Widget7_View,Strip) | Skin.String(Widget7_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3207)">$VAR[Primary_Color]</value>
+		<value condition="!$EXP[Infoscreen_IsVisible] + Window.Is(home) + [Skin.String(Widget8_View,Strip) | Skin.String(Widget8_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3208)">$VAR[Primary_Color]</value>
+		<value condition="!$EXP[Infoscreen_IsVisible] + Window.Is(home) + [Skin.String(Widget9_View,Strip) | Skin.String(Widget9_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3209)">$VAR[Primary_Color]</value>
+		<value condition="!$EXP[Infoscreen_IsVisible] + [$EXP[ListView_Display_IsThumbnails] | $EXP[StripView_IsVisible] | $EXP[GridView_IsVisible]]">$VAR[Primary_Color]</value>
 		<value>$VAR[Light_Color]</value>
 	</variable>
 	<variable name="Notification_Widget_Background_Color">
@@ -241,10 +230,6 @@
 	<variable name="Volume_Focused_Color">
 		<value condition="$EXP[Music_Player_HasArt]">$VAR[Light_Color]</value>
 		<value>$VAR[Notification_Widget_Label_Color]</value>
-	</variable>
-	<variable name="Common_List_Label_Color">
-		<value condition="$EXP[Background_Global_Windows] + Skin.HasSetting(Background_Disabled)">$VAR[Primary_Color]</value>
-		<value>$VAR[Light_Color]</value>
 	</variable>
 
 	<variable name="Common_List_Info_Label_Color">
@@ -274,10 +259,6 @@
 	<variable name="Privacy_Policy_Color">
 		<value condition="Control.HasFocus(62)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
-	</variable>
-	<variable name="Settings_Label_Color">
-		<value condition="Skin.String(Theme,Light) + Skin.HasSetting(Background_Disabled)">$VAR[Dark_Color]</value>
-		<value>$VAR[Light_Color]</value>
 	</variable>
 	<variable name="Settings_Grouplist_Label_Color">
 		<value condition="Window.Is(smartplaylisteditor) + Control.HasFocus(10)">$VAR[Light_Color]</value>
@@ -511,21 +492,6 @@
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 
-
-	<variable name="skinsettings_Widget_SortOrder_Label">
-		<value condition="Control.HasFocus(12034)">$VAR[Light_Color]</value>
-		<value condition="Control.HasFocus(12134)">$VAR[Light_Color]</value>
-		<value condition="Control.HasFocus(12234)">$VAR[Light_Color]</value>
-		<value condition="Control.HasFocus(12334)">$VAR[Light_Color]</value>
-		<value condition="Control.HasFocus(12434)">$VAR[Light_Color]</value>
-		<value condition="Control.HasFocus(12534)">$VAR[Light_Color]</value>
-		<value condition="Control.HasFocus(12634)">$VAR[Light_Color]</value>
-		<value condition="Control.HasFocus(12734)">$VAR[Light_Color]</value>
-		<value condition="Control.HasFocus(12834)">$VAR[Light_Color]</value>
-		<value condition="Control.HasFocus(12934)">$VAR[Light_Color]</value>
-		<value>$VAR[Unfocused_Color]</value>
-	</variable>
-
 	<variable name="SortLetter_Background_Color">
 		<value condition="Control.HasFocus(62) + $EXP[Background_IsFanart]">$VAR[Light_Color]</value>
 		<value condition="Control.HasFocus(62) + Skin.String(Theme,Light)">$VAR[Dark_Color]</value>
@@ -549,15 +515,15 @@
 	</variable>
 	<variable name="virtualkeyboard_Shift_Key_Color">
 		<value condition="!Control.HasFocus(302) + String.Contains(Control.GetLabel(302),*)">$VAR[Accent_Color]</value>
-		<value>$VAR[Breadcrumb_Label_Color]</value>
+		<value>$VAR[Light_Color]</value>
 	</variable>
 	<variable name="virtualkeyboard_Caps_Key_Color">
 		<value condition="!Control.HasFocus(303) + String.Contains(Control.GetLabel(303),*)">$VAR[Accent_Color]</value>
-		<value>$VAR[Breadcrumb_Label_Color]</value>
+		<value>$VAR[Light_Color]</value>
 	</variable>
 	<variable name="virtualkeyboard_Symbols_Key_Color">
 		<value condition="!Control.HasFocus(304) + String.Contains(Control.GetLabel(304),*)">$VAR[Accent_Color]</value>
-		<value>$VAR[Breadcrumb_Label_Color]</value>
+		<value>$VAR[Light_Color]</value>
 	</variable>
 	<variable name="sliderdialog_Bar_Color">
 		<value>$VAR[Alpha_15]$VAR[Light_Hex]</value>
@@ -637,6 +603,7 @@
 		<value condition="Control.HasFocus(3204) + $EXP[GridView_Display_IsPosters_Widget_Infoscreen] + !String.IsEmpty(Container(3204).ListItemNoWrap(5).Label)">$VAR[Alpha_15]$VAR[Light_Hex]</value>
 		<value condition="Control.HasFocus(3204) + $EXP[GridView_Display_IsSquare_Widget_Infoscreen] + !String.IsEmpty(Container(3204).ListItemNoWrap(5).Label)">$VAR[Alpha_15]$VAR[Light_Hex]</value>
 		<value condition="Control.HasFocus(3204) + $EXP[GridView_Display_IsFanart_Widget_Infoscreen] + !String.IsEmpty(Container(3204).ListItemNoWrap(3).Label)">$VAR[Alpha_15]$VAR[Light_Hex]</value>
+		<value condition="Control.HasFocus(3205) + $EXP[BillboardView_Display_IsFanart_Widget_Infoscreen]">$VAR[Alpha_15]$VAR[Light_Hex]</value>
 		<value condition="Control.HasFocus(3205) + $EXP[StripView_Display_IsPosters_Widget_Infoscreen] + !String.IsEmpty(Container(3205).ListItemNoWrap(2).Label)">$VAR[Alpha_15]$VAR[Light_Hex]</value>
 		<value condition="Control.HasFocus(3205) + $EXP[StripView_Display_IsSquare_Widget_Infoscreen] + !String.IsEmpty(Container(3205).ListItemNoWrap(2).Label)">$VAR[Alpha_15]$VAR[Light_Hex]</value>
 		<value condition="Control.HasFocus(3205) + $EXP[StripView_Display_IsFanart_Widget_Infoscreen] + !String.IsEmpty(Container(3205).ListItemNoWrap(1).Label)">$VAR[Alpha_15]$VAR[Light_Hex]</value>
@@ -706,6 +673,7 @@
 		<value condition="Control.HasFocus(3204) + $EXP[GridView_Display_IsPosters_Widget_Infoscreen] + !String.IsEmpty(Container(3204).ListItemNoWrap(5).Label)">$VAR[Light_Color]</value>
 		<value condition="Control.HasFocus(3204) + $EXP[GridView_Display_IsSquare_Widget_Infoscreen] + !String.IsEmpty(Container(3204).ListItemNoWrap(5).Label)">$VAR[Light_Color]</value>
 		<value condition="Control.HasFocus(3204) + $EXP[GridView_Display_IsFanart_Widget_Infoscreen] + !String.IsEmpty(Container(3204).ListItemNoWrap(3).Label)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(3205) + $EXP[BillboardView_Display_IsFanart_Widget_Infoscreen]">$VAR[Light_Color]</value>
 		<value condition="Control.HasFocus(3205) + $EXP[StripView_Display_IsPosters_Widget_Infoscreen] + !String.IsEmpty(Container(3205).ListItemNoWrap(2).Label)">$VAR[Light_Color]</value>
 		<value condition="Control.HasFocus(3205) + $EXP[StripView_Display_IsSquare_Widget_Infoscreen] + !String.IsEmpty(Container(3205).ListItemNoWrap(2).Label)">$VAR[Light_Color]</value>
 		<value condition="Control.HasFocus(3205) + $EXP[StripView_Display_IsFanart_Widget_Infoscreen] + !String.IsEmpty(Container(3205).ListItemNoWrap(1).Label)">$VAR[Light_Color]</value>

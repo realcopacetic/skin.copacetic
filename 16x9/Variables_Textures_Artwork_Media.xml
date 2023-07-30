@@ -24,11 +24,11 @@
 	</variable>
 
 	<variable name="Background_Home_Texture">
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + !Skin.HasSetting(Background_Disabled) + [Skin.String(Home_Background_Override_Source,Global) | !Skin.String(Home_Background_Override_Source)] + !String.IsEmpty(Window(home).Property(Background_Global_Fanart))">$INFO[Window(home).Property(Background_Global_Fanart)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + !Skin.HasSetting(Background_Disabled) + Skin.String(Home_Background_Override_Source,Movies) + !String.IsEmpty(Window(home).Property(Background_Movies_Fanart))">$INFO[Window(home).Property(Background_Movies_Fanart)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + !Skin.HasSetting(Background_Disabled) + Skin.String(Home_Background_Override_Source,TVShows) + !String.IsEmpty(Window(home).Property(Background_TVShows_Fanart))">$INFO[Window(home).Property(Background_TVShows_Fanart)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + !Skin.HasSetting(Background_Disabled) + Skin.String(Home_Background_Override_Source,Videos) + !String.IsEmpty(Window(home).Property(Background_Videos_Fanart))">$INFO[Window(home).Property(Background_Videos_Fanart)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + !Skin.HasSetting(Background_Disabled) + Skin.String(Home_Background_Override_Source,Artists) + !String.IsEmpty(Window(home).Property(Background_Artists_Fanart))">$INFO[Window(home).Property(Background_Artists_Fanart)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + [Skin.String(Home_Background_Override_Source,Global) | !Skin.String(Home_Background_Override_Source)] + !String.IsEmpty(Window(home).Property(Background_Global_Fanart))">$INFO[Window(home).Property(Background_Global_Fanart)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Home_Background_Override_Source,Movies) + !String.IsEmpty(Window(home).Property(Background_Movies_Fanart))">$INFO[Window(home).Property(Background_Movies_Fanart)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Home_Background_Override_Source,TVShows) + !String.IsEmpty(Window(home).Property(Background_TVShows_Fanart))">$INFO[Window(home).Property(Background_TVShows_Fanart)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Home_Background_Override_Source,Videos) + !String.IsEmpty(Window(home).Property(Background_Videos_Fanart))">$INFO[Window(home).Property(Background_Videos_Fanart)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Home_Background_Override_Source,Artists) + !String.IsEmpty(Window(home).Property(Background_Artists_Fanart))">$INFO[Window(home).Property(Background_Artists_Fanart)]</value>
 		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + Skin.String(Home_Background_Override_Path) + !String.IsEmpty(Control.GetLabel(3401))">$INFO[Control.GetLabel(3401)]</value>
 		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + Skin.String(Home_Background_Override_Path)">$INFO[Container(3300).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist)) + !String.IsEmpty(Control.GetLabel(3401))">$INFO[Control.GetLabel(3401)]</value>
@@ -39,11 +39,11 @@
 	</variable>
 
 	<variable name="Background_Home_Clearlogo_Texture">
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + !Skin.HasSetting(Background_Disabled) + [Skin.String(Home_Background_Override_Source,Global) | !Skin.String(Home_Background_Override_Source)]">$INFO[Window(home).Property(Background_Global_Clearlogo)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + !Skin.HasSetting(Background_Disabled) + Skin.String(Home_Background_Override_Source,Movies)">$INFO[Window(home).Property(Background_Movies_Clearlogo)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + !Skin.HasSetting(Background_Disabled) + Skin.String(Home_Background_Override_Source,TVShows)">$INFO[Window(home).Property(Background_TVShows_Clearlogo)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + !Skin.HasSetting(Background_Disabled) + Skin.String(Home_Background_Override_Source,Videos)">$INFO[Window(home).Property(Background_Videos_Clearlogo)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + !Skin.HasSetting(Background_Disabled) + Skin.String(Home_Background_Override_Source,Artists)">$INFO[Window(home).Property(Background_Artists_Clearlogo)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + [Skin.String(Home_Background_Override_Source,Global) | !Skin.String(Home_Background_Override_Source)]">$INFO[Window(home).Property(Background_Global_Clearlogo)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Home_Background_Override_Source,Movies)">$INFO[Window(home).Property(Background_Movies_Clearlogo)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Home_Background_Override_Source,TVShows)">$INFO[Window(home).Property(Background_TVShows_Clearlogo)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Home_Background_Override_Source,Videos)">$INFO[Window(home).Property(Background_Videos_Clearlogo)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Home_Background_Override_Source,Artists)">$INFO[Window(home).Property(Background_Artists_Clearlogo)]</value>
 		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + Skin.String(Home_Background_Override_Path)">$INFO[Container(3300).ListItem.Art(clearlogo)]</value>
 		<value condition="String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist)) + !String.IsEmpty(Container(3000).ListItem.Property(background))" />
 		<value>$INFO[Container(3300).ListItem.Art(clearlogo)]</value>
@@ -53,13 +53,13 @@
 		<value condition="Window.IsVisible(addonsettings) + !String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="Window.IsVisible(loginscreen) + !String.IsEmpty(Container(3300).ListItem.Art(fanart))">$INFO[Container(3300).ListItem.Art(fanart)]</value>
 		<value condition="!String.Contains(Container.FolderPath,plugin://) + $EXP[Containers_Background] + !String.IsEmpty(Container(3300).ListItem.Art(fanart))">$INFO[Container(3300).ListItem.Art(fanart)]</value>
-		<value condition="!Skin.HasSetting(Background_Disabled) + Window.IsVisible(videos) + !String.IsEmpty(Window(home).Property(Background_Videos))">$INFO[Window(home).Property(Background_Videos)]</value>
-		<value condition="!Skin.HasSetting(Background_Disabled) + Window.IsVisible(music) + !String.IsEmpty(Window(home).Property(Background_Artists))">$INFO[Window(home).Property(Background_Artists)]</value>
-		<value condition="!Skin.HasSetting(Background_Disabled) + Skin.String(Background_Slideshow,Global) + !String.IsEmpty(Window(home).Property(Background_Global_Fanart))">$INFO[Window(home).Property(Background_Global_Fanart)]</value>
-		<value condition="!Skin.HasSetting(Background_Disabled) + Skin.String(Background_Slideshow,Videos) + !String.IsEmpty(Window(home).Property(Background_Videos_Fanart))">$INFO[Window(home).Property(Background_Videos_Fanart)]</value>
-		<value condition="!Skin.HasSetting(Background_Disabled) + Skin.String(Background_Slideshow,Movies) + !String.IsEmpty(Window(home).Property(Background_Movies_Fanart))">$INFO[Window(home).Property(Background_Movies_Fanart)]</value>
-		<value condition="!Skin.HasSetting(Background_Disabled) + Skin.String(Background_Slideshow,TVShows) + !String.IsEmpty(Window(home).Property(Background_TVShows_Fanart))">$INFO[Window(home).Property(Background_TVShows_Fanart)]</value>
-		<value condition="!Skin.HasSetting(Background_Disabled) + Skin.String(Background_Slideshow,Artists) + !String.IsEmpty(Window(home).Property(Background_Artists_Fanart))">$INFO[Window(home).Property(Background_Artists_Fanart)]</value>
+		<value condition="$EXP[Library_Has_Content] + Window.IsVisible(videos) + !String.IsEmpty(Window(home).Property(Background_Videos))">$INFO[Window(home).Property(Background_Videos)]</value>
+		<value condition="$EXP[Library_Has_Content] + Window.IsVisible(music) + !String.IsEmpty(Window(home).Property(Background_Artists))">$INFO[Window(home).Property(Background_Artists)]</value>
+		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Global) + !String.IsEmpty(Window(home).Property(Background_Global_Fanart))">$INFO[Window(home).Property(Background_Global_Fanart)]</value>
+		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Videos) + !String.IsEmpty(Window(home).Property(Background_Videos_Fanart))">$INFO[Window(home).Property(Background_Videos_Fanart)]</value>
+		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Movies) + !String.IsEmpty(Window(home).Property(Background_Movies_Fanart))">$INFO[Window(home).Property(Background_Movies_Fanart)]</value>
+		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,TVShows) + !String.IsEmpty(Window(home).Property(Background_TVShows_Fanart))">$INFO[Window(home).Property(Background_TVShows_Fanart)]</value>
+		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Artists) + !String.IsEmpty(Window(home).Property(Background_Artists_Fanart))">$INFO[Window(home).Property(Background_Artists_Fanart)]</value>
 	</variable>
 
 	<variable name="Infoscreen_Background_Texture">
