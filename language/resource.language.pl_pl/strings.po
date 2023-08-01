@@ -674,8 +674,8 @@ msgstr "Fototapety pobierane są z biblioteki mediów i wyświetlane w formie po
 
 # /16x9/Content_Settings.xml
 msgctxt "#31426"
-msgid "Limit artwork to..."
-msgstr "Ogranicz artwork do..."
+msgid "Limit background slideshow artwork to..."
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31526"
@@ -684,8 +684,8 @@ msgstr "Włącz, aby wybrać tylko niektóre fototapety z twojej biblioteki w po
 
 # /16x9/Content_Settings.xml
 msgctxt "#31427"
-msgid "Slideshow speed (seconds)"
-msgstr "Prędkość pokazu slajdów (w sekundach)"
+msgid "Background slideshow speed (seconds)"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31428"
@@ -1371,3 +1371,13 @@ msgstr ""
 msgctxt "#31914"
 msgid "Happy Earth Day"
 msgstr ""
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31426"
+#~ msgid "Limit artwork to..."
+#~ msgstr "Ogranicz artwork do..."
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31427"
+#~ msgid "Slideshow speed (seconds)"
+#~ msgstr "Prędkość pokazu slajdów (w sekundach)"
