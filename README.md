@@ -19,6 +19,11 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 **1.1.6**
 - Fixed music OSD label when Previous button selected.
 - Started work on adding better view support for plugins
+- Ability to switch between List (Background), List (Thumbnails) and Grid views for plugins when there is no container content type set (e.g. when browsing menus in TheMovieDB Helper) 
+- Removed ability to disable slideshows in order to simplify logic of light theme
+- Fixed issue where navigating from settings to a shortcut like TMDB Helper caused background slideshow to become hidden
+- Fixed window order issue when modal dialogs called from keyboard shortcut during playback (sometimes they would appear behind the diffuse layer)
+- Fixed infoscreen widgets not loading on first opening if they rely on window properties from script by adding fallback variables using ListItems.
 
 **1.1.5**
 - Removed visualisation.waveform dependency as this addon is not available on Linux

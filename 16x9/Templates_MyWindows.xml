@@ -184,12 +184,12 @@
 	<include name="MyViews_Addons">
 		<param name="visible" default="!$EXP[Infoscreen_IsVisible] + !Window.IsVisible(addonsettings)" />
 		<definition>
-			<include content="Background_Global">
-				<param name="visible" value="!Container.Content(addons) | Window.IsVisible(addonsettings)" />
-			</include>
 			<control type="group">
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
+				<include content="Background_Media" condition="$EXP[Library_Has_Content]">
+					<param name="visible" value="!Container.Content(addons)" />
+				</include>
 				<include content="ListView_Display">
 					<param name="art_icon" value="addonbrowser" />
 				</include>
@@ -226,7 +226,7 @@
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 				<include content="Secondary_List_Array" condition="Skin.HasSetting(Secondary_List_Enabled)" />
-				<include content="Background_Media" condition="[Window.Is(videos) | Window.Is(music)] + $EXP[Library_Has_Content]" />
+				<include content="Background_Media" condition="$EXP[Library_Has_Content]" />
 				<include content="ListView_Display" />
 				<include content="BillboardView_Container" condition="$EXP[BillboardView_Enabled]" />
 				<include content="BillboardView_Display" condition="$EXP[BillboardView_Enabled]" />

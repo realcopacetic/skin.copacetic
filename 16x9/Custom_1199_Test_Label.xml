@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1199">
-	<visible>false</visible>
+	<visible>true</visible>
 	<zorder>3</zorder>
 	<controls>
 		<control type="label">
 			<align>right</align>
-			<label>xxx ... $INFO[Window(home).Property(StudioSplit.0)]</label>
+			<label>xxx ... $INFO[Window(home).Property(RandomDirector)]</label>
 			<visible>true</visible>
 		</control>
 	</controls>
