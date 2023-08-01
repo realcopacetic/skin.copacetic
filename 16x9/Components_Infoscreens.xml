@@ -45,6 +45,7 @@
 
 	<include name="Infoscreen_Flags_Layout">
 		<control type="grouplist">
+			<visible>![String.IsEqual(Control.GetLabel(6303),flags/blank.png) + String.IsEqual(Control.GetLabel(6304),flags/blank.png)]</visible>
 			<nested />
 			<width>100%</width>
 			<height>180</height>
@@ -143,7 +144,7 @@
 					<label>$VAR[Info_Infoscreens_Label]</label>
 					<align>$PARAM[align]</align>
 				</control>
-				<include content="Infoscreen_Stars_Layout" condition="!Window.Is(addoninformation) + !String.IsEqual(ListItem.DBType,set) + !String.IsEqual(ListItem.DBType,artist)">
+				<include content="Infoscreen_Stars_Layout" condition="!Window.Is(addoninformation) + !String.IsEqual(ListItem.DBType,set) + !String.IsEqual(ListItem.DBType,artist) + ![String.IsEmpty(ListItem.UserRating) + String.IsEmpty(ListItem.Rating)]">
 					<param name="align" value="$PARAM[align]" />
 				</include>
 				<include content="Infoscreen_Flags_Layout" condition="Window.Is(movieinformation)">

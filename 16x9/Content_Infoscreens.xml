@@ -116,6 +116,7 @@
 		</control>
 		<control type="button" id="10">
 			<description>Choose art</description>
+			<visible>!String.IsEmpty(ListItem.DBID)</visible>
 			<include content="Hidden_Button_Template" />
 			<include content="MovieInfo_Dialog_Menu_Navigation" />
 			<onfocus>SetProperty(ResetScroll," ")</onfocus>

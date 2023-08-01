@@ -124,12 +124,14 @@
 		<value condition="$EXP[GridView_Widget_IsVisible] + String.IsEqual(ListItem.DBType,tvshow) + [Skin.HasSetting(Experiment_Unwatched_Info) | String.IsEmpty(ListItem.Property(WatchedEpisodes))] + !String.IsEmpty(ListItem.Year) + !String.IsEmpty(ListItem.Property(UnWatchedEpisodes))">$INFO[ListItem.Year]$VAR[ListItem_UnwatchedEpisodes_Divider_Bold, , ]$INFO[ListItem.Property(UnwatchedEpisodes),,/]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[16101]]</value>
 		<value condition="$EXP[GridView_Widget_IsVisible] + String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.Year) + !String.IsEmpty(ListItem.Property(WatchedEpisodes))">$INFO[ListItem.Year]$VAR[ListItem_WatchedEpisodes_Divider_Bold, , ]$INFO[ListItem.Property(WatchedEpisodes),,/]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[16102]]</value>
 		<value condition="$EXP[GridView_Widget_IsVisible] + String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.Year)">$INFO[ListItem.Year]$VAR[ListItem_TotalEpisodes_Divider_Bold, , ]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</value>
+		<value condition="$EXP[GridView_Widget_IsVisible] + String.IsEqual(ListItem.DBType,video)">$INFO[ListItem.Artist]$VAR[ListItem_Duration_Divider_Bold, ]$INFO[ListItem.Duration, ]</value>
 		<value condition="$EXP[GridView_Widget_IsVisible] + !String.IsEmpty(ListItem.Year)">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</value>
 		<value condition="String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.TVShowTitle)">[UPPERCASE]$INFO[ListItem.TVShowTitle]$VAR[ListItem_Duration_Divider, , ]$INFO[ListItem.Duration(mins),, $LOCALIZE[31114]]$VAR[ListItem_Premiered_Divider, , ]$INFO[ListItem.Premiered][/UPPERCASE]</value>
 		<value condition="String.IsEqual(ListItem.DBType,tvshow) + [Skin.HasSetting(Experiment_Unwatched_Info) | String.IsEmpty(ListItem.Property(WatchedEpisodes))] + !String.IsEmpty(ListItem.Year) + !String.IsEmpty(ListItem.Property(UnWatchedEpisodes))">[UPPERCASE]$INFO[ListItem.Year]$VAR[ListItem_TotalEpisodes_Divider, , ]$INFO[ListItem.Property(TotalSeasons),, ]$VAR[Seasons_Label]$VAR[ListItem_UnwatchedEpisodes_Divider, , ]$INFO[ListItem.Property(UnWatchedEpisodes),,/]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[16101]][/UPPERCASE]</value>
 		<value condition="String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.Year) + !String.IsEmpty(ListItem.Property(WatchedEpisodes))">[UPPERCASE]$INFO[ListItem.Year]$VAR[ListItem_TotalSeasons_Divider, , ]$INFO[ListItem.Property(TotalSeasons),, ]$VAR[Seasons_Label]$VAR[ListItem_WatchedEpisodes_Divider, , ]$INFO[ListItem.Property(WatchedEpisodes),,/]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[16102]][/UPPERCASE]</value>
 		<value condition="String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.Year) + !String.IsEmpty(ListItem.Property(TotalSeasons))">[UPPERCASE]$INFO[ListItem.Year]$VAR[ListItem_TotalSeasons_Divider, , ]$INFO[ListItem.Property(TotalSeasons),, ]$VAR[Seasons_Label]$VAR[ListItem_TotalEpisodes_Divider, , ]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]][/UPPERCASE]</value>
 		<value condition="String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(ListItem.Year)">[UPPERCASE]$INFO[ListItem.AlbumArtist]$VAR[ListItem_Year_Divider, , ]$INFO[ListItem.Year]$VAR[ListItem_Duration_Divider, , ]$INFO[ListItem.Duration(mins),, $LOCALIZE[31114]][/UPPERCASE]</value>
+		<value condition="String.IsEqual(ListItem.DBType,video)">[UPPERCASE]$INFO[ListItem.Artist]$VAR[ListItem_Artist_Divider_Bold, ]$INFO[ListItem.Premiered, ]$VAR[ListItem_Duration_Divider_Bold, ]$INFO[ListItem.Duration, ][/UPPERCASE]</value>
 		<value condition="!String.IsEmpty(ListItem.Year)">[UPPERCASE]$INFO[ListItem.Year]$VAR[ListItem_Duration_Divider, , ]$INFO[ListItem.Duration(mins),, $LOCALIZE[31114]]$VAR[Resolution_Label_Divider, , ]$VAR[Resolution_Label][/UPPERCASE]</value>
 	</variable>
 
@@ -234,6 +236,8 @@
 		<!-- 23 mins / Ends 13:32 -->
 		<value condition="Container.Content(files) + $EXP[ListView_IsVisible] + !String.IsEmpty(ListItem.Duration)">[UPPERCASE]$INFO[ListItem.Duration(mins),, $LOCALIZE[31114]][/UPPERCASE]</value>
 		<value condition="Container.Content(files) + !String.IsEmpty(ListItem.Duration)">[UPPERCASE]$INFO[ListItem.Duration(mins),, $LOCALIZE[31114]]$VAR[ListItem_Endtime_Divider, , ]$INFO[ListItem.EndTime,$LOCALIZE[31100] ][/UPPERCASE]</value>
+		<!-- Videos -->
+		<value condition="Container.Content(videos) + !String.IsEmpty(ListItem.Artist)">[UPPERCASE]$INFO[ListItem.Artist]$VAR[ListItem_Premiered_Divider, ]$INFO[ListItem.Premiered, ]$VAR[ListItem_Duration_Divider, ]$INFO[ListItem.Duration(mm:ss), ][/UPPERCASE]</value>
 		<value />
 	</variable>
 
@@ -264,6 +268,10 @@
 		<value condition="Container.Content(actors) + $EXP[GridView_IsVisible] + String.IsEqual(Container.SortMethod,$LOCALIZE[38026])">$VAR[ListItem_Appearances_Divider_Bold,, ]$INFO[ListItem.Appearances]$VAR[Appearances_Label, ]</value>
 		<value condition="Window.IsVisible(programs) + $EXP[GridView_IsVisible] + $EXP[GridView_Details_Breadcrumb_Programs_Files] + !String.IsEmpty(ListItem.Year)">$VAR[ListItem_Year_Divider_Bold,, ]$INFO[ListItem.Year]$VAR[ListItem_Studio_Divider_Bold, , ]$INFO[ListItem.Studio]$VAR[ListItem_NPlayers_Divider_Bold, , ]$INFO[ListItem.Property(nplayers),,p]</value>
 		<value condition="Container.Content(files) + !String.IsEmpty(ListItem.Duration)">$VAR[ListItem_Duration_Divider_Bold,, ]$INFO[ListItem.Duration(mins),, $LOCALIZE[31114]]$VAR[ListItem_Endtime_Divider_Bold, , ]$INFO[ListItem.EndTime,$LOCALIZE[31100] ]</value>
+		<value condition="Container.Content(videos) + $EXP[GridView_IsVisible] + !String.IsEmpty(ListItem.Duration)">$VAR[ListItem_Duration_Divider_Bold]$INFO[ListItem.Duration(mm:ss), ]$VAR[Copacetic_Divider_Bold, ]$INFO[ListItem.Label, ]</value>
+		<value condition="Container.Content(videos) + $EXP[GridView_IsVisible]">$VAR[Copacetic_Divider_Bold]$INFO[ListItem.Label, ]</value>
+		<value condition="Container.Content(videos) + !String.IsEmpty(ListItem.Premiered)">$VAR[ListItem_Premiered_Divider_Bold]$INFO[ListItem.Premiered, ]$VAR[ListItem_Duration_Divider_Bold, ]$INFO[ListItem.Duration(mm:ss), ]</value>
+
 	</variable>
 
 	<variable name="Info_Fullscreen_Label">
@@ -343,6 +351,8 @@
 		<value condition="String.IsEqual(ListItem.DBType,musicvideo) + !String.IsEmpty(ListItem.Director)">[UPPERCASE]$INFO[ListItem.Director]$VAR[Resolution_Label_Divider_Bold, , ]$VAR[Resolution_Label]$VAR[ListItem_Duration_Divider_Bold, , ]$INFO[ListItem.Duration(mm:ss)][/UPPERCASE]</value>
 		<value condition="String.IsEqual(ListItem.DBType,musicvideo) + !String.IsEmpty(ListItem.VideoResolution)">[UPPERCASE]$VAR[Resolution_Label]$VAR[ListItem_Duration_Divider_Bold, , ]$INFO[ListItem.Duration(mm:ss)][/UPPERCASE]</value>
 		<value condition="String.IsEqual(ListItem.DBType,musicvideo) + !String.IsEmpty(ListItem.Duration)">[UPPERCASE]$INFO[ListItem.Duration(mm:ss)][/UPPERCASE]</value>
+		<!-- Videos -->
+		<value condition="String.IsEqual(ListItem.DBType,video)">[UPPERCASE]$INFO[ListItem.Artist]$VAR[ListItem_Artist_Divider_Bold, ]$INFO[ListItem.Premiered, ]$VAR[ListItem_Premiered_Divider_Bold, ]$INFO[ListItem.Duration(mm:ss), ][/UPPERCASE]</value>
 		<value />
 	</variable>
 
@@ -760,7 +770,9 @@
 		<value condition="Container.Content(playlists)">$LOCALIZE[136]</value>
 		<value condition="Container.Content(actors) + $EXP[GridView_IsVisible]">$LOCALIZE[344]</value>
 		<value condition="Container.Content(actors) + !String.IsEmpty(ListItem.Appearances)">$INFO[ListItem.Appearances]$VAR[Appearances_Label, ]</value>
-		<value condition="Container.Content(files)">$INFO[ListItem.FolderName]</value>
+		<value condition="Container.Content(files) + !String.IsEmpty(ListItem.FolderName)">$INFO[ListItem.FolderName]</value>
+		<value condition="Container.Content(files) + !String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
+		<value condition="Container.Content(videos)">$INFO[ListItem.Artist]</value>
 		<value condition="$EXP[Container_Plugin_Empty]">$INFO[ListItem.Label]</value>
 		<value condition="Window.Is(skinsettings)">$LOCALIZE[31472]</value>
 		<value condition="Window.Is(interfacesettings)">$LOCALIZE[14206]</value>

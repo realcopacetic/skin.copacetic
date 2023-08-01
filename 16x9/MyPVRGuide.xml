@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- tvguide -->
+	<defaultcontrol always="true">11</defaultcontrol>
+	<menucontrol>3000</menucontrol>
+	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<views>50</views>
+	<include content="WindowOpenClose_Fade_Delayed_Animation" />
+	<controls>
+		<include content="MyViews_Common_Controls" />
+
+		<control type="grouplist">
+			<control type="epggrid" id="10" />
+			<control type="list" id="11" />
+			<control type="button" id="28" />
+			<control type="label" id="29" />
+			<control type="label" id="30" />
+		</control>
+		
+	</controls>
+</window>

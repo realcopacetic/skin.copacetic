@@ -646,7 +646,7 @@
 
 	<include name="DialogVideoInfo_Scrollbar">
 		<include content="Widget_Scrollbar_Template">
-			<param name="visible" value="!Window.IsVisible(shutdownmenu) + !Control.HasFocus(60)" />
+			<param name="visible" value="!Window.IsVisible(shutdownmenu) + !Control.HasFocus(60) + !String.IsEqual(ListItem.DBType,video)" />
 			<param name="pos0_enabled" value="true" />
 			<param name="pos0_visible" value="Control.IsVisible(3000)" />
 			<param name="pos0_active" value="ControlGroup(3000).HasFocus | Control.HasFocus(60) | Control.HasFocus(4020) | Control.HasFocus(4021) | Control.HasFocus(4022) | $EXP[Music_Player_HasFocus]" />

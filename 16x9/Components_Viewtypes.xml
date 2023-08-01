@@ -738,12 +738,12 @@
 		<param name="top" default="60" />
 		<param name="title_label_id" default="6308" />
 		<param name="title_label" default="$VAR[Title_Breadcrumb_Label]" />
-		<param name="maxtitlelabelwidth" default="1200" />
+		<param name="maxtitlelabelwidth" default="900" />
 		<param name="haspath" default="false" />
 		<param name="label_color" default="$VAR[Light_Color]" />
 		<param name="info_label" default="$VAR[Info_Breadcrumb_Label]" />
 		<param name="info_label_visible" default="false" />
-		<param name="maxinfolabelwidth" default="600" />
+		<param name="maxinfolabelwidth" default="900" />
 		<definition>
 			<control type="group">
 				<visible>$PARAM[visible]</visible>

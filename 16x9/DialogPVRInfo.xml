@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- pvrguideinfo / pvrrecordinginfo -->
+	<defaultcontrol always="true">4</defaultcontrol>
+	<controls>
+		<control type="grouplist">
+			<control type="button" id="4" />
+			<control type="button" id="5" />
+			<control type="button" id="6" />
+			<control type="button" id="7" />
+			<control type="button" id="8" />
+			<control type="button" id="9" />
+			<control type="button" id="10" />
+			<control type="button" id="11" />
+		</control>
+	</controls>
+</window>
