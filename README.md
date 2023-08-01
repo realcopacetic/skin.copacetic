@@ -26,6 +26,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Fixed infoscreen widgets not loading on first opening if they rely on window properties from script by adding fallback variables using ListItems.
 - Added support for Youtube and other plugins using container.content(videos) for multiple views in myvideonav.xml and for home screen widgets.
 - Added missing default value for Skin.String(Widget6_Display) so the label isn't missing from the slider in skin settings when configuring Widget 6.
+- Added dummy PVR windows as potential fix for issue where switching to Copacetic is resetting PVR settings in other skins.
 
 
 **1.1.5**
