@@ -4,14 +4,11 @@
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=3000&amp;group=mainmenu|shutdownmenu)</onload>
 	<onunload condition="String.IsEqual(Window(home).Property(Trailer_Autoplay),true)">PlayerControl(Stop)</onunload>
 	<onunload condition="String.IsEqual(Window(home).Property(Trailer_Autoplay),true)">ClearProperty(Trailer_Autoplay,home)</onunload>
-	<defaultcontrol always="true">4010</defaultcontrol>
+	<defaultcontrol always="true">3000</defaultcontrol>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
 	<include content="WindowOpenClose_Fade_Delayed_Animation" />
 	<controls>
 		<include content="Home_Container_Update_Bounce_Test" />
-		<include content="Focus_Setter">
-			<param name="target_id" value="SetFocus(3000)" />
-		</include>
 		<include content="User_Scroll_Delay" />
 		<include content="Music_Player_Controls" condition="Skin.HasSetting(Music_Player_Enabled)" />
 		<include content="MyViews_Multiart_Labels" condition="Skin.HasSetting(Multiart_Slideshow)" />

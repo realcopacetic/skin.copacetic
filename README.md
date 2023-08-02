@@ -17,6 +17,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ### Changelog
 
 **1.1.6**
+- Attempted fix for Linux issues with skin.shortcuts implementation in Copacetic.
+
+**1.1.6**
 - Fixed music OSD label when Previous button selected.
 - Started work on adding better view support for plugins
 - Ability to switch between List (Background), List (Thumbnails) and Grid views for plugins when there is no container content type set (e.g. when browsing menus in TheMovieDB Helper) 
