@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-06-11 09:39+0000\n"
+"PO-Revision-Date: 2023-08-01 10:26+0000\n"
 "Last-Translator: Massimo Pissarello <mapi68@gmail.com>\n"
 "Language-Team: Italian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/it_it/>\n"
 "Language: it_it\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -672,8 +672,8 @@ msgstr "Le fanart vengono recuperate dalla tua libreria e visualizzate in una pr
 
 # /16x9/Content_Settings.xml
 msgctxt "#31426"
-msgid "Limit artwork to..."
-msgstr "Limita artwork a..."
+msgid "Limit background slideshow artwork to..."
+msgstr "Limita la grafica della presentazione di sfondo a..."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31526"
@@ -682,8 +682,8 @@ msgstr "Scegli di includere solo fanart dalle sezioni selezionate della tua libr
 
 # /16x9/Content_Settings.xml
 msgctxt "#31427"
-msgid "Slideshow speed (seconds)"
-msgstr "Velocità presentazione (secondi)"
+msgid "Background slideshow speed (seconds)"
+msgstr "Velocità della presentazione in background (secondi)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31428"
@@ -1369,3 +1369,13 @@ msgstr "Buona festa"
 msgctxt "#31914"
 msgid "Happy Earth Day"
 msgstr "Felice giorno della terra"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31426"
+#~ msgid "Limit artwork to..."
+#~ msgstr "Limita artwork a..."
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31427"
+#~ msgid "Slideshow speed (seconds)"
+#~ msgstr "Velocità presentazione (secondi)"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-07-16 22:11+0000\n"
+"PO-Revision-Date: 2023-08-01 10:26+0000\n"
 "Last-Translator: yohru <yohru7@gmail.com>\n"
 "Language-Team: Japanese <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/ja_jp/>\n"
 "Language: ja_jp\n"
@@ -672,7 +672,7 @@ msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31426"
-msgid "Limit artwork to..."
+msgid "Limit background slideshow artwork to..."
 msgstr ""
 
 # /16x9/Content_Settings.xml
@@ -682,7 +682,7 @@ msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31427"
-msgid "Slideshow speed (seconds)"
+msgid "Background slideshow speed (seconds)"
 msgstr ""
 
 # /16x9/Content_Settings.xml
@@ -1119,7 +1119,7 @@ msgstr "オーディオチャンネル"
 # /16x9/Content.xml
 msgctxt "#31610"
 msgid "Audio bitrate"
-msgstr ""
+msgstr "オーディオのビットレート"
 
 # /16x9/Content.xml
 msgctxt "#31611"
@@ -1149,7 +1149,7 @@ msgstr "画面解像度"
 # /16x9/Content.xml
 msgctxt "#31616"
 msgid "System rendering speed"
-msgstr ""
+msgstr "システムのレンダリング速度"
 
 # /16x9/Content.xml
 msgctxt "#31617"
