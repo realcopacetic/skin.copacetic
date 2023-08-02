@@ -16,7 +16,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 
-**1.1.6**
+**1.1.7**
 - Attempted fix for Linux issues with skin.shortcuts implementation in Copacetic.
 
 **1.1.6**

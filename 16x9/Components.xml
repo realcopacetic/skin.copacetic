@@ -47,7 +47,6 @@
 			<control type="button" id="$PARAM[id]">
 				<visible allowhiddenfocus="true">false</visible>
 				<animation effect="slide" end="0,0" time="$PARAM[time]" reversible="false">Focus</animation>
-				<nested />
 				<onfocus>$PARAM[target_id]</onfocus>
 				<onright>$PARAM[target_id]</onright>
 				<onleft>$PARAM[target_id]</onleft>

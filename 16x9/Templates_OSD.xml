@@ -2,7 +2,7 @@
 <includes>
 	<include name="seekbar_Video">
 		<control type="group">
-			<visible>!Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videobookmarks) $EXP[PanelDialog_IsVisible] + !Window.IsVisible(shutdownmenu)</visible>
+			<visible>!Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videobookmarks) + $EXP[PanelDialog_IsVisible] + !Window.IsVisible(shutdownmenu)</visible>
 			<include content="Visible_Fade_Delayed_Animation" />
 			<control type="image">
 				<visible>Window.IsVisible(volumebar) | Window.IsVisible(notification) | Window.IsVisible(extendedprogressdialog)</visible>
