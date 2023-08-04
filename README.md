@@ -16,6 +16,13 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 
+**1.1.8**
+- Fix for Linux issues with skin.shortcuts by renaming Overrides.xml to overrides.xml: https://github.com/realcopacetic/skin.copacetic/issues/43
+- Fix for networksetup window visibility condition problem: https://github.com/realcopacetic/skin.copacetic/issues/46
+- Fix for broken visibility condition preventing seekbar and fullscreen info displaying on pause/playback: https://github.com/realcopacetic/skin.copacetic/issues/42
+- Fix for missing albumcover during playback on musicvisualisation screen by switching from Player.Art(Thumb) with MusicPlayer.Cover: https://github.com/realcopacetic/skin.copacetic/issues/36
+- Fix for missing fanart in musicvisualisation which can be used to enable slideshow in addons such as Radio Paradise and Artist slideshow.
+
 **1.1.7**
 - Attempted fix for Linux issues with skin.shortcuts implementation in Copacetic.
 

@@ -17,7 +17,7 @@
 	<include name="Default_Dialog_Panel_Layout">
 		<param name="window_animation" default="WindowOpenClose_Fade_Delayed_Long_Animation" />
 		<param name="window_animation_condition" default="true" />
-		<param name="visible" default="!Window.IsVisible(shutdownmenu)" />
+		<param name="visible" default="!Window.IsVisible(shutdownmenu) + !Window.IsTopMost(networksetup)" />
 		<param name="visible_animation" default="Visible_Fade_Delayed_Long_Animation" />
 		<param name="panel_edge_top" default="180" />
 		<param name="panel_edge_bottom" default="180" />
