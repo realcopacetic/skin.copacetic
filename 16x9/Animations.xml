@@ -66,7 +66,7 @@
 		<animation effect="zoom" center="auto" start="103" end="100" time="270" tween="back" easing="in" condition="$EXP[GridView_IsVisible]" reversible="false">Focus</animation>
 	</include>
 	<include name="Ken_Burns_Effect_Animation">
-		<animation type="Conditional" pulse="true" condition="Skin.HasSetting(Home_Ken_Burns_Effect)" reversible="true">
+		<animation type="Conditional" pulse="true" condition="true" reversible="true">
 			<effect type="zoom" center="auto" end="108" time="21000" tween="sine" easing="inout" />
 		</animation>
 	</include>

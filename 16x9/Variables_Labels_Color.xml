@@ -294,6 +294,12 @@
 	<variable name="MusicPlayer_Album_Divider">
 		<value condition="!String.IsEmpty(MusicPlayer.Album)">$VAR[Copacetic_Divider_Bold]</value>
 	</variable>
+	<variable name="MusicPlayer_Year_Divider">
+		<value condition="!String.IsEmpty(MusicPlayer.Year)">$VAR[Copacetic_Divider_Bold]</value>
+	</variable>
+	<variable name="MusicPlayer_Offset(1)_Title_Divider">
+		<value condition="!String.IsEmpty(MusicPlayer.offset(1).Title)">$VAR[Copacetic_Divider_Bold]</value>
+	</variable>
 	<variable name="MusicPlayer_Offset(1)_Artist_Divider">
 		<value condition="!String.IsEmpty(MusicPlayer.offset(1).Artist)">$VAR[Copacetic_Divider_Bold]</value>
 	</variable>

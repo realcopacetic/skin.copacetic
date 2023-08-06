@@ -233,8 +233,8 @@
 	</variable>
 
 	<variable name="skinsettings_visualisation_Layout_Label2">
-		<value condition="Skin.String(visualisation_Layout,Small)">$LOCALIZE[31482]</value>
-		<value>$LOCALIZE[31483]</value>
+		<value condition="Skin.String(visualisation_Layout,Large)">$LOCALIZE[31483]</value>
+		<value>$LOCALIZE[31482]</value>
 	</variable>
 
 	<variable name="skinshortcuts_Background_Override_Label2">

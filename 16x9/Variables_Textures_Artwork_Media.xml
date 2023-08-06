@@ -85,6 +85,11 @@
 		<value condition="!String.IsEmpty(Window(home).Property(Background_Artists))">$INFO[Window(home).Property(Background_Artists)]</value>
 	</variable>
 
+	<variable name="visualisation_Background_Texture">
+		<value condition="!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</value>
+		<value condtion="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
+	</variable>
+
 	<variable name="Grid(0)Content">
 		<value condition="!String.IsEmpty(ListItem(0).Art(square)) + $EXP[GridView_Display_IsSquare]">$INFO[ListItem(0).Art(square)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(snap)) + $EXP[GridView_Display_IsSquare]">$INFO[ListItem(0).Art(snap)]</value>

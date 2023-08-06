@@ -1036,13 +1036,13 @@ msgstr ""
 #: NEW
 #/16x9/Content_Settings.xml
 msgctxt "#31482"
-msgid "Large"
+msgid "Small"
 msgstr ""
 
 #: NEW
 #/16x9/Content_Settings.xml
 msgctxt "#31483"
-msgid "Small"
+msgid "Large"
 msgstr ""
 
 #/16x9/Content_Settings.xml

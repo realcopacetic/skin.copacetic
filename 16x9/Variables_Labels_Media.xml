@@ -271,7 +271,6 @@
 		<value condition="Container.Content(videos) + $EXP[GridView_IsVisible] + !String.IsEmpty(ListItem.Duration)">$VAR[ListItem_Duration_Divider_Bold]$INFO[ListItem.Duration(mm:ss), ]$VAR[Copacetic_Divider_Bold, ]$INFO[ListItem.Label, ]</value>
 		<value condition="Container.Content(videos) + $EXP[GridView_IsVisible]">$VAR[Copacetic_Divider_Bold]$INFO[ListItem.Label, ]</value>
 		<value condition="Container.Content(videos) + !String.IsEmpty(ListItem.Premiered)">$VAR[ListItem_Premiered_Divider_Bold]$INFO[ListItem.Premiered, ]$VAR[ListItem_Duration_Divider_Bold, ]$INFO[ListItem.Duration(mm:ss), ]</value>
-
 	</variable>
 
 	<variable name="Info_Fullscreen_Label">

@@ -176,6 +176,9 @@
 		<value condition="Skin.String(Home_Background_Brightness,25)">$VAR[Brightness_25]</value>
 		<value>$VAR[Brightness_33]</value>
 	</variable>
+	<variable name="Windows_Artwork_Diffuse">
+		<value>$VAR[Brightness_50]</value>
+	</variable>
 	<variable name="Dialogs_Artwork_Diffuse">
 		<value condition="Window.Is(addonsettings)">$VAR[Brightness_15]</value>
 		<value>$VAR[Brightness_50]</value>
@@ -196,6 +199,10 @@
 	<variable name="Transparent_Dialog_Mask">
 		<value condition="VideoPlayer.IsFullscreen">$VAR[Alpha_75]$VAR[Dark_Hex]</value>
 		<value>$VAR[Alpha_50]$VAR[Dark_Hex]</value>
+	</variable>
+	<variable name="visualisation_Mask">
+		<value condition="!Skin.HasSetting(visualisation_Disable_Background)">$VAR[Dark_Color]</value>
+		<value>$VAR[Secondary_Color]</value>
 	</variable>
 
 	<!-- Labels -->

@@ -351,19 +351,26 @@
 			<param name="id" value="1019" />
 			<param name="next" value="1020" />
 		</include>
-		<control type="label" id="1020">
+		<control type="radiobutton" id="1020">
+			<description>Add movement to background</description>
+			<label>$LOCALIZE[31441]</label>
+			<onclick>Skin.ToggleSetting(Global_Ken_Burns_Effect)</onclick>
+			<selected>Skin.HasSetting(Global_Ken_Burns_Effect)</selected>
+			<visible>ControlGroup(9).HasFocus(10)</visible>
+		</control>
+		<control type="label" id="1021">
 			<description>Artwork</description>
 			<visible>ControlGroup(9).HasFocus(10)</visible>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[39123]</label>
 		</control>
-		<control type="image" id="1021">
+		<control type="image" id="1022">
 			<description>Prefer keyart screenshot</description>
 			<visible>ControlGroup(9).HasFocus(10)</visible>
 			<include content="skinsettings_Detfault_Image" />
 			<texture>$VAR[skinsettings_Prefer_Keyart_Screenshots]</texture>
 		</control>
-		<control type="radiobutton" id="1022">
+		<control type="radiobutton" id="1023">
 			<description>Prefer keyart for poster views</description>
 			<label>$LOCALIZE[31428]</label>
 			<onclick>Skin.ToggleSetting(Prefer_Keyart)</onclick>
@@ -371,7 +378,7 @@
 			<visible>ControlGroup(9).HasFocus(10)</visible>
 		</control>
 
-			<!--Home-->
+		<!--Home-->
 		<control type="label" id="1100">
 			<description>Widgets</description>
 			<visible>ControlGroup(9).HasFocus(11)</visible>
@@ -465,7 +472,7 @@
 			<visible>ControlGroup(9).HasFocus(11)</visible>
 		</control>
 
-			<!-- Widgets -->
+		<!-- Widgets -->
 		<include content="Widget_Settings_Content">
 			<param name="previous_widget_position" value="9" />
 			<param name="widget_position" value="1" />
@@ -512,7 +519,7 @@
 			<param name="next_widget_position" value="1" />
 		</include>
 
-			<!-- Views -->
+		<!-- Views -->
 		<control type="radiobutton" id="1338">
 			<description>Kiosk mode</description>
 			<visible>ControlGroup(9).HasFocus(13)</visible>
@@ -666,7 +673,7 @@
 			<selected>Skin.HasSetting(GridView_Enabled_Addons)</selected>
 		</control>
 
-			<!-- Customisations -->
+		<!-- Customisations -->
 		<control type="label" id="1400">
 			<description>Library</description>
 			<include content="skinsettings_Default_Label" />
