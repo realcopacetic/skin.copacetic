@@ -903,6 +903,36 @@ msgid "Overlay a binary user rating system (liked or not) on top of standard son
 msgstr ""
 
 # /16x9/Content_Settings.xml
+msgctxt "#31478"
+msgid "Video player"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31479"
+msgid "Music player"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31480"
+msgid "Enable background fanart"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31481"
+msgid "Visualisation screen album cover"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31482"
+msgid "Small"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31483"
+msgid "Large"
+msgstr ""
+
+# /16x9/Content_Settings.xml
 msgctxt "#31455"
 msgid "Instantly hide progress bar on pause screen"
 msgstr ""
