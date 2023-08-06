@@ -22,6 +22,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Fix for broken visibility condition preventing seekbar and fullscreen info displaying on pause/playback: https://github.com/realcopacetic/skin.copacetic/issues/42
 - Fix for missing albumcover during playback on musicvisualisation screen by switching from Player.Art(Thumb) with MusicPlayer.Cover: https://github.com/realcopacetic/skin.copacetic/issues/36
 - Fix for missing fanart in musicvisualisation which can be used to enable slideshow in addons such as Radio Paradise and Artist slideshow.
+- New visualisation layout options
 
 **1.1.7**
 - Attempted fix for Linux issues with skin.shortcuts implementation in Copacetic.
