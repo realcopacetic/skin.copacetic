@@ -358,6 +358,16 @@
 		<animation effect="slide" end="13" time="0" condition="Integer.IsGreater(Skin.String(Trailer_Autoplay_Interval),9)">Conditional</animation>
 	</include>
 
+	<include name="skinsettings_visualisation_Layout_Button_Conditions">
+		<onleft condition="Skin.String(visualisation_Layout,Small)">Skin.SetString(visualisation_Layout,Large)</onleft>
+		<onright condition="Skin.String(visualisation_Layout,Large) | !Skin.String(visualisation_Layout)">Skin.SetString(visualisation_Layout,Small)</onright>
+	</include>
+	<include name="skinsettings_visualisation_Layout_Unfocused_Slides">
+		<animation effect="slide" end="120" time="0" condition="Skin.String(visualisation_Layout,Small)">Conditional</animation>
+	</include>
+	<include name="skinsettings_visualisation_Layout_Focused_Slides">
+		<animation effect="slide" end="110" time="0" condition="Skin.String(visualisation_Layout,Small)">Conditional</animation>	
+	</include>
 
 	<include name="skinsettings_Widget1_View_Button_Conditions">
 		<onleft condition="Skin.String(Widget1_View,Grid)">Skin.SetString(Widget1_View,Strip)</onleft>

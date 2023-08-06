@@ -712,9 +712,9 @@
 			<param name="next" value="1406" />
 		</include>
 		<control type="label" id="1406">
-			<description>Player</description>
+			<description>Video Player</description>
 			<include content="skinsettings_Default_Label" />
-			<label>$LOCALIZE[14200]</label>
+			<label>$LOCALIZE[31478]</label>
 			<visible>ControlGroup(9).HasFocus(14)</visible>
 		</control>
 		<control type="radiobutton" id="1407">
@@ -731,8 +731,30 @@
 			<selected>Skin.HasSetting(Pause_Screen_Info_Enabled)</selected>
 			<visible>ControlGroup(9).HasFocus(14)</visible>
 		</control>
+		<control type="label" id="1409">
+			<description>Music Player</description>
+			<include content="skinsettings_Default_Label" />
+			<label>$LOCALIZE[31479]</label>
+			<visible>ControlGroup(9).HasFocus(14)</visible>
+		</control>
+		<control type="radiobutton" id="1410">
+			<description>Enable fanart background</description>
+			<label>$LOCALIZE[31480]</label>
+			<onclick>Skin.ToggleSetting(visualisation_Disable_Background)</onclick>
+			<selected>!Skin.HasSetting(visualisation_Disable_Background)</selected>
+			<visible>ControlGroup(9).HasFocus(14)</visible>
+		</control>
+		<include content="skinsettings_Slider_Button">
+			<param name="info" value="visualisation_Layout" />
+			<param name="label" value="$LOCALIZE[31481]" />
+			<param name="label2" value="$VAR[skinsettings_visualisation_Layout_Label2]" />
+			<param name="category" value="14" />
+			<param name="previous" value="1410" />
+			<param name="id" value="1411" />
+			<param name="next" value="1401" />
+		</include>
 
-			<!-- Extras -->
+		<!-- Extras -->
 		<control type="label" id="1500">
 			<description>Embedded lists</description>
 			<visible>ControlGroup(9).HasFocus(15)</visible>
@@ -871,7 +893,7 @@
 			<visible>ControlGroup(9).HasFocus(15) + Skin.HasSetting(Trailer_Autoplay)</visible>
 		</control>
 
-			<!-- Experiments -->
+		<!-- Experiments -->
 		<control type="radiobutton" id="1600">
 			<description>Use unwatched count in info details</description>
 			<visible>ControlGroup(9).HasFocus(16)</visible>

@@ -406,6 +406,11 @@
 		<value condition="Control.HasFocus(11080) | Control.HasFocus(11081)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
+	<variable name="skinsettings_visualisation_Layout_Button_Textcolor">
+		<value condition="Control.HasFocus(14110) | Control.HasFocus(14111)">$VAR[Light_Color]</value>
+		<value>$VAR[Unfocused_Color]</value>
+	</variable>
+
 
 	<variable name="skinsettings_Widget1_View_Button_Textcolor">
 		<value condition="Control.HasFocus(121210) | Control.HasFocus(121211)">$VAR[Light_Color]</value>

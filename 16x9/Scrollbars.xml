@@ -375,7 +375,7 @@
 				<param name="visible" value="[$EXP[BillboardView_IsVisible] + Integer.IsGreater(Container.NumItems,3)] | [$EXP[StripView_IsVisible] + Integer.IsGreater(Container.NumItems,9)] | [Integer.IsGreater(Container.NumItems,5) + [[$EXP[ShowcaseView_IsVisible] + $EXP[ShowcaseView_Details_Off]] | [$EXP[ShowcaseView_Display_IsPosters] + !$EXP[ShowcaseView_Details_Off] + ![Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio]]]]" />
 				<param name="right" value="420" />
 				<param name="bottom" value="27" />
-				<param name="width" value="1092" />
+				<param name="width" value="1080" />
 				<param name="height" value="6" />
 				<param name="onleft" value="60" />
 				<param name="onright" value="60" />

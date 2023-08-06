@@ -232,6 +232,11 @@
 		<value>$LOCALIZE[31624]</value>
 	</variable>
 
+	<variable name="skinsettings_visualisation_Layout_Label2">
+		<value condition="Skin.String(visualisation_Layout,Small)">$LOCALIZE[31482]</value>
+		<value>$LOCALIZE[31483]</value>
+	</variable>
+
 	<variable name="skinshortcuts_Background_Override_Label2">
 		<value condition="!String.IsEmpty(Container(211).ListItem.Property(backgroundPlaylist))">$INFO[Container(211).ListItem.Property(backgroundPlaylist)]</value>
 		<value condition="!String.IsEmpty(Container(211).ListItem.Property(background))">$INFO[Container(211).ListItem.Property(background)]</value>
