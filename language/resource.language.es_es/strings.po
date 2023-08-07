@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-08-01 10:26+0000\n"
-"Last-Translator: Alfonso Cachero <alfonso.cachero@gmail.com>\n"
+"PO-Revision-Date: 2023-08-06 22:59+0000\n"
+"Last-Translator: José Antonio Alvarado <jalvarado0.eses@gmail.com>\n"
 "Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/es_es/>\n"
 "Language: es_es\n"
 "MIME-Version: 1.0\n"
@@ -908,6 +908,36 @@ msgid "Overlay a binary user rating system (liked or not) on top of standard son
 msgstr "Superponer un sistema binario de valoración de usuarios (me gusta o no me gusta) sobre las valoraciones estándar de usuarios de canciones. Las valoraciones de usuario iguales o superiores a este umbral son \"me gusta\". Puedes \"gustar\" (establecer una valoración de usuario equivalente al umbral) o \"no gustar\" (borrar la valoración de usuario) una canción a través del menú contextual, o del reproductor de música integrado si está habilitado en Extras. El umbral también será utilizado por el widget \"Canciones que han gustado\". Para desactivarlo, selecciona \"Desactivado\"."
 
 # /16x9/Content_Settings.xml
+msgctxt "#31478"
+msgid "Video player"
+msgstr "Reproductor de vídeo"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31479"
+msgid "Music player"
+msgstr "Reproductor de música"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31480"
+msgid "Enable background fanart"
+msgstr "Activar fanart de fondo"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31481"
+msgid "Visualisation screen album cover"
+msgstr "Pantalla de visualización portada del álbum"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31482"
+msgid "Small"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31483"
+msgid "Large"
+msgstr ""
+
+# /16x9/Content_Settings.xml
 msgctxt "#31455"
 msgid "Instantly hide progress bar on pause screen"
 msgstr "Oculta inmediatamente la barra de progreso en la pantalla de pausa"
@@ -1369,6 +1399,16 @@ msgstr "Eid Mubarak"
 msgctxt "#31914"
 msgid "Happy Earth Day"
 msgstr "Feliz día de la Tierra"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31482"
+#~ msgid "Large"
+#~ msgstr "Amplio"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31483"
+#~ msgid "Small"
+#~ msgstr "Pequeño"
 
 # /16x9/Content_Settings.xml
 #~ msgctxt "#31426"
