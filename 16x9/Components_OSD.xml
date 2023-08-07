@@ -92,7 +92,7 @@
 		<definition>
 			<control type="group">
 				<animation effect="slide" start="0,0" end="0,-3" condition="true">Conditional</animation>
-				<visible>$PARAM[visible]</visible>
+				<visible>$PARAM[visible] + !Window.IsVisible(busydialog)</visible>
 				<nested />
 				<width>$PARAM[width]</width>
 				<height>$PARAM[width]</height>

@@ -5,7 +5,7 @@
 	<onunload condition="!String.IsEmpty(window(videoosd).property(VideoOSD_Controls))">ClearProperty(VideoOSD_Controls,videoosd)</onunload>
 	<onload condition="!Skin.TimerIsRunning(video_playback_label_interruptor)">Skin.TimerStart(video_playback_label_interruptor)</onload>
 	<defaultcontrol always="true">4010</defaultcontrol>
-	<zorder>2</zorder>
+	<zorder>3</zorder>
 	<include content="WindowClose_Fade_Animation" />
 	<controls>
 		<include content="Focus_Setter">

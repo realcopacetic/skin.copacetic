@@ -5,6 +5,7 @@
 	<onunload condition="!String.IsEmpty(window(musicosd).property(MusicOSD_Controls))">ClearProperty(MusicOSD_Controls,musicosd)</onunload>
 	<defaultcontrol always="true">4010</defaultcontrol>
 	<include content="WindowClose_Fade_Animation" />
+	<zorder>3</zorder>
 	<controls>
 		<include content="Focus_Setter">
 			<param name="target_id" value="SetFocus(1)" />

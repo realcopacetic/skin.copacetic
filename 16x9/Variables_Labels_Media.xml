@@ -527,6 +527,26 @@
 	</variable>
 
 	<variable name="Rating_Label">
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.UserRating,9.5)">stars/rating_10.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.UserRating,8.5)">stars/rating_9.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.UserRating,7.5)">stars/rating_8.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.UserRating,6.5)">stars/rating_7.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.UserRating,5.5)">stars/rating_6.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.UserRating,4.5)">stars/rating_5.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.UserRating,3.5)">stars/rating_4.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.UserRating,2.5)">stars/rating_3.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.UserRating,1.5)">stars/rating_2.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.UserRating,0.5)">stars/rating_1.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.Rating,9.5)">stars/rating_10.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.Rating,8.5)">stars/rating_9.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.Rating,7.5)">stars/rating_8.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.Rating,6.5)">stars/rating_7.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.Rating,5.5)">stars/rating_6.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.Rating,4.5)">stars/rating_5.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.Rating,3.5)">stars/rating_4.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.Rating,2.5)">stars/rating_3.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.Rating,1.5)">stars/rating_2.png</value>
+		<value condition="Window.IsVisible(visualisation) + Integer.IsGreater(MusicPlayer.Rating,0.5)">stars/rating_1.png</value>
 		<value condition="Integer.IsGreater(ListItem.UserRating,9.5)">stars/rating_10.png</value>
 		<value condition="Integer.IsGreater(ListItem.UserRating,8.5)">stars/rating_9.png</value>
 		<value condition="Integer.IsGreater(ListItem.UserRating,7.5)">stars/rating_8.png</value>
@@ -547,7 +567,6 @@
 		<value condition="Integer.IsGreater(ListItem.Rating,2.5)">stars/rating_3.png</value>
 		<value condition="Integer.IsGreater(ListItem.Rating,1.5)">stars/rating_2.png</value>
 		<value condition="Integer.IsGreater(ListItem.Rating,0.5)">stars/rating_1.png</value>
-		<value>stars/rating_0.png</value>
 	</variable>
 
 	<variable name="Repeat_Button_Label">

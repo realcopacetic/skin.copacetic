@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!-- Background -->
+	<!-- visualisation -->
 	<onload>Skin.TimerStart(music_visualisation)</onload>
 	<onload condition="System.AddonIsEnabled(script.artistslideshow) + !Skin.HasSetting(hide_background_fanart)">RunScript(script.artistslideshow)</onload>
 	<onunload>Skin.TimerStop(music_visualisation)</onunload>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
 	<include content="WindowOpenClose_Fade_Delayed_Animation" />
 	<controls>
+		<include content="Hidden_Components">
+			<control type="label" id="6011">
+				<label>$VAR[Rating_Label]</label>
+			</control>
+		</include>
 		<!-- background -->
 		<include content="Light_Theme_Background" condition="Skin.HasSetting(visualisation_Disable_Background)" />
 		<include content="Simple_ListIcon" condition="!Skin.HasSetting(visualisation_Disable_Background)">
@@ -23,7 +28,7 @@
 			<param name="visible" value="[Player.ShowInfo | Window.IsActive(musicosd)] + !Window.IsVisible(1103) + !$EXP[TransparentDialog_IsVisible]" />
 			<param name="top" value="240" />
 			<param name="bottom" value="240" />
-			<animation effect="zoom" start="60,240,1800,600" end="240,600,1500,480" time="0" condition="Skin.String(visualisation_Layout,Small)">Conditional</animation>
+			<animation effect="zoom" start="60,240,1800,600" end="240,600,1500,480" time="0" condition="!Skin.String(visualisation_Layout,Large)">Conditional</animation>
 			<include content="Visible_Fade_Animation" />
 		</include>
 		<include content="Default_NoPanel_Layout">
@@ -62,7 +67,7 @@
 				<animation effect="slide" end="315,-315" time="0" condition="true">Conditional</animation>
 			</include>
 			<!-- Small -->
-			<include content="visualisation_Title_and_Info" condition="Skin.String(visualisation_Layout,Small)">
+			<include content="visualisation_Title_and_Info" condition="!Skin.String(visualisation_Layout,Large)">
 				<param name="top" value="660" />
 				<param name="left" value="600" />
 				<param name="width" value="1020" />
@@ -75,8 +80,11 @@
 					<param name="color" value="$VAR[Accent_Color]" />
 					<animation effect="slide" end="-490,30" time="0" condition="true">Conditional</animation>
 				</include>
+				<include content="Infoscreen_Stars_Layout">
+					<visible>!String.IsEmpty(Control.GetLabel(6011))</visible>
+				</include>
 			</include>
-			<include content="visualisation_Title_and_Info" condition="Skin.String(visualisation_Layout,Small)">
+			<include content="visualisation_Title_and_Info" condition="!Skin.String(visualisation_Layout,Large)">
 				<param name="visible" value="MusicPlayer.HasNext + !String.IsEmpty(MusicPlayer.offset(1).Title)" />
 				<param name="top" value="30" />
 				<param name="left" value="1440" />
@@ -85,7 +93,7 @@
 				<param name="title" value="$LOCALIZE[209]" />
 				<param name="info" value="$INFO[MusicPlayer.offset(1).Title]$VAR[MusicPlayer_Offset(1)_Artist_Divider, , ]$INFO[MusicPlayer.offset(1).Artist]" />
 			</include>
-			<include content="Simple_ListIcon" condition="Skin.String(visualisation_Layout,Small)">
+			<include content="Simple_ListIcon" condition="!Skin.String(visualisation_Layout,Large)">
 				<param name="left" value="180" />
 				<param name="top" value="660" />
 				<param name="width" value="360" />

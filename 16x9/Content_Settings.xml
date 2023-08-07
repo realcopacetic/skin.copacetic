@@ -344,7 +344,7 @@
 		</include>
 		<include content="skinsettings_Slider_Button">
 			<param name="info" value="Background_Interval" />
-			<param name="label" value="$LOCALIZE[31427]" />
+			<param name="- label" value="$LOCALIZE[31427]" />
 			<param name="label2" value="$VAR[skinsettings_Background_Interval_Label]" />
 			<param name="category" value="10" />
 			<param name="previous" value="1018" />
@@ -353,7 +353,7 @@
 		</include>
 		<control type="radiobutton" id="1020">
 			<description>Add movement to background</description>
-			<label>$LOCALIZE[31441]</label>
+			<label>- $LOCALIZE[31441]</label>
 			<onclick>Skin.ToggleSetting(Global_Ken_Burns_Effect)</onclick>
 			<selected>Skin.HasSetting(Global_Ken_Burns_Effect)</selected>
 			<visible>ControlGroup(9).HasFocus(10)</visible>

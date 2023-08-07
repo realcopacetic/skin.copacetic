@@ -15,6 +15,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 * __sualfred__ for plenty of inspiration and [script.embuary.helper](https://github.com/sualfred/script.embuary.helper), which provided some key functionality before the release of new Nexus features.
 
 ### Changelog
+**1.1.10**
+- Refinement of new visualisation screen
+
 **1.1.9**
 - Debugging off
 

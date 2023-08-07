@@ -84,6 +84,7 @@
 				<height>30</height>
 				<orientation>horizontal</orientation>
 				<align>$PARAM[align]</align>
+				<nested />
 				<control type="image">
 					<width>182</width>
 					<aspectratio>keep</aspectratio>
