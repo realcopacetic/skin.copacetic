@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-08-01 10:26+0000\n"
+"PO-Revision-Date: 2023-08-07 08:20+0000\n"
 "Last-Translator: Massimo Pissarello <mapi68@gmail.com>\n"
 "Language-Team: Italian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/it_it/>\n"
 "Language: it_it\n"
@@ -910,17 +910,17 @@ msgstr "Sovrapponi un sistema binario di valutazione degli utenti (mi piace o no
 # /16x9/Content_Settings.xml
 msgctxt "#31478"
 msgid "Video player"
-msgstr ""
+msgstr "Lettore video"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31479"
 msgid "Music player"
-msgstr ""
+msgstr "Lettore musicale"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31480"
 msgid "Enable background fanart"
-msgstr ""
+msgstr "Abilita fanart di sfondo"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31481"
@@ -930,12 +930,12 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31482"
 msgid "Small"
-msgstr ""
+msgstr "Piccolo"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31483"
 msgid "Large"
-msgstr ""
+msgstr "Grande"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31455"
