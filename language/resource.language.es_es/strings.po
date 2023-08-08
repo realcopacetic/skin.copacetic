@@ -5,10 +5,9 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-08-06 22:59+0000\n"
+"PO-Revision-Date: 2023-08-08 22:15+0000\n"
 "Last-Translator: José Antonio Alvarado <jalvarado0.eses@gmail.com>\n"
-"Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-"
-"ons-skins/skin-copacetic/es_es/>\n"
+"Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/es_es/>\n"
 "Language: es_es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,12 +21,7 @@ msgstr "Un buen rato con tu contenido multimedia."
 
 msgctxt "Addon Description"
 msgid "Clear away the clutter with a minimal skin designed to bring maximum impact to the artwork that you curate for your favourite movies, shows and music. Copacetic is a labour of love more than five years in the making. I hope you enjoy it."
-msgstr "[CR]Elimina el desorden con un skin minimalista diseñado para dar el máximo [CR]impacto a las ilustraciones que creas para tus películas, series y música [CR]favoritas. Copacetic es un trabajo realizado con amor durante más de cinco [CR]años. Espero que lo disfrutes.[CR][CR]Elimina el desorden con un skin minimalista diseñado para dar el máximo [CR]impacto a las ilustraciones que creas para tus películas, series y música [CR]favoritas. Copacetic es un trabajo realizado con amor durante más de cinco [CR]años. Espero que lo disfrutes."
-
-"Elimina el desorden con un skin minimalista diseñado para dar el máximo "
-"impacto a las ilustraciones que creas para tus películas, series y música "
-"favoritas. Copacetic es un trabajo realizado con amor durante más de cinco "
-"años. Espero que lo disfrutes."
+msgstr "Elimina el desorden con un skin minimalista diseñado para dar el máximo impacto a las ilustraciones que creas para tus películas, series y música favoritas. Copacetic es un trabajo de amor de más de cinco años. Espero que lo disfrutes."
 
 # ########################################################################################################
 # ########################################################################################################
