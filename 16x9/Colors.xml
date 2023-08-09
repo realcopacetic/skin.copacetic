@@ -868,4 +868,10 @@
 		<value>$VAR[Accent_Color]</value>
 	</variable>
 
+	<!-- PVR -->
+	<variable name="epggrid_Focused_Color">
+		<value condition="Control.HasFocus(10)">$VAR[Light_Color]</value>
+		<value>$VAR[Unfocused_Color]</value>
+	</variable>
+
 </includes>

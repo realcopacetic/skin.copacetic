@@ -1,21 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- tvguide -->
-	<defaultcontrol always="true">11</defaultcontrol>
+	<defaultcontrol always="true">10</defaultcontrol>
 	<menucontrol>3000</menucontrol>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
-	<views>50</views>
+	<views>10</views>
 	<include content="WindowOpenClose_Fade_Delayed_Animation" />
 	<controls>
 		<include content="MyViews_Common_Controls" />
-
-		<control type="grouplist">
-			<control type="epggrid" id="10" />
-			<control type="list" id="11" />
-			<control type="button" id="28" />
-			<control type="label" id="29" />
-			<control type="label" id="30" />
+		<control type="list" id="11">
+			<visible allowhiddenfocus="true">false</visible>
+			<orientation>horizontal</orientation>
+			<onup>10</onup>
+			<ondown>10</ondown>
+			<itemlayout width="100" height="100" />
+			<focusedlayout width="100" height="100" />
 		</control>
-		
+		<include content="Background_Global" />
+		<include content="Default_Dialog_Panel_Layout">
+			<param name="visible" value="!Window.IsVisible(shutdownmenu)" />
+			<param name="panel_edge_top" value="270" />
+			<param name="panel_edge_bottom" value="180" />
+			<param name="panel_edge_left" value="60" />
+			<param name="panel_edge_right" value="60" />
+			<param name="panel_colordiffuse" value="$VAR[Panel_Mask]" />
+			<!-- Group label -->
+			<control type="label">
+				<top>225</top>
+				<left>120</left>
+				<visible>!Control.HasFocus(10)</visible>
+				<include content="Visible_Fade_Delayed_Animation" />
+				<label>$VAR[tvguide_Group_Label]</label>
+				<font>PVR_Time</font>
+				<width>100%</width>
+				<height>30</height>
+				<textcolor>$VAR[Light_Color]</textcolor>
+				<textoffsetx>30</textoffsetx>
+			</control>
+			<!-- Grid -->
+			<control type="epggrid" id="10">
+				<description>EPG Grid</description>
+				<centertop>50%</centertop>
+				<height>630</height>
+				<width>1680</width>
+				<centerleft>50%</centerleft>
+				<scrolltime tween="sine" easing="inout">360</scrolltime>
+				<timeblocks>36</timeblocks>
+				<rulerunit>6</rulerunit>
+				<progresstexture border="0,92,3,0" colordiffuse="$VAR[Accent_Color]">pvr/tvguide_progress_indicator.png</progresstexture>
+				<!-- <progresstexture border="2,92,2,2" colordiffuse="05ffffff">pvr/tvguide_progress.png</progresstexture> -->
+				<orientation>vertical</orientation>
+				<onup>11</onup>
+				<ondown>11</ondown>
+				<pagecontrol>60</pagecontrol>
+				<rulerlayout width="7" height="90">
+					<control type="label" id="2">
+						<visible>Control.HasFocus(10)</visible>
+						<include content="Visible_Fade_Delayed_Animation" />
+						<label>$INFO[ListItem.Label]</label>
+						<font>PVR_Time</font>
+						<width>100%</width>
+						<height>30</height>
+						<textcolor>$VAR[Light_Color]</textcolor>
+						<textoffsetx>30</textoffsetx>
+					</control>
+				</rulerlayout>
+				<channellayout width="420" height="90">
+					<!-- <control type="label" id="1">
+						<left>-30</left>
+						<width>60</width>
+						<align>right</align>
+						<label>$INFO[ListItem.ChannelNumberLabel]</label>
+					</control> -->
+					<control type="image">
+						<height>60</height>
+						<centertop>50%</centertop>
+						<width>60</width>
+						<texture>$INFO[ListItem.Art(thumb)]</texture>
+					</control>
+					<control type="label" id="1">
+						<label>$INFO[ListItem.Label]</label>
+						<left>60</left>
+						<textoffsetx>30</textoffsetx>
+					</control>
+				</channellayout>
+				<focusedchannellayout width="420" height="90">
+					<!-- <control type="label" id="1">
+						<left>-30</left>
+						<width>60</width>
+						<align>right</align>
+						<label>$INFO[ListItem.ChannelNumberLabel]</label>
+						<textcolor>$VAR[epggrid_Focused_Color]</textcolor>
+					</control> -->
+					<control type="image" id="1">
+						<bottom>0</bottom>
+						<height>1</height>
+						<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+						<animation effect="zoom" end="400,1" time="0" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<height>60</height>
+						<centertop>50%</centertop>
+						<width>60</width>
+						<texture>$INFO[ListItem.Art(thumb)]</texture>
+					</control>
+					<control type="label" id="1">
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>$VAR[epggrid_Focused_Color]</textcolor>
+						<left>60</left>
+						<textoffsetx>30</textoffsetx>
+						<scrollsuffix> / </scrollsuffix>
+					</control>
+				</focusedchannellayout>
+				<itemlayout width="45" height="90">
+					<control type="label" id="1">
+						<label>$INFO[ListItem.Label]</label>
+						<left>30</left>
+						<right>30</right>
+					</control>
+				</itemlayout>
+				<focusedlayout width="45" height="90">
+					<control type="image" id="14">
+						<texture colordiffuse="$VAR[Dark_Grey_Color]">views/white_100.png</texture>
+					</control>
+					<control type="image" id="1">
+						<bottom>0</bottom>
+						<height>1</height>
+						<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+					</control>
+					<control type="image" id="1">
+						<texture colordiffuse="$VAR[Unfocused_Color]" border="2">views/border_1px.png</texture>
+					</control>
+					<control type="label" id="1">
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>$VAR[epggrid_Focused_Color]</textcolor>
+						<textoffsetx>30</textoffsetx>
+						<scrollsuffix> / </scrollsuffix>
+					</control>
+				</focusedlayout>
+			</control>
+			<include content="Dialog_Divider_With_Scrollbar">
+				<param name="scrollbarvisible" value="true" />
+				<param name="id" value="60" />
+				<param name="height" value="540" />
+				<param name="left" value="540" />
+				<param name="scrollbaralignleft" value="true" />
+				<animation effect="slide" end="0,45" time="0" condition="true">Conditional</animation>
+			</include>
+		</include>
+
+
+		<control type="grouplist" id="666">
+			<bottom>0</bottom>
+			<height>270</height>
+			<control type="button" id="28">
+				<visible allowhiddenfocus="true">false</visible>
+			</control>
+			<control type="label" id="29">
+				<visible>false</visible>
+			</control>
+			<control type="label" id="30">
+				<visible>false</visible>
+			</control>
+		</control>
+
+
 	</controls>
 </window>

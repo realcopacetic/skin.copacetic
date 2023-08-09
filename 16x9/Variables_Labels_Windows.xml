@@ -250,6 +250,11 @@
 		<value>$INFO[ListItem.Label]$VAR[ListItem_Label2_Divider_Bold, , ]$INFO[ListItem.Label2]</value>
 	</variable>
 
+	<variable name="tvguide_Group_Label">
+		<value condition="Control.HasFocus(11)">$VAR[Copacetic_Chevron_Left] $INFO[Container(11).ListItem.Label] $VAR[Copacetic_Chevron_Right]</value>
+		<value>$INFO[Container(11).ListItem.Label]</value>
+	</variable>
+
 	<variable name="volumebar_Info_Label">
 		<!-- Passthrough audio in use / Muted / 33% -->
 		<value condition="Player.Passthrough">$LOCALIZE[29802]</value>
