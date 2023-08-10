@@ -273,7 +273,7 @@
 		<value condition="Window.Is(pictureinfo) + Control.HasFocus(5)">$VAR[Light_Color]</value>
 		<value condition="Window.Is(profiles) + Control.HasFocus(2)">$VAR[Light_Color]</value>
 		<value condition="Window.Is(systeminfo) + ControlGroup(50).HasFocus">$VAR[Light_Color]</value>
-		<value condition="!Window.Is(addonsettings) + String.IsEqual(Container(5).CurrentItem,-1) + !ControlGroup(3000).HasFocus + !Control.HasFocus(20) + !$EXP[Hidden_Focus_Setter]">$VAR[Light_Color]</value>
+		<value condition="!Window.Is(addonsettings) + String.IsEqual(Container(5).CurrentItem,-1) + !ControlGroup(3000).HasFocus + !Control.HasFocus(20)">$VAR[Light_Color]</value>
 		<value condition="Control.HasFocus(211) | Control.HasFocus(301) | Control.HasFocus(303) | Control.HasFocus(304) | Control.HasFocus(302)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>

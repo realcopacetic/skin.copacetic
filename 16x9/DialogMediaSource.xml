@@ -3,7 +3,6 @@
 	<!-- mediasource -->
 	<defaultcontrol always="true">11</defaultcontrol>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
-	<include content="WindowOpenClose_Fade_Delayed_Animation" />
 	<zorder>2</zorder>
 	<controls>
 		<include content="mediasource_Hidden" />

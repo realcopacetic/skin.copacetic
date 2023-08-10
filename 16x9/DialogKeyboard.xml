@@ -2,7 +2,6 @@
 <window>
 	<!-- virtualkeyboard -->
 	<defaultcontrol always="true">4010</defaultcontrol>
-	<include content="WindowOpenClose_Fade_Delayed_Animation" />
 	<zorder>2</zorder>
 	<controls>
 		<include content="DialogKeyboard_Hidden" />

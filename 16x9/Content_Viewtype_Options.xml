@@ -301,4 +301,13 @@
 		</item>
 	</include>
 
+	<include name="tvguide_Menu_Options">
+		<item>
+			<description>Channel Groups</description>
+			<label>$INFO[Container(11).ListItem.Label]</label>
+			<label2>$LOCALIZE[19146] $VAR[Copacetic_Divider_Bold] $INFO[Container(11).ListItem.Label]</label2>
+			<onclick>SendClick(28)</onclick>
+		</item>
+	</include>
+
 </includes>

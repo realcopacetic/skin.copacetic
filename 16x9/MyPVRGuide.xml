@@ -1,46 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- tvguide -->
+	<onunload>ClearProperty(OptionsMenu,home)</onunload>
 	<defaultcontrol always="true">10</defaultcontrol>
-	<menucontrol>3000</menucontrol>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<menucontrol>3000</menucontrol>
 	<views>10</views>
-	<include content="WindowOpenClose_Fade_Delayed_Animation" />
 	<controls>
+		<include content="tvguide_Controls" />
 		<include content="MyViews_Common_Controls" />
-		<control type="list" id="11">
-			<visible allowhiddenfocus="true">false</visible>
-			<orientation>horizontal</orientation>
-			<onup>10</onup>
-			<ondown>10</ondown>
-			<itemlayout width="100" height="100" />
-			<focusedlayout width="100" height="100" />
-		</control>
 		<include content="Background_Global" />
+		<include content="Embedded_VideoPlayer">
+			<param name="visible" value="VideoPlayer.Content(livetv)" />
+		</include>
 		<include content="Default_Dialog_Panel_Layout">
-			<param name="visible" value="!Window.IsVisible(shutdownmenu)" />
-			<param name="panel_edge_top" value="270" />
-			<param name="panel_edge_bottom" value="180" />
+			<param name="visible" value="!$EXP[TransparentDialog_IsVisible]" />
+			<param name="panel_edge_top" value="165" />
+			<param name="panel_edge_bottom" value="0" />
 			<param name="panel_edge_left" value="60" />
 			<param name="panel_edge_right" value="60" />
 			<param name="panel_colordiffuse" value="$VAR[Panel_Mask]" />
-			<!-- Group label -->
-			<control type="label">
-				<top>225</top>
-				<left>120</left>
-				<visible>!Control.HasFocus(10)</visible>
-				<include content="Visible_Fade_Delayed_Animation" />
-				<label>$VAR[tvguide_Group_Label]</label>
-				<font>PVR_Time</font>
-				<width>100%</width>
-				<height>30</height>
-				<textcolor>$VAR[Light_Color]</textcolor>
-				<textoffsetx>30</textoffsetx>
+			<include content="Breadcrumb_Label">
+				<param name="visible" value="Control.HasFocus(11)" />
+				<param name="animation" value="Visible_Fade_Delayed_Animation" />
+				<param name="bar" value="false" />
+				<param name="title_label" value="$VAR[tvguide_Group_Label]" />
+				<param name="label_color" value="$VAR[Light_Color]" />
+			</include>
+			<control type="list" id="11">
+				<visible allowhiddenfocus="true">false</visible>
+				<orientation>horizontal</orientation>
+				<onup>SetFocus(3000,0,absolute)</onup>
+				<ondown>10</ondown>
+				<itemlayout width="100" height="100" />
+				<focusedlayout width="100" height="100" />
 			</control>
-			<!-- Grid -->
 			<control type="epggrid" id="10">
 				<description>EPG Grid</description>
-				<centertop>50%</centertop>
+				<top>180</top>
 				<height>630</height>
 				<width>1680</width>
 				<centerleft>50%</centerleft>
@@ -51,27 +48,25 @@
 				<!-- <progresstexture border="2,92,2,2" colordiffuse="05ffffff">pvr/tvguide_progress.png</progresstexture> -->
 				<orientation>vertical</orientation>
 				<onup>11</onup>
-				<ondown>11</ondown>
+				<ondown>SetFocus(3000,0,absolute)</ondown>
 				<pagecontrol>60</pagecontrol>
-				<rulerlayout width="7" height="90">
+				<rulerlayout width="210" height="90">
 					<control type="label" id="2">
-						<visible>Control.HasFocus(10)</visible>
-						<include content="Visible_Fade_Delayed_Animation" />
 						<label>$INFO[ListItem.Label]</label>
 						<font>PVR_Time</font>
 						<width>100%</width>
+						<centertop>50%</centertop>
 						<height>30</height>
 						<textcolor>$VAR[Light_Color]</textcolor>
-						<textoffsetx>30</textoffsetx>
+						<textoffsetx>10</textoffsetx>
+					</control>
+					<control type="image">
+						<centertop>50%</centertop>
+						<height>30</height>
+						<texture colordiffuse="$VAR[Accent_Color]" border="4">pvr/tvguide_focusedlayout_border_left.png</texture>
 					</control>
 				</rulerlayout>
 				<channellayout width="420" height="90">
-					<!-- <control type="label" id="1">
-						<left>-30</left>
-						<width>60</width>
-						<align>right</align>
-						<label>$INFO[ListItem.ChannelNumberLabel]</label>
-					</control> -->
 					<control type="image">
 						<height>60</height>
 						<centertop>50%</centertop>
@@ -85,13 +80,6 @@
 					</control>
 				</channellayout>
 				<focusedchannellayout width="420" height="90">
-					<!-- <control type="label" id="1">
-						<left>-30</left>
-						<width>60</width>
-						<align>right</align>
-						<label>$INFO[ListItem.ChannelNumberLabel]</label>
-						<textcolor>$VAR[epggrid_Focused_Color]</textcolor>
-					</control> -->
 					<control type="image" id="1">
 						<bottom>0</bottom>
 						<height>1</height>
@@ -129,7 +117,9 @@
 						<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
 					</control>
 					<control type="image" id="1">
-						<texture colordiffuse="$VAR[Unfocused_Color]" border="2">views/border_1px.png</texture>
+						<height>45</height>
+						<bottom>0</bottom>
+						<texture colordiffuse="$VAR[Unfocused_Color]" border="2">pvr/tvguide_focusedlayout_border.png</texture>
 					</control>
 					<control type="label" id="1">
 						<label>$INFO[ListItem.Label]</label>
@@ -145,25 +135,45 @@
 				<param name="height" value="540" />
 				<param name="left" value="540" />
 				<param name="scrollbaralignleft" value="true" />
-				<animation effect="slide" end="0,45" time="0" condition="true">Conditional</animation>
 			</include>
+			<!-- Details -->
+			<control type="grouplist">
+				<left>210</left>
+				<right>120</right>
+				<bottom>0</bottom>
+				<height>270</height>
+				<itemgap>0</itemgap>
+				<align>center</align>
+				<usecontrolcoords>true</usecontrolcoords>
+				<control type="label">
+					<height>45</height>
+					<font>MusicPlayer_Title</font>
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>$VAR[Light_Color]</textcolor>
+					<visible>!String.IsEmpty(ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<height>35</height>
+					<font>Grid_Info</font>
+					<label>[UPPERCASE]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime,-]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</label>
+					<textcolor>$VAR[Light_Color]</textcolor>
+				</control>
+				<control type="textbox">
+					<top>10</top>
+					<height max="100">auto</height>
+					<font>Description</font>
+					<label>$INFO[ListItem.Plot]</label>
+					<visible>!String.IsEmpty(ListItem.Plot)</visible>
+				</control>
+			</control>
+			<control type="image">
+				<bottom>105</bottom>
+				<height>60</height>
+				<left>120</left>
+				<width>60</width>
+				<texture>$INFO[ListItem.Icon]</texture>
+			</control>
+			<include content="MyViews_Menu_and_Scrollbars" />
 		</include>
-
-
-		<control type="grouplist" id="666">
-			<bottom>0</bottom>
-			<height>270</height>
-			<control type="button" id="28">
-				<visible allowhiddenfocus="true">false</visible>
-			</control>
-			<control type="label" id="29">
-				<visible>false</visible>
-			</control>
-			<control type="label" id="30">
-				<visible>false</visible>
-			</control>
-		</control>
-
-
 	</controls>
 </window>

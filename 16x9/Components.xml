@@ -62,11 +62,12 @@
 		<param name="include_animation" default="true" />
 		<definition>
 			<control type="group">
-				<nested />
-				<visible>Skin.String(Theme,Light)</visible>
-				<visible>$PARAM[visible]</visible>
+				<include content="WindowOpenClose_Fade_Delayed_Animation" />
 				<include content="Dialog_Over_Light_Background_Fadediffuse_Animation" />
 				<include content="Light_Theme_Background_Fade_Animation" condition="$PARAM[include_animation]" />
+				<visible>Skin.String(Theme,Light)</visible>
+				<visible>$PARAM[visible]</visible>
+				<nested />
 				<control type="image">
 					<texture colordiffuse="$VAR[Light_Background_Color]">views/white_100.png</texture>
 				</control>
@@ -117,6 +118,7 @@
 		<param name="time" default="10000" />
 		<definition>
 			<control type="multiimage">
+				<include content="WindowOpenClose_Fade_Delayed_Animation" condition="!$EXP[Window_IsSettings]" />
 				<include content="Ken_Burns_Effect_Animation" condition="$PARAM[animate_slideshow]" />
 				<imagepath>$PARAM[texture_path]</imagepath>
 				<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
@@ -239,6 +241,22 @@
 		</include>
 	</include>
 
+	<include name="Embedded_VideoPlayer">
+		<definition>
+			<control type="group">
+				<include content="Visible_Fade_Animation" />
+				<visible>$PARAM[visible]</visible>
+				<control type="videowindow" />
+				<!-- Playback mask -->
+				<control type="image">
+					<include content="WindowOpenClose_Fade_Delayed_Animation" />
+					<texture colordiffuse="80000000">views/white_100.png</texture>
+					<visible>$PARAM[visible]</visible>
+				</control>
+			</control>
+		</definition>
+	</include>
+
 	<include name="Visualisation">
 		<control type="group">
 			<!-- visualisation -->
@@ -260,16 +278,19 @@
 	<include name="visualisation_Title_and_Info">
 		<param name="top" default="360" />
 		<param name="width" default="420" />
+		<param name="height" default="360" />
 		<param name="align" default="center" />
 		<param name="textalign" default="left" />
 		<param name="textcolor" default="$VAR[Light_Color]" />
 		<param name="title_font" default="MusicPlayer_Title" />
+		<param name="title_height" default="80" />
 		<param name="info_font" default="MusicPlayer_Info" />
+		<param name="info_height" default="280" />
 		<definition>
 			<control type="grouplist">
 				<visible>$PARAM[visible]</visible>
 				<include content="VisibleHidden_Fade_Delayed_Animation" />
-				<height>360</height>
+				<height>$PARAM[height]</height>
 				<top>$PARAM[top]</top>
 				<width>$PARAM[width]</width>
 				<left>$PARAM[left]</left>
@@ -278,14 +299,14 @@
 				<itemgap>0</itemgap>
 				<usecontrolcoords>true</usecontrolcoords>
 				<control type="textbox">
-					<height max="80">auto</height>
+					<height max="$PARAM[title_height]">auto</height>
 					<label>$PARAM[title]</label>
 					<font>$PARAM[title_font]</font>
 					<textcolor>$PARAM[textcolor]</textcolor>
 					<align>$PARAM[textalign]</align>
 				</control>
 				<control type="textbox">
-					<height max="320">auto</height>
+					<height max="$PARAM[info_height]">auto</height>
 					<label>$PARAM[info]</label>
 					<font>$PARAM[info_font]</font>
 					<textcolor>$PARAM[textcolor]</textcolor>

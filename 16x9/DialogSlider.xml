@@ -2,7 +2,6 @@
 <window>
 	<!-- sliderdialog -->
 	<defaultcontrol always="true">11</defaultcontrol>
-	<include content="WindowOpenClose_Fade_Delayed_Animation" />
 	<controls>
 		<include content="Hidden_Components">
 			<control type="label" id="10" />

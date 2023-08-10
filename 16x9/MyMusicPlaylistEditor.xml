@@ -5,7 +5,6 @@
 	<onunload>ClearProperty(ActiveList,musicplaylisteditor)</onunload>
 	<defaultcontrol always="true">4010</defaultcontrol>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
-	<include content="WindowOpenClose_Fade_Delayed_Animation" />
 	<views>50</views>
 	<controls>
 		<include content="musicplaylisteditor_Hidden" />

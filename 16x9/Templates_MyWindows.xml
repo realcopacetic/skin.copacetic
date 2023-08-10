@@ -118,6 +118,21 @@
 		</include>
 	</include>
 
+	<include name="tvguide_Controls">
+		<control type="button" id="28">
+			<description>Channel groups button</description>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+		<control type="label" id="29">
+			<description>View name</description>
+			<visible>false</visible>
+		</control>
+		<control type="label" id="30">
+			<description>Channel groups name</description>
+			<visible>false</visible>
+		</control>
+	</include>
+
 	<include name="MyViews_Common_Controls">
 		<control type="button" id="2">
 			<description>Select viewtype</description>
@@ -136,7 +151,8 @@
 		<control type="button" id="4012">
 			<visible allowhiddenfocus="true">false</visible>
 			<onfocus>ClearProperty(Scrollbars,home)</onfocus>
-			<onfocus>SetFocus(50)</onfocus>
+			<onfocus condition="!Window.Is(tvguide)">SetFocus(50)</onfocus>
+			<onfocus condition="Window.Is(tvguide)">SetFocus(10)</onfocus>
 		</control>
 		<!-- Set focus to scrollbars -->
 		<control type="button" id="4013">
@@ -170,9 +186,9 @@
 			<onfocus condition="!Container.IsUpdating">SetFocus(50)</onfocus>
 			<onfocus condition="!Container.IsUpdating">Action(Info)</onfocus>
 		</control>
-		<control type="videowindow">
-			<visible>String.IsEqual(Window(home).Property(Trailer_Autoplay),true)</visible>
-		</control>
+		<include content="Embedded_VideoPlayer">
+			<param name="visible" value="String.IsEqual(Window(home).Property(Trailer_Autoplay),true)" />
+		</include>
 		<include content="Music_Player_Controls" condition="Skin.HasSetting(Music_Player_Enabled)" />
 		<include content="Trailer_Autoplay_Mask" condition="Skin.HasSetting(Trailer_Autoplay) + Window.Is(videos)" />
 		<include content="Light_Theme_Background">
@@ -185,6 +201,7 @@
 		<param name="visible" default="!$EXP[Infoscreen_IsVisible] + !Window.IsVisible(addonsettings)" />
 		<definition>
 			<control type="group">
+				<include content="WindowOpenClose_Fade_Delayed_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="Background_Media" condition="$EXP[Library_Has_Content]">
@@ -207,6 +224,7 @@
 				</include>
 			</control>
 			<control type="group">
+				<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Long_Animation" />
 				<include content="ListView_Container" />
@@ -222,6 +240,7 @@
 		<param name="visible" default="!$EXP[Infoscreen_IsVisible]" />
 		<definition>
 			<control type="group">
+				<include content="WindowOpenClose_Fade_Delayed_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
@@ -238,6 +257,7 @@
 				<include content="GridView_Container" condition="$EXP[GridView_Enabled]" />
 			</control>
 			<control type="group">
+				<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Long_Animation" />
 				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
@@ -256,6 +276,7 @@
 		<param name="visible" default="!$EXP[Infoscreen_IsVisible] + !Window.IsVisible(slideshow)" />
 		<definition>
 			<control type="group">
+				<include content="WindowOpenClose_Fade_Delayed_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="Background_Global">
@@ -278,6 +299,7 @@
 				</include>
 			</control>
 			<control type="group">
+				<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Long_Animation" />
 				<include content="ListView_Container" />
@@ -294,6 +316,7 @@
 		<param name="art_icon" default="Thumbnail" />
 		<definition>
 			<control type="group">
+				<include content="WindowOpenClose_Fade_Delayed_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="ListView_Display">
@@ -302,6 +325,7 @@
 				<include content="Shared_Dialog_Layouts" condition="Skin.HasSetting(Music_Player_Enabled)" />
 			</control>
 			<control type="group">
+				<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Long_Animation" />
 				<include content="ListView_Container" />
@@ -314,6 +338,7 @@
 		<param name="visible" default="!$EXP[Infoscreen_IsVisible]" />
 		<definition>
 			<control type="group">
+				<include content="WindowOpenClose_Fade_Delayed_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="ListView_Display" />
@@ -328,6 +353,7 @@
 				<include content="MediaFlags" />
 			</control>
 			<control type="group">
+				<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Long_Animation" />
 				<include content="ListView_Container" />
@@ -358,10 +384,10 @@
 
 	<include name="MyViews_Menu_and_Scrollbars">
 		<definition>
-			<include content="Scrollbars" />
+			<include content="Scrollbars" condition="!Window.Is(tvguide)"/>
 			<control type="fixedlist" id="3000">
 				<viewtype label="535">list</viewtype>
-				<visible allowhiddenfocus="true">String.IsEqual(Window(home).Property(OptionsMenu),Active) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(virtualkeyboard)</visible>
+				<visible allowhiddenfocus="true">String.IsEqual(Window(home).Property(OptionsMenu),Active) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog)</visible>
 				<include content="VisibleHidden_Fade_Delayed_Animation" />
 				<include content="OptionsMenu_Slides" />
 				<description>Options menu</description>
@@ -459,6 +485,7 @@
 					<include content="StripView_Menu_Options" condition="$EXP[StripView_Enabled] + !Skin.HasSetting(Kiosk_Mode)" />
 					<include content="GridView_Menu_Options" condition="$EXP[GridView_Enabled] + !Skin.HasSetting(Kiosk_Mode)" />
 					<include content="Trailer_Autoplay_Menu_Options" condition="Window.Is(videos) + Skin.HasSetting(Trailer_Autoplay)" />
+					<include content="tvguide_Menu_Options" condition="Window.Is(tvguide)" />
 					<include content="Common_Menu_Options" />
 					<include content="Video_Menu_Options" condition="Window.Is(videos)" />
 					<include content="MusicVideo_Menu_Options" condition="Window.Is(videos) | Window.Is(music)" />

@@ -5,7 +5,6 @@
 	<onunload>ClearProperty(ActiveList,filemanager)</onunload>
 	<defaultcontrol always="true">3011</defaultcontrol>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
-	<include content="Settings_WindowOpenClose_Fade_Delayed_Animation" />
 	<controls>
 		<include content="Background_Global">
 			<param name="animate_slideshow" value="false" />

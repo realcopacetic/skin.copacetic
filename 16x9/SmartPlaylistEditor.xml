@@ -3,7 +3,6 @@
 	<!-- smartplaylisteditor -->
 	<defaultcontrol always="true">100</defaultcontrol>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
-	<include content="WindowOpenClose_Fade_Delayed_Animation" />
 	<controls>
 		<include content="smartplaylisteditor_Hidden" />
 		<include content="Default_Dialog_Panel_Layout">
