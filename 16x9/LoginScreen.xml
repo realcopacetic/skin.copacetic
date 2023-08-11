@@ -11,7 +11,6 @@
 			</include>
 		</include>
 		<include content="Default_Dialog_Panel_Layout">
-			<param name="window_animation" value="WindowOpenClose_Fade_Delayed_Extra_Long_Animation" />
 			<param name="visible" value="!$EXP[Hidden_Focus_Setter] + !System.HasVisibleModalDialog" />
 			<param name="panel_edge_top" value="120" />
 			<param name="panel_edge_bottom" value="120" />

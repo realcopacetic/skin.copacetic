@@ -287,7 +287,8 @@
 	</variable>
 
 	<variable name="Info_Infoscreens_Label">
-		<value condition="Window.IsVisible(addoninformation)">[UPPERCASE]$INFO[ListItem.AddonType]$VAR[ListItem_AddonCreator_Divider_Bold, , ]$INFO[ListItem.AddonCreator]$INFO[ListItem.AddonVersion,[CR]Version ][/UPPERCASE]</value>
+		<value condition="Window.Is(pvrguideinfo) | Window.Is(pvrrecordinginfo)">[UPPERCASE]$INFO[ListItem.Date]$VAR[ListItem_Endtime_Divider_Bold, ]$INFO[ListItem.EndTime, $LOCALIZE[31100] ]$VAR[ListItem_Duration_Divider_Bold, ]$INFO[ListItem.Duration(mins), , $LOCALIZE[31114]]$VAR[ListItem_ChannelName_Divider_Bold, ]$INFO[ListItem.ChannelName, ][CR]$INFO[ListItem.Genre][/UPPERCASE]</value>
+		<value condition="Window.Is(addoninformation)">[UPPERCASE]$INFO[ListItem.AddonType]$VAR[ListItem_AddonCreator_Divider_Bold, , ]$INFO[ListItem.AddonCreator]$INFO[ListItem.AddonVersion,[CR]Version ][/UPPERCASE]</value>
 		<!-- Movies
 		2019 / TODD PHILLIPS / 4K DOLBY VISION / ENG / 132 MINS
 		TODD PHILLIPS -->

@@ -19,9 +19,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Fixed info widget for similar tv shows from studio to use network ID to lookup instead for plugin content
 - Added hardcoded LibreELEC settings shortcut to shutdownmnu
 - New window animations for continuous video playback during PVR 
-    Does smartplaylist editor require a background?
-    last fanart on shutdown to a skin string for loginscreen background
-    Focus_Setter back for info dialogs?
+- MyPVRGuide and PVRGuide info alphas - Request for feedback
 
 **1.1.10**
 - Refinement of new visualisation screen

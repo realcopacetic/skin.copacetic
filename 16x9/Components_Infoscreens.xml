@@ -16,6 +16,7 @@
 				<include content="addoninformation_Menu_Content" condition="Window.Is(addoninformation)" />
 				<include content="movieinformation_Menu_Content" condition="Window.Is(movieinformation)" />
 				<include content="musicinformation_Menu_Content" condition="Window.Is(musicinformation) | Window.Is(songinformation)" />
+				<include content="pvrinformation_Menu_Content" condition="Window.Is(pvrguideinfo) | Window.Is(pvrrecordinginfo)" />
 			</control>
 		</definition>
 	</include>
@@ -145,6 +146,16 @@
 					<label>$VAR[Info_Infoscreens_Label]</label>
 					<align>$PARAM[align]</align>
 				</control>
+				<include content="Common_Details_Textbox" condition="Window.Is(pvrguideinfo) | Window.Is(pvrrecordinginfo)">
+					<param name="visible" value="!String.IsEmpty(ListItem.Plot)" />
+					<param name="gap" value="60" />
+					<param name="maxheight" value="300" />
+					<param name="font" value="Plot_Panel" />
+					<param name="color" value="$VAR[Light_Color]" />
+					<param name="label" value="$INFO[ListItem.Plot]" />
+					<param name="align" value="center" />
+					<param name="scroll" value="true" />
+				</include>
 				<include content="Infoscreen_Stars_Layout" condition="!Window.Is(addoninformation) + !String.IsEqual(ListItem.DBType,set) + !String.IsEqual(ListItem.DBType,artist) + ![String.IsEmpty(ListItem.UserRating) + String.IsEmpty(ListItem.Rating)]">
 					<param name="align" value="$PARAM[align]" />
 				</include>

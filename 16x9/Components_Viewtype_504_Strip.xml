@@ -792,7 +792,6 @@
 				<param name="3x_item_width_plus_focus_width" value="1560" />
 				<param name="4x_item_width_plus_focus_width" value="1920" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
-				<include content="WindowOpenClose_Fade_Delayed_Animation" />
 				<visible>!$EXP[Hidden_Focus_Setter] + !System.HasVisibleModalDialog</visible>
 				<include content="Visible_Fade_Delayed_Long_Animation" />
 			</include>

@@ -36,7 +36,7 @@
 				<include content="Visible_Fade_Animation" />
 			</include>
 			<control type="group">
-				<include content="$PARAM[window_animation]" condition="$PARAM[window_animation_condition]" />
+				<include content="$PARAM[window_animation_content]" condition="$PARAM[window_animation_condition]" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<nested />
