@@ -17,6 +17,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ### Changelog
 **1.1.12**
 - Compare cropped clearlogo dbid with listitem dbid to ensure only displays on correct items.
+- Hide breadcrumb label on list view when it is the same as listitem.label to avoid duplication. https://github.com/realcopacetic/skin.copacetic/issues/48
 
 **1.1.11**
 - Fixed info widget for similar tv shows from studio to use network ID to lookup instead for plugin content
