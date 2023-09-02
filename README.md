@@ -15,6 +15,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 * __sualfred__ for plenty of inspiration and [script.embuary.helper](https://github.com/sualfred/script.embuary.helper), which provided some key functionality before the release of new Nexus features.
 
 ### Changelog
+**1.1.12**
+- Compare cropped clearlogo dbid with listitem dbid to ensure only displays on correct items.
+
 **1.1.11**
 - Fixed info widget for similar tv shows from studio to use network ID to lookup instead for plugin content
 - Added hardcoded LibreELEC settings shortcut to shutdownmnu
