@@ -5,7 +5,7 @@
 	<controls>
 		<control type="label">
 			<align>right</align>
-			<label>xxx ... $INFO[ListItem.SetID] // $INFO[ListItem.Set]</label>
+			<label>$INFO[Container.Content]</label>
 			<visible>true</visible>
 		</control>
 	</controls>

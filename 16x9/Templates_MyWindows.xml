@@ -533,8 +533,8 @@
 						<left>120</left>
 						<width>60</width>
 						<texture>$INFO[ListItem.Icon]</texture>
+						<fadetime>90</fadetime>
 					</control>
-					<include content="MyViews_Menu_and_Scrollbars" />
 				</include>
 			</control>
 		</definition>
@@ -556,6 +556,7 @@
 	</include>
 
 	<include name="MyViews_Menu_and_Scrollbars">
+		<param name="target_id" default="50" />
 		<definition>
 			<include content="Scrollbars" condition="!Window.Is(tvguide)" />
 			<control type="fixedlist" id="3000">
@@ -659,7 +660,9 @@
 					<include content="GridView_Menu_Options" condition="$EXP[GridView_Enabled] + !Skin.HasSetting(Kiosk_Mode)" />
 					<include content="Trailer_Autoplay_Menu_Options" condition="Window.Is(videos) + Skin.HasSetting(Trailer_Autoplay)" />
 					<include content="tvguide_Menu_Options" condition="Window.Is(tvguide)" />
-					<include content="Common_Menu_Options" />
+					<include content="Common_Menu_Options">
+						<param name="target_id" value="$PARAM[target_id]" />
+					</include>
 					<include content="Video_Menu_Options" condition="Window.Is(videos)" />
 					<include content="MusicVideo_Menu_Options" condition="Window.Is(videos) | Window.Is(music)" />
 					<include content="AddonBrowser_Menu_Options" condition="Window.Is(addonbrowser)" />
