@@ -21,6 +21,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Add container level transitions on themoviedb helper plugin menu windows
 - Misc bug fixes for MyPVRGuide and PVRGuideInfo
 - Fix for fullscreen info being cut off
+- script.upnext close button fix
 
 **1.1.11**
 - Fixed info widget for similar tv shows from studio to use network ID to lookup instead for plugin content
