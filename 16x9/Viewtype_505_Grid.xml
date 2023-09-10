@@ -75,7 +75,7 @@
 			</control>
 			<control type="group">
 				<visible>!$EXP[Container_Switching] + !$EXP[Content_Switching] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo) + !$EXP[Scrollbar_HasFocus] + !$EXP[Music_Player_HasFocus]</visible>
-				<include content="Visible_Fade_Delayed_Long_Animation" />
+				<include content="Grid_Details_Oerlay_Fade_Animation" />
 				<include content="GridView_Slides" />
 				<control type="label" id="6004">
 					<include content="Hidden_Control" />
