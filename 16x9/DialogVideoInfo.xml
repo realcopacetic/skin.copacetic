@@ -2,7 +2,7 @@
 <window>
 	<!-- movieinformation -->
 	<include content="movieinformation_OnLoadUnload" />
-	<defaultcontrol always="true">3000</defaultcontrol>
+	<defaultcontrol always="true">8</defaultcontrol>
 	<onload condition="String.IsEmpty(Window(movieinformation).Property(RandomGenre))">SetProperty(RandomGenre,$INFO[ListItem.Genre],movieinformation)</onload>
 	<onload condition="String.IsEmpty(Window(home).Property(WriterSplit.0))">SetProperty(WriterSplit.0,$INFO[ListItem.Writer],movieinformation)</onload>
 	<onload condition="String.IsEmpty(Window(home).Property(StudioSplit.0))">SetProperty(StudioSplit.0,$INFO[ListItem.Studio],movieinformation)</onload> 

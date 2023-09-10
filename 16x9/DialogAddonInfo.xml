@@ -4,7 +4,7 @@
 	<onload condition="!String.Contains(Control.GetLabel(13),*)">Skin.SetString(AutoUpdate,off)</onload>
 	<onunload>ClearProperty(Focused_Button,addoninformation)</onunload>
 	<onunload>ClearProperty(AddonDetails,home)</onunload>
-	<defaultcontrol always="true">3000</defaultcontrol>
+	<defaultcontrol always="true">12</defaultcontrol>
 	<controls>
 		<control type="radiobutton" id="13">
 			<visible allowhiddenfocus="true">false</visible>

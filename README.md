@@ -22,6 +22,10 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Misc bug fixes for MyPVRGuide and PVRGuideInfo
 - Fix for fullscreen info being cut off
 - script.upnext close button fix
+- Added resolution label to breadcrumb for grid: https://github.com/realcopacetic/skin.copacetic/issues/63
+- Added option to turn off infoscreen star ratings: https://github.com/realcopacetic/skin.copacetic/issues/64
+- Disable OSD autoclose when another settings window is open on top of OSD - https://github.com/realcopacetic/skin.copacetic/issues/65
+- Added default control for videoinformation and addoninformation.
 
 **1.1.11**
 - Fixed info widget for similar tv shows from studio to use network ID to lookup instead for plugin content

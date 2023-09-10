@@ -156,7 +156,7 @@
 					<param name="align" value="center" />
 					<param name="scroll" value="true" />
 				</include>
-				<include content="Infoscreen_Stars_Layout" condition="!Window.Is(addoninformation) + !String.IsEqual(ListItem.DBType,set) + !String.IsEqual(ListItem.DBType,artist) + ![String.IsEmpty(ListItem.UserRating) + String.IsEmpty(ListItem.Rating)]">
+				<include content="Infoscreen_Stars_Layout" condition="!Window.Is(addoninformation) + !String.IsEqual(ListItem.DBType,set) + !String.IsEqual(ListItem.DBType,artist) + ![String.IsEmpty(ListItem.UserRating) + String.IsEmpty(ListItem.Rating)] + !Skin.HasSetting(Star_Ratings_Disabled)">
 					<param name="align" value="$PARAM[align]" />
 				</include>
 				<include content="Infoscreen_Flags_Layout" condition="Window.Is(movieinformation)">

@@ -716,8 +716,21 @@
 			<param name="category" value="14" />
 			<param name="previous" value="1404" />
 			<param name="id" value="1405" />
-			<param name="next" value="1406" />
+			<param name="next" value="1412" />
 		</include>
+		<control type="label" id="1412">
+			<description>Info screens</description>
+			<include content="skinsettings_Default_Label" />
+			<label>$LOCALIZE[31484]</label>
+			<visible>ControlGroup(9).HasFocus(14)</visible>
+		</control>
+		<control type="radiobutton" id="1413">
+			<description>Disable star ratings</description>
+			<label>$LOCALIZE[31485]</label>
+			<onclick>Skin.ToggleSetting(Star_Ratings_Disabled)</onclick>
+			<selected>Skin.HasSetting(Star_Ratings_Disabled)</selected>
+			<visible>ControlGroup(9).HasFocus(14)</visible>
+		</control>
 		<control type="label" id="1406">
 			<description>Video Player</description>
 			<include content="skinsettings_Default_Label" />
