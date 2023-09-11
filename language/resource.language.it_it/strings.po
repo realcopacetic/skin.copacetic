@@ -903,6 +903,16 @@ msgid "Liked song rating threshold"
 msgstr "Soglia di valutazione dei brani piaciuti"
 
 # /16x9/Content_Settings.xml
+msgctxt "#31484"
+msgid "Info screens"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31485"
+msgid "Disable star ratings"
+msgstr ""
+
+# /16x9/Content_Settings.xml
 msgctxt "#31554"
 msgid "Overlay a binary user rating system (liked or not) on top of standard song user ratings. User ratings equal to or above this threshold are 'liked'. You can 'like' (set a user rating equivalent to the threshold) or 'unlike' (clear user rating) a song via the context menu, or embedded music player if enabled under Extras. The threshold will also be used by the 'Liked songs' widget. Set to 'Off' to disable."
 msgstr "Sovrapponi un sistema binario di valutazione degli utenti (mi piace o non mi piace) alle valutazioni standard dei brani da parte degli utenti. Le valutazioni degli utenti pari o superiori a questa soglia sono \"mi piace\". Puoi mettere \"Mi piace\" (impostare una valutazione utente equivalente alla soglia) o \"Non mi piace\" (cancellare la valutazione utente) a un brano tramite il menu contestuale o il lettore musicale incorporato se abilitato in Extra. La soglia verrà utilizzata anche dal widget \"Canzoni piaciute\". Imposta su 'Off' per disattivare."

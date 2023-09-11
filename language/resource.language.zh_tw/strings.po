@@ -903,6 +903,16 @@ msgid "Liked song rating threshold"
 msgstr ""
 
 # /16x9/Content_Settings.xml
+msgctxt "#31484"
+msgid "Info screens"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31485"
+msgid "Disable star ratings"
+msgstr ""
+
+# /16x9/Content_Settings.xml
 msgctxt "#31554"
 msgid "Overlay a binary user rating system (liked or not) on top of standard song user ratings. User ratings equal to or above this threshold are 'liked'. You can 'like' (set a user rating equivalent to the threshold) or 'unlike' (clear user rating) a song via the context menu, or embedded music player if enabled under Extras. The threshold will also be used by the 'Liked songs' widget. Set to 'Off' to disable."
 msgstr ""
