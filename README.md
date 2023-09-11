@@ -15,15 +15,16 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 * __sualfred__ for plenty of inspiration and [script.embuary.helper](https://github.com/sualfred/script.embuary.helper), which provided some key functionality before the release of new Nexus features.
 
 ### Changelog
+---
 **1.1.14**
 - Refined animation delay for grid view details that appear as an overlay to the thumbnail after artwork is dimmed.
 
 **1.1.13**
-- script.upnext close button fix
+- script.upnext close button fix https://github.com/realcopacetic/skin.copacetic/issues/62
 - Added resolution label to breadcrumb for grid: https://github.com/realcopacetic/skin.copacetic/issues/63
 - Added option to turn off infoscreen star ratings: https://github.com/realcopacetic/skin.copacetic/issues/64
 - Disable OSD autoclose when another settings window is open on top of OSD - https://github.com/realcopacetic/skin.copacetic/issues/65
-- Added default control for videoinformation and addoninformation.
+- Added default control for videoinformation and addoninformation. https://github.com/realcopacetic/skin.copacetic/issues/58
 
 **1.1.12**
 - Compare cropped clearlogo dbid with listitem dbid to ensure only displays on correct items.
@@ -34,7 +35,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 **1.1.11**
 - Fixed info widget for similar tv shows from studio to use network ID to lookup instead for plugin content
-- Added hardcoded LibreELEC settings shortcut to shutdownmnu
+- Added hardcoded LibreELEC settings shortcut to shutdownmnu https://github.com/realcopacetic/skin.copacetic/issues/54
 - New window animations for continuous video playback during PVR 
 - MyPVRGuide and PVRGuide info alphas - Request for feedback
 
