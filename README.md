@@ -16,6 +16,10 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.1.15**
+- Added multiart and Ken Burns effect to infoscreen backgrounds https://github.com/realcopacetic/skin.copacetic/issues/60
+- Added homescreen clearlogo supports for background playlists set through skinshortcuts https://github.com/realcopacetic/skin.copacetic/issues/61
+
 **1.1.14**
 - Refined animation delay for grid view details that appear as an overlay to the thumbnail after artwork is dimmed
 - Only use Return_Label prop when label/videoplayer title contains a period

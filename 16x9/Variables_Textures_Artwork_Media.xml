@@ -45,7 +45,8 @@
 		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Home_Background_Override_Source,Videos)">$INFO[Window(home).Property(Background_Videos_Clearlogo)]</value>
 		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Home_Background_Override_Source,Artists)">$INFO[Window(home).Property(Background_Artists_Clearlogo)]</value>
 		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + Skin.String(Home_Background_Override_Path)">$INFO[Container(3300).ListItem.Art(clearlogo)]</value>
-		<value condition="String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist)) + !String.IsEmpty(Container(3000).ListItem.Property(background))" />
+		<value condition="!String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist))">$INFO[Container(3300).ListItem.Art(clearlogo)]</value>
+		<value condition="!String.IsEmpty(Container(3000).ListItem.Property(background))">$INFO[Container(3000).ListItem.Property(background)]</value>
 		<value>$INFO[Container(3300).ListItem.Art(clearlogo)]</value>
 	</variable>
 
@@ -63,6 +64,7 @@
 	</variable>
 
 	<variable name="Infoscreen_Background_Texture">
+		<value condition="!String.IsEmpty(ListItem.Art(fanart1)">$INFO[Control.GetLabel(3401)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="String.IsEqual(Container.FolderName,ListItem.TVShowTitle) + !String.IsEmpty(ListItem.TVShowTitle) + !String.IsEmpty(Window(home).Property(Season_Fanart))">$INFO[Window(home).Property(Season_Fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + !String.IsEqual(ListItem.DBType,video)">$INFO[ListItem.Art(fanart)]</value>

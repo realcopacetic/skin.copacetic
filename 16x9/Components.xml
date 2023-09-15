@@ -127,7 +127,7 @@
 				<timeperimage>$PARAM[time]</timeperimage>
 				<randomize>true</randomize>
 			</control>
-			<include content="Background_Multiart_Fadelabel">
+			<include content="Background_Multiart_Template">
 				<param name="transition_time" value="$PARAM[time]" />
 			</include>
 		</definition>
@@ -234,7 +234,7 @@
 		</control>
 		<include content="Common_Details_Logo" condition="Skin.HasSetting(Home_Screensaver_Clearlogo_Enabled)">
 			<param name="texture" value="$VAR[Background_Home_Clearlogo_Texture]" />
-			<param name="visible" value="Control.HasFocus(4300) + !$EXP[TransparentDialog_IsVisible] + [String.IsEmpty(Container(3000).ListItem.Property(background)) | [Skin.HasSetting(Home_Background_Override_Enabled) + Skin.String(Home_Background_Override_Path)]]" />
+			<param name="visible" value="Control.HasFocus(4300) + !$EXP[TransparentDialog_IsVisible]" />
 			<left>60</left>
 			<bottom>60</bottom>
 			<fadetime>360</fadetime>

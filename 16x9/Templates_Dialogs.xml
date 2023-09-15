@@ -18,6 +18,10 @@
 			<include content="Infoscreen_Path_Tracer_Button" condition="Window.Is(musicinformation)">
 				<param name="window" value="musicinformation" />
 			</include>
+			<include content="MyViews_Multiart_Labels">
+			<param name="include_type_label" value="false" />
+			<param name="template" value="Infoscreen_Multiart" />
+			</include>
 			<control type="group">
 				<include content="$PARAM[window_animation_background]" />
 				<visible>$PARAM[visible]</visible>
@@ -27,9 +31,11 @@
 					<param name="visible" value="![String.IsEqual(ListItem.DBType,album) + !ControlGroup(3000).HasFocus(12)]" />
 					<param name="texture" value="$VAR[Infoscreen_Background_Texture]" />
 					<param name="fallback" value="views/dark_grey_100.png" />
+					<param name="fadetime" value="720" />
 					<include content="VisibleHidden_Fade_Delayed_Animation" />
 					<animation effect="fadediffuse" end="ff404040" time="0" condition="true">Conditional</animation> <!-- 25% alpha -->
 					<animation effect="fadediffuse" end="ff9a9a9a" time="360" tween="sine" easing="inout" reversible="true" condition="String.IsEqual(Window($PARAM[windowname]).Property(Focused_Button),$LOCALIZE[207]) | String.IsEqual(Window($PARAM[windowname]).Property(Focused_Button),$LOCALIZE[21887])">Conditional</animation> <!-- 15% alpha: 60% of 25% -->
+					<include content="Ken_Burns_Effect_Animation" condition="Skin.HasSetting(Global_Ken_Burns_Effect)" />
 				</include>		
 				<include content="Transparent_Dialog_Panel" condition="[Window.Is(musicinformation) + String.IsEqual(ListItem.DBType,album)] | Window.Is(songinformation) | Window.Is(addoninformation) | Window.Is(pvrguideinfo) | Window.Is(pvrrecordinginfo)">
 					<param name="visible" value="[!ControlGroup(3000).HasFocus(10) + !ControlGroup(3000).HasFocus(12) + !Window.Is(addoninformation)] | [Window.Is(addoninformation) + !ControlGroup(3000).HasFocus(99)] | Window.Is(pvrguideinfo) | Window.Is(pvrrecordinginfo)" />
