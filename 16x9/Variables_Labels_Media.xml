@@ -731,7 +731,7 @@
 	</variable>
 
 	<variable name="Title_Label">
-		<value condition="VideoPlayer.IsFullscreen + String.IsEmpty(VideoPlayer.DBID) + !String.IsEmpty(Window(home).Property(Return_Label))">$INFO[Window(home).Property(Return_Label)]</value>
+		<value condition="VideoPlayer.IsFullscreen + String.IsEmpty(VideoPlayer.DBID) + String.Contains(VideoPlayer.Title,.) + !String.IsEmpty(Window(home).Property(Return_Label))">$INFO[Window(home).Property(Return_Label)]</value>
 		<value condition="VideoPlayer.IsFullscreen + !String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.Title]</value>
 		<value condition="Window.Is(addoninformation) + !String.IsEmpty(ListItem.AddonName)">$INFO[ListItem.AddonName]</value>
 		<value condition="$EXP[Infoscreen_Widget_HasFocus]">$VAR[Title_Label_Infoscreen_Widgets]</value>
@@ -749,7 +749,7 @@
 		<value condition="String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
 		<value condition="String.IsEqual(ListItem.DBType,song) + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
 		<value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
-		<value condition="$EXP[GridView_IsVisible] + String.IsEmpty(ListItem.DBID) + !String.IsEmpty(Window(home).Property(Return_Label))">$INFO[Window(home).Property(Return_Label)]</value>
+		<value condition="$EXP[GridView_IsVisible] + String.IsEmpty(ListItem.DBID) + String.Contains(ListItem.Label,.) + !String.IsEmpty(Window(home).Property(Return_Label))">$INFO[Window(home).Property(Return_Label)]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
@@ -769,7 +769,7 @@
 	</variable>
 
 	<variable name="Title_Breadcrumb_Label">
-		<value condition="VideoPlayer.IsFullscreen + Window.Is(seekbar) + String.IsEmpty(VideoPlayer.DBID) + !String.IsEmpty(Window(home).Property(Return_Label))">$INFO[Window(home).Property(Return_Label)]</value>
+		<value condition="VideoPlayer.IsFullscreen + Window.Is(seekbar) + String.IsEmpty(VideoPlayer.DBID) + String.Contains(VideoPlayer.Title,.) + !String.IsEmpty(Window(home).Property(Return_Label))">$INFO[Window(home).Property(Return_Label)]</value>
 		<value condition="VideoPlayer.IsFullscreen + Window.Is(seekbar) + !String.IsEmpty(VideoPlayer.TVShowTitle)">$INFO[VideoPlayer.TVShowTitle]</value>
 		<value condition="VideoPlayer.IsFullscreen + Window.Is(seekbar) + !String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.Title]</value>
 		<value condition="Window.Is(musicplaylist)">$INFO[ListItem.Artist]</value>
