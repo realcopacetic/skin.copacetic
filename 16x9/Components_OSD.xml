@@ -433,15 +433,10 @@
 				<font>Info_Breadcrumb_Label</font>
 				<textcolor>$VAR[Light_Color]</textcolor>
 			</control>
-			<control type="image">
-				<visible>Integer.IsGreater(Skin.TimerElapsedSecs(video_playback),8) + Integer.IsLess(Skin.TimerElapsedSecs(video_playback),11)</visible>
-				<include content="Video_Breadcrumb_Fade_Animation" />
-				<left>-15</left>
-				<width>90</width>
-				<height>60</height>
-				<aspectratio>keep</aspectratio>
-				<texture colordiffuse="$VAR[Light_Color]">$VAR[MPAA_Flag]</texture>
-			</control>
+			<include content="MPAA_Flag_Icon" condition="!$EXP[Wide_Flag]"/>
+			<include content="MPAA_Flag_Icon" condition="$EXP[Wide_Flag]">
+				<param name="width" value="120" />
+			</include>
 			<control type="label">
 				<visible>Integer.IsGreater(Skin.TimerElapsedSecs(video_playback),8) + Integer.IsLess(Skin.TimerElapsedSecs(video_playback),11)</visible>
 				<include content="Video_Breadcrumb_Fade_Animation" />
@@ -454,6 +449,21 @@
 				<textcolor>$VAR[Light_Color]</textcolor>
 			</control>
 		</control>
+	</include>
+
+	<include name="MPAA_Flag_Icon">
+		<param name="width" default="90" />
+		<definition>
+			<control type="image">
+				<visible>Integer.IsGreater(Skin.TimerElapsedSecs(video_playback),8) + Integer.IsLess(Skin.TimerElapsedSecs(video_playback),11)</visible>
+				<include content="Video_Breadcrumb_Fade_Animation" />
+				<width>$PARAM[width]</width>
+				<left>-15</left>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture colordiffuse="$VAR[Light_Color]">$VAR[MPAA_Flag]</texture>
+			</control>
+		</definition>
 	</include>
 
 </includes>
