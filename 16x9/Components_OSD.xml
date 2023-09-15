@@ -10,6 +10,7 @@
 		<param name="left_label" />
 		<param name="right_label" />
 		<param name="text_color" />
+		<param name="include_ranges" default="false" />
 		<definition>
 			<control type="group">
 				<left>$PARAM[left]</left>
@@ -21,14 +22,20 @@
 				<nested />
 				<!-- Cache bar -->
 				<control type="progress" id="$PARAM[progress_id]">
+					<visible>true</visible>
 					<centertop>50%</centertop>
 					<left>$PARAM[progress_bar_padding]</left>
 					<right>$PARAM[progress_bar_padding]</right>
 					<height>6</height>
 					<info>Player.ProgressCache</info>
-					<texturebg colordiffuse="$VAR[Seekbar_Background_Color]">views/white_100.png</texturebg>
+					<texturebg colordiffuse="$VAR[Cachebar_Background_Color]">views/white_100.png</texturebg>
 					<midtexture colordiffuse="$VAR[Seekbar_Background_Color]">views/white_100.png</midtexture>
 				</control>
+				<!-- Ranges -->
+				<include content="Player_Ranges" condition="$PARAM[include_ranges]">
+					<param name="left" value="$PARAM[progress_bar_padding]" />
+					<param name="right" value="$PARAM[progress_bar_padding]" />
+				</include>
 				<!-- Progress bar -->
 				<control type="progress" id="$PARAM[progress_id]">
 					<centertop>50%</centertop>
@@ -39,24 +46,59 @@
 					<texturebg colordiffuse="$VAR[Blank_Color]">views/white_100.png</texturebg>
 					<midtexture colordiffuse="$VAR[Seekbar_Focused_Color]">views/white_100.png</midtexture>
 				</control>
+				<!-- Left label -->
 				<control type="label">
 					<height>100%</height>
 					<width>100%</width>
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$PARAM[left_label]</label>
-					<font>Player_Time</font>
+					<font>PVR_Time</font>
 					<textcolor>$PARAM[text_color]</textcolor>
 				</control>
+				<!-- Right label -->
 				<control type="label">
 					<height>100%</height>
 					<width>100%</width>
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>$PARAM[right_label]</label>
-					<font>Player_Time</font>
+					<font>PVR_Time</font>
 					<textcolor>$PARAM[text_color]</textcolor>
 				</control>
+			</control>
+		</definition>
+	</include>
+
+	<include name="Player_Ranges">
+		<control type="ranges">
+			<left>$PARAM[left]</left>
+			<right>$PARAM[right]</right>
+			<centertop>50%</centertop>
+			<height>18</height>
+			<texturebg colordiffuse="$VAR[Blank_Color]">dialogs/range_chapters_bg.png</texturebg>
+			<righttexture colordiffuse="$VAR[Accent_Color]">dialogs/range_chapters_right.png</righttexture>
+			<info>Player.Chapters</info>
+		</control>
+	</include>
+
+	<include name="musicosd_Slider">
+		<param name="left" default="180" />
+		<param name="width" default="1560" />
+		<definition>
+			<control type="slider" id="60">
+				<visible allowhiddenfocus="true">Control.HasFocus(60) + !VideoPlayer.Content(LiveTV)</visible>
+				<bottom>20</bottom>
+				<left>$PARAM[left]</left>
+				<width>$PARAM[width]</width>
+				<height>20</height>
+				<texturesliderbar colordiffuse="$VAR[Light_Color]">dialogs/dialogseekbar_background.png</texturesliderbar>
+				<textureslidernibfocus colordiffuse="$VAR[Accent_Color]">dialogs/dialogslider_nib_20.png</textureslidernibfocus>
+				<info>Player.Progress</info>
+				<onup>3100</onup>
+				<ondown>3000</ondown>
+				<action>seek</action>
+				<orientation>horizontal</orientation>
 			</control>
 		</definition>
 	</include>

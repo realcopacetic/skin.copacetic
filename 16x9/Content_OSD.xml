@@ -264,25 +264,4 @@
 		</control>
 	</include>
 
-	<include name="musicosd_Slider">
-		<param name="left" default="180" />
-		<param name="width" default="1560" />
-		<definition>
-			<control type="slider" id="60">
-				<visible allowhiddenfocus="true">Control.HasFocus(60) + !VideoPlayer.Content(LiveTV)</visible>
-				<bottom>20</bottom>
-				<left>$PARAM[left]</left>
-				<width>$PARAM[width]</width>
-				<height>20</height>
-				<texturesliderbar colordiffuse="$VAR[Light_Color]">dialogs/dialogseekbar_background.png</texturesliderbar>
-				<textureslidernibfocus colordiffuse="$VAR[Accent_Color]">dialogs/dialogslider_nib_20.png</textureslidernibfocus>
-				<info>Player.Progress</info>
-				<onup>3100</onup>
-				<ondown>3000</ondown>
-				<action>seek</action>
-				<orientation>horizontal</orientation>
-			</control>
-		</definition>
-	</include>
-
 </includes>

@@ -19,6 +19,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 **1.1.14**
 - Refined animation delay for grid view details that appear as an overlay to the thumbnail after artwork is dimmed.
 - Only use Return_Label prop when label/videoplayer title contains a period.
+- Added chapter markers and chapter label to seekbar during video playback
 
 **1.1.13**
 - script.upnext close button fix https://github.com/realcopacetic/skin.copacetic/issues/62

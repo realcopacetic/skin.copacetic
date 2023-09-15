@@ -858,6 +858,10 @@
 		<value condition="Skin.String(Theme,Light) + Window.IsVisible(visualisation)">$VAR[Alpha_15]$VAR[Dark_Hex]</value>
 		<value>$VAR[Alpha_15]$VAR[Light_Hex]</value>
 	</variable>
+	<variable name="Cachebar_Background_Color">
+		<value condition="Skin.String(Theme,Light) + Window.IsVisible(visualisation)">$VAR[Alpha_15]$VAR[Dark_Hex]</value>
+		<value>$VAR[Alpha_15]$VAR[Light_Hex]</value>
+	</variable>
 	<variable name="Seekbar_Focused_Color">
 		<value condition="Control.HasFocus(60)">$VAR[Accent_Color]</value>
 		<value condition="Skin.String(Theme,Light) + Window.IsVisible(visualisation)">$VAR[Dark_Color]</value>
