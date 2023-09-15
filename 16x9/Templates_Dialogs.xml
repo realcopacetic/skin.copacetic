@@ -62,7 +62,7 @@
 					<param name="texture" value="$INFO[ListItem.Art(thumb)]" />
 					<param name="fallback" value="views/dark_grey_100.png" />
 				</include>
-				<include content="Infoscreen_Artwork" condition="!Window.Is(pvrguideinfo) + !(Window.Is(pvrrecordinginfo)">
+				<include content="Infoscreen_Artwork" condition="!Window.Is(pvrguideinfo) + !Window.Is(pvrrecordinginfo)">
 					<param name="visible" value="[ControlGroup(3000).HasFocus(10) + !Window.Is(addoninformation)] | [ControlGroup(3000).HasFocus(99) + Window.Is(addoninformation)]" />
 				</include>
 			</control>

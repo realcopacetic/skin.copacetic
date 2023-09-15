@@ -64,7 +64,7 @@
 	</variable>
 
 	<variable name="Infoscreen_Background_Texture">
-		<value condition="!String.IsEmpty(ListItem.Art(fanart1)">$INFO[Control.GetLabel(3401)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(fanart1))">$INFO[Control.GetLabel(3401)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="String.IsEqual(Container.FolderName,ListItem.TVShowTitle) + !String.IsEmpty(ListItem.TVShowTitle) + !String.IsEmpty(Window(home).Property(Season_Fanart))">$INFO[Window(home).Property(Season_Fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + !String.IsEqual(ListItem.DBType,video)">$INFO[ListItem.Art(fanart)]</value>
