@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-08-07 08:20+0000\n"
+"PO-Revision-Date: 2023-09-17 02:11+0000\n"
 "Last-Translator: Massimo Pissarello <mapi68@gmail.com>\n"
 "Language-Team: Italian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/it_it/>\n"
 "Language: it_it\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.18.2\n"
+"X-Generator: Weblate 5.0.2\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -905,12 +905,12 @@ msgstr "Soglia di valutazione dei brani piaciuti"
 # /16x9/Content_Settings.xml
 msgctxt "#31484"
 msgid "Info screens"
-msgstr ""
+msgstr "Schermate informative"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31485"
 msgid "Disable star ratings"
-msgstr ""
+msgstr "Disabilita valutazione a stelle"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31554"
@@ -935,7 +935,7 @@ msgstr "Abilita fanart di sfondo"
 # /16x9/Content_Settings.xml
 msgctxt "#31481"
 msgid "Visualisation screen album cover"
-msgstr ""
+msgstr "Copertina album nella schermata di visualizzazione"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31482"
