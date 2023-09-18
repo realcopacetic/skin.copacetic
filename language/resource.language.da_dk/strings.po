@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-04-21 08:59+0000\n"
+"PO-Revision-Date: 2023-09-17 02:11+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Danish <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/da_dk/>\n"
 "Language: da_dk\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.2\n"
+"X-Generator: Weblate 5.0.2\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -827,7 +827,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31475"
 msgid "Kiosk mode"
-msgstr ""
+msgstr "Kiosktilstand"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31575"
@@ -940,12 +940,12 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31482"
 msgid "Small"
-msgstr ""
+msgstr "Lille"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31483"
 msgid "Large"
-msgstr ""
+msgstr "Stor"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31455"

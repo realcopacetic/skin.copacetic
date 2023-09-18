@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-06-29 10:42+0000\n"
+"PO-Revision-Date: 2023-09-17 02:11+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Portuguese (Brazil) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/pt_br/>\n"
 "Language: pt_br\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.18\n"
+"X-Generator: Weblate 5.0.2\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -940,12 +940,12 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31482"
 msgid "Small"
-msgstr ""
+msgstr "Pequeno"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31483"
 msgid "Large"
-msgstr ""
+msgstr "Grande"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31455"
@@ -1159,7 +1159,7 @@ msgstr "Canais de Áudio"
 # /16x9/Content.xml
 msgctxt "#31610"
 msgid "Audio bitrate"
-msgstr ""
+msgstr "Bitrate áudio"
 
 # /16x9/Content.xml
 msgctxt "#31611"
@@ -1189,7 +1189,7 @@ msgstr "Resolução de tela"
 # /16x9/Content.xml
 msgctxt "#31616"
 msgid "System rendering speed"
-msgstr ""
+msgstr "Velocidade de renderização do sistema"
 
 # /16x9/Content.xml
 msgctxt "#31617"
