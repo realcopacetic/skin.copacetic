@@ -17,7 +17,8 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ### Changelog
 ---
 **1.1.16**
-- Buf fix: removed unmatched parenthesis causing log errors 
+- Bug fix: removed unmatched parenthesis causing log errors
+- Updated MGM, MGM+ and HBO Max flags 
 
 **1.1.15**
 - Added multiart and Ken Burns effect to infoscreen backgrounds https://github.com/realcopacetic/skin.copacetic/issues/60
