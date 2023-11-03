@@ -784,8 +784,8 @@ msgstr "Aggiungi movimento"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31541"
-msgid "Adds a subtle Ken Burns effect pan and zoom to the background artwork slideshow."
-msgstr "Aggiunge una sottile panoramica e uno zoom dell'effetto Ken Burns alla presentazione dell'artwork di sfondo."
+msgid "Adds a subtle 'Ken Burns effect'-style pan and zoom to the fullscreen background artwork."
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31442"
@@ -1409,6 +1409,11 @@ msgstr "Buona festa"
 msgctxt "#31914"
 msgid "Happy Earth Day"
 msgstr "Felice giorno della terra"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31541"
+#~ msgid "Adds a subtle Ken Burns effect pan and zoom to the background artwork slideshow."
+#~ msgstr "Aggiunge una sottile panoramica e uno zoom dell'effetto Ken Burns alla presentazione dell'artwork di sfondo."
 
 # /16x9/Content_Settings.xml
 #~ msgctxt "#31426"

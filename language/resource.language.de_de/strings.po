@@ -779,7 +779,7 @@ msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31541"
-msgid "Adds a subtle Ken Burns effect pan and zoom to the background artwork slideshow."
+msgid "Adds a subtle 'Ken Burns effect'-style pan and zoom to the fullscreen background artwork."
 msgstr ""
 
 # /16x9/Content_Settings.xml
