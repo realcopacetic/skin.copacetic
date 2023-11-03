@@ -182,7 +182,7 @@
 		<value condition="Control.HasFocus(1105) + $EXP[Library_Has_Content]">$LOCALIZE[31533]</value>
 		<value condition="Control.HasFocus(1105) + !$EXP[Library_Has_Content]">$LOCALIZE[31534]</value>
 		<value condition="Control.HasFocus(11060) | Control.HasFocus(11061)">$LOCALIZE[31535]</value>
-		<value condition="Control.HasFocus(1109)">$LOCALIZE[31541]</value>
+		<value condition="Control.HasFocus(1109) | Control.HasFocus(1020) | Control.HasFocus(1304) | Control.HasFocus(1341)">$LOCALIZE[31541]</value>
 		<value condition="Control.HasFocus(1110)">$LOCALIZE[31542]</value>
 		<value condition="Control.HasFocus(1111)">$LOCALIZE[31543]</value>
 		<!-- Views -->

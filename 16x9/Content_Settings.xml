@@ -344,7 +344,7 @@
 		</include>
 		<include content="skinsettings_Slider_Button">
 			<param name="info" value="Background_Interval" />
-			<param name="- label" value="$LOCALIZE[31427]" />
+			<param name="label" value="- $LOCALIZE[31427]" />
 			<param name="label2" value="$VAR[skinsettings_Background_Interval_Label]" />
 			<param name="category" value="10" />
 			<param name="previous" value="1018" />
@@ -352,7 +352,7 @@
 			<param name="next" value="1020" />
 		</include>
 		<control type="radiobutton" id="1020">
-			<description>Add movement to background</description>
+			<description>Add movement</description>
 			<label>- $LOCALIZE[31441]</label>
 			<onclick>Skin.ToggleSetting(Global_Ken_Burns_Effect)</onclick>
 			<selected>Skin.HasSetting(Global_Ken_Burns_Effect)</selected>
@@ -444,7 +444,7 @@
 			<param name="next" value="1109" />
 		</include>
 		<control type="radiobutton" id="1109">
-			<description>Add movement to background</description>
+			<description>Add movement</description>
 			<label>$LOCALIZE[31441]</label>
 			<onclick>Skin.ToggleSetting(Home_Ken_Burns_Effect)</onclick>
 			<selected>Skin.HasSetting(Home_Ken_Burns_Effect)</selected>
@@ -528,6 +528,20 @@
 			<selected>Skin.HasSetting(Kiosk_Mode)</selected>
 			<include content="skinsettings_Default_Label" />
 		</control>
+
+		<control type="label" id="1340">
+			<description>List</description>
+			<visible>ControlGroup(9).HasFocus(13)</visible>
+			<label>$LOCALIZE[31000]</label>
+			<include content="skinsettings_Default_Label" />
+		</control>
+		<control type="radiobutton" id="1341">
+			<description>Add movement</description>
+			<label>$LOCALIZE[31441]</label>
+			<onclick>Skin.ToggleSetting(List_Ken_Burns_Effect)</onclick>
+			<selected>Skin.HasSetting(List_Ken_Burns_Effect)</selected>
+			<visible>ControlGroup(9).HasFocus(13)</visible>
+		</control>
 		<control type="label" id="1300">
 			<description>Billboard</description>
 			<visible>ControlGroup(9).HasFocus(13)</visible>
@@ -552,6 +566,13 @@
 			<label>$LOCALIZE[31447]</label>
 			<onclick>Skin.ToggleSetting(BillboardView_Enabled_Addons)</onclick>
 			<selected>Skin.HasSetting(BillboardView_Enabled_Addons)</selected>
+		</control>
+		<control type="radiobutton" id="1304">
+			<description>Add movement</description>
+			<label>$LOCALIZE[31441]</label>
+			<onclick>Skin.ToggleSetting(Billboard_Ken_Burns_Effect)</onclick>
+			<selected>Skin.HasSetting(Billboard_Ken_Burns_Effect)</selected>
+			<visible>ControlGroup(9).HasFocus(13)</visible>
 		</control>
 		<control type="label" id="1310">
 			<description>Showcase</description>

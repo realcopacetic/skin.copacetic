@@ -13,6 +13,7 @@
 		<param name="has_progress" default="false" />
 		<definition>
 			<control type="group">
+				<include content="Ken_Burns_Effect_Animation_Views" condition="Skin.HasSetting(List_Ken_Burns_Effect) | Skin.HasSetting(Billboard_Ken_Burns_Effect)" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Secondary_List_Scroll_Animation" />
 				<width>$PARAM[width]</width>

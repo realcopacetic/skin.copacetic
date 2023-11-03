@@ -10,7 +10,7 @@
 	<onload condition="!Skin.String(Home_Background_Override_Source)">Skin.SetString(Home_Background_Override_Source,Global)</onload>
 	<onload condition="!Skin.String(Multiart_Interval)">Skin.SetString(Multiart_Interval,4)</onload>
 	<onload condition="!Skin.String(Trailer_Autoplay_Interval)">Skin.SetString(Trailer_Autoplay_Interval,3)</onload>
-	<onload condition="!Skin.String(visualisation_Layout)">Skin.String(visualisation_Layout,Small)</onload>
+	<onload condition="!Skin.String(visualisation_Layout)">Skin.SetString(visualisation_Layout,Small)</onload>
 	<!-- Widget defaults -->
 	<onload condition="!Skin.HasSetting(Widget1_Content_Disabled) + !Skin.HasSetting(Widget1_Content_InProgress) + !Skin.HasSetting(Widget1_Content_NextUp) + !Skin.HasSetting(Widget1_Content_LatestMovies) + !Skin.HasSetting(Widget1_Content_LatestTVShows) + !Skin.HasSetting(Widget1_Content_RandomMovies) + !Skin.HasSetting(Widget1_Content_RandomTVShows) + !Skin.HasSetting(Widget1_Content_LatestAlbums) + !Skin.HasSetting(Widget1_Content_RecentAlbums) + !Skin.HasSetting(Widget1_Content_RandomAlbums) + !Skin.HasSetting(Widget1_Content_LikedSongs) + !Skin.HasSetting(Widget1_Content_Favourites) + !Skin.HasSetting(Widget1_Content_Custom)">Skin.SetBool(Widget1_Content_InProgress)</onload>
 	<onload condition="!Skin.String(Widget1_View)">Skin.SetString(Widget1_View,Strip)</onload>

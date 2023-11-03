@@ -19,6 +19,11 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 **1.1.16**
 - Bug fix: removed unmatched parenthesis causing log errors
 - Updated MGM, MGM+ and HBO Max flags 
+- Fixed colour issue with volume indicator in certain views on light theme
+- Improved notifcation style switching when moving between views and windows
+- Fixed bug in Startup.xml
+- Fixed bug in Content_Settings.xml preventing a label from showing in Skin Settings > General
+- Added option for movement to fullscreen artwork on billboard and list views https://github.com/realcopacetic/skin.copacetic/issues/79
 
 **1.1.15**
 - Added multiart and Ken Burns effect to infoscreen backgrounds https://github.com/realcopacetic/skin.copacetic/issues/60
