@@ -382,7 +382,7 @@
 		<value condition="!String.Contains(ListItem.Studio,Disney) + [String.Contains(ListItem.FilenameAndPath,DSNP) | String.Contains(ListItem.FilenameAndPath,Disney) | String.Contains(ListItem.Property(Network),Disney)]">flags/source/Disney+.png</value>
 		<value condition="!String.Contains(ListItem.Studio,HBO Max) + [String.Contains(ListItem.FilenameAndPath,HMAX) | String.Contains(ListItem.FilenameAndPath,HBO) | String.Contains(ListItem.Property(Network),HBO Max)]">flags/source/HBO Max.png</value>
 		<value condition="!String.Contains(ListItem.Studio,Hulu) + [String.Contains(ListItem.FilenameAndPath,HULU) | String.Contains(ListItem.Property(Network),Hulu)]">flags/source/Hulu.png</value>
-		<value condition="!String.Contains(ListItem.Studio,Max) + [String.Contains(ListItem.FilenameAndPath,p.MAX.W) | String.Contains(ListItem.Property(Network),Max)">flags/source/Max.png</value>
+		<value condition="!String.Contains(ListItem.Studio,Max) + [String.Contains(ListItem.FilenameAndPath,p.MAX.W) | String.Contains(ListItem.Property(Network),Max)]">flags/source/Max.png</value>
 		<value condition="!String.Contains(ListItem.Studio,Metro) + !String.Contains(ListItem.Studio,MGM) + [String.Contains(ListItem.FilenameAndPath,MGM) | String.Contains(ListItem.Property(Network),MGM)] ">flags/source/MGM+.png</value>
 		<value condition="!String.Contains(ListItem.Studio,Netflix) + [String.Contains(ListItem.FilenameAndPath,.NF.) | String.Contains(ListItem.FilenameAndPath,Netflix) | String.Contains(ListItem.Property(Network),Netflix)]">flags/source/Netflix.png</value>
 		<value condition="!String.Contains(ListItem.Studio,Paramount) + [String.Contains(ListItem.FilenameAndPath,PMNT) | String.Contains(ListItem.Property(Network),Paramount)] ">flags/source/Paramount+.png</value>

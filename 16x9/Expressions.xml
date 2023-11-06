@@ -21,6 +21,7 @@
 	<expression name="Library_Has_Content">Library.HasContent(Video) | Library.HasContent(Music)</expression>
 	<expression name="Actor_Has_Credits">Integer.IsGreater(Container(3203).NumItems,1)</expression>
 	<expression name="Hidden_Focus_Setter">Control.HasFocus(4010)</expression>
+	<expression name="Hidden_Options_Menu_Disabled">Skin.HasSetting(Kiosk_Mode) + Skin.HasSetting(Disable_Hidden_Menu)</expression>
 	<expression name="Scrollbar_HasFocus">Control.HasFocus(60) | Control.HasFocus(61) | Control.HasFocus(62) | Control.HasFocus(4012) | Control.HasFocus(4013)</expression>
 	<expression name="Notification_Widget_IsVisible">$EXP[Music_Player_IsVisible] | Window.IsVisible(volumebar) | Window.IsVisible(notification) | Window.IsVisible(extendedprogressdialog)</expression>
 	<expression name="Options_Switching">Control.IsVisible(5005)</expression>

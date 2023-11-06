@@ -26,6 +26,7 @@
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Icon)">$INFO[ListItem(-1).Icon]</value>
 	</variable>
 	<variable name="Widget1_Thumbnail(0)Content">
+		<value condition="Skin.String(Widget1_View,Billboard) + Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Window(home).Property(Multiart_Fadeout))">$INFO[Control.GetLabel(3400)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(thumb)) + Skin.HasSetting(Widget1_Content_Custom) + Skin.String(Widget1_Display,Fanart) + [String.IsEqual(Container.ListItemNoWrap(0).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(0).DBType,video)] + Skin.HasSetting(Widget1_Episode_Thumbs)">$INFO[ListItem(0).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(tvshow.square)) + Skin.String(Widget1_Display,Square)">$INFO[ListItem(0).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(square)) + Skin.String(Widget1_Display,Square)">$INFO[ListItem(0).Art(square)]</value>
@@ -128,6 +129,7 @@
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Icon)">$INFO[ListItem(-1).Icon]</value>
 	</variable>
 	<variable name="Widget2_Thumbnail(0)Content">
+		<value condition="Skin.String(Widget1_View,Billboard) + Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Window(home).Property(Multiart_Fadeout))">$INFO[Control.GetLabel(3400)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(thumb)) + Skin.HasSetting(Widget2_Content_Custom) + Skin.String(Widget2_Display,Fanart) + [String.IsEqual(Container.ListItemNoWrap(0).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(0).DBType,video)] + Skin.HasSetting(Widget2_Episode_Thumbs)">$INFO[ListItem(0).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(tvshow.square)) + Skin.String(Widget2_Display,Square)">$INFO[ListItem(0).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(square)) + Skin.String(Widget2_Display,Square)">$INFO[ListItem(0).Art(square)]</value>
@@ -230,6 +232,7 @@
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Icon)">$INFO[ListItem(-1).Icon]</value>
 	</variable>
 	<variable name="Widget3_Thumbnail(0)Content">
+		<value condition="Skin.String(Widget1_View,Billboard) + Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Window(home).Property(Multiart_Fadeout))">$INFO[Control.GetLabel(3400)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(thumb)) + Skin.HasSetting(Widget3_Content_Custom) + Skin.String(Widget3_Display,Fanart) + [String.IsEqual(Container.ListItemNoWrap(0).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(0).DBType,video)] + Skin.HasSetting(Widget3_Episode_Thumbs)">$INFO[ListItem(0).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(tvshow.square)) + Skin.String(Widget3_Display,Square)">$INFO[ListItem(0).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(square)) + Skin.String(Widget3_Display,Square)">$INFO[ListItem(0).Art(square)]</value>
@@ -332,6 +335,7 @@
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Icon)">$INFO[ListItem(-1).Icon]</value>
 	</variable>
 	<variable name="Widget4_Thumbnail(0)Content">
+		<value condition="Skin.String(Widget1_View,Billboard) + Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Window(home).Property(Multiart_Fadeout))">$INFO[Control.GetLabel(3400)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(thumb)) + Skin.HasSetting(Widget4_Content_Custom) + Skin.String(Widget4_Display,Fanart) + [String.IsEqual(Container.ListItemNoWrap(0).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(0).DBType,video)] + Skin.HasSetting(Widget4_Episode_Thumbs)">$INFO[ListItem(0).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(tvshow.square)) + Skin.String(Widget4_Display,Square)">$INFO[ListItem(0).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(square)) + Skin.String(Widget4_Display,Square)">$INFO[ListItem(0).Art(square)]</value>
@@ -434,6 +438,7 @@
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Icon)">$INFO[ListItem(-1).Icon]</value>
 	</variable>
 	<variable name="Widget5_Thumbnail(0)Content">
+		<value condition="Skin.String(Widget1_View,Billboard) + Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Window(home).Property(Multiart_Fadeout))">$INFO[Control.GetLabel(3400)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(thumb)) + Skin.HasSetting(Widget5_Content_Custom) + Skin.String(Widget5_Display,Fanart) + [String.IsEqual(Container.ListItemNoWrap(0).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(0).DBType,video)] + Skin.HasSetting(Widget5_Episode_Thumbs)">$INFO[ListItem(0).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(tvshow.square)) + Skin.String(Widget5_Display,Square)">$INFO[ListItem(0).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(square)) + Skin.String(Widget5_Display,Square)">$INFO[ListItem(0).Art(square)]</value>
@@ -536,6 +541,7 @@
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Icon)">$INFO[ListItem(-1).Icon]</value>
 	</variable>
 	<variable name="Widget6_Thumbnail(0)Content">
+		<value condition="Skin.String(Widget1_View,Billboard) + Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Window(home).Property(Multiart_Fadeout))">$INFO[Control.GetLabel(3400)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(thumb)) + Skin.HasSetting(Widget6_Content_Custom) + Skin.String(Widget6_Display,Fanart) + [String.IsEqual(Container.ListItemNoWrap(0).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(0).DBType,video)] + Skin.HasSetting(Widget6_Episode_Thumbs)">$INFO[ListItem(0).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(tvshow.square)) + Skin.String(Widget6_Display,Square)">$INFO[ListItem(0).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(square)) + Skin.String(Widget6_Display,Square)">$INFO[ListItem(0).Art(square)]</value>
@@ -638,6 +644,7 @@
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Icon)">$INFO[ListItem(-1).Icon]</value>
 	</variable>
 	<variable name="Widget7_Thumbnail(0)Content">
+		<value condition="Skin.String(Widget1_View,Billboard) + Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Window(home).Property(Multiart_Fadeout))">$INFO[Control.GetLabel(3400)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(thumb)) + Skin.HasSetting(Widget7_Content_Custom) + Skin.String(Widget7_Display,Fanart) + [String.IsEqual(Container.ListItemNoWrap(0).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(0).DBType,video)] + Skin.HasSetting(Widget7_Episode_Thumbs)">$INFO[ListItem(0).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(tvshow.square)) + Skin.String(Widget7_Display,Square)">$INFO[ListItem(0).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(square)) + Skin.String(Widget7_Display,Square)">$INFO[ListItem(0).Art(square)]</value>
@@ -740,6 +747,7 @@
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Icon)">$INFO[ListItem(-1).Icon]</value>
 	</variable>
 	<variable name="Widget8_Thumbnail(0)Content">
+		<value condition="Skin.String(Widget1_View,Billboard) + Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Window(home).Property(Multiart_Fadeout))">$INFO[Control.GetLabel(3400)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(thumb)) + Skin.HasSetting(Widget8_Content_Custom) + Skin.String(Widget8_Display,Fanart) + [String.IsEqual(Container.ListItemNoWrap(0).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(0).DBType,video)] + Skin.HasSetting(Widget8_Episode_Thumbs)">$INFO[ListItem(0).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(tvshow.square)) + Skin.String(Widget8_Display,Square)">$INFO[ListItem(0).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(square)) + Skin.String(Widget8_Display,Square)">$INFO[ListItem(0).Art(square)]</value>
@@ -842,6 +850,7 @@
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Icon)">$INFO[ListItem(-1).Icon]</value>
 	</variable>
 	<variable name="Widget9_Thumbnail(0)Content">
+		<value condition="Skin.String(Widget1_View,Billboard) + Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Window(home).Property(Multiart_Fadeout))">$INFO[Control.GetLabel(3400)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(thumb)) + Skin.HasSetting(Widget9_Content_Custom) + Skin.String(Widget9_Display,Fanart) + [String.IsEqual(Container.ListItemNoWrap(0).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(0).DBType,video)] + Skin.HasSetting(Widget9_Episode_Thumbs)">$INFO[ListItem(0).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(tvshow.square)) + Skin.String(Widget9_Display,Square)">$INFO[ListItem(0).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(0).Art(square)) + Skin.String(Widget9_Display,Square)">$INFO[ListItem(0).Art(square)]</value>

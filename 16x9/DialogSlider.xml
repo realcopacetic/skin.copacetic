@@ -13,7 +13,6 @@
 			<param name="panel_edge_bottom" value="900" />
 			<param name="panel_edge_left" value="600" />
 			<param name="panel_edge_right" value="600" />
-			<param name="panel_colordiffuse" value="$VAR[Dark_Grey_Color]" />
 			<control type="label">
 				<centerleft>50%</centerleft>
 				<width>720</width>

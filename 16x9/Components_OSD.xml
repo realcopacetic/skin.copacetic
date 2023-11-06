@@ -31,6 +31,17 @@
 					<texturebg colordiffuse="$VAR[Cachebar_Background_Color]">views/white_100.png</texturebg>
 					<midtexture colordiffuse="$VAR[Seekbar_Background_Color]">views/white_100.png</midtexture>
 				</control>
+				<!-- Seek bar -->
+				<control type="progress">
+					<visible>Player.HasPerformedSeek(2)</visible>
+					<centertop>50%</centertop>
+					<left>$PARAM[progress_bar_padding]</left>
+					<right>$PARAM[progress_bar_padding]</right>
+					<height>6</height>
+					<info>Player.SeekBar</info>
+					<texturebg colordiffuse="$VAR[Blank_Color]">views/white_100.png</texturebg>
+					<midtexture colordiffuse="$VAR[Accent_Color]">views/white_100.png</midtexture>
+				</control>
 				<!-- Ranges -->
 				<include content="Player_Ranges" condition="$PARAM[include_ranges]">
 					<param name="left" value="$PARAM[progress_bar_padding]" />
@@ -247,8 +258,8 @@
 
 	<include name="Player_Status_Icons_Label">
 		<control type="label">
-			<visible>[Player.Rewinding | Player.Forwarding]</visible>
-			<include content="Visible_Fade_Delayed_Animation" />
+			<visible>Player.Rewinding | Player.Forwarding | Player.HasPerformedSeek(2)</visible>
+			<animation effect="fade" start="100" end="0" time="360" delay="540" tween="sine" easing="inout" reversible="false">Hidden</animation>
 			<top>$PARAM[top]</top>
 			<width>auto</width>
 			<align>center</align>
@@ -304,42 +315,46 @@
 				<include content="Visible_Fade_Delayed_Animation" />
 				<animation effect="slide" start="0" end="0,300" time="0" condition="Window.IsVisible(videoosd)">Conditional</animation>
 				<animation effect="slide" start="0" end="0,180" reversible="true" condition="Window.IsVisible(musicosd)">Conditional</animation>
-				<width>120</width>
+				<width>360</width>
 				<height>120</height>
 				<centerleft>50%</centerleft>
 				<centertop>50%</centertop>
-				<!-- Paused -->
 				<control type="group">
-					<visible>Window.IsVisible(visualisation) | VideoPlayer.IsFullscreen</visible>
-					<visible>!Window.IsVisible(videoosd) + !Window.IsVisible(musicosd)</visible>
-					<control type="image">
-						<visible>Player.Paused + ![VideoPlayer.IsFullscreen + Skin.HasSetting(Pause_Screen_Info_Enabled)]</visible>
-						<include content="Visible_Fade_Delayed_Animation" />
-						<texture colordiffuse="$PARAM[color]">osd/icon_Player.Paused_$PARAM[icon_type].png</texture>
-					</control>
-					<!-- Playing -->
+					<width>120</width>
+					<centerleft>50%</centerleft>
+					<!-- Paused -->
 					<control type="group">
-						<visible>$PARAM[playicon]</visible>
-						<visible>Player.Paused</visible>
-						<animation effect="fade" start="100" end="0" time="360" delay="540" tween="sine" easing="inout">Hidden</animation>
+						<visible>Window.IsVisible(visualisation) | VideoPlayer.IsFullscreen</visible>
+						<visible>!Window.IsVisible(videoosd) + !Window.IsVisible(musicosd)</visible>
 						<control type="image">
-							<visible>Player.Playing</visible>
-							<texture colordiffuse="$PARAM[color]">osd/icon_Player.Playing_$PARAM[icon_type].png</texture>
+							<visible>Player.Paused + ![VideoPlayer.IsFullscreen + Skin.HasSetting(Pause_Screen_Info_Enabled)]</visible>
+							<include content="Visible_Fade_Delayed_Animation" />
+							<texture colordiffuse="$PARAM[color]">osd/icon_Player.Paused_$PARAM[icon_type].png</texture>
+						</control>
+						<!-- Playing -->
+						<control type="group">
+							<visible>$PARAM[playicon]</visible>
+							<visible>Player.Paused</visible>
+							<animation effect="fade" start="100" end="0" time="360" delay="540" tween="sine" easing="inout">Hidden</animation>
+							<control type="image">
+								<visible>Player.Playing</visible>
+								<texture colordiffuse="$PARAM[color]">osd/icon_Player.Playing_$PARAM[icon_type].png</texture>
+							</control>
 						</control>
 					</control>
+					<!-- Rewinding / Forwarding -->
+					<include content="Player_Status_Icons_Array">
+						<param name="direction" value="Rewinding" />
+						<param name="icon_type" value="$PARAM[icon_type]" />
+						<param name="flipx" value="true" />
+						<param name="color" value="$PARAM[color]" />
+					</include>
+					<include content="Player_Status_Icons_Array">
+						<param name="direction" value="Forwarding" />
+						<param name="icon_type" value="$PARAM[icon_type]" />
+						<param name="color" value="$PARAM[color]" />
+					</include>
 				</control>
-				<!-- Rewinding / Forwarding -->
-				<include content="Player_Status_Icons_Array">
-					<param name="direction" value="Rewinding" />
-					<param name="icon_type" value="$PARAM[icon_type]" />
-					<param name="flipx" value="true" />
-					<param name="color" value="$PARAM[color]" />
-				</include>
-				<include content="Player_Status_Icons_Array">
-					<param name="direction" value="Forwarding" />
-					<param name="icon_type" value="$PARAM[icon_type]" />
-					<param name="color" value="$PARAM[color]" />
-				</include>
 				<include content="Player_Status_Icons_Label" condition="$PARAM[large_label]">
 					<param name="top" value="90" />
 					<param name="color" value="$PARAM[color]" />

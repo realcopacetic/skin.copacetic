@@ -94,7 +94,8 @@
 			<onright>Action(NextLetter)</onright>
 			<onright>SetFocus(62)</onright>
 			<onup>SetFocus(50)</onup>
-			<ondown>SetFocus(3000,0)</ondown>
+			<ondown condition="!$EXP[Hidden_Options_Menu_Disabled]">SetFocus(3000,0)</ondown>
+			<ondown condition="$EXP[Hidden_Options_Menu_Disabled]">SetFocus(50)</ondown>
 		</control>
 	</include>
 
@@ -108,7 +109,8 @@
 			<ondown>Action(NextLetter)</ondown>
 			<ondown>SetFocus(62)</ondown>
 			<onleft>SetFocus(50)</onleft>
-			<onright>SetFocus(3000,0)</onright>
+			<onright condition="!$EXP[Hidden_Options_Menu_Disabled]">SetFocus(3000,0)</onright>
+			<onright condition="$EXP[Hidden_Options_Menu_Disabled]">SetFocus(50)</onright>
 		</control>
 	</include>
 

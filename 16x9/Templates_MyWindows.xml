@@ -555,10 +555,9 @@
 		<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container(3000).NumItems,1)">Conditional</animation>
 	</include>
 
-	<include name="MyViews_Menu_and_Scrollbars">
-		<param name="target_id" default="50" />
+	<include name="Hidden_Options_Menu">
+		<param name="target_id" />
 		<definition>
-			<include content="Scrollbars" condition="!Window.Is(tvguide)" />
 			<control type="fixedlist" id="3000">
 				<viewtype label="535">list</viewtype>
 				<visible allowhiddenfocus="true">String.IsEqual(Window(home).Property(OptionsMenu),Active) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog)</visible>
@@ -670,6 +669,16 @@
 					<include content="Playlist_Menu_Options" condition="Window.Is(musicplaylist) | Window.Is(videoplaylist)" />
 				</content>
 			</control>
+		</definition>
+	</include>
+
+	<include name="MyViews_Menu_and_Scrollbars">
+		<param name="target_id" default="50" />
+		<definition>
+			<include content="Scrollbars" condition="!Window.Is(tvguide)" />
+			<include content="Hidden_Options_Menu" condition="!$EXP[Hidden_Options_Menu_Disabled]">
+				<param name="target_id" value="$PARAM[target_id]" />
+			</include>
 		</definition>
 	</include>
 </includes>

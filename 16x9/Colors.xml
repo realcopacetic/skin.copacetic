@@ -193,7 +193,10 @@
 		<value condition="Window.Is(addonbrowser) + Window.Is(filebrowser)">$VAR[Alpha_75]$VAR[Dark_Grey_Hex]</value>
 		<value condition="Window.Is(addonbrowser) + !Container.Content(addons)">$VAR[Dark_Grey_Color]</value>
 		<value condition="Window.Is(addonbrowser)">$VAR[Dark_Grey_Color]</value>
-		<value condition="Window.Is(playerprocessinfo)">$VAR[Dark_Grey_Color]</value>
+		<value condition="Integer.IsEqual(Skin.String(Background_Opacity),100)">$VAR[Dark_Grey_Color]</value>
+		<value condition="Integer.IsEqual(Skin.String(Background_Opacity),85)">$VAR[Alpha_85]$VAR[Dark_Grey_Hex]</value>
+		<value condition="Integer.IsEqual(Skin.String(Background_Opacity),66)">$VAR[Alpha_66]$VAR[Dark_Grey_Hex]</value>
+		<value condition="Integer.IsEqual(Skin.String(Background_Opacity),50)">$VAR[Alpha_50]$VAR[Dark_Grey_Hex]</value>
 		<value>$VAR[Alpha_75]$VAR[Dark_Grey_Hex]</value>
 	</variable>
 	<variable name="Transparent_Dialog_Mask">
@@ -397,6 +400,10 @@
 
 	<variable name="skinsettings_Background_Low_Threshold_Button_Textcolor">
 		<value condition="Control.HasFocus(10160) | Control.HasFocus(10161) | Control.HasFocus(10162)">$VAR[Light_Color]</value>
+		<value>$VAR[Unfocused_Color]</value>
+	</variable>
+	<variable name="skinsettings_Background_Opacity_Button_Textcolor">
+		<value condition="Control.HasFocus(10240) | Control.HasFocus(10241)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Background_Slideshow_Button_Textcolor">

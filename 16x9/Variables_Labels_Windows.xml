@@ -166,6 +166,7 @@
 		<!-- General -->
 		<value condition="Control.HasFocus(1002)">$LOCALIZE[31507]</value>
 		<value condition="Control.HasFocus(1003)">$LOCALIZE[31509]</value>
+		<value condition="Control.HasFocus(10240) | Control.HasFocus(10241) | Control.HasFocus(10242)">$LOCALIZE[31587]</value>
 		<value condition="Control.HasFocus(1005)">$LOCALIZE[31512]</value>
 		<value condition="Control.HasFocus(1008)">$LOCALIZE[31517]</value>
 		<value condition="Control.HasFocus(1009)">$LOCALIZE[31518]</value>
@@ -187,6 +188,7 @@
 		<value condition="Control.HasFocus(1111)">$LOCALIZE[31543]</value>
 		<!-- Views -->
 		<value condition="Control.HasFocus(1338)">$LOCALIZE[31575]</value>
+		<value condition="Control.HasFocus(1339)">$LOCALIZE[31586]</value>
 		<value condition="Control.HasFocus(1302) | Control.HasFocus(1303) | Control.HasFocus(1312) | Control.HasFocus(1313) | Control.HasFocus(1314) | Control.HasFocus(1322) | Control.HasFocus(1323) | Control.HasFocus(1324) | Control.HasFocus(1332) | Control.HasFocus(1336) | Control.HasFocus(1337)">$LOCALIZE[31546]</value>
 		<!-- Customisations -->
 		<value condition="Control.HasFocus(1402)">$LOCALIZE[31551]</value>
@@ -213,6 +215,9 @@
 		<!-- Multiart Interval / Off -->
 		<value condition="Skin.String(Background_Interval)">$INFO[Skin.String(Background_Interval)]</value>
 		<value>10</value>
+	</variable>
+	<variable name="skinsettings_Background_Opacity_Label">
+		<value condition="Skin.String(Background_Opacity)">$INFO[Skin.String(Background_Opacity),,%]</value>
 	</variable>
 	<variable name="skinsettings_Background_Slideshow_Label">
 		<value condition="Skin.String(Background_Slideshow,Global) | !Skin.String(Background_Slideshow)">$LOCALIZE[31436]</value>

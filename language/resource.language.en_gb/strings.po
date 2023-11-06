@@ -649,6 +649,18 @@ msgctxt "#31411"
 msgid "Reset accent colour"
 msgstr ""
 
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31487"
+msgid "Background panel opacity"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31587"
+msgid "Adjust the opacity of background panels that appear on top of artwork. Default: 75%"
+msgstr ""
+
 #/16x9/Content_Settings.xml
 msgctxt "#31412"
 msgid "Recommended Kodi settings"
@@ -921,6 +933,7 @@ msgstr ""
 
 
 # Views
+
 #: NEW
 #/16x9/Content_Settings.xml
 msgctxt "#31475"
@@ -931,6 +944,18 @@ msgstr ""
 #/16x9/Content_Settings.xml
 msgctxt "#31575"
 msgid "When kiosk mode is enabled, all view customisation options in the hidden menu will be removed so no further changes can be made."
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31486"
+msgid "Disable hidden options menu"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31586"
+msgid "With koisk mode enabled, you have the option to completely disable the hidden options menu. Warning: This will limit your ability to switch between views, change sort method, filter or search."
 msgstr ""
 
 #/16x9/Content_Settings.xml

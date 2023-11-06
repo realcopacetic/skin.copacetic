@@ -248,6 +248,15 @@
 			<onclick>Skin.SetString(User_Defined_Accent_Color,copacetic_accent_color)</onclick>
 			<onclick>SetFocus(1004)</onclick>
 		</control>
+		<include content="skinsettings_Slider_Button">
+			<param name="info" value="Background_Opacity" />
+			<param name="label" value="$LOCALIZE[31487]" />
+			<param name="label2" value="$VAR[skinsettings_Background_Opacity_Label]" />
+			<param name="category" value="10" />
+			<param name="previous" value="1004" />
+			<param name="id" value="1024" />
+			<param name="next" value="1005" />
+		</include>
 		<control type="button" id="1005">
 			<description>Recommended Kodi settings</description>
 			<visible>ControlGroup(9).HasFocus(10)</visible>
@@ -528,7 +537,14 @@
 			<selected>Skin.HasSetting(Kiosk_Mode)</selected>
 			<include content="skinsettings_Default_Label" />
 		</control>
-
+		<control type="radiobutton" id="1339">
+			<description>Disable hidden options menu</description>
+			<visible>ControlGroup(9).HasFocus(13) + Skin.HasSetting(Kiosk_Mode)</visible>
+			<label>- $LOCALIZE[31486]</label>
+			<onclick>Skin.ToggleSetting(Disable_Hidden_Menu)</onclick>
+			<selected>Skin.HasSetting(Disable_Hidden_Menu)</selected>
+			<include content="skinsettings_Default_Label" />
+		</control>
 		<control type="label" id="1340">
 			<description>List</description>
 			<visible>ControlGroup(9).HasFocus(13)</visible>

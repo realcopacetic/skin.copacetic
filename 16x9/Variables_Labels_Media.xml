@@ -496,6 +496,8 @@
 		<value condition="Player.Rewinding8x">x8</value>
 		<value condition="Player.Rewinding16x">x16</value>
 		<value condition="Player.Rewinding32x">x32</value>
+		<value condition="!String.IsEmpty(Player.SeekOffset)">$INFO[Player.SeekOffset]</value>
+		<value condition="!String.IsEmpty(Player.SeekStepSize)">$INFO[Player.SeekStepSize]</value>
 	</variable>
 
 	<variable name="Plot_Label">
