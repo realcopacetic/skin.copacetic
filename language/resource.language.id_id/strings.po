@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-04-20 13:41+0000\n"
+"PO-Revision-Date: 2023-10-28 15:33+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Indonesian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/id_id/>\n"
 "Language: id_id\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.15.2\n"
+"X-Generator: Weblate 5.1\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -164,7 +164,7 @@ msgstr ""
 # /16x9/Content_Viewtype_Options_List.xml
 msgctxt "#31027"
 msgid "Thumbnails"
-msgstr ""
+msgstr "Thumbnail"
 
 # /16x9/Content_Viewtype_Options_Showcase.xml
 msgctxt "#31028"
@@ -359,7 +359,7 @@ msgstr ""
 # /16x9/Templates_Widgets.xml
 msgctxt "#31211"
 msgid "More"
-msgstr ""
+msgstr "Lebih"
 
 # /16x9/Templates_Widgets.xml
 msgctxt "#31212"
@@ -394,7 +394,7 @@ msgstr ""
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31218"
 msgid "More"
-msgstr ""
+msgstr "Lebih"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31219"
@@ -490,7 +490,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31403"
 msgid "Views"
-msgstr ""
+msgstr "Tampilan"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31503"
@@ -784,7 +784,7 @@ msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31541"
-msgid "Adds a subtle Ken Burns effect pan and zoom to the background artwork slideshow."
+msgid "Adds a subtle 'Ken Burns effect'-style pan and zoom to the fullscreen background artwork."
 msgstr ""
 
 # /16x9/Content_Settings.xml
@@ -940,7 +940,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31482"
 msgid "Small"
-msgstr ""
+msgstr "Kecil"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31483"

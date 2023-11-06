@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-04-20 13:41+0000\n"
+"PO-Revision-Date: 2023-11-03 12:11+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Tamil (India) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/ta_in/>\n"
 "Language: ta_in\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.2\n"
+"X-Generator: Weblate 5.1\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -784,7 +784,7 @@ msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31541"
-msgid "Adds a subtle Ken Burns effect pan and zoom to the background artwork slideshow."
+msgid "Adds a subtle 'Ken Burns effect'-style pan and zoom to the fullscreen background artwork."
 msgstr ""
 
 # /16x9/Content_Settings.xml
@@ -940,7 +940,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31482"
 msgid "Small"
-msgstr ""
+msgstr "சிறிய"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31483"
