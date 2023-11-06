@@ -363,6 +363,7 @@
 		<value condition="String.IsEqual(ListItem.DBType,musicvideo) + !String.IsEmpty(ListItem.Year)">$VAR[Copacetic_Divider]</value>
 		<value condition="Container.Content(addons) + !String.IsEmpty(ListItem.AddonType)">$VAR[Copacetic_Divider]</value>
 		<value condition="Window.IsVisible(programs) + !String.IsEmpty(ListItem.Year)">$VAR[Copacetic_Divider]</value>
+		<value condition="Window.IsVisible(tvsearch) + ListItem.HasEPG + !String.IsEmpty(ListItem.ChannelName)">$VAR[Copacetic_Divider]</value>
 		<value condition="Container.Content(actors) + !String.IsEmpty(ListItem.Appearances)">$VAR[Copacetic_Divider]</value>
 		<value condition="Container.Content(files) + !String.IsEmpty(ListItem.Duration)">$VAR[Copacetic_Divider]</value>
 	</variable>

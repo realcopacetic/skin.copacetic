@@ -99,7 +99,7 @@
 						<top>0</top>
 						<height>60</height>
 						<orientation>horizontal</orientation>
-						<align>left</align>
+						<align>center</align>
 						<itemgap>0</itemgap>
 						<include content="$PARAM[windowname]_Top_Row_Content" />
 					</control>
@@ -107,7 +107,7 @@
 						<bottom>0</bottom>
 						<height>60</height>
 						<orientation>horizontal</orientation>
-						<align>left</align>
+						<align>center</align>
 						<itemgap>0</itemgap>
 						<include content="$PARAM[windowname]_Bottom_Row_Content" />
 					</control>

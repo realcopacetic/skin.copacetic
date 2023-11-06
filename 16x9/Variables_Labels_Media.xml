@@ -65,6 +65,7 @@
 		<value condition="VideoPlayer.IsFullscreen">$VAR[Info_Label_FullscreenVideo]</value>
 		<value condition="$EXP[Infoscreen_IsVisible]">$VAR[Info_Label_Infoscreen_Widgets]</value>
 		<value condition="Window.Is(home)">$VAR[Info_Label_Home_Widgets]</value>
+		<value condition="Window.Is(tvsearch) + ListItem.HasEPG + !String.IsEmpty(ListItem.ChannelName)">[UPPERCASE]$INFO[ListItem.ChannelName][/UPPERCASE]</value>
 		<value condition="Control.HasFocus(3100)">$VAR[Info_Label_Secondary_List]</value>
 		<value condition="ListItem.IsCollection">$VAR[Info_Label_DBType_Sets]</value>
 		<value condition="String.IsEqual(ListItem.DBType,movie)">$VAR[Info_Label_DBType_Movies]</value>

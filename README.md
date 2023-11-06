@@ -89,7 +89,6 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Added missing default value for Skin.String(Widget6_Display) so the label isn't missing from the slider in skin settings when configuring Widget 6
 - Added dummy PVR windows as potential fix for issue where switching to Copacetic is resetting PVR settings in other skins
 
-
 **1.1.5**
 - Removed visualisation.waveform dependency as this addon is not available on Linux
 - Fixed movie infoscreen widget for corresponding set

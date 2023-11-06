@@ -367,6 +367,28 @@
 		</definition>
 	</include>
 
+	<include name="MyViews_PVRSearch">
+		<param name="visible" default="!$EXP[Infoscreen_IsVisible]" />
+		<definition>
+			<control type="group">
+				<include content="WindowOpenClose_Fade_Delayed_Animation" />
+				<visible>$PARAM[visible]</visible>
+				<include content="Visible_Fade_Delayed_Animation" />
+				<include content="Background_Media" condition="$EXP[Library_Has_Content]" />
+				<include content="ListView_Display" />
+			</control>
+			<control type="group">
+				<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
+				<visible>$PARAM[visible]</visible>
+				<include content="Visible_Fade_Delayed_Long_Animation" />
+				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
+				<include content="ListView_Container" />
+				<include content="ListView_Details" />
+			</control>
+		</definition>
+	</include>
+
+
 	<include name="MyViews_tvguide">
 		<param name="visible" default="!$EXP[Infoscreen_IsVisible]" />
 		<definition>
@@ -498,35 +520,13 @@
 						<param name="scrollbaralignleft" value="true" />
 					</include>
 					<!-- Details -->
-					<control type="grouplist">
-						<left>210</left>
-						<right>120</right>
-						<bottom>0</bottom>
-						<height>270</height>
-						<itemgap>0</itemgap>
-						<align>center</align>
-						<usecontrolcoords>true</usecontrolcoords>
-						<control type="label">
-							<height>45</height>
-							<font>MusicPlayer_Title</font>
-							<label>$INFO[ListItem.Label]</label>
-							<textcolor>$VAR[Light_Color]</textcolor>
-							<visible>!String.IsEmpty(ListItem.Label)</visible>
-						</control>
-						<control type="label">
-							<height>35</height>
-							<font>Grid_Info</font>
-							<label>[UPPERCASE]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime,-]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</label>
-							<textcolor>$VAR[Light_Color]</textcolor>
-						</control>
-						<control type="textbox">
-							<top>10</top>
-							<height max="100">auto</height>
-							<font>Description</font>
-							<label>$INFO[ListItem.Plot]</label>
-							<visible>!String.IsEmpty(ListItem.Plot)</visible>
-						</control>
-					</control>
+					<include content="PVR_Info_Box">
+						<param name="left" value="210" />
+						<param name="right" value="120" />
+						<param name="bottom" value="0" />
+						<param name="height" value="270" />
+						<param name="plot_height_max" value="100" />
+					</include>
 					<control type="image">
 						<bottom>105</bottom>
 						<height>60</height>

@@ -227,6 +227,7 @@
 					<param name="color" value="$PARAM[music_rating_color]" />
 					<param name="slide" value="$PARAM[music_rating_slide]" />
 				</include>
+				<include content="PVR_Progress" condition="Window.Is(tvsearch)" />
 				<control type="label">
 					<height>100%</height>
 					<left>$PARAM[label_left]</left>

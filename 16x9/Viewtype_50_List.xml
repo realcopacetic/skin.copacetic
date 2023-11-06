@@ -23,8 +23,9 @@
 					<scrolltime tween="sine" easing="inout">360</scrolltime>
 					<include content="ListView_Layout_videos" condition="Window.Is(videos)" />
 					<include content="ListView_Layout_music" condition="Window.Is(music) | Window.Is(musicplaylist)" />
-					<include content="ListView_Layout_pictures" condition="!Window.Is(videos) + !Window.Is(music) + !Window.Is(videoplaylist) + !Window.Is(musicplaylist)" />
 					<include content="ListView_Layout_videoplaylist" condition="Window.Is(videoplaylist)" />
+					<include content="ListView_Layout_pvrsearch" condition="Window.Is(tvsearch)" />
+					<include content="ListView_Layout_pictures" condition="!Window.Is(videos) + !Window.Is(music) + !Window.Is(videoplaylist) + !Window.Is(musicplaylist) + !Window.Is(tvsearch)" />
 				</control>
 			</control>
 		</include>
@@ -93,7 +94,7 @@
 					<animation effect="slide" end="-600,0" time="0" condition="$EXP[ListView_Display_IsThumbnails]">Conditional</animation>
 				</include>
 				<include content="Common_List_Info_Label" condition="!Window.Is(videoplaylist)">
-					<param name="visible" value="[$EXP[ListView_Display_IsBackground] + $EXP[ListView_Details_Info]]" />
+					<param name="visible" value="[$EXP[ListView_Display_IsBackground] + $EXP[ListView_Details_Info]] | Window.Is(tvsearch)" />
 					<param name="left" value="120" />
 					<param name="width" value="1680" />
 					<param name="hiddenlabelmaxwidth" value="1200" />

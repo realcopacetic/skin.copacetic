@@ -1,16 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- tvsearch / radiosearch -->
-	<defaultcontrol always="true">11</defaultcontrol>
+	<defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>3000</menucontrol>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
 	<views>50</views>
 	<controls>
 		<include content="MyViews_Common_Controls" />
+		<include content="Background_Global" />
+		<include content="Embedded_VideoPlayer">
+			<param name="visible" value="VideoPlayer.Content(livetv)" />
+		</include>
+		<include content="MyViews_PVRSearch" />
+		<include content="MyViews_Menu_and_Scrollbars" />
+
+		<include content="Breadcrumb_Label">
+			<param name="bar" value="true" />
+			<param name="title_label_id" value="29" />
+			<param name="info_label_visible" value="true" />
+			<param name="info_label" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[137]" />
+			<param name="label_color" value="$VAR[Light_Color]" />
+		</include>
+		<include content="Default_Dialog_Panel_Layout">
+			<param name="visible" value="!$EXP[TransparentDialog_IsVisible] + ListItem.HasEPG" />
+			<param name="panel_edge_top" value="120" />
+			<param name="panel_edge_bottom" value="120" />
+			<param name="panel_edge_left" value="1140" />
+			<param name="panel_edge_right" value="60" />
+			<param name="panel_colordiffuse" value="$VAR[Panel_Mask]" />
+			<include content="PVR_Info_Box">
+				<param name="left" value="1200" />
+				<param name="right" value="120" />
+				<param name="bottom" value="120" />
+				<param name="height" value="840" />
+				<param name="plot_height_max" value="750" />
+			</include>
+		</include>
 
 		<control type="grouplist">
-			<control type="button" id="28" />
+			<control type="button" id="28">
+				<onleft>3000</onleft>
+			</control>
 		</control>
-		
+
 	</controls>
 </window>
