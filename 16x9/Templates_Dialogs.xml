@@ -102,6 +102,7 @@
 		<param name="color" default="$VAR[Light_Color]" />
 		<param name="show_logo" default="![String.IsEmpty(VideoPlayer.Art(clearlogo-billboard)) + String.IsEmpty(VideoPlayer.Art(clearlogo-aligned)) + String.IsEmpty(VideoPlayer.Art(clearlogo))]" />
 		<param name="info_label" default="$VAR[Info_Label_FullscreenVideo]" />
+		<param name="info_label_max_height" default="70" />
 		<param name="plot_label" default="$VAR[Plot_Label]" />
 		<param name="align" default="center" />
 		<definition>
@@ -139,7 +140,7 @@
 					<param name="scroll" default="false" />
 				</include>
 				<include content="Common_Details_Info">
-					<param name="maxheight" value="70" />
+					<param name="maxheight" value="$PARAM[info_label_max_height]" />
 					<param name="font" value="Billboard_Info" />
 					<param name="color" value="$PARAM[color]" />
 					<param name="label" value="$PARAM[info_label]" />

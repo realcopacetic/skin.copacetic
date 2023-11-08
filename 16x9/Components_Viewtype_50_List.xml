@@ -58,11 +58,13 @@
 
 	<include name="ListView_Layout_Background">
 		<param name="condition" default="$EXP[ListView_Display_IsBackground]" />
+		<param name="unfocused_maxwidth" default="1080" />
+		<param name="focused_maxwidth" default="1200" />
 		<definition>
 			<itemlayout height="60" width="1920" condition="$PARAM[condition]">
 				<include content="Common_List_Unfocused">
 					<param name="label_left" value="120" />
-					<param name="label_maxwidth" value="1080" />
+					<param name="label_maxwidth" value="$PARAM[unfocused_maxwidth]" />
 					<param name="icon_slide" value="-900" />
 					<param name="music_rating_slide" value="870" />
 					<param name="music_rating_color" value="$VAR[Light_Color]" />
@@ -71,7 +73,7 @@
 			<focusedlayout height="60" width="1920" condition="$PARAM[condition]">
 				<include content="Common_List_Focused">
 					<param name="label_left" value="120" />
-					<param name="label_maxwidth" value="1200" />
+					<param name="label_maxwidth" value="$PARAM[focused_maxwidth]" />
 					<param name="icon_slide" value="-900" />
 					<param name="music_rating_slide" value="870" />
 					<param name="music_rating_color" value="$VAR[Light_Color]" />
@@ -118,9 +120,11 @@
 		</focusedlayout>
 	</include>
 
-	<include name="ListView_Layout_pvrsearch">
+	<include name="ListView_Layout_tvsearch">
 		<include content="ListView_Layout_Background">
 			<param name="condition" value="true" />
+			<param name="focused_maxwidth" value="1200" />
+			<param name="unfocused_maxwidth" value="1200" />
 		</include>
 	</include>
 

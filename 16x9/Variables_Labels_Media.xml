@@ -288,7 +288,6 @@
 	</variable>
 
 	<variable name="Info_Infoscreens_Label">
-		<value condition="Window.Is(pvrguideinfo) | Window.Is(pvrrecordinginfo)">[UPPERCASE]$INFO[ListItem.Date]$VAR[ListItem_Endtime_Divider_Bold, ]$INFO[ListItem.EndTime, $LOCALIZE[31100] ]$VAR[ListItem_Duration_Divider_Bold, ]$INFO[ListItem.Duration(mins), , $LOCALIZE[31114]]$VAR[ListItem_ChannelName_Divider_Bold, ]$INFO[ListItem.ChannelName, ][CR]$INFO[ListItem.Genre][/UPPERCASE]</value>
 		<value condition="Window.Is(addoninformation)">[UPPERCASE]$INFO[ListItem.AddonType]$VAR[ListItem_AddonCreator_Divider_Bold, , ]$INFO[ListItem.AddonCreator]$INFO[ListItem.AddonVersion,[CR]Version ][/UPPERCASE]</value>
 		<!-- Movies
 		2019 / TODD PHILLIPS / 4K DOLBY VISION / ENG / 132 MINS
@@ -356,6 +355,10 @@
 		<value condition="String.IsEqual(ListItem.DBType,video)">[UPPERCASE]$INFO[ListItem.Artist]$VAR[ListItem_Artist_Divider_Bold, ]$INFO[ListItem.Premiered, ]$VAR[ListItem_Premiered_Divider_Bold, ]$INFO[ListItem.Duration(mm:ss), ][/UPPERCASE]</value>
 		<value />
 	</variable>
+
+		<variable name="Info_PVR_Label">
+			<value condition="!String.IsEmpty(ListItem.EpisodeName)">[UPPERCASE]$INFO[ListItem.Title]$VAR[ListItem_ChannelName_Divider_Bold, ]$INFO[ListItem.ChannelName, ][CR]$INFO[ListItem.Date]$VAR[ListItem_Endtime_Divider_Bold, ]$INFO[ListItem.EndTime, $LOCALIZE[31100] ]$VAR[ListItem_Duration_Divider_Bold, ]$INFO[ListItem.Duration(mins), , $LOCALIZE[31114]]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</value>
+		</variable>
 
 	<variable name="MPAA_Description_Label">
 		<value condition="Skin.HasSetting(Preferred_Rating_BBFC)">$VAR[Certification_BBFC_Description_Label]</value>
@@ -736,6 +739,7 @@
 	<variable name="Title_Label">
 		<value condition="VideoPlayer.IsFullscreen + String.IsEmpty(VideoPlayer.DBID) + String.Contains(VideoPlayer.Title,.) + !String.IsEmpty(Window(home).Property(Return_Label))">$INFO[Window(home).Property(Return_Label)]</value>
 		<value condition="VideoPlayer.IsFullscreen + !String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.Title]</value>
+		<value condition="[Window.Is(pvrguideinfo) | Window.Is(tvsearch)] + !String.IsEmpty(ListItem.EpisodeName)">$INFO[ListItem.EpisodeName]</value>
 		<value condition="Window.Is(addoninformation) + !String.IsEmpty(ListItem.AddonName)">$INFO[ListItem.AddonName]</value>
 		<value condition="$EXP[Infoscreen_Widget_HasFocus]">$VAR[Title_Label_Infoscreen_Widgets]</value>
 		<value condition="Window.Is(home) + String.IsEqual(ListItem.DBType,episode) + $EXP[GridView_Widget_IsVisible] + !String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle]</value>
@@ -812,6 +816,7 @@
 	</variable>
 
 	<variable name="Title_Unfocused_Label">
+		<value condition="[Window.Is(pvrguideinfo) | Window.Is(tvsearch)] + !String.IsEmpty(ListItem.EpisodeName)">$INFO[ListItem.EpisodeName]</value>
 		<value condition="String.IsEqual(ListItem.DBType,episode)">$INFO[ListItem.Title]</value>
 		<value condition="String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(ListItem.Album)">$INFO[ListItem.Album]</value>
 		<value condition="String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>

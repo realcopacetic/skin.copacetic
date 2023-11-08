@@ -29,7 +29,7 @@
 				<control type="label">
 					<height>35</height>
 					<font>Grid_Info</font>
-					<label>[UPPERCASE]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime,-]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</label>
+					<label>[UPPERCASE]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime,-]$VAR[ListItem_EpisodeName_Divider_Bold, ]$INFO[ListItem.EpisodeName, ]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</label>
 					<textcolor>$VAR[Light_Color]</textcolor>
 				</control>
 				<control type="textbox">

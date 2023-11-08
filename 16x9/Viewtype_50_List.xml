@@ -24,7 +24,7 @@
 					<include content="ListView_Layout_videos" condition="Window.Is(videos)" />
 					<include content="ListView_Layout_music" condition="Window.Is(music) | Window.Is(musicplaylist)" />
 					<include content="ListView_Layout_videoplaylist" condition="Window.Is(videoplaylist)" />
-					<include content="ListView_Layout_pvrsearch" condition="Window.Is(tvsearch)" />
+					<include content="ListView_Layout_tvsearch" condition="Window.Is(tvsearch)" />
 					<include content="ListView_Layout_pictures" condition="!Window.Is(videos) + !Window.Is(music) + !Window.Is(videoplaylist) + !Window.Is(musicplaylist) + !Window.Is(tvsearch)" />
 				</control>
 			</control>
