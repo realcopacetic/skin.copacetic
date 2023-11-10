@@ -16,6 +16,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.1.17**
+- Added fade effect to infoscreen thumbnail when shutdownmenu visible on top
+
 **1.1.16**
 - Bug fix: removed unmatched parenthesis causing log errors
 - Updated MGM, MGM+ and HBO Max flags 
