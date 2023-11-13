@@ -25,6 +25,7 @@
 	</include>
 
 	<include name="skinsettings_Background_Slideshow_Button_Conditions">
+		<onleft condition="Skin.String(Background_Slideshow,Custom)">Skin.SetString(Background_Slideshow,Artists)</onleft>
 		<onleft condition="Skin.String(Background_Slideshow,Artists)">Skin.SetString(Background_Slideshow,TVShows)</onleft>
 		<onleft condition="Skin.String(Background_Slideshow,TVShows)">Skin.SetString(Background_Slideshow,Movies)</onleft>
 		<onleft condition="Skin.String(Background_Slideshow,Movies)">Skin.SetString(Background_Slideshow,Videos)</onleft>
@@ -33,18 +34,21 @@
 		<onright condition="Skin.String(Background_Slideshow,Videos)">Skin.SetString(Background_Slideshow,Movies)</onright>
 		<onright condition="Skin.String(Background_Slideshow,Movies)">Skin.SetString(Background_Slideshow,TVShows)</onright>
 		<onright condition="Skin.String(Background_Slideshow,TVShows)">Skin.SetString(Background_Slideshow,Artists)</onright>
+		<onright condition="Skin.String(Background_Slideshow,Artists)">Skin.SetString(Background_Slideshow,Custom)</onright>
 	</include>
 	<include name="skinsettings_Background_Slideshow_Unfocused_Slides">
-		<animation effect="slide" end="30" time="0" condition="Skin.String(Background_Slideshow,Videos)">Conditional</animation>
-		<animation effect="slide" end="60" time="0" condition="Skin.String(Background_Slideshow,Movies)">Conditional</animation>
-		<animation effect="slide" end="90" time="0" condition="Skin.String(Background_Slideshow,TVShows)">Conditional</animation>
-		<animation effect="slide" end="120" time="0" condition="Skin.String(Background_Slideshow,Artists)">Conditional</animation>
+		<animation effect="slide" end="24" time="0" condition="Skin.String(Background_Slideshow,Videos)">Conditional</animation>
+		<animation effect="slide" end="48" time="0" condition="Skin.String(Background_Slideshow,Movies)">Conditional</animation>
+		<animation effect="slide" end="72" time="0" condition="Skin.String(Background_Slideshow,TVShows)">Conditional</animation>
+		<animation effect="slide" end="96" time="0" condition="Skin.String(Background_Slideshow,Artists)">Conditional</animation>
+		<animation effect="slide" end="120" time="0" condition="Skin.String(Background_Slideshow,Custom)">Conditional</animation>
 	</include>
 	<include name="skinsettings_Background_Slideshow_Focused_Slides">
-		<animation effect="slide" end="28" time="0" condition="Skin.String(Background_Slideshow,Videos)">Conditional</animation>
-		<animation effect="slide" end="55" time="0" condition="Skin.String(Background_Slideshow,Movies)">Conditional</animation>
-		<animation effect="slide" end="83" time="0" condition="Skin.String(Background_Slideshow,TVShows)">Conditional</animation>
-		<animation effect="slide" end="110" time="0" condition="Skin.String(Background_Slideshow,Artists)">Conditional</animation>
+		<animation effect="slide" end="22" time="0" condition="Skin.String(Background_Slideshow,Videos)">Conditional</animation>
+		<animation effect="slide" end="44" time="0" condition="Skin.String(Background_Slideshow,Movies)">Conditional</animation>
+		<animation effect="slide" end="66" time="0" condition="Skin.String(Background_Slideshow,TVShows)">Conditional</animation>
+		<animation effect="slide" end="88" time="0" condition="Skin.String(Background_Slideshow,Artists)">Conditional</animation>
+		<animation effect="slide" end="110" time="0" condition="Skin.String(Background_Slideshow,Custom)">Conditional</animation>
 	</include>
 
 	<include name="skinsettings_Background_Interval_Button_Conditions">
@@ -87,33 +91,6 @@
 	<include name="skinsettings_Home_Background_Brightness_Focused_Slides">
 		<animation effect="slide" end="55" time="0" condition="Integer.IsLess(Skin.String(Home_Background_Brightness),33) | !Skin.String(Home_Background_Brightness)">Conditional</animation>
 		<animation effect="slide" end="55" time="0" condition="Integer.IsLess(Skin.String(Home_Background_Brightness),50)">Conditional</animation>
-	</include>
-
-	<include name="skinsettings_Home_Background_Override_Source_Button_Conditions">
-		<onleft condition="Skin.String(Home_Background_Override_Source,Custom)">Skin.SetString(Home_Background_Override_Source,Artists)</onleft>
-		<onleft condition="Skin.String(Home_Background_Override_Source,Artists)">Skin.SetString(Home_Background_Override_Source,TVShows)</onleft>
-		<onleft condition="Skin.String(Home_Background_Override_Source,TVShows)">Skin.SetString(Home_Background_Override_Source,Movies)</onleft>
-		<onleft condition="Skin.String(Home_Background_Override_Source,Movies)">Skin.SetString(Home_Background_Override_Source,Videos)</onleft>
-		<onleft condition="Skin.String(Home_Background_Override_Source,Videos)">Skin.SetString(Home_Background_Override_Source,Global)</onleft>
-		<onright condition="Skin.String(Home_Background_Override_Source,Global) | !Skin.String(Home_Background_Override_Source)">Skin.SetString(Home_Background_Override_Source,Videos)</onright>
-		<onright condition="Skin.String(Home_Background_Override_Source,Videos)">Skin.SetString(Home_Background_Override_Source,Movies)</onright>
-		<onright condition="Skin.String(Home_Background_Override_Source,Movies)">Skin.SetString(Home_Background_Override_Source,TVShows)</onright>
-		<onright condition="Skin.String(Home_Background_Override_Source,TVShows)">Skin.SetString(Home_Background_Override_Source,Artists)</onright>
-		<onright condition="Skin.String(Home_Background_Override_Source,Artists)">Skin.SetString(Home_Background_Override_Source,Custom)</onright>
-	</include>
-	<include name="skinsettings_Home_Background_Override_Source_Unfocused_Slides">
-		<animation effect="slide" end="24" time="0" condition="Skin.String(Home_Background_Override_Source,Videos)">Conditional</animation>
-		<animation effect="slide" end="48" time="0" condition="Skin.String(Home_Background_Override_Source,Movies)">Conditional</animation>
-		<animation effect="slide" end="72" time="0" condition="Skin.String(Home_Background_Override_Source,TVShows)">Conditional</animation>
-		<animation effect="slide" end="96" time="0" condition="Skin.String(Home_Background_Override_Source,Artists)">Conditional</animation>
-		<animation effect="slide" end="120" time="0" condition="Skin.String(Home_Background_Override_Source,Custom)">Conditional</animation>
-	</include>
-	<include name="skinsettings_Home_Background_Override_Source_Focused_Slides">
-		<animation effect="slide" end="22" time="0" condition="Skin.String(Home_Background_Override_Source,Videos)">Conditional</animation>
-		<animation effect="slide" end="44" time="0" condition="Skin.String(Home_Background_Override_Source,Movies)">Conditional</animation>
-		<animation effect="slide" end="66" time="0" condition="Skin.String(Home_Background_Override_Source,TVShows)">Conditional</animation>
-		<animation effect="slide" end="88" time="0" condition="Skin.String(Home_Background_Override_Source,Artists)">Conditional</animation>
-		<animation effect="slide" end="110" time="0" condition="Skin.String(Home_Background_Override_Source,Custom)">Conditional</animation>
 	</include>
 
 	<include name="skinsettings_Multiart_Interval_Button_Conditions">

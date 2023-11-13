@@ -207,8 +207,8 @@
 		<value condition="Control.HasFocus(1533)">$LOCALIZE[31567]</value>
 		<value condition="Control.HasFocus(1534) | Control.HasFocus(1535)">$LOCALIZE[31568]</value>
 		<!-- Experiments -->
-		<value condition="Control.HasFocus(1600)">$LOCALIZE[31570]</value>
-		<value condition="Control.HasFocus(1601)">$LOCALIZE[31571]</value>
+		<value condition="Control.HasFocus(1700)">$LOCALIZE[31570]</value>
+		<value condition="Control.HasFocus(1701)">$LOCALIZE[31571]</value>
 	</variable>
 
 	<variable name="skinsettings_Background_Interval_Label">
@@ -217,7 +217,7 @@
 		<value>10</value>
 	</variable>
 	<variable name="skinsettings_Background_Opacity_Label">
-		<value condition="Skin.String(Background_Opacity)">$INFO[Skin.String(Background_Opacity),,%]</value>
+		<value condition="Skin.String(Background_Opacity)">$INFO[Skin.String(Background_Opacity)]</value>
 	</variable>
 	<variable name="skinsettings_Background_Slideshow_Label">
 		<value condition="Skin.String(Background_Slideshow,Global) | !Skin.String(Background_Slideshow)">$LOCALIZE[31436]</value>
@@ -225,18 +225,11 @@
 		<value condition="Skin.String(Background_Slideshow,TVShows)">$LOCALIZE[20343]</value>
 		<value condition="Skin.String(Background_Slideshow,Videos)">$LOCALIZE[31437]</value>
 		<value condition="Skin.String(Background_Slideshow,Artists)">$LOCALIZE[133]</value>
+		<value condition="Skin.String(Background_Slideshow,Custom)">$LOCALIZE[31438]</value>
 	</variable>
-	<variable name="skinsettings_Home_Background_Override_Source_Label">
-		<value condition="Skin.String(Home_Background_Override_Source,Global) | !Skin.String(Home_Background_Override_Source)">$LOCALIZE[31436]</value>
-		<value condition="Skin.String(Home_Background_Override_Source,Movies)">$LOCALIZE[342]</value>
-		<value condition="Skin.String(Home_Background_Override_Source,TVShows)">$LOCALIZE[20343]</value>
-		<value condition="Skin.String(Home_Background_Override_Source,Videos)">$LOCALIZE[31437]</value>
-		<value condition="Skin.String(Home_Background_Override_Source,Artists)">$LOCALIZE[133]</value>
-		<value condition="Skin.String(Home_Background_Override_Source,Custom)">$LOCALIZE[31438]</value>
-	</variable>
-	<variable name="skinsettings_Home_Background_Override_Path_Label">
+	<variable name="skinsettings_Background_Slideshow_Custom_Path_Label">
 		<!-- Choose new path... / [shows path] -->
-		<value condition="Skin.String(Home_Background_Override_Path)">$INFO[Skin.String(Home_Background_Override_Path)]</value>
+		<value condition="Skin.String(Background_Slideshow_Custom_Path)">$INFO[Skin.String(Background_Slideshow_Custom_Path)]</value>
 		<value>$LOCALIZE[31439]</value>
 	</variable>
 	<variable name="skinsettings_Multiart_Interval_Label">

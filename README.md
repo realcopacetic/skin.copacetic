@@ -21,6 +21,11 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - removal of ken burns effect - remove param animation 
 - background not updating on some addonbrowser screens
 container animation between addonbrowser levels? (All repositories or add on repository (type))
+- clean up home background
+- login background
+- other window templates like addonbrowser?
+- Update readmes
+- Crop screensaver logo
 
 - Fixed bug causing dialogaddoninformation to lose focus on opening for some addons
 - Added fade effect to infoscreen thumbnail when shutdownmenu visible on top

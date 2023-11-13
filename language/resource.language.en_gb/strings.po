@@ -652,7 +652,7 @@ msgstr ""
 #: NEW
 #/16x9/Content_Settings.xml
 msgctxt "#31487"
-msgid "Background panel opacity"
+msgid "Background panel opacity (%)"
 msgstr ""
 
 #: NEW
@@ -663,7 +663,7 @@ msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31412"
-msgid "Recommended Kodi settings"
+msgid "Recommended Kodi settings for Copacetic"
 msgstr ""
 
 #/16x9/Content_Settings.xml
@@ -758,7 +758,7 @@ msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31425"
-msgid "Enable background slideshows"
+msgid "Global"
 msgstr ""
 
 #/16x9/Content_Settings.xml
@@ -835,17 +835,17 @@ msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31433"
-msgid "Override home menu backgrounds"
+msgid "Override home background with global slideshow"
 msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31533"
-msgid "Set a global override for all default home menu shortcut slideshows or any backgrounds you configured for individual shortcuts in 'Home menu' settings under General > Menus. Choose from the preselected or custom global overrides below."
+msgid "EMPTY"
 msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31534"
-msgid "Make sure to enable background slideshows in General > Background Service for more slideshow options to choose from, or select your own custom path/playlist below."
+msgid "EMPTY"
 msgstr ""
 
 #/16x9/Content_Settings.xml

@@ -80,39 +80,6 @@
 		</definition>
 	</include>
 
-	<include name="Background_List">
-		<param name="time" default="10000" />
-		<definition>
-			<control type="list" id="3300">
-				<include content="Hidden_Control" />
-				<include content="Background_$PARAM[content_source]_Content" />
-				<autoscroll time="$PARAM[time]">true</autoscroll>
-				<itemlayout />
-				<focusedlayout />
-			</control>
-		</definition>
-	</include>
-
-	<include name="Background_List_Home">
-		<include content="Background_List">
-			<param name="content_source" value="Home" />
-			<param name="time" value="$PARAM[time]" />
-		</include>
-	</include>
-
-	<!-- <include name="Background_Backing">
-		<param name="visible" default="Skin.String(Theme,Light)" />
-		<param name="animation_delay" default="1800" />
-		<param name="color_diffuse" default="$VAR[Dark_Color]" />
-		<definition>
-			<control type="image">
-				<visible>$PARAM[visible]</visible>
-				<animation effect="fade" start="0" end="100" time="360" delay="$PARAM[animation_delay]" tween="sine" easing="inout" reversible="true">Visible</animation>
-				<texture colordiffuse="$PARAM[color_diffuse]">views/white_100.png</texture>
-			</control>
-		</definition>
-	</include> -->
-
 	<include name="Background_Multiart">
 		<param name="time" default="10000" />
 		<param name="fadein_animation_condition" default="true" />
@@ -134,60 +101,6 @@
 				<param name="transition_time" value="$PARAM[time]" />
 			</include>
 		</definition>
-	</include>
-
-	<include name="Background_Multiart_Home">
-		<include content="Background_Multiart">
-			<param name="fadein_animation_condition" value="![Window.Previous(addonbrowser) + !String.IsEqual(Window(home).Property(Container_Addons_NonRepo),true)] + !$EXP[Settings_Previous]" />
-			<param name="fadeout_animation_condition" value="!Window.Next(addonbrowser) + !$EXP[Settings_Next]" />
-			<param name="colordiffuse" value="$VAR[Home_Artwork_Diffuse]" />
-			<param name="texture_path" value="$VAR[Background_Home_Texture]" />
-			<param name="fadetime" value="360" />
-			<param name="time" value="$PARAM[time]" />
-		</include>
-	</include>
-
-	<include name="Background_Home">
-		<include content="Background_List_Home" condition="Skin.String(Background_Interval,5)">
-			<param name="time" value="5000" />
-		</include>
-		<include content="Background_List_Home" condition="Skin.String(Background_Interval,10) | !Skin.String(Background_Interval)">
-			<param name="time" value="10000" />
-		</include>
-		<include content="Background_List_Home" condition="Skin.String(Background_Interval,15)">
-			<param name="time" value="15000" />
-		</include>
-		<include content="Background_List_Home" condition="Skin.String(Background_Interval,20)">
-			<param name="time" value="20000" />
-		</include>
-		<include content="Background_List_Home" condition="Skin.String(Background_Interval,25)">
-			<param name="time" value="25000" />
-		</include>
-		<include content="Background_List_Home" condition="Skin.String(Background_Interval,30)">
-			<param name="time" value="30000" />
-		</include>
-		<control type="image">
-			<animation effect="fade" start="0" end="100" time="360" delay="1800" tween="sine" easing="inout" reversible="true">Visible</animation>
-			<texture colordiffuse="$VAR[Dark_Color]">views/white_100.png</texture>
-		</control>
-		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,5)">
-			<param name="time" value="5000" />
-		</include>
-		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,10) | !Skin.String(Background_Interval)">
-			<param name="time" value="10000" />
-		</include>
-		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,15)">
-			<param name="time" value="15000" />
-		</include>
-		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,20)">
-			<param name="time" value="20000" />
-		</include>
-		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,25)">
-			<param name="time" value="25000" />
-		</include>
-		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,30)">
-			<param name="time" value="30000" />
-		</include>
 	</include>
 
 	<include name="Background_Global">
@@ -220,6 +133,79 @@
 			</control>
 		</definition>
 	</include>
+
+
+
+
+	<include name="Background_List">
+		<param name="content_source" default="Home" />
+		<param name="time" default="10000" />
+		<definition>
+			<control type="list" id="3300">
+				<include content="Hidden_Control" />
+				<include content="Background_$PARAM[content_source]_Content" />
+				<autoscroll time="$PARAM[time]">true</autoscroll>
+				<itemlayout />
+				<focusedlayout />
+			</control>
+		</definition>
+	</include>
+
+	<include name="Background_Multiart_Home">
+		<include content="Background_Multiart">
+			<param name="fadein_animation_condition" value="![Window.Previous(addonbrowser) + !String.IsEqual(Window(home).Property(Container_Addons_NonRepo),true)] + !$EXP[Settings_Previous]" />
+			<param name="fadeout_animation_condition" value="!Window.Next(addonbrowser) + !$EXP[Settings_Next]" />
+			<param name="colordiffuse" value="$VAR[Home_Artwork_Diffuse]" />
+			<param name="texture_path" value="$VAR[Background_Home_Texture]" />
+			<param name="fadetime" value="360" />
+			<param name="time" value="$PARAM[time]" />
+		</include>
+	</include>
+
+	<include name="Background_Home">
+		<include content="Background_List" condition="Skin.String(Background_Interval,5)">
+			<param name="time" value="5000" />
+		</include>
+		<include content="Background_List" condition="Skin.String(Background_Interval,10) | !Skin.String(Background_Interval)">
+			<param name="time" value="10000" />
+		</include>
+		<include content="Background_List" condition="Skin.String(Background_Interval,15)">
+			<param name="time" value="15000" />
+		</include>
+		<include content="Background_List" condition="Skin.String(Background_Interval,20)">
+			<param name="time" value="20000" />
+		</include>
+		<include content="Background_List" condition="Skin.String(Background_Interval,25)">
+			<param name="time" value="25000" />
+		</include>
+		<include content="Background_List" condition="Skin.String(Background_Interval,30)">
+			<param name="time" value="30000" />
+		</include>
+		<control type="image">
+			<animation effect="fade" start="0" end="100" time="360" delay="1800" tween="sine" easing="inout" reversible="true">Visible</animation>
+			<texture colordiffuse="$VAR[Dark_Color]">views/white_100.png</texture>
+		</control>
+		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,5)">
+			<param name="time" value="5000" />
+		</include>
+		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,10) | !Skin.String(Background_Interval)">
+			<param name="time" value="10000" />
+		</include>
+		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,15)">
+			<param name="time" value="15000" />
+		</include>
+		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,20)">
+			<param name="time" value="20000" />
+		</include>
+		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,25)">
+			<param name="time" value="25000" />
+		</include>
+		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,30)">
+			<param name="time" value="30000" />
+		</include>
+	</include>
+
+
 
 	<include name="Background_Media">
 		<param name="visible" default="[$EXP[Containers_Background] | Container.Content()] + !$EXP[ListView_Display_IsThumbnails] + !$EXP[GridView_IsVisible]" />

@@ -398,16 +398,17 @@
 		<value>$VAR[Disabled_Color]</value>
 	</variable>
 
+	<variable name="skinsettings_Background_Slideshow_Button_Textcolor">
+		<value condition="Control.HasFocus(16010) | Control.HasFocus(16011)">$VAR[Light_Color]</value>
+		<value>$VAR[Unfocused_Color]</value>
+	</variable>
+
 	<variable name="skinsettings_Background_Low_Threshold_Button_Textcolor">
 		<value condition="Control.HasFocus(10160) | Control.HasFocus(10161) | Control.HasFocus(10162)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Background_Opacity_Button_Textcolor">
 		<value condition="Control.HasFocus(10240) | Control.HasFocus(10241)">$VAR[Light_Color]</value>
-		<value>$VAR[Unfocused_Color]</value>
-	</variable>
-	<variable name="skinsettings_Background_Slideshow_Button_Textcolor">
-		<value condition="Control.HasFocus(10180) | Control.HasFocus(10181)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Background_Interval_Button_Textcolor">
