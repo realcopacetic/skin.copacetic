@@ -14,7 +14,6 @@
 		</include>
 		<include content="Infoscreen_Header_Template">
 			<param name="windowname" value="movieinformation" />
-			<param name="visible" value="!Window.IsVisible(1104) + !$EXP[Infoscreen_Widget_HasFocus]" />
 			<include content="Infoscreen_Header">
 				<param name="visible" value="ControlGroup(3000).HasFocus(8) | ControlGroup(3000).HasFocus(6)" />
 				<param name="left" value="120" />

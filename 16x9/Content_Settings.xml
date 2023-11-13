@@ -545,6 +545,14 @@
 			<selected>Skin.HasSetting(Disable_Hidden_Menu)</selected>
 			<include content="skinsettings_Default_Label" />
 		</control>
+		<control type="radiobutton" id="1340">
+			<description>Add shutdown menu shortcut to hidden menu</description>
+			<visible>ControlGroup(9).HasFocus(13)</visible>
+			<label>$LOCALIZE[31488]</label>
+			<onclick>Skin.ToggleSetting(shutdownmenu_Shortcut)</onclick>
+			<selected>Skin.HasSetting(shutdownmenu_Shortcut)</selected>
+			<include content="skinsettings_Default_Label" />
+		</control> 
 		<control type="label" id="1340">
 			<description>List</description>
 			<visible>ControlGroup(9).HasFocus(13)</visible>

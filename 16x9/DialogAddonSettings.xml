@@ -2,7 +2,6 @@
 <window>
 	<!-- addonsettings -->
 	<defaultcontrol always="true">3</defaultcontrol>
-	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
 	<controls>
 		<include content="Default_Settings_Controls">
 			<param name="include_togglebutton" value="true" />

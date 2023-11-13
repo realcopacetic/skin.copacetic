@@ -152,7 +152,7 @@
 					<param name="title_label" value="$PARAM[widget_header]" />
 					<param name="info_label_visible" value="true" />
 					<param name="info_label" value="$VAR[Copacetic_Divider_Bold,, ]$INFO[Container(320$PARAM[widget_position]).CurrentItem]$INFO[Container(320$PARAM[widget_position]).NumItems,/]" />
-					<param name="label_color" value="$VAR[Breadcrumb_Label_Color]" />
+					<param name="textcolor" value="$VAR[Breadcrumb_Label_Color]" />
 				</include>
 				<nested />
 				<!-- Busy spinner -->
@@ -498,7 +498,7 @@
 				<param name="title_label" value="$PARAM[widget_header]" />
 				<param name="info_label_visible" value="true" />
 				<param name="info_label" value="$PARAM[widget_info]" />
-				<param name="label_color" value="$VAR[Breadcrumb_Label_Color]" />
+				<param name="textcolor" value="$VAR[Breadcrumb_Label_Color]" />
 			</include>
 			<!-- Details -->
 			<include content="$PARAM[widget_view]View_Details">

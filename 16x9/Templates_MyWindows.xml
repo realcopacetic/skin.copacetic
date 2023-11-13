@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-	<include name="AddonBrowser_Controls">
+	<include name="addonbrowser_Controls">
 		<control type="radiobutton" id="5">
 			<description>Enable auto update</description>
 			<visible allowhiddenfocus="true">false</visible>
@@ -43,7 +43,7 @@
 		</control>
 	</include>
 
-	<include name="MyPics_Controls">
+	<include name="pictures_Controls">
 		<control type="button" id="6">
 			<description>Start a picture slideshow</description>
 			<visible allowhiddenfocus="true">false</visible>
@@ -191,22 +191,27 @@
 		</include>
 		<include content="Music_Player_Controls" condition="Skin.HasSetting(Music_Player_Enabled)" />
 		<include content="Trailer_Autoplay_Mask" condition="Skin.HasSetting(Trailer_Autoplay) + Window.Is(videos)" />
-		<include content="Light_Theme_Background">
-			<param name="visible" value="$EXP[Background_IsLight] + !Window.IsVisible(1150)" />
-			<include content="Trailer_Autoplay_Fade_Delayed_Animation" condition="Skin.HasSetting(Trailer_Autoplay) + Window.Is(videos)" />
-		</include>
 	</include>
 
-	<include name="MyViews_Addons">
+	<include name="addonbrowser_Views">
 		<param name="visible" default="!$EXP[Infoscreen_IsVisible] + !Window.IsVisible(addonsettings)" />
 		<definition>
+			<!-- Background -->
+			<include content="Light_Theme_Background">
+				<param name="visible" value="[$EXP[Container_Addons_Repo] + $EXP[Infoscreen_IsVisible]] | [$EXP[Container_Addons_NonRepo] + !$EXP[ShowcaseView_Display_IsBackground]]" />
+			</include>
+			<include content="Background_Global" condition="$EXP[Library_Has_Content]">
+				<param name="visible" value="$PARAM[visible] + !$EXP[Container_Addons_NonRepo]" />
+				<param name="fadein_animation_condition" value="!Window.Previous(home) + !$EXP[Settings_Previous]" />
+				<param name="fadeout_animation_condition" value="!Window.Next(home) + !$EXP[Settings_Next]" />
+				<param name="local_list_content" value="true" />
+				<param name="content_source" value="Media" />
+			</include>
+			<!-- Layer 1 -->
 			<control type="group">
 				<include content="WindowOpenClose_Fade_Delayed_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
-				<include content="Background_Media" condition="$EXP[Library_Has_Content]">
-					<param name="visible" value="!Container.Content(addons)" />
-				</include>
 				<include content="ListView_Display">
 					<param name="art_icon" value="addonbrowser" />
 				</include>
@@ -223,6 +228,7 @@
 					<param name="art_icon" value="addonbrowser" />
 				</include>
 			</control>
+			<!-- Layer 2 -->
 			<control type="group">
 				<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
 				<visible>$PARAM[visible]</visible>
@@ -239,6 +245,10 @@
 	<include name="MyViews_Main">
 		<param name="visible" default="!$EXP[Infoscreen_IsVisible]" />
 		<definition>
+			<include content="Light_Theme_Background">
+				<param name="visible" value="$EXP[Background_IsLight] + !Window.IsVisible(1150)" />
+				<include content="Trailer_Autoplay_Fade_Delayed_Animation" condition="Skin.HasSetting(Trailer_Autoplay) + Window.Is(videos)" />
+			</include>
 			<control type="group">
 				<include content="WindowOpenClose_Fade_Delayed_Animation" />
 				<visible>$PARAM[visible]</visible>
@@ -272,16 +282,23 @@
 		</definition>
 	</include>
 
-	<include name="MyViews_Pictures">
+	<include name="pictures_Views">
 		<param name="visible" default="!$EXP[Infoscreen_IsVisible] + !Window.IsVisible(slideshow)" />
 		<definition>
+			<!-- Background -->
+			<include content="Light_Theme_Background">
+				<param name="visible" value="!Container.Content(images) + !$EXP[ShowcaseView_Display_IsBackground]" />
+			</include>
+			<include content="Background_Global">
+				<param name="visible" value="$PARAM[visible] + !Container.Content(images) + !Container.Content(addons)" />
+				<param name="local_list_content" value="true" />
+				<param name="content_source" value="Media" />
+			</include>
+			<!-- Layer 1 -->
 			<control type="group">
 				<include content="WindowOpenClose_Fade_Delayed_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
-				<include content="Background_Global">
-					<param name="visible" value="!Container.Content(images) + !Container.Content(addons)" />
-				</include>
 				<include content="ListView_Display">
 					<param name="art_icon" value="pictures" />
 				</include>
@@ -298,6 +315,7 @@
 					<param name="art_icon" value="pictures" />
 				</include>
 			</control>
+			<!-- Layer 2 -->
 			<control type="group">
 				<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
 				<visible>$PARAM[visible]</visible>
@@ -386,7 +404,7 @@
 						<param name="animation" value="Visible_Fade_Delayed_Animation" />
 						<param name="bar" value="false" />
 						<param name="title_label" value="$VAR[tvguide_Group_Label]" />
-						<param name="label_color" value="$VAR[Light_Color]" />
+						<param name="textcolor" value="$VAR[Light_Color]" />
 					</include>
 					<control type="list" id="11">
 						<visible allowhiddenfocus="true">false</visible>
@@ -542,7 +560,7 @@
 					<param name="title_label_id" value="29" />
 					<param name="info_label_visible" value="true" />
 					<param name="info_label" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[137]$INFO[Control.GetLabel(30), ]" />
-					<param name="label_color" value="$VAR[Light_Color]" />
+					<param name="textcolor" value="$VAR[Light_Color]" />
 				</include>
 				<include content="Default_Dialog_Panel_Layout">
 					<param name="visible" value="!$EXP[TransparentDialog_IsVisible] + ListItem.HasEPG" />
@@ -689,6 +707,7 @@
 					<include content="AddonBrowser_Menu_Options" condition="Window.Is(addonbrowser)" />
 					<include content="Pictures_Menu_Options" condition="Window.Is(pictures)" />
 					<include content="Playlist_Menu_Options" condition="Window.Is(musicplaylist) | Window.Is(videoplaylist)" />
+					<include content="shutdownmenu_Shortcut" condition="Skin.HasSetting(shutdownmenu_Shortcut)" />
 				</content>
 			</control>
 		</definition>

@@ -5,7 +5,7 @@
 	<controls>
 		<include content="Infoscreen_Header_Template">
 			<param name="windowname" value="pvrguideinfo" />
-			<param name="visible" value="!Window.IsVisible(pvrtimersetting) + !Window.IsVisible(shutdownmenu)" />
+			<param name="content_visible" value="!Window.IsVisible(pvrtimersetting) + !Window.IsVisible(shutdownmenu)" />
 			<include content="Fullscreen_Info">
 				<param name="show_logo" value="false" />
 				<param name="info_label" value="$VAR[Info_PVR_Label]" />

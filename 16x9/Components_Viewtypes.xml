@@ -741,7 +741,7 @@
 		<param name="title_label" default="$VAR[Title_Breadcrumb_Label]" />
 		<param name="maxtitlelabelwidth" default="900" />
 		<param name="haspath" default="false" />
-		<param name="label_color" default="$VAR[Light_Color]" />
+		<param name="textcolor" default="$VAR[Light_Color]" />
 		<param name="info_label" default="$VAR[Info_Breadcrumb_Label]" />
 		<param name="info_label_visible" default="false" />
 		<param name="maxinfolabelwidth" default="900" />
@@ -772,7 +772,7 @@
 						<width max="$PARAM[maxtitlelabelwidth]">auto</width>
 						<label>$PARAM[title_label]</label>
 						<font>Title_Breadcrumb_Label</font>
-						<textcolor>$PARAM[label_color]</textcolor>
+						<textcolor>$PARAM[textcolor]</textcolor>
 						<haspath>$PARAM[haspath]</haspath>
 					</control>
 					<control type="label">
@@ -781,7 +781,7 @@
 						<top>16</top>
 						<label>$PARAM[info_label]</label>
 						<font>Info_Breadcrumb_Label</font>
-						<textcolor>$PARAM[label_color]</textcolor>
+						<textcolor>$PARAM[textcolor]</textcolor>
 						<visible>$PARAM[info_label_visible]</visible>
 						<visible>!String.IsEmpty(Control.GetLabel($PARAM[title_label_id]))</visible>
 					</control>

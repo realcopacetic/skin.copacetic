@@ -38,7 +38,7 @@
 		<value>$INFO[Container(3300).ListItem.Art(fanart)]</value>
 	</variable>
 
-	<variable name="Background_Home_Clearlogo_Texture">
+	<variable name="Background_Home_Clearlogo_Texture"> 
 		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + [Skin.String(Home_Background_Override_Source,Global) | !Skin.String(Home_Background_Override_Source)]">$INFO[Window(home).Property(Background_Global_Clearlogo)]</value>
 		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Home_Background_Override_Source,Movies)">$INFO[Window(home).Property(Background_Movies_Clearlogo)]</value>
 		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Home_Background_Override_Source,TVShows)">$INFO[Window(home).Property(Background_TVShows_Clearlogo)]</value>
@@ -51,7 +51,6 @@
 	</variable>
 
 	<variable name="Background_Global_Texture">
-		<value condition="Window.IsVisible(addonsettings) + !String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="Window.IsVisible(loginscreen) + !String.IsEmpty(Container(3300).ListItem.Art(fanart))">$INFO[Container(3300).ListItem.Art(fanart)]</value>
 		<value condition="!String.Contains(Container.FolderPath,plugin://) + $EXP[Containers_Background] + !String.IsEmpty(Container(3300).ListItem.Art(fanart))">$INFO[Container(3300).ListItem.Art(fanart)]</value>
 		<value condition="$EXP[Library_Has_Content] + Window.IsVisible(videos) + !String.IsEmpty(Window(home).Property(Background_Videos))">$INFO[Window(home).Property(Background_Videos)]</value>
@@ -69,6 +68,7 @@
 		<value condition="String.IsEqual(Container.FolderName,ListItem.TVShowTitle) + !String.IsEmpty(ListItem.TVShowTitle) + !String.IsEmpty(Window(home).Property(Season_Fanart))">$INFO[Window(home).Property(Season_Fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + !String.IsEqual(ListItem.DBType,video)">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+		<value>special://skin/resources/fanart.jpg</value>
 	</variable>
 
 	<variable name="musicplaylisteditor_Background_Texture">

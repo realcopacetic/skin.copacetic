@@ -948,6 +948,12 @@ msgstr ""
 
 #: NEW
 #/16x9/Content_Settings.xml
+msgctxt "#31488"
+msgid "Add shutdown menu shortcut to hidden views menu"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
 msgctxt "#31486"
 msgid "Disable hidden options menu"
 msgstr ""

@@ -114,12 +114,15 @@
 	</include> -->
 
 	<include name="Background_Multiart">
-		<param name="animate_slideshow" default="false" />
 		<param name="time" default="10000" />
+		<param name="fadein_animation_condition" default="true" />
+		<param name="fadeout_animation_condition" default="true" />
 		<definition>
 			<control type="multiimage">
-				<include content="WindowOpenClose_Fade_Delayed_Animation" condition="!$EXP[Window_IsSettings]" />
-				<include content="Ken_Burns_Effect_Animation" condition="$PARAM[animate_slideshow]" />
+				<include content="WindowOpenClose_Fade_Delayed_Animation" condition="!$EXP[Window_IsSettings]">
+					<param name="fadein_condition" value="$PARAM[fadein_animation_condition]" />
+					<param name="fadeout_condition" value="$PARAM[fadeout_animation_condition]" />
+				</include>
 				<imagepath>$PARAM[texture_path]</imagepath>
 				<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
 				<aspectratio>scale</aspectratio>
@@ -135,7 +138,8 @@
 
 	<include name="Background_Multiart_Home">
 		<include content="Background_Multiart">
-			<param name="animate_slideshow" value="Skin.HasSetting(Home_Ken_Burns_Effect)" />
+			<param name="fadein_animation_condition" value="!Window.Previous(addonbrowser) + !$EXP[Settings_Previous]" />
+			<param name="fadeout_animation_condition" value="!Window.Next(addonbrowser) + !$EXP[Settings_Next]" />
 			<param name="colordiffuse" value="$VAR[Home_Artwork_Diffuse]" />
 			<param name="texture_path" value="$VAR[Background_Home_Texture]" />
 			<param name="fadetime" value="360" />
@@ -188,26 +192,29 @@
 
 	<include name="Background_Global">
 		<param name="visible" default="true" />
-		<param name="content_source" default="Global" />
 		<param name="texture_path" default="$VAR[Background_Global_Texture]" />
-		<param name="animate_slideshow" default="Skin.HasSetting(Global_Ken_Burns_Effect)" />
+		<param name="fadein_animation_condition" default="true" />
+		<param name="fadeout_animation_condition" default="true" />
 		<definition>
 			<control type="group">
 				<visible>!VideoPlayer.IsFullscreen + $PARAM[visible]</visible>
-				<include content="VisibleHidden_Fade_Animation" />
+				<include content="VisibleHidden_Background_Fade_Delayed_Animation" />
 				<control type="videowindow">
 					<include content="Hidden_Control" />
 				</control>
-				<include content="Background_Multiart" condition="$EXP[Settings_IsVisible]">
-					<param name="colordiffuse" value="$VAR[Dialogs_Artwork_Diffuse]" />
+				<include content="Background_Multiart">
+					<param name="colordiffuse" value="$VAR[Home_Artwork_Diffuse]" />
 					<param name="texture_path" value="$PARAM[texture_path]" />
 					<param name="fadetime" value="0" />
+					<param name="fadein_animation_condition" value="$PARAM[fadein_animation_condition]" />
+					<param name="fadeout_animation_condition" value="$PARAM[fadeout_animation_condition]" />
 				</include>
 				<include content="Background_Multiart">
-					<param name="colordiffuse" value="$VAR[Dialogs_Artwork_Diffuse]" />
+					<param name="colordiffuse" value="$VAR[Home_Artwork_Diffuse]" />
 					<param name="texture_path" value="$PARAM[texture_path]" />
 					<param name="fadetime" value="360" />
-					<param name="animate_slideshow" value="$PARAM[animate_slideshow]" />
+					<param name="fadein_animation_condition" value="$PARAM[fadein_animation_condition]" />
+					<param name="fadeout_animation_condition" value="$PARAM[fadeout_animation_condition]" />
 				</include>
 				<nested />
 			</control>
@@ -215,11 +222,12 @@
 	</include>
 
 	<include name="Background_Media">
-		<include content="Background_Global">
-			<param name="visible" value="[$EXP[Containers_Background] | Container.Content()] + !$EXP[ListView_Display_IsThumbnails] + !$EXP[GridView_IsVisible]" />
-			<param name="local_list_content" value="true" />
-			<param name="content_source" value="Media" />
-		</include>
+		<param name="visible" default="[$EXP[Containers_Background] | Container.Content()] + !$EXP[ListView_Display_IsThumbnails] + !$EXP[GridView_IsVisible]" />
+		<definition>
+			<include content="Background_Global">
+				<param name="visible" value="$PARAM[visible]" />
+			</include>
+		</definition>
 	</include>
 
 	<include name="Home_Clearlogo">

@@ -17,7 +17,15 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ### Changelog
 ---
 **1.1.17**
+- BackgroundMedia component everywhere except addons - visibility condition
+- removal of ken burns effect - remove param animation 
+- background not updating on some addonbrowser screens
+container animation between addonbrowser levels? (All repositories or add on repository (type))
+
+- Fixed bug causing dialogaddoninformation to lose focus on opening for some addons
 - Added fade effect to infoscreen thumbnail when shutdownmenu visible on top
+- Added optional shutdown menu shortcut to hidden views menu https://github.com/realcopacetic/skin.copacetic/issues/90
+- Fixed error in in skinshortcuts management window - non-existent control 309
 
 **1.1.16**
 - Bug fix: removed unmatched parenthesis causing log errors

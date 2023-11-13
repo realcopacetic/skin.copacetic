@@ -85,7 +85,7 @@
 				<visible>$PARAM[visible]</visible>
 				<include content="VisibleHidden_Fade_Animation" />
 				<include content="Breadcrumb_Label">
-					<param name="label_color" value="$PARAM[breadcrumb_color]" />
+					<param name="textcolor" value="$PARAM[breadcrumb_color]" />
 					<param name="title_label" value="$VAR[OSD_Label]" />
 					<param name="info_label_visible" value="true" />
 				</include>

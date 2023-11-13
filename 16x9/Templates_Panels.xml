@@ -165,16 +165,19 @@
 		<param name="description_label_id" default="" />
 		<param name="thumb_visible" />
 		<param name="thumb_texture" />
+		<param name="textcolor" default="$VAR[Light_Color]" />
 		<definition>
 			<include content="Default_Dialog_Panel_Layout">
 				<param name="panel_edge_top" value="210" />
 				<param name="panel_edge_bottom" value="210" />
 				<include content="Breadcrumb_Label">
 					<param name="title_label_id" value="$PARAM[breadcrumb_label_id]" />
+					<param name="textcolor" value="$PARAM[textcolor]" />
 				</include>
 				<include content="Description_Label">
 					<param name="id" value="$PARAM[description_label_id]" />
 					<param name="label" value="$PARAM[description_label]" />
+					<param name="textcolor" value="$PARAM[textcolor]" />
 				</include>
 				<include content="Simple_ListIcon">
 					<param name="visible" value="$PARAM[thumb_visible]" />
