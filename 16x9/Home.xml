@@ -31,7 +31,7 @@
 			<include content="Trailer_Autoplay_Fade_Delayed_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 		</include>
 		<control type="group">
-			<visible>[Control.HasFocus(3000) | Control.HasFocus(4300) | $EXP[Music_Player_HasFocus] | Window.Next(addonbrowser) | $EXP[Settings_Next]] + !$EXP[Infoscreen_IsVisible]</visible>
+			<visible>[Control.HasFocus(3000) | Control.HasFocus(4300) | $EXP[Music_Player_HasFocus]] + !$EXP[Infoscreen_IsVisible]</visible>
 			<include content="VisibleHidden_Fade_Animation" />
 			<include content="Background_Home" condition="$EXP[Library_Has_Content]" />
 			<include content="Home_Clearlogo" condition="Skin.HasSetting(Home_Screensaver_Enabled) + $EXP[Library_Has_Content]" />

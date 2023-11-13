@@ -119,7 +119,7 @@
 		<param name="fadeout_animation_condition" default="true" />
 		<definition>
 			<control type="multiimage">
-				<include content="WindowOpenClose_Fade_Delayed_Animation" condition="!$EXP[Window_IsSettings]">
+				<include content="WindowOpenClose_Fade_Delayed_Animation">
 					<param name="fadein_condition" value="$PARAM[fadein_animation_condition]" />
 					<param name="fadeout_condition" value="$PARAM[fadeout_animation_condition]" />
 				</include>
@@ -138,7 +138,7 @@
 
 	<include name="Background_Multiart_Home">
 		<include content="Background_Multiart">
-			<param name="fadein_animation_condition" value="!Window.Previous(addonbrowser) + !$EXP[Settings_Previous]" />
+			<param name="fadein_animation_condition" value="![Window.Previous(addonbrowser) + !String.IsEqual(Window(home).Property(Container_Addons_NonRepo),true)] + !$EXP[Settings_Previous]" />
 			<param name="fadeout_animation_condition" value="!Window.Next(addonbrowser) + !$EXP[Settings_Next]" />
 			<param name="colordiffuse" value="$VAR[Home_Artwork_Diffuse]" />
 			<param name="texture_path" value="$VAR[Background_Home_Texture]" />

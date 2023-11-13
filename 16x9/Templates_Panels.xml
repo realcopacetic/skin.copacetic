@@ -55,6 +55,7 @@
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="top" value="$PARAM[panel_edge_top]" />
 				<param name="bottom" value="$PARAM[panel_edge_bottom]" />
+				<include content="Settings_WindowOpenClose_Fade_Delayed_Animation" />
 				<include content="Visible_Fade_Animation" />
 			</include>
 			<control type="group">

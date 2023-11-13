@@ -211,6 +211,7 @@
 			<visible>!ControlGroup(9).HasFocus(11) + !ControlGroup(9).HasFocus(12) + !ControlGroup(9).HasFocus(13) + !ControlGroup(9).HasFocus(14) + !ControlGroup(9).HasFocus(15) + !ControlGroup(9).HasFocus(16)</visible>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[24997]</label>
+			<animation effect="slide" start="0" end="0,-1" condition="true">Conditional</animation>
 		</control>
 		<control type="image" id="1001">
 			<description>Themes screenshot</description>
@@ -553,13 +554,13 @@
 			<selected>Skin.HasSetting(shutdownmenu_Shortcut)</selected>
 			<include content="skinsettings_Default_Label" />
 		</control> 
-		<control type="label" id="1340">
+		<control type="label" id="1341">
 			<description>List</description>
 			<visible>ControlGroup(9).HasFocus(13)</visible>
 			<label>$LOCALIZE[31000]</label>
 			<include content="skinsettings_Default_Label" />
 		</control>
-		<control type="radiobutton" id="1341">
+		<control type="radiobutton" id="1342">
 			<description>Add movement</description>
 			<label>$LOCALIZE[31441]</label>
 			<onclick>Skin.ToggleSetting(List_Ken_Burns_Effect)</onclick>

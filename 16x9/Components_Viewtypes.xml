@@ -61,6 +61,9 @@
 				<!-- Trailer Autoplay -->
 				<onunfocus condition="String.IsEqual(Window(home).Property(Trailer_Autoplay),true) + Player.HasVideo">PlayerControl(Stop)</onunfocus>
 				<onunfocus condition="String.IsEqual(Window(home).Property(Trailer_Autoplay),true)">ClearProperty(Trailer_Autoplay,home)</onunfocus>
+				<!-- Settings transition from addonbrowser -->
+				<onfocus condition="Window.Is(addonbrowser) + $EXP[Container_Addons_NonRepo]">SetProperty(Container_Addons_NonRepo,true,home)</onfocus>
+				<onfocus condition="Window.Is(addonbrowser) + !$EXP[Container_Addons_NonRepo]">ClearProperty(Container_Addons_NonRepo,home)</onfocus>
 			</control>
 		</definition>
 	</include>

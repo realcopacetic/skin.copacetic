@@ -194,7 +194,7 @@
 	</include>
 
 	<include name="addonbrowser_Views">
-		<param name="visible" default="!$EXP[Infoscreen_IsVisible] + !Window.IsVisible(addonsettings)" />
+		<param name="visible" default="!$EXP[Infoscreen_IsVisible]" />
 		<definition>
 			<!-- Background -->
 			<include content="Light_Theme_Background">
@@ -202,7 +202,7 @@
 			</include>
 			<include content="Background_Global" condition="$EXP[Library_Has_Content]">
 				<param name="visible" value="$PARAM[visible] + !$EXP[Container_Addons_NonRepo]" />
-				<param name="fadein_animation_condition" value="!Window.Previous(home) + !$EXP[Settings_Previous]" />
+				<param name="fadein_animation_condition" value="![Window.Previous(home) + String.IsEmpty(window(home).property(Home_Widget))] + !$EXP[Settings_Previous]" />
 				<param name="fadeout_animation_condition" value="!Window.Next(home) + !$EXP[Settings_Next]" />
 				<param name="local_list_content" value="true" />
 				<param name="content_source" value="Media" />
