@@ -26,8 +26,13 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - When global background slideshow is showing or live tv is playing, removed fade in/out transitions between home, addonbrowser, settings screens, tvguide and tv/radio search for a smoother experience. This required removing Ken Burns effect from these background slideshows.
 - Removed some of the unnecessary transitions between different views when navigating through addonbrowser menus
 - Fixed bug multiart bug breaking artwork for billboard view in programs
+- Fixed typo breaking fix for previous issue https://github.com/realcopacetic/skin.copacetic/issues/60
+
 
 Still to do:
+black screen until first artwork fetched
+choose artwork icon dimmed
+autoscroll on widgets? start on widgets? showcase 1st
 - skinsettings hints
 - MYMUSICPLAYLIST EDITOR
 - Missing artwork on addons list view
