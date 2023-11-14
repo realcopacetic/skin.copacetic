@@ -17,20 +17,29 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ### Changelog
 ---
 **1.1.17**
-- BackgroundMedia component everywhere except addons - visibility condition
-- removal of ken burns effect - remove param animation 
-- background not updating on some addonbrowser screens
-container animation between addonbrowser levels? (All repositories or add on repository (type))
-- clean up home background
-- login background
-- other window templates like addonbrowser?
-- Update readmes
-- Crop screensaver logo
-
 - Fixed bug causing dialogaddoninformation to lose focus on opening for some addons
 - Added fade effect to infoscreen thumbnail when shutdownmenu visible on top
 - Added optional shutdown menu shortcut to hidden views menu https://github.com/realcopacetic/skin.copacetic/issues/90
 - Fixed error in in skinshortcuts management window - non-existent control 309
+- Moved custom playlist background slideshow from homescreen to global via script.copacetic.helper 1.0.9
+- Rearranged skin settings to consolidate all background settings in one screen
+- When global background slideshow is showing or live tv is playing, removed fade in/out transitions between home, addonbrowser, settings screens, tvguide and tv/radio search for a smoother experience. This required removing Ken Burns effect from these background slideshows.
+- Removed some of the unnecessary transitions between different views when navigating through addonbrowser menus
+- Fixed bug multiart bug breaking artwork for billboard view in programs
+
+Still to do:
+- skinsettings hints
+- MYMUSICPLAYLIST EDITOR
+- Missing artwork on addons list view
+- background not updating on some addonbrowser screens
+container animation between addonbrowser levels? (All repositories or add on repository (type))
+- login background
+- Crop screensaver logo
+$EXP[Containers_Background] - is this whole thing needed still or is it just global background?
+
+- Make consistent overlay on embedded videoplayer for live tv and fade it out when screensaver kicks in
+
+
 
 **1.1.16**
 - Bug fix: removed unmatched parenthesis causing log errors

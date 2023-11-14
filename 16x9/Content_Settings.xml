@@ -360,7 +360,7 @@
 			<param name="label" value="$LOCALIZE[31426]" />
 			<param name="label2" value="$VAR[skinsettings_Background_Slideshow_Label]" />
 			<param name="category" value="16" />
-			<param name="previous" value="1606" />
+			<param name="previous" value="1607" />
 			<param name="id" value="1601" />
 			<param name="next" value="1602" />
 		</include>
@@ -380,9 +380,9 @@
 			<param name="next" value="1604" />
 		</include>
 		<include content="skinsettings_Slider_Button">
-			<param name="info" value="Home_Background_Brightness" />
+			<param name="info" value="Background_Brightness" />
 			<param name="label" value="$LOCALIZE[31440]" />
-			<param name="label2" value="$INFO[Skin.String(Home_Background_Brightness)]" />
+			<param name="label2" value="$INFO[Skin.String(Background_Brightness)]" />
 			<param name="category" value="16" />
 			<param name="previous" value="1603" />
 			<param name="id" value="1604" />

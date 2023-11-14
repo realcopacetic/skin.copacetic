@@ -129,13 +129,32 @@
 					<param name="fadein_animation_condition" value="$PARAM[fadein_animation_condition]" />
 					<param name="fadeout_animation_condition" value="$PARAM[fadeout_animation_condition]" />
 				</include>
+				<include content="Embedded_VideoPlayer">
+					<param name="visible" value="VideoPlayer.Content(livetv)" />
+				</include>
 				<nested />
 			</control>
 		</definition>
 	</include>
 
+	<include name="Background_Settings">
+		<include content="Light_Theme_Background" condition="!$EXP[Library_Has_Content]" />
+		<include content="Background_Global" condition="$EXP[Library_Has_Content]">
+			<param name="fadein_animation_condition" value="Window.Previous(settings) + !String.IsEqual(Window(home).Property(Settings_Transition_Override),true) + ![Window.Previous(home) + Skin.HasSetting(Home_Background_Override_Enabled) + String.IsEmpty(window(home).property(Home_Widget))] + ![Window.Previous(addonbrowser) + String.IsEmpty(Window(home).Property(Container_Addons_NonRepo))] + !$EXP[Settings_Previous] + !Window.Previous(tvguide) + !Window.Previous(tvsearch) + !Window.Previous(radiosearch)" />
+			<param name="fadeout_animation_condition" value="![Window.Next(home) + Skin.HasSetting(Home_Background_Override_Enabled)] + !Window.Next(addonbrowser) + !$EXP[Settings_Next] + !Window.Next(tvguide) + !Window.Next(tvsearch) + !Window.Next(radiosearch)" />
+		</include>
+	</include>
 
-
+	<include name="Background_Multiart_Home">
+		<include content="Background_Multiart">
+			<param name="fadein_animation_condition" value="![Skin.HasSetting(Home_Background_Override_Enabled) + [[Window.Previous(addonbrowser) + !String.IsEqual(Window(home).Property(Container_Addons_NonRepo),true)] | $EXP[Settings_Previous] | Window.Previous(tvguide) | Window.Previous(tvsearch) | Window.Previous(radiosearch)]]" />
+			<param name="fadeout_animation_condition" value="![Skin.HasSetting(Home_Background_Override_Enabled) + [Window.Next(addonbrowser) | $EXP[Settings_Next] | Window.Next(tvguide) | Window.Next(tvsearch) | Window.Next(radiosearch)]]" />
+			<param name="colordiffuse" value="$VAR[Home_Artwork_Diffuse]" />
+			<param name="texture_path" value="$VAR[Background_Home_Texture]" />
+			<param name="fadetime" value="360" />
+			<param name="time" value="$PARAM[time]" />
+		</include>
+	</include>
 
 	<include name="Background_List">
 		<param name="content_source" default="Home" />
@@ -149,17 +168,6 @@
 				<focusedlayout />
 			</control>
 		</definition>
-	</include>
-
-	<include name="Background_Multiart_Home">
-		<include content="Background_Multiart">
-			<param name="fadein_animation_condition" value="![Window.Previous(addonbrowser) + !String.IsEqual(Window(home).Property(Container_Addons_NonRepo),true)] + !$EXP[Settings_Previous]" />
-			<param name="fadeout_animation_condition" value="!Window.Next(addonbrowser) + !$EXP[Settings_Next]" />
-			<param name="colordiffuse" value="$VAR[Home_Artwork_Diffuse]" />
-			<param name="texture_path" value="$VAR[Background_Home_Texture]" />
-			<param name="fadetime" value="360" />
-			<param name="time" value="$PARAM[time]" />
-		</include>
 	</include>
 
 	<include name="Background_Home">
@@ -205,17 +213,6 @@
 		</include>
 	</include>
 
-
-
-	<include name="Background_Media">
-		<param name="visible" default="[$EXP[Containers_Background] | Container.Content()] + !$EXP[ListView_Display_IsThumbnails] + !$EXP[GridView_IsVisible]" />
-		<definition>
-			<include content="Background_Global">
-				<param name="visible" value="$PARAM[visible]" />
-			</include>
-		</definition>
-	</include>
-
 	<include name="Home_Clearlogo">
 		<control type="button" id="4300">
 			<visible allowhiddenfocus="true">false</visible>
@@ -238,14 +235,13 @@
 	<include name="Embedded_VideoPlayer">
 		<definition>
 			<control type="group">
-				<include content="Visible_Fade_Animation" />
 				<visible>$PARAM[visible]</visible>
+				<include content="Visible_Fade_Animation" />
+				<nested />
 				<control type="videowindow" />
 				<!-- Playback mask -->
 				<control type="image">
-					<include content="WindowOpenClose_Fade_Delayed_Animation" />
 					<texture colordiffuse="80000000">views/white_100.png</texture>
-					<visible>$PARAM[visible]</visible>
 				</control>
 			</control>
 		</definition>

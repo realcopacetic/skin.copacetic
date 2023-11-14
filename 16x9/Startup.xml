@@ -7,7 +7,7 @@
 	<onload condition="!Skin.String(Background_Interval)">Skin.SetString(Background_Interval,10)</onload>
 	<onload condition="!Skin.String(Background_Low_Threshold)">Skin.SetString(Background_Low_Threshold,65)</onload>
 	<onload condition="!Skin.String(Background_High_Threshold)">Skin.SetString(Background_High_Threshold,460)</onload>
-	<onload condition="!Skin.String(Home_Background_Brightness)">Skin.SetString(Home_Background_Brightness,33)</onload>
+	<onload condition="!Skin.String(Background_Brightness)">Skin.SetString(Background_Brightness,33)</onload>
 	<onload condition="!Skin.String(Home_Background_Override_Source)">Skin.SetString(Home_Background_Override_Source,Global)</onload>
 	<onload condition="!Skin.String(Multiart_Interval)">Skin.SetString(Multiart_Interval,4)</onload>
 	<onload condition="!Skin.String(Trailer_Autoplay_Interval)">Skin.SetString(Trailer_Autoplay_Interval,3)</onload>

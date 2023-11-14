@@ -26,8 +26,8 @@
 	<variable name="Background_Global_Texture">
 		<value condition="Window.IsVisible(loginscreen) + !String.IsEmpty(Container(3300).ListItem.Art(fanart))">$INFO[Container(3300).ListItem.Art(fanart)]</value>
 		<value condition="!String.Contains(Container.FolderPath,plugin://) + $EXP[Containers_Background] + !String.IsEmpty(Container(3300).ListItem.Art(fanart))">$INFO[Container(3300).ListItem.Art(fanart)]</value>
-		<value condition="$EXP[Library_Has_Content] + Window.IsVisible(videos) + !String.IsEmpty(Window(home).Property(Background_Videos))">$INFO[Window(home).Property(Background_Videos)]</value>
-		<value condition="$EXP[Library_Has_Content] + Window.IsVisible(music) + !String.IsEmpty(Window(home).Property(Background_Artists))">$INFO[Window(home).Property(Background_Artists)]</value>
+		<value condition="$EXP[Library_Has_Content] + Window.IsVisible(videos) + !String.IsEmpty(Window(home).Property(Background_Videos_Fanart))">$INFO[Window(home).Property(Background_Videos_Fanart)]</value>
+		<value condition="$EXP[Library_Has_Content] + Window.IsVisible(music) + !String.IsEmpty(Window(home).Property(Background_Artists_Fanart))">$INFO[Window(home).Property(Background_Artists_Fanart)]</value>
 		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Custom) + Skin.String(Background_Slideshow_Custom_Path)">$INFO[Window(home).Property(Background_Custom_Fanart)]</value>
 		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Global) + !String.IsEmpty(Window(home).Property(Background_Global_Fanart))">$INFO[Window(home).Property(Background_Global_Fanart)]</value>
 		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Videos) + !String.IsEmpty(Window(home).Property(Background_Videos_Fanart))">$INFO[Window(home).Property(Background_Videos_Fanart)]</value>
@@ -315,7 +315,7 @@
 		<value condition="!String.IsEmpty(ListItem(-1).Icon)">$INFO[ListItem(-1).Icon]</value>
 	</variable>
 	<variable name="Thumbnail(0)Content">
-		<value condition="Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Window(home).Property(Multiart_Fadeout))">$INFO[Control.GetLabel(3400)]</value>
+		<value condition="[Window.Is(videos) | Window.Is(music)] + Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Window(home).Property(Multiart_Fadeout))">$INFO[Control.GetLabel(3400)]</value>
 		<value>$VAR[Default(0)Content]</value>
 	</variable>
 	<variable name="Thumbnail(1)Content">

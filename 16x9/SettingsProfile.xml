@@ -4,11 +4,7 @@
 	<defaultcontrol always="true">3009</defaultcontrol>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
 	<controls>
-		<include content="Light_Theme_Background" condition="!$EXP[Library_Has_Content]" />
-		<include content="Background_Global" condition="$EXP[Library_Has_Content]">
-			<param name="fadein_animation_condition" value="![Window.Previous(home) + String.IsEmpty(window(home).property(Home_Widget))] + !Window.Previous(addonbrowser) + !$EXP[Settings_Previous]" />
-			<param name="fadeout_animation_condition" value="!Window.Next(home) + !Window.Next(addonbrowser) + !$EXP[Settings_Next]" />
-		</include>
+		<include content="Background_Settings" />
 		<include content="Default_Settings_Panel_Layout">
 			<param name="left_list_id" value="500" />
 			<param name="right_list_id" value="2" />

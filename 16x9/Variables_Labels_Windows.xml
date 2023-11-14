@@ -162,7 +162,7 @@
 		<value condition="Control.HasFocus(13)">$LOCALIZE[31503]</value>
 		<value condition="Control.HasFocus(14)">$LOCALIZE[31504]</value>
 		<value condition="Control.HasFocus(15)">$LOCALIZE[31505]</value>
-		<value condition="Control.HasFocus(16)">$LOCALIZE[31506]</value>
+		<value condition="Control.HasFocus(16)">$LOCALIZE[31532]</value>
 		<!-- General -->
 		<value condition="Control.HasFocus(1002)">$LOCALIZE[31507]</value>
 		<value condition="Control.HasFocus(1003)">$LOCALIZE[31509]</value>
@@ -170,23 +170,23 @@
 		<value condition="Control.HasFocus(1005)">$LOCALIZE[31512]</value>
 		<value condition="Control.HasFocus(1008)">$LOCALIZE[31517]</value>
 		<value condition="Control.HasFocus(1009)">$LOCALIZE[31518]</value>
-		<value condition="Control.HasFocus(1013)">$LOCALIZE[31521]</value>
-		<value condition="Control.HasFocus(1014)">$LOCALIZE[31522]</value>
-		<value condition="Control.HasFocus(1015)">$LOCALIZE[31523]</value>
-		<value condition="Control.HasFocus(10160) | Control.HasFocus(10161) | Control.HasFocus(10162)">$LOCALIZE[31524]</value>
-		<value condition="Control.HasFocus(1017)">$LOCALIZE[31525]</value>
-		<value condition="Control.HasFocus(10180) | Control.HasFocus(10181) | Control.HasFocus(10182)">$LOCALIZE[31526]</value>
-		<value condition="Control.HasFocus(1022)">$LOCALIZE[31528]</value>
+		<value condition="Control.HasFocus(1013)">$LOCALIZE[31528]</value>
+		<value condition="Control.HasFocus(1016)">$LOCALIZE[31521]</value>
+		<value condition="Control.HasFocus(1017)">$LOCALIZE[31522]</value>
+		<value condition="Control.HasFocus(1018)">$LOCALIZE[31523]</value>
+		<value condition="Control.HasFocus(10190) | Control.HasFocus(10181) | Control.HasFocus(10192)">$LOCALIZE[31524]</value>
+		<!-- Background -->
+		<value condition="Control.HasFocus(16010) | Control.HasFocus(16011)">$LOCALIZE[31526]</value>
+		<value condition="Control.HasFocus(16030) | Control.HasFocus(16031">$LOCALIZE[31527]</value>
+		<value condition="Control.HasFocus(16050) | Control.HasFocus(16051)">$LOCALIZE[31587]</value>
+		<value condition="Control.HasFocus(1607)">$LOCALIZE[31533]</value>
 		<!-- Home -->
 		<value condition="Control.HasFocus(1101)">$LOCALIZE[31529]</value>
 		<value condition="Control.HasFocus(1103)">$LOCALIZE[31530]</value>
-		<value condition="Control.HasFocus(1105) + $EXP[Library_Has_Content]">$LOCALIZE[31533]</value>
-		<value condition="Control.HasFocus(1105) + !$EXP[Library_Has_Content]">$LOCALIZE[31534]</value>
-		<value condition="Control.HasFocus(11060) | Control.HasFocus(11061)">$LOCALIZE[31535]</value>
-		<value condition="Control.HasFocus(1109) | Control.HasFocus(1020) | Control.HasFocus(1304) | Control.HasFocus(1342)">$LOCALIZE[31541]</value>
 		<value condition="Control.HasFocus(1110)">$LOCALIZE[31542]</value>
 		<value condition="Control.HasFocus(1111)">$LOCALIZE[31543]</value>
 		<!-- Views -->
+		<value condition="Control.HasFocus(1304) | Control.HasFocus(1342)">$LOCALIZE[31541]</value>
 		<value condition="Control.HasFocus(1338)">$LOCALIZE[31575]</value>
 		<value condition="Control.HasFocus(1339)">$LOCALIZE[31586]</value>
 		<value condition="Control.HasFocus(1302) | Control.HasFocus(1303) | Control.HasFocus(1312) | Control.HasFocus(1313) | Control.HasFocus(1314) | Control.HasFocus(1322) | Control.HasFocus(1323) | Control.HasFocus(1324) | Control.HasFocus(1332) | Control.HasFocus(1336) | Control.HasFocus(1337)">$LOCALIZE[31546]</value>
@@ -197,6 +197,7 @@
 		<value condition="Control.HasFocus(14050) | Control.HasFocus(1405)">$LOCALIZE[31554]</value>
 		<value condition="Control.HasFocus(1407)">$LOCALIZE[31555]</value>
 		<value condition="Control.HasFocus(1408)">$LOCALIZE[31556]</value>
+		<value condition="Control.HasFocus(1415) | Control.HasFocus(1416)">$LOCALIZE[31506]</value>
 		<!-- Extras -->
 		<value condition="Control.HasFocus(1502)">$LOCALIZE[31558]</value>
 		<value condition="Control.HasFocus(1513)">$LOCALIZE[31560]</value>
@@ -210,7 +211,6 @@
 		<value condition="Control.HasFocus(1700)">$LOCALIZE[31570]</value>
 		<value condition="Control.HasFocus(1701)">$LOCALIZE[31571]</value>
 	</variable>
-
 	<variable name="skinsettings_Background_Interval_Label">
 		<!-- Multiart Interval / Off -->
 		<value condition="Skin.String(Background_Interval)">$INFO[Skin.String(Background_Interval)]</value>
@@ -242,7 +242,6 @@
 		<value condition="Integer.IsGreater(Skin.String(Music_Rating_Like_Threshold),0)">$INFO[Skin.String(Music_Rating_Like_Threshold)]</value>
 		<value>$LOCALIZE[351]</value>
 	</variable>
-
 	<variable name="skinsettings_Preferred_MPAA_Label">
 		<value condition="Skin.HasSetting(Preferred_Rating_BBFC) | Skin.HasSetting(Preferred_Rating_MPAA) | Skin.HasSetting(Preferred_Rating_CHVRS) | Skin.HasSetting(Preferred_Rating_ACB) | Skin.HasSetting(Preferred_Rating_FSK) | Skin.HasSetting(Preferred_Rating_DJCTQ) | Skin.HasSetting(Preferred_Rating_KIJKWIJZER) | Skin.HasSetting(Preferred_Rating_EIRIN)">$LOCALIZE[31452]</value>
 		<value>$LOCALIZE[31624]</value>
