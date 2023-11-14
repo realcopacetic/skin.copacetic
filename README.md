@@ -30,6 +30,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 
 Still to do:
+Script upnext redesign
 black screen until first artwork fetched
 choose artwork icon dimmed
 autoscroll on widgets? start on widgets? showcase 1st
