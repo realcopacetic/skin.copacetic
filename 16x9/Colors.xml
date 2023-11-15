@@ -240,7 +240,7 @@
 	</variable>
 	<variable name="Volume_Focused_Color">
 		<value condition="$EXP[Music_Player_HasArt]">$VAR[Light_Color]</value>
-		<value condition="!$EXP[Infoscreen_IsVisible] + [$EXP[ListView_Display_IsThumbnails] | $EXP[StripView_IsVisible] | $EXP[GridView_IsVisible]]">$VAR[Light_Color]</value>
+		<value condition="!$EXP[Infoscreen_IsVisible] + !Window.IsVisible(home) + [$EXP[ListView_Display_IsThumbnails] | $EXP[StripView_IsVisible] | $EXP[GridView_IsVisible]]">$VAR[Light_Color]</value>
 		<value>$VAR[Notification_Widget_Label_Color]</value>
 	</variable>
 

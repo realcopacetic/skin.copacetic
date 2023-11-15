@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1199">
-	<visible>false</visible>
+	<visible>true</visible>
 	<zorder>3</zorder>
 	<controls>
+		<control type="image">
+			<width>200</width>
+			<height>200</height>
+			<right>0</right>
+			<texture colordiffuse="black">views/white_100.png</texture>
+		</control>
 		<control type="label">
 			<align>right</align>
-			<label>$INFO[Window(home).Property(Background_Custom_Fanart)]</label>
+			<label>$INFO[Skin.String(Background_Global_Fanart)]</label>
 			<visible>true</visible>
+			<height>200</height>
 		</control>
 	</controls>
 </window>

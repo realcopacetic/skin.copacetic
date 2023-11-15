@@ -6,18 +6,6 @@
 		<param name="Info_Breadcrumb_Label" />
 		<param name="show_icon" default="false" />
 		<definition>
-			<!-- Hidden list -->
-			<control type="grouplist">
-				<defaultcontrol always="true">3012</defaultcontrol>
-				<visible allowhiddenfocus="true">false</visible>
-				<orientation>horizontal</orientation>
-				<control type="button" id="3012">
-					<label>$INFO[Player.TimeRemaining(ss),in ]</label>
-				</control>
-				<control type="button" id="3013">
-					<label>$ADDON[service.upnext 30035]</label>
-				</control>
-			</control>
 			<!-- Details -->
 			<control type="grouplist">
 				<top>0</top>
@@ -62,72 +50,17 @@
 				</control>
 			</control>
 			<!-- Button menu -->
-			<control type="grouplist">
-				<animation effect="slide" start="0" end="24" time="0" condition="$PARAM[show_icon]">Conditional</animation>
-				<right>60</right>
-				<bottom>36</bottom>
-				<width>100%</width>
-				<height>60</height>
-				<itemgap>8</itemgap>
-				<align>right</align>
-				<orientation>horizontal</orientation>
-				<usecontrolcoords>true</usecontrolcoords>
-				<control type="group">
-					<width>60</width>
-					<height>60</height>
-					<include content="Button_Template">
-						<param name="target_id" value="3012" />
-						<param name="width" value="60" />
-						<param name="texture" value="Play" />
-					</include>
-				</control>
-				<control type="label">
-					<left>-6</left>
-					<top>6</top>
-					<height>48</height>
-					<width>auto</width>
-					<visible>Control.HasFocus(3012)</visible>
-					<label>$INFO[Control.GetLabel(3012)]</label>
-					<font>Title_Breadcrumb_Label</font>
-					<textcolor>$VAR[Light_Color]</textcolor>
-				</control>
-				<control type="label">
-					<left>-12</left>
-					<top>20</top>
-					<height>28</height>
-					<width>auto</width>
-					<visible>!Control.HasFocus(3012)</visible>
-					<label>$INFO[Control.GetLabel(3012)]</label>
-					<font>Info_Breadcrumb_Label</font>
-					<textcolor>$VAR[Light_Color]</textcolor>
-				</control>
-				<control type="label">
-					<top>16</top>
-					<height>28</height>
-					<width>auto</width>
-					<label>$VAR[Copacetic_Divider_Bold]</label>
-					<font>Info_Breadcrumb_Label</font>
-					<textcolor>$VAR[Light_Color]</textcolor>
-				</control>
-				<control type="label">
-					<top>6</top>
-					<height>48</height>
-					<width>auto</width>
-					<visible>Control.HasFocus(3013)</visible>
-					<label>$INFO[Control.GetLabel(3013)]</label>
-					<font>Title_Breadcrumb_Label</font>
-					<textcolor>$VAR[Light_Color]</textcolor>
-				</control>
-				<control type="label">
-					<top>20</top>
-					<height>28</height>
-					<width>auto</width>
-					<visible>!Control.HasFocus(3013)</visible>
-					<label>$INFO[Control.GetLabel(3013)]</label>
-					<font>Info_Breadcrumb_Label</font>
-					<textcolor>$VAR[Light_Color]</textcolor>
-				</control>
-			</control>
+			<include content="Button_Group_Template">
+				<param name="button1" value="true" />
+				<param name="button1_id" value="3012" />
+				<param name="button1_texture" value="Play" />
+				<param name="button2" value="true" />
+				<param name="button2_id" value="3013" />
+				<param name="button2_texture" value="Cross" />
+				<param name="color" value="$VAR[Light_Color]" />
+				<param name="unfocused_color" value="$VAR[Light_Color]" />
+			</include>
+
 		</definition>
 	</include>
 </includes>
