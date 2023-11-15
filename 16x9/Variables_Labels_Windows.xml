@@ -85,8 +85,8 @@
 
 	<variable name="script-upnext_Label">
 		<!-- Game of Thrones / 2x02 / The Night Lands -->
-		<value condition="!Integer.IsGreater(Window.Property(Episode),9)">$INFO[Window.Property(tvshowtitle)]$VAR[Window_Property_Season_Divider_Bold, , ]$INFO[Window.Property(season)]$INFO[Window.Property(episode),x0]$VAR[Window_Property_Title_Divider_Bold, , ]$INFO[Window.Property(title)]</value>
-		<value condition="!Integer.IsGreater(Window.Property(Episode),9)">$INFO[Window.Property(tvshowtitle)]$VAR[Window_Property_Season_Divider_Bold, , ]$INFO[Window.Property(season)]$INFO[Window.Property(episode),x]$VAR[Window_Property_Title_Divider_Bold, , ]$INFO[Window.Property(title)]</value>
+		<value condition="!Integer.IsGreater(Window.Property(Episode),9)">$INFO[Window.Property(season)]$INFO[Window.Property(episode),x0]</value>
+		<value condition="!Integer.IsGreater(Window.Property(Episode),9)">$VAR[Window_Property_Season_Divider_Bold, , ]$INFO[Window.Property(season)]$INFO[Window.Property(episode),x]</value>
 	</variable>
 
 	<variable name="seekbar_Left_Label">
@@ -185,6 +185,8 @@
 		<value condition="Control.HasFocus(1103)">$LOCALIZE[31530]</value>
 		<value condition="Control.HasFocus(1110)">$LOCALIZE[31542]</value>
 		<value condition="Control.HasFocus(1111)">$LOCALIZE[31543]</value>
+		<!-- Widgets -->
+		<value condition="ControlGroup(9).HasFocus(12)">$LOCALIZE[31545]</value>
 		<!-- Views -->
 		<value condition="Control.HasFocus(1304) | Control.HasFocus(1342)">$LOCALIZE[31541]</value>
 		<value condition="Control.HasFocus(1338)">$LOCALIZE[31575]</value>
@@ -195,9 +197,9 @@
 		<value condition="Control.HasFocus(1403)">$LOCALIZE[31552]</value>
 		<value condition="Control.HasFocus(1404)">$LOCALIZE[31553]</value>
 		<value condition="Control.HasFocus(14050) | Control.HasFocus(1405)">$LOCALIZE[31554]</value>
-		<value condition="Control.HasFocus(1407)">$LOCALIZE[31555]</value>
+		<value condition="Control.HasFocus(1409)">$LOCALIZE[31555]</value>
 		<value condition="Control.HasFocus(1408)">$LOCALIZE[31556]</value>
-		<value condition="Control.HasFocus(1415) | Control.HasFocus(1416)">$LOCALIZE[31506]</value>
+		<value condition="Control.HasFocus(1417) | Control.HasFocus(1418)">$LOCALIZE[31506]</value>
 		<!-- Extras -->
 		<value condition="Control.HasFocus(1502)">$LOCALIZE[31558]</value>
 		<value condition="Control.HasFocus(1513)">$LOCALIZE[31560]</value>

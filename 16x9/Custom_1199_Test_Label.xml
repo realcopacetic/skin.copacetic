@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1199">
-	<visible>true</visible>
+	<visible>false</visible>
 	<zorder>3</zorder>
 	<controls>
 		<control type="image">
@@ -11,8 +11,7 @@
 		</control>
 		<control type="label">
 			<align>right</align>
-			<label>$INFO[Skin.String(Background_Global_Fanart)]</label>
-			<visible>true</visible>
+			<label>1.$INFO[Skin.String(Background_Global_Fanart)]</label>
 			<height>200</height>
 		</control>
 	</controls>

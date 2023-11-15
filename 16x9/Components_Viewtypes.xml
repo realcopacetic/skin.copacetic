@@ -736,17 +736,20 @@
 	<include name="Breadcrumb_Label">
 		<param name="visible" default="true" />
 		<param name="animation" default="Visible_Fade_Animation" />
+		<param name="align" default="left" />
 		<param name="bar" default="true" />
 		<param name="left" default="60" />
 		<param name="right" default="60" />
 		<param name="top" default="60" />
 		<param name="title_label_id" default="6308" />
 		<param name="title_label" default="$VAR[Title_Breadcrumb_Label]" />
+		<param name="title_font" default="Title_Breadcrumb_Label" />
 		<param name="maxtitlelabelwidth" default="900" />
 		<param name="haspath" default="false" />
 		<param name="textcolor" default="$VAR[Light_Color]" />
 		<param name="info_label" default="$VAR[Info_Breadcrumb_Label]" />
 		<param name="info_label_visible" default="false" />
+		<param name="info_font" default="Info_Breadcrumb_Label" />
 		<param name="maxinfolabelwidth" default="900" />
 		<definition>
 			<control type="group">
@@ -759,7 +762,7 @@
 					<top>$PARAM[top]</top>
 					<height>60</height>
 					<orientation>horizontal</orientation>
-					<align>left</align>
+					<align>$PARAM[align]</align>
 					<itemgap>12</itemgap>
 					<usecontrolcoords>true</usecontrolcoords>
 					<control type="image">
@@ -774,7 +777,7 @@
 						<height>60</height>
 						<width max="$PARAM[maxtitlelabelwidth]">auto</width>
 						<label>$PARAM[title_label]</label>
-						<font>Title_Breadcrumb_Label</font>
+						<font>$PARAM[title_font]</font>
 						<textcolor>$PARAM[textcolor]</textcolor>
 						<haspath>$PARAM[haspath]</haspath>
 					</control>
@@ -783,7 +786,7 @@
 						<height>35</height>
 						<top>16</top>
 						<label>$PARAM[info_label]</label>
-						<font>Info_Breadcrumb_Label</font>
+						<font>$PARAM[info_font]</font>
 						<textcolor>$PARAM[textcolor]</textcolor>
 						<visible>$PARAM[info_label_visible]</visible>
 						<visible>!String.IsEmpty(Control.GetLabel($PARAM[title_label_id]))</visible>
