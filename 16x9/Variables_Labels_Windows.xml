@@ -213,6 +213,7 @@
 		<value condition="Control.HasFocus(1700)">$LOCALIZE[31570]</value>
 		<value condition="Control.HasFocus(1701)">$LOCALIZE[31571]</value>
 	</variable>
+
 	<variable name="skinsettings_Background_Interval_Label">
 		<!-- Multiart Interval / Off -->
 		<value condition="Skin.String(Background_Interval)">$INFO[Skin.String(Background_Interval)]</value>
@@ -259,14 +260,11 @@
 		<value condition="Skin.HasSetting(Preferred_Rating_EIRIN)">$LOCALIZE[31706]</value>
 		<value>$LOCALIZE[31624]</value>
 	</variable>
-
 	<variable name="skinsettings_script-upnext_Artwork_Label2">
-		<value condition="Skin.HasSetting(Widget1_Content_Disabled)" />
 		<value condition="Skin.String(script-upnext_Artwork,Square)">$LOCALIZE[31008]</value>
-		<value condition="Skin.String(script-upnext_Artwork,Fanart)">$LOCALIZE[31007]</value>
 		<value condition="Skin.String(script-upnext_Artwork,Posters)">$LOCALIZE[31006]</value>
+		<value>$LOCALIZE[31007]</value>
 	</variable>
-
 	<variable name="skinsettings_visualisation_Layout_Label2">
 		<value condition="Skin.String(visualisation_Layout,Large)">$LOCALIZE[31483]</value>
 		<value>$LOCALIZE[31482]</value>

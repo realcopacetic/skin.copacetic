@@ -527,20 +527,9 @@
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(2).Icon)">$INFO[ListItem(2).Icon]</value>
 	</variable>
 
-	<variable name="videobookmarks(-1)Content">
-		<value condition="!String.IsEmpty(Container(11).ListItemNoWrap(-1).Label) + !String.IsEmpty(Container(11).ListItem(-1).Icon)">$INFO[Container(11).ListItem(-1).Icon]</value>
-	</variable>
-	<variable name="videobookmarks(0)Content">
-		<value condition="!String.IsEmpty(Container(11).ListItem(0).Icon)">$INFO[Container(11).ListItem(0).icon]</value>
-	</variable>
-	<variable name="videobookmarks(1)Content">
-		<value condition="!String.IsEmpty(Container(11).ListItemNoWrap(1).Label) + !String.IsEmpty(Container(11).ListItem(1).Icon)">$INFO[Container(11).ListItem(1).Icon]</value>
-	</variable>
-	<variable name="videobookmarks(2)Content">
-		<value condition="!String.IsEmpty(Container(11).ListItemNoWrap(2).Label) + !String.IsEmpty(Container(11).ListItem(2).Icon)">$INFO[Container(11).ListItem(2).Icon]</value>
-	</variable>
-	<variable name="videobookmarks(3)Content">
-		<value condition="!String.IsEmpty(Container(11).ListItemNoWrap(3).Label) + !String.IsEmpty(Container(11).ListItem(3).Icon)">$INFO[Container(11).ListItem(3).Icon]</value>
+	<variable name="script-upnext_Artwork">
+		<value condition="!String.IsEmpty(Window.Property(fanart))">$INFO[Window.Property(fanart)]</value>
+		<value>$INFO[VideoPlayer.Offset(1).Art(fanart)]</value>
 	</variable>
 
 	<variable name="skinsettings_Themes_Screenshots">
@@ -614,6 +603,22 @@
 	<variable name="skinsettings_View_Grid_Screenshots">
 		<value condition="Skin.String(Theme,Light)">special://skin/extras/skinsettings/grid_light.jpg</value>
 		<value>special://skin/extras/skinsettings/grid_night.jpg</value>
+	</variable>
+
+	<variable name="videobookmarks(-1)Content">
+		<value condition="!String.IsEmpty(Container(11).ListItemNoWrap(-1).Label) + !String.IsEmpty(Container(11).ListItem(-1).Icon)">$INFO[Container(11).ListItem(-1).Icon]</value>
+	</variable>
+	<variable name="videobookmarks(0)Content">
+		<value condition="!String.IsEmpty(Container(11).ListItem(0).Icon)">$INFO[Container(11).ListItem(0).icon]</value>
+	</variable>
+	<variable name="videobookmarks(1)Content">
+		<value condition="!String.IsEmpty(Container(11).ListItemNoWrap(1).Label) + !String.IsEmpty(Container(11).ListItem(1).Icon)">$INFO[Container(11).ListItem(1).Icon]</value>
+	</variable>
+	<variable name="videobookmarks(2)Content">
+		<value condition="!String.IsEmpty(Container(11).ListItemNoWrap(2).Label) + !String.IsEmpty(Container(11).ListItem(2).Icon)">$INFO[Container(11).ListItem(2).Icon]</value>
+	</variable>
+	<variable name="videobookmarks(3)Content">
+		<value condition="!String.IsEmpty(Container(11).ListItemNoWrap(3).Label) + !String.IsEmpty(Container(11).ListItem(3).Icon)">$INFO[Container(11).ListItem(3).Icon]</value>
 	</variable>
 
 </includes>

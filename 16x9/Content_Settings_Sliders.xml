@@ -4,9 +4,9 @@
 
 	<include name="skinsettings_script-upnext_Artwork_Button_Conditions">
 		<onleft condition="Skin.String(script-upnext_Artwork,Square)">Skin.SetString(script-upnext_Artwork,Fanart)</onleft>
-		<onleft condition="Skin.String(script-upnext_Artwork,Fanart)">Skin.SetString(script-upnext_Artwork,Posters)</onleft>
-		<onright condition="Skin.String(script-upnext_Artwork,Posters) | !Skin.String(script-upnext_Artwork)">Skin.SetString(script-upnext_Artwork,Fanart)</onright>
-		<onright condition="Skin.String(script-upnext_Artwork,Fanart)">Skin.SetString(script-upnext_Artwork,Square)</onright>
+		<onleft condition="Skin.String(script-upnext_Artwork,Fanart) | !Skin.String(script-upnext_Artwork)">Skin.SetString(script-upnext_Artwork,Posters)</onleft>
+		<onright condition="Skin.String(script-upnext_Artwork,Posters)">Skin.SetString(script-upnext_Artwork,Fanart)</onright>
+		<onright condition="Skin.String(script-upnext_Artwork,Fanart) | !Skin.String(script-upnext_Artwork)">Skin.SetString(script-upnext_Artwork,Square)</onright>
 	</include>
 	<include name="skinsettings_script-upnext_Artwork_Unfocused_Slides">
 		<animation effect="slide" end="60" time="0" condition="Skin.String(script-upnext_Artwork,Fanart)">Conditional</animation>

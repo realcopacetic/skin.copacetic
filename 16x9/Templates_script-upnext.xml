@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="Script_UpNext_Layout">
+	<include name="script-upnext_Layout">
 		<param name="Title_Breadcrumb_Label" />
 		<param name="Info_Breadcrumb_Label_visible" default="false" />
 		<param name="Info_Breadcrumb_Label" />
@@ -13,9 +13,8 @@
 				<right>0</right>
 				<bottom>0</bottom>
 				<control type="image">
-					<visible>$PARAM[show_icon]</visible>
 					<animation effect="fadediffuse" end="ff555555" time="0" condition="true">Conditional</animation>
-					<texture fallback="views/dark_grey_100.png">$INFO[Window.Property(fanart)]</texture>
+					<texture fallback="views/dark_grey_100.png">$VAR[script-upnext_Artwork]</texture>
 				</control>
 				<include content="Breadcrumb_Label">
 					<param name="left" value="15" />
