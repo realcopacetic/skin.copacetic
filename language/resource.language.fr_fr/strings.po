@@ -676,11 +676,6 @@ msgid "Global"
 msgstr ""
 
 # /16x9/Content_Settings.xml
-msgctxt "#31525"
-msgid "EMPTY"
-msgstr ""
-
-# /16x9/Content_Settings.xml
 msgctxt "#31426"
 msgid "Limit background slideshow artwork to..."
 msgstr "Limiter les illustrations du diaporama d'arrière-plan à..."
@@ -764,11 +759,6 @@ msgid "Use the selected global slideshow on the homescreen instead of local or s
 msgstr ""
 
 # /16x9/Content_Settings.xml
-msgctxt "#31535"
-msgid "EMPTY"
-msgstr ""
-
-# /16x9/Content_Settings.xml
 msgctxt "#31436"
 msgid "Movies / TV shows / Artists"
 msgstr "Films / émissions de télévision / artistes"
@@ -795,8 +785,8 @@ msgstr "Régler la luminosité de l'arrière-plan (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31441"
-msgid "Add movement"
-msgstr "Ajouter du mouvement"
+msgid "Add movement to fullscreen artwork"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31541"
@@ -833,6 +823,16 @@ msgstr "Caher l'horloge"
 msgctxt "#31445"
 msgid "Widget"
 msgstr "Widget"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31545"
+msgid "Click on a widget to expand it, use the arrows to reposition it, or select the cross to remove it. Empty widgets can be reset to skin defaults by clicking the reset button."
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31489"
+msgid "Configure widgets"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31477"
@@ -888,13 +888,13 @@ msgstr "Activer l'affichage de la vue image"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31449"
-msgid "Dim artwork for watched items"
-msgstr "Atténuer les visuels des éléments visionnés"
+msgid "Dim artwork for watched items or disabled add-ons"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31450"
-msgid "Checkmarks for watched items"
-msgstr "Cochez les éléments visionnés"
+msgid "Checkmarks for watched items or enabled add-ons"
+msgstr ""
 
 # Customisations
 # /16x9/Content_Settings.xml
@@ -952,6 +952,16 @@ msgstr "Superposer un système d'évaluation binaire (aimé ou non) à l'évalua
 msgctxt "#31478"
 msgid "Video player"
 msgstr "Lecteur vidéo"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31490"
+msgid "Enable Up Next widget during playback"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31491"
+msgid "Choose artwork type to display in Up Next widget"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31479"
@@ -1440,6 +1450,21 @@ msgstr "Bonne fête de l'Aïd"
 msgctxt "#31914"
 msgid "Happy Earth Day"
 msgstr "Bonne journée de la Terre"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31449"
+#~ msgid "Dim artwork for watched items"
+#~ msgstr "Atténuer les visuels des éléments visionnés"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31450"
+#~ msgid "Checkmarks for watched items"
+#~ msgstr "Cochez les éléments visionnés"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31441"
+#~ msgid "Add movement"
+#~ msgstr "Ajouter du mouvement"
 
 # /16x9/Content_Settings.xml
 #~ msgctxt "#31500"
