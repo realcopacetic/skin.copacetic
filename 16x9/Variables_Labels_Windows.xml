@@ -197,7 +197,7 @@
 		<value condition="Control.HasFocus(1403)">$LOCALIZE[31552]</value>
 		<value condition="Control.HasFocus(1404)">$LOCALIZE[31553]</value>
 		<value condition="Control.HasFocus(14050) | Control.HasFocus(1405)">$LOCALIZE[31554]</value>
-		<value condition="Control.HasFocus(1409)">$LOCALIZE[31555]</value>
+		<value condition="Control.HasFocus(1411)">$LOCALIZE[31555]</value>
 		<value condition="Control.HasFocus(1408)">$LOCALIZE[31556]</value>
 		<value condition="Control.HasFocus(1417) | Control.HasFocus(1418)">$LOCALIZE[31506]</value>
 		<!-- Extras -->
@@ -258,6 +258,13 @@
 		<value condition="Skin.HasSetting(Preferred_Rating_KIJKWIJZER)">$LOCALIZE[31709]</value>
 		<value condition="Skin.HasSetting(Preferred_Rating_EIRIN)">$LOCALIZE[31706]</value>
 		<value>$LOCALIZE[31624]</value>
+	</variable>
+
+	<variable name="skinsettings_script-upnext_Artwork_Label2">
+		<value condition="Skin.HasSetting(Widget1_Content_Disabled)" />
+		<value condition="Skin.String(script-upnext_Artwork,Square)">$LOCALIZE[31008]</value>
+		<value condition="Skin.String(script-upnext_Artwork,Fanart)">$LOCALIZE[31007]</value>
+		<value condition="Skin.String(script-upnext_Artwork,Posters)">$LOCALIZE[31006]</value>
 	</variable>
 
 	<variable name="skinsettings_visualisation_Layout_Label2">

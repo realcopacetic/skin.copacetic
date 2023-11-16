@@ -8,7 +8,7 @@
 		<param name="color" default="$VAR[Progress_Grid_Text_Color]" />
 		<definition>
 			<control type="group">
-				<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
+				<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) | [Container.Content(addons) + ListItem.Property(Addon.IsEnabled)]</visible>
 				<visible>!$EXP[TransparentDialog_IsVisible] + !$EXP[Scrollbar_HasFocus]</visible>
 				<include content="Visible_Fade_Animation" />
 				<height>$PARAM[width]</height>
@@ -33,7 +33,7 @@
 			<param name="left" value="10" />
 			<param name="art_icon" value="$PARAM[art_icon]" />
 			<param name="fallback" value="views/dark_grey_100.png" />
-			<param name="watched_diffuse" value="Skin.HasSetting(GridView_WatchedStatus_Enabled) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)" />
+			<param name="watched_diffuse" value="[Skin.HasSetting(GridView_WatchedStatus_Enabled) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(addons) + !ListItem.Property(Addon.IsEnabled)]" />
 			<param name="now_playing" value="$EXP[ListItem(0)_NowPlaying]" />
 			<include content="Visible_Fade_Animation" />
 			<animation effect="slide" end="12,0" time="0" condition="$EXP[GridView_Display_IsFanart]" reversible="false">Conditional</animation>

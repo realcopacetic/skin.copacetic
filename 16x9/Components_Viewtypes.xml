@@ -195,7 +195,7 @@
 		<param name="visible" default="true" />
 		<param name="icon_color" default="$VAR[Light_Color]" />
 		<param name="now_playing_icon" default="true" />
-		<param name="list_icon" default="String.IsEqual(ListItem.Overlay,OverlayWatched.png)" />
+		<param name="list_icon" default="String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !$EXP[ListItem(0)_NowPlaying]" />
 		<param name="list_icon_texture" default="Check_unfocused" />
 		<param name="music_rating_like_texture" default="Like_unfocused" />
 		<param name="music_rating_color" default="$VAR[Accent_Color]" />
@@ -214,8 +214,8 @@
 					<animation effect="slide" end="$PARAM[icon_slide],0" time="0" condition="true">Conditional</animation>
 					<animation effect="slide" end="0,5" time="0" condition="Player.Paused">Conditional</animation>
 				</include>
-				<include content="$PARAM[list_icon_texture]" condition="Window.Is(videos) | Window.Is(videoplaylist)">
-					<param name="visible" value="$PARAM[list_icon] + !$EXP[ListItem(0)_NowPlaying]" />
+				<include content="$PARAM[list_icon_texture]" condition="Window.Is(videos) | Window.Is(videoplaylist) | Window.Is(addonbrowser) | Window.Is(programs)">
+					<param name="visible" value="$PARAM[list_icon]" />
 					<param name="color" value="$PARAM[icon_color]" />
 					<animation effect="slide" end="$PARAM[icon_slide],0" time="0" condition="true">Conditional</animation>
 				</include>
@@ -249,6 +249,8 @@
 
 	<include name="Common_List_Unfocused">
 		<param name="icon_slide" default="-525" />
+		<param name="list_icon" default="String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !$EXP[ListItem(0)_NowPlaying]" />
+		<param name="list_icon_texture" default="Check_unfocused" />
 		<param name="music_rating_slide" default="525" />
 		<param name="music_rating_color" default="$VAR[Accent_Color]" />
 		<param name="label_left" default="90" />
@@ -258,7 +260,8 @@
 			<param name="selectedcolor" />
 			<include content="Common_List_Layout">
 				<param name="icon_slide" value="$PARAM[icon_slide]" />
-				<param name="list_icon_texture" value="Check_unfocused" />
+				<param name="list_icon" value="$PARAM[list_icon]" />
+				<param name="list_icon_texture" value="$PARAM[list_icon_texture]" />
 				<param name="music_rating_like_texture" value="Like_focused" />
 				<param name="music_rating_color" value="$PARAM[music_rating_color]" />
 				<param name="music_rating_slide" value="$PARAM[music_rating_slide]" />
@@ -272,6 +275,8 @@
 
 	<include name="Common_List_Focused">
 		<param name="icon_slide" default="-525" />
+		<param name="list_icon" default="String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !$EXP[ListItem(0)_NowPlaying]" />
+		<param name="list_icon_texture" default="Check_focused" />
 		<param name="music_rating_slide" default="525" />
 		<param name="music_rating_color" default="$VAR[Accent_Color]" />
 		<param name="label_left" default="90" />
@@ -283,7 +288,8 @@
 			<include content="Multiart_Setter" condition="Skin.HasSetting(Multiart_Slideshow)" />
 			<include content="Common_List_Layout">
 				<param name="icon_slide" value="$PARAM[icon_slide]" />
-				<param name="list_icon_texture" value="Check_focused" />
+				<param name="list_icon" value="$PARAM[list_icon]" />
+				<param name="list_icon_texture" value="$PARAM[list_icon_texture]" />
 				<param name="music_rating_like_texture" value="Like_focused" />
 				<param name="music_rating_color" value="$PARAM[music_rating_color]" />
 				<param name="music_rating_slide" value="$PARAM[music_rating_slide]" />

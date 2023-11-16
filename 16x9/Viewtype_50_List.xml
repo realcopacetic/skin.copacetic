@@ -10,7 +10,7 @@
 				<include content="Visible_Fade_Delayed_Animation" />
 				<control type="fixedlist" id="50">
 					<animation effect="slide" end="720,0" time="0" condition="$EXP[ListView_Display_IsThumbnails]">Conditional</animation>
-					<animation effect="slide" end="60,0" time="0" condition="[Window.Is(addonbrowser) | Window.Is(programs)] + !Container.Content(addons)">Conditional</animation>
+					<animation effect="slide" end="30,0" time="0" condition="[Window.Is(addonbrowser) | Window.Is(programs)] + !$EXP[Container_Addons_NonRepo]">Conditional</animation>
 					<viewtype label="List">list</viewtype>
 					<centertop>50%</centertop>
 					<height>660</height>
@@ -21,11 +21,12 @@
 					<include content="List_Navigation" />
 					<onfocus>ClearProperty(Widget_DBID,home)</onfocus>
 					<scrolltime tween="sine" easing="inout">360</scrolltime>
+					<include content="ListView_Layout_addonbrowser" condition="Window.Is(addonbrowser) | Window.Is(programs)" />
 					<include content="ListView_Layout_videos" condition="Window.Is(videos)" />
 					<include content="ListView_Layout_music" condition="Window.Is(music) | Window.Is(musicplaylist)" />
 					<include content="ListView_Layout_videoplaylist" condition="Window.Is(videoplaylist)" />
 					<include content="ListView_Layout_tvsearch" condition="Window.Is(tvsearch)" />
-					<include content="ListView_Layout_pictures" condition="!Window.Is(videos) + !Window.Is(music) + !Window.Is(videoplaylist) + !Window.Is(musicplaylist) + !Window.Is(tvsearch)" />
+					<include content="ListView_Layout_pictures" condition="!Window.Is(videos) + !Window.Is(music) + !Window.Is(videoplaylist) + !Window.Is(musicplaylist) + !Window.Is(tvsearch) + !Window.Is(addonbrowser) + !Window.Is(programs)" />
 				</control>
 			</control>
 		</include>

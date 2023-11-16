@@ -43,6 +43,7 @@
 				<include content="Transparent_Dialog_Panel" condition="[Window.Is(musicinformation) + String.IsEqual(ListItem.DBType,album)] | Window.Is(songinformation) | Window.Is(addoninformation) | Window.Is(pvrguideinfo) | Window.Is(pvrrecordinginfo)">
 					<param name="visible" value="[!ControlGroup(3000).HasFocus(10) + !ControlGroup(3000).HasFocus(12) + !Window.Is(addoninformation)] | [Window.Is(addoninformation) + !ControlGroup(3000).HasFocus(99)] | Window.Is(pvrguideinfo) | Window.Is(pvrrecordinginfo)" />
 					<param name="left" value="720" />
+					<param name="colordiffuse" value="$VAR[Dark_Grey_Color]" />
 					<include content="VisibleHidden_Fade_Delayed_Animation" />
 					<animation effect="zoom" end="60,180,1800,720" time="0" condition="Window.Is(pvrguideinfo) | Window.Is(pvrrecordinginfo)">Conditional</animation>
 				</include>

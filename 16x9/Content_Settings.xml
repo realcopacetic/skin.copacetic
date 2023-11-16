@@ -778,23 +778,20 @@
 		</control>
 		<control type="radiobutton" id="1409">
 			<description>Enable Up Next widget during playback</description>
-			<label>XXX</label>
-			<onclick></onclick>
-			<selected>true</selected>
+			<label>$LOCALIZE[31490]</label>
+			<onclick>RunScript(script.copacetic.helper,action=toggle_addon,id=service.upnext)</onclick>
+			<selected>System.AddonIsEnabled(service.upnext)</selected>
 			<visible>ControlGroup(9).HasFocus(14)</visible>
 		</control>
 		<include content="skinsettings_Slider_Button">
 			<param name="info" value="script-upnext_Artwork" />
-			<param name="visible" value="ControlGroup(9).HasFocus(14) + Control.IsVisible(12$PARAM[widget_position]20) + " />
-			<param name="label" value="Choose artwork for Up Next widget" />
+			<param name="visible" value="ControlGroup(9).HasFocus(14) + System.AddonIsEnabled(service.upnext)" />
+			<param name="label" value="$LOCALIZE[31491]" />
 			<param name="label2" value="$VAR[script-upnext_Artwork]" />
 			<param name="category" value="14" />
 			<param name="previous" value="1409" />
 			<param name="id" value="1410" />
 			<param name="next" value="1411" />
-			<param name="next_condition" value="!Skin.HasSetting(Widget$PARAM[widget_position]_Content_Custom)" />
-			<param name="alt_next" value="12$PARAM[widget_position]40" />
-			<param name="alt_next_condition" value="Skin.HasSetting(Widget$PARAM[widget_position]_Content_Custom)" />
 		</include>
 		<control type="radiobutton" id="1411">
 			<description>Instantly hide progress bar on pause screen</description>

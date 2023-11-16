@@ -82,6 +82,25 @@
 		</definition>
 	</include>
 
+	<include name="ListView_Layout_addonbrowser">
+		<itemlayout height="60" width="1140">
+			<include content="Common_List_Unfocused">
+				<param name="label_left" value="90" />
+				<param name="label_maxwidth" value="900" />
+				<param name="list_icon" value="$EXP[Container_Addons_NonRepo] + !ListItem.Property(Addon.IsEnabled)" />
+				<param name="list_icon_texture" value="Cross_unfocused" />
+			</include>
+		</itemlayout>
+		<focusedlayout height="60" width="1140">
+			<include content="Common_List_Focused">
+				<param name="label_left" value="90" />
+				<param name="label_maxwidth" value="1020" />
+				<param name="list_icon" value="$EXP[Container_Addons_NonRepo] + !ListItem.Property(Addon.IsEnabled)" />
+				<param name="list_icon_texture" value="Cross_focused" />
+			</include>
+		</focusedlayout>
+	</include>
+
 	<include name="ListView_Layout_videos">
 		<include content="ListView_Layout_Thumbnails" />
 		<include content="ListView_Layout_Background" />
@@ -115,7 +134,6 @@
 			<include content="Common_List_Focused">
 				<param name="label_left" value="60" />
 				<param name="label_maxwidth" value="1020" />
-				<param name="font" value="Main_Menu_Focused" />
 			</include>
 		</focusedlayout>
 	</include>

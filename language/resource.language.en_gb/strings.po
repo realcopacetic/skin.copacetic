@@ -993,12 +993,12 @@ msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31449"
-msgid "Dim artwork for watched items"
+msgid "Dim artwork for watched items or disabled add-ons"
 msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31450"
-msgid "Checkmarks for watched items"
+msgid "Checkmarks for watched items or enabled add-ons"
 msgstr ""
 
 
@@ -1063,6 +1063,18 @@ msgstr ""
 #/16x9/Content_Settings.xml
 msgctxt "#31478"
 msgid "Video player"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31490"
+msgid "Enable Up Next widget during playback"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31491"
+msgid "Choose artwork type to display in Up Next widget"
 msgstr ""
 
 #: NEW

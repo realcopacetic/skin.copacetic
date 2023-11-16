@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+
+	<include name="skinsettings_script-upnext_Artwork_Button_Conditions">
+		<onleft condition="Skin.String(script-upnext_Artwork,Square)">Skin.SetString(script-upnext_Artwork,Fanart)</onleft>
+		<onleft condition="Skin.String(script-upnext_Artwork,Fanart)">Skin.SetString(script-upnext_Artwork,Posters)</onleft>
+		<onright condition="Skin.String(script-upnext_Artwork,Posters) | !Skin.String(script-upnext_Artwork)">Skin.SetString(script-upnext_Artwork,Fanart)</onright>
+		<onright condition="Skin.String(script-upnext_Artwork,Fanart)">Skin.SetString(script-upnext_Artwork,Square)</onright>
+	</include>
+	<include name="skinsettings_script-upnext_Artwork_Unfocused_Slides">
+		<animation effect="slide" end="60" time="0" condition="Skin.String(script-upnext_Artwork,Fanart)">Conditional</animation>
+		<animation effect="slide" end="120" time="0" condition="Skin.String(script-upnext_Artwork,Square)">Conditional</animation>
+	</include>
+	<include name="skinsettings_script-upnext_Artwork_Focused_Slides">
+		<animation effect="slide" end="55" time="0" condition="Skin.String(script-upnext_Artwork,Fanart)">Conditional</animation>
+		<animation effect="slide" end="110" time="0" condition="Skin.String(script-upnext_Artwork,Square)">Conditional</animation>
+	</include>
+
+
 	<include name="skinsettings_Background_Brightness_Button_Conditions">
 		<onleft condition="Skin.String(Background_Brightness,25)">Skin.SetString(Background_Brightness,33)</onleft>
 		<onleft condition="Skin.String(Background_Brightness,33) | !Skin.String(Background_Brightness)">Skin.SetString(Background_Brightness,50)</onleft>

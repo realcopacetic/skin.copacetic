@@ -28,6 +28,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Fixed bug multiart bug breaking artwork for billboard view in programs
 - Fixed typo breaking fix for previous issue https://github.com/realcopacetic/skin.copacetic/issues/60
 - Fixed colour of volume indicator on home screen widgets when light theme selected
+- Added disabled indicator to addonbrowser for disabled addons in List and Grid views
 
 
 Still to do:
