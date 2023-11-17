@@ -182,6 +182,7 @@
 				</include>
 				<include content="Simple_ListIcon">
 					<param name="visible" value="$PARAM[thumb_visible]" />
+					<param name="fade_diffuse_override" value="true" />
 					<param name="top" value="180" />
 					<param name="width" value="720" />
 					<param name="height" value="720" />

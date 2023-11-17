@@ -29,14 +29,12 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Fixed typo breaking fix for previous issue https://github.com/realcopacetic/skin.copacetic/issues/60
 - Fixed colour of volume indicator on home screen widgets when light theme selected
 - Added disabled indicator to addonbrowser for disabled addons in List and Grid views
-
+- Redesigned script-upnext widget and added options to skinsettings to enable/disable addon and choose art type.
 
 Still to do:
-Script upnext redesign
 black screen until first artwork fetched
 choose artwork icon dimmed
 autoscroll on widgets? start on widgets? showcase 1st
-- skinsettings hints
 - MYMUSICPLAYLIST EDITOR
 - Missing artwork on addons list view
 - background not updating on some addonbrowser screens
@@ -44,7 +42,6 @@ container animation between addonbrowser levels? (All repositories or add on rep
 - login background
 - Crop screensaver logo
 $EXP[Containers_Background] - is this whole thing needed still or is it just global background?
-
 - Make consistent overlay on embedded videoplayer for live tv and fade it out when screensaver kicks in
 
 
