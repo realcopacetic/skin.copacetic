@@ -762,11 +762,11 @@
 				<visible>$PARAM[visible]</visible>
 				<include content="$PARAM[animation]" />
 				<nested />
+				<left>$PARAM[left]</left>
+				<right>$PARAM[right]</right>
+				<top>$PARAM[top]</top>
+				<height>60</height>
 				<control type="grouplist">
-					<left>$PARAM[left]</left>
-					<right>$PARAM[right]</right>
-					<top>$PARAM[top]</top>
-					<height>60</height>
 					<orientation>horizontal</orientation>
 					<align>$PARAM[align]</align>
 					<itemgap>12</itemgap>
