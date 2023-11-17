@@ -676,11 +676,6 @@ msgid "Global"
 msgstr ""
 
 # /16x9/Content_Settings.xml
-msgctxt "#31525"
-msgid "EMPTY"
-msgstr ""
-
-# /16x9/Content_Settings.xml
 msgctxt "#31426"
 msgid "Limit background slideshow artwork to..."
 msgstr ""
@@ -764,11 +759,6 @@ msgid "Use the selected global slideshow on the homescreen instead of local or s
 msgstr ""
 
 # /16x9/Content_Settings.xml
-msgctxt "#31535"
-msgid "EMPTY"
-msgstr ""
-
-# /16x9/Content_Settings.xml
 msgctxt "#31436"
 msgid "Movies / TV shows / Artists"
 msgstr ""
@@ -795,7 +785,7 @@ msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31441"
-msgid "Add movement"
+msgid "Add movement to fullscreen artwork"
 msgstr ""
 
 # /16x9/Content_Settings.xml
@@ -833,6 +823,16 @@ msgstr ""
 msgctxt "#31445"
 msgid "Widget"
 msgstr "Виджет"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31545"
+msgid "Click on a widget to expand it, use the arrows to reposition it, or select the cross to remove it. Empty widgets can be reset to skin defaults by clicking the reset button."
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31489"
+msgid "Configure widgets"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31477"
@@ -888,12 +888,12 @@ msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31449"
-msgid "Dim artwork for watched items"
+msgid "Dim artwork for watched items or disabled add-ons"
 msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31450"
-msgid "Checkmarks for watched items"
+msgid "Checkmarks for watched items or enabled add-ons"
 msgstr ""
 
 # Customisations
@@ -951,6 +951,16 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31478"
 msgid "Video player"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31490"
+msgid "Enable Up Next widget during playback"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31491"
+msgid "Choose artwork type to display in Up Next widget"
 msgstr ""
 
 # /16x9/Content_Settings.xml

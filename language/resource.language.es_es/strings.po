@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-11-13 06:28+0000\n"
-"Last-Translator: José Antonio Alvarado <jalvarado0.eses@gmail.com>\n"
+"PO-Revision-Date: 2023-11-16 15:18+0000\n"
+"Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/es_es/>\n"
 "Language: es_es\n"
 "MIME-Version: 1.0\n"
@@ -673,12 +673,7 @@ msgstr "Ajuste la cantidad de contraste necesaria entre el fondo y el color del 
 # /16x9/Content_Settings.xml
 msgctxt "#31425"
 msgid "Global"
-msgstr ""
-
-# /16x9/Content_Settings.xml
-msgctxt "#31525"
-msgid "EMPTY"
-msgstr ""
+msgstr "Global"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31426"
@@ -764,11 +759,6 @@ msgid "Use the selected global slideshow on the homescreen instead of local or s
 msgstr ""
 
 # /16x9/Content_Settings.xml
-msgctxt "#31535"
-msgid "EMPTY"
-msgstr ""
-
-# /16x9/Content_Settings.xml
 msgctxt "#31436"
 msgid "Movies / TV shows / Artists"
 msgstr "Películas / Series / Artistas"
@@ -795,8 +785,8 @@ msgstr "Ajustar el brillo de la ilustración en segundo plano (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31441"
-msgid "Add movement"
-msgstr "Añadir movimiento"
+msgid "Add movement to fullscreen artwork"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31541"
@@ -833,6 +823,16 @@ msgstr "Ocultar reloj"
 msgctxt "#31445"
 msgid "Widget"
 msgstr "Widget"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31545"
+msgid "Click on a widget to expand it, use the arrows to reposition it, or select the cross to remove it. Empty widgets can be reset to skin defaults by clicking the reset button."
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31489"
+msgid "Configure widgets"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31477"
@@ -888,13 +888,13 @@ msgstr "Activar la vista para la ventana de imágenes"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31449"
-msgid "Dim artwork for watched items"
-msgstr "Atenuar las ilustraciones de los elementos visualizados"
+msgid "Dim artwork for watched items or disabled add-ons"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31450"
-msgid "Checkmarks for watched items"
-msgstr "Marcas de verificación de los elementos visualizados"
+msgid "Checkmarks for watched items or enabled add-ons"
+msgstr ""
 
 # Customisations
 # /16x9/Content_Settings.xml
@@ -952,6 +952,16 @@ msgstr "Superponer un sistema binario de valoración de usuarios (me gusta o no 
 msgctxt "#31478"
 msgid "Video player"
 msgstr "Reproductor de vídeo"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31490"
+msgid "Enable Up Next widget during playback"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31491"
+msgid "Choose artwork type to display in Up Next widget"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31479"
@@ -1440,6 +1450,21 @@ msgstr "Eid Mubarak"
 msgctxt "#31914"
 msgid "Happy Earth Day"
 msgstr "Feliz día de la Tierra"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31449"
+#~ msgid "Dim artwork for watched items"
+#~ msgstr "Atenuar las ilustraciones de los elementos visualizados"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31450"
+#~ msgid "Checkmarks for watched items"
+#~ msgstr "Marcas de verificación de los elementos visualizados"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31441"
+#~ msgid "Add movement"
+#~ msgstr "Añadir movimiento"
 
 # /16x9/Content_Settings.xml
 #~ msgctxt "#31500"

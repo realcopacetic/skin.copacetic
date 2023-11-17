@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-06-23 12:10+0000\n"
+"PO-Revision-Date: 2023-11-16 15:18+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Hebrew (Israel) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/he_il/>\n"
 "Language: he_il\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Weblate 4.18\n"
+"X-Generator: Weblate 5.1\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -673,12 +673,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31425"
 msgid "Global"
-msgstr ""
-
-# /16x9/Content_Settings.xml
-msgctxt "#31525"
-msgid "EMPTY"
-msgstr ""
+msgstr "כללי"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31426"
@@ -764,11 +759,6 @@ msgid "Use the selected global slideshow on the homescreen instead of local or s
 msgstr ""
 
 # /16x9/Content_Settings.xml
-msgctxt "#31535"
-msgid "EMPTY"
-msgstr ""
-
-# /16x9/Content_Settings.xml
 msgctxt "#31436"
 msgid "Movies / TV shows / Artists"
 msgstr ""
@@ -795,7 +785,7 @@ msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31441"
-msgid "Add movement"
+msgid "Add movement to fullscreen artwork"
 msgstr ""
 
 # /16x9/Content_Settings.xml
@@ -833,6 +823,16 @@ msgstr ""
 msgctxt "#31445"
 msgid "Widget"
 msgstr "יישומון"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31545"
+msgid "Click on a widget to expand it, use the arrows to reposition it, or select the cross to remove it. Empty widgets can be reset to skin defaults by clicking the reset button."
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31489"
+msgid "Configure widgets"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31477"
@@ -888,12 +888,12 @@ msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31449"
-msgid "Dim artwork for watched items"
+msgid "Dim artwork for watched items or disabled add-ons"
 msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31450"
-msgid "Checkmarks for watched items"
+msgid "Checkmarks for watched items or enabled add-ons"
 msgstr ""
 
 # Customisations
@@ -954,6 +954,16 @@ msgid "Video player"
 msgstr ""
 
 # /16x9/Content_Settings.xml
+msgctxt "#31490"
+msgid "Enable Up Next widget during playback"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31491"
+msgid "Choose artwork type to display in Up Next widget"
+msgstr ""
+
+# /16x9/Content_Settings.xml
 msgctxt "#31479"
 msgid "Music player"
 msgstr ""
@@ -971,12 +981,12 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31482"
 msgid "Small"
-msgstr ""
+msgstr "קטן"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31483"
 msgid "Large"
-msgstr ""
+msgstr "גדול"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31455"
