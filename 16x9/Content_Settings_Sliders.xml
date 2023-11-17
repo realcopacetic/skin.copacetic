@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-
-	<include name="skinsettings_script-upnext_Artwork_Button_Conditions">
-		<onleft condition="Skin.String(script-upnext_Artwork,Square)">Skin.SetString(script-upnext_Artwork,Fanart)</onleft>
-		<onleft condition="Skin.String(script-upnext_Artwork,Fanart) | !Skin.String(script-upnext_Artwork)">Skin.SetString(script-upnext_Artwork,Posters)</onleft>
-		<onright condition="Skin.String(script-upnext_Artwork,Posters)">Skin.SetString(script-upnext_Artwork,Fanart)</onright>
-		<onright condition="Skin.String(script-upnext_Artwork,Fanart) | !Skin.String(script-upnext_Artwork)">Skin.SetString(script-upnext_Artwork,Square)</onright>
-	</include>
-	<include name="skinsettings_script-upnext_Artwork_Unfocused_Slides">
-		<animation effect="slide" end="60" time="0" condition="Skin.String(script-upnext_Artwork,Fanart)">Conditional</animation>
-		<animation effect="slide" end="120" time="0" condition="Skin.String(script-upnext_Artwork,Square)">Conditional</animation>
-	</include>
-	<include name="skinsettings_script-upnext_Artwork_Focused_Slides">
-		<animation effect="slide" end="55" time="0" condition="Skin.String(script-upnext_Artwork,Fanart)">Conditional</animation>
-		<animation effect="slide" end="110" time="0" condition="Skin.String(script-upnext_Artwork,Square)">Conditional</animation>
-	</include>
-
-
 	<include name="skinsettings_Background_Brightness_Button_Conditions">
 		<onleft condition="Skin.String(Background_Brightness,25)">Skin.SetString(Background_Brightness,33)</onleft>
 		<onleft condition="Skin.String(Background_Brightness,33) | !Skin.String(Background_Brightness)">Skin.SetString(Background_Brightness,50)</onleft>
@@ -31,73 +14,6 @@
 	<include name="skinsettings_Background_Brightness_Focused_Slides">
 		<animation effect="slide" end="55" time="0" condition="Integer.IsLess(Skin.String(Background_Brightness),33) | !Skin.String(Background_Brightness)">Conditional</animation>
 		<animation effect="slide" end="55" time="0" condition="Integer.IsLess(Skin.String(Background_Brightness),50)">Conditional</animation>
-	</include>
-
-	<include name="skinsettings_Background_Low_Threshold_Button_Conditions">
-		<onleft condition="Skin.String(Background_Low_Threshold,100)">Skin.SetString(Background_Low_Threshold,95)</onleft>
-		<onleft condition="Skin.String(Background_Low_Threshold,95)">Skin.SetString(Background_Low_Threshold,90)</onleft>
-		<onleft condition="Skin.String(Background_Low_Threshold,90)">Skin.SetString(Background_Low_Threshold,85)</onleft>
-		<onleft condition="Skin.String(Background_Low_Threshold,85)">Skin.SetString(Background_Low_Threshold,80)</onleft>
-		<onleft condition="Skin.String(Background_Low_Threshold,80)">Skin.SetString(Background_Low_Threshold,75)</onleft>
-		<onleft condition="Skin.String(Background_Low_Threshold,75)">Skin.SetString(Background_Low_Threshold,70)</onleft>
-		<onleft condition="Skin.String(Background_Low_Threshold,70)">Skin.SetString(Background_Low_Threshold,65)</onleft>
-		<onleft condition="Skin.String(Background_Low_Threshold,65) | !Skin.String(Background_Low_Threshold)">Skin.SetString(Background_Low_Threshold,60)</onleft>
-		<onleft condition="Skin.String(Background_Low_Threshold,60)">Skin.SetString(Background_Low_Threshold,55)</onleft>
-		<onleft condition="Skin.String(Background_Low_Threshold,55)">Skin.SetString(Background_Low_Threshold,50)</onleft>
-		<onleft condition="Skin.String(Background_Low_Threshold,50)">Skin.SetString(Background_Low_Threshold,45)</onleft>
-		<onleft condition="Skin.String(Background_Low_Threshold,45)">Skin.SetString(Background_Low_Threshold,40)</onleft>
-		<onleft condition="Skin.String(Background_Low_Threshold,40)">Skin.SetString(Background_Low_Threshold,35)</onleft>
-		<onleft condition="Skin.String(Background_Low_Threshold,35)">Skin.SetString(Background_Low_Threshold,30)</onleft>
-		<onleft condition="Skin.String(Background_Low_Threshold,30)">Skin.SetString(Background_Low_Threshold,25)</onleft>
-		<onright condition="Skin.String(Background_Low_Threshold,25)">Skin.SetString(Background_Low_Threshold,30)</onright>
-		<onright condition="Skin.String(Background_Low_Threshold,30)">Skin.SetString(Background_Low_Threshold,35)</onright>
-		<onright condition="Skin.String(Background_Low_Threshold,35)">Skin.SetString(Background_Low_Threshold,40)</onright>
-		<onright condition="Skin.String(Background_Low_Threshold,40)">Skin.SetString(Background_Low_Threshold,45)</onright>
-		<onright condition="Skin.String(Background_Low_Threshold,45)">Skin.SetString(Background_Low_Threshold,50)</onright>
-		<onright condition="Skin.String(Background_Low_Threshold,50)">Skin.SetString(Background_Low_Threshold,55)</onright>
-		<onright condition="Skin.String(Background_Low_Threshold,55)">Skin.SetString(Background_Low_Threshold,60)</onright>
-		<onright condition="Skin.String(Background_Low_Threshold,60)">Skin.SetString(Background_Low_Threshold,65)</onright>
-		<onright condition="Skin.String(Background_Low_Threshold,65) | !Skin.String(Background_Low_Threshold)">Skin.SetString(Background_Low_Threshold,70)</onright>
-		<onright condition="Skin.String(Background_Low_Threshold,70)">Skin.SetString(Background_Low_Threshold,75)</onright>
-		<onright condition="Skin.String(Background_Low_Threshold,75)">Skin.SetString(Background_Low_Threshold,80)</onright>
-		<onright condition="Skin.String(Background_Low_Threshold,80)">Skin.SetString(Background_Low_Threshold,85)</onright>
-		<onright condition="Skin.String(Background_Low_Threshold,85)">Skin.SetString(Background_Low_Threshold,90)</onright>
-		<onright condition="Skin.String(Background_Low_Threshold,90)">Skin.SetString(Background_Low_Threshold,95)</onright>
-		<onright condition="Skin.String(Background_Low_Threshold,95)">Skin.SetString(Background_Low_Threshold,100)</onright>
-	</include>
-	<include name="skinsettings_Background_Low_Threshold_Unfocused_Slides">
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),25)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),30)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),35)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),40)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),45)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),50)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),55)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),60)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),65) | !Skin.String(Background_Low_Threshold)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),70)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),75)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),80)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),85)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),90)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),95)">Conditional</animation>
-	</include>
-	<include name="skinsettings_Background_Low_Threshold_Focused_Slides">
-		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),25)">Conditional</animation>
-		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),30)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),35)">Conditional</animation>
-		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),40)">Conditional</animation>
-		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),45)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),50)">Conditional</animation>
-		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),55)">Conditional</animation>
-		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),60)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),65) | !Skin.String(Background_Low_Threshold)">Conditional</animation>
-		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),70)">Conditional</animation>
-		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),75)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),80)">Conditional</animation>
-		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),85)">Conditional</animation>
-		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),90)">Conditional</animation>
-		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),95)">Conditional</animation>
 	</include>
 
 	<include name="skinsettings_Background_High_Threshold_Button_Conditions">
@@ -214,6 +130,74 @@
 		<animation effect="slide" end="22" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),15)">Conditional</animation>
 		<animation effect="slide" end="22" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),20)">Conditional</animation>
 		<animation effect="slide" end="22" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),25)">Conditional</animation>
+	</include>
+
+
+	<include name="skinsettings_Background_Low_Threshold_Button_Conditions">
+		<onleft condition="Skin.String(Background_Low_Threshold,100)">Skin.SetString(Background_Low_Threshold,95)</onleft>
+		<onleft condition="Skin.String(Background_Low_Threshold,95)">Skin.SetString(Background_Low_Threshold,90)</onleft>
+		<onleft condition="Skin.String(Background_Low_Threshold,90)">Skin.SetString(Background_Low_Threshold,85)</onleft>
+		<onleft condition="Skin.String(Background_Low_Threshold,85)">Skin.SetString(Background_Low_Threshold,80)</onleft>
+		<onleft condition="Skin.String(Background_Low_Threshold,80)">Skin.SetString(Background_Low_Threshold,75)</onleft>
+		<onleft condition="Skin.String(Background_Low_Threshold,75)">Skin.SetString(Background_Low_Threshold,70)</onleft>
+		<onleft condition="Skin.String(Background_Low_Threshold,70)">Skin.SetString(Background_Low_Threshold,65)</onleft>
+		<onleft condition="Skin.String(Background_Low_Threshold,65) | !Skin.String(Background_Low_Threshold)">Skin.SetString(Background_Low_Threshold,60)</onleft>
+		<onleft condition="Skin.String(Background_Low_Threshold,60)">Skin.SetString(Background_Low_Threshold,55)</onleft>
+		<onleft condition="Skin.String(Background_Low_Threshold,55)">Skin.SetString(Background_Low_Threshold,50)</onleft>
+		<onleft condition="Skin.String(Background_Low_Threshold,50)">Skin.SetString(Background_Low_Threshold,45)</onleft>
+		<onleft condition="Skin.String(Background_Low_Threshold,45)">Skin.SetString(Background_Low_Threshold,40)</onleft>
+		<onleft condition="Skin.String(Background_Low_Threshold,40)">Skin.SetString(Background_Low_Threshold,35)</onleft>
+		<onleft condition="Skin.String(Background_Low_Threshold,35)">Skin.SetString(Background_Low_Threshold,30)</onleft>
+		<onleft condition="Skin.String(Background_Low_Threshold,30)">Skin.SetString(Background_Low_Threshold,25)</onleft>
+		<onright condition="Skin.String(Background_Low_Threshold,25)">Skin.SetString(Background_Low_Threshold,30)</onright>
+		<onright condition="Skin.String(Background_Low_Threshold,30)">Skin.SetString(Background_Low_Threshold,35)</onright>
+		<onright condition="Skin.String(Background_Low_Threshold,35)">Skin.SetString(Background_Low_Threshold,40)</onright>
+		<onright condition="Skin.String(Background_Low_Threshold,40)">Skin.SetString(Background_Low_Threshold,45)</onright>
+		<onright condition="Skin.String(Background_Low_Threshold,45)">Skin.SetString(Background_Low_Threshold,50)</onright>
+		<onright condition="Skin.String(Background_Low_Threshold,50)">Skin.SetString(Background_Low_Threshold,55)</onright>
+		<onright condition="Skin.String(Background_Low_Threshold,55)">Skin.SetString(Background_Low_Threshold,60)</onright>
+		<onright condition="Skin.String(Background_Low_Threshold,60)">Skin.SetString(Background_Low_Threshold,65)</onright>
+		<onright condition="Skin.String(Background_Low_Threshold,65) | !Skin.String(Background_Low_Threshold)">Skin.SetString(Background_Low_Threshold,70)</onright>
+		<onright condition="Skin.String(Background_Low_Threshold,70)">Skin.SetString(Background_Low_Threshold,75)</onright>
+		<onright condition="Skin.String(Background_Low_Threshold,75)">Skin.SetString(Background_Low_Threshold,80)</onright>
+		<onright condition="Skin.String(Background_Low_Threshold,80)">Skin.SetString(Background_Low_Threshold,85)</onright>
+		<onright condition="Skin.String(Background_Low_Threshold,85)">Skin.SetString(Background_Low_Threshold,90)</onright>
+		<onright condition="Skin.String(Background_Low_Threshold,90)">Skin.SetString(Background_Low_Threshold,95)</onright>
+		<onright condition="Skin.String(Background_Low_Threshold,95)">Skin.SetString(Background_Low_Threshold,100)</onright>
+	</include>
+	<include name="skinsettings_Background_Low_Threshold_Unfocused_Slides">
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),25)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),30)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),35)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),40)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),45)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),50)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),55)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),60)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),65) | !Skin.String(Background_Low_Threshold)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),70)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),75)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),80)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),85)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),90)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),95)">Conditional</animation>
+	</include>
+	<include name="skinsettings_Background_Low_Threshold_Focused_Slides">
+		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),25)">Conditional</animation>
+		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),30)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),35)">Conditional</animation>
+		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),40)">Conditional</animation>
+		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),45)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),50)">Conditional</animation>
+		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),55)">Conditional</animation>
+		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),60)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),65) | !Skin.String(Background_Low_Threshold)">Conditional</animation>
+		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),70)">Conditional</animation>
+		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),75)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),80)">Conditional</animation>
+		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),85)">Conditional</animation>
+		<animation effect="slide" end="3" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),90)">Conditional</animation>
+		<animation effect="slide" end="4" time="0" condition="Integer.IsGreater(Skin.String(Background_Low_Threshold),95)">Conditional</animation>
 	</include>
 
 	<include name="skinsettings_Background_Opacity_Button_Conditions">
@@ -336,6 +320,21 @@
 		<animation effect="slide" end="11" time="0" condition="Integer.IsGreater(Skin.String(Music_Rating_Like_Threshold),9)">Conditional</animation>
 	</include>
 
+	<include name="skinsettings_script-upnext_Artwork_Button_Conditions">
+		<onleft condition="Skin.String(script-upnext_Artwork,Square)">Skin.SetString(script-upnext_Artwork,Fanart)</onleft>
+		<onleft condition="Skin.String(script-upnext_Artwork,Fanart) | !Skin.String(script-upnext_Artwork)">Skin.SetString(script-upnext_Artwork,Posters)</onleft>
+		<onright condition="Skin.String(script-upnext_Artwork,Posters)">Skin.SetString(script-upnext_Artwork,Fanart)</onright>
+		<onright condition="Skin.String(script-upnext_Artwork,Fanart) | !Skin.String(script-upnext_Artwork)">Skin.SetString(script-upnext_Artwork,Square)</onright>
+	</include>
+	<include name="skinsettings_script-upnext_Artwork_Unfocused_Slides">
+		<animation effect="slide" end="60" time="0" condition="Skin.String(script-upnext_Artwork,Fanart)">Conditional</animation>
+		<animation effect="slide" end="120" time="0" condition="Skin.String(script-upnext_Artwork,Square)">Conditional</animation>
+	</include>
+	<include name="skinsettings_script-upnext_Artwork_Focused_Slides">
+		<animation effect="slide" end="55" time="0" condition="Skin.String(script-upnext_Artwork,Fanart)">Conditional</animation>
+		<animation effect="slide" end="110" time="0" condition="Skin.String(script-upnext_Artwork,Square)">Conditional</animation>
+	</include>
+
 	<include name="skinsettings_Trailer_Autoplay_Interval_Button_Conditions">
 		<onleft condition="Skin.String(Trailer_Autoplay_Interval,10)">Skin.SetString(Trailer_Autoplay_Interval,9)</onleft>
 		<onleft condition="Skin.String(Trailer_Autoplay_Interval,9)">Skin.SetString(Trailer_Autoplay_Interval,8)</onleft>
@@ -383,9 +382,10 @@
 		<animation effect="slide" end="120" time="0" condition="Skin.String(visualisation_Layout,Large)">Conditional</animation>
 	</include>
 	<include name="skinsettings_visualisation_Layout_Focused_Slides">
-		<animation effect="slide" end="110" time="0" condition="Skin.String(visualisation_Layout,Large)">Conditional</animation>	
+		<animation effect="slide" end="110" time="0" condition="Skin.String(visualisation_Layout,Large)">Conditional</animation>
 	</include>
 
+	<!-- Widgets -->
 	<include name="skinsettings_Widget1_View_Button_Conditions">
 		<onleft condition="Skin.String(Widget1_View,Grid)">Skin.SetString(Widget1_View,Strip)</onleft>
 		<onleft condition="[Skin.String(Widget1_View,Strip) | !Skin.String(Widget1_View)]">Skin.SetString(Widget1_View,Showcase)</onleft>

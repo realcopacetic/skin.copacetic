@@ -1,21 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="script-upnext_Layout">
-		<param name="Title_Breadcrumb_Label" />
-		<param name="Info_Breadcrumb_Label_visible" default="false" />
-		<param name="Info_Breadcrumb_Label" />
-		<param name="use_alt_button" default="false" />
-		<param name="show_icon" default="false" />
+
+	<include name="script-upnext_Fancy_Layout">
+		<param name="height" default="180" />
 		<definition>
 			<control type="group">
 				<width>320</width>
-				<height>180</height>
+				<height>$PARAM[height]</height>
 				<right>0</right>
 				<bottom>0</bottom>
 				<control type="image">
 					<animation effect="fadediffuse" end="ff555555" time="0" condition="true">Conditional</animation>
 					<texture fallback="views/dark_grey_100.png">$VAR[script-upnext_Artwork]</texture>
 				</control>
+				<include content="Breadcrumb_Label">
+					<param name="left" value="15" />
+					<param name="right" value="15" />
+					<param name="top" value="0" />
+					<param name="align" value="center" />
+					<param name="bar" value="false" />
+					<param name="title_label" value="$PARAM[Title_Breadcrumb_Label]" />
+					<param name="title_font" value="MusicPlayer_Title" />
+					<param name="maxtitlelabelwidth" value="200" />
+					<param name="info_label" value="$VAR[Copacetic_Divider_Bold] $PARAM[Info_Breadcrumb_Label]" />
+					<param name="info_label_visible" value="$PARAM[Info_Breadcrumb_Label_visible]" />
+					<param name="info_font" value="MusicPlayer_Info" />
+					<param name="maxinfolabelwidth" value="90" />
+				</include>
+				<control type="progress" id="3014">
+					<height>6</height>
+					<bottom>0</bottom>
+					<texturebg colordiffuse="$VAR[Progress_Light_Background_Color]">views/white_100.png</texturebg>
+					<midtexture colordiffuse="$VAR[Light_Color]">views/white_100.png</midtexture>
+				</control>
+			</control>
+		</definition>
+	</include>
+
+	<include name="script-upnext_Simple_Layout">
+		<definition>
+			<control type="group">
+				<width>320</width>
+				<height>180</height>
+				<right>0</right>
+				<bottom>0</bottom>
 				<include content="Breadcrumb_Label">
 					<param name="left" value="15" />
 					<param name="right" value="15" />
@@ -30,14 +58,25 @@
 					<param name="info_font" value="MusicPlayer_Info" />
 					<param name="maxinfolabelwidth" value="90" />
 				</include>
-				<control type="progress" id="3014">
-					<visible>$PARAM[show_icon]</visible>
-					<height>6</height>
-					<bottom>0</bottom>
-					<texturebg colordiffuse="$VAR[Progress_Light_Background_Color]">views/white_100.png</texturebg>
-					<midtexture colordiffuse="$VAR[Light_Color]">views/white_100.png</midtexture>
-				</control>
 			</control>
+		</definition>
+	</include>
+
+	<include name="script-upnext_Layout">
+		<param name="Title_Breadcrumb_Label" />
+		<param name="Info_Breadcrumb_Label_visible" default="false" />
+		<param name="Info_Breadcrumb_Label" />
+		<param name="use_alt_button" default="false" />
+		<param name="show_icon" default="false" />
+		<definition>
+			<include content="script-upnext_Fancy_Layout" condition="$PARAM[show_icon] + !Skin.String(script-upnext_Artwork,Square) + !Skin.String(script-upnext_Artwork,Posters)" />
+			<include content="script-upnext_Fancy_Layout" condition="$PARAM[show_icon] + Skin.String(script-upnext_Artwork,Square)">
+				<param name="height" value="320" />
+			</include>
+			<include content="script-upnext_Fancy_Layout" condition="$PARAM[show_icon] + Skin.String(script-upnext_Artwork,Posters)">
+				<param name="height" value="480" />
+			</include>
+			<include content="script-upnext_Simple_Layout" condition="!$PARAM[show_icon]" />
 			<include content="Button_Group_Template">
 				<param name="right" value="40" />
 				<param name="bottom" value="5" />

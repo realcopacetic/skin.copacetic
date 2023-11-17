@@ -528,8 +528,11 @@
 	</variable>
 
 	<variable name="script-upnext_Artwork">
+		<value condition="Skin.String(script-upnext_Artwork,Square) + !String.IsEmpty(VideoPlayer.Offset(1).Art(tvshow.square))">$INFO[VideoPlayer.Offset(1).Art(tvshow.square)]</value>
+		<value condition="Skin.String(script-upnext_Artwork,Posters) + !String.IsEmpty(VideoPlayer.Offset(1).Art(tvshow.keyart))">$INFO[VideoPlayer.Offset(1).Art(tvshow.keyart)]</value>
+		<value condition="Skin.String(script-upnext_Artwork,Posters) + !String.IsEmpty(VideoPlayer.Offset(1).Art(tvshow.poster))">$INFO[VideoPlayer.Offset(1).Art(tvshow.poster)]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.Offset(1).Art(tvshow.fanart))">$INFO[VideoPlayer.Offset(1).Art(tvshow.fanart)]</value>
 		<value condition="!String.IsEmpty(Window.Property(fanart))">$INFO[Window.Property(fanart)]</value>
-		<value>$INFO[VideoPlayer.Offset(1).Art(fanart)]</value>
 	</variable>
 
 	<variable name="skinsettings_Themes_Screenshots">

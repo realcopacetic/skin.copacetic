@@ -783,7 +783,6 @@
 			<selected>System.AddonIsEnabled(service.upnext)</selected>
 			<visible>ControlGroup(9).HasFocus(14)</visible>
 		</control>
-		<!--
 		<include content="skinsettings_Slider_Button">
 			<param name="info" value="script-upnext_Artwork" />
 			<param name="visible" value="ControlGroup(9).HasFocus(14) + System.AddonIsEnabled(service.upnext)" />
@@ -794,7 +793,6 @@
 			<param name="id" value="1410" />
 			<param name="next" value="1411" />
 		</include>
-		-->
 		<control type="radiobutton" id="1411">
 			<description>Instantly hide progress bar on pause screen</description>
 			<label>$LOCALIZE[31455]</label>
