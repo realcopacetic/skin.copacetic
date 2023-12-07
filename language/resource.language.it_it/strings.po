@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-11-13 09:59+0000\n"
+"PO-Revision-Date: 2023-11-26 18:11+0000\n"
 "Last-Translator: Massimo Pissarello <mapi68@gmail.com>\n"
 "Language-Team: Italian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/it_it/>\n"
 "Language: it_it\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.1\n"
+"X-Generator: Weblate 5.2.1\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -464,7 +464,7 @@ msgstr "Generale"
 # /16x9/Content_Settings.xml
 msgctxt "#31500"
 msgid "Configure your Copacetic theme, menus and background artwork service."
-msgstr ""
+msgstr "Configura il tema Copacetic, i menu e gli artwork di sfondo."
 
 # /16x9/Content_Settings.xml
 # /16x9/Content.xml
@@ -568,7 +568,7 @@ msgstr "Reimposta colore di contrasto"
 # /16x9/Content_Settings.xml
 msgctxt "#31487"
 msgid "Background panel opacity (%)"
-msgstr ""
+msgstr "Opacità pannello di sfondo (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31587"
@@ -578,7 +578,7 @@ msgstr "Regola l'opacità dei pannelli di sfondo che appaiono sopra l'artwork. P
 # /16x9/Content_Settings.xml
 msgctxt "#31412"
 msgid "Recommended Kodi settings for Copacetic"
-msgstr ""
+msgstr "Impostazioni Kodi consigliate per Copacetic"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31512"
@@ -673,7 +673,7 @@ msgstr "Regola la quantità di contrasto richiesta tra lo sfondo e il colore del
 # /16x9/Content_Settings.xml
 msgctxt "#31425"
 msgid "Global"
-msgstr ""
+msgstr "Globale"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31426"
@@ -683,7 +683,7 @@ msgstr "Limita la grafica della presentazione di sfondo a..."
 # /16x9/Content_Settings.xml
 msgctxt "#31526"
 msgid "Choose to include only fanarts from the selected sections of your library in the background slideshow, or select a custom path or playlist."
-msgstr ""
+msgstr "Scegli di includere solo le fanart dalle sezioni selezionate della tua libreria nella presentazione in background oppure seleziona un percorso o una playlist personalizzati."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31427"
@@ -693,7 +693,7 @@ msgstr "Velocità della presentazione in background (secondi)"
 # /16x9/Content_Settings.xml
 msgctxt "#31527"
 msgid "Choose how quickly artwork in the slideshow should be refreshed. Default: 10 seconds"
-msgstr ""
+msgstr "Scegli la velocità con cui aggiornare la grafica nella presentazione. Impostazione predefinita: 10 secondi"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31428"
@@ -746,17 +746,17 @@ msgstr "Sfondo"
 # /16x9/Content.xml
 msgctxt "#31532"
 msgid "Customise background slideshows, brightness and panel opacity"
-msgstr ""
+msgstr "Personalizza le presentazioni di sfondo, la luminosità e l'opacità del pannello"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31433"
 msgid "Override home background with global slideshow"
-msgstr ""
+msgstr "Sostituisci lo sfondo della schermata principale con la presentazione globale"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31533"
 msgid "Use the selected global slideshow on the homescreen instead of local or skin.shortcuts slideshows"
-msgstr ""
+msgstr "Usa la presentazione globale selezionata sulla schermata iniziale anziché le presentazioni locali o skin.shortcuts"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31436"
@@ -786,7 +786,7 @@ msgstr "Imposta la luminosità dell'artwork di sfondo (%)"
 # /16x9/Content_Settings.xml
 msgctxt "#31441"
 msgid "Add movement to fullscreen artwork"
-msgstr ""
+msgstr "Aggiungi movimento alla grafica a schermo intero"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31541"
@@ -827,12 +827,12 @@ msgstr "Widget"
 # /16x9/Content_Settings.xml
 msgctxt "#31545"
 msgid "Click on a widget to expand it, use the arrows to reposition it, or select the cross to remove it. Empty widgets can be reset to skin defaults by clicking the reset button."
-msgstr ""
+msgstr "Fai clic su un widget per espanderlo, utilizza le frecce per riposizionarlo o seleziona la croce per rimuoverlo. I widget vuoti possono essere reimpostati alle impostazioni predefinite della skin facendo clic sul pulsante di reimpostazione."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31489"
 msgid "Configure widgets"
-msgstr ""
+msgstr "Configura widget"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31477"
@@ -853,7 +853,7 @@ msgstr "Quando la modalità kiosk è abilitata, tutte le opzioni di personalizza
 # /16x9/Content_Settings.xml
 msgctxt "#31488"
 msgid "Add shutdown menu shortcut to hidden views menu"
-msgstr ""
+msgstr "Aggiungi il collegamento al menu di spegnimento al menu delle visualizzazioni nascoste"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31486"
@@ -863,7 +863,7 @@ msgstr "Disabilita menu delle opzioni nascoste"
 # /16x9/Content_Settings.xml
 msgctxt "#31586"
 msgid "With koisk mode enabled, you have the option to completely disable the hidden options menu. Warning: This will limit your ability to switch between views, change sort method, filter or search."
-msgstr "Con la modalità koisk abilitata, hai la possibilità di disabilitare completamente il menu delle opzioni nascoste. Avviso: questo limiterà la capacità di passare da una visualizzazione all'altra, modificare il metodo di ordinamento, filtrare o effettuare ricerche."
+msgstr "Con la modalità kiosk abilitata, hai la possibilità di disabilitare completamente il menu delle opzioni nascoste. Avviso: questo limiterà la capacità di passare da una visualizzazione all'altra, modificare il metodo di ordinamento, filtrare o effettuare ricerche."
 
 # Views
 # /16x9/Content_Settings.xml
@@ -889,12 +889,12 @@ msgstr "Abilita visualizzazione per la finestra delle immagini"
 # /16x9/Content_Settings.xml
 msgctxt "#31449"
 msgid "Dim artwork for watched items or disabled add-ons"
-msgstr ""
+msgstr "Grafica attenuata per gli elementi guardati o gli add-on disabilitati"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31450"
 msgid "Checkmarks for watched items or enabled add-ons"
-msgstr ""
+msgstr "Segni di spunta per gli elementi guardati o gli add-on abilitati"
 
 # Customisations
 # /16x9/Content_Settings.xml
@@ -956,12 +956,12 @@ msgstr "Lettore video"
 # /16x9/Content_Settings.xml
 msgctxt "#31490"
 msgid "Enable Up Next widget during playback"
-msgstr ""
+msgstr "Abilita il widget Up Next durante la riproduzione"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31491"
 msgid "Choose artwork type to display in Up Next widget"
-msgstr ""
+msgstr "Scegli il tipo di artwprk da visualizzare nel widget Up Next"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31479"
