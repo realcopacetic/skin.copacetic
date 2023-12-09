@@ -87,7 +87,7 @@
 			<include content="Common_List_Unfocused">
 				<param name="label_left" value="90" />
 				<param name="label_maxwidth" value="900" />
-				<param name="list_icon" value="$EXP[Container_Addons_NonRepo] + !ListItem.Property(Addon.IsEnabled)" />
+				<param name="list_icon" value="$EXP[Container_Addons_NonRepo] + ListItem.Property(Addon.IsInstalled) + !ListItem.Property(Addon.IsEnabled)" />
 				<param name="list_icon_texture" value="Cross_unfocused" />
 			</include>
 		</itemlayout>
@@ -95,7 +95,7 @@
 			<include content="Common_List_Focused">
 				<param name="label_left" value="90" />
 				<param name="label_maxwidth" value="1020" />
-				<param name="list_icon" value="$EXP[Container_Addons_NonRepo] + !ListItem.Property(Addon.IsEnabled)" />
+				<param name="list_icon" value="$EXP[Container_Addons_NonRepo] + ListItem.Property(Addon.IsInstalled) + !ListItem.Property(Addon.IsEnabled)" />
 				<param name="list_icon_texture" value="Cross_focused" />
 			</include>
 		</focusedlayout>
