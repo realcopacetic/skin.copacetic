@@ -5,15 +5,15 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-11-13 06:28+0000\n"
-"Last-Translator: realcopacetic <ahekmat400@googlemail.com>\n"
+"PO-Revision-Date: 2023-12-07 13:08+0000\n"
+"Last-Translator: guiral lacotte <beretta@betterave.net>\n"
 "Language-Team: French (France) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/fr_fr/>\n"
 "Language: fr_fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.1\n"
+"X-Generator: Weblate 5.2.1\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -543,7 +543,7 @@ msgstr "Sélectionnez le thème \"Nuit\" ou \"Lumineux\". Passez d'un thème à 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31408"
 msgid "Light"
-msgstr "Légère"
+msgstr "Clair"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31409"
