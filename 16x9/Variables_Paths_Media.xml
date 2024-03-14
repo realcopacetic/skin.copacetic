@@ -32,11 +32,14 @@
 		<!-- music paths -->
 		<value condition="String.Contains(Container(3000).ListItem.Property(list),recentlyaddedalbums)">musicdb://recentlyaddedalbums/</value>
 		<value condition="String.Contains(Container(3000).ListItem.Property(list),recentlyplayedalbums)">musicdb://recentlyplayedalbums/</value>
+		<value condition="String.Contains(Container(3000).ListItem.Property(list),musicplaylists)">musicdb://artists/?albumartistsonly=true</value>
 		<value condition="String.Contains(Container(3000).ListItem.Property(list),musicdb)">musicdb://artists/?albumartistsonly=true</value>
 		<!-- video paths -->
 		<value condition="String.Contains(Container(3000).ListItem.Property(list),recentlyaddedepisodes)">videodb://recentlyaddedepisodes/</value>
+		<value condition="String.Contains(Container(3000).ListItem.Property(list),inprogresstvshows)">videodb://inprogresstvshows</value>
 		<value condition="String.Contains(Container(3000).ListItem.Property(list),tvshows)">videodb://tvshows/titles/</value>
-		<value condition="String.Contains(Container(3000).ListItem.Property(list),recentlyaddedmovies)">ideodb://recentlyaddedmovies/</value>
+		<value condition="String.Contains(Container(3000).ListItem.Property(list),recentlyaddedmovies)">videodb://recentlyaddedmovies/</value>
+		<value condition="String.Contains(Container(3000).ListItem.Property(list),sets)">videodb://movies/sets/</value>
 		<value condition="String.Contains(Container(3000).ListItem.Property(list),movies)">videodb://movies/titles/</value>
 		<!-- fallbacks -->
 		<value condition="Library.HasContent(Movies)">videodb://movies/titles/</value>

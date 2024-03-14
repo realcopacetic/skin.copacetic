@@ -16,6 +16,26 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.1.18**
+- Fixed rogue mask that was visible during Auto trailer playback https://github.com/realcopacetic/skin.copacetic/issues/105
+- Container Content change transition added when navigating files view seasons > episodes
+- Changed folder structure of secondary fontset to avoid '+' for Linux **resource.fonts.copacetic v1.0.4 required** https://github.com/realcopacetic/resource.fonts.copacetic/issues/2
+- Added support for Simplified Chinese (Inter + Notos Sans SC) **resource.fonts.copacetic v1.0.4 required** https://github.com/realcopacetic/resource.fonts.copacetic/issues/3
+- New BFI studio flag
+- Fixed logic of actor credits widget, so that it will display even if they only have 1 credit that is NOT the item currently being viewed. 
+
+
+Still to do:
+autoscroll on widgets? start on widgets? showcase 1st - spotlight (random, unwatched)
+- MYMUSICPLAYLIST EDITOR
+- Missing artwork on addons list view
+- background not updating on some addonbrowser screens
+container animation between addonbrowser levels? (All repositories or add on repository (type))
+- login background
+- Crop screensaver logo
+- Make consistent overlay on embedded videoplayer for live tv and fade it out when screensaver kicks in
+x sign on list item for .. when in addons
+
 **1.1.17**
 - Fixed bug causing dialogaddoninformation to lose focus on opening for some addons
 - Added fade effect to infoscreen thumbnail when shutdownmenu visible on top
@@ -25,25 +45,12 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Rearranged skin settings to consolidate all background settings in one screen
 - When global background slideshow is showing or live tv is playing, removed fade in/out transitions between home, addonbrowser, settings screens, tvguide and tv/radio search for a smoother experience. This required removing Ken Burns effect from these background slideshows.
 - Removed some of the unnecessary transitions between different views when navigating through addonbrowser menus
-- Fixed bug multiart bug breaking artwork for billboard view in programs
+- Fixed multiart bug breaking artwork for billboard view in programs
 - Fixed typo breaking fix for previous issue https://github.com/realcopacetic/skin.copacetic/issues/60
 - Fixed colour of volume indicator on home screen widgets when light theme selected
-- Added disabled indicator to addonbrowser for disabled addons in List and Grid views
+- Added disabled indicator to addonbrowser for disabled addons in List and Grid views, plus installed indicator for installed addons when browsing repos
 - Redesigned script-upnext widget and added options to skinsettings to enable/disable addon and choose art type.
-
-Still to do:
-black screen until first artwork fetched
-choose artwork icon dimmed
-autoscroll on widgets? start on widgets? showcase 1st
-- MYMUSICPLAYLIST EDITOR
-- Missing artwork on addons list view
-- background not updating on some addonbrowser screens
-container animation between addonbrowser levels? (All repositories or add on repository (type))
-- login background
-- Crop screensaver logo
-$EXP[Containers_Background] - is this whole thing needed still or is it just global background?
-- Make consistent overlay on embedded videoplayer for live tv and fade it out when screensaver kicks in
-
+- New studio flags for American International Pictures (AIP), Shudder, Toho, Filmnation, New World Pictures, The Ladd Company, Hammer, Animax as per request from @"loki00" https://forum.kodi.tv/showthread.php?tid=373114&page=10#:~:text=Warning%20Level%3A%200%25-,%23145,-2024%2D03%2D12
 
 
 **1.1.16**

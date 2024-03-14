@@ -84,7 +84,7 @@
 		<value condition="[String.IsEqual(Container(50).ListItem.DBType,album) | String.IsEqual(Container(50).ListItem.DBType,song)] + !String.IsEmpty(Container(50).ListItem.Art(artist.thumb))">$INFO[Container(50).ListItem.Art(artist.thumb)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
-		<value condition="!String.IsEmpty(Window(home).Property(Background_Artists))">$INFO[Window(home).Property(Background_Artists)]</value>
+		<value condition="!String.IsEmpty(Window(home).Property(Background_Artists_Fanart))">$INFO[Window(home).Property(Background_Artists_Fanart)]</value>
 	</variable>
 
 	<variable name="visualisation_Background_Texture">

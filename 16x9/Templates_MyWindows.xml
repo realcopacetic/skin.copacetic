@@ -93,8 +93,8 @@
 			</include>
 			<include content="Background_Global" condition="$EXP[Library_Has_Content]">
 				<param name="visible" value="$PARAM[visible] + !$EXP[Container_Addons_NonRepo]" />
-				<param name="fadein_animation_condition" value="![Window.Previous(home) + Skin.HasSetting(Home_Background_Override_Enabled) + String.IsEmpty(window(home).property(Home_Widget))] + !$EXP[Settings_Previous] + !Window.Previous(tvguide) + !Window.Previous(tvsearch) + !Window.Previous(radiosearch)" />
-				<param name="fadeout_animation_condition" value="![Window.Next(home) + Skin.HasSetting(Home_Background_Override_Enabled)] + !$EXP[Settings_Next] + !Window.Next(tvguide) + !Window.Next(tvsearch) + !Window.Next(radiosearch)" />
+				<param name="fadein_animation_condition" value="!$EXP[Background_FadeIn_Exceptions]" />
+				<param name="fadeout_animation_condition" value="!$EXP[Background_FadeOut_Exceptions]" />
 			</include>
 			<!-- Layer 1 -->
 			<control type="group">
@@ -184,6 +184,8 @@
 			</include>
 			<include content="Background_Global" condition="$EXP[Library_Has_Content]">
 				<param name="visible" value="$PARAM[visible] + [$EXP[Containers_Background] | Container.Content()] + !$EXP[ListView_Display_IsThumbnails] + !$EXP[GridView_IsVisible]" />
+				<param name="fadein_animation_condition" value="!$EXP[Background_FadeIn_Exceptions_music]" />
+				<param name="fadeout_animation_condition" value="!$EXP[Background_FadeOut_Exceptions_music]" />
 			</include>
 			<!-- Layer 1 -->
 			<control type="group">
@@ -343,8 +345,8 @@
 		<definition>
 			<!-- Background -->
 			<include content="Background_Global">
-				<param name="fadein_animation_condition" value="![Window.Previous(home) + Skin.HasSetting(Home_Background_Override_Enabled) + String.IsEmpty(window(home).property(Home_Widget))] + !$EXP[Settings_Previous] + ![Window.Previous(addonbrowser) + String.IsEmpty(Window(home).Property(Container_Addons_NonRepo))] + !Window.Previous(tvsearch) + !Window.Previous(radiosearch)" />
-				<param name="fadeout_animation_condition" value="![Window.Next(home) + Skin.HasSetting(Home_Background_Override_Enabled)] + !Window.Next(addonbrowser) + !$EXP[Settings_Next] + !Window.Next(tvsearch) + !Window.Next(radiosearch)" />
+				<param name="fadein_animation_condition" value="!$EXP[Background_FadeIn_Exceptions]" />
+				<param name="fadeout_animation_condition" value="!$EXP[Background_FadeOut_Exceptions]" />
 			</include>
 			<include content="Embedded_VideoPlayer">
 				<param name="visible" value="VideoPlayer.Content(livetv)" />
@@ -506,8 +508,8 @@
 		<definition>
 			<!-- Background -->
 			<include content="Background_Global">
-				<param name="fadein_animation_condition" value="![Window.Previous(home) + Skin.HasSetting(Home_Background_Override_Enabled) + String.IsEmpty(window(home).property(Home_Widget))] + !$EXP[Settings_Previous] + ![Window.Previous(addonbrowser) + String.IsEmpty(Window(home).Property(Container_Addons_NonRepo))] + !Window.Previous(tvguide)" />
-				<param name="fadeout_animation_condition" value="![Window.Next(home) + Skin.HasSetting(Home_Background_Override_Enabled)] + !Window.Next(addonbrowser) + !$EXP[Settings_Next] + !Window.Next(tvguide)" />
+				<param name="fadein_animation_condition" value="!$EXP[Background_FadeIn_Exceptions]" />
+				<param name="fadeout_animation_condition" value="!$EXP[Background_FadeOut_Exceptions]" />
 			</include>
 			<include content="Embedded_VideoPlayer">
 				<param name="visible" value="VideoPlayer.Content(livetv)" />
