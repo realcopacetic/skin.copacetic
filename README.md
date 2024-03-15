@@ -22,7 +22,8 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Changed folder structure of secondary fontset to avoid '+' for Linux **resource.fonts.copacetic v1.0.4 required** https://github.com/realcopacetic/resource.fonts.copacetic/issues/2
 - Added support for Simplified Chinese (Inter + Notos Sans SC) **resource.fonts.copacetic v1.0.4 required** https://github.com/realcopacetic/resource.fonts.copacetic/issues/3
 - New BFI studio flag
-- Fixed logic of actor credits widget, so that it will display even if they only have 1 credit that is NOT the item currently being viewed. 
+- Fixed logic of actor credits widget, so that it will display even if they only have 1 credit that is NOT the item currently being viewed.
+- New studio flags for American International Pictures (AIP), Shudder, Toho, Filmnation, New World Pictures, The Ladd Company, Hammer, Animax as per request from @"loki00" https://forum.kodi.tv/showthread.php?tid=373114&page=10#:~:text=Warning%20Level%3A%200%25-,%23145,-2024%2D03%2D12
 
 
 Still to do:
@@ -50,8 +51,6 @@ x sign on list item for .. when in addons
 - Fixed colour of volume indicator on home screen widgets when light theme selected
 - Added disabled indicator to addonbrowser for disabled addons in List and Grid views, plus installed indicator for installed addons when browsing repos
 - Redesigned script-upnext widget and added options to skinsettings to enable/disable addon and choose art type.
-- New studio flags for American International Pictures (AIP), Shudder, Toho, Filmnation, New World Pictures, The Ladd Company, Hammer, Animax as per request from @"loki00" https://forum.kodi.tv/showthread.php?tid=373114&page=10#:~:text=Warning%20Level%3A%200%25-,%23145,-2024%2D03%2D12
-
 
 **1.1.16**
 - Bug fix: removed unmatched parenthesis causing log errors
