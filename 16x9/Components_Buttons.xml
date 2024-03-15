@@ -1241,7 +1241,7 @@
 		<param name="width" default="120" />
 		<definition>
 			<include content="Check_unfocused_template_$PARAM[width]">
-				<param name="visible" value="!String.Contains(Container.FolderPath,/user/) + ListItem.Property(Addon.IsInstalled)" />
+				<param name="visible" value="!String.Contains(Container.FolderPath,/user/) + [ListItem.Property(Addon.IsInstalled) | String.Contains(ListItem.Label,Copacetic)]" />
 				<param name="color" value="$PARAM[color]" />
 				<param name="rotated" value="true" />
 				<nested />
@@ -1259,7 +1259,7 @@
 		<param name="width" default="120" />
 		<definition>
 			<include content="Check_focused_template_$PARAM[width]">
-				<param name="visible" value="!String.Contains(Container.FolderPath,/user/) + ListItem.Property(Addon.IsInstalled)" />
+				<param name="visible" value="!String.Contains(Container.FolderPath,/user/) + [ListItem.Property(Addon.IsInstalled) | String.Contains(ListItem.Label,Copacetic)]" />
 				<param name="color" value="$PARAM[color]" />
 				<param name="rotated" value="true" />
 				<nested />

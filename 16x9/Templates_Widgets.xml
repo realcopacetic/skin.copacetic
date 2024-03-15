@@ -433,7 +433,7 @@
 
 	<include name="Home_Widgets">
 		<control type="group">
-			<visible>!$EXP[Infoscreen_IsVisible]</visible>
+			<visible>!$EXP[Infoscreen_IsVisible] + !Control.HasFocus(4010)</visible>
 			<include content="Visible_Fade_Delayed_Animation" />
 			<include content="Widget_1" condition="!Skin.HasSetting(Widget1_Content_Disabled)" />
 			<include content="Widget_2" condition="!Skin.HasSetting(Widget2_Content_Disabled)" />

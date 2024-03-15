@@ -47,7 +47,7 @@
 				<param name="backing_visible" value="false" />
 				<param name="color" value="$VAR[Light_Color]" />
 				<param name="icon" value="Special_Addonbrowser_focused" />
-				<param name="visible" value="[!String.Contains(Container.FolderPath,/user/) + ListItem.Property(Addon.IsInstalled)] | [$EXP[Container_Addons_NonRepo] + String.Contains(Container.FolderPath,/user/) + ListItem.Property(Addon.IsInstalled) + !ListItem.Property(Addon.IsEnabled)]" />
+				<param name="visible" value="[!String.Contains(Container.FolderPath,/user/) + [ListItem.Property(Addon.IsInstalled) | String.Contains(ListItem.Label,Copacetic)]] | [$EXP[Container_Addons_NonRepo] + String.Contains(Container.FolderPath,/user/) + ListItem.Property(Addon.IsInstalled) + !ListItem.Property(Addon.IsEnabled)]" />
 			</include>
 		</include>
 	</include>
@@ -218,7 +218,7 @@
 				<include content="Grid_Icon" condition="Skin.HasSetting(GridView_AltWatchedStatus_Enabled) + Window.Is(videos)" />
 				<include content="Grid_Icon" condition="Skin.HasSetting(GridView_AltWatchedStatus_Enabled) + [Window.Is(addonbrowser) | Window.Is(programs)]">
 					<param name="icon" value="Special_Addonbrowser_focused" />
-					<param name="visible" value="[!String.Contains(Container.FolderPath,/user/) + ListItem.Property(Addon.IsInstalled)] | [$EXP[Container_Addons_NonRepo] + String.Contains(Container.FolderPath,/user/) + ListItem.Property(Addon.IsInstalled) + !ListItem.Property(Addon.IsEnabled)]" />
+					<param name="visible" value="[!String.Contains(Container.FolderPath,/user/) + [ListItem.Property(Addon.IsInstalled) | String.Contains(ListItem.Label,Copacetic)]] | [$EXP[Container_Addons_NonRepo] + String.Contains(Container.FolderPath,/user/) + ListItem.Property(Addon.IsInstalled) + !ListItem.Property(Addon.IsEnabled)]" />
 				</include>
 			</control>
 		</definition>

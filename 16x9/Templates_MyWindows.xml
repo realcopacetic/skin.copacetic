@@ -190,7 +190,7 @@
 			<!-- Layer 1 -->
 			<control type="group">
 				<include content="WindowOpenClose_Fade_Delayed_Animation" />
-				<visible>$PARAM[visible]</visible>
+				<visible>$PARAM[visible] + !Window.IsVisible(smartplaylisteditor)</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 				<include content="Secondary_List_Array" condition="Skin.HasSetting(Secondary_List_Enabled)" />
@@ -207,7 +207,7 @@
 			<!-- Layer 2 -->
 			<control type="group">
 				<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
-				<visible>$PARAM[visible]</visible>
+				<visible>$PARAM[visible] + !Window.IsVisible(smartplaylisteditor)</visible>
 				<include content="Visible_Fade_Delayed_Long_Animation" />
 				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 				<include content="ListView_Container" />

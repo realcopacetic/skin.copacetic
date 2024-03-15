@@ -7,7 +7,7 @@
 			<width>200</width>
 			<height>200</height>
 			<right>0</right>
-			<texture colordiffuse="black">views/white_100.png</texture>
+			<texture colordiffuse="pink">views/white_100.png</texture>
 		</control>
 		<control type="label">
 			<align>right</align>

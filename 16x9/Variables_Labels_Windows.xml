@@ -84,8 +84,8 @@
 	</variable>
 
 	<variable name="script-upnext_Label">
-		<value condition="!Integer.IsGreater(Window.Property(Episode),9)">$VAR[Window_Property_Season_Divider_Bold, , ]$INFO[Window.Property(season)]$INFO[Window.Property(episode),x0]</value>
-		<value>$VAR[Window_Property_Season_Divider_Bold, , ]$INFO[Window.Property(season)]$INFO[Window.Property(episode),x]</value>
+		<value condition="!Integer.IsGreater(Window.Property(Episode),9)">$VAR[Window_Property_Season_Divider_Bold]$INFO[Window.Property(season), ]$INFO[Window.Property(episode),x0]</value>
+		<value>$VAR[Window_Property_Season_Divider_Bold]$INFO[Window.Property(season), ]$INFO[Window.Property(episode),x]</value>
 	</variable>
 
 	<variable name="seekbar_Left_Label">

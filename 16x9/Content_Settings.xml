@@ -779,7 +779,8 @@
 		<control type="radiobutton" id="1409">
 			<description>Enable Up Next widget during playback</description>
 			<label>$LOCALIZE[31490]</label>
-			<onclick>RunScript(script.copacetic.helper,action=toggle_addon,id=service.upnext)</onclick>
+			<onclick condition="System.HasAddon(service.upnext)">RunScript(script.copacetic.helper,action=toggle_addon,id=service.upnext)</onclick>
+			<onclick condition="!System.HasAddon(service.upnext)">InstallAddon(service.upnext)</onclick>
 			<selected>System.AddonIsEnabled(service.upnext)</selected>
 			<visible>ControlGroup(9).HasFocus(14)</visible>
 		</control>

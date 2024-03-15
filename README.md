@@ -24,18 +24,18 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - New BFI studio flag
 - Fixed logic of actor credits widget, so that it will display even if they only have 1 credit that is NOT the item currently being viewed.
 - New studio flags for American International Pictures (AIP), Shudder, Toho, Filmnation, New World Pictures, The Ladd Company, Hammer, Animax as per request from @"loki00" https://forum.kodi.tv/showthread.php?tid=373114&page=10#:~:text=Warning%20Level%3A%200%25-,%23145,-2024%2D03%2D12
-
+- Simplified transitions between Windows when sharing global backgrounds to create a smoother UX feel
+- Fixed widget scrollbars not appearing on first window load for home screen or info screens
+- Simplified container transition expressions and extended transitions to addons so there is a transition between list levels (e.g. add-on browser > my add-ons > look and feel, etc)
 
 Still to do:
-autoscroll on widgets? start on widgets? showcase 1st - spotlight (random, unwatched)
-- MYMUSICPLAYLIST EDITOR
-- Missing artwork on addons list view
-- background not updating on some addonbrowser screens
-container animation between addonbrowser levels? (All repositories or add on repository (type))
+- autoscroll on widgets? start on widgets? showcase 1st - spotlight (random, unwatched)
 - login background
 - Crop screensaver logo
 - Make consistent overlay on embedded videoplayer for live tv and fade it out when screensaver kicks in
-x sign on list item for .. when in addons
+- error with pulling remote artist fanarts for background art service
+- Use art service for artist backgrounds on home screen to avoid black screens on missing artworks?
+
 
 **1.1.17**
 - Fixed bug causing dialogaddoninformation to lose focus on opening for some addons

@@ -289,6 +289,7 @@
 		<param name="dropshadow_condition" />
 		<definition>
 			<control type="group">
+				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" />
 				<top>$PARAM[top]</top>
 				<height>$PARAM[height]</height>
 				<width>$PARAM[width]</width>

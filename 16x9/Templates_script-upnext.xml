@@ -27,6 +27,7 @@
 				<control type="grouplist">
 					<top>30</top>
 					<bottom>90</bottom>
+					<width>100%</width>
 					<orientation>vertical</orientation>
 					<align>center</align>
 					<include content="Breadcrumb_Label">
@@ -37,11 +38,11 @@
 						<param name="bar" value="false" />
 						<param name="title_label" value="$PARAM[title_label]" />
 						<param name="title_font" value="MusicPlayer_Title" />
-						<param name="maxtitlelabelwidth" value="200" />
-						<param name="info_label" value="$VAR[Copacetic_Divider_Bold] $VAR[script-upnext_Label]" />
+						<param name="maxtitlelabelwidth" value="180" />
+						<param name="info_label" value="$VAR[script-upnext_Label]" />
 						<param name="info_label_visible" value="$PARAM[info_label_visible]" />
 						<param name="info_font" value="MusicPlayer_Info" />
-						<param name="maxinfolabelwidth" value="90" />
+						<param name="maxinfolabelwidth" value="140" />
 					</include>
 				</control>
 			</control>
