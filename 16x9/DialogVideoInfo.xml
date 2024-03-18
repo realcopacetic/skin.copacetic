@@ -32,6 +32,9 @@
 				<param name="itemgap" value="30" />
 				<param name="starheight" value="90" />
 			</include>
+			<include content="Infoscreen_Details">
+				<param name="visible" value="ControlGroup(3000).HasFocus(96)" />
+			</include>
 		</include>
 		<include content="Infoscreen_Furniture_Template">
 			<param name="overlay" value="!ControlGroup(3000).HasFocus + !Control.HasFocus(3205)" />

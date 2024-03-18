@@ -64,6 +64,8 @@
 				<!-- Settings transition from addonbrowser -->
 				<onfocus condition="Window.Is(addonbrowser) + $EXP[Container_Addons_NonRepo]">SetProperty(Container_Addons_NonRepo,true,home)</onfocus>
 				<onfocus condition="Window.Is(addonbrowser) + !$EXP[Container_Addons_NonRepo]">ClearProperty(Container_Addons_NonRepo,home)</onfocus>
+				<!-- Information to pass to Infoscreen -->
+				<onfocus>SetProperty(ListItem_Size,$INFO[ListItem.Size],home)</onfocus>
 			</control>
 		</definition>
 	</include>
