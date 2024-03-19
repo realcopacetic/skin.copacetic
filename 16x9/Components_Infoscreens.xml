@@ -404,58 +404,6 @@
 		</definition>
 	</include>
 
-	<include name="Infoscreen_Details_2x_Layout">
-		<param name="visible" default="true" />
-		<definition>
-			<control type="grouplist">
-				<visible>$PARAM[visible]</visible>
-				<width>100%</width>
-				<height>60</height>
-				<orientation>horizontal</orientation>
-				<align>center</align>
-				<itemgap>60</itemgap>
-				<control type="label">
-					<height>100%</height>
-					<width>375</width>
-					<label>$PARAM[label]</label>
-					<textcolor>$VAR[Light_Color]</textcolor>
-					<font>Plot_Fullscreen</font>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<height>100%</height>
-					<width>375</width>
-					<label>$PARAM[label2]</label>
-					<textcolor>$VAR[Light_Color]</textcolor>
-					<font>Keyboard_Button_-2</font>
-					<align>left</align>
-					<scroll>true</scroll>
-					<scrollspeed>50</scrollspeed>
-					<scrollsuffix> / </scrollsuffix>
-				</control>
-				<control type="label">
-					<height>100%</height>
-					<width>375</width>
-					<label>$PARAM[label3]</label>
-					<textcolor>$VAR[Light_Color]</textcolor>
-					<font>Plot_Fullscreen</font>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<height>100%</height>
-					<width>375</width>
-					<label>$PARAM[label4]</label>
-					<textcolor>$VAR[Light_Color]</textcolor>
-					<font>Keyboard_Button_-2</font>
-					<align>left</align>
-					<scroll>true</scroll>
-					<scrollspeed>50</scrollspeed>
-					<scrollsuffix> / </scrollsuffix>
-				</control>
-			</control>
-		</definition>
-	</include>
-
 	<include name="Infoscreen_Details">
 		<definition>
 			<control type="group">
@@ -472,18 +420,29 @@
 					<usecontrolcoords>false</usecontrolcoords>
 					<itemgap>0</itemgap>
 					<include content="Infoscreen_Details_Layout">
+						<param name="visible" value="!String.IsEmpty(ListItem.OriginalTitle)" />
+						<param name="label" value="Original title" />
+						<param name="label2" value="$INFO[ListItem.OriginalTitle]" />
+					</include>
+					<include content="Infoscreen_Details_Layout">
 						<param name="visible" value="!String.IsEmpty(ListItem.Tagline)" />
 						<param name="label" value="Tagline" />
 						<param name="label2" value="$INFO[ListItem.Tagline]" />
 					</include>
 					<include content="Infoscreen_Details_Layout">
-						<param name="label" value="Runtime" />
-						<param name="label2" value="$INFO[ListItem.Duration]" />
+						<param name="visible" value="!String.IsEmpty(ListItem.Country)" />
+						<param name="label" value="Country" />
+						<param name="label2" value="$INFO[ListItem.Country]" />
 					</include>
 					<include content="Infoscreen_Details_Layout">
 						<param name="visible" value="!String.IsEmpty(ListItem.Genre)" />
 						<param name="label" value="Genre" />
 						<param name="label2" value="$INFO[ListItem.Genre]" />
+					</include>
+					<include content="Infoscreen_Details_Layout">
+						<param name="visible" value="!String.IsEmpty(ListItem.Duration)" />
+						<param name="label" value="Runtime" />
+						<param name="label2" value="$INFO[ListItem.Duration]" />
 					</include>
 					<include content="Infoscreen_Details_Layout">
 						<param name="visible" value="!String.IsEmpty(ListItem.Director)" />
@@ -506,9 +465,14 @@
 						<param name="label2" value="$INFO[ListItem.Studio]" />
 					</include>
 					<include content="Infoscreen_Details_Layout">
+						<param name="visible" value="!String.IsEmpty(ListItem.DateAdded)" />
+						<param name="label" value="Added" />
+						<param name="label2" value="$INFO[ListItem.DateAdded]" />
+					</include>
+					<include content="Infoscreen_Details_Layout">
 						<param name="visible" value="!String.IsEmpty(ListItem.VideoResolution)" />
 						<param name="label" value="Video" />
-						<param name="label2" value="$VAR[Resolution_Label]$INFO[ListItem.VideoCodec, (,)]$INFO[ListItem.VideoAspect,$COMMA , AR]" />
+						<param name="label2" value="$INFO[ListItem.VideoResolution]$INFO[ListItem.VideoCodec, ]$INFO[ListItem.VideoAspect,$COMMA , AR]" />
 					</include>
 					<include content="Infoscreen_Details_Layout">
 						<param name="visible" value="!String.IsEmpty(ListItem.AudioLanguage)" />
@@ -522,7 +486,8 @@
 					</include>
 				</control>
 				<include content="Description_Label">
-					<param name="label" value="$INFO[ListItem.FilenameAndPath][CR]File added $INFO[ListItem.DateAdded]" />
+					<param name="label" value="[B]$INFO[ListItem.FilenameAndPath][/B]" />
+					<param name="align" value="center" />
 					<param name="left" value="120" />
 					<param name="right" value="120" />
 					<param name="textcolor" value="$VAR[Light_Color]" />
