@@ -383,7 +383,7 @@
 				<itemgap>60</itemgap>
 				<control type="label">
 					<height>100%</height>
-					<width>420</width>
+					<width>480</width>
 					<label>$PARAM[label]</label>
 					<textcolor>$VAR[Light_Color]</textcolor>
 					<font>Plot_Fullscreen</font>
@@ -391,8 +391,60 @@
 				</control>
 				<control type="label">
 					<height>100%</height>
-					<width>1280</width>
+					<width>1140</width>
 					<label>$PARAM[label2]</label>
+					<textcolor>$VAR[Light_Color]</textcolor>
+					<font>Keyboard_Button_-2</font>
+					<align>left</align>
+					<scroll>true</scroll>
+					<scrollspeed>50</scrollspeed>
+					<scrollsuffix> / </scrollsuffix>
+				</control>
+			</control>
+		</definition>
+	</include>
+
+	<include name="Infoscreen_Details_2x_Layout">
+		<param name="visible" default="true" />
+		<definition>
+			<control type="grouplist">
+				<visible>$PARAM[visible]</visible>
+				<width>100%</width>
+				<height>60</height>
+				<orientation>horizontal</orientation>
+				<align>center</align>
+				<itemgap>60</itemgap>
+				<control type="label">
+					<height>100%</height>
+					<width>375</width>
+					<label>$PARAM[label]</label>
+					<textcolor>$VAR[Light_Color]</textcolor>
+					<font>Plot_Fullscreen</font>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<height>100%</height>
+					<width>375</width>
+					<label>$PARAM[label2]</label>
+					<textcolor>$VAR[Light_Color]</textcolor>
+					<font>Keyboard_Button_-2</font>
+					<align>left</align>
+					<scroll>true</scroll>
+					<scrollspeed>50</scrollspeed>
+					<scrollsuffix> / </scrollsuffix>
+				</control>
+				<control type="label">
+					<height>100%</height>
+					<width>375</width>
+					<label>$PARAM[label3]</label>
+					<textcolor>$VAR[Light_Color]</textcolor>
+					<font>Plot_Fullscreen</font>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<height>100%</height>
+					<width>375</width>
+					<label>$PARAM[label4]</label>
 					<textcolor>$VAR[Light_Color]</textcolor>
 					<font>Keyboard_Button_-2</font>
 					<align>left</align>
@@ -406,46 +458,78 @@
 
 	<include name="Infoscreen_Details">
 		<definition>
-			<control type="grouplist">
+			<control type="group">
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
-				<width>1680</width>
-				<centerleft>50%</centerleft>
-				<height>600</height>
-				<centertop>50%</centertop>
-				<scrolltime tween="sine" easing="inout">360</scrolltime>
-				<orientation>vertical</orientation>
-				<align>center</align>
-				<usecontrolcoords>false</usecontrolcoords>
-				<itemgap>0</itemgap>
-				<include content="Infoscreen_Details_Layout">
-					<param name="label" value="Filename" />
-					<param name="label2" value="$INFO[ListItem.FileNameAndPath]" />
-				</include>
-				<include content="Infoscreen_Details_Layout">
-					<param name="label" value="Size" />
-					<param name="label2" value="$INFO[Window(home).Property(ListItem_Size)]" />
-				</include>
-				<include content="Infoscreen_Details_Layout">
-					<param name="label" value="Date added" />
-					<param name="label2" value="$INFO[ListItem.DateAdded]" />
-				</include>
-				<include content="Infoscreen_Details_Layout">
-					<param name="label" value="Resolution" />
-					<param name="label2" value="$INFO[ListItem.VideoResolution]" />
-				</include>
-				<include content="Infoscreen_Details_Layout">
-					<param name="label" value="Codec" />
-					<param name="label2" value="$INFO[ListItem.VideoCodec]" />
-				</include>
-				<include content="Infoscreen_Details_Layout">
-					<param name="label" value="Aspect" />
-					<param name="label2" value="$INFO[ListItem.VideoAspect]" />
-				</include>
-				<include content="Infoscreen_Details_Layout">
-					<param name="visible" value="!String.IsEmpty(ListItem.Set)" />
-					<param name="label" value="Set" />
-					<param name="label2" value="$INFO[ListItem.Set]" />
+				<control type="grouplist">
+					<width>1680</width>
+					<centerleft>50%</centerleft>
+					<height>100%</height>
+					<centertop>50%</centertop>
+					<scrolltime tween="sine" easing="inout">360</scrolltime>
+					<orientation>vertical</orientation>
+					<align>center</align>
+					<usecontrolcoords>false</usecontrolcoords>
+					<itemgap>0</itemgap>
+					<include content="Infoscreen_Details_Layout">
+						<param name="visible" value="!String.IsEmpty(ListItem.Tagline)" />
+						<param name="label" value="Tagline" />
+						<param name="label2" value="$INFO[ListItem.Tagline]" />
+					</include>
+					<include content="Infoscreen_Details_Layout">
+						<param name="label" value="Runtime" />
+						<param name="label2" value="$INFO[ListItem.Duration]" />
+					</include>
+					<include content="Infoscreen_Details_Layout">
+						<param name="visible" value="!String.IsEmpty(ListItem.Genre)" />
+						<param name="label" value="Genre" />
+						<param name="label2" value="$INFO[ListItem.Genre]" />
+					</include>
+					<include content="Infoscreen_Details_Layout">
+						<param name="visible" value="!String.IsEmpty(ListItem.Director)" />
+						<param name="label" value="Director" />
+						<param name="label2" value="$INFO[ListItem.Director]" />
+					</include>
+					<include content="Infoscreen_Details_Layout">
+						<param name="visible" value="!String.IsEmpty(ListItem.Writer)" />
+						<param name="label" value="Writer" />
+						<param name="label2" value="$INFO[ListItem.Writer]" />
+					</include>
+					<include content="Infoscreen_Details_Layout">
+						<param name="visible" value="!String.IsEmpty(ListItem.Set)" />
+						<param name="label" value="Set" />
+						<param name="label2" value="$INFO[ListItem.Set]" />
+					</include>
+					<include content="Infoscreen_Details_Layout">
+						<param name="visible" value="!String.IsEmpty(ListItem.Studio)" />
+						<param name="label" value="Studio" />
+						<param name="label2" value="$INFO[ListItem.Studio]" />
+					</include>
+					<include content="Infoscreen_Details_Layout">
+						<param name="visible" value="!String.IsEmpty(ListItem.VideoResolution)" />
+						<param name="label" value="Video" />
+						<param name="label2" value="$VAR[Resolution_Label]$INFO[ListItem.VideoCodec, (,)]$INFO[ListItem.VideoAspect,$COMMA , AR]" />
+					</include>
+					<include content="Infoscreen_Details_Layout">
+						<param name="visible" value="!String.IsEmpty(ListItem.AudioLanguage)" />
+						<param name="label" value="Audio" />
+						<param name="label2" value="$VAR[AudioChannels_Label] $INFO[ListItem.AudioCodec]$INFO[ListItem.AudioLanguage,$COMMA ]" />
+					</include>
+					<include content="Infoscreen_Details_Layout">
+						<param name="visible" value="!String.IsEmpty(ListItem.SubtitleLanguage)" />
+						<param name="label" value="Subtitles" />
+						<param name="label2" value="$INFO[ListItem.Property(SubtitleLanguage.1)]$INFO[ListItem.Property(SubtitleLanguage.2), / ]$INFO[ListItem.Property(SubtitleLanguage.3), / ]$INFO[ListItem.Property(SubtitleLanguage.4), / ]$INFO[ListItem.Property(SubtitleLanguage.5), / ]$INFO[ListItem.Property(SubtitleLanguage.6), / ]" />
+					</include>
+				</control>
+				<include content="Description_Label">
+					<param name="label" value="$INFO[ListItem.FilenameAndPath][CR]File added $INFO[ListItem.DateAdded]" />
+					<param name="left" value="120" />
+					<param name="right" value="120" />
+					<param name="textcolor" value="$VAR[Light_Color]" />
+					<param name="haspath" value="true" />
+					<scroll>true</scroll>
+					<scrollspeed>50</scrollspeed>
+					<scrollsuffix> / </scrollsuffix>
 				</include>
 			</control>
 		</definition>

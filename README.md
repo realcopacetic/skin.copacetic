@@ -16,6 +16,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.1.20**
+- x
+
 **1.1.18-19**
 - Fixed rogue mask that was visible during Auto trailer playback https://github.com/realcopacetic/skin.copacetic/issues/105
 - Container Content change transition added when navigating files view seasons > episodes
@@ -29,9 +32,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Simplified container transition expressions and extended transitions to addons so there is a transition between list levels (e.g. add-on browser > my add-ons > look and feel, etc)
 
 Still to do:
-- autoscroll on widgets? start on widgets? showcase 1st - spotlight (random, unwatched)
 - login background
-- Crop screensaver logo
 - Make consistent overlay on embedded videoplayer for live tv and fade it out when screensaver kicks in
 - error with pulling remote artist fanarts for background art service
 - Use art service for artist backgrounds on home screen to avoid black screens on missing artworks?
@@ -50,7 +51,7 @@ Still to do:
 - Fixed typo breaking fix for previous issue https://github.com/realcopacetic/skin.copacetic/issues/60
 - Fixed colour of volume indicator on home screen widgets when light theme selected
 - Added disabled indicator to addonbrowser for disabled addons in List and Grid views, plus installed indicator for installed addons when browsing repos
-- Redesigned script-upnext widget and added options to skinsettings to enable/disable addon and choose art type.
+- Redesigned script-upnext widget and added options to skinsettings to enable/disable addon and choose art type. https://github.com/realcopacetic/skin.copacetic/issues/102
 
 **1.1.16**
 - Bug fix: removed unmatched parenthesis causing log errors
