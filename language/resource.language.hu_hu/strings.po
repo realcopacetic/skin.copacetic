@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-11-03 12:11+0000\n"
+"PO-Revision-Date: 2023-12-12 14:12+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Hungarian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/hu_hu/>\n"
 "Language: hu_hu\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.1\n"
+"X-Generator: Weblate 5.2.1\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -626,6 +626,21 @@ msgid "Reset all menus"
 msgstr ""
 
 # /16x9/Content_Settings.xml
+msgctxt "#31492"
+msgid "Enable home shortcut in Shutdown menu"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31493"
+msgid "Enable theme switcher shortcut in Shutdown menu"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31494"
+msgid "Enable LibreELEC menu shortcut in Shutdown menu"
+msgstr ""
+
+# /16x9/Content_Settings.xml
 msgctxt "#31420"
 msgid "Background service"
 msgstr ""
@@ -673,7 +688,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31425"
 msgid "Global"
-msgstr ""
+msgstr "Általános"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31426"

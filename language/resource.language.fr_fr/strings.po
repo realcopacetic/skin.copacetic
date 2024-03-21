@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-12-07 13:08+0000\n"
-"Last-Translator: guiral lacotte <beretta@betterave.net>\n"
+"PO-Revision-Date: 2023-12-12 14:12+0000\n"
+"Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: French (France) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/fr_fr/>\n"
 "Language: fr_fr\n"
 "MIME-Version: 1.0\n"
@@ -543,7 +543,7 @@ msgstr "Sélectionnez le thème \"Nuit\" ou \"Lumineux\". Passez d'un thème à 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31408"
 msgid "Light"
-msgstr "Clair"
+msgstr "Légère"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31409"
@@ -626,6 +626,21 @@ msgid "Reset all menus"
 msgstr "Réinitialiser tous les menus"
 
 # /16x9/Content_Settings.xml
+msgctxt "#31492"
+msgid "Enable home shortcut in Shutdown menu"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31493"
+msgid "Enable theme switcher shortcut in Shutdown menu"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31494"
+msgid "Enable LibreELEC menu shortcut in Shutdown menu"
+msgstr ""
+
+# /16x9/Content_Settings.xml
 msgctxt "#31420"
 msgid "Background service"
 msgstr "Service d'arrière-plan"
@@ -673,7 +688,7 @@ msgstr "Ajustez le niveau de contraste requis entre l'arrière-plan et la couleu
 # /16x9/Content_Settings.xml
 msgctxt "#31425"
 msgid "Global"
-msgstr ""
+msgstr "Global"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31426"

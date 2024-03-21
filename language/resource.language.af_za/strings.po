@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-11-16 15:18+0000\n"
+"PO-Revision-Date: 2024-01-18 09:47+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Afrikaans (South Africa) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/af_za/>\n"
 "Language: af_za\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.1\n"
+"X-Generator: Weblate 5.3\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -626,6 +626,21 @@ msgid "Reset all menus"
 msgstr ""
 
 # /16x9/Content_Settings.xml
+msgctxt "#31492"
+msgid "Enable home shortcut in Shutdown menu"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31493"
+msgid "Enable theme switcher shortcut in Shutdown menu"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31494"
+msgid "Enable LibreELEC menu shortcut in Shutdown menu"
+msgstr ""
+
+# /16x9/Content_Settings.xml
 msgctxt "#31420"
 msgid "Background service"
 msgstr ""
@@ -1200,7 +1215,7 @@ msgstr "Oudio kanale"
 # /16x9/Content.xml
 msgctxt "#31610"
 msgid "Audio bitrate"
-msgstr ""
+msgstr "Oudio bis tempo"
 
 # /16x9/Content.xml
 msgctxt "#31611"
@@ -1230,7 +1245,7 @@ msgstr "Skerm resolusie"
 # /16x9/Content.xml
 msgctxt "#31616"
 msgid "System rendering speed"
-msgstr ""
+msgstr "Stelsel teken spoed"
 
 # /16x9/Content.xml
 msgctxt "#31617"
@@ -1245,7 +1260,7 @@ msgstr "Stelsel CPU gebruik"
 # /16x9/DialogPlayerProcessInfo.xml
 msgctxt "#31619"
 msgid "PVR"
-msgstr ""
+msgstr "PVR"
 
 # /16x9/DialogPlayerProcessInfo.xml
 msgctxt "#31620"
