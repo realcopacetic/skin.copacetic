@@ -17,8 +17,13 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ### Changelog
 ---
 **1.1.20**
-- Added additional details to info screens for local movies and episodes. Access 'Details' tab by pressing left on the infoscreen menu.https://github.com/realcopacetic/skin.copacetic/issues/116
+- Added additional details to info screens for local movies and episodes. Access 'Details' tab by pressing left on the infoscreen menu.
+https://github.com/realcopacetic/skin.copacetic/issues/116
 https://github.com/realcopacetic/skin.copacetic/issues/115
+- Added option to disable hardcoded shutdownmenu items (Home, Light/Night, LibreELEC) in skin settings under Copacetic > General > Menus https://github.com/realcopacetic/skin.copacetic/issues/121
+- Added new LibreELEC shortcut in skin settings under Copacetic > General > Menus https://github.com/realcopacetic/skin.copacetic/issues/121
+- New studio flags for Ascot Elite Entertainment, Gravitas Ventures, Hanway Films, IM Global, Open Road, RankinBass, Screen Media, Toei, Toei Animation, Vertical, Well Go USA https://github.com/realcopacetic/skin.copacetic/issues/119
+
 Still to do:
 - login background
 - Make consistent overlay on embedded videoplayer for live tv and fade it out when screensaver kicks in

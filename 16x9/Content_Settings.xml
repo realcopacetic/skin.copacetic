@@ -272,63 +272,90 @@
 			<label>$LOCALIZE[31416]</label>
 		</control>
 		<control type="button" id="1008">
+			<description>LibreELEC</description>
+			<visible>ControlGroup(9).HasFocus(10) + System.AddonIsEnabled(service.libreelec.settings)</visible>
+			<label>LibreELEC</label>
+			<onclick>RunAddon(service.libreelec.settings)</onclick>
+		</control>
+		<control type="button" id="1009">
 			<description>Home menu</description>
 			<visible>ControlGroup(9).HasFocus(10)</visible>
 			<label>$LOCALIZE[31417]</label>
 			<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
 		</control>
-		<control type="button" id="1009">
+		<control type="button" id="1010">
 			<description>Shutdown menu</description>
 			<visible>ControlGroup(9).HasFocus(10)</visible>
 			<label>$LOCALIZE[31418]</label>
 			<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=shutdownmenu)</onclick>
 		</control>
-		<control type="button" id="1010">
+		<control type="radiobutton" id="1011">
+			<description>- Enable home shortcut in Shutdown menu</description>
+			<visible>ControlGroup(9).HasFocus(10)</visible>
+			<label>- $LOCALIZE[31492]</label>
+			<onclick>Skin.ToggleSetting(Quick_Home_Disabled)</onclick>
+			<selected>!Skin.HasSetting(Quick_Home_Disabled)</selected>
+		</control>
+		<control type="radiobutton" id="1012">
+			<description>- Enable theme switcher shortcut in Shutdown menu</description>
+			<visible>ControlGroup(9).HasFocus(10)</visible>
+			<label>- $LOCALIZE[31493]</label>
+			<onclick>Skin.ToggleSetting(Quick_Theme_Switcher_Disabled)</onclick>
+			<selected>!Skin.HasSetting(Quick_Theme_Switcher_Disabled)</selected>
+		</control>
+		<control type="radiobutton" id="1013">
+			<description>- Enable LibreELEC menu shortcut in Shutdown menu</description>
+			<visible>ControlGroup(9).HasFocus(10) + System.AddonIsEnabled(service.libreelec.settings)</visible>
+			<label>- $LOCALIZE[31494]</label>
+			<onclick>Skin.ToggleSetting(Quick_LibreELEC_Menu_Disabled)</onclick>
+			<selected>!Skin.HasSetting(Quick_LibreELEC_Menu_Disabled)</selected>
+		</control>
+		<control type="button" id="1014">
 			<description>Reset menus</description>
 			<visible>ControlGroup(9).HasFocus(10)</visible>
 			<label>$LOCALIZE[31419]</label>
 			<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
 		</control>
-		<control type="label" id="1011">
+		<control type="label" id="1015">
 			<description>Artwork</description>
 			<visible>ControlGroup(9).HasFocus(10)</visible>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[39123]</label>
 		</control>
-		<control type="image" id="1012">
+		<control type="image" id="1016">
 			<description>Prefer keyart screenshot</description>
 			<visible>ControlGroup(9).HasFocus(10)</visible>
 			<include content="skinsettings_Detfault_Image" />
 			<texture>$VAR[skinsettings_Prefer_Keyart_Screenshots]</texture>
 		</control>
-		<control type="radiobutton" id="1013">
+		<control type="radiobutton" id="1017">
 			<description>Prefer keyart for poster views</description>
 			<label>$LOCALIZE[31428]</label>
 			<onclick>Skin.ToggleSetting(Prefer_Keyart)</onclick>
 			<selected>Skin.HasSetting(Prefer_Keyart)</selected>
 			<visible>ControlGroup(9).HasFocus(10)</visible>
 		</control>
-		<control type="image" id="1015">
+		<control type="image" id="1018">
 			<description>Themes screenshot</description>
 			<visible>ControlGroup(9).HasFocus(10)</visible>
 			<include content="skinsettings_Detfault_Image" />
 			<texture>$VAR[skinsettings_Clearlogo_Cropper_Screenshots]</texture>
 		</control>
-		<control type="radiobutton" id="1016">
-			<description>Crop clearlogos</description>
+		<control type="radiobutton" id="1019">
+			<description>Enabled clearlogo cropper</description>
 			<visible>ControlGroup(9).HasFocus(10)</visible>
 			<label>$LOCALIZE[31421]</label>
 			<onclick>Skin.ToggleSetting(Crop_Clearlogos)</onclick>
 			<selected>Skin.HasSetting(Crop_Clearlogos)</selected>
 		</control>
-		<control type="button" id="1017">
+		<control type="button" id="1020">
 			<description>Clear cache</description>
 			<visible>ControlGroup(9).HasFocus(10) + System.AddonIsEnabled(script.copacetic.helper)</visible>
 			<label>- $LOCALIZE[31422]</label>
 			<label2>$INFO[Window(home).Property(Addon_Data_Folder_Size)]</label2>
 			<onclick condition="!String.Contains(Window(home).Property(Addon_Data_Folder_Size),bytes)">RunScript(script.copacetic.helper,action=clear_cache)</onclick>
 		</control>
-		<control type="radiobutton" id="1018">
+		<control type="radiobutton" id="1021">
 			<description>Colorise media flags</description>
 			<visible>ControlGroup(9).HasFocus(10)</visible>
 			<visible>Skin.HasSetting(Crop_Clearlogos)</visible>
@@ -343,8 +370,8 @@
 			<param name="label" value="- $LOCALIZE[31424]" />
 			<param name="label2" value="$INFO[Skin.String(Background_Low_Threshold)]$INFO[Skin.String(Background_High_Threshold), - ]" />
 			<param name="category" value="10" />
-			<param name="previous" value="1018" />
-			<param name="id" value="1019" />
+			<param name="previous" value="1021" />
+			<param name="id" value="1022" />
 			<param name="next" value="1001" />
 		</include>
 
@@ -546,7 +573,7 @@
 			<label>$LOCALIZE[31488]</label>
 			<onclick>Skin.ToggleSetting(shutdownmenu_Shortcut)</onclick>
 			<selected>Skin.HasSetting(shutdownmenu_Shortcut)</selected>
-		</control> 
+		</control>
 		<control type="label" id="1341">
 			<description>List</description>
 			<visible>ControlGroup(9).HasFocus(13)</visible>

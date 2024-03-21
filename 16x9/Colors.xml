@@ -407,7 +407,7 @@
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Background_Low_Threshold_Button_Textcolor">
-		<value condition="Control.HasFocus(10190) | Control.HasFocus(10191) | Control.HasFocus(10192)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(10220) | Control.HasFocus(10221) | Control.HasFocus(10222)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Background_Opacity_Button_Textcolor">
