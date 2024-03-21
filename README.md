@@ -17,7 +17,13 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ### Changelog
 ---
 **1.1.20**
-- x
+- Added additional details to info screens for local movies and episodes. Access 'Details' tab by pressing left on the infoscreen menu.https://github.com/realcopacetic/skin.copacetic/issues/116
+https://github.com/realcopacetic/skin.copacetic/issues/115
+Still to do:
+- login background
+- Make consistent overlay on embedded videoplayer for live tv and fade it out when screensaver kicks in
+- error with pulling remote artist fanarts for background art service
+- Use art service for artist backgrounds on home screen to avoid black screens on missing artworks?
 
 **1.1.18-19**
 - Fixed rogue mask that was visible during Auto trailer playback https://github.com/realcopacetic/skin.copacetic/issues/105
@@ -30,13 +36,6 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Simplified transitions between Windows when sharing global backgrounds to create a smoother UX feel
 - Fixed widget scrollbars not appearing on first window load for home screen or info screens
 - Simplified container transition expressions and extended transitions to addons so there is a transition between list levels (e.g. add-on browser > my add-ons > look and feel, etc)
-
-Still to do:
-- login background
-- Make consistent overlay on embedded videoplayer for live tv and fade it out when screensaver kicks in
-- error with pulling remote artist fanarts for background art service
-- Use art service for artist backgrounds on home screen to avoid black screens on missing artworks?
-
 
 **1.1.17**
 - Fixed bug causing dialogaddoninformation to lose focus on opening for some addons

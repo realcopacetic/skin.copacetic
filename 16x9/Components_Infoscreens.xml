@@ -419,78 +419,75 @@
 					<align>center</align>
 					<usecontrolcoords>false</usecontrolcoords>
 					<itemgap>0</itemgap>
-					<include content="Infoscreen_Details_Layout">
-						<param name="visible" value="!String.IsEmpty(ListItem.OriginalTitle)" />
-						<param name="label" value="Original title" />
+					<include content="Infoscreen_Details_Layout" condition="!String.IsEqual(ListItem.OriginalTitle,ListItem.Title) + !String.IsEmpty(ListItem.OriginalTitle)">
+						<param name="label" value="$LOCALIZE[20376]" />
 						<param name="label2" value="$INFO[ListItem.OriginalTitle]" />
 					</include>
-					<include content="Infoscreen_Details_Layout">
-						<param name="visible" value="!String.IsEmpty(ListItem.Tagline)" />
-						<param name="label" value="Tagline" />
+					<include content="Infoscreen_Details_Layout" condition="!String.IsEmpty(ListItem.TVShowTitle)">
+						<param name="label" value="$LOCALIZE[20359]" />
+						<param name="label2" value="$INFO[ListItem.TVShowTitle]$VAR[SeasonEpisode_Label, ]" />
+					</include>
+					<include content="Infoscreen_Details_Layout" condition="!String.IsEmpty(ListItem.Tagline)">
+						<param name="label" value="$LOCALIZE[202]" />
 						<param name="label2" value="$INFO[ListItem.Tagline]" />
 					</include>
-					<include content="Infoscreen_Details_Layout">
-						<param name="visible" value="!String.IsEmpty(ListItem.Country)" />
-						<param name="label" value="Country" />
-						<param name="label2" value="$INFO[ListItem.Country]" />
-					</include>
-					<include content="Infoscreen_Details_Layout">
-						<param name="visible" value="!String.IsEmpty(ListItem.Genre)" />
-						<param name="label" value="Genre" />
+					<include content="Infoscreen_Details_Layout" condition="!String.IsEmpty(ListItem.Genre)">
+						<param name="label" value="$VAR[Genre_Label]" />
 						<param name="label2" value="$INFO[ListItem.Genre]" />
 					</include>
-					<include content="Infoscreen_Details_Layout">
-						<param name="visible" value="!String.IsEmpty(ListItem.Duration)" />
-						<param name="label" value="Runtime" />
+					<include content="Infoscreen_Details_Layout" condition="!String.IsEmpty(ListItem.Country)">
+						<param name="label" value="$LOCALIZE[574]" />
+						<param name="label2" value="$INFO[ListItem.Country]" />
+					</include>
+					<include content="Infoscreen_Details_Layout" condition="!String.IsEmpty(ListItem.Premiered)">
+						<param name="label" value="$LOCALIZE[20473]" />
+						<param name="label2" value="$INFO[ListItem.Premiered]" />
+					</include>
+					<include content="Infoscreen_Details_Layout" condition="!String.IsEmpty(ListItem.Duration)">
+						<param name="label" value="$LOCALIZE[2050]" />
 						<param name="label2" value="$INFO[ListItem.Duration]" />
 					</include>
-					<include content="Infoscreen_Details_Layout">
-						<param name="visible" value="!String.IsEmpty(ListItem.Director)" />
-						<param name="label" value="Director" />
+					<include content="Infoscreen_Details_Layout" condition="!String.IsEmpty(ListItem.Director)">
+						<param name="label" value="$LOCALIZE[20339]" />
 						<param name="label2" value="$INFO[ListItem.Director]" />
 					</include>
-					<include content="Infoscreen_Details_Layout">
-						<param name="visible" value="!String.IsEmpty(ListItem.Writer)" />
-						<param name="label" value="Writer" />
+					<include content="Infoscreen_Details_Layout" condition="!String.IsEmpty(ListItem.Writer)">
+						<param name="label" value="$LOCALIZE[20417]" />
 						<param name="label2" value="$INFO[ListItem.Writer]" />
 					</include>
-					<include content="Infoscreen_Details_Layout">
-						<param name="visible" value="!String.IsEmpty(ListItem.Set)" />
-						<param name="label" value="Set" />
+					<include content="Infoscreen_Details_Layout" condition="!String.IsEmpty(ListItem.Set)">
+						<param name="label" value="$LOCALIZE[20457]" />
 						<param name="label2" value="$INFO[ListItem.Set]" />
 					</include>
-					<include content="Infoscreen_Details_Layout">
-						<param name="visible" value="!String.IsEmpty(ListItem.Studio)" />
-						<param name="label" value="Studio" />
+					<include content="Infoscreen_Details_Layout" condition="!String.IsEmpty(ListItem.Studio)">
+						<param name="label" value="$LOCALIZE[572]" />
 						<param name="label2" value="$INFO[ListItem.Studio]" />
 					</include>
-					<include content="Infoscreen_Details_Layout">
-						<param name="visible" value="!String.IsEmpty(ListItem.DateAdded)" />
-						<param name="label" value="Added" />
+					<include content="Infoscreen_Details_Layout" condition="!String.IsEmpty(ListItem.VideoResolution)">
+						<param name="label" value="$LOCALIZE[157]" />
+						<param name="label2" value="$INFO[ListItem.VideoResolution][UPPERCASE]$INFO[ListItem.VideoCodec, ]$INFO[ListItem.HDRType, ][/UPPERCASE]$INFO[ListItem.VideoAspect,$COMMA , AR]" />
+					</include>
+					<include content="Infoscreen_Details_Layout" condition="!String.IsEmpty(ListItem.AudioLanguage)">
+						<param name="label" value="$LOCALIZE[292]" />
+						<param name="label2" value="$VAR[AudioCodec_Label] $VAR[AudioChannels_Label][UPPERCASE]$INFO[ListItem.AudioLanguage,$COMMA ][/UPPERCASE]" />
+					</include>
+					<include content="Infoscreen_Details_Layout" condition="!String.IsEmpty(ListItem.SubtitleLanguage)">
+						<param name="label" value="$LOCALIZE[287]" />
+						<param name="label2" value="[UPPERCASE]$INFO[ListItem.Property(SubtitleLanguage.1)]$INFO[ListItem.Property(SubtitleLanguage.2), / ]$INFO[ListItem.Property(SubtitleLanguage.3), / ]$INFO[ListItem.Property(SubtitleLanguage.4), / ]$INFO[ListItem.Property(SubtitleLanguage.5), / ]$INFO[ListItem.Property(SubtitleLanguage.6), / ][/UPPERCASE]" />
+					</include>
+					<include content="Infoscreen_Details_Layout" condition="!String.IsEmpty(ListItem.DateAdded)">
+						<param name="label" value="$LOCALIZE[570]" />
 						<param name="label2" value="$INFO[ListItem.DateAdded]" />
-					</include>
-					<include content="Infoscreen_Details_Layout">
-						<param name="visible" value="!String.IsEmpty(ListItem.VideoResolution)" />
-						<param name="label" value="Video" />
-						<param name="label2" value="$INFO[ListItem.VideoResolution]$INFO[ListItem.VideoCodec, ]$INFO[ListItem.VideoAspect,$COMMA , AR]" />
-					</include>
-					<include content="Infoscreen_Details_Layout">
-						<param name="visible" value="!String.IsEmpty(ListItem.AudioLanguage)" />
-						<param name="label" value="Audio" />
-						<param name="label2" value="$VAR[AudioChannels_Label] $INFO[ListItem.AudioCodec]$INFO[ListItem.AudioLanguage,$COMMA ]" />
-					</include>
-					<include content="Infoscreen_Details_Layout">
-						<param name="visible" value="!String.IsEmpty(ListItem.SubtitleLanguage)" />
-						<param name="label" value="Subtitles" />
-						<param name="label2" value="$INFO[ListItem.Property(SubtitleLanguage.1)]$INFO[ListItem.Property(SubtitleLanguage.2), / ]$INFO[ListItem.Property(SubtitleLanguage.3), / ]$INFO[ListItem.Property(SubtitleLanguage.4), / ]$INFO[ListItem.Property(SubtitleLanguage.5), / ]$INFO[ListItem.Property(SubtitleLanguage.6), / ]" />
 					</include>
 				</control>
 				<include content="Description_Label">
-					<param name="label" value="[B]$INFO[ListItem.FilenameAndPath][/B]" />
+					<param name="label" value="$INFO[ListItem.FilenameAndPath]" />
 					<param name="align" value="center" />
-					<param name="left" value="120" />
-					<param name="right" value="120" />
+					<param name="left" value="60" />
+					<param name="right" value="60" />
+					<param name="height" value="120" />
 					<param name="textcolor" value="$VAR[Light_Color]" />
+					<param name="font" value="Grid_Info" />
 					<param name="haspath" value="true" />
 					<scroll>true</scroll>
 					<scrollspeed>50</scrollspeed>

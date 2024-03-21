@@ -32,7 +32,7 @@
 				<param name="itemgap" value="30" />
 				<param name="starheight" value="90" />
 			</include>
-			<include content="Infoscreen_Details">
+			<include content="Infoscreen_Details" condition="Integer.IsGreater(ListItem.DBID,0) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode)]">
 				<param name="visible" value="ControlGroup(3000).HasFocus(96)" />
 			</include>
 		</include>

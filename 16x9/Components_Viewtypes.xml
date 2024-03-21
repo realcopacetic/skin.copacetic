@@ -807,6 +807,7 @@
 		<param name="type" default="label" />
 		<param name="visible" default="true" />
 		<param name="textcolor" default="$VAR[Breadcrumb_Label_Color]" />
+		<param name="font" default="Description" />
 		<param name="label" default="" />
 		<param name="left" default="150" />
 		<param name="right" default="240" />
@@ -826,7 +827,7 @@
 				<label>$PARAM[label]</label>
 				<align>$PARAM[align]</align>
 				<aligny>$PARAM[aligny]</aligny>
-				<font>Description</font>
+				<font>$PARAM[font]</font>
 				<textcolor>$PARAM[textcolor]</textcolor>
 				<haspath>$PARAM[haspath]</haspath>
 				<nested />

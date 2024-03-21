@@ -132,6 +132,7 @@
 		</control>
 		<control type="button" id="96">
 			<description>Details</description>
+			<visible>Integer.IsGreater(ListItem.DBID,0) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode)]</visible>
 			<include content="Hidden_Button_Template" />
 			<onunfocus>SetProperty(ResetScroll,"")</onunfocus>
 			<onfocus>SetProperty(Focused_Button,$LOCALIZE[33029],movieinformation)</onfocus>
