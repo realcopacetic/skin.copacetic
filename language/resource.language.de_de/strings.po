@@ -621,6 +621,21 @@ msgid "Reset all menus"
 msgstr ""
 
 # /16x9/Content_Settings.xml
+msgctxt "#31492"
+msgid "Enable home shortcut in Shutdown menu"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31493"
+msgid "Enable theme switcher shortcut in Shutdown menu"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31494"
+msgid "Enable LibreELEC menu shortcut in Shutdown menu"
+msgstr ""
+
+# /16x9/Content_Settings.xml
 msgctxt "#31420"
 msgid "Background service"
 msgstr ""
