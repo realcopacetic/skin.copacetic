@@ -455,13 +455,14 @@
 
 	<include name="Common_Details_Logo">
 		<param name="visible" />
+		<param name="id" default="6310" />
 		<param name="texture" default="$VAR[Cropped_Clearlogo]" />
 		<param name="width" default="640" />
 		<param name="maxheight" default="240" />
 		<param name="align" default="left" />
 		<param name="aligny" default="bottom" />
 		<definition>
-			<control type="image">
+			<control type="image" id="$PARAM[id]">
 				<visible>$PARAM[visible]</visible>
 				<width>$PARAM[width]</width>
 				<height max="$PARAM[maxheight]">auto</height>
@@ -490,6 +491,7 @@
 				<textcolor>$PARAM[color]</textcolor>
 				<label>$PARAM[label]</label>
 				<align>$PARAM[align]</align>
+				<nested />
 			</control>
 		</definition>
 	</include>

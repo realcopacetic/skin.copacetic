@@ -84,6 +84,18 @@
 		<value>$LOCALIZE[31474] $VAR[Copacetic_Divider] $LOCALIZE[34222]</value>
 	</variable>
 
+	<variable name="Background_Home_Label">
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Custom) + Skin.String(Background_Slideshow_Custom_Path)">$INFO[Window(home).Property(Background_Custom_Title)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Global)">$INFO[Window(home).Property(Background_Global_Title)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Videos)">$INFO[Window(home).Property(Background_Videos_Title)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Movies)">$INFO[Window(home).Property(Background_Movies_Title)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,TVShows)">$INFO[Window(home).Property(Background_TVShows_Title)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Artists)">$INFO[Window(home).Property(Background_Artists_Title)]</value>
+		<value condition="!String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist))">$INFO[Container(3300).ListItem.Title]</value>
+		<value condition="!String.IsEmpty(Container(3000).ListItem.Property(background))">$INFO[Container(3000).ListItem.Title]</value>
+		<value>$INFO[Container(3300).ListItem.Title]</value>
+	</variable>
+
 	<variable name="Genre_Label">
 		<!-- Genres / Genre -->
 		<value condition="String.Contains(ListItem.Genre,/)">$LOCALIZE[135]</value>

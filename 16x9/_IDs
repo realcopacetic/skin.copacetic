@@ -80,9 +80,11 @@ CHECKERS
 6307          Audio codec flag empty
 6308          Breadcrumb title empty
 6309          Breadcrumb info empty
+6310          Clearlogo empty
 635X          Gridview shadow checkers
 6400          Multiart Type
 650X          Music player / Notification checkers
+
 
 OTHER
 60            Seekbar slider
