@@ -8,7 +8,7 @@
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
 	<controls>
 		<include content="Widget_Reset_Button" condition="Skin.HasSetting(Widgets_Enabled)" />
-		<include content="Background_Settings" />
+		<include content="Background_Multiart_Settings" />
 		<include content="Default_Settings_Panel_Layout">
 			<param name="left_list_id" value="9" />
 			<param name="right_list_id" value="2" />

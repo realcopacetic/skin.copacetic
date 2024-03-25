@@ -26,37 +26,37 @@
 	<variable name="Background_Global_Texture">
 		<value condition="Window.IsVisible(loginscreen) + !String.IsEmpty(Container(3300).ListItem.Art(fanart))">$INFO[Container(3300).ListItem.Art(fanart)]</value>
 		<value condition="!String.Contains(Container.FolderPath,plugin://) + $EXP[Containers_Background] + !String.IsEmpty(Container(3300).ListItem.Art(fanart))">$INFO[Container(3300).ListItem.Art(fanart)]</value>
-		<value condition="$EXP[Library_Has_Content] + Window.IsVisible(videos) + !String.IsEmpty(Window(home).Property(Background_Videos_Fanart))">$INFO[Window(home).Property(Background_Videos_Fanart)]</value>
-		<value condition="$EXP[Library_Has_Content] + Window.IsVisible(music) + !String.IsEmpty(Window(home).Property(Background_Artists_Fanart))">$INFO[Window(home).Property(Background_Artists_Fanart)]</value>
-		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Custom) + Skin.String(Background_Slideshow_Custom_Path)">$INFO[Window(home).Property(Background_Custom_Fanart)]</value>
-		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Global) + !String.IsEmpty(Window(home).Property(Background_Global_Fanart))">$INFO[Window(home).Property(Background_Global_Fanart)]</value>
-		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Videos) + !String.IsEmpty(Window(home).Property(Background_Videos_Fanart))">$INFO[Window(home).Property(Background_Videos_Fanart)]</value>
-		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Movies) + !String.IsEmpty(Window(home).Property(Background_Movies_Fanart))">$INFO[Window(home).Property(Background_Movies_Fanart)]</value>
-		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,TVShows) + !String.IsEmpty(Window(home).Property(Background_TVShows_Fanart))">$INFO[Window(home).Property(Background_TVShows_Fanart)]</value>
-		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Artists) + !String.IsEmpty(Window(home).Property(Background_Artists_Fanart))">$INFO[Window(home).Property(Background_Artists_Fanart)]</value>
+		<value condition="$EXP[Library_Has_Content] + Window.IsVisible(videos) + !String.IsEmpty(Window(home).Property(background_videos_fanart))">$INFO[Window(home).Property(background_videos_fanart)]</value>
+		<value condition="$EXP[Library_Has_Content] + Window.IsVisible(music) + !String.IsEmpty(Window(home).Property(background_artists_fanart))">$INFO[Window(home).Property(background_artists_fanart)]</value>
+		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Custom) + Skin.String(Background_Slideshow_Custom_Path) + !String.IsEmpty(Window(home).Property(background_custom_fanart))">$INFO[Window(home).Property(background_custom_fanart)]</value>
+		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Global) + !String.IsEmpty(Window(home).Property(background_global_fanart))">$INFO[Window(home).Property(background_global_fanart)]</value>
+		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Videos) + !String.IsEmpty(Window(home).Property(background_videos_fanart))">$INFO[Window(home).Property(background_videos_fanart)]</value>
+		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Movies) + !String.IsEmpty(Window(home).Property(background_movies_fanart))">$INFO[Window(home).Property(background_movies_fanart)]</value>
+		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,TVShows) + !String.IsEmpty(Window(home).Property(background_tvshows_fanart))">$INFO[Window(home).Property(background_tvshows_fanart)]</value>
+		<value condition="$EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Artists) + !String.IsEmpty(Window(home).Property(background_artists_fanart))">$INFO[Window(home).Property(background_artists_fanart)]</value>
 	</variable>
 
 	<variable name="Background_Home_Texture">
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Custom) + Skin.String(Background_Slideshow_Custom_Path)">$INFO[Window(home).Property(Background_Custom_Fanart)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Global) + !String.IsEmpty(Window(home).Property(Background_Global_Fanart))">$INFO[Window(home).Property(Background_Global_Fanart)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Videos) + !String.IsEmpty(Window(home).Property(Background_Videos_Fanart))">$INFO[Window(home).Property(Background_Videos_Fanart)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Movies) + !String.IsEmpty(Window(home).Property(Background_Movies_Fanart))">$INFO[Window(home).Property(Background_Movies_Fanart)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,TVShows) + !String.IsEmpty(Window(home).Property(Background_TVShows_Fanart))">$INFO[Window(home).Property(Background_TVShows_Fanart)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Artists) + !String.IsEmpty(Window(home).Property(Background_Artists_Fanart))">$INFO[Window(home).Property(Background_Artists_Fanart)]</value>
-		<value condition="!String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist)) + !String.IsEmpty(Control.GetLabel(3401))">$INFO[Control.GetLabel(3401)]</value>
-		<value condition="!String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist))">$INFO[Container(3300).ListItem.Art(fanart)]</value>
-		<value condition="!String.IsEmpty(Container(3000).ListItem.Property(background))">$INFO[Container(3000).ListItem.Property(background)]</value>
-		<value condition="!String.IsEmpty(Control.GetLabel(3401))">$INFO[Control.GetLabel(3401)]</value>
-		<value>$INFO[Container(3300).ListItem.Art(fanart)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Custom) + Skin.String(Background_Slideshow_Custom_Path) + !String.IsEmpty(Window(home).Property(background_custom_fanart))">$INFO[Window(home).Property(background_custom_fanart)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Global) + !String.IsEmpty(Window(home).Property(background_global_fanart))">$INFO[Window(home).Property(background_global_fanart)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Videos) + !String.IsEmpty(Window(home).Property(background_videos_fanart))">$INFO[Window(home).Property(background_videos_fanart)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Movies) + !String.IsEmpty(Window(home).Property(background_movies_fanart))">$INFO[Window(home).Property(background_movies_fanart)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,TVShows) + !String.IsEmpty(Window(home).Property(background_tvshows_fanart))">$INFO[Window(home).Property(background_tvshows_fanart)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Artists) + !String.IsEmpty(Window(home).Property(background_artists_fanart))">$INFO[Window(home).Property(background_artists_fanart)]</value>
+		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled) + !String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist)) + !String.IsEmpty(Control.GetLabel(3401))">$INFO[Control.GetLabel(3401)]</value>
+		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled) + !String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist))">$INFO[Container(3300).ListItem.Art(fanart)]</value>
+		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled) + !String.IsEmpty(Container(3000).ListItem.Property(background))">$INFO[Container(3000).ListItem.Property(background)]</value>
+		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled) + !String.IsEmpty(Control.GetLabel(3401))">$INFO[Control.GetLabel(3401)]</value>
+		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled)">$INFO[Container(3300).ListItem.Art(fanart)]</value>
 	</variable>
 
 	<variable name="Background_Home_Clearlogo_Texture"> 
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Custom) + Skin.String(Background_Slideshow_Custom_Path)">$INFO[Window(home).Property(Background_Custom_Clearlogo)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Global)">$INFO[Window(home).Property(Background_Global_Clearlogo)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Videos)">$INFO[Window(home).Property(Background_Videos_Clearlogo)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Movies)">$INFO[Window(home).Property(Background_Movies_Clearlogo)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,TVShows)">$INFO[Window(home).Property(Background_TVShows_Clearlogo)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Artists)">$INFO[Window(home).Property(Background_Artists_Clearlogo)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Custom) + Skin.String(Background_Slideshow_Custom_Path) + !String.IsEmpty(Window(home).Property(background_custom_clearlogo))">$INFO[Window(home).Property(background_custom_clearlogo)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Global) + !String.IsEmpty(Window(home).Property(background_global_clearlogo))">$INFO[Window(home).Property(background_global_clearlogo)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Videos) + !String.IsEmpty(Window(home).Property(background_videos_clearlogo))">$INFO[Window(home).Property(background_videos_clearlogo)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Movies) + !String.IsEmpty(Window(home).Property(background_movies_clearlogo))">$INFO[Window(home).Property(background_movies_clearlogo)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,TVShows) + !String.IsEmpty(Window(home).Property(background_tvshows_clearlogo))">$INFO[Window(home).Property(background_tvshows_clearlogo)]</value>
+		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + $EXP[Library_Has_Content] + Skin.String(Background_Slideshow,Artists) + !String.IsEmpty(Window(home).Property(background_artists_clearlogo))">$INFO[Window(home).Property(background_artists_clearlogo)]</value>
 		<value condition="!String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist))">$INFO[Container(3300).ListItem.Art(clearlogo)]</value>
 		<value condition="!String.IsEmpty(Container(3000).ListItem.Property(background))">$INFO[Container(3000).ListItem.Property(background)]</value>
 		<value>$INFO[Container(3300).ListItem.Art(clearlogo)]</value>
@@ -84,7 +84,7 @@
 		<value condition="[String.IsEqual(Container(50).ListItem.DBType,album) | String.IsEqual(Container(50).ListItem.DBType,song)] + !String.IsEmpty(Container(50).ListItem.Art(artist.thumb))">$INFO[Container(50).ListItem.Art(artist.thumb)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
-		<value condition="!String.IsEmpty(Window(home).Property(Background_Artists_Fanart))">$INFO[Window(home).Property(Background_Artists_Fanart)]</value>
+		<value condition="!String.IsEmpty(Window(home).Property(background_artists_fanart))">$INFO[Window(home).Property(background_artists_fanart)]</value>
 	</variable>
 
 	<variable name="visualisation_Background_Texture">

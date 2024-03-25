@@ -103,7 +103,7 @@
 		</definition>
 	</include>
 
-	<include name="Background_Global">
+	<include name="Background_Multiart_Global">
 		<param name="visible" default="true" />
 		<param name="texture_path" default="$VAR[Background_Global_Texture]" />
 		<param name="fadein_animation_condition" default="true" />
@@ -134,9 +134,9 @@
 		</definition>
 	</include>
 
-	<include name="Background_Settings">
+	<include name="Background_Multiart_Settings">
 		<include content="Light_Theme_Background" condition="!$EXP[Library_Has_Content]" />
-		<include content="Background_Global" condition="$EXP[Library_Has_Content]">
+		<include content="Background_Multiart_Global" condition="$EXP[Library_Has_Content]">
 			<param name="fadein_animation_condition" value="!$EXP[Background_FadeIn_Exceptions]" />
 			<param name="fadeout_animation_condition" value="!$EXP[Background_FadeOut_Exceptions]" />
 		</include>

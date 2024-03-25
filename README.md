@@ -6,6 +6,10 @@ All designs contained in this work are licensed under the Creative Commons Attri
 To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/
 or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
 
+### Credit
+---
+* __Dodi Achmad on Unsplash__ for image used in addon [fanart.jpg](https://unsplash.com/photos/3qaojaP-6cE). Free for use under Unsplash licence.
+
 ### Special thanks
 ---
 * __Hitcher__ for inspiring this project and kickstarting my hopeless mockups into a working codebase. For supporting through the initial designs and providing loads of support and advice.
@@ -19,6 +23,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 **1.1.21**
 - Added a fallback label for when clearlogo is not present in home screen background slideshow https://github.com/realcopacetic/skin.copacetic/issues/120
 - Refined now playing expressions to make for better matching of currently displayed tv show/ season list item to videoplayer tvshowdibid. This will avoid two shows with the same name both showing as playing now when an episode from one is played https://github.com/realcopacetic/skin.copacetic/issues/100
+- Added studio flag for Mubi https://github.com/realcopacetic/skin.copacetic/issues/119
+- Added extra condition preventing windowopen animation on Home screen background artwork when returning to the homescreen immediately after ending playback of a video (Window.Previous(fullscreenvideo) + !Player.HasVideo). The reason for this is that, for an unknown reason, the window open animation was not triggering in this particular instance, causing the homescreen background not to load until navigating to another window and back to home.
+- Cleaned up some naming conventions between script.copacetic.helper and skin.copacetic
 
 Still to do:
 - login background

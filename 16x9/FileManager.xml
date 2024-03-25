@@ -6,7 +6,7 @@
 	<defaultcontrol always="true">3011</defaultcontrol>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
 	<controls>
-		<include content="Background_Settings" />
+		<include content="Background_Multiart_Settings" />
 		<include content="Default_Dialog_Panel_And_Lists_Layout">
 			<param name="window_name" value="filemanager" />
 			<param name="left_list_visible" value="![Window.IsVisible(contextmenu) + String.IsEqual(Window(filemanager).Property(ActiveList),Right)]" />
