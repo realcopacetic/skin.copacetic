@@ -75,6 +75,18 @@
 		</control>
 	</include>
 
+	<include name="OSD_Row">
+		<definition>
+			<control type="grouplist" id="$PARAM[id]">
+				<height>60</height>
+				<orientation>horizontal</orientation>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<nested />
+			</control>
+		</definition>
+	</include>
+
 	<include name="OSD_Template">
 		<param name="windowname" />
 		<param name="visible" default="!$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videobookmarks)" />
@@ -89,28 +101,27 @@
 					<param name="title_label" value="$VAR[OSD_Label]" />
 					<param name="info_label_visible" value="true" />
 				</include>
-				<control type="group">
+				<control type="grouplist">
 					<animation effect="slide" end="-600,290" time="0" condition="Window.Is(musicosd) + !Skin.String(visualisation_Layout,Large)">Conditional</animation>
 					<centerleft>50%</centerleft>
 					<centertop>50%</centertop>
 					<width>300</width>
-					<height>120</height>
-					<control type="grouplist" id="3000">
-						<top>0</top>
-						<height>60</height>
-						<orientation>horizontal</orientation>
-						<align>center</align>
-						<itemgap>0</itemgap>
+					<height>180</height>
+					<orientation>vertical</orientation>
+					<align>center</align>
+					<itemgap>0</itemgap>
+					<include content="OSD_Row">
+						<param name="id" value="3000" />
 						<include content="$PARAM[windowname]_Top_Row_Content" />
-					</control>
-					<control type="grouplist" id="3100">
-						<bottom>0</bottom>
-						<height>60</height>
-						<orientation>horizontal</orientation>
-						<align>center</align>
-						<itemgap>0</itemgap>
+					</include>
+					<include content="OSD_Row" condition="Window.Is(videoosd)">
+						<param name="id" value="3100" />
+						<include content="$PARAM[windowname]_Middle_Row_Content" />
+					</include>
+					<include content="OSD_Row">
+						<param name="id" value="3200" />
 						<include content="$PARAM[windowname]_Bottom_Row_Content" />
-					</control>
+					</include>
 				</control>
 				<include content="Player_Status_Icons" condition="!Window.Is(visualisation)">
 					<param name="large_label" value="true" />

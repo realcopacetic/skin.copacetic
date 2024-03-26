@@ -106,7 +106,7 @@
 				<texturesliderbar colordiffuse="$VAR[Light_Color]">dialogs/dialogseekbar_background.png</texturesliderbar>
 				<textureslidernibfocus colordiffuse="$VAR[Accent_Color]">dialogs/dialogslider_nib_20.png</textureslidernibfocus>
 				<info>Player.Progress</info>
-				<onup>3100</onup>
+				<onup>3200</onup>
 				<ondown>3000</ondown>
 				<action>seek</action>
 				<orientation>horizontal</orientation>

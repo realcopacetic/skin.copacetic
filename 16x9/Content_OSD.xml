@@ -151,6 +151,65 @@
 	</include>
 
 	<include name="videoosd_Top_Row_Content">
+		<control type="button" id="11">
+			<include content="Simple_Button_Template">
+				<param name="description" value="Player process info" />
+				<param name="icon" value="Bookmarks" />
+			</include>
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10116],videoosd)</onfocus>
+			<onclick>Dialog.Close(all,true)</onclick>
+			<onclick>ActivateWindow(playerprocessinfo)</onclick>
+			<onup>60</onup>
+			<ondown>1</ondown>
+		</control>
+		<control type="button" id="12">
+			<include content="Simple_Button_Template">
+				<param name="description" value="Video information" />
+				<param name="icon" value="Bookmarks" />
+			</include>
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[20159],videoosd)</onfocus>
+			<onclick>Dialog.Close(all,true)</onclick>
+			<onclick>ActivateWindow(fullscreeninfo)</onclick>
+			<onup>60</onup>
+			<ondown>2</ondown>
+		</control>
+		<control type="button" id="13">
+			<include content="Simple_Button_Template">
+				<param name="description" value="Star rating" />
+				<param name="icon" value="Like" />
+			</include>
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[33067],videoosd)</onfocus>
+			<onclick>Dialog.Close(all,true)</onclick>
+			<onclick>ActivateWindow(fullscreeninfo)</onclick>
+			<onup>60</onup>
+			<ondown>3</ondown>
+		</control>
+		<control type="button" id="14">
+			<include content="Simple_Button_Template">
+				<param name="description" value="Bookmarks" />
+				<param name="icon" value="Bookmarks" />
+			</include>
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[298],videoosd)</onfocus>
+			<onclick>Dialog.Close(all,true)</onclick>
+			<onclick>ActivateWindow(videobookmarks)</onclick>
+			<visible>!VideoPlayer.Content(LiveTV)</visible>
+			<onup>60</onup>
+			<ondown>4</ondown>
+		</control>
+		<control type="button" id="15">
+			<include content="Simple_Button_Template">
+				<param name="description" value="Current playlist" />
+				<param name="icon" value="Video-Playlist" />
+			</include>
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[13350],videoosd)</onfocus>
+			<onclick>Dialog.Close(all,true)</onclick>
+			<onclick>ActivateWindow(videoplaylist)</onclick>
+			<onup>60</onup>
+			<ondown>5</ondown>
+		</control>
+	</include>
+
+	<include name="videoosd_Middle_Row_Content">
 		<control type="button" id="1">
 			<include content="Simple_Button_Template">
 				<param name="description" value="Previous" />
@@ -158,7 +217,7 @@
 			</include>
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[210],videoosd)</onfocus>
 			<onclick>PlayerControl(Previous)</onclick>
-			<onup>60</onup>
+			<onup>11</onup>
 			<ondown>6</ondown>
 		</control>
 		<control type="button" id="2">
@@ -168,7 +227,7 @@
 			</include>
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[31302],videoosd)</onfocus>
 			<onclick>PlayerControl(Rewind)</onclick>
-			<onup>60</onup>
+			<onup>12</onup>
 			<ondown>7</ondown>
 		</control>
 		<control type="togglebutton" id="3">
@@ -183,7 +242,7 @@
 			<onfocus>SetProperty(VideoOSD_Controls,$VAR[Play_Pause_Label],videoosd)</onfocus>
 			<onclick>PlayerControl(Play)</onclick>
 			<onclick>SetProperty(VideoOSD_Controls,$VAR[Play_Pause_Label],videoosd)</onclick>
-			<onup>60</onup>
+			<onup>13</onup>
 			<ondown>8</ondown>
 		</control>
 		<control type="button" id="4">
@@ -193,7 +252,7 @@
 			</include>
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[31303],videoosd)</onfocus>
 			<onclick>PlayerControl(Forward)</onclick>
-			<onup>9</onup>
+			<onup>14</onup>
 			<ondown>9</ondown>
 		</control>
 		<control type="button" id="5">
@@ -203,7 +262,7 @@
 			</include>
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[209],videoosd)</onfocus>
 			<onclick>PlayerControl(Next)</onclick>
-			<onup>60</onup>
+			<onup>15</onup>
 			<ondown>10</ondown>
 		</control>
 	</include>
@@ -211,13 +270,12 @@
 	<include name="videoosd_Bottom_Row_Content">
 		<control type="button" id="6">
 			<include content="Simple_Button_Template">
-				<param name="description" value="Bookmarks" />
-				<param name="icon" value="Bookmarks" />
+				<param name="description" value="Player settings" />
+				<param name="icon" value="Settings" />
 			</include>
-			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[298],videoosd)</onfocus>
-			<onclick>Dialog.Close(all, true)</onclick>
-			<onclick>ActivateWindow(videobookmarks)</onclick>
-			<visible>!VideoPlayer.Content(LiveTV)</visible>
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[14201],videoosd)</onfocus>
+			<onclick>Dialog.Close(all,true)</onclick>
+			<onclick>ActivateWindow(playersettings)</onclick>
 			<onup>1</onup>
 			<ondown>60</ondown>
 		</control>
