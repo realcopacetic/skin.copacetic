@@ -26,12 +26,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Added studio flag for Mubi https://github.com/realcopacetic/skin.copacetic/issues/119
 - Added extra condition preventing windowopen animation on Home screen background artwork when returning to the homescreen immediately after ending playback of a video (Window.Previous(fullscreenvideo) + !Player.HasVideo). The reason for this is that, for an unknown reason, the window open animation was not triggering in this particular instance, causing the homescreen background not to load until navigating to another window and back to home.
 - Cleaned up some naming conventions between script.copacetic.helper and skin.copacetic
-
 Still to do:
 - login background
 - Make consistent overlay on embedded videoplayer for live tv and fade it out when screensaver kicks in
-- error with pulling remote artist fanarts for background art service
-- Use art service for artist backgrounds on home screen to avoid black screens on missing artworks?
 
 **1.1.20**
 - Added additional details to info screens for local movies and episodes. Access 'Details' tab by pressing left on the infoscreen menu.
