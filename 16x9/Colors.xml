@@ -885,6 +885,9 @@
 		<value>$VAR[Light_Color]</value>
 	</variable>
 	<variable name="Star_Color">
+		<!-- temp fix to account for fact that DecreaseRating won't go lower than 1 for VideoPlayer.UserRating -->
+		<value condition="VideoPlayer.IsFullscreen + Integer.IsGreater(VideoPlayer.UserRating,1.5)">$VAR[User_Rating_Color]</value>
+		<value condition="VideoPlayer.IsFullscreen + Integer.IsGreater(VideoPlayer.UserRating,0.5) + !String.IsEqual(Window.(videoosd).Property(VideoPlayer_Rating_Fix),true)">$VAR[User_Rating_Color]</value>
 		<value condition="!String.IsEmpty(ListItem.UserRating)">$VAR[User_Rating_Color]</value>
 		<value>$VAR[Accent_Color]</value>
 	</variable>

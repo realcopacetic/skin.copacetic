@@ -106,7 +106,8 @@
 				<texturesliderbar colordiffuse="$VAR[Light_Color]">dialogs/dialogseekbar_background.png</texturesliderbar>
 				<textureslidernibfocus colordiffuse="$VAR[Accent_Color]">dialogs/dialogslider_nib_20.png</textureslidernibfocus>
 				<info>Player.Progress</info>
-				<onup>3200</onup>
+				<onup condition="Window.Is(musicosd) | [VideoPlayer.IsFullscreen + VideoPlayer.Content(livetv)]">3010</onup>
+				<onup condition="VideoPlayer.IsFullscreen + !VideoPlayer.Content(livetv)">3020</onup>
 				<ondown>3000</ondown>
 				<action>seek</action>
 				<orientation>horizontal</orientation>

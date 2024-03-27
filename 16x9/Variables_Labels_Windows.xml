@@ -287,6 +287,13 @@
 		<value>$INFO[Container(11).ListItem.Label]</value>
 	</variable>
 
+	<variable name="videoosd_Subtitle_Toggle_Label">
+		<!-- LANG / Disabled / Not available -->
+		<value condition="VideoPlayer.SubtitlesEnabled + VideoPlayer.HasSubtitles">[UPPERCASE]$INFO[VideoPlayer.SubtitlesLanguage][/UPPERCASE]</value>
+		<value condition="VideoPlayer.HasSubtitles">$LOCALIZE[1223]</value>
+		<value>$LOCALIZE[10005]</value>
+	</variable>
+
 	<variable name="volumebar_Info_Label">
 		<!-- Passthrough audio in use / Muted / 33% -->
 		<value condition="Player.Passthrough">$LOCALIZE[29802]</value>

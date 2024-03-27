@@ -25,8 +25,8 @@ LISTS
 3000          Options menu
 3000          Infoscreen menu
 3000          Video OSD menu top row / Music OSD menu top row
-3100          Video OSD menu middle row / Music OSD menu bottom row
-3200          Video OSD menu bottom row
+3010          Video OSD menu bottom row
+3020          Video OSD toggle row
 3100          Secondary
 3100          Secondary (on infoscreen - album tracklist)
 3100          Hidden list (for set/picture info when secondary lists disabled)
@@ -122,3 +122,8 @@ STRINGS
 315XX         Windows/Dialogs
 316XX         MPAA messages
 317XX         Welcome messages
+
+
+TEMPFIXES
+Line 587      Variables_Labels_Media.xml
+Line 888      Colors.xml           

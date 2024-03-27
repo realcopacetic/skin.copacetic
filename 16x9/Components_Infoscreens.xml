@@ -224,61 +224,68 @@
 	</include>
 
 	<include name="Infoscreen_Stars">
-		<control type="button" id="4021">
-			<visible allowhiddenfocus="true">false</visible>
-			<onfocus>IncreaseRating</onfocus>
-			<onfocus>SetFocus(7)</onfocus>
-		</control>
-		<control type="button" id="4022">
-			<visible allowhiddenfocus="true">false</visible>
-			<onfocus>DecreaseRating</onfocus>
-			<onfocus>SetFocus(7)</onfocus>
-		</control>
-		<control type="grouplist">
-			<visible>$PARAM[visible]</visible>
-			<include content="Visible_Fade_Delayed_Animation" />
-			<animation effect="slide" end="330,0" time="0" condition="Window.Is(songinformation) | String.IsEqual(ListItem.DBType,album)" reversible="false">Conditional</animation>
-			<width>364</width>
-			<centerleft>50%</centerleft>
-			<height>360</height>
-			<centertop>50%</centertop>
-			<orientation>vertical</orientation>
-			<align>center</align>
-			<itemgap>$PARAM[itemgap]</itemgap>
-			<usecontrolcoords>true</usecontrolcoords>
-			<control type="image">
-				<animation effect="zoom" center="auto" start="130" end="100" time="360" tween="back" easing="out" condition="!Control.HasFocus(4021)" reversible="false">Conditional</animation>
-				<animation effect="slide" end="0,7" time="360" tween="back" easing="out" condition="!Control.HasFocus(4021)" reversible="false">Conditional</animation>
-				<width>60</width>
-				<centerleft>50%</centerleft>
-				<height>60</height>
-				<texture colordiffuse="$VAR[Light_Color]">dialogs/icon_arrow_focused.png</texture>
+		<param name="parent_id" default="7" />
+		<param name="itemgap" default="30" />
+		<param name="starheight" default="90" />
+		<param name="type" default="ListItem" />
+		<definition>
+			<control type="button" id="4021">
+				<visible allowhiddenfocus="true">false</visible>
+				<onfocus condition="String.IsEqual(VideoPlayer.UserRating,1)">ClearProperty(VideoPlayer_Rating_Fix,videoosd)</onfocus>
+				<onfocus>IncreaseRating</onfocus>
+				<onfocus>SetFocus($PARAM[parent_id])</onfocus>
 			</control>
-			<control type="image">
-				<height>$PARAM[starheight]</height>
-				<centerleft>50%</centerleft>
-				<visible>!ListItem.DBType(season) + !ListItem.DBType(artist)</visible>
-				<aspectratio>keep</aspectratio>
-				<texture colordiffuse="$VAR[Star_Color]">$VAR[Rating_Label]</texture>
+			<control type="button" id="4022">
+				<visible allowhiddenfocus="true">false</visible>
+				<onfocus condition="String.IsEqual(VideoPlayer.UserRating,1)">SetProperty(VideoPlayer_Rating_Fix,true,videoosd)</onfocus>
+				<onfocus>DecreaseRating</onfocus>
+				<onfocus>SetFocus($PARAM[parent_id])</onfocus>
 			</control>
-			<control type="image">
-				<visible>!String.IsEmpty(ListItem.UserRating)</visible>
-				<animation effect="rotate" center="auto" end="180" time="0" condition="true" reversible="false">Conditional</animation>
-				<animation effect="zoom" center="auto" start="130" end="100" time="360" tween="back" easing="out" condition="!Control.HasFocus(4022)" reversible="false">Conditional</animation>
-				<animation effect="slide" end="0,7" time="360" tween="back" easing="out" condition="!Control.HasFocus(4022)" reversible="false">Conditional</animation>
-				<width>60</width>
+			<control type="grouplist">
+				<visible>Control.HasFocus($PARAM[parent_id]) | Control.HasFocus(4021) | Control.HasFocus(4022)</visible>
+				<include content="Visible_Fade_Delayed_Animation" />
+				<animation effect="slide" end="330,0" time="0" condition="Window.Is(songinformation) | String.IsEqual(ListItem.DBType,album)" reversible="false">Conditional</animation>
+				<width>364</width>
 				<centerleft>50%</centerleft>
-				<height>60</height>
-				<texture colordiffuse="$VAR[Light_Color]">dialogs/icon_arrow_focused.png</texture>
+				<height>360</height>
+				<centertop>50%</centertop>
+				<orientation>vertical</orientation>
+				<align>center</align>
+				<itemgap>$PARAM[itemgap]</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<control type="image">
+					<animation effect="zoom" center="auto" start="130" end="100" time="360" tween="back" easing="out" condition="!Control.HasFocus(4021)" reversible="false">Conditional</animation>
+					<animation effect="slide" end="0,7" time="360" tween="back" easing="out" condition="!Control.HasFocus(4021)" reversible="false">Conditional</animation>
+					<width>60</width>
+					<centerleft>50%</centerleft>
+					<height>60</height>
+					<texture colordiffuse="$VAR[Light_Color]">dialogs/icon_arrow_focused.png</texture>
+				</control>
+				<control type="image">
+					<height>$PARAM[starheight]</height>
+					<centerleft>50%</centerleft>
+					<aspectratio>keep</aspectratio>
+					<texture colordiffuse="$VAR[Star_Color]">$VAR[Rating_Label]</texture>
+				</control>
+				<control type="image">
+					<visible>!String.IsEmpty($PARAM[type].UserRating)</visible>
+					<animation effect="rotate" center="auto" end="180" time="0" condition="true" reversible="false">Conditional</animation>
+					<animation effect="zoom" center="auto" start="130" end="100" time="360" tween="back" easing="out" condition="!Control.HasFocus(4022)" reversible="false">Conditional</animation>
+					<animation effect="slide" end="0,7" time="360" tween="back" easing="out" condition="!Control.HasFocus(4022)" reversible="false">Conditional</animation>
+					<width>60</width>
+					<centerleft>50%</centerleft>
+					<height>60</height>
+					<texture colordiffuse="$VAR[Light_Color]">dialogs/icon_arrow_focused.png</texture>
+				</control>
+				<control type="image">
+					<visible>String.IsEmpty($PARAM[type].UserRating)</visible>
+					<width>60</width>
+					<centerleft>50%</centerleft>
+					<height>60</height>
+					<texture colordiffuse="$VAR[Light_Color]">flags/blank.png</texture>
+				</control>
 			</control>
-			<control type="image">
-				<visible>String.IsEmpty(ListItem.UserRating)</visible>
-				<width>60</width>
-				<centerleft>50%</centerleft>
-				<height>60</height>
-				<texture colordiffuse="$VAR[Light_Color]">flags/blank.png</texture>
-			</control>
-		</control>
+		</definition>
 	</include>
 
 	<include name="Infoscreen_Artwork_Icon">

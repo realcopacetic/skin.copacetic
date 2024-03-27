@@ -53,8 +53,6 @@
 				<content>musicdb://albums/$INFO[ListItem.DBID]/-1/</content>
 			</include>
 			<include content="Infoscreen_Stars" condition="!String.IsEqual(ListItem.DBType,artist)">
-				<param name="visible" value="ControlGroup(3000).HasFocus(7)" />
-				<param name="itemgap" value="30" />
 				<param name="starheight" value="60" />
 			</include>
 			<control type="textbox">

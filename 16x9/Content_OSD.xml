@@ -156,11 +156,10 @@
 		<control type="button" id="1">
 			<include content="Simple_Button_Template">
 				<param name="description" value="Rating" />
-				<param name="icon" value="heart_unfilled" />
+				<param name="icon" value="star" />
 			</include>
-			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[33067],videoosd)</onfocus>
-			<onclick>Dialog.Close(all,true)</onclick>
-			<onclick>ActivateWindow(fullscreeninfo)</onclick>
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[563],videoosd)</onfocus>
+			<onclick>SetFocus(4023)</onclick>
 			<onup>60</onup>
 			<ondown>8</ondown>
 		</control>
@@ -245,7 +244,8 @@
 			<onclick>Dialog.Close(all,true)</onclick>
 			<onclick>ActivateWindow(playersettings)</onclick>
 			<onup>1</onup>
-			<ondown>60</ondown>
+			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
+			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
 		</control>
 		<control type="button" id="9">
 			<include content="Simple_Button_Template">
@@ -256,7 +256,8 @@
 			<onclick>Dialog.Close(all,true)</onclick>
 			<onclick>ActivateWindow(playerprocessinfo)</onclick>
 			<onup>2</onup>
-			<ondown>60</ondown>
+			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
+			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
 		</control>
 		<control type="button" id="10">
 			<include content="Simple_Button_Template">
@@ -266,7 +267,8 @@
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10123],videoosd)</onfocus>
 			<onclick>ActivateWindow(osdvideosettings)</onclick>
 			<onup>3</onup>
-			<ondown>60</ondown>
+			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
+			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
 		</control>
 		<control type="button" id="11">
 			<include content="Simple_Button_Template">
@@ -276,7 +278,8 @@
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[31301],videoosd)</onfocus>
 			<onclick>PlayerControl(Stop)</onclick>
 			<onup>4</onup>
-			<ondown>60</ondown>
+			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
+			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
 		</control>
 		<control type="button" id="12">
 			<include content="Simple_Button_Template">
@@ -286,8 +289,8 @@
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10124],videoosd)</onfocus>
 			<onclick>ActivateWindow(osdaudiosettings)</onclick>
 			<onup>5</onup>
-			<ondown>60</ondown>
-		</control>
+			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
+			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>> </control>
 		<control type="button" id="13">
 			<include content="Simple_Button_Template">
 				<param name="description" value="Subtitle OSD settings" />
@@ -297,7 +300,8 @@
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10159],videoosd)</onfocus>
 			<visible>!VideoPlayer.Content(LiveTV)</visible>
 			<onup>6</onup>
-			<ondown>60</ondown>
+			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
+			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
 		</control>
 		<control type="button" id="14">
 			<include content="Simple_Button_Template">
@@ -308,7 +312,51 @@
 			<onclick>Dialog.Close(all,true)</onclick>
 			<onclick>ActivateWindow(videoplaylist)</onclick>
 			<onup>7</onup>
+			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
+			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
+		</control>
+	</include>
+
+	<include name="videoosd_Toggle_Row_Content">
+		<control type="button" id="15">
+			<include content="Simple_Button_Template">
+				<param name="description" value="Subtitle Language toggle" />
+				<param name="icon" value="audio" />
+			</include>
+			<onclick>AudioNextLanguage</onclick>
+			<visible>!VideoPlayer.Content(LiveTV)</visible>
+			<onup>3010</onup>
 			<ondown>60</ondown>
+		</control>
+		<control type="label" id="16">
+			<height>60</height>
+			<width max="300">auto</width>
+			<label>[UPPERCASE]$INFO[VideoPlayer.AudioLanguage]$INFO[VideoPlayer.AudioCodec, ]$VAR[AudioChannels_Label, ][/UPPERCASE]</label>
+			<textcolor>$VAR[Light_Color]</textcolor>
+			<font>Breadcrumb_Info</font>
+		</control>
+		<control type="label" id="17">
+			<height>60</height>
+			<width>60</width>
+			<textcolor>$VAR[Light_Color]</textcolor>
+			<font>Breadcrumb_Info</font>
+		</control>
+		<control type="button" id="18">
+			<include content="Simple_Button_Template">
+				<param name="description" value="Subtitle Language toggle" />
+				<param name="icon" value="subtitles" />
+			</include>
+			<onclick>NextSubtitle</onclick>
+			<visible>!VideoPlayer.Content(LiveTV)</visible>
+			<onup>3010</onup>
+			<ondown>60</ondown>
+		</control>
+		<control type="label" id="19">
+			<height>60</height>
+			<width max="300">auto</width>
+			<label>$VAR[videoosd_Subtitle_Toggle_Label]</label>
+			<textcolor>$VAR[Light_Color]</textcolor>
+			<font>Breadcrumb_Info</font>
 		</control>
 	</include>
 

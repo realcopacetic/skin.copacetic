@@ -21,6 +21,14 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ### Changelog
 ---
 **1.1.22**
+- Fixed alignment bug and missing scrollbar on smartplaylisteditor window that could cause list of rules to exceed the sie of the panel https://github.com/realcopacetic/skin.copacetic/issues/129
+Still to do:
+- OSD : (still to update --> Buttons, Settings, Stars, icon_Player, still to add --> sub and audio toggles)
+- login background
+- Fix video playlist
+
+
+**1.1.22**
 - Added navigation from new infoscreen extra details pane. Pressing down will navigate to widgets.
 - Removed conditions on home background requiring library to have content as this was preventing people using plugins for their content from setting backgrounds for home menu items via skinshortcuts https://forum.kodi.tv/showthread.php?tid=373114&pid=3189521#pid3189521
 - Refined skinsettings for global slideshow picker. Now you will only be able to select options from the Slider that are supported by your local library. You can use a Custom plugin path and, if no local library found, Custom will be the default option selected.
@@ -28,11 +36,6 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Fixed bug in now_playing expressions causing artwork from plugins without a DBID to be coonsidered playing and dimmed.
 - Fixed missing now-playing icon from Billboard view
 - Updated OSD controls 
-
-Still to do:
-- OSD : (still to update --> Buttons, Settings, Stars, icon_Player, still to add --> sub and audio toggles)
-- login background
-- Fix video playlist
 
 **1.1.21**
 - Added a fallback label for when clearlogo is not present in home screen background slideshow https://github.com/realcopacetic/skin.copacetic/issues/120
