@@ -70,5 +70,9 @@
 				<param name="background_visible" value="false" />
 			</include>
 		</control>
+		<control type="label">
+			<align>right</align>
+			<label>$INFO[Container(3300).ListItem.Label]</label>
+		</control>
 	</controls>
 </window>

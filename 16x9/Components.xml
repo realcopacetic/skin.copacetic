@@ -212,7 +212,7 @@
 		</control>
 		<include content="Common_Details_Logo" condition="Skin.HasSetting(Home_Screensaver_Clearlogo_Enabled)">
 			<param name="texture" value="$VAR[Background_Home_Clearlogo_Texture]" />
-			<param name="visible" value="Control.HasFocus(4300) + !$EXP[TransparentDialog_IsVisible] + !String.IsEmpty(Container(3300).ListItem.Art(clearlogo))" />
+			<param name="visible" value="Control.HasFocus(4300) + !$EXP[TransparentDialog_IsVisible]" />
 			<include content="Visible_Fade_Delayed_Animation" />
 			<left>60</left>
 			<bottom>60</bottom>
@@ -220,15 +220,15 @@
 		</include>
 		<include content="Common_Details_Textbox" condition="Skin.HasSetting(Home_Screensaver_Clearlogo_Enabled)">
 			<param name="visible" value="String.IsEmpty(Control.Getlabel(6310)) + Control.HasFocus(4300) + !$EXP[TransparentDialog_IsVisible]" />
-			<param name="gap" value="960" />
+			<param name="gap" value="990" />
 			<param name="maxheight" value="60" />
-			<param name="font" value="Title_Breadcrumb_Label" />
-			<param name="color" value="$VAR[Light_Color]" />
-			<param name="label" value="[UPPERCASE]$VAR[Background_Home_Label][/UPPERCASE]" />
+			<param name="font" value="Default_Settings_List" />
+			<param name="color" value="$VAR[Unfocused_Color]" />
+			<param name="label" value="$VAR[Background_Home_Label]" />
 			<param name="align" value="left" />
 			<include content="Visible_Fade_Delayed_Animation" />
-			<left>60</left>
-			<right>60</right>
+			<left>30</left>
+			<right>30</right>
 		</include>
 	</include>
 

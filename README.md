@@ -20,16 +20,21 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
-**1.1.23**
-- Fixed alignment bug and missing scrollbar on smartplaylisteditor window that could cause list of rules to exceed the sie of the panel https://github.com/realcopacetic/skin.copacetic/issues/129
-- Added star rating widget to videoosd controls allowing user to view/set a userrating from videosd screen
-- Added language and subtitle quick toggles to videoosd screen 
-
+**1.1.25**
+- Fixed label to show on homescreen screensaver when no clearlogo present
 Still to do:
 - OSD : (still to update --> Buttons, Settings, Stars, icon_Player)
 - login background
 - Fix video playlist
 
+
+**1.1.24**
+- Disabled debugging flag
+
+**1.1.23**
+- Fixed alignment bug and missing scrollbar on smartplaylisteditor window that could cause list of rules to exceed the sie of the panel https://github.com/realcopacetic/skin.copacetic/issues/129
+- Added star rating widget to videoosd controls allowing user to view/set a userrating from videosd screen
+- Added language and subtitle quick toggles to videoosd screen 
 
 **1.1.22**
 - Added navigation from new infoscreen extra details pane. Pressing down will navigate to widgets.

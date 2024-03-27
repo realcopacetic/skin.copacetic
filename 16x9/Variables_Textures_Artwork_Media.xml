@@ -59,7 +59,7 @@
 		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + Skin.String(Background_Slideshow,Artists) + !String.IsEmpty(Window(home).Property(background_artists_clearlogo))">$INFO[Window(home).Property(background_artists_clearlogo)]</value>
 		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled) + !String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist))">$INFO[Container(3300).ListItem.Art(clearlogo)]</value>
 		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled) + !String.IsEmpty(Container(3000).ListItem.Property(background))">$INFO[Container(3000).ListItem.Property(background)]</value>
-		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled)">$INFO[Container(3300).ListItem.Art(clearlogo)]</value>
+		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled) + !String.IsEmpty(Container(3300).ListItem.Art(clearlogo))">$INFO[Container(3300).ListItem.Art(clearlogo)]</value>
 	</variable>
 
 	<variable name="Infoscreen_Background_Texture">

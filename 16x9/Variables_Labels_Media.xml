@@ -101,9 +101,10 @@
 		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + Skin.String(Background_Slideshow,Movies) + !String.IsEmpty(Window(home).Property(background_movies_title))">$INFO[Window(home).Property(background_movies_title)]</value>
 		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + Skin.String(Background_Slideshow,TVShows) + !String.IsEmpty(Window(home).Property(background_tvshows_title))">$INFO[Window(home).Property(background_tvhsows_title)]</value>
 		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + Skin.String(Background_Slideshow,Artists) + !String.IsEmpty(Window(home).Property(background_artists_title))">$INFO[Window(home).Property(background_artists_title)]</value>
-		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled) + !String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist)) + !String.IsEmpty(Container(3300).ListItem.Title)">$INFO[Container(3300).ListItem.Title]</value>
-		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled) + !String.IsEmpty(Container(3000).ListItem.Property(background)) + !String.IsEmpty(Container(3000).ListItem.Title)">$INFO[Container(3000).ListItem.Title]</value>
-		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled) + !String.IsEmpty(Container(3300).ListItem.Title)">$INFO[Container(3300).ListItem.Title]</value>
+		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled) + !String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist)) + !String.IsEmpty(Container(3300).ListItem.Label)">$INFO[Container(3300).ListItem.Label]</value>
+		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled) + !String.IsEmpty(Container(3000).ListItem.Property(background)) + !String.IsEmpty(Container(3000).ListItem.Label)">$INFO[Container(3000).ListItem.Label]</value>
+		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled) + !String.IsEmpty(Container(3300).ListItem.Label)">$INFO[Container(3300).ListItem.Label]</value>
+		<value>xx</value>
 	</variable>
 
 	<variable name="Genre_Label">
