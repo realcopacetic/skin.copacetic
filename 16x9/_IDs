@@ -24,14 +24,15 @@ LISTS
 3000          Home menu
 3000          Options menu
 3000          Infoscreen menu
-3000          Video/Music OSD menu top row
-3100          Video/Music OSD menu bottom row
+3000          Video OSD menu top row / Music OSD menu top row
+3100          Video OSD menu middle row / Music OSD menu bottom row
+3200          Video OSD menu bottom row
 3100          Secondary
 3100          Secondary (on infoscreen - album tracklist)
 3100          Hidden list (for set/picture info when secondary lists disabled)
 3100          Secondary list on skin-shortcuts
 32XX          Widgets
-3300          Background slideshow
+3300          Background slideshow container
 3400          Multiart fadelabel
 3500          Music player controls
 

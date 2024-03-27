@@ -22,6 +22,11 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ---
 **1.1.22**
 - Added navigation from new infoscreen extra details pane. Pressing down will navigate to widgets.
+- Removed conditions on home background requiring library to have content as this was preventing people using plugins for their content from setting backgrounds for home menu items via skinshortcuts https://forum.kodi.tv/showthread.php?tid=373114&pid=3189521#pid3189521
+- Refined skinsettings for global slideshow picker. Now you will only be able to select options from the Slider that are supported by your local library. You can use a Custom plugin path and, if no local library found, Custom will be the default option selected.
+
+In progress:
+- improved osd controls
 Still to do:
 - login background
 - Make consistent overlay on embedded videoplayer for live tv and fade it out when screensaver kicks in

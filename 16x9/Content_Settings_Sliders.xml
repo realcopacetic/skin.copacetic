@@ -224,15 +224,26 @@
 	</include>
 
 	<include name="skinsettings_Background_Slideshow_Button_Conditions">
-		<onleft condition="Skin.String(Background_Slideshow,Custom)">Skin.SetString(Background_Slideshow,Artists)</onleft>
-		<onleft condition="Skin.String(Background_Slideshow,Artists)">Skin.SetString(Background_Slideshow,TVShows)</onleft>
-		<onleft condition="Skin.String(Background_Slideshow,TVShows)">Skin.SetString(Background_Slideshow,Movies)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow,Custom) + Library.HasContent(music)">Skin.SetString(Background_Slideshow,Artists)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow,Custom) + !Library.HasContent(music) + Library.HasContent(tvshows)">Skin.SetString(Background_Slideshow,TVShows)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow,Custom) + !Library.HasContent(music) + !Library.HasContent(tvshows) + Library.HasContent(movies)">Skin.SetString(Background_Slideshow,Movies)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow,Artists) + Library.HasContent(tvshows)">Skin.SetString(Background_Slideshow,TVShows)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow,Artists) + !Library.HasContent(tvshows) + Library.HasContent(movies)">Skin.SetString(Background_Slideshow,Movies)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow,TVShows + Library.HasContent(movies)">Skin.SetString(Background_Slideshow,Movies)</onleft>
 		<onleft condition="Skin.String(Background_Slideshow,Movies)">Skin.SetString(Background_Slideshow,Videos)</onleft>
 		<onleft condition="Skin.String(Background_Slideshow,Videos)">Skin.SetString(Background_Slideshow,Global)</onleft>
-		<onright condition="Skin.String(Background_Slideshow,Global) | !Skin.String(Background_Slideshow)">Skin.SetString(Background_Slideshow,Videos)</onright>
-		<onright condition="Skin.String(Background_Slideshow,Videos)">Skin.SetString(Background_Slideshow,Movies)</onright>
-		<onright condition="Skin.String(Background_Slideshow,Movies)">Skin.SetString(Background_Slideshow,TVShows)</onright>
-		<onright condition="Skin.String(Background_Slideshow,TVShows)">Skin.SetString(Background_Slideshow,Artists)</onright>
+		<onright condition="[Skin.String(Background_Slideshow,Global) | !Skin.String(Background_Slideshow)] + Library.HasContent(video)">Skin.SetString(Background_Slideshow,Videos)</onright>
+		<onright condition="[Skin.String(Background_Slideshow,Global) | !Skin.String(Background_Slideshow)] + !Library.HasContent(video) + Library.HasContent(music)">Skin.SetString(Background_Slideshow,Artists)</onright>
+		<onright condition="[Skin.String(Background_Slideshow,Global) | !Skin.String(Background_Slideshow)] + !Library.HasContent(video) + !Library.HasContent(music)">Skin.SetString(Background_Slideshow,Custom)</onright>
+		<onright condition="Skin.String(Background_Slideshow,Videos) + Library.HasContent(movies)">Skin.SetString(Background_Slideshow,Movies)</onright>
+		<onright condition="Skin.String(Background_Slideshow,Videos) + !Library.HasContent(movies) + Library.HasContent(tvshows)">Skin.SetString(Background_Slideshow,TVShows)</onright>
+		<onright condition="Skin.String(Background_Slideshow,Videos) + !Library.HasContent(movies) + !Library.HasContent(tvshows) + Library.HasContent(music)">Skin.SetString(Background_Slideshow,Artists)</onright>
+		<onright condition="Skin.String(Background_Slideshow,Videos) + !Library.HasContent(movies) + !Library.HasContent(tvshows) + !Library.HasContent(music)">Skin.SetString(Background_Slideshow,Custom)</onright>
+		<onright condition="Skin.String(Background_Slideshow,Movies) + Library.HasContent(tvshows)">Skin.SetString(Background_Slideshow,TVShows)</onright>
+		<onright condition="Skin.String(Background_Slideshow,Movies) + !Library.HasContent(tvshows) + Library.HasContent(music)">Skin.SetString(Background_Slideshow,Artists)</onright>
+		<onright condition="Skin.String(Background_Slideshow,Movies) + !Library.HasContent(tvshows) + !Library.HasContent(music)">Skin.SetString(Background_Slideshow,Custom)</onright>
+		<onright condition="Skin.String(Background_Slideshow,TVShows) + Library.HasContent(music)">Skin.SetString(Background_Slideshow,Artists)</onright>
+		<onright condition="Skin.String(Background_Slideshow,TVShows) + !Library.HasContent(music)">Skin.SetString(Background_Slideshow,Custom)</onright>
 		<onright condition="Skin.String(Background_Slideshow,Artists)">Skin.SetString(Background_Slideshow,Custom)</onright>
 	</include>
 	<include name="skinsettings_Background_Slideshow_Unfocused_Slides">

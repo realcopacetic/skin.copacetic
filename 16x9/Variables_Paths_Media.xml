@@ -10,11 +10,7 @@
 	</include>
 
 	<include name="Background_Global_Content">
-		<content sortby="random" limit="5">videodb://movies/titles/</content>
-		<content sortby="random" limit="5">videodb://tvshows/titles/</content>
-		<content sortby="random" limit="5">videodb://movies/titles/</content>
-		<content sortby="random" limit="5">videodb://tvshows/titles/</content>
-		<content sortby="random" limit="5">videodb://movies/titles/</content>
+		<content sortby="random">$VAR[Background_Global_Path]</content>
 	</include>
 
 	<include name="Background_Media_Content">
