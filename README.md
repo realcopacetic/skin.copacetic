@@ -20,10 +20,13 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
-**1.1.22**
+**1.1.23**
 - Fixed alignment bug and missing scrollbar on smartplaylisteditor window that could cause list of rules to exceed the sie of the panel https://github.com/realcopacetic/skin.copacetic/issues/129
+- Added star rating widget to videoosd controls allowing user to view/set a userrating from videosd screen
+- Added language and subtitle quick toggles to videoosd screen 
+
 Still to do:
-- OSD : (still to update --> Buttons, Settings, Stars, icon_Player, still to add --> sub and audio toggles)
+- OSD : (still to update --> Buttons, Settings, Stars, icon_Player)
 - login background
 - Fix video playlist
 
@@ -32,10 +35,11 @@ Still to do:
 - Added navigation from new infoscreen extra details pane. Pressing down will navigate to widgets.
 - Removed conditions on home background requiring library to have content as this was preventing people using plugins for their content from setting backgrounds for home menu items via skinshortcuts https://forum.kodi.tv/showthread.php?tid=373114&pid=3189521#pid3189521
 - Refined skinsettings for global slideshow picker. Now you will only be able to select options from the Slider that are supported by your local library. You can use a Custom plugin path and, if no local library found, Custom will be the default option selected.
+- Added skin support for new script.copacetic.helper feature (1.0.11) to fetch fanarts from plugin sources for global background slideshows https://github.com/realcopacetic/skin.copacetic/issues/108
 - Choices in Global background slider now locked based on library status. If no local library present, only 'Custom path' option will be available
 - Fixed bug in now_playing expressions causing artwork from plugins without a DBID to be coonsidered playing and dimmed.
 - Fixed missing now-playing icon from Billboard view
-- Updated OSD controls 
+- Updated OSD controls https://github.com/realcopacetic/skin.copacetic/issues/110 https://github.com/realcopacetic/skin.copacetic/issues/105 
 
 **1.1.21**
 - Added a fallback label for when clearlogo is not present in home screen background slideshow https://github.com/realcopacetic/skin.copacetic/issues/120
