@@ -24,12 +24,14 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Added navigation from new infoscreen extra details pane. Pressing down will navigate to widgets.
 - Removed conditions on home background requiring library to have content as this was preventing people using plugins for their content from setting backgrounds for home menu items via skinshortcuts https://forum.kodi.tv/showthread.php?tid=373114&pid=3189521#pid3189521
 - Refined skinsettings for global slideshow picker. Now you will only be able to select options from the Slider that are supported by your local library. You can use a Custom plugin path and, if no local library found, Custom will be the default option selected.
+- Choices in Global background slider now locked based on library status. If no local library present, only 'Custom path' option will be available
+- Fixed bug in now_playing expressions causing artwork from plugins without a DBID to be coonsidered playing and dimmed.
+- Fixed missing now-playing icon from Billboard view
+- Updated OSD controls 
 
-In progress:
-- improved osd controls
 Still to do:
+- OSD : (still to update --> Buttons, Settings, Stars, icon_Player, still to add --> sub and audio toggles)
 - login background
-- Make consistent overlay on embedded videoplayer for live tv and fade it out when screensaver kicks in
 - Fix video playlist
 
 **1.1.21**

@@ -146,4 +146,9 @@
 		<animation effect="fadediffuse" end="ff555555" time="360" tween="sine" easing="inout" condition="$EXP[TransparentDialog_IsVisible] + !$EXP[Background_Global_Windows]" reversible="true">Conditional</animation>
 	</include>
 
+	<!-- Rotations -->
+	<include name="Rotate_180_Animation">
+		<animation effect="rotate" start="0" end="180" center="auto" time="0" condition="true">Conditional</animation>
+	</include>
+
 </includes>

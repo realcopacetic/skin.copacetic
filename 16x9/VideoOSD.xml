@@ -4,7 +4,7 @@
 	<onload condition="!String.IsEmpty(window(videoosd).property(VideoOSD_Controls))">ClearProperty(VideoOSD_Controls,videoosd)</onload>
 	<onunload condition="!String.IsEmpty(window(videoosd).property(VideoOSD_Controls))">ClearProperty(VideoOSD_Controls,videoosd)</onunload>
 	<onload condition="!Skin.TimerIsRunning(video_playback_label_interruptor)">Skin.TimerStart(video_playback_label_interruptor)</onload>
-	<defaultcontrol always="true">3</defaultcontrol>
+	<defaultcontrol always="true">4</defaultcontrol>
 	<zorder>3</zorder>
 	<controls>
 		<include content="OSD_Template">

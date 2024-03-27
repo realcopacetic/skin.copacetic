@@ -395,7 +395,7 @@
 			<description>- Choose a custom path</description>
 			<label>$VAR[skinsettings_Background_Slideshow_Custom_Path_Label,- ]</label>
 			<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;custom=True&amp;showNone=False&amp;skinList=Background_Slideshow_Custom_Path)</onclick>
-			<visible>ControlGroup(9).HasFocus(16) + Skin.String(Background_Slideshow,Custom)</visible>
+			<visible>ControlGroup(9).HasFocus(16) + [Skin.String(Background_Slideshow,Custom) | !$EXP[Library_Has_Content]]</visible>
 		</control>
 		<include content="skinsettings_Slider_Button">
 			<param name="info" value="Background_Interval" />

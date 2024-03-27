@@ -9,6 +9,7 @@
 		<include content="OSD_Template">
 			<param name="breadcrumb_color" value="$VAR[Primary_Color]" />
 			<param name="windowname" value="musicosd" />
+			<param name="width" value="300" />
 		</include>
 	</controls>
 </window>

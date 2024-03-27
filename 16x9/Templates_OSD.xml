@@ -90,6 +90,7 @@
 	<include name="OSD_Template">
 		<param name="windowname" />
 		<param name="visible" default="!$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videobookmarks)" />
+		<param name="width" default="420" />
 		<param name="breadcrumb_color" />
 		<definition>
 			<control type="group">
@@ -105,7 +106,7 @@
 					<animation effect="slide" end="-600,290" time="0" condition="Window.Is(musicosd) + !Skin.String(visualisation_Layout,Large)">Conditional</animation>
 					<centerleft>50%</centerleft>
 					<centertop>50%</centertop>
-					<width>300</width>
+					<width>$PARAM[width]</width>
 					<height>180</height>
 					<orientation>vertical</orientation>
 					<align>center</align>
@@ -113,10 +114,6 @@
 					<include content="OSD_Row">
 						<param name="id" value="3000" />
 						<include content="$PARAM[windowname]_Top_Row_Content" />
-					</include>
-					<include content="OSD_Row" condition="Window.Is(videoosd)">
-						<param name="id" value="3100" />
-						<include content="$PARAM[windowname]_Middle_Row_Content" />
 					</include>
 					<include content="OSD_Row">
 						<param name="id" value="3200" />

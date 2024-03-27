@@ -79,68 +79,70 @@
 				<centertop>50%</centertop>
 				<include content="Music_Player_Button_Template">
 					<param name="focused" value="String.IsEqual(Container($PARAM[id]).Position,0)" />
-					<param name="icon" value="Previous" />
+					<param name="icon" value="chevron_horizontal" />
 					<param name="left" value="0" />
 					<param name="top" value="0" />
 				</include>
 				<include content="Music_Player_Button_Template">
 					<param name="visible" value="!Player.Paused" />
 					<param name="focused" value="String.IsEqual(Container($PARAM[id]).Position,1) + !Player.Paused" />
-					<param name="icon" value="Pause" />
+					<param name="icon" value="pause" />
 					<param name="left" value="60" />
 					<param name="top" value="0" />
 				</include>
 				<include content="Music_Player_Button_Template">
 					<param name="visible" value="Player.Paused" />
 					<param name="focused" value="String.IsEqual(Container($PARAM[id]).Position,1) + Player.Paused" />
-					<param name="icon" value="Play" />
+					<param name="icon" value="play" />
 					<param name="left" value="60" />
 					<param name="top" value="0" />
 				</include>
 				<include content="Music_Player_Button_Template">
 					<param name="visible" value="MusicPlayer.HasNext" />
 					<param name="focused" value="String.IsEqual(Container($PARAM[id]).Position,2)" />
-					<param name="icon" value="Next" />
+					<param name="icon" value="chevron_horizontal" />
+					<param name="rotate_180" value="true" />
 					<param name="left" value="120" />
 					<param name="top" value="0" />
 				</include>
 				<include content="Music_Player_Button_Template">
 					<param name="visible" value="!MusicPlayer.HasNext" />
 					<param name="focused" value="String.IsEqual(Container($PARAM[id]).Position,2)" />
-					<param name="icon" value="NoNext" />
+					<param name="icon" value="chevron_horizontal_50%" />
+					<param name="rotate_180" value="true" />
 					<param name="left" value="120" />
 					<param name="top" value="0" />
 				</include>
 				<include content="Music_Player_Button_Template">
 					<param name="focused" value="String.IsEqual(Container($PARAM[id]).Position,3)" />
-					<param name="icon" value="Artist" />
+					<param name="icon" value="artist" />
 					<param name="left" value="0" />
 					<param name="top" value="60" />
 				</include>
 				<include content="Music_Player_Button_Template">
 					<param name="focused" value="String.IsEqual(Container($PARAM[id]).Position,4)" />
-					<param name="icon" value="Stop" />
+					<param name="icon" value="stop" />
 					<param name="left" value="60" />
 					<param name="top" value="60" />
 				</include>
 				<include content="Music_Player_Button_Template">
 					<param name="focused" value="String.IsEqual(Container($PARAM[id]).Position,5)" />
 					<param name="visible" value="!Skin.String(Music_Rating_Like_Threshold)" />
-					<param name="icon" value="Fullscreen" />
+					<param name="icon" value="fullscreen" />
 					<param name="left" value="120" />
 					<param name="top" value="60" />
 				</include>
 				<include content="Music_Player_Button_Template">
 					<param name="focused" value="String.IsEqual(Container($PARAM[id]).Position,5)" />
 					<param name="visible" value="Skin.String(Music_Rating_Like_Threshold) + Integer.IsLess(Window(home).Property(MusicPlayer_UserRating),Skin.String(Music_Rating_Like_Threshold))" />
-					<param name="icon" value="Like" />
+					<param name="icon" value="heart_unfilled" />
 					<param name="left" value="120" />
 					<param name="top" value="60" />
 				</include>
 				<include content="Music_Player_Button_Template">
 					<param name="focused" value="String.IsEqual(Container($PARAM[id]).Position,5)" />
 					<param name="visible" value="Skin.String(Music_Rating_Like_Threshold) + !Integer.IsLess(Window(home).Property(MusicPlayer_UserRating),Skin.String(Music_Rating_Like_Threshold))" />
-					<param name="icon" value="Unlike" />
+					<param name="icon" value="heart_filled" />
 					<param name="color" value="$VAR[Accent_Color]" />
 					<param name="left" value="120" />
 					<param name="top" value="60" />
