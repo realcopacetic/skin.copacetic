@@ -22,6 +22,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ---
 **1.1.25**
 - Fixed label to show on homescreen screensaver when no clearlogo present
+- Added option to make artwork label presistent all the time on all background screens.
+- Fixed typo causing wrong localised label to display for genre on infosceen https://github.com/realcopacetic/skin.copacetic/issues/116
+- Added always available background label to show name of currently displayed fanart. Enable it in Settings > Copacetic > Background. If disabled, the label will be shown as a fallback during home screensaver if option to show clearlogos is enabled, but clearlogo for current listitem is not present https://github.com/realcopacetic/skin.copacetic/issues/124 https://github.com/realcopacetic/skin.copacetic/issues/120
 Still to do:
 - OSD : (still to update --> Buttons, Settings, Stars, icon_Player)
 - login background

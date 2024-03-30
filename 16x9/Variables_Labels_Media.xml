@@ -94,23 +94,21 @@
 		<value>$LOCALIZE[31474] $VAR[Copacetic_Divider] $LOCALIZE[34222]</value>
 	</variable>
 
-	<variable name="Background_Home_Label">
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + Skin.String(Background_Slideshow,Custom) + Skin.String(Background_Slideshow_Custom_Path) + !String.IsEmpty(Window(home).Property(background_custom_title))">$INFO[Window(home).Property(background_custom_title)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + Skin.String(Background_Slideshow,Global) + !String.IsEmpty(Window(home).Property(background_global_title))">$INFO[Window(home).Property(background_global_title)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + Skin.String(Background_Slideshow,Videos) + !String.IsEmpty(Window(home).Property(background_videos_title))">$INFO[Window(home).Property(background_videos_title)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + Skin.String(Background_Slideshow,Movies) + !String.IsEmpty(Window(home).Property(background_movies_title))">$INFO[Window(home).Property(background_movies_title)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + Skin.String(Background_Slideshow,TVShows) + !String.IsEmpty(Window(home).Property(background_tvshows_title))">$INFO[Window(home).Property(background_tvhsows_title)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + Skin.String(Background_Slideshow,Artists) + !String.IsEmpty(Window(home).Property(background_artists_title))">$INFO[Window(home).Property(background_artists_title)]</value>
-		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled) + !String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist)) + !String.IsEmpty(Container(3300).ListItem.Label)">$INFO[Container(3300).ListItem.Label]</value>
-		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled) + !String.IsEmpty(Container(3000).ListItem.Property(background)) + !String.IsEmpty(Container(3000).ListItem.Label)">$INFO[Container(3000).ListItem.Label]</value>
-		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled) + !String.IsEmpty(Container(3300).ListItem.Label)">$INFO[Container(3300).ListItem.Label]</value>
-		<value>xx</value>
+	<variable name="Background_Label">
+		<value condition="[Skin.HasSetting(Home_Background_Override_Enabled) | !Window.Is(home)] + Skin.String(Background_Slideshow,Custom) + Skin.String(Background_Slideshow_Custom_Path) + !String.IsEmpty(Window(home).Property(background_custom_title))">$INFO[Window(home).Property(background_custom_title)]</value>
+		<value condition="[Skin.HasSetting(Home_Background_Override_Enabled) | !Window.Is(home)] + Skin.String(Background_Slideshow,Global) + !String.IsEmpty(Window(home).Property(background_global_title))">$INFO[Window(home).Property(background_global_title)]</value>
+		<value condition="[Skin.HasSetting(Home_Background_Override_Enabled) | !Window.Is(home)] + Skin.String(Background_Slideshow,Videos) + !String.IsEmpty(Window(home).Property(background_videos_title))">$INFO[Window(home).Property(background_videos_title)]</value>
+		<value condition="[Skin.HasSetting(Home_Background_Override_Enabled) | !Window.Is(home)] + Skin.String(Background_Slideshow,Movies) + !String.IsEmpty(Window(home).Property(background_movies_title))">$INFO[Window(home).Property(background_movies_title)]</value>
+		<value condition="[Skin.HasSetting(Home_Background_Override_Enabled) | !Window.Is(home)] + Skin.String(Background_Slideshow,TVShows) + !String.IsEmpty(Window(home).Property(background_tvshows_title))">$INFO[Window(home).Property(background_tvhsows_title)]</value>
+		<value condition="[Skin.HasSetting(Home_Background_Override_Enabled) | !Window.Is(home)] + Skin.String(Background_Slideshow,Artists) + !String.IsEmpty(Window(home).Property(background_artists_title))">$INFO[Window(home).Property(background_artists_title)]</value>
+		<value condition="Window.Is(home) + !Skin.HasSetting(Home_Background_Override_Enabled) + !String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist))">$INFO[Container(3300).ListItem.Label]</value>
+		<value condition="Window.Is(home) + !Skin.HasSetting(Home_Background_Override_Enabled) + String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist)) + String.IsEmpty(Container(3000).ListItem.Property(background))">$INFO[Container(3300).ListItem.Label]</value>
 	</variable>
 
 	<variable name="Genre_Label">
 		<!-- Genres / Genre -->
-		<value condition="String.Contains(ListItem.Genre,/)">$LOCALIZE[135]</value>
-		<value>$LOCALIZE[]515</value>
+		<value condition="String.Contains(ListItem.Genre)">$LOCALIZE[135]</value>
+		<value>$LOCALIZE[515]</value>
 	</variable>
 
 	<variable name="Info_Label">

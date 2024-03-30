@@ -387,7 +387,7 @@
 			<param name="label" value="$LOCALIZE[31426]" />
 			<param name="label2" value="$VAR[skinsettings_Background_Slideshow_Label]" />
 			<param name="category" value="16" />
-			<param name="previous" value="1607" />
+			<param name="previous" value="1608" />
 			<param name="id" value="1601" />
 			<param name="next" value="1602" />
 		</include>
@@ -424,18 +424,25 @@
 			<param name="id" value="1605" />
 			<param name="next" value="1606" />
 		</include>
-		<control type="label" id="1606">
+		<control type="radiobutton" id="1606">
+			<description>Show the name of currently displaying background artworks</description>
+			<visible>ControlGroup(9).HasFocus(16)</visible>
+			<label>$LOCALIZE[31495]</label>
+			<onclick>Skin.ToggleSetting(Background_Label_Enabled)</onclick>
+			<selected>Skin.HasSetting(Background_Label_Enabled)</selected>
+		</control>
+		<control type="label" id="1607">
 			<description>Home</description>
 			<visible>ControlGroup(9).HasFocus(16)</visible>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[31401]</label>
 		</control>
-		<control type="radiobutton" id="1607">
+		<control type="radiobutton" id="1608">
 			<description>Override home menu backgrounds</description>
+			<visible>ControlGroup(9).HasFocus(16)</visible>
 			<label>$LOCALIZE[31433]</label>
 			<onclick>Skin.ToggleSetting(Home_Background_Override_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_Background_Override_Enabled)</selected>
-			<visible>ControlGroup(9).HasFocus(16)</visible>
 		</control>
 
 		<!--Home-->

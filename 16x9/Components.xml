@@ -100,6 +100,7 @@
 		<param name="content_source" default="Background_Global_Content" />
 		<param name="fadein_animation_condition" default="true" />
 		<param name="fadeout_animation_condition" default="true" />
+		<param name="include_label" default="true" />
 		<definition>
 			<include content="Background_List" condition="$PARAM[include_list]">
 				<param name="content_source" value="$PARAM[content_source]" />
@@ -108,17 +109,31 @@
 			<include content="Background_Multiart_Template">
 				<param name="transition_time" value="$PARAM[time]" />
 			</include>
-			<control type="multiimage">
+			<control type="group">
 				<include content="WindowOpenClose_Fade_Delayed_Animation">
 					<param name="fadein_condition" value="$PARAM[fadein_animation_condition]" />
 					<param name="fadeout_condition" value="$PARAM[fadeout_animation_condition]" />
 				</include>
-				<imagepath>$PARAM[texture_path]</imagepath>
-				<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
-				<aspectratio>scale</aspectratio>
-				<fadetime>$PARAM[fadetime]</fadetime>
-				<timeperimage>$PARAM[time]</timeperimage>
-				<randomize>true</randomize>
+				<control type="multiimage">
+					<imagepath>$PARAM[texture_path]</imagepath>
+					<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
+					<aspectratio>scale</aspectratio>
+					<fadetime>$PARAM[fadetime]</fadetime>
+					<timeperimage>$PARAM[time]</timeperimage>
+					<randomize>true</randomize>
+				</control>
+				<include content="Common_Details_Textbox" condition="$PARAM[include_label] + [[Window.Is(home) + Skin.HasSetting(Home_Screensaver_Clearlogo_Enabled)] | Skin.HasSetting(Background_Label_Enabled)]">
+					<param name="visible" value="[Window.Is(home) + Skin.HasSetting(Home_Screensaver_Clearlogo_Enabled) + String.IsEmpty(Control.Getlabel(6310)) + Control.HasFocus(4300) + !$EXP[TransparentDialog_IsVisible]] | Skin.HasSetting(Background_Label_Enabled)" />
+					<param name="gap" value="1010" />
+					<param name="maxheight" value="60" />
+					<param name="font" value="Description" />
+					<param name="color" value="$VAR[Unfocused_Color]" />
+					<param name="label" value="$VAR[Background_Label]" />
+					<param name="align" value="left" />
+					<include content="Visible_Fade_Delayed_Animation" />
+					<left>10</left>
+					<right>10</right>
+				</include>
 			</control>
 		</definition>
 	</include>
@@ -136,6 +151,7 @@
 					<param name="colordiffuse" value="$VAR[Home_Artwork_Diffuse]" />
 					<param name="texture_path" value="$PARAM[texture_path]" />
 					<param name="fadetime" value="0" />
+					<param name="include_label" value="false" />
 					<param name="fadein_animation_condition" value="$PARAM[fadein_animation_condition]" />
 					<param name="fadeout_animation_condition" value="$PARAM[fadeout_animation_condition]" />
 				</include>
@@ -217,18 +233,6 @@
 			<left>60</left>
 			<bottom>60</bottom>
 			<fadetime>360</fadetime>
-		</include>
-		<include content="Common_Details_Textbox" condition="Skin.HasSetting(Home_Screensaver_Clearlogo_Enabled)">
-			<param name="visible" value="String.IsEmpty(Control.Getlabel(6310)) + Control.HasFocus(4300) + !$EXP[TransparentDialog_IsVisible]" />
-			<param name="gap" value="990" />
-			<param name="maxheight" value="60" />
-			<param name="font" value="Default_Settings_List" />
-			<param name="color" value="$VAR[Unfocused_Color]" />
-			<param name="label" value="$VAR[Background_Home_Label]" />
-			<param name="align" value="left" />
-			<include content="Visible_Fade_Delayed_Animation" />
-			<left>30</left>
-			<right>30</right>
 		</include>
 	</include>
 
