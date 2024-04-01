@@ -77,13 +77,16 @@
 
 	<include name="OSD_Row">
 		<param name="top" default="0" />
+		<param name="width" default="100%" />
+		<param name="itemgap" default="0" />
 		<definition>
 			<control type="grouplist" id="$PARAM[id]">
 				<top>$PARAM[top]</top>
 				<height>60</height>
+				<width>$PARAM[width]</width>
 				<orientation>horizontal</orientation>
 				<align>center</align>
-				<itemgap>0</itemgap>
+				<itemgap>$PARAM[itemgap]</itemgap>
 				<nested />
 			</control>
 		</definition>
@@ -104,11 +107,11 @@
 					<param name="title_label" value="$VAR[OSD_Label]" />
 					<param name="info_label_visible" value="true" />
 				</include>
+				<!-- Main OSD buttons -->
 				<control type="grouplist">
 					<visible>!Control.HasFocus(4023) + !Control.HasFocus(4021) + !Control.HasFocus(4022)</visible>
 					<include content="VisibleHidden_Fade_Delayed_Animation" />
 					<animation effect="slide" end="-600,290" time="0" condition="Window.Is(musicosd) + !Skin.String(visualisation_Layout,Large)">Conditional</animation>
-					<animation effect="slide" end="0,45" time="0" condition="Window.Is(videoosd) + !VideoPlayer.Content(livetv)">Conditional</animation>
 					<centerleft>50%</centerleft>
 					<centertop>50%</centertop>
 					<width>$PARAM[width]</width>
@@ -125,12 +128,14 @@
 						<param name="id" value="3010" />
 						<include content="$PARAM[windowname]_Bottom_Row_Content" />
 					</include>
-					<include content="OSD_Row" condition="VideoPlayer.IsFullscreen + !VideoPlayer.Content(livetv)">
-						<param name="id" value="3020" />
-						<param name="top" value="90" />
-						<include content="videoosd_Toggle_Row_Content" />
-					</include>
 				</control>
+				<!-- Toggle row -->
+				<include content="OSD_Row" condition="VideoPlayer.IsFullscreen + !VideoPlayer.Content(livetv)">
+					<param name="id" value="3020" />
+					<param name="top" value="690" />
+					<param name="itemgap" value="15" />
+					<include content="videoosd_Toggle_Row_Content" />
+				</include>
 				<include content="Player_Status_Icons" condition="!Window.Is(visualisation)">
 					<param name="large_label" value="true" />
 				</include>

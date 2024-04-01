@@ -318,45 +318,62 @@
 	</include>
 
 	<include name="videoosd_Toggle_Row_Content">
+		<usecontrolcoords>true</usecontrolcoords>
 		<control type="button" id="15">
 			<include content="Simple_Button_Template">
 				<param name="description" value="Subtitle Language toggle" />
 				<param name="icon" value="audio" />
 			</include>
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[285],videoosd)</onfocus>
 			<onclick>AudioNextLanguage</onclick>
 			<visible>!VideoPlayer.Content(LiveTV)</visible>
 			<onup>3010</onup>
 			<ondown>60</ondown>
 		</control>
 		<control type="label" id="16">
+			<visible>!Control.HasFocus(15)</visible>
 			<height>60</height>
-			<width max="300">auto</width>
-			<label>[UPPERCASE]$INFO[VideoPlayer.AudioLanguage]$INFO[VideoPlayer.AudioCodec, ]$VAR[AudioChannels_Label, ][/UPPERCASE]</label>
+			<width max="960">auto</width>
+			<label>[UPPERCASE]$INFO[VideoPlayer.AudioLanguage][/UPPERCASE]$VAR[AudioCodec_Label, ]$VAR[AudioChannels_Label, ]</label>
 			<textcolor>$VAR[Light_Color]</textcolor>
-			<font>Breadcrumb_Info</font>
+			<font>MusicPlayer_Info</font>
 		</control>
 		<control type="label" id="17">
+			<visible>Control.HasFocus(15)</visible>
 			<height>60</height>
-			<width>60</width>
+			<top>-2</top>
+			<width max="960">auto</width>
+			<label>[UPPERCASE]$INFO[VideoPlayer.AudioLanguage][/UPPERCASE]$VAR[AudioCodec_Label, ]$VAR[AudioChannels_Label, ]</label>
 			<textcolor>$VAR[Light_Color]</textcolor>
-			<font>Breadcrumb_Info</font>
+			<font>MusicPlayer_Title</font>
 		</control>
-		<control type="button" id="18">
+		<control type="button" id="19">
 			<include content="Simple_Button_Template">
 				<param name="description" value="Subtitle Language toggle" />
 				<param name="icon" value="subtitles" />
 			</include>
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[286],videoosd)</onfocus>
 			<onclick>NextSubtitle</onclick>
 			<visible>!VideoPlayer.Content(LiveTV)</visible>
 			<onup>3010</onup>
 			<ondown>60</ondown>
 		</control>
-		<control type="label" id="19">
+		<control type="label" id="20">
+			<visible>!Control.HasFocus(19)</visible>
 			<height>60</height>
 			<width max="300">auto</width>
 			<label>$VAR[videoosd_Subtitle_Toggle_Label]</label>
 			<textcolor>$VAR[Light_Color]</textcolor>
-			<font>Breadcrumb_Info</font>
+			<font>MusicPlayer_Info</font>
+		</control>
+		<control type="label" id="21">
+			<visible>Control.HasFocus(19)</visible>
+			<height>60</height>
+			<top>-2</top>
+			<width max="300">auto</width>
+			<label>$VAR[videoosd_Subtitle_Toggle_Label]</label>
+			<textcolor>$VAR[Light_Color]</textcolor>
+			<font>MusicPlayer_Title</font>
 		</control>
 	</include>
 
