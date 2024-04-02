@@ -31,27 +31,26 @@
   </include>
 
   <include name="Infoscreen_Multiart_Template">
-    <param name="source" default="ListItem" />
     <definition>
       <control type="fadelabel" id="3401">
         <include content="Hidden_Control" />
         <font>Body</font>
-        <info>$PARAM[source].Art(fanart)</info>
-        <info>$PARAM[source].Art(fanart1)</info>
-        <info>$PARAM[source].Art(fanart2)</info>
-        <info>$PARAM[source].Art(fanart3)</info>
-        <info>$PARAM[source].Art(fanart4)</info>
-        <info>$PARAM[source].Art(fanart5)</info>
-        <info>$PARAM[source].Art(fanart6)</info>
-        <info>$PARAM[source].Art(fanart7)</info>
-        <info>$PARAM[source].Art(fanart8)</info>
-        <info>$PARAM[source].Art(fanart9)</info>
-        <info>$PARAM[source].Art(fanart10)</info>
-        <info>$PARAM[source].Art(fanart11)</info>
-        <info>$PARAM[source].Art(fanart12)</info>
-        <info>$PARAM[source].Art(fanart13)</info>
-        <info>$PARAM[source].Art(fanart14)</info>
-        <info>$PARAM[source].Art(fanart15)</info>
+        <info>ListItem.Art(fanart)</info>
+        <info>ListItem.Art(fanart1)</info>
+        <info>ListItem.Art(fanart2)</info>
+        <info>ListItem.Art(fanart3)</info>
+        <info>ListItem.Art(fanart4)</info>
+        <info>ListItem.Art(fanart5)</info>
+        <info>ListItem.Art(fanart6)</info>
+        <info>ListItem.Art(fanart7)</info>
+        <info>ListItem.Art(fanart8)</info>
+        <info>ListItem.Art(fanart9)</info>
+        <info>ListItem.Art(fanart10)</info>
+        <info>ListItem.Art(fanart11)</info>
+        <info>ListItem.Art(fanart12)</info>
+        <info>ListItem.Art(fanart13)</info>
+        <info>ListItem.Art(fanart14)</info>
+        <info>ListItem.Art(fanart15)</info>
         <randomize>true</randomize>
         <pauseatend>$PARAM[transition_time]</pauseatend>
         <scroll>false</scroll>
@@ -61,6 +60,36 @@
     </definition>
   </include>
 
+  <include name="visualisation_Multiart_Template">
+    <definition>
+      <control type="fadelabel" id="3401">
+        <include content="Hidden_Control" />
+        <font>Body</font>
+        <info>Player.Art(artist.fanart)</info>
+        <info>Player.Art(artist.fanart1)</info>
+        <info>Player.Art(artist.fanart2)</info>
+        <info>Player.Art(artist.fanart3)</info>
+        <info>Player.Art(artist.fanart4)</info>
+        <info>Player.Art(artist.fanart5)</info>
+        <info>Player.Art(artist.fanart6)</info>
+        <info>Player.Art(artist.fanart7)</info>
+        <info>Player.Art(artist.fanart8)</info>
+        <info>Player.Art(artist.fanart9)</info>
+        <info>Player.Art(artist.fanart10)</info>
+        <info>Player.Art(artist.fanart11)</info>
+        <info>Player.Art(artist.fanart12)</info>
+        <info>Player.Art(artist.fanart13)</info>
+        <info>Player.Art(artist.fanart14)</info>
+        <info>Player.Art(artist.fanart15)</info>
+        <randomize>true</randomize>
+        <pauseatend>$PARAM[transition_time]</pauseatend>
+        <scroll>false</scroll>
+        <scrollout>false</scrollout>
+        <resetonlabelchange>true</resetonlabelchange>
+      </control>
+    </definition>
+  </include> 
+  
   <include name="Multiart_Template">
     <control type="fadelabel" id="3400">
       <include content="Hidden_Control" />
@@ -92,7 +121,6 @@
   <include name="MyViews_Multiart_Labels">
     <param name="include_type_label" default="true" />
     <param name="template" default="Multiart" />
-    <param name="source" default="ListItem" /> 
     <definition>
       <include content="Hidden_Components" condition="$PARAM[include_type_label]">
         <control type="label" id="6400">
@@ -101,23 +129,18 @@
       </include>
       <include content="$PARAM[template]_Template" condition="Skin.String(Multiart_Interval,3)">
         <param name="transition_time" value="3000" />
-        <param name="source" value="$PARAM[source]" /> 
       </include>
       <include content="$PARAM[template]_Template" condition="Skin.String(Multiart_Interval,4) | !Skin.String(Multiart_Interval)">
         <param name="transition_time" value="4000" />
-        <param name="source" value="$PARAM[source]" /> 
       </include>
       <include content="$PARAM[template]_Template" condition="Skin.String(Multiart_Interval,5)">
         <param name="transition_time" value="5000" />
-        <param name="source" value="$PARAM[source]" /> 
       </include>
       <include content="$PARAM[template]_Template" condition="Skin.String(Multiart_Interval,7)">
         <param name="transition_time" value="7000" />
-        <param name="source" value="$PARAM[source]" /> 
       </include>
       <include content="$PARAM[template]_Template" condition="Skin.String(Multiart_Interval,10)">
         <param name="transition_time" value="10000" />
-        <param name="source" value="$PARAM[source]" /> 
       </include>
     </definition>
   </include>

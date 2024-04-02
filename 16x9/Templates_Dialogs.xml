@@ -20,8 +20,8 @@
 				<param name="window" value="musicinformation" />
 			</include>
 			<include content="MyViews_Multiart_Labels">
-			<param name="include_type_label" value="false" />
-			<param name="template" value="Infoscreen_Multiart" />
+				<param name="include_type_label" value="false" />
+				<param name="template" value="Infoscreen_Multiart" />
 			</include>
 			<!-- Background -->
 			<include content="Simple_ListIcon" condition="Window.Is(movieinformation) | Window.Is(musicinformation) | Window.Is(addoninformation)">

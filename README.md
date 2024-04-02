@@ -33,6 +33,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Made some fixes to notification widgets
 - Made some fixes to videoplaylist/musicplaylist
 - Made some fixes to visualisation window https://github.com/realcopacetic/skin.copacetic/issues/130
+- Added support for artist fanart multiart to visualisation slideshow https://github.com/realcopacetic/skin.copacetic/issues/47
 
 Still to do:
 - OSD : (still to update --> Buttons, Settings, Stars, icon_Player)

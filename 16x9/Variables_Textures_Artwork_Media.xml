@@ -89,6 +89,7 @@
 
 	<variable name="visualisation_Background_Texture">
 		<value condition="!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</value>
+		<value condition="!String.IsEmpty(Player.Art(artist.fanart1))">$INFO[Control.GetLabel(3401)]</value>
 		<value condtion="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
 	</variable>
 
