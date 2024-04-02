@@ -294,6 +294,7 @@
 
 	<variable name="Info_Breadcrumb_Label">
 		<value condition="Window.Is(musicplaylist)">$VAR[ListItem_Year_Divider_Bold,, ]$INFO[ListItem.Year]$VAR[ListItem_Album_Divider_Bold, , ]$INFO[ListItem.Album]</value>
+		<value condition="Window.Is(videoplaylist)">$VAR[Copacetic_Divider_Bold,, ]$INFO[Container.CurrentItem]$INFO[Container.NumItems,/]</value>
 		<value condition="String.IsEqual(ListItem.DBType,movie) + $EXP[GridView_IsVisible] + $EXP[GridView_Details_Breadcrumb_Movies] + !String.IsEmpty(ListItem.Year)">$VAR[ListItem_Year_Divider_Bold]$INFO[ListItem.Year, ]$VAR[Resolution_Label_Divider_Bold, ]$VAR[Resolution_Label, ]</value>
 		<value condition="String.IsEqual(ListItem.DBType,set) + $EXP[GridView_IsVisible] + $EXP[GridView_Details_Breadcrumb_Sets] + !String.IsEmpty(Container(3100).ListItem(0).Year)">$VAR[3100_ListItem_Year_Divider_Bold,, ]$INFO[Container(3100).ListItem.Year]$INFO[Container(3100).ListItem(-1).Year,-]$VAR[3100_NumItems_Divider_Bold, , ]$INFO[Container(3100).NumItems,, $LOCALIZE[342]]</value>
 		<value condition="String.IsEqual(ListItem.DBType,set) + $EXP[GridView_IsVisible] + $EXP[GridView_Details_Breadcrumb_Sets] + !String.IsEmpty(Container(3100).NumItems)">$VAR[3100_NumItems_Divider_Bold,, ]$INFO[Container(3100).NumItems,, $LOCALIZE[342]]</value>
@@ -855,6 +856,7 @@
 		<value condition="VideoPlayer.IsFullscreen + Window.Is(seekbar) + String.IsEmpty(VideoPlayer.DBID) + String.Contains(VideoPlayer.Title,.) + !String.IsEmpty(Window(home).Property(Return_Label))">$INFO[Window(home).Property(Return_Label)]</value>
 		<value condition="VideoPlayer.IsFullscreen + Window.Is(seekbar) + !String.IsEmpty(VideoPlayer.TVShowTitle)">$INFO[VideoPlayer.TVShowTitle]</value>
 		<value condition="VideoPlayer.IsFullscreen + Window.Is(seekbar) + !String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.Title]</value>
+		<value condition="Window.Is(videoplaylist)">$LOCALIZE[13350]</value>
 		<value condition="Window.Is(musicplaylist)">$INFO[ListItem.Artist]</value>
 		<value condition="$EXP[GridView_IsVisible] + [$EXP[GridView_Details_Breadcrumb_Movies] | $EXP[GridView_Details_Breadcrumb_Sets] | $EXP[GridView_Details_Breadcrumb_Programs_Files]] + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
 		<value condition="String.IsEqual(ListItem.DBType,tvshow) + $EXP[GridView_IsVisible] + $EXP[GridView_Details_Breadcrumb_TVShows] + !String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle]</value>

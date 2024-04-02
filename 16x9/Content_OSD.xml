@@ -121,12 +121,11 @@
 			<onup>7</onup>
 			<ondown>60</ondown>
 		</control>
-		<!-- Rating -->
 		<control type="button" id="10">
 			<visible>!Skin.String(Music_Rating_Like_Threshold)</visible>
 			<include content="Simple_Button_Template">
 				<param name="description" value="Rating" />
-				<param name="icon" value="heart_unfilled" />
+				<param name="icon" value="star" />
 			</include>
 			<onfocus>SetProperty(MusicOSD_Controls,$LOCALIZE[31304],musicosd)</onfocus>
 			<onclick>Dialog.Close(all, true)</onclick>
@@ -135,7 +134,7 @@
 			<ondown>60</ondown>
 		</control>
 		<control type="togglebutton" id="11">
-			<visible>Skin.String(Music_Rating_Like_Threshold) + System.AddonIsEnabled(script.copacetic.helper)</visible>
+			<visible>Skin.String(Music_Rating_Like_Threshold)</visible>
 			<description>Like/Unlike</description>
 			<width>60</width>
 			<height>60</height>

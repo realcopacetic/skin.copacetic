@@ -103,26 +103,27 @@
 					<param name="id" value="$PARAM[id]" />
 					<animation effect="slide" end="-600,0" time="0" condition="$EXP[ListView_Display_IsThumbnails]">Conditional</animation>
 				</include>
-				<include content="Common_List_Info_Label" condition="!Window.Is(videoplaylist)">
-					<param name="visible" value="[$EXP[ListView_Display_IsBackground] + $EXP[ListView_Details_Info]] | Window.Is(tvsearch)" />
+				<include content="Common_List_Info_Label">
+					<param name="visible" value="$EXP[ListView_Display_IsBackground] | Window.Is(tvsearch) | Window.Is(videoplaylist)" />
 					<param name="left" value="120" />
 					<param name="width" value="1680" />
 					<param name="hiddenlabelmaxwidth" value="1200" />
+					<param name="infolabel_visible" value="$EXP[ListView_Details_Info]" />
 					<param name="infolabelwidth" value="480" />
 				</include>
 				<include content="Common_List_Info_Label" condition="Window.Is(videos) | Window.Is(music) | Window.Is(musicplaylist)">
-					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + [[$EXP[ListView_Details_Info] + Container.Content(songs)] | Control.HasFocus(3100)]" />
+					<param name="visible" value="$EXP[ListView_Display_IsThumbnails]" />
 					<param name="left" value="810" />
 					<param name="width" value="960" />
 					<param name="hiddenlabelmaxwidth" value="840" />
 					<param name="infolabelwidth" value="120" />
-					<param name="infolabel_visible" value="!Control.HasFocus(3100)" />
+					<param name="infolabel_visible" value="$EXP[ListView_Details_Info] + Container.Content(songs)" />
 				</include>
 			</include>
 			<include content="Viewtype_Details_Including_Content_Switching_Template">
 				<param name="viewtype_label" value="List" />
 				<include content="Breadcrumb_Label">
-					<param name="visible" value="!Container.Content(sets) + !Container.Content(movies) + !Container.Content(tvshows) + ![Container.Content(seasons) + $EXP[ListView_Details_Info_Seasons]] + ![Container.Content(actors) + String.IsEmpty(ListItem.Appearances)] + ![Container.Content(files) + !String.IsEmpty(ListItem.Art(poster))] + ![$EXP[ListView_Display_IsBackground] + $EXP[Notification_Widget_IsVisible]]" />
+					<param name="visible" value="!Container.Content(sets) + !Container.Content(movies) + !Container.Content(tvshows) + ![Container.Content(seasons) + $EXP[ListView_Details_Info_Seasons]] + ![Container.Content(actors) + String.IsEmpty(ListItem.Appearances)] + ![Container.Content(files) + !Window.Is(videoplaylist) + !String.IsEmpty(ListItem.Art(poster))] + ![$EXP[ListView_Display_IsBackground] + $EXP[Notification_Widget_IsVisible]]" />
 					<param name="animation" value="VisibleHidden_Fade_Delayed_Animation" />
 					<param name="info_label_visible" value="true" />
 					<param name="textcolor" value="$VAR[Breadcrumb_Label_Color]" />

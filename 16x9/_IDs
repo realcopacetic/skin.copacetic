@@ -68,9 +68,10 @@ CHECKERS
 6006          Variable title label length
 6007          Variable title label length
 6008-10       Gridview title length checker
-6011          Star rating checker
+6011          Star rating checker    
 62XX1         Widget view type
 62XX2         Widget display type
+6300          Background art checker
 6303          Studio flag empty
 6304          MPAA flag empty
 6305          Video source flag empty

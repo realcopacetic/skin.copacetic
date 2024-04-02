@@ -117,19 +117,6 @@
 			<param name="info" value="pictures.generatethumbs" />
 			<param name="label" value="$LOCALIZE[13360]" />
 		</include>
-		<!-- Music player -->
-		<control type="label" id="20">
-			<description>Player</description>
-			<visible>Control.IsVisible(21)</visible>
-			<include content="skinsettings_Default_Label" />
-			<label>$LOCALIZE[14200]</label>
-		</control>
-		<include content="defaultsettings_Radio_Button_NoTexture">
-			<param name="id" value="21" />
-			<param name="info" value="musicplayer.visualisation" />
-			<param name="label" value="$LOCALIZE[250]" />
-			<param name="label2" value="$VAR[defaultsettings_musicplayer.visualisation_Label2]" />
-		</include>
 	</include>
 
 	<include name="profiles_Left_List_Content">
@@ -849,7 +836,7 @@
 			<visible>ControlGroup(9).HasFocus(14)</visible>
 		</control>
 		<control type="radiobutton" id="1414">
-			<description>Enable fanart background</description>
+			<description>Enable background fanart</description>
 			<label>$LOCALIZE[31480]</label>
 			<onclick>Skin.ToggleSetting(visualisation_Disable_Background)</onclick>
 			<selected>!Skin.HasSetting(visualisation_Disable_Background)</selected>

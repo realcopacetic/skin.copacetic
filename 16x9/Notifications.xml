@@ -499,6 +499,7 @@
 				<param name="height" value="$PARAM[height]" />
 				<param name="label_padding" value="$PARAM[label_padding]" />
 				<param name="label_width" value="$PARAM[label_width]" />
+				<param name="label_shift" value="false" />
 				<param name="label2_visible" value="$PARAM[label2_visible]" />
 				<param name="align" value="$PARAM[align]" />
 				<param name="title_label_scroll" value="$PARAM[label_scroll]" />
@@ -538,7 +539,7 @@
 					<animation effect="slide" end="30,0" time="0" condition="!$EXP[Music_Player_HasFocus]">Conditional</animation>
 				</include>
 				<!-- List Thumbnails -->
-				<include content="$PARAM[type]_Widget" condition="Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(videoplaylist) | Window.IsVisible(musicplaylist) | Window.IsVisible(addonbrowser) | Window.IsVisible(programs) | Window.IsVisible(pictures)">
+				<include content="$PARAM[type]_Widget" condition="Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(musicplaylist) | Window.IsVisible(addonbrowser) | Window.IsVisible(programs) | Window.IsVisible(pictures)">
 					<param name="id" value="6501" />
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + !$EXP[Infoscreen_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible]" />
 					<param name="content_visible" value="$PARAM[content_visible]" />
@@ -633,7 +634,7 @@
 					<animation effect="slide" end="30,0" time="0" condition="true">Conditional</animation>
 				</include>
 				<!-- List Thumbnails -->
-				<include content="$PARAM[type]_Widget" condition="Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(videoplaylist) | Window.IsVisible(musicplaylist) | Window.IsVisible(addonbrowser) | Window.IsVisible(programs) | Window.IsVisible(pictures)">
+				<include content="$PARAM[type]_Widget" condition="Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(musicplaylist) | Window.IsVisible(addonbrowser) | Window.IsVisible(programs) | Window.IsVisible(pictures)">
 					<param name="id" value="6506" />
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + !$EXP[Infoscreen_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible]" />
 					<param name="content_visible" value="$PARAM[content_visible]" />

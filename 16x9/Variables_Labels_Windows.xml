@@ -33,11 +33,6 @@
 		<value condition="!String.IsEmpty(Window(home).Property(videolibrary.tvshowartwhitelist))">$INFO[Window(home).Property(videolibrary.tvshowartwhitelist)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
-	<variable name="defaultsettings_musicplayer.visualisation_Label2">
-		<value condition="Skin.HasSetting(musicplayer.visualisation)">Waveform</value>
-		<value condition="!String.IsEmpty(Window(home).Property(musicplayer.visualisation))">$INFO[Window(home).Property(musicplayer.visualisation)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
 
 	<variable name="loginscreen_Welcome_Label">
 		<!-- Good morning / afternoon, / evening / Seasonal messages... Who's watching? -->

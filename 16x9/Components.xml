@@ -248,20 +248,9 @@
 	</include>
 
 	<include name="Visualisation">
-		<control type="group">
-			<!-- visualisation -->
-			<control type="visualisation" id="2">
-				<visible>Skin.TimerIsRunning(music_visualisation) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(music_visualisation),1)</visible>
-				<visible>Player.HasAudio</visible>
-			</control>
-			<!-- diffuse layer - solid to 50% opacity -->
-			<control type="image">
-				<visible>Window.IsVisible(shutdownmenu)</visible>
-				<animation effect="fadediffuse" end="80000000" time="360" condition="Skin.TimerIsRunning(music_visualisation) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(music_visualisation),1)" reversible="true">Conditional</animation>
-				<texture colordiffuse="$VAR[visualisation_Mask]">views/white_100.png</texture>
-				<width>1920</width>
-				<height>1080</height>
-			</control>
+		<control type="visualisation" id="2">
+			<visible>Skin.TimerIsRunning(music_visualisation) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(music_visualisation),1)</visible>
+			<visible>Player.HasAudio + !Window.IsVisible(shutdownmenu)</visible>
 		</control>
 	</include>
 

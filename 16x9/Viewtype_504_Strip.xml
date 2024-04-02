@@ -67,6 +67,7 @@
 				<include content="Variable_Title_Label" condition="!Window.Is(home) + !Window.Is(addoninformation)">
 					<param name="visible" value="[!$EXP[Infoscreen_Widget_HasFocus] + $EXP[StripView_Details_Title] + !$EXP[StripView_Logo_On]] | [$EXP[Infoscreen_Widget_HasFocus] + ![String.IsEqual(Container(3202).ListItem.DBType,Season) + Control.HasFocus(3202)]]" />
 					<param name="label" value="$VAR[Title_Label]" />
+					<param name="textcolor" value="$VAR[Primary_Color]" />
 				</include>
 			</include>
 		</definition>

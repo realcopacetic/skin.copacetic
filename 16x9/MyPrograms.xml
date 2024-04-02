@@ -12,9 +12,5 @@
 		<include content="Common_Controls" />
 		<include content="programs_Views" />
 		<include content="MyViews_Menu_and_Scrollbars" />
-		<control type="label">
-			<align>right</align>
-			<label>$INFO[Control.GetLabel(6400)]</label>
-		</control>
 	</controls>
 </window>

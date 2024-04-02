@@ -183,7 +183,7 @@
 	<include name="Music_Rating">
 		<param name="visible" default="!String.IsEmpty(ListItem.UserRating) + Integer.IsGreaterOrEqual(ListItem.UserRating,Skin.Numeric(Music_Rating_Like_Threshold))" />
 		<definition>
-			<include content="$PARAM[like_texture]" condition="Integer.IsGreater(Skin.Numeric(Music_Rating_Like_Threshold,0))">
+			<include content="$PARAM[like_texture]" condition="Skin.String(Music_Rating_Like_Threshold)">
 				<param name="visible" value="String.IsEqual(ListItem.DBType,song) + $PARAM[visible]" />
 				<param name="color" value="$PARAM[color]" />
 				<animation effect="slide" end="$PARAM[slide],8" time="0" condition="true">Conditional</animation>
@@ -304,13 +304,13 @@
 	</include>
 
 	<include name="Common_List_Info_Label">
-		<param name="visible" default="$EXP[$PARAM[viewtype_label]View_Display_IsBackground] + $EXP[$PARAM[viewtype_label]View_Details_Info_IsVisible]" />
+		<param name="visible" />
+		<param name="infolabel_visible" />
 		<param name="width" default="1680" />
 		<param name="left" default="120" />
 		<param name="hiddenlabel" default="$VAR[Title_Label]" />
 		<param name="hiddenlabelmaxwidth" default="1200" />
 		<param name="infolabel" default="$VAR[ListView_Info_Label_Divider,, ]$VAR[Info_Label]" />
-		<param name="infolabel_visible" default="true" />
 		<param name="infolabelwidth" default="180" />
 		<definition>
 			<include content="Secondary_List_Icons" condition="Skin.HasSetting(Secondary_List_Enabled)">
@@ -659,6 +659,7 @@
 		<param name="width" default="1200" />
 		<param name="bottom" default="45" />
 		<param name="height" default="90" />
+		<param name="textcolor" default="$VAR[visualisation_Label_Color]" />
 		<param name="font_large" default="Strip_Title" />
 		<param name="font_medium" default="Title_Breadcrumb_Label" />
 		<param name="font_small" default="MusicPlayer_Title" />
@@ -711,7 +712,7 @@
 				<control type="label">
 					<visible>!Container(6005).HasNext</visible>
 					<font>$PARAM[font_large]</font>
-					<textcolor>$VAR[Primary_Color]</textcolor>
+					<textcolor>$PARAM[textcolor]</textcolor>
 					<label>$PARAM[label]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -720,7 +721,7 @@
 				<control type="label">
 					<visible>Container(6005).HasNext + !Container(6006).HasNext</visible>
 					<font>$PARAM[font_medium]</font>
-					<textcolor>$VAR[Primary_Color]</textcolor>
+					<textcolor>$PARAM[textcolor]</textcolor>
 					<label>$PARAM[label]</label>
 					<wrapmultiline>true</wrapmultiline>
 					<align>center</align>
@@ -730,7 +731,7 @@
 				<control type="label">
 					<visible>Container(6005).HasNext + Container(6006).HasNext + !Container(6007).HasNext</visible>
 					<font>$PARAM[font_small]</font>
-					<textcolor>$VAR[Primary_Color]</textcolor>
+					<textcolor>$PARAM[textcolor]</textcolor>
 					<label>$PARAM[label]</label>
 					<wrapmultiline>true</wrapmultiline>
 					<align>center</align>
