@@ -20,6 +20,11 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.1.26**
+- Added fix to prevent multiple volume bars showing when audio is muted and scrolling through home screen widgets
+- Cleaned up Now_Playing expressions
+- Added Now_Playing for current set using window property from script.copacetic.helper added in 1.0.13 https://github.com/realcopacetic/skin.copacetic/issues/132
+
 **1.1.25**
 - Fixed label to show on homescreen screensaver when no clearlogo present
 - Added option to make artwork label presistent all the time on all background screens.
