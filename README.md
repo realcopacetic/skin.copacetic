@@ -20,6 +20,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.2.0**
+- New branch for omega development
+
 **1.1.28**
 - Remove test label
 
