@@ -177,7 +177,6 @@
 			<visible>!Window.IsVisible(shutdownmenu) + !Window.IsVisible(textviewer)</visible>
 			<include content="Visible_Fade_Delayed_Long_Animation" />
 			<control type="grouplist">
-				<animation effect="slide" start="0,0" end="-180,0" condition="Window.IsVisible(favourites)">Conditional</animation>
 				<left>960</left>
 				<top>60</top>
 				<width>900</width>

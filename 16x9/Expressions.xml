@@ -2,7 +2,7 @@
 <includes>
 	
 	<!-- Windows -->
-	<expression name="Background_Global_Windows">[Window.IsVisible(addonsettings) + !String.IsEmpty(ListItem.Art(fanart))] | $EXP[Settings_IsVisible] | [Window.IsVisible(addonbrowser) + !Container.Content(addons)] | Window.IsVisible(loginscreen) | Window.IsVisible(musicplaylisteditor) | $EXP[Containers_Background] | [Container.Content() + $EXP[ListView_Display_IsBackground] + [Window.IsVisible(videos) | Window.IsVisible(music)]]</expression>
+	<expression name="Background_Global_Windows">[Window.IsVisible(addonsettings) + !String.IsEmpty(ListItem.Art(fanart))] | $EXP[Settings_IsVisible] | [Window.IsVisible(addonbrowser) + !Container.Content(addons)] | Window.IsVisible(favouritesbrowser) | Window.IsVisible(loginscreen) | Window.IsVisible(musicplaylisteditor) | $EXP[Containers_Background] | [Container.Content() + $EXP[ListView_Display_IsBackground] + [Window.IsVisible(videos) | Window.IsVisible(music)]]</expression>
 	<expression name="Background_IsFanart">$EXP[ListView_Display_IsBackground] | $EXP[BillboardView_IsVisible] | $EXP[ShowcaseView_Display_IsBackground]</expression>
 	<expression name="Background_IsLight">![$EXP[Background_IsFanart] | [$EXP[Infoscreen_IsVisible] + !Window.IsVisible(1104)]] | $EXP[Infoscreen_Background_IsLight]</expression>
 	<expression name="Home_Background_IsFanart">Control.HasFocus(3000) | Control.HasFocus(4300) | $EXP[Music_Player_HasFocus] | $EXP[BillboardView_Display_IsFanart_Widget_Home]</expression>
@@ -12,14 +12,15 @@
 	<expression name="Window_IsSettings">Window.Is(settings) | Window.Is(skinsettings) | Window.Is(appearancesettings) | Window.Is(mediasettings) | Window.Is(playersettings) | Window.Is(servicesettings) | Window.Is(systemsettings) | Window.Is(pvrsettings) | Window.Is(gamesettings) | Window.Is(profiles) | Window.Is(systeminfo) | Window.Is(filemanager)</expression>
 
 	<!-- Background Transition Exceptions for global background service -->
-	<expression name="Background_FadeIn_Exceptions">$EXP[Window.Previous(addonbrowser)] | Window.Previous(settings) | $EXP[Window.Previous(all_settings_windows)] | $EXP[Window.Previous(home)] | $EXP[Window.Previous(music)] | $EXP[Window.Previous(musicplaylisteditor)] | Window.Previous(radioguide) | Window.Previous(radiosearch) | Window.Previous(tvguide) | Window.Previous(tvsearch)</expression>
+	<expression name="Background_FadeIn_Exceptions">$EXP[Window.Previous(addonbrowser)] | Window.Previous(settings) | $EXP[Window.Previous(all_settings_windows)] | $EXP[Window.Previous(home)] | $EXP[Window.Previous(music)] | $EXP[Window.Previous(musicplaylisteditor)] | Window.Previous(radioguide) | Window.Previous(radiosearch) | Window.Previous(tvguide) | Window.Previous(tvsearch) | Window.Previous(favouritesbrowser)</expression>
 	<expression name="Background_FadeIn_Exceptions_home">[$EXP[Background_FadeIn_Exceptions] + Skin.HasSetting(Home_Background_Override_Enabled)] | [Window.Previous(fullscreenvideo) + !Player.HasVideo]</expression>
 	<expression name="Background_FadeIn_Exceptions_music">[$EXP[Background_FadeIn_Exceptions] + Skin.String(Background_Slideshow,Artists)] | Window.Previous(musicplaylisteditor) | Window.Previous(smartplaylisteditor)</expression>
 	<expression name="Background_FadeIn_Exceptions_musicplaylist">[$EXP[Background_FadeIn_Exceptions] + Skin.String(Background_Slideshow,Artists)] | Window.Previous(music)</expression>
-	<expression name="Background_FadeOut_Exceptions">Window.Next(addonbrowser) | Window.Next(settings) | $EXP[Window.Next(all_settings_windows)] | $EXP[Window.Next(home)] | $EXP[Window.Next(music)] | $EXP[Window.Next(musicplaylisteditor)] | Window.Next(radioguide) | Window.Next(radiosearch) | Window.Next(tvguide) | Window.Next(tvsearch)</expression>
+	<expression name="Background_FadeOut_Exceptions">Window.Next(addonbrowser) | Window.Next(settings) | $EXP[Window.Next(all_settings_windows)] | $EXP[Window.Next(home)] | $EXP[Window.Next(music)] | $EXP[Window.Next(musicplaylisteditor)] | Window.Next(radioguide) | Window.Next(radiosearch) | Window.Next(tvguide) | Window.Next(tvsearch) | Window.Next(favouritesbrowser)</expression>
 	<expression name="Background_FadeOut_Exceptions_home">$EXP[Background_FadeOut_Exceptions] + Skin.HasSetting(Home_Background_Override_Enabled)</expression>
 	<expression name="Background_FadeOut_Exceptions_music">[$EXP[Background_FadeOut_Exceptions] + Skin.String(Background_Slideshow,Artists)] | [Window.Is(music) + Container.Content(playlists) + [Window.Next(musicplaylisteditor) | Window.Next(smartplaylisteditor)]]</expression>
 	<expression name="Background_FadeOut_Exceptions_musicplaylist">[$EXP[Background_FadeOut_Exceptions] + Skin.String(Background_Slideshow,Artists)] | Window.Next(music)</expression>
+	
 	<!-- children -->
 	<expression name="Background_IsVisible_settings">$EXP[Window.Previous(home)] | $EXP[Window.Previous(addonbrowser)] | Window.Previous(tvguide) | Window.Previous(radioguide) | Window.Previous(tvsearch) | Window.Previous(radiosearch)</expression>
 	<expression name="Window.Previous(addonbrowser)">Window.Previous(addonbrowser) + String.IsEmpty(Window(home).Property(Container_Addons_NonRepo))</expression>
@@ -349,7 +350,7 @@
 	<expression name="ListView_Display_IsBackground_Songs">Container.Content(songs) + Skin.String(ListView_Display_Songs,Background)</expression>
 	<expression name="ListView_Display_IsBackground_MusicVideos">Container.Content(musicvideos) + [Skin.String(ListView_Display_MusicVideos,Background) | !Skin.String(ListView_Display_MusicVideos)]</expression>
 	<expression name="ListView_Display_IsBackground_Programs_Files">$EXP[Container_Programs_IsFiles] + Skin.String(ListView_Display_Programs_Files,Background)</expression>
-	<expression name="ListView_Display_IsThumbnails">$EXP[ListView_IsVisible] + [$EXP[ListView_Display_IsThumbnails_Plugin_Empty] | $EXP[ListView_Display_IsThumbnails_Movies] | $EXP[ListView_Display_IsThumbnails_Sets] | $EXP[ListView_Display_IsThumbnails_TVShows] | $EXP[ListView_Display_IsThumbnails_Seasons] | $EXP[ListView_Display_IsThumbnails_Episodes] | Container.Content(videos) | $EXP[ListView_Display_IsThumbnails_Artists] | $EXP[ListView_Display_IsThumbnails_Albums] | $EXP[ListView_Display_IsThumbnails_Songs] | $EXP[ListView_Display_IsThumbnails_MusicVideos] | $EXP[Container_Addons_NonRepo] | Container.Content(images) | $EXP[Container_Programs_IsFolders] | $EXP[ListView_Display_IsThumbnails_Programs_Files] | [Container.Content(files) + !Window.IsVisible(videoplaylist)] | Container.Content(actors)]</expression>
+	<expression name="ListView_Display_IsThumbnails">$EXP[ListView_IsVisible] + [$EXP[ListView_Display_IsThumbnails_Plugin_Empty] | $EXP[ListView_Display_IsThumbnails_Movies] | $EXP[ListView_Display_IsThumbnails_Sets] | $EXP[ListView_Display_IsThumbnails_TVShows] | $EXP[ListView_Display_IsThumbnails_Seasons] | $EXP[ListView_Display_IsThumbnails_Episodes] | Container.Content(videos) | $EXP[ListView_Display_IsThumbnails_Artists] | $EXP[ListView_Display_IsThumbnails_Albums] | $EXP[ListView_Display_IsThumbnails_Songs] | $EXP[ListView_Display_IsThumbnails_MusicVideos] | $EXP[Container_Addons_NonRepo] | Container.Content(images) | $EXP[Container_Programs_IsFolders] | $EXP[ListView_Display_IsThumbnails_Programs_Files] | [Container.Content(files) + !Window.IsVisible(videoplaylist)] | Container.Content(actors) | Container.Content(favourites)]</expression>
 	<expression name="ListView_Display_IsThumbnails_Plugin_Empty">$EXP[Container_Plugin_Empty] + Skin.String(ListView_Display_Plugin_Empty,Thumbnails)</expression>
 	<expression name="ListView_Display_IsThumbnails_Movies">Container.Content(movies) + Skin.String(ListView_Display_Movies,Thumbnails)</expression>
 	<expression name="ListView_Display_IsThumbnails_Sets">Container.Content(sets) + Skin.String(ListView_Display_Sets,Thumbnails)</expression>
@@ -423,7 +424,7 @@
 	<expression name="ListView_Flags_Rating_IsVisible">Control.IsVisible(50) + [$EXP[ListView_Flags_Rating] | $EXP[ListView_Flags_All]]</expression>
 
 	<!-- Billboard -->
-	<expression name="BillboardView_Enabled">[Skin.HasSetting(BillboardView_Enabled) + [Window.Is(videos) | Window.Is(music)]] | [Skin.HasSetting(BillboardView_Enabled_Addons) + Window.Is(programs)]</expression>
+	<expression name="BillboardView_Enabled">[Skin.HasSetting(BillboardView_Enabled) + [Window.Is(videos) | Window.Is(music)]] | [Skin.HasSetting(BillboardView_Enabled_Addons) + Window.Is(programs)]<!-- | [Skin.HasSetting(BillboardView_Enabled_favouritesbrowser) + Window.Is(favouritesbrowser)]--></expression>
 	<expression name="BillboardView_IsVisible">$EXP[BillboardView_Media_IsVisible] | $EXP[BillboardView_Display_IsFanart_Widget]</expression>
 	<expression name="BillboardView_Media_IsVisible">!$EXP[Infoscreen_IsVisible] + [Control.HasFocus(501) | String.IsEqual(Container.ViewMode,Billboard)]</expression>
 	<!-- Display -->
@@ -529,7 +530,7 @@
 	<expression name="BillboardView_Flags_Rating_IsVisible">Control.IsVisible(501) + [$EXP[BillboardView_Flags_Rating] | $EXP[BillboardView_Flags_All]]</expression>
 
 	<!-- Showcase -->
-	<expression name="ShowcaseView_Enabled">[Skin.HasSetting(ShowcaseView_Enabled) + [Window.Is(videos) | Window.Is(music)]] | [Skin.HasSetting(ShowcaseView_Enabled_Addons) + [Window.Is(addonbrowser) | Window.Is(programs)]] | [Skin.HasSetting(ShowcaseView_Enabled_Pictures) + Window.Is(pictures)]</expression>
+	<expression name="ShowcaseView_Enabled">[Skin.HasSetting(ShowcaseView_Enabled) + [Window.Is(videos) | Window.Is(music)]] | [Skin.HasSetting(ShowcaseView_Enabled_Addons) + [Window.Is(addonbrowser) | Window.Is(programs)]] | [Skin.HasSetting(ShowcaseView_Enabled_Pictures) + Window.Is(pictures)] | [Skin.HasSetting(ShowcaseView_Enabled_favouritesbrowser) + Window.Is(favouritesbrowser)]</expression>
 	<expression name="ShowcaseView_IsVisible">$EXP[ShowcaseView_Media_IsVisible] | $EXP[ShowcaseView_Widget_IsVisible]</expression>
 	<expression name="ShowcaseView_Media_IsVisible">!$EXP[Infoscreen_IsVisible] + [Control.HasFocus(502) | String.IsEqual(Container.ViewMode,Showcase)]</expression>
 	<expression name="ShowcaseView_Widget_IsVisible">$EXP[ShowcaseView_Display_IsPosters_Widget] | $EXP[ShowcaseView_Display_IsSquare_Widget]</expression>
@@ -721,7 +722,7 @@
 	<expression name="ShowcaseView_Flags_Rating_IsVisible">Control.IsVisible(502) + !$EXP[ShowcaseView_Details_Off] + [$EXP[ShowcaseView_Flags_Rating] | $EXP[ShowcaseView_Flags_All]]</expression>
 
 	<!-- Strip -->
-	<expression name="StripView_Enabled">[Skin.HasSetting(StripView_Enabled) + [Window.Is(videos) | Window.Is(music)]] | [Skin.HasSetting(StripView_Enabled_Addons) + [Window.Is(addonbrowser) | Window.Is(programs)]] | [Skin.HasSetting(StripView_Enabled_Pictures) + Window.Is(pictures)]</expression>
+	<expression name="StripView_Enabled">[Skin.HasSetting(StripView_Enabled) + [Window.Is(videos) | Window.Is(music)]] | [Skin.HasSetting(StripView_Enabled_Addons) + [Window.Is(addonbrowser) | Window.Is(programs)]] | [Skin.HasSetting(StripView_Enabled_Pictures) + Window.Is(pictures)] | [Skin.HasSetting(StripView_Enabled_favouritesbrowser) + Window.Is(favouritesbrowser)]</expression>
 	<expression name="StripView_IsVisible">$EXP[StripView_Media_IsVisible] | $EXP[StripView_Widget_IsVisible] | Window.IsVisible(loginscreen)</expression>
 	<expression name="StripView_Media_IsVisible">!$EXP[Infoscreen_IsVisible] + [Control.HasFocus(504) | String.IsEqual(Container.ViewMode,Strip)]</expression>
 	<expression name="StripView_Widget_IsVisible">$EXP[StripView_Display_IsPosters_Widget] | $EXP[StripView_Display_IsFanart_Widget] | $EXP[StripView_Display_IsSquare_Widget]</expression>
@@ -898,7 +899,7 @@
 	<expression name="StripView_Flags_Rating_IsVisible">Control.IsVisible(504) + [!$EXP[StripView_Details_Off] | $EXP[StripView_Details_Title]] + [$EXP[StripView_Flags_Rating] | $EXP[StripView_Flags_All]]</expression>
 
 	<!-- Grid -->
-	<expression name="GridView_Enabled">[Skin.HasSetting(GridView_Enabled) + [Window.Is(videos) | Window.Is(music)]] | [Skin.HasSetting(GridView_Enabled_Pictures) + Window.Is(pictures)] | [Skin.HasSetting(GridView_Enabled_Addons) + [Window.Is(addonbrowser) | Window.Is(programs)]]</expression>
+	<expression name="GridView_Enabled">[Skin.HasSetting(GridView_Enabled) + [Window.Is(videos) | Window.Is(music)]] | [Skin.HasSetting(GridView_Enabled_Pictures) + Window.Is(pictures)] | [Skin.HasSetting(GridView_Enabled_Addons) + [Window.Is(addonbrowser) | Window.Is(programs)]] | [Skin.HasSetting(GridView_Enabled_favouritesbrowser) + Window.Is(favouritesbrowser)]</expression>
 	<expression name="GridView_IsVisible">$EXP[GridView_Media_IsVisible] | $EXP[GridView_Widget_IsVisible] | Window.Is(videobookmarks)</expression>
 	<expression name="GridView_Media_IsVisible">!$EXP[Infoscreen_IsVisible] + [String.IsEqual(Container.ViewMode,Grid) | [!Control.HasFocus(3000) + Control.IsVisible(505)]]</expression>
 	<expression name="GridView_Widget_IsVisible">$EXP[GridView_Display_IsPosters_Widget] | $EXP[GridView_Display_IsFanart_Widget] | $EXP[GridView_Display_IsSquare_Widget]</expression>

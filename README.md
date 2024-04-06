@@ -20,6 +20,12 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.2.1**
+- GUI dependency bumped to 5.17.0
+- Added disabled bar and nib textures to slider/sliderex in Defaults.xml https://github.com/xbmc/xbmc/pull/23163
+- Removed dialogfavourites.xml and associate variable conditions
+- Added limited support for MyFavourites.xml
+
 **1.2.0**
 - New branch for omega development
 

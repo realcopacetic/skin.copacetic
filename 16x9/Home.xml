@@ -53,7 +53,7 @@
 			<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 			<control type="group">
 				<visible>Control.HasFocus(3000) | $EXP[Music_Player_HasFocus]</visible>
-				<visible>!$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(favourites) + !$EXP[Infoscreen_IsVisible]</visible>
+				<visible>!$EXP[TransparentDialog_IsVisible] + !$EXP[Infoscreen_IsVisible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="Horizontal_List">
 					<param name="hidden_id" value="3000" />

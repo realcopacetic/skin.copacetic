@@ -23,13 +23,10 @@
 
 	<include name="Simple_List_Navigation">
 		<definition>
-			<onleft condition="Window.Is(favourites)">0</onleft>
-			<onright condition="Window.Is(favourites) + $EXP[Music_Player_IsVisible]">SetFocus(3500,1)</onright>
-			<onright condition="Window.Is(favourites) + !$EXP[Music_Player_IsVisible]">0</onright>
 			<onleft condition="Window.Is(musicinformation) + String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(Control.GetLabel(6003))">99</onleft>
 			<onleft condition="Window.Is(musicinformation) + String.IsEqual(ListItem.DBType,album) + String.IsEmpty(Control.GetLabel(6003))">97</onleft>
 			<onright condition="Window.Is(musicinformation) + String.IsEqual(ListItem.DBType,album)">SetFocus(7)</onright>
-			<onright condition="!Window.Is(favourites) + !Window.Is(musicinformation)">4000</onright>
+			<onright condition="!Window.Is(musicinformation)">4000</onright>
 		</definition>
 	</include>
 
@@ -195,9 +192,6 @@
 		<onup condition="Window.Is(home) + !Control.IsVisible(3209) + !Control.IsVisible(3208) + !Control.IsVisible(3207) + !Control.IsVisible(3206) + !Control.IsVisible(3205) + !Control.IsVisible(3204) + !Control.IsVisible(3203) + !Control.IsVisible(3202) + !Control.IsVisible(3201)">3000</onup>
 		<ondown condition="Window.Is(home)">3000</ondown>
 		<onback condition="Window.Is(home)">3000</onback>
-		<onback condition="Window.Is(favourites)">450</onback>
-		<onleft condition="Window.Is(favourites)">450</onleft>
-		<onright condition="Window.Is(favourites)">450</onright>
 		<onback condition="$EXP[ListView_IsVisible] + !$EXP[Infoscreen_IsVisible]">50</onback>
 		<onleft condition="$EXP[ListView_IsVisible] + !$EXP[Infoscreen_IsVisible]">50</onleft>
 		<onright condition="$EXP[ListView_IsVisible] + Integer.IsLessOrEqual(Container.NumItems,11) + !$EXP[Infoscreen_IsVisible] + !$EXP[Hidden_Options_Menu_Disabled]">SetFocus(3000,0,absolute)</onright>
