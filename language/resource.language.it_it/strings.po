@@ -902,6 +902,11 @@ msgid "Enable view for add-on and program windows"
 msgstr "Abilita visualizzazione per le finestre degli add-on e dei programmi"
 
 # /16x9/Content_Settings.xml
+msgctxt "#31496"
+msgid "Enable view for favourites browser"
+msgstr ""
+
+# /16x9/Content_Settings.xml
 msgctxt "#31448"
 msgid "Enable view for pictures window"
 msgstr "Abilita visualizzazione per la finestra delle immagini"
