@@ -20,6 +20,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.2.1**
+- Non-breaking changes to keep code in sync with Omega
+
 **1.2.0**
 - Branching 'nexus' from master to accommodate for 'omega' development
 

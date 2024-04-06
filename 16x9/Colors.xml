@@ -199,6 +199,13 @@
 		<value condition="Integer.IsEqual(Skin.String(Background_Opacity),50)">$VAR[Alpha_50]$VAR[Dark_Grey_Hex]</value>
 		<value>$VAR[Alpha_75]$VAR[Dark_Grey_Hex]</value>
 	</variable>
+	<variable name="ListView_Panel_Mask">
+		<value condition="Integer.IsEqual(Skin.String(Background_Opacity),85)">$VAR[Alpha_85]$VAR[Dark_Grey_Hex]</value>
+		<value condition="Integer.IsEqual(Skin.String(Background_Opacity),75)">$VAR[Alpha_75]$VAR[Dark_Grey_Hex]</value>
+		<value condition="Integer.IsEqual(Skin.String(Background_Opacity),66)">$VAR[Alpha_66]$VAR[Dark_Grey_Hex]</value>
+		<value condition="Integer.IsEqual(Skin.String(Background_Opacity),50)">$VAR[Alpha_50]$VAR[Dark_Grey_Hex]</value>
+		<value>$VAR[Dark_Grey_Color]</value>
+	</variable>
 	<variable name="Transparent_Dialog_Mask">
 		<value condition="VideoPlayer.IsFullscreen">$VAR[Alpha_75]$VAR[Dark_Hex]</value>
 		<value>$VAR[Alpha_50]$VAR[Dark_Hex]</value>
@@ -212,7 +219,7 @@
 	<variable name="Breadcrumb_Label_Color">
 		<value condition="$EXP[Infoscreen_IsVisible] + [String.IsEqual(System.CurrentControlID,50) | String.IsEqual(System.CurrentControlID,3201) | String.IsEqual(System.CurrentControlID,3202) | String.IsEqual(System.CurrentControlID,3203) | String.IsEqual(System.CurrentControlID,3206) | String.IsEqual(System.CurrentControlID,3207)]">$VAR[Primary_Color]</value>
 		<value condition="Window.IsVisible(musicinformation) + String.IsEqual(Window(musicinformation).Property(Info_Type),album) + !String.IsEqual(System.CurrentControlID,12)">$VAR[Primary_Color]</value>
-		<value condition="Window.IsVisible(songinformation) | Window.IsVisible(addoninformation) | Window.IsVisible(pictureinfo) | Window.IsVisible(addoninformation)">$VAR[Primary_Color]</value>
+		<value condition="Window.IsVisible(songinformation) | Window.IsVisible(addoninformation) | Window.IsVisible(pictureinfo)">$VAR[Primary_Color]</value>
 		<value condition="!$EXP[Infoscreen_IsVisible] + Window.Is(home) + [Skin.String(Widget1_View,Strip) | Skin.String(Widget1_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3201)">$VAR[Primary_Color]</value>
 		<value condition="!$EXP[Infoscreen_IsVisible] + Window.Is(home) + [Skin.String(Widget2_View,Strip) | Skin.String(Widget2_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3202)">$VAR[Primary_Color]</value>
 		<value condition="!$EXP[Infoscreen_IsVisible] + Window.Is(home) + [Skin.String(Widget3_View,Strip) | Skin.String(Widget3_View,Grid)] + String.IsEqual(window(home).property(Home_Widget),3203)">$VAR[Primary_Color]</value>
