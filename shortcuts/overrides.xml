@@ -9,6 +9,9 @@
   <background label="::PLAYLIST::">playlistBackground</background>
   <defaultwidgetsGetMore>False</defaultwidgetsGetMore>
   <groupoverride group="shutdownmenu" condition="Window.IsActive(DialogButtonMenu.xml)">Dialog.Close(all,force)</groupoverride>
+  <override action="ActivateWindow(favourites)">
+    <action>ActivateWindow(favouritesbrowser)</action>
+  </override>
 
   <!-- Management dialog navigation -->
   <onback to="304">401</onback>
