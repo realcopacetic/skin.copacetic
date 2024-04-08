@@ -333,7 +333,7 @@
 			<item>
 				<description>Set logos/ Off</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[591] $VAR[Copacetic_Chevron_Right]</label>
-				<label2>Logos/ $LOCALIZE[591]</label2>
+				<label2>$LOCALIZE[31023] / $LOCALIZE[591]</label2>
 				<onclick>SetFocus(501)</onclick>
 				<property name="ActionLeft">Skin.SetString(BillboardView_Logo_Sets,On)</property>
 				<property name="ActionRight">Skin.SetString(BillboardView_Logo_Sets,On)</property>
@@ -342,7 +342,7 @@
 			<item>
 				<description>Set logos/ On</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[34222] $VAR[Copacetic_Chevron_Right]</label>
-				<label2>Logos/ $LOCALIZE[34222]</label2>
+				<label2>$LOCALIZE[31023] / $LOCALIZE[34222]</label2>
 				<onclick>SetFocus(501)</onclick>
 				<property name="ActionLeft">Skin.SetString(BillboardView_Logo_Sets,Off)</property>
 				<property name="ActionRight">Skin.SetString(BillboardView_Logo_Sets,Off)</property>
@@ -352,7 +352,7 @@
 			<item>
 				<description>TV show logos/ Off</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[591] $VAR[Copacetic_Chevron_Right]</label>
-				<label2>Logos/ $LOCALIZE[591]</label2>
+				<label2>$LOCALIZE[31023] / $LOCALIZE[591]</label2>
 				<onclick>SetFocus(501)</onclick>
 				<property name="ActionLeft">Skin.SetString(BillboardView_Logo_TVShows,On)</property>
 				<property name="ActionRight">Skin.SetString(BillboardView_Logo_TVShows,On)</property>
@@ -361,7 +361,7 @@
 			<item>
 				<description>TV show logos/ On</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[34222] $VAR[Copacetic_Chevron_Right]</label>
-				<label2>Logos/ $LOCALIZE[34222]</label2>
+				<label2>$LOCALIZE[31023] / $LOCALIZE[34222]</label2>
 				<onclick>SetFocus(501)</onclick>
 				<property name="ActionLeft">Skin.SetString(BillboardView_Logo_TVShows,Off)</property>
 				<property name="ActionRight">Skin.SetString(BillboardView_Logo_TVShows,Off)</property>
@@ -371,7 +371,7 @@
 			<item>
 				<description>Artist logos/ Off</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[591] $VAR[Copacetic_Chevron_Right]</label>
-				<label2>Logos/ $LOCALIZE[591]</label2>
+				<label2>$LOCALIZE[31023] / $LOCALIZE[591]</label2>
 				<onclick>SetFocus(501)</onclick>
 				<property name="ActionLeft">Skin.SetString(BillboardView_Logo_Artists,On)</property>
 				<property name="ActionRight">Skin.SetString(BillboardView_Logo_Artists,On)</property>
@@ -380,7 +380,7 @@
 			<item>
 				<description>Artist logos/ On</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[34222] $VAR[Copacetic_Chevron_Right]</label>
-				<label2>Logos/ $LOCALIZE[34222]</label2>
+				<label2>$LOCALIZE[31023] / $LOCALIZE[34222]</label2>
 				<onclick>SetFocus(501)</onclick>
 				<property name="ActionLeft">Skin.SetString(BillboardView_Logo_Artists,Off)</property>
 				<property name="ActionRight">Skin.SetString(BillboardView_Logo_Artists,Off)</property>
