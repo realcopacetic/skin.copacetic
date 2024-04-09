@@ -162,6 +162,8 @@
 
 	<include name="DialogSelect_Template">
 		<param name="breadcrumb_label_id" />
+		<param name="breadcrumb_info_label_visible" default="false" />
+		<param name="breadcrumb_info_label" default="" />
 		<param name="description_label" default="" />
 		<param name="description_label_id" default="" />
 		<param name="thumb_visible" />
@@ -174,6 +176,8 @@
 				<include content="Breadcrumb_Label">
 					<param name="title_label_id" value="$PARAM[breadcrumb_label_id]" />
 					<param name="textcolor" value="$PARAM[textcolor]" />
+					<param name="info_label" value="$PARAM[breadcrumb_info_label]" />
+					<param name="info_label_visible" value="$PARAM[breadcrumb_info_label_visible]" />
 				</include>
 				<include content="Description_Label">
 					<param name="id" value="$PARAM[description_label_id]" />
