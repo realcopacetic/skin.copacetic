@@ -13,21 +13,23 @@
 	</include>
 
 	<include name="Simple_Button_Template">
+		<param name="width" default="60" />
 		<param name="color" default="$VAR[Light_Color]" />
 		<param name="rotate_180" default="false" />
 		<definition>
 			<description>$PARAM[description]</description>
-			<width>60</width>
-			<height>60</height>
+			<width>$PARAM[width]</width>
+			<height>$PARAM[width]</height>
 			<font />
-			<texturefocus colordiffuse="$PARAM[color]">osd/icon_$PARAM[icon]_focused.png</texturefocus>
-			<texturenofocus colordiffuse="$PARAM[color]">osd/icon_$PARAM[icon]_unfocused.png</texturenofocus>
+			<texturefocus colordiffuse="$PARAM[color]">icons/icon_$PARAM[icon]_focused_$PARAM[width].png</texturefocus>
+			<texturenofocus colordiffuse="$PARAM[color]">icons/icon_$PARAM[icon]_unfocused_$PARAM[width].png</texturenofocus>
 			<include content="Rotate_180_Animation" condition="$PARAM[rotate_180]" />
 		</definition>
 	</include>
 
 	<include name="Music_Player_Button_Template">
 		<param name="visible" default="true" />
+		<param name="width" default="60" />
 		<param name="focused" />
 		<param name="icon" />
 		<param name="rotate_180" default="false" />
@@ -40,15 +42,15 @@
 				<visible>$PARAM[visible] + Control.HasFocus(3500)</visible>
 				<left>$PARAM[left]</left>
 				<top>$PARAM[top]</top>
-				<width>60</width>
-				<height>60</height>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[width]</height>
 				<control type="image">
 					<visible>!$PARAM[focused]</visible>
-					<texture colordiffuse="$PARAM[color]">osd/icon_$PARAM[icon]_unfocused.png</texture>
+					<texture colordiffuse="$PARAM[color]">icons/icon_$PARAM[icon]_unfocused_$PARAM[width].png</texture>
 				</control>
 				<control type="image">
 					<visible>$PARAM[focused]</visible>
-					<texture colordiffuse="$PARAM[color]">osd/icon_$PARAM[icon]_focused.png</texture>
+					<texture colordiffuse="$PARAM[color]">icons/icon_$PARAM[icon]_focused_$PARAM[width].png</texture>
 				</control>
 			</control>
 		</definition>
