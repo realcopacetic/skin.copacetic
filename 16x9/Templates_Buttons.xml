@@ -12,6 +12,24 @@
 		<texturefocus />
 	</include>
 
+	<include name="Hidden_Button_Grouplist">
+		<param name="id" default="4000" />
+		<param name="onleft" default="4000" />
+		<param name="onright" default="4000" />
+		<param name="onup" default="noop" />
+		<param name="ondown" default="noop" />
+		<definition>
+			<control type="grouplist" id="$PARAM[id]">
+				<onleft>$PARAM[onleft]</onleft>
+				<onright>$PARAM[onright]</onright>
+				<onup>$PARAM[onup]</onup>
+				<ondown>$PARAM[ondown]</ondown>
+				<orientation>horizontal</orientation>
+				<nested />
+			</control>
+		</definition>
+	</include>
+
 	<include name="Simple_Button_Template">
 		<param name="width" default="60" />
 		<param name="color" default="$VAR[Light_Color]" />
@@ -61,7 +79,7 @@
 		<param name="target_id" default="" />
 		<param name="right" default="0" />
 		<param name="width" default="120" />
-		<param name="unfocused_color" default="$VAR[Unfocused_Color]" />
+		<param name="unfocused_color" default="$VAR[Light_Color]" />
 		<param name="focused_color" default="$VAR[Light_Color]" />
 		<param name="texture" default="Cross" />
 		<param name="toggle_button" default="false" />
