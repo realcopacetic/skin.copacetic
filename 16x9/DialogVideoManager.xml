@@ -2,7 +2,7 @@
 <window>
 	<!-- managevideoversions / managevideoextras -->
 	<controls>
-		<include content="DialogSelect_Template">
+		<include content="selectdialog_Template">
 			<param name="visible" value="!Window.IsVisible(shutdownmenu) + !Window.IsTopMost(networksetup) + !Window.IsVisible(selectdialog) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(filebrowser)" />
 			<param name="breadcrumb_label_id" value="2" />
 			<param name="breadcrumb_info_label_visible" value="ControlGroup(4000).HasFocus" />
