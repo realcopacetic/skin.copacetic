@@ -8,11 +8,11 @@
 	<defaultcontrol always="true">4010</defaultcontrol>
 	<zorder>2</zorder>
 	<controls>
+		<include content="selectdialog_Hidden" />
 		<!-- Default layout -->
-		<include content="DialogSelect_Template" condition="!Window.Is(selectvideoversion)">
+		<include content="selectdialog_Template" condition="!Window.Is(selectvideoversion)">
 			<param name="breadcrumb_label_id" value="1" />
 			<param name="description_label" value="$INFO[Container(6).ListItem.Label2]" />
-			<param name="thumb_visible" value="Control.IsVisible(6)" />
 			<param name="thumb_texture" value="$VAR[selectdialog_Icon_Texture]" />
 			<include content="Simple_List">
 				<param name="id" value="3" />
@@ -23,6 +23,7 @@
 			<include content="Simple_List">
 				<param name="id" value="6" />
 			</include>
+			<include content="selectdialog_Scrollbar" />
 			<include content="Button_Group_Template">
 				<param name="toggle_button" value="true" />
 				<param name="onleft" value="4010" />
@@ -42,7 +43,7 @@
 			</include>
 		</include>
 		<!-- selectvideoversion layout -->
-		<include content="DialogSelect_Template" condition="Window.Is(selectvideoversion)">
+		<include content="selectdialog_Template" condition="Window.Is(selectvideoversion)">
 			<param name="breadcrumb_label_id" value="1" />
 			<param name="description_label" value="$INFO[Container(6).ListItem.Duration]$VAR[Resolution_Label_6_Divider_Bold, ]$VAR[Resolution_Label_6, ]$VAR[AudioCodec_Label_6_Divider_Bold, ]$VAR[AudioCodec_Label_6, ]" />
 			<param name="thumb_texture" value="$VAR[selectvideoversion_Icon_Texture]" />
@@ -50,6 +51,7 @@
 				<param name="id" value="6" />
 				<param name="label" value="$INFO[ListItem.VideoVersionName]" />
 			</include>
+			<include content="selectdialog_Scrollbar" />
 			<include content="Button_Group_Template">
 				<param name="onleft" value="4010" />
 				<param name="onright" value="noop" />
@@ -58,11 +60,5 @@
 				<param name="button1_texture" value="Cross" />
 			</include>
 		</include>
-		<!-- Hidden controls -->
-		<control type="button" id="4010">
-			<visible allowhiddenfocus="true">false</visible>
-			<onfocus condition="Control.IsVisible(3)">SetFocus(3)</onfocus>
-			<onfocus condition="!Control.IsVisible(3) + Control.IsVisible(6)">SetFocus(6)</onfocus>
-		</control>
 	</controls>
 </window>
