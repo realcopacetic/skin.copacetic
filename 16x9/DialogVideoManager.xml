@@ -3,7 +3,7 @@
 	<!-- managevideoversions / managevideoextras -->
 	<controls>
 		<include content="selectdialog_Template">
-			<param name="visible" value="!Window.IsVisible(shutdownmenu) + !Window.IsTopMost(networksetup) + !Window.IsVisible(selectdialog) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(filebrowser)" />
+			<param name="visible" value="!Window.IsVisible(shutdownmenu) + !Window.IsTopMost(networksetup) + !Window.IsVisible(selectdialog) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(filebrowser) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput)" />
 			<param name="breadcrumb_label_id" value="2" />
 			<param name="breadcrumb_info_label_visible" value="ControlGroup(4000).HasFocus" />
 			<param name="breadcrumb_info_label" value="$VAR[Copacetic_Divider_Bold] $INFO[Window(managevideoversions).Property(Focused_Button)]" />
