@@ -15,7 +15,7 @@
 		<include content="Infoscreen_Header_Template">
 			<param name="windowname" value="movieinformation" />
 			<include content="Infoscreen_Header">
-				<param name="visible" value="ControlGroup(3000).HasFocus(8) | ControlGroup(3000).HasFocus(6)" />
+				<param name="visible" value="ControlGroup(3000).HasFocus(8) | ControlGroup(3000).HasFocus(11) | ControlGroup(3000).HasFocus(14) | ControlGroup(3000).HasFocus(15) | ControlGroup(3000).HasFocus(6)" />
 				<param name="left" value="120" />
 				<param name="right" value="120" />
 				<param name="align" value="center" />

@@ -200,10 +200,10 @@
 		<value>$VAR[Alpha_75]$VAR[Dark_Grey_Hex]</value>
 	</variable>
 	<variable name="ListView_Panel_Mask">
-		<value condition="Integer.IsEqual(Skin.String(Background_Opacity),85)">$VAR[Alpha_85]$VAR[Dark_Grey_Hex]</value>
-		<value condition="Integer.IsEqual(Skin.String(Background_Opacity),75)">$VAR[Alpha_75]$VAR[Dark_Grey_Hex]</value>
-		<value condition="Integer.IsEqual(Skin.String(Background_Opacity),66)">$VAR[Alpha_66]$VAR[Dark_Grey_Hex]</value>
-		<value condition="Integer.IsEqual(Skin.String(Background_Opacity),50)">$VAR[Alpha_50]$VAR[Dark_Grey_Hex]</value>
+		<value condition="Container.Content(favourites) + Integer.IsEqual(Skin.String(Background_Opacity),85)">$VAR[Alpha_85]$VAR[Dark_Grey_Hex]</value>
+		<value condition="Container.Content(favourites) + Integer.IsEqual(Skin.String(Background_Opacity),75)">$VAR[Alpha_75]$VAR[Dark_Grey_Hex]</value>
+		<value condition="Container.Content(favourites) + Integer.IsEqual(Skin.String(Background_Opacity),66)">$VAR[Alpha_66]$VAR[Dark_Grey_Hex]</value>
+		<value condition="Container.Content(favourites) + Integer.IsEqual(Skin.String(Background_Opacity),50)">$VAR[Alpha_50]$VAR[Dark_Grey_Hex]</value>
 		<value>$VAR[Dark_Grey_Color]</value>
 	</variable>
 	<variable name="Transparent_Dialog_Mask">

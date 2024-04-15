@@ -4,7 +4,7 @@
 	<include name="Widget_Container_Content">
 		<param name="limit" default="20" />
 		<definition>
-			<content target="$PARAM[target]" sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" limit="$PARAM[limit]">$PARAM[content]</content>
+			<content target="$PARAM[target]" sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" limit="$PARAM[limit]" browse="never">$PARAM[content]</content>
 		</definition>
 	</include>
 

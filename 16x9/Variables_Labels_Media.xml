@@ -42,6 +42,32 @@
 		<value>$INFO[ListItem.AudioCodec]</value>
 	</variable>
 
+	<variable name="AudioCodec_Label_6">
+		<value condition="String.IsEqual(Container(6).ListItem.AudioCodec,dca)">DTS</value>
+		<value condition="String.IsEqual(Container(6).ListItem.AudioCodec,dtshd_ma)">DTS-HD Master Audio</value>
+		<value condition="String.IsEqual(Container(6).ListItem.AudioCodec,dtshd)">DTS-HD</value>
+		<value condition="String.IsEqual(Container(6).ListItem.AudioCodec,ac3)">Dolby Digital</value>
+		<value condition="String.IsEqual(Container(6).ListItem.AudioCodec,eac3)">Dolby Digital Plus</value>
+		<value condition="String.IsEqual(Container(6).ListItem.AudioCodec,atmos)">Dolby Atmos</value>
+		<value condition="String.IsEqual(Container(6).ListItem.AudioCodec,dolbypro)">Dolby Pro Logic</value>
+		<value condition="String.IsEqual(Container(6).ListItem.AudioCodec,truehd)">Dolby True HD</value>
+		<value condition="String.IsEqual(Container(6).ListItem.AudioCodec,applemusic)">Apple Music</value>
+		<value>$INFO[Container(6).ListItem.AudioCodec]</value>
+	</variable>
+
+	<variable name="AudioCodec_Label_50">
+		<value condition="String.IsEqual(Container(50).ListItem.AudioCodec,dca)">DTS</value>
+		<value condition="String.IsEqual(Container(50).ListItem.AudioCodec,dtshd_ma)">DTS-HD Master Audio</value>
+		<value condition="String.IsEqual(Container(50).ListItem.AudioCodec,dtshd)">DTS-HD</value>
+		<value condition="String.IsEqual(Container(50).ListItem.AudioCodec,ac3)">Dolby Digital</value>
+		<value condition="String.IsEqual(Container(50).ListItem.AudioCodec,eac3)">Dolby Digital Plus</value>
+		<value condition="String.IsEqual(Container(50).ListItem.AudioCodec,atmos)">Dolby Atmos</value>
+		<value condition="String.IsEqual(Container(50).ListItem.AudioCodec,dolbypro)">Dolby Pro Logic</value>
+		<value condition="String.IsEqual(Container(50).ListItem.AudioCodec,truehd)">Dolby True HD</value>
+		<value condition="String.IsEqual(Container(50).ListItem.AudioCodec,applemusic)">Apple Music</value>
+		<value>$INFO[Container(50).ListItem.AudioCodec]</value>
+	</variable>
+
 	<variable name="AudioChannels_Label">
 		<value condition="VideoPlayer.IsFullscreen + Integer.IsEqual(VideoPlayer.AudioChannels,10)">9.1</value>
 		<value condition="VideoPlayer.IsFullscreen + Integer.IsEqual(VideoPlayer.AudioChannels,8)">7.1</value>
@@ -751,6 +777,38 @@
 		<value condition="!String.IsEmpty(Container(3100).ListItem.VideoResolution)">$INFO[Container(3100).ListItem.VideoResolution]</value>
 	</variable>
 
+	<variable name="Resolution_Label_6">
+		<value condition="[String.StartsWith(Container(6).ListItem.VideoResolution,8K) | String.Contains(Container(6).ListItem.FileNameAndPath,4320p)]">$LOCALIZE[31105]</value>
+		<value condition="[String.StartsWith(Container(6).ListItem.VideoResolution,4K) | String.Contains(Container(6).ListItem.FileNameAndPath,2160p)] + String.Contains(Container(6).ListItem.HDRType,dolbyvision)">$LOCALIZE[31106] $LOCALIZE[31107]</value>
+		<value condition="[String.StartsWith(Container(6).ListItem.VideoResolution,4K) | String.Contains(Container(6).ListItem.FileNameAndPath,2160p)] + [String.Contains(Container(6).ListItem.FilenameAndPath,DV) | String.Contains(Container(6).ListItem.FilenameAndPath,Dolby.Vision)]">$LOCALIZE[31106] $LOCALIZE[31107]</value>
+		<value condition="[String.StartsWith(Container(6).ListItem.VideoResolution,4K) | String.Contains(Container(6).ListItem.FileNameAndPath,2160p)] + String.Contains(Container(6).ListItem.HDRType,hdr10)">$LOCALIZE[31106] $LOCALIZE[31108]</value>
+		<value condition="[String.StartsWith(Container(6).ListItem.VideoResolution,4K) | String.Contains(Container(6).ListItem.FileNameAndPath,2160p)] + String.Contains(Container(6).ListItem.HDRType,hlg)">$LOCALIZE[31106] $LOCALIZE[31113]</value>
+		<value condition="[String.StartsWith(Container(6).ListItem.VideoResolution,4K) | String.Contains(Container(6).ListItem.FileNameAndPath,2160p)] + String.Contains(Container(6).ListItem.FilenameAndPath,HDR)">$LOCALIZE[31106] $LOCALIZE[31108]</value>
+		<value condition="[String.StartsWith(Container(6).ListItem.VideoResolution,4K) | String.Contains(Container(6).ListItem.FileNameAndPath,2160p)]">$LOCALIZE[31106] $LOCALIZE[31109]</value>
+		<value condition="[String.StartsWith(Container(6).ListItem.VideoResolution,1080) | String.Contains(Container(6).ListItem.FileNameAndPath,1080p)]">$LOCALIZE[31110]</value>
+		<value condition="[String.StartsWith(Container(6).ListItem.VideoResolution,720) | String.Contains(Container(6).ListItem.FileNameAndPath,720p)]">$LOCALIZE[31111]</value>
+		<value condition="String.StartsWith(Container(6).ListItem.VideoResolution,576)">$LOCALIZE[31112]</value>
+		<value condition="String.StartsWith(Container(6).ListItem.VideoResolution,540)">$LOCALIZE[31112]</value>
+		<value condition="String.StartsWith(Container(6).ListItem.VideoResolution,480)">$LOCALIZE[31112]</value>
+		<value condition="!String.IsEmpty(Container(6).ListItem.VideoResolution)">$INFO[Container(3100).ListItem.VideoResolution]</value>
+	</variable>
+
+	<variable name="Resolution_Label_50">
+		<value condition="[String.StartsWith(Container(50).ListItem.VideoResolution,8K) | String.Contains(Container(50).ListItem.FileNameAndPath,4320p)]">$LOCALIZE[31105]</value>
+		<value condition="[String.StartsWith(Container(50).ListItem.VideoResolution,4K) | String.Contains(Container(50).ListItem.FileNameAndPath,2160p)] + String.Contains(Container(50).ListItem.HDRType,dolbyvision)">$LOCALIZE[31106] $LOCALIZE[31107]</value>
+		<value condition="[String.StartsWith(Container(50).ListItem.VideoResolution,4K) | String.Contains(Container(50).ListItem.FileNameAndPath,2160p)] + [String.Contains(Container(50).ListItem.FilenameAndPath,DV) | String.Contains(Container(50).ListItem.FilenameAndPath,Dolby.Vision)]">$LOCALIZE[31106] $LOCALIZE[31107]</value>
+		<value condition="[String.StartsWith(Container(50).ListItem.VideoResolution,4K) | String.Contains(Container(50).ListItem.FileNameAndPath,2160p)] + String.Contains(Container(50).ListItem.HDRType,hdr10)">$LOCALIZE[31106] $LOCALIZE[31108]</value>
+		<value condition="[String.StartsWith(Container(50).ListItem.VideoResolution,4K) | String.Contains(Container(50).ListItem.FileNameAndPath,2160p)] + String.Contains(Container(50).ListItem.HDRType,hlg)">$LOCALIZE[31106] $LOCALIZE[31113]</value>
+		<value condition="[String.StartsWith(Container(50).ListItem.VideoResolution,4K) | String.Contains(Container(50).ListItem.FileNameAndPath,2160p)] + String.Contains(Container(50).ListItem.FilenameAndPath,HDR)">$LOCALIZE[31106] $LOCALIZE[31108]</value>
+		<value condition="[String.StartsWith(Container(50).ListItem.VideoResolution,4K) | String.Contains(Container(50).ListItem.FileNameAndPath,2160p)]">$LOCALIZE[31106] $LOCALIZE[31109]</value>
+		<value condition="[String.StartsWith(Container(50).ListItem.VideoResolution,1080) | String.Contains(Container(50).ListItem.FileNameAndPath,1080p)]">$LOCALIZE[31110]</value>
+		<value condition="[String.StartsWith(Container(50).ListItem.VideoResolution,720) | String.Contains(Container(50).ListItem.FileNameAndPath,720p)]">$LOCALIZE[31111]</value>
+		<value condition="String.StartsWith(Container(50).ListItem.VideoResolution,576)">$LOCALIZE[31112]</value>
+		<value condition="String.StartsWith(Container(50).ListItem.VideoResolution,540)">$LOCALIZE[31112]</value>
+		<value condition="String.StartsWith(Container(50).ListItem.VideoResolution,480)">$LOCALIZE[31112]</value>
+		<value condition="!String.IsEmpty(Container(50).ListItem.VideoResolution)">$INFO[Container(3100).ListItem.VideoResolution]</value>
+	</variable>
+
 	<variable name="Resolution_Label">
 		<value condition="[String.StartsWith(ListItem.VideoResolution,8K) | String.Contains(ListItem.FileNameAndPath,4320p)]">$LOCALIZE[31105]</value>
 		<value condition="[String.StartsWith(ListItem.VideoResolution,4K) | String.Contains(ListItem.FileNameAndPath,2160p)] + String.Contains(ListItem.HDRType,dolbyvision)">$LOCALIZE[31106] $LOCALIZE[31107]</value>
@@ -823,6 +881,7 @@
 		<value condition="Window.Is(home) + String.IsEqual(ListItem.DBType,episode) + Integer.IsGreater(ListItem.Episode,9)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x,.]$INFO[ListItem.Title, ]</value>
 		<value condition="Window.Is(home) + String.IsEqual(ListItem.DBType,episode) + Integer.IsGreater(ListItem.Episode,0)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x0,.]$INFO[ListItem.Title, ]</value>
 		<value condition="Window.Is(home) + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+		<value condition="Control.HasFocus(3100) + ListItem.HasVideoVersions + !String.IsEmpty(Container(3100).ListItem.VideoVersionName)">$INFO[Container(3100).ListItem.VideoVersionName]</value>
 		<value condition="Control.HasFocus(3100) + String.IsEqual(Container(3100).ListItem.DBType,season) + !String.IsEmpty(Container(3100).ListItem.Season)">$INFO[Container(3100).ListItem.Season,$LOCALIZE[20373] ]</value>
 		<value condition="Control.HasFocus(3100) + Container.Content(set) + !String.IsEmpty(Container(3100).ListItem.Title)">$INFO[Container(3100).ListItem.Title]</value>
 		<value condition="Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.Label)">$INFO[Container(3100).ListItem.Label]</value>

@@ -425,7 +425,7 @@
 						<param name="selectedcolor" value="$PARAM[selectedcolor]" />
 					</include>
 				</itemlayout>
-				<focusedlayout height="60" width="$PARAM[width]" condition="Control.HasFocus($PARAM[id])">
+				<focusedlayout height="60" width="$PARAM[width]" condition="Control.HasFocus($PARAM[id]) | String.IsEqual(Window.Property(xmlfile),DialogVideoManager.xml)">
 					<include content="$PARAM[layout]_List_Layout">
 						<param name="icon_slide" value="$PARAM[icon_slide]" />
 						<param name="now_playing_icon" value="$PARAM[now_playing_icon]" />
@@ -440,7 +440,7 @@
 						<param name="selectedcolor" value="$PARAM[selectedcolor]" />
 					</include>
 				</focusedlayout>
-				<focusedlayout height="60" width="$PARAM[width]" condition="!Control.HasFocus($PARAM[id])">
+				<focusedlayout height="60" width="$PARAM[width]" condition="!Control.HasFocus($PARAM[id]) + !String.IsEqual(Window.Property(xmlfile),DialogVideoManager.xml)">
 					<include content="Simple_List_Layout">
 						<param name="label" value="$PARAM[label]" />
 						<param name="label_left" value="$PARAM[label_left]" />
@@ -818,7 +818,7 @@
 		<param name="bottom" default="0" />
 		<param name="align" default="left" />
 		<param name="aligny" default="center" />
-		<param name="haspath" default="false" />
+		<param name="haspath" default="true" />
 		<definition>
 			<control type="$PARAM[type]" id="$PARAM[id]">
 				<include content="Visible_Fade_Animation" />
