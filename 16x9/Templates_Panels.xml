@@ -168,10 +168,10 @@
 		<param name="description_label" />
 		<param name="description_label_id" />
 		<param name="description_label_left" default="120" />
-		<param name="description_label_right" default="120" />
+		<param name="description_label_right" default="240" />
 		<param name="thumb_visible" />
 		<param name="thumb_texture" />
-		<param name="textcolor" default="$VAR[Light_Color]" />
+		<param name="textcolor" default="$VAR[Breadcrumb_Label_Color]" />
 		<definition>
 			<include content="Default_Dialog_Panel_Layout">
 				<param name="panel_edge_top" value="210" />

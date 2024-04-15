@@ -489,7 +489,6 @@
 				<include content="$PARAM[widget_view]View_Art_$PARAM[widget_display]">
 					<param name="target_id" value="$PARAM[id]" />
 					<param name="art_icon" value="Widget_$PARAM[widget_display]_Thumbnail" />
-					<param name="show_breadcrumb_overlay" value="true" />
 				</include>
 			</control>
 			<!-- Breadcrumb -->
