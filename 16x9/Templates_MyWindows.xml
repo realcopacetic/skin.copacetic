@@ -212,7 +212,7 @@
 	</include>
 
 	<include name="videos_Views">
-		<param name="visible" default="!$EXP[Infoscreen_IsVisible]" />
+		<param name="visible" default="!$EXP[Infoscreen_IsVisible] + !Window.IsVisible(selectvideoversion)" />
 		<definition>
 			<!-- Background -->
 			<include content="Light_Theme_Background">

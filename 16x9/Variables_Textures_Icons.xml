@@ -28,6 +28,14 @@
 		<value>$INFO[Container(6).ListItem.Art(thumb)]</value>
 	</variable>
 
+	<variable name="selectvideoversion_Icon_Texture">
+		<value condition="!String.IsEmpty(Container(6).ListItem.Art(keyart)) + $EXP[Prefer_Keyart]">$INFO[Container(6).ListItem.Art(keyart)]</value>
+		<value condition="!String.IsEmpty(Container(6).ListItem.Art(poster))">$INFO[Container(6).ListItem.Art(poster)]</value>
+		<value condition="!String.IsEmpty(Container(6).ListItem.Art(square))">$INFO[Container(6).ListItem.Art(square)]</value>
+		<value condition="!String.IsEmpty(Container(6).ListItem.Art(fanart))">$INFO[Container(6).ListItem.Art(fanart)]</value>
+		<value>$INFO[Container(6).ListItem.Art(thumb)]</value>
+	</variable>
+
 	<variable name="SettingsCategory_Icon_Texture">
 		<value condition="Window.Is(skinsettings)">settings/Copacetic_focused_60.png</value>
 		<value condition="Window.Is(interfacesettings)">settings/Interface_focused_60.png</value>
