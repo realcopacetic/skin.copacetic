@@ -6,7 +6,7 @@
 			<visible>$EXP[StripView_IsVisible]</visible>
 			<include content="Custom_List">
 				<param name="type" value="fixedlist" />
-				<param name="visible" value="![Container.Content() + !Window.Is(programs)] + !$EXP[Container_Addons_Repo] + !Container.Content(files) + !Container.Content(songs) + !$EXP[Containers_Background]" />
+				<param name="visible" value="![Container.Content() + !Window.Is(programs)] + !$EXP[Container_Addons_Repo] + !Container.Content(files) + !Container.Content(songs) + !$EXP[Content_HasBackground]" />
 				<param name="id" value="504" />
 				<param name="viewtype_label" value="Strip" />
 				<param name="viewtype" value="wrap" />
@@ -24,6 +24,7 @@
 		<definition>
 			<include content="Viewtype_Display_Template">
 				<param name="viewtype_label" value="Strip" />
+				<param name="visible" value="!Window.IsVisible(selectvideoversion)" />
 				<param name="media_view" value="$PARAM[media_view]" />
 				<include content="StripView_Art_Posters" condition="[$PARAM[media_view] + !Window.Is(addonbrowser)] | [$PARAM[widget_view] + !Skin.String(Widget$PARAM[widget_position]_Display,Fanart) + !Skin.String(Widget$PARAM[widget_position]_Display,Square)]">
 					<param name="target_id" value="$PARAM[id]" />

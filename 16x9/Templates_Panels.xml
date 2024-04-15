@@ -171,7 +171,7 @@
 		<param name="description_label_right" default="120" />
 		<param name="thumb_visible" />
 		<param name="thumb_texture" />
-		<param name="textcolor" default="$VAR[Light_Color]" />
+		<param name="textcolor" default="$VAR[selectdialog_Focus_Color]" />
 		<definition>
 			<include content="Default_Dialog_Panel_Layout">
 				<param name="visible" value="$PARAM[visible]" />
