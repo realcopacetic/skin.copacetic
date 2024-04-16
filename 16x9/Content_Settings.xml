@@ -607,13 +607,6 @@
 			<onclick>Skin.ToggleSetting(BillboardView_Enabled_Addons)</onclick>
 			<selected>Skin.HasSetting(BillboardView_Enabled_Addons)</selected>
 		</control>
-		<!-- <control type="radiobutton" id="1304">
-			<description>Billboard - Favourites</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31496]</label>
-			<onclick>Skin.ToggleSetting(BillboardView_Enabled_favouritesbrowser)</onclick>
-			<selected>Skin.HasSetting(BillboardView_Enabled_favouritesbrowser)</selected>
-		</control> -->
 		<control type="radiobutton" id="1305">
 			<description>Add movement</description>
 			<label>$LOCALIZE[31441]</label>
@@ -654,13 +647,6 @@
 			<onclick>Skin.ToggleSetting(ShowcaseView_Enabled_Addons)</onclick>
 			<selected>Skin.HasSetting(ShowcaseView_Enabled_Addons)</selected>
 		</control>
-		<!-- <control type="radiobutton" id="1315">
-			<description>Showcase - Favourites</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31496]</label>
-			<onclick>Skin.ToggleSetting(ShowcaseView_Enabled_favouritesbrowser)</onclick>
-			<selected>Skin.HasSetting(ShowcaseView_Enabled_favouritesbrowser)</selected>
-		</control> -->
 		<control type="label" id="1320">
 			<description>Strip</description>
 			<visible>ControlGroup(9).HasFocus(13)</visible>
@@ -694,13 +680,6 @@
 			<onclick>Skin.ToggleSetting(StripView_Enabled_Addons)</onclick>
 			<selected>Skin.HasSetting(StripView_Enabled_Addons)</selected>
 		</control>
-		<!-- <control type="radiobutton" id="1325">
-			<description>Strip - Favourites</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31496]</label>
-			<onclick>Skin.ToggleSetting(StripView_Enabled_favouritesbrowser)</onclick>
-			<selected>Skin.HasSetting(StripView_Enabled_favouritesbrowser)</selected>
-		</control> -->
 		<control type="label" id="1330">
 			<description>Grid</description>
 			<visible>ControlGroup(9).HasFocus(13)</visible>
@@ -754,13 +733,6 @@
 			<onclick>Skin.ToggleSetting(GridView_Enabled_Addons)</onclick>
 			<selected>Skin.HasSetting(GridView_Enabled_Addons)</selected>
 		</control>
-		<!-- <control type="radiobutton" id="1338">
-			<description>Grid - Favourites</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31496]</label>
-			<onclick>Skin.ToggleSetting(GridView_Enabled_favouritesbrowser)</onclick>
-			<selected>Skin.HasSetting(GridView_Enabled_favouritesbrowser)</selected>
-		</control> -->
 
 		<!-- Customisations -->
 		<control type="label" id="1400">
