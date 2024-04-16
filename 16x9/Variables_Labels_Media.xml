@@ -885,6 +885,7 @@
 		<value condition="Control.HasFocus(3100) + String.IsEqual(Container(3100).ListItem.DBType,season) + !String.IsEmpty(Container(3100).ListItem.Season)">$INFO[Container(3100).ListItem.Season,$LOCALIZE[20373] ]</value>
 		<value condition="Control.HasFocus(3100) + Container.Content(set) + !String.IsEmpty(Container(3100).ListItem.Title)">$INFO[Container(3100).ListItem.Title]</value>
 		<value condition="Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.Label)">$INFO[Container(3100).ListItem.Label]</value>
+		<value condition="ListItem.HasVideoVersions + String.IsEqual(Container.FolderName,ListItem.Title) + !String.IsEmpty(ListItem.VideoVersionName)">$INFO[ListItem.VideoVersionName]</value>
 		<value condition="String.IsEqual(ListItem.DBType,episode) + [$EXP[GridView_IsVisible] | [$EXP[ListView_Display_IsBackground] + $EXP[ListView_Details_Info]] | [$EXP[BillboardView_IsVisible] + $EXP[BillboardView_Details_Info_IsVisible]] | [$EXP[ShowcaseView_IsVisible] + $EXP[ShowcaseView_Details_Info_IsVisible]] | [$EXP[StripView_IsVisible] + $EXP[StripView_Details_Info_IsVisible]] | $EXP[Infoscreen_IsVisible]] + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
 		<value condition="String.IsEqual(ListItem.DBType,episode) + Integer.IsGreater(ListItem.Episode,9)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x,.]$INFO[ListItem.Title, ]</value>
 		<value condition="String.IsEqual(ListItem.DBType,episode) + Integer.IsGreater(ListItem.Episode,0)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x0,.]$INFO[ListItem.Title, ]</value>
@@ -954,6 +955,7 @@
 
 	<variable name="Title_Unfocused_Label">
 		<value condition="[Window.Is(pvrguideinfo) | Window.Is(tvsearch)] + !String.IsEmpty(ListItem.EpisodeName)">$INFO[ListItem.EpisodeName]</value>
+		<value condition="ListItem.HasVideoVersions + String.IsEqual(Container.FolderName,ListItem.Title) + !String.IsEmpty(ListItem.VideoVersionName)">$INFO[ListItem.VideoVersionName]</value>
 		<value condition="String.IsEqual(ListItem.DBType,episode)">$INFO[ListItem.Title]</value>
 		<value condition="String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(ListItem.Album)">$INFO[ListItem.Album]</value>
 		<value condition="String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>

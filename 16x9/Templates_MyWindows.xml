@@ -143,7 +143,7 @@
 		<definition>
 			<!-- Background -->
 			<include content="Light_Theme_Background">
-				<param name="visible" value="$EXP[Background_IsLight] + !Window.IsVisible(1150) + $EXP[Infoscreen_IsVisible]" />
+				<param name="visible" value="!$EXP[Background_IsVisible]" />
 			</include>
 			<include content="Background_Multiart_Global">
 				<param name="visible" value="!$EXP[Infoscreen_IsVisible]" />
@@ -212,15 +212,15 @@
 	</include>
 
 	<include name="videos_Views">
-		<param name="visible" default="!$EXP[Infoscreen_IsVisible] + !Window.IsVisible(selectvideoversion)" />
+		<param name="visible" default="!$EXP[Infoscreen_IsVisible]" />
 		<definition>
 			<!-- Background -->
 			<include content="Light_Theme_Background">
-				<param name="visible" value="$EXP[Background_IsLight] + !Window.IsVisible(1150)" />
+				<param name="visible" value="!$EXP[Background_IsVisible]" />
 				<include content="Trailer_Autoplay_Fade_Delayed_Animation" condition="Skin.HasSetting(Trailer_Autoplay) + Window.Is(videos)" />
 			</include>
 			<include content="Background_Multiart_Global" condition="$EXP[Library_Has_Content]">
-				<param name="visible" value="$PARAM[visible] + [$EXP[Containers_Background] | Container.Content()] + !$EXP[ListView_Display_IsThumbnails] + !$EXP[GridView_IsVisible]" />
+				<param name="visible" value="$PARAM[visible] + [$EXP[Content_HasBackground] | Container.Content()] + !$EXP[ListView_Display_IsThumbnails] + !$EXP[GridView_IsVisible]" />
 				<param name="fadein_animation_condition" value="!$EXP[Background_FadeIn_Exceptions_music]" />
 				<param name="fadeout_animation_condition" value="!$EXP[Background_FadeOut_Exceptions_music]" />
 			</include>
@@ -283,7 +283,7 @@
 		<definition>
 			<!-- Background -->
 			<include content="Light_Theme_Background">
-				<param name="visible" value="!Container.Content(images) + !$EXP[ShowcaseView_Display_IsBackground]" />
+				<param name="visible" value="!Container.Content(images) + !$EXP[ShowcaseView_Display_HasBackground]" />
 			</include>
 			<include content="Background_Multiart_Global">
 				<param name="visible" value="$PARAM[visible] + !Container.Content(images) + !Container.Content(addons)" />
@@ -328,7 +328,7 @@
 		<definition>
 			<!-- Background -->
 			<include content="Light_Theme_Background">
-				<param name="visible" value="!$EXP[BillboardView_IsVisible] + !$EXP[ShowcaseView_Display_IsBackground]" />
+				<param name="visible" value="!$EXP[BillboardView_IsVisible] + !$EXP[ShowcaseView_Display_HasBackground]" />
 			</include>
 			<!-- Layer 1 -->
 			<control type="group">
@@ -627,7 +627,7 @@
 		<definition>
 			<!-- Background -->
 			<include content="Light_Theme_Background">
-				<param name="visible" value="$EXP[Background_IsLight]" />
+				<param name="visible" value="!$EXP[Background_IsVisible]" />
 				<include content="Trailer_Autoplay_Fade_Delayed_Animation" condition="Skin.HasSetting(Trailer_Autoplay) + Window.Is(videos)" />
 			</include>
 			<control type="group">

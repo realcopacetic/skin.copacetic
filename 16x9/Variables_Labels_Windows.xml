@@ -112,6 +112,16 @@
 		<value>$INFO[Player.ChapterCount]</value>
 	</variable>
 
+	<variable name="selectdialog_List_Label">
+		<value condition="Window.Is(selectvideoversion)">$INFO[ListItem.VideoVersionName]</value>
+		<value>$INFO[ListItem.Label]</value>
+	</variable>
+
+	<variable name="selectdialog_Description_Label">
+		<value condition="Window.Is(selectvideoversion)">$INFO[Container(6).ListItem.Duration]$VAR[Resolution_Label_6_Divider_Bold, ]$VAR[Resolution_Label_6, ]$VAR[AudioCodec_Label_6_Divider_Bold, ]$VAR[AudioCodec_Label_6, ]</value>
+		<value>$INFO[Container(6).ListItem.Label2]</value>
+	</variable>
+
 	<variable name="skinsettings_Choose_Widget1_Path_Label">
 		<value condition="Skin.String(Widget1_Custom_Path)">$INFO[Skin.String(Widget1_Custom_Path),- ]</value>
 		<value>- $LOCALIZE[573]</value>
