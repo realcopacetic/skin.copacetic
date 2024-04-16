@@ -35,9 +35,10 @@
 	</include>
 	<include name="Light_Theme_Background_Fade_Animation">
 		<animation effect="fade" start="0" end="100" time="360" delay="360" tween="sine" easing="inout" reversible="true" condition="!$EXP[Window.Previous(all_settings_windows)]">WindowOpen</animation>
-		<animation effect="fade" start="100" end="0" time="180" tween="sine" easing="inout" reversible="true" condition="!$EXP[Window.Next(all_settings_windows)]">WindowClose</animation>
-		<animation effect="fade" start="0" end="100" time="360" delay="360" tween="sine" easing="inout" reversible="true">Visible</animation>
-		<animation effect="fade" start="100" end="0" time="180" tween="sine" easing="inout" reversible="true">Hidden</animation>
+		<animation effect="fade" start="100" end="0" time="360" tween="sine" easing="inout" reversible="true" condition="!$EXP[Window.Next(all_settings_windows)]">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="360" delay="360" tween="sine" easing="inout" reversible="true" condition="String.IsEqual(Window(home).Property(OptionsMenu),Active)">Visible</animation>
+		<animation effect="fade" start="0" end="100" time="360" tween="sine" easing="inout" reversible="true" condition="!String.IsEqual(Window(home).Property(OptionsMenu),Active)">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="360" tween="sine" easing="inout" reversible="true" condition="!String.IsEqual(Window(home).Property(OptionsMenu),Active)">Hidden</animation>
 	</include>
 
 	<!-- Fade in on Visible -->

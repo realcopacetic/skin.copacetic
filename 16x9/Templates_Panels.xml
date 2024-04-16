@@ -34,6 +34,7 @@
 				<param name="colordiffuse" value="$PARAM[panel_colordiffuse]" />
 				<include content="$PARAM[window_animation_panel]" condition="$PARAM[window_animation_condition]" />
 				<include content="Visible_Fade_Animation" />
+				<animation effect="zoom" end="60,240,1800,600" time="0" condition="Window.Is(selectvideoversion)">Conditional</animation>
 			</include>
 			<control type="group">
 				<include content="$PARAM[window_animation_content]" condition="$PARAM[window_animation_condition]" />
@@ -168,10 +169,10 @@
 		<param name="description_label" />
 		<param name="description_label_id" />
 		<param name="description_label_left" default="120" />
-		<param name="description_label_right" default="120" />
+		<param name="description_label_right" default="240" />
 		<param name="thumb_visible" />
 		<param name="thumb_texture" />
-		<param name="textcolor" default="$VAR[selectdialog_Focus_Color]" />
+		<param name="textcolor" default="$VAR[Breadcrumb_Label_Color]" />
 		<definition>
 			<include content="Default_Dialog_Panel_Layout">
 				<param name="visible" value="$PARAM[visible]" />

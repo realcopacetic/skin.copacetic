@@ -867,10 +867,6 @@
 		<value condition="Skin.String(Theme,Light) + $EXP[visualisation_Background_IsEmpty] + Skin.String(visualisation_Layout,Large)">$VAR[Dark_Color]</value>
 		<value>$VAR[Light_Color]</value>
 	</variable>
-	<variable name="selectdialog_Focus_Color">
-		<value condition="Window.Is(selectvideoversion) + !$EXP[Container_HasBackground]">$VAR[Primary_Color]</value>
-		<value>$VAR[Light_Color]</value>
-	</variable>
 	<variable name="visualisation_Label_Color">
 		<value condition="$EXP[visualisation_Background_IsEmpty] + Skin.String(visualisation_Layout,Large)">$VAR[Primary_Color]</value>
 		<value>$VAR[Light_Color]</value>

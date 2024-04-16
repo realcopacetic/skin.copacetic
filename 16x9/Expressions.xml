@@ -88,9 +88,10 @@
 	<expression name="media_Level_2">$EXP[Content_HasBackground] | Container.Content(actors)</expression>
 	<expression name="media_Level_3">$EXP[movies_Level_3] | $EXP[music_Level_3] | $EXP[tvshows_Level_3] | Container.Content(addons)</expression>
 	<expression name="media_Level_4">$EXP[movies_Level_4] | $EXP[music_Level_4] | $EXP[tvshows_Level_4]</expression>
-	<expression name="media_Level_5">$EXP[music_Level_5] | $EXP[tvshows_Level_5]</expression>
-	<expression name="movies_Level_3">Container.Content(sets) | [Container.Content(movies) + !String.IsEqual(Container.FolderName,ListItem.Set)]</expression>
+	<expression name="media_Level_5">$EXP[movies_Level_5] | $EXP[music_Level_5] | $EXP[tvshows_Level_5]</expression>
+	<expression name="movies_Level_3">Container.Content(sets) | [Container.Content(movies) + !String.IsEqual(Container.FolderName,ListItem.Set) + !String.IsEqual(Container.FolderName,ListItem.Title)]</expression>
 	<expression name="movies_Level_4">Container.Content(movies) + String.IsEqual(Container.FolderName,ListItem.Set)</expression>
+	<expression name="movies_Level_5">Container.Content(movies) + String.IsEqual(Container.FolderName,ListItem.Title)</expression><!-- video versions -->
 	<expression name="music_Level_3">Container.Content(artists)</expression>
 	<expression name="music_Level_4">Container.Content(albums)</expression>
 	<expression name="music_Level_5">Container.Content(songs)</expression>
@@ -122,7 +123,7 @@
 	<expression name="Secondary_List_Content_Switching">[Control.IsVisible(5003) | Control.IsVisible(5004)] + !String.IsEqual(Container(3100).NumItems,1)</expression>
 	<expression name="Secondary_List_Focus">Skin.HasSetting(Secondary_List_Enabled) + [$EXP[Secondary_List_Video_Conditions] | [Container.Content(artists) + !$EXP[ListView_Display_IsBackground]]]</expression>
 	<expression name="Secondary_List_Taking_Focus">Control.HasFocus(3100) + Window.IsVisible(1109)</expression>
-	<expression name="Secondary_List_Video_Conditions">[Container.Content(movies) + ListItem.IsCollection] | [Container.Content(movies) + ListItem.HasVideoVersions] | Container.Content(sets) | [Container.Content(tvshows) + Integer.IsGreater(ListItem.Property(TotalSeasons),1)]</expression>
+	<expression name="Secondary_List_Video_Conditions">[Container.Content(movies) + ListItem.IsCollection] | [Container.Content(movies) + ListItem.HasVideoVersions + !String.IsEqual(Container.FolderName,ListItem.Title)] | Container.Content(sets) | [Container.Content(tvshows) + Integer.IsGreater(ListItem.Property(TotalSeasons),1)]</expression>
 	<expression name="Trailer_Autoplay_IsVisible">String.IsEqual(Window(home).Property(Trailer_Autoplay),true) + Player.HasVideo</expression>
 
 	<!-- Widgets -->
