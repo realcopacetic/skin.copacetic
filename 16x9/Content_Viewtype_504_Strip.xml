@@ -1295,7 +1295,7 @@
 			<!-- Off -->
 			<!-- Title -->
 			<item id="2">
-				<description>Artist logos/ Off</description>
+				<description>Artist logos / Off</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[591] $VAR[Copacetic_Chevron_Right]</label>
 				<label2>$LOCALIZE[31023] / $LOCALIZE[591]</label2>
 				<onclick>SetFocus(504)</onclick>
@@ -1305,7 +1305,7 @@
 			</item>
 			<!-- !Title -->
 			<item>
-				<description>Artist logos/ Off</description>
+				<description>Artist logos / Off</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[591] $VAR[Copacetic_Chevron_Right]</label>
 				<label2>$LOCALIZE[31023] / $LOCALIZE[591]</label2>
 				<onclick>SetFocus(504)</onclick>
@@ -1316,7 +1316,7 @@
 			<!-- On -->
 			<!-- Title -->
 			<item id="2">
-				<description>Artist logos/ On</description>
+				<description>Artist logos / On</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[34222] $VAR[Copacetic_Chevron_Right]</label>
 				<label2>$LOCALIZE[31023] / $LOCALIZE[34222]</label2>
 				<onclick>SetFocus(504)</onclick>
@@ -1326,7 +1326,7 @@
 			</item>
 			<!-- !Title -->
 			<item>
-				<description>Artist logos/ On</description>
+				<description>Artist logos / On</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[34222] $VAR[Copacetic_Chevron_Right]</label>
 				<label2>$LOCALIZE[31023] / $LOCALIZE[34222]</label2>
 				<onclick>SetFocus(504)</onclick>
@@ -1338,7 +1338,7 @@
 			<!-- Off -->
 			<!-- Title -->
 			<item id="2">
-				<description>Artist logos/ Off</description>
+				<description>Artist logos / Off</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[591] $VAR[Copacetic_Chevron_Right]</label>
 				<label2>$LOCALIZE[31023] / $LOCALIZE[591]</label2>
 				<onclick>SetFocus(504)</onclick>
@@ -1348,7 +1348,7 @@
 			</item>
 			<!-- !Title -->
 			<item>
-				<description>Artist logos/ Off</description>
+				<description>Artist logos / Off</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[591] $VAR[Copacetic_Chevron_Right]</label>
 				<label2>$LOCALIZE[31023] / $LOCALIZE[591]</label2>
 				<onclick>SetFocus(504)</onclick>
@@ -1359,7 +1359,7 @@
 			<!-- On -->
 			<!-- Title -->
 			<item id="2">
-				<description>Artist logos/ On</description>
+				<description>Artist logos / On</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[34222] $VAR[Copacetic_Chevron_Right]</label>
 				<label2>$LOCALIZE[31023] / $LOCALIZE[34222]</label2>
 				<onclick>SetFocus(504)</onclick>
@@ -1369,7 +1369,7 @@
 			</item>
 			<!-- !Title -->
 			<item>
-				<description>Artist logos/ On</description>
+				<description>Artist logos / On</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[34222] $VAR[Copacetic_Chevron_Right]</label>
 				<label2>$LOCALIZE[31023] / $LOCALIZE[34222]</label2>
 				<onclick>SetFocus(504)</onclick>
