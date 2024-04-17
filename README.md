@@ -20,7 +20,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
-**1.2.1**
+**1.2.2**
 - Non-breaking changes to keep code in sync with Omega
 - Cleaned some expressions governing Light theme and artwork backgrounds to simplify complex scenarios when several transparent windows are open on top of each other
 - Removed flash of light background when transitioning from fullscreen artwork background to fullscreen artwork infoscreen.
