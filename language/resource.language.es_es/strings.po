@@ -22,7 +22,7 @@ msgstr "Un buen rato con tu contenido multimedia."
 
 msgctxt "Addon Description"
 msgid "Clear away the clutter with a minimal skin designed to bring maximum impact to the artwork that you curate for your favourite movies, shows and music. Copacetic is a labour of love more than five years in the making. I hope you enjoy it."
-msgstr "[CR]Despeja el desorden con un skin minimalista diseñado para dar el máximo [CR]impacto a las ilustraciones que seleccionas para tus películas, series y [CR]música favoritas. Copacetic es un trabajo realizado con amor durante más de [CR]cinco años. Espero que lo disfrutes.[CR][CR]Despeja el desorden con un skin minimalista diseñado para dar el máximo [CR]impacto a las ilustraciones que seleccionas para tus películas, series y [CR]música favoritas. Copacetic es un trabajo realizado con amor durante más de [CR]cinco años. Espero que lo disfrutes.[CR][CR]Despeja el desorden con un skin minimalista diseñado para dar el máximo [CR]impacto a las ilustraciones que seleccionas para tus películas, series y [CR]música favoritas. Copacetic es un trabajo realizado con amor durante más de [CR]cinco años. Espero que lo disfrutes."
+msgstr "Despeja el desorden con un skin minimalista diseñado para dar el máximo impacto a las ilustraciones que seleccionas para tus películas, series y música favoritas. Copacetic es un trabajo realizado con amor durante más de cinco años. Espero que lo disfrutes."
 
 "Despeja el desorden con un skin minimalista diseñado para dar el máximo "
 "impacto a las ilustraciones que seleccionas para tus películas, series y "
