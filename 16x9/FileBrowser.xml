@@ -21,7 +21,7 @@
 				<param name="target_id_2" value="451" />
 			</include>
 			<include content="Button_Group_Template">
-				<param name="visible" value="!Window.IsVisible(favourites)" />
+				<param name="visible" value="true" />
 				<param name="onleft" value="4010" />
 				<param name="button1" value="true" />
 				<param name="button1_id" value="415" />

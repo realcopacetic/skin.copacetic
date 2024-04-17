@@ -28,6 +28,10 @@ msgstr "Elimina il disordine con una skin minimale progettata per dare il massim
 "impatto alle artwork per i tuoi film, serie e musica preferiti. Copacetic è "
 "un lavoro d'amore che dura da più di cinque anni. Spero che vi piaccia."
 
+"Elimina il disordine con una skin minimale progettata per dare il massimo "
+"impatto alle artwork per i tuoi film, serie e musica preferiti. Copacetic è "
+"un lavoro d'amore che dura da più di cinque anni. Spero che vi piaccia."
+
 # ########################################################################################################
 # ########################################################################################################
 # ########################################################################################################

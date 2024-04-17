@@ -487,6 +487,13 @@
 		<value condition="!String.IsEmpty(Container(52).ListItemNoWrap(3).Label) + !String.IsEmpty(Container(52).ListItem(3).Icon)">$INFO[Container(52).ListItem(3).Icon]</value>
 	</variable>
 
+	<variable name="managevideoversions_Artwork">
+		<value condition="!String.IsEmpty(Container(50).ListItem.Art(keyart))">$INFO[Container(50).ListItem.Art(keyart)]</value>
+		<value condition="!String.IsEmpty(Container(50).ListItem.Art(poster))">$INFO[Container(50).ListItem.Art(poster)]</value>
+		<value condition="!String.IsEmpty(Container(50).ListItem.Art(fanart))">$INFO[Container(50).ListItem.Art(fanart)]</value>
+		<value condition="!String.IsEmpty(Container(50).ListItem.Art(thumb))">$INFO[Container(50).ListItem.Art(thumb)]</value>
+	</variable>
+
 	<variable name="playlist(-1)Content">
 		<value condition="!String.IsEmpty(ListItemNoWrap(-1).Label) + String.IsEqual(ListItem(-1).DBType,song) + $EXP[ListView_Display_IsBackground] + !String.IsEmpty(ListItem(-1).Art(album.fanart))">$INFO[ListItem(-1).Art(album.fanart)]</value>
 		<value condition="!String.IsEmpty(ListItemNoWrap(-1).Label) + String.IsEqual(ListItem(-1).DBType,song) + $EXP[ListView_Display_IsBackground] + !String.IsEmpty(ListItem(-1).Art(artist.fanart))">$INFO[ListItem(-1).Art(artist.fanart)]</value>

@@ -24,6 +24,7 @@
 		<definition>
 			<include content="Viewtype_Display_Template">
 				<param name="viewtype_label" value="Showcase" />
+				<param name="visible" value="!Window.IsVisible(selectvideoversion)" />
 				<param name="media_view" value="$PARAM[media_view]" />
 				<animation effect="slide" start="0,0" end="360,0" time="0" reversible="true" condition="$PARAM[media_view] + $EXP[ShowcaseView_Display_IsPosters] + !$EXP[ShowcaseView_Details_Off] + $EXP[Music_Player_IsVisible]">Conditional</animation>
 				<include content="ShowcaseView_Art_Posters" condition="[$PARAM[media_view] + !Window.Is(addonbrowser)] | [$PARAM[widget_view] + !Skin.String(Widget$PARAM[widget_position]_Display,Square)]">

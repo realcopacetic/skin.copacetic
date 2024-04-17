@@ -20,17 +20,26 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
-**1.2.1**
-- Non-breaking changes to keep code in sync with Omega
+**1.3.1**
+- Support for videoversions management dialog and embedded lists [omega]
+- Support for videoversions folder views [omega]
 - Cleaned some expressions governing Light theme and artwork backgrounds to simplify complex scenarios when several transparent windows are open on top of each other
 - Removed flash of light background when transitioning from fullscreen artwork background to fullscreen artwork infoscreen.
 - Removed some obsolete parameters
 - Fixed some instances when the primary colour was incorrectly used instead of the secondary colour on light background views when Light theme selected, causing things like scrollbars to be shown as white on white instead of black on white
 - Fixed a fadediffuse bug in the embedded list artwork mask used on Strip view
 - Fixed the missing Ken Burns effect from Billboard and List views with fullscreen artwork
+- Removed 'more' ListItem from home and infoscreen widgets [omega]
+
+
+**1.2.1**
+- GUI dependency bumped to 5.17.0
+- Added disabled bar and nib textures to slider/sliderex in Defaults.xml https://github.com/xbmc/xbmc/pull/23163
+- Removed dialogfavourites.xml and associate variable conditions
+- Added limited support for MyFavourites.xml
 
 **1.2.0**
-- Branching 'nexus' from master to accommodate for 'omega' development
+- New branch for omega development
 
 **1.1.28**
 - Remove test label

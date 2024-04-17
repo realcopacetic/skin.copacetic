@@ -396,6 +396,20 @@
 		<value condition="!String.IsEmpty(VideoPlayer.VideoResolution)">$VAR[Copacetic_Divider_Bold]</value>
 	</variable>
 
+	<variable name="Resolution_Label_6_Divider">
+		<value condition="!String.IsEmpty(Container(6).ListItem.VideoResolution) | String.Contains(Container(6).ListItem.FileNameAndPath,4320p) | String.Contains(Container(6).ListItem.FileNameAndPath,2160p) | String.Contains(Container(6).ListItem.FileNameAndPath,1080p) | String.Contains(Container(6).ListItem.FileNameAndPath,720p)">$VAR[Copacetic_Divider]</value>
+	</variable>
+	<variable name="Resolution_Label_6_Divider_Bold">
+		<value condition="!String.IsEmpty(Container(6).ListItem.VideoResolution) | String.Contains(Container(6).ListItem.FileNameAndPath,4320p) | String.Contains(Container(6).ListItem.FileNameAndPath,2160p) | String.Contains(Container(6).ListItem.FileNameAndPath,1080p) | String.Contains(Container(6).ListItem.FileNameAndPath,720p)">$VAR[Copacetic_Divider_Bold]</value>
+	</variable>
+
+	<variable name="Resolution_Label_50_Divider">
+		<value condition="!String.IsEmpty(Container(50).ListItem.VideoResolution) | String.Contains(Container(50).ListItem.FileNameAndPath,4320p) | String.Contains(Container(50).ListItem.FileNameAndPath,2160p) | String.Contains(Container(50).ListItem.FileNameAndPath,1080p) | String.Contains(Container(50).ListItem.FileNameAndPath,720p)">$VAR[Copacetic_Divider]</value>
+	</variable>
+	<variable name="Resolution_Label_50_Divider_Bold">
+		<value condition="!String.IsEmpty(Container(50).ListItem.VideoResolution) | String.Contains(Container(50).ListItem.FileNameAndPath,4320p) | String.Contains(Container(50).ListItem.FileNameAndPath,2160p) | String.Contains(Container(50).ListItem.FileNameAndPath,1080p) | String.Contains(Container(50).ListItem.FileNameAndPath,720p)">$VAR[Copacetic_Divider_Bold]</value>
+	</variable>
+
 	<variable name="Resolution_Label_3207_Divider">
 		<value condition="!String.IsEmpty(Container(3207).ListItem.VideoResolution) | String.Contains(Container(3207).ListItem.FileNameAndPath,4320p) | String.Contains(Container(3207).ListItem.FileNameAndPath,2160p) | String.Contains(Container(3207).ListItem.FileNameAndPath,1080p) | String.Contains(Container(3207).ListItem.FileNameAndPath,720p)">$VAR[Copacetic_Divider]</value>
 	</variable>
@@ -448,9 +462,14 @@
 		<value condition="VideoPlayer.IsFullscreen + String.Contains(Player.FilenameAndPath,.EAC3)">$VAR[Copacetic_Divider_Bold]</value>
 		<value condition="VideoPlayer.IsFullscreen + [String.Contains(Player.FilenameAndPath,.DD) | String.Contains(Player.FilenameAndPath,.AC3)]">$VAR[Copacetic_Divider_Bold]</value>
 		<value condition="!String.IsEmpty(ListItem.AudioCodec)">$VAR[Copacetic_Divider_Bold]</value>
-		<value condition="String.Contains(ListItem.FilenameAndPath,.DTS-HD.MA)">$VAR[Copacetic_Divider_Bold]</value>
-		<value condition="String.Contains(ListItem.FilenameAndPath,.EAC3)">$VAR[Copacetic_Divider_Bold]</value>
-		<value condition="String.Contains(ListItem.FilenameAndPath,.DD) | String.Contains(ListItem.FilenameAndPath,.AC3)">$VAR[Copacetic_Divider_Bold]</value>
 	</variable>
+
+	<variable name="AudioCodec_Label_6_Divider_Bold">
+		<value condition="!String.IsEmpty(Container(6).ListItem.AudioCodec)">$VAR[Copacetic_Divider_Bold]</value>
+	</variable> 
+
+	<variable name="AudioCodec_Label_50_Divider_Bold">
+		<value condition="!String.IsEmpty(Container(50).ListItem.AudioCodec)">$VAR[Copacetic_Divider_Bold]</value>
+	</variable> 
 
 </includes>

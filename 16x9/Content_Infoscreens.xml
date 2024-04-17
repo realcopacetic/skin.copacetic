@@ -114,6 +114,20 @@
 			<onup>4021</onup>
 			<ondown>4022</ondown>
 		</control>
+		<control type="button" id="14">
+			<description>Versions</description>
+			<visible>String.IsEqual(ListItem.DBType,movie)</visible>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(ResetScroll," ")</onfocus>
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[40000],movieinformation)</onfocus>
+		</control>
+		<control type="button" id="15">
+			<description>Extras</description>
+			<visible>String.IsEqual(ListItem.DBType,movie)</visible>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(ResetScroll," ")</onfocus>
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[40211],movieinformation)</onfocus>
+		</control>
 		<control type="button" id="10">
 			<description>Choose art</description>
 			<visible>!String.IsEmpty(ListItem.DBID)</visible>

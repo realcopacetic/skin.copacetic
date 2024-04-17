@@ -25,7 +25,7 @@
 				</control>
 			</include>
 			<control type="group">
-				<visible>Control.IsVisible(505)</visible>
+				<visible>Control.IsVisible(505) + !Window.IsVisible(selectvideoversion)</visible>
 				<include content="Visible_Fade_Animation" />
 				<include content="GridView_Slides" />
 				<!-- List -->

@@ -1,6 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+	<include name="managevideoversions_List_Content">
+		<control type="button" id="21">
+			<description>Play</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[208],managevideoversions)</onfocus>
+		</control>
+		<control type="button" id="22">
+			<description>Add version</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[40014],managevideoversions)</onfocus>
+		</control>
+		<control type="button" id="27">
+			<description>Choose art</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[13511],managevideoversions)</onfocus>
+		</control>
+		<control type="button" id="24">
+			<description>Choose type</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[40004],managevideoversions)</onfocus>
+		</control>
+		<control type="button" id="25">
+			<description>Set default</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[40023],managevideoversions)</onfocus>
+		</control>
+		<control type="button" id="26">
+			<description>Remove</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[15015],managevideoversions)</onfocus>
+		</control>
+	</include>
+
+	<include name="managevideoversions_Buttons_Content">
+		<include content="Button_Template">
+			<param name="target_id" value="21" />
+			<param name="texture" value="Play" />
+		</include>
+		<include content="Button_Template">
+			<param name="target_id" value="22" />
+			<param name="texture" value="Plus" />
+		</include>
+		<include content="Button_Template">
+			<param name="target_id" value="27" />
+			<param name="texture" value="Image" />
+		</include>
+		<include content="Button_Template">
+			<param name="target_id" value="24" />
+			<param name="texture" value="List" />
+		</include>
+		<include content="Button_Template">
+			<param name="target_id" value="25" />
+			<param name="texture" value="Star" />
+		</include>
+		<include content="Button_Template">
+			<param name="target_id" value="26" />
+			<param name="texture" value="Cross" />
+		</include>
+	</include>
+
+	<include name="managevideoextras_List_Content">
+		<control type="button" id="21">
+			<description>Play</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[208],managevideoversions)</onfocus>
+		</control>
+		<control type="button" id="23">
+			<description>Add extra</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[40014],managevideoversions)</onfocus>
+		</control>
+		<control type="button" id="27">
+			<description>Choose art</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[13511],managevideoversions)</onfocus>
+		</control>
+		<control type="button" id="28">
+			<description>Rename</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[40004],managevideoversions)</onfocus>
+		</control>
+		<control type="button" id="26">
+			<description>Remove</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[15015],managevideoversions)</onfocus>
+		</control>
+	</include>
+
+	<include name="managevideoextras_Buttons_Content">
+		<include content="Button_Template">
+			<param name="target_id" value="21" />
+			<param name="texture" value="Play" />
+		</include>
+		<include content="Button_Template">
+			<param name="target_id" value="23" />
+			<param name="texture" value="Plus" />
+		</include>
+		<include content="Button_Template">
+			<param name="target_id" value="27" />
+			<param name="texture" value="Image" />
+		</include>
+		<include content="Button_Template">
+			<param name="target_id" value="28" />
+			<param name="texture" value="Write" />
+		</include>
+		<include content="Button_Template">
+			<param name="target_id" value="26" />
+			<param name="texture" value="Cross" />
+		</include>
+	</include>
+
 	<include name="mediasource_List_Content">
 		<param name="visible" default="Control.HasFocus(10) | Control.HasFocus(11) | Control.HasFOcus(13) | Control.HasFocus(14)" />
 		<definition>

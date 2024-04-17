@@ -37,12 +37,12 @@
 		<param name="art_icon" default="Thumbnail" />
 		<definition>
 			<include content="Viewtype_Display_Template">
-				<param name="visible" value="!$EXP[Container_Switching] + !$EXP[Options_Switching]" />
+				<param name="visible" value="!$EXP[Container_Switching] + !$EXP[Options_Switching] + ![$EXP[ListView_Display_IsThumbnails] + Window.IsVisible(selectvideoversion)]" />
 				<param name="viewtype_label" value="List" />
 				<param name="media_view" value="true" />
 				<include content="Transparent_Dialog_Panel">
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + !$EXP[PanelDialog_IsVisible] + !Window.Is(videoplaylist)" />
-					<param name="colordiffuse" value="$VAR[Dark_Grey_Color]" />
+					<param name="colordiffuse" value="$VAR[ListView_Panel_Mask]" />
 					<include content="Visible_Fade_Animation" />
 					<animation effect="zoom" start="60,180,1800,720" end="720,180,1140,720" time="0" condition="$EXP[Containers_Posters] | [!Window.Is(addonbrowser) + $EXP[Containers_Square]]">Conditional</animation>
 				</include>
@@ -112,7 +112,7 @@
 					<param name="infolabel_visible" value="$EXP[ListView_Details_Info]" />
 					<param name="infolabelwidth" value="480" />
 				</include>
-				<include content="Common_List_Info_Label" condition="Window.Is(videos) | Window.Is(music) | Window.Is(musicplaylist)">
+				<include content="Common_List_Info_Label" condition="Window.Is(videos) | Window.Is(music) | Window.Is(musicplaylist) | Window.Is(favouritesbrowser)">
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails]" />
 					<param name="left" value="810" />
 					<param name="width" value="960" />
