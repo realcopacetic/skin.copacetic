@@ -229,7 +229,7 @@
 		<param name="onup" default="noop" />
 		<param name="ondown" default="noop" />
 		<param name="align" default="right" />
-		<param name="color" default="$VAR[Light_Color]" />
+		<param name="color" default="$VAR[Breadcrumb_Label_Color]" />
 		<param name="include_textures" default="true" />
 		<param name="include_labels" default="false" />
 		<param name="show_labels" default="false" />

@@ -1027,6 +1027,9 @@
 		<value condition="Control.HasFocus(3201) + !String.IsEqual(Container(3201).ListItem(1).DBType,episode) + !String.IsEmpty(Container(3201).ListItem(0).Art(fanart))">$INFO[Container(3201).ListItem(0).Art(fanart)]</value>
 		<value condition="Control.HasFocus(3201) + !String.IsEmpty(Container(3201).ListItem(0).Icon)">$INFO[Container(3201).ListItem(0).Icon]</value>
 		<value condition="Control.HasFocus(50) + !String.IsEmpty(Container(50).ListItem(0).Icon)">$INFO[Container(50).ListItem(0).Icon]</value>
+		<value condition="Control.HasFocus(3203) + !String.IsEmpty(Container(3203).ListItem(0).Icon)">$INFO[Container(3203).ListItem(0).Icon]</value>
+		<value condition="Control.HasFocus(3204) + !String.IsEmpty(Container(3204).ListItem(0).Art(fanart))">$INFO[Container(3204).ListItem(0).Art(fanart)]</value>
+		<value condition="Control.HasFocus(3204) + !String.IsEmpty(Container(3204).ListItem(0).Art(thumb))">$INFO[Container(3204).ListItem(0).Art(thumb)]</value>
 		<value condition="Control.HasFocus(3205) + !String.IsEqual(Container(3205).ListItem(1).DBType,episode) + !String.IsEmpty(Container(3205).ListItem(0).Art(fanart))">$INFO[Container(3205).ListItem(0).Art(fanart)]</value>
 		<value condition="Control.HasFocus(3205) + !String.IsEmpty(Container(3205).ListItem(0).Icon)">$INFO[Container(3205).ListItem(0).Icon]</value>
 		<value condition="Control.HasFocus(3206) + !String.IsEqual(Container(3206).ListItem(1).DBType,episode) + !String.IsEmpty(Container(3206).ListItem(0).Art(fanart))">$INFO[Container(3206).ListItem(0).Art(fanart)]</value>
@@ -1069,6 +1072,10 @@
 	<variable name="Widget_Square_Thumbnail(0)Content">
 		<value condition="Control.HasFocus(3201) + !String.IsEmpty(Container(3201).ListItemNoWrap(0).Icon)">$INFO[Container(3201).ListItem(0).Icon]</value>
 		<value condition="Control.HasFocus(3202) + !String.IsEmpty(Container(3202).ListItemNoWrap(0).Icon)">$INFO[Container(3202).ListItem(0).Icon]</value>
+		<value condition="Control.HasFocus(3203) + !String.IsEmpty(Container(3203).ListItemNoWrap(0).Icon)">$INFO[Container(3203).ListItem(0).Icon]</value>
+		<value condition="Control.HasFocus(3204) + !String.IsEmpty(Container(3204).ListItemNoWrap(0).Icon)">$INFO[Container(3204).ListItem(0).Icon]</value>
+		<value condition="Control.HasFocus(3205) + !String.IsEmpty(Container(3205).ListItemNoWrap(0).Icon)">$INFO[Container(3205).ListItem(0).Icon]</value>
+		<value condition="Control.HasFocus(3206) + !String.IsEmpty(Container(3206).ListItemNoWrap(0).Icon)">$INFO[Container(3206).ListItem(0).Icon]</value>
 		<value condition="Control.HasFocus(3207) + !String.IsEmpty(Container(3207).ListItemNoWrap(0).Icon)">$INFO[Container(3207).ListItem(0).Icon]</value>
 	</variable>
 	<variable name="Widget_Square_Thumbnail(1)Content">

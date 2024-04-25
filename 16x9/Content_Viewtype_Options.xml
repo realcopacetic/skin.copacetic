@@ -92,14 +92,6 @@
 	</include>
 
 	<include name="MusicVideo_Menu_Options">
-		<!-- Search -->
-		<item>
-			<onclick>SetFocus(50)</onclick>
-			<onclick>SendClick(8)</onclick>
-			<label>$LOCALIZE[137]</label>
-			<label2>$LOCALIZE[137]</label2>
-			<visible>Window.Is(videos) + Control.IsEnabled(8)</visible>
-		</item>
 		<item>
 			<onclick>SetFocus(50)</onclick>
 			<onclick>ActivateWindow(musicplaylist)</onclick>

@@ -66,7 +66,7 @@
 	</variable>
 
 	<variable name="Path_StudioCredits">
-		<value condition="!String.IsEmpty(Window(home).Property(StudioSplit.0)) + Integer.IsGreater(ListItem.DBID,0) + !String.IsEmpty(ListItem.TVShowTitle)">videodb://tvshows/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22studio%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B$ESCINFO[Window(home).Property(StudioSplit.0)]%5D%7D%2C%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Title]%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</value>
+		<value condition="!String.IsEmpty(Window(home).Property(StudioSplit.0)) + Integer.IsGreater(ListItem.DBID,0) + !String.IsEmpty(ListItem.TVShowTitle)">videodb://tvshows/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22studio%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B$VAR[Studio_Label]%5D%7D%2C%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Title]%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</value>
 		<value condition="!String.IsEmpty(Window(home).Property(StudioSplit.0)) + Integer.IsGreater(ListItem.DBID,0)">videodb://movies/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22studio%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B$ESCINFO[Window(home).Property(StudioSplit.0)]%5D%7D%2C%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Title]%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</value>
 		<value condition="!String.IsEmpty(ListItem.Studio) + Integer.IsGreater(ListItem.DBID,0) + !String.IsEmpty(ListItem.TVShowTitle)">videodb://tvshows/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22studio%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Studio]%5D%7D%2C%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Title]%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</value>
 		<value condition="!String.IsEmpty(ListItem.Studio) + Integer.IsGreater(ListItem.DBID,0)">videodb://movies/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22studio%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Studio]%5D%7D%2C%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Title]%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</value>
@@ -93,7 +93,6 @@
 		<value condition="!String.IsEmpty(Window(home).Property(RandomGenre)) + String.IsEqual(ListItem.DBType,song)">musicdb://artists/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B$ESCINFO[Window(home).Property(RandomGenre)]%5D%7D%2C%7B%22field%22%3A%22artist%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Artist]%5D%7D%5D%7D%2C%22type%22%3A%22artists%22%7D%0A</value>
 		<value condition="!String.IsEmpty(ListItem.Genre) + String.IsEqual(ListItem.DBType,artist)">musicdb://artists/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Genre]%5D%7D%2C%7B%22field%22%3A%22artist%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Label]%5D%7D%5D%7D%2C%22type%22%3A%22artists%22%7D%0A</value>
 		<value condition="!String.IsEmpty(ListItem.Genre) + String.IsEqual(ListItem.DBType,song)">musicdb://artists/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Genre]%5D%7D%2C%7B%22field%22%3A%22artist%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Artist]%5D%7D%5D%7D%2C%22type%22%3A%22artists%22%7D%0A</value>
-
 	</variable>
 
 	<variable name="Path_SimilarAlbums">
@@ -104,6 +103,37 @@
 	<variable name="Path_SimilarSongs">
 		<value condition="!String.IsEmpty(Window(home).Property(RandomGenre))">musicdb://songs/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B$ESCINFO[Window(home).Property(RandomGenre)]%5D%7D%2C%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Title]%5D%7D%5D%7D%2C%22type%22%3A%22songs%22%7D%0A</value>
 		<value condition="!String.IsEmpty(ListItem.Genre)">musicdb://songs/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Genre]%5D%7D%2C%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Title]%5D%7D%5D%7D%2C%22type%22%3A%22songs%22%7D%0A</value>
+	</variable>
+
+	<!-- globalsearch -->
+	<variable name="Path_globalsearch_Movies">
+		<!-- title, plot, genre, set, director, actor, studio, tag -->
+		<value>videodb://movies/titles/?xsp=%7B%22rules%22%3A%7B%22or%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22plot%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22set%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22director%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22studio%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22tag%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</value>
+	</variable>
+
+	<variable name="Path_globalsearch_TVShows">
+		<!-- title, plot, genre, director, actor, studio, tag -->
+		<value>videodb://tvshows/titles/?xsp=%7B%22rules%22%3A%7B%22or%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22plot%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22director%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22studio%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22tag%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</value>
+	</variable>
+
+	<variable name="Path_globalsearch_Episodes">
+		<!-- title, plot, genre, director, actor, tags -->
+		<value>videodb://recentlyaddedepisodes/?xsp=%7B%22rules%22%3A%7B%22or%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22plot%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22director%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%5D%7D%2C%22type%22%3A%22episodes%22%7D</value>
+	</variable>
+
+	<variable name="Path_globalsearch_Artists">
+		<!-- artist, genre, biography -->
+		<value>musicdb://artists/?xsp=%7B%22rules%22%3A%7B%22or%22%3A%5B%7B%22field%22%3A%22artist%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22biography%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%5D%7D%2C%22type%22%3A%22artists%22%7D</value>
+	</variable>
+
+	<variable name="Path_globalsearch_Albums">
+		<!-- album, genre, artist, review, label -->
+		<value>musicdb://albums/?xsp=%7B%22rules%22%3A%7B%22or%22%3A%5B%7B%22field%22%3A%22album%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22artist%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22review%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22label%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%5D%7D%2C%22type%22%3A%22albums%22%7D</value>
+	</variable>
+
+		<variable name="Path_globalsearch_Songs">
+		<!-- title, album, artist, genre -->
+		<value>musicdb://songs/?xsp=%7B%22rules%22%3A%7B%22or%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22album%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22artist%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%5D%7D%2C%22type%22%3A%22songs%22%7D</value>
 	</variable>
 
 </includes>

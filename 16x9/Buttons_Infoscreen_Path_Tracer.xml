@@ -59,7 +59,7 @@
 
 				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),1) + String.IsEmpty(Window(home).Property(Origin))">ClearProperty(ContainerPath_1,$PARAM[window])</onfocus>
 				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),1) + String.IsEmpty(Window(home).Property(Origin))">ClearProperty(Breadcrumb_Level,$PARAM[window])</onfocus>
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),1) + String.IsEmpty(Window(home).Property(Origin))">Dialog.Close(all,true)</onfocus>
+				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),1) + String.IsEmpty(Window(home).Property(Origin))">Dialog.Close</onfocus>
 				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),1) + !String.IsEmpty(Window(home).Property(Origin))">ActivateWindow(home)</onfocus>
 				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),1) + !String.IsEmpty(Window(home).Property(Origin))">SetFocus(6001)</onfocus>
 				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),1)">ClearProperty(Origin,home)</onfocus>
@@ -100,7 +100,7 @@
 				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),10)">ClearProperty(ContainerPath_10,$PARAM[window])</onfocus>
 				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),10)">SetProperty(Breadcrumb_Level,9,$PARAM[window])</onfocus>
 
-				<onfocus condition="!String.IsEqual(Window.Property(Breadcrumb_Level),1)">Dialog.Close(all,true)</onfocus>
+				<onfocus condition="!String.IsEqual(Window.Property(Breadcrumb_Level),1)">Dialog.Close</onfocus>
 				<onfocus condition="!String.IsEqual(Window.Property(Breadcrumb_Level),1)">SetFocus(6001)</onfocus>
 
 			</control>
