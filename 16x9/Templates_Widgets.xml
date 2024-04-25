@@ -29,7 +29,7 @@
 			<control type="fixedlist" id="$PARAM[id]">
 				<visible>Integer.IsGreaterOrEqual(Container($PARAM[id]).NumItems,$PARAM[min_items]) | Container($PARAM[id]).IsUpdating | $PARAM[bypass_min_items]</visible>
 				<onfocus condition="Window.Is(home)">SetProperty(Home_Widget,$PARAM[id],home)</onfocus>
-				<onfocus condition="Window.Is(movieinformation) | Window.Is(musicinformation) | Window.Is(songinformation) | Window.Is(addoninformation)">SetProperty(Infoscreen_Widget,$PARAM[id],home)</onfocus>
+				<onfocus condition="Window.Is(movieinformation) | Window.Is(musicinformation) | Window.Is(songinformation) | Window.Is(addoninformation) | Window.Is(1180)">SetProperty(Infoscreen_Widget,$PARAM[id],home)</onfocus>
 				<onfocus>ClearProperty(Focused_Button,movieinformation)</onfocus>
 				<onfocus>ClearProperty(Focused_Button,musicinformation)</onfocus>
 				<onfocus>ClearProperty(Focused_Button,addoninformation)</onfocus>
@@ -435,7 +435,7 @@
 
 	<include name="Home_Widgets">
 		<control type="group">
-			<visible>!$EXP[Infoscreen_IsVisible] + !Control.HasFocus(4010)</visible>
+			<visible>!$EXP[Infoscreen_IsVisible] + !Control.HasFocus(4010) + !$EXP[globalsearch_IsVisible]</visible>
 			<include content="Visible_Fade_Delayed_Animation" />
 			<include content="Widget_1" condition="!Skin.HasSetting(Widget1_Content_Disabled)" />
 			<include content="Widget_2" condition="!Skin.HasSetting(Widget2_Content_Disabled)" />
@@ -452,6 +452,7 @@
 
 	<include name="Infoscreen_Widget_Template">
 		<param name="id" />
+		<param name="widget_type" default="Infoscreen_Widget" />
 		<param name="widget_position" default="0" />
 		<param name="use_custom_content" default="true" />
 		<param name="use_custom_click" default="true" />
@@ -469,7 +470,7 @@
 			<include content="Widget_List">
 				<param name="min_items" value="$PARAM[min_items]" />
 				<param name="bypass_min_items" value="$PARAM[bypass_min_items]" />
-				<param name="widget_type" value="Infoscreen_Widget" />
+				<param name="widget_type" value="$PARAM[widget_type]" />
 				<param name="id" value="$PARAM[id]" />
 				<param name="use_custom_content" value="$PARAM[use_custom_content]" />
 				<param name="target" value="$PARAM[target]" />
@@ -708,6 +709,7 @@
 
 	<include name="Infoscreen_Widget_3206_StudioCredits">
 		<include content="Infoscreen_Widget_Template">
+			<param name="min_items" value="1" />
 			<param name="widget_view" value="Strip" />
 			<param name="widget_display" value="Fanart" />
 			<param name="id" value="3206" />
@@ -787,5 +789,126 @@
 			<param name="widget_info" value="" />
 		</include>
 	</include>
+
+	<!-- globalsearch -->
+	<include name="globalsearch_Widget_3201_Movies">
+		<include content="Infoscreen_Widget_Template">
+			<param name="widget_type" value="globalsearch" />
+			<param name="widget_view" value="Strip" />
+			<param name="widget_display" value="Posters" />
+			<param name="id" value="3201" />
+			<param name="widget_position" value="1" />
+			<param name="bypass_min_items" value="true" />
+			<param name="target" value="videos" />
+			<param name="sortby" value="votes" />
+			<param name="sortorder" value="descending" />
+			<param name="content" value="$VAR[Path_globalsearch_Movies]" />
+			<param name="click_action" value="Play_File" />
+			<param name="limit" value="30" />
+			<param name="widget_header" value="'$INFO[Skin.String(globalsearch)]'" />
+			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[342]" />
+		</include>
+	</include>
+
+	<include name="globalsearch_Widget_3202_TVShows">
+		<include content="Infoscreen_Widget_Template">
+			<param name="widget_type" value="globalsearch" />
+			<param name="widget_view" value="Strip" />
+			<param name="widget_display" value="Posters" />
+			<param name="id" value="3202" />
+			<param name="widget_position" value="2" />
+			<param name="bypass_min_items" value="true" />
+			<param name="sortby" value="votes" />
+			<param name="sortorder" value="descending" />
+			<param name="content" value="$VAR[Path_globalsearch_TVShows]" />
+			<param name="click_action" value="Open_TVShow" />
+			<param name="limit" value="30" />
+			<param name="widget_header" value="'$INFO[Skin.String(globalsearch)]'" />
+			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[20343]" />
+		</include>
+	</include>
+
+	<include name="globalsearch_Widget_3203_Episodes">
+		<include content="Infoscreen_Widget_Template">
+			<param name="widget_type" value="globalsearch" />
+			<param name="widget_view" value="Strip" />
+			<param name="widget_display" value="Fanart" />
+			<param name="id" value="3203" />
+			<param name="widget_position" value="3" />
+			<param name="bypass_min_items" value="true" />
+			<param name="sortby" value="votes" />
+			<param name="sortorder" value="descending" />
+			<param name="content" value="$VAR[Path_globalsearch_Episodes]" />
+			<param name="click_action" value="Play_File" />
+			<param name="limit" value="30" />
+			<param name="widget_header" value="'$INFO[Skin.String(globalsearch)]'" />
+			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[20360]$VAR[Copacetic_Divider_Bold, ]$INFO[Container(3203).ListItem.TVShowTitle, ]" />
+		</include>
+	</include>
+
+	<include name="globalsearch_Widget_3204_Artists">
+		<include content="Infoscreen_Widget_Template">
+			<param name="widget_type" value="globalsearch" />
+			<param name="widget_view" value="Strip" />
+			<param name="widget_display" value="Fanart" />
+			<param name="id" value="3204" />
+			<param name="widget_position" value="4" />
+			<param name="bypass_min_items" value="true" />
+			<param name="target" value="music" />
+			<param name="sortby" value="artist" />
+			<param name="sortorder" value="ascending" />
+			<param name="content" value="$VAR[Path_globalsearch_Artists]" />
+			<param name="click_action" value="Open_Artist" />
+			<param name="limit" value="30" />
+			<param name="widget_header" value="'$INFO[Skin.String(globalsearch)]'" />
+			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[133]" />
+		</include>
+	</include>
+
+	<include name="globalsearch_Widget_3205_Albums">
+		<include content="Infoscreen_Widget_Template">
+			<param name="widget_type" value="globalsearch" />
+			<param name="widget_view" value="Strip" />
+			<param name="widget_display" value="Square" />
+			<param name="id" value="3205" />
+			<param name="widget_position" value="5" />
+			<param name="bypass_min_items" value="true" />
+			<param name="target" value="music" />
+			<param name="sortby" value="album" />
+			<param name="sortorder" value="ascending" />
+			<param name="content" value="$VAR[Path_globalsearch_Albums]" />
+			<param name="click_action" value="Open_Album" />
+			<param name="limit" value="30" />
+			<param name="widget_header" value="'$INFO[Skin.String(globalsearch)]'" />
+			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[132]" />
+		</include>
+	</include>
+
+	<include name="globalsearch_Widget_3206_Songs">
+		<include content="Infoscreen_Widget_Template">
+			<param name="widget_type" value="globalsearch" />
+			<param name="widget_view" value="Strip" />
+			<param name="widget_display" value="Square" />
+			<param name="id" value="3206" />
+			<param name="widget_position" value="6" />
+			<param name="bypass_min_items" value="true" />
+			<param name="target" value="music" />
+			<param name="sortby" value="title" />
+			<param name="sortorder" value="ascending" />
+			<param name="content" value="$VAR[Path_globalsearch_Songs]" />
+			<param name="click_action" value="Play_All_Songs" />
+			<param name="limit" value="30" />
+			<param name="widget_header" value="'$INFO[Skin.String(globalsearch)]'" />
+			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[134]" />
+		</include>
+	</include>
+
+	<!--
+
+		{"rules":{"or":[{"field":"title","operator":"contains","value":["XXXX"]},{"field":"album","operator":"contains","value":["XXXX"]},{"field":"artist","operator":"contains","value":["XXXX"]},{"field":"genre","operator":"contains","value":["XXXX"]}]},"type":"songs"}
+
+	 title, album, artist, genre
+
+	-->
 
 </includes>

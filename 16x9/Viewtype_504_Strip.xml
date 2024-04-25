@@ -48,14 +48,14 @@
 			<include content="Viewtype_Details_Template">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="viewtype_label" value="Strip" />
-				<include content="Progress" condition="Window.Is(videos) | Window.Is(music) | Window.Is(home) | Window.Is(movieinformation)">
+				<include content="Progress" condition="Window.Is(videos) | Window.Is(music) | Window.Is(home) | Window.Is(movieinformation) | Window.Is(1180)">
 					<param name="id" value="$PARAM[id]" />
 					<param name="bottom" value="144" />
 					<animation effect="slide" end="0,-30" time="0" condition="$EXP[StripView_Display_IsSquare] | $EXP[StripView_Display_IsFanart]">Conditional</animation>
-					<animation effect="slide" end="75,0" time="0" condition="$EXP[StripView_Display_IsSquare] + !$EXP[StripView_Details_Off] + !$EXP[Infoscreen_Widget_HasFocus]">Conditional</animation>
-					<animation effect="slide" end="320,0" time="0" condition="$EXP[StripView_Display_IsFanart] + !$EXP[StripView_Details_Off] + !$EXP[Infoscreen_Widget_HasFocus]">Conditional</animation>
+					<animation effect="slide" end="75,0" time="0" condition="$EXP[StripView_Display_IsSquare] + !$EXP[StripView_Details_Off] + !$EXP[Infoscreen_Widget_HasFocus] + !Window.Is(1180)">Conditional</animation>
+					<animation effect="slide" end="320,0" time="0" condition="$EXP[StripView_Display_IsFanart] + !$EXP[StripView_Details_Off] + !$EXP[Infoscreen_Widget_HasFocus] + !Window.Is(1180)">Conditional</animation>
 				</include>
-				<include content="Common_Details" condition="!$EXP[Infoscreen_IsVisible]">
+				<include content="Common_Details" condition="!$EXP[Infoscreen_IsVisible] + !Window.Is(1180)">
 					<param name="viewtype_label" value="Strip" />
 					<param name="left" value="60" />
 					<param name="width" value="600" />
@@ -66,7 +66,7 @@
 					<animation effect="slide" end="0,15" time="0" condition="$EXP[StripView_Display_IsFanart] | $EXP[StripView_Display_IsSquare]">Conditional</animation>
 				</include>
 				<include content="Variable_Title_Label" condition="!Window.Is(home) + !Window.Is(addoninformation)">
-					<param name="visible" value="[!$EXP[Infoscreen_Widget_HasFocus] + $EXP[StripView_Details_Title] + !$EXP[StripView_Logo_On]] | [$EXP[Infoscreen_Widget_HasFocus] + ![String.IsEqual(Container(3202).ListItem.DBType,Season) + Control.HasFocus(3202)]]" />
+					<param name="visible" value="[!$EXP[Infoscreen_Widget_HasFocus] + $EXP[StripView_Details_Title] + !$EXP[StripView_Logo_On]] | [$EXP[Infoscreen_Widget_HasFocus] + ![String.IsEqual(Container(3202).ListItem.DBType,Season) + Control.HasFocus(3202)]] | Window.IsVisible(1180)" />
 					<param name="label" value="$VAR[Title_Label]" />
 					<param name="textcolor" value="$VAR[Primary_Color]" />
 				</include>

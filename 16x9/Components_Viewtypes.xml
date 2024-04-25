@@ -99,42 +99,6 @@
 		</control>
 	</include>
 
-	<include name="Media_Cacher">
-		<control type="grouplist">
-			<include content="Hidden_Control" />
-			<control type="image">
-				<width>1</width>
-				<height>1</height>
-				<texture>$INFO[ListItem.Art(clearlogo)]</texture>
-			</control>
-			<control type="image">
-				<width>1</width>
-				<height>1</height>
-				<texture>$INFO[ListItem.Art(clearlogo-alt)]</texture>
-			</control>
-			<control type="image">
-				<width>1</width>
-				<height>1</height>
-				<texture>$INFO[ListItem.Art(clearlogo-billboard)]</texture>
-			</control>
-			<control type="image">
-				<width>1</width>
-				<height>1</height>
-				<texture>$INFO[Container(3100).ListItem.Art(clearlogo)]</texture>
-			</control>
-			<control type="image">
-				<width>1</width>
-				<height>1</height>
-				<texture>$INFO[Container(3100).ListItem.Art(clearlogo-alt)]</texture>
-			</control>
-			<control type="image">
-				<width>1</width>
-				<height>1</height>
-				<texture>$INFO[Container(3100).ListItem.Art(clearlogo-billboard)]</texture>
-			</control>
-		</control>
-	</include>
-
 	<include name="Custom_List">
 		<param name="type" default="fixedlist" />
 		<param name="id" />
@@ -757,7 +721,7 @@
 		<param name="title_font" default="Title_Breadcrumb_Label" />
 		<param name="maxtitlelabelwidth" default="900" />
 		<param name="haspath" default="false" />
-		<param name="textcolor" default="$VAR[Light_Color]" />
+		<param name="textcolor" default="$VAR[Breadcrumb_Label_Color]" />
 		<param name="info_label" default="$VAR[Info_Breadcrumb_Label]" />
 		<param name="info_label_visible" default="false" />
 		<param name="info_font" default="Info_Breadcrumb_Label" />
