@@ -526,15 +526,15 @@
 	</variable>
 	<variable name="virtualkeyboard_Shift_Key_Color">
 		<value condition="!Control.HasFocus(302) + String.Contains(Control.GetLabel(302),*)">$VAR[Accent_Color]</value>
-		<value>$VAR[Light_Color]</value>
+		<value>$VAR[Breadcrumb_Label_Color]</value>
 	</variable>
 	<variable name="virtualkeyboard_Caps_Key_Color">
 		<value condition="!Control.HasFocus(303) + String.Contains(Control.GetLabel(303),*)">$VAR[Accent_Color]</value>
-		<value>$VAR[Light_Color]</value>
+		<value>$VAR[Breadcrumb_Label_Color]</value>
 	</variable>
 	<variable name="virtualkeyboard_Symbols_Key_Color">
 		<value condition="!Control.HasFocus(304) + String.Contains(Control.GetLabel(304),*)">$VAR[Accent_Color]</value>
-		<value>$VAR[Light_Color]</value>
+		<value>$VAR[Breadcrumb_Label_Color]</value>
 	</variable>
 	<variable name="sliderdialog_Bar_Color">
 		<value>$VAR[Alpha_15]$VAR[Light_Hex]</value>
@@ -720,7 +720,7 @@
 		<value>$VAR[Primary_Color]</value>
 	</variable>
 	<variable name="Home_Scroll_Widget_Background_Color">
-		<value condition="Control.HasFocus(3000) | $EXP[Music_Player_HasFocus] | $EXP[Container_HasBackground]">$VAR[Alpha_15]$VAR[Light_Hex]</value>
+		<value condition="Control.HasFocus(3000) | $EXP[Music_Player_HasFocus] | $EXP[Container_HasBackground] | Control.HasFocus(4201)">$VAR[Alpha_15]$VAR[Light_Hex]</value>
 		<value condition="Control.HasFocus(3201) + Skin.String(Theme,Light) + Skin.String(Widget1_View,Showcase)">$VAR[Alpha_15]$VAR[Dark_Hex]</value>
 		<value condition="Control.HasFocus(3201) + Skin.String(Widget1_View,Strip) + Skin.String(Widget1_Display,Posters) + !String.IsEmpty(Container(3201).ListItemNoWrap(2).Label)">$VAR[Alpha_15]$VAR[Light_Hex]</value>
 		<value condition="Control.HasFocus(3201) + Skin.String(Widget1_View,Strip) + Skin.String(Widget1_Display,Square) + !String.IsEmpty(Container(3201).ListItemNoWrap(1).Label)">$VAR[Alpha_15]$VAR[Light_Hex]</value>
@@ -788,7 +788,7 @@
 		<value>$VAR[Alpha_15]$VAR[Light_Hex]</value>
 	</variable>
 	<variable name="Home_Scroll_Widget_Focused_Color">
-		<value condition="Control.HasFocus(3000) | $EXP[Music_Player_HasFocus] | $EXP[Container_HasBackground]">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(3000) | $EXP[Music_Player_HasFocus] | $EXP[Container_HasBackground] | Control.HasFocus(4201)">$VAR[Light_Color]</value>
 		<value condition="Control.HasFocus(3201) + Skin.String(Theme,Light) + Skin.String(Widget1_View,Showcase)">$VAR[Dark_Grey_Color]</value>
 		<value condition="Control.HasFocus(3201) + Skin.String(Widget1_View,Strip) + Skin.String(Widget1_Display,Posters) + !String.IsEmpty(Container(3201).ListItemNoWrap(2).Label)">$VAR[Light_Color]</value>
 		<value condition="Control.HasFocus(3201) + Skin.String(Widget1_View,Strip) + Skin.String(Widget1_Display,Square) + !String.IsEmpty(Container(3201).ListItemNoWrap(1).Label)">$VAR[Light_Color]</value>
@@ -854,6 +854,28 @@
 		<value condition="Control.HasFocus(3209) + Skin.String(Widget9_View,Grid) + Skin.String(Widget9_Display,Fanart) + !String.IsEmpty(Container(3209).ListItemNoWrap(3).Label)">$VAR[Light_Color]</value>
 		<value>$VAR[Primary_Color]</value>
 	</variable>
+
+	<variable name="globalsearch_Scroll_Widget_Background_Color">
+		<value condition="Control.HasFocus(3201) + Skin.String(Theme,Light) + !String.IsEmpty(Container(3201).ListitemNoWrap(2).Label)">$VAR[Alpha_15]$VAR[Light_Hex]</value>
+		<value condition="Control.HasFocus(3202) + Skin.String(Theme,Light) + !String.IsEmpty(Container(3202).ListitemNoWrap(2).Label)">$VAR[Alpha_15]$VAR[Light_Hex]</value>
+		<value condition="Control.HasFocus(3203) + Skin.String(Theme,Light) + !String.IsEmpty(Container(3203).ListitemNoWrap(1).Label)">$VAR[Alpha_15]$VAR[Light_Hex]</value>
+		<value condition="Control.HasFocus(3204) + Skin.String(Theme,Light) + !String.IsEmpty(Container(3204).ListitemNoWrap(1).Label)">$VAR[Alpha_15]$VAR[Light_Hex]</value>
+		<value condition="Control.HasFocus(3205) + Skin.String(Theme,Light) + !String.IsEmpty(Container(3205).ListitemNoWrap(2).Label)">$VAR[Alpha_15]$VAR[Light_Hex]</value>
+		<value condition="Control.HasFocus(3206) + Skin.String(Theme,Light) + !String.IsEmpty(Container(3206).ListitemNoWrap(2).Label)">$VAR[Alpha_15]$VAR[Light_Hex]</value>
+		<value condition="Skin.String(Theme,Light)">$VAR[Alpha_15]$VAR[Dark_Hex]</value>
+		<value>$VAR[Alpha_15]$VAR[Light_Hex]</value>
+	</variable>
+	<variable name="globalsearch_Scroll_Widget_Focused_Color">
+		<value condition="Control.HasFocus(3201) + Skin.String(Theme,Light) + !String.IsEmpty(Container(3201).ListitemNoWrap(2).Label)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(3202) + Skin.String(Theme,Light) + !String.IsEmpty(Container(3202).ListitemNoWrap(2).Label)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(3203) + Skin.String(Theme,Light) + !String.IsEmpty(Container(3203).ListitemNoWrap(1).Label)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(3204) + Skin.String(Theme,Light) + !String.IsEmpty(Container(3204).ListitemNoWrap(1).Label)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(3205) + Skin.String(Theme,Light) + !String.IsEmpty(Container(3205).ListitemNoWrap(2).Label)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(3206) + Skin.String(Theme,Light) + !String.IsEmpty(Container(3206).ListitemNoWrap(2).Label)">$VAR[Light_Color]</value>
+		<value condition="Skin.String(Theme,Light)">$VAR[Dark_Grey_Color]</value>
+		<value>$VAR[Light_Color]</value>
+	</variable>
+
 	<variable name="Seekbar_Background_Color">
 		<value condition="Skin.String(Theme,Light) + $EXP[visualisation_Background_IsEmpty] + Skin.String(visualisation_Layout,Large)">$VAR[Alpha_15]$VAR[Dark_Hex]</value>
 		<value>$VAR[Alpha_15]$VAR[Light_Hex]</value>

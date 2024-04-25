@@ -20,6 +20,15 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.3.4**
+- fix for globalsearch scrollbar colour
+
+**1.3.3**
+- misc bug fixes
+
+**1.3.2**
+- globalsearch
+
 **1.2.2**
 - Non-breaking changes to keep code in sync with Omega
 - Cleaned some expressions governing Light theme and artwork backgrounds to simplify complex scenarios when several transparent windows are open on top of each other

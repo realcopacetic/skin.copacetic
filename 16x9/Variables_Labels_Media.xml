@@ -808,6 +808,15 @@
 		<value>$INFO[ListItem.SortLetter]</value>
 	</variable>
 
+	<variable name="Studio_Label">
+		<!-- Fix for strings breaking in xsp filtered paths when + included in filename - this is for Same Studio widget -->
+		<value condition="String.Contains(Window(home).Property(StudioSplit.0),Apple TV)">"Apple TV"</value>
+		<value condition="String.Contains(Window(home).Property(StudioSplit.0),Paramount)">"Paramount"</value>
+		<value condition="String.Contains(Window(home).Property(StudioSplit.0),Disney)">"Disney"</value>
+		<value condition="!String.IsEmpty(Window(home).Property(StudioSplit.0))">$ESCINFO[Window(home).Property(StudioSplit.0)]</value>
+		<value condition="!String.IsEmpty(ListItem.Studio)">$ESCINFO[ListItem.Studio]</value>
+	</variable>
+
 	<variable name="Theme_Label">
 		<value condition="Skin.String(Theme,Light)">$LOCALIZE[31408]</value>
 		<value>$LOCALIZE[31407]</value>

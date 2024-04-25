@@ -26,15 +26,15 @@
 		<param name="type" default="videos" />
 		<param name="method" default="from_here" />
 		<definition>
-			<onclick condition="System.AddonIsEnabled(script.copacetic.helper) + Control.HasFocus(3201)">RunScript(script.copacetic.helper,action=play_items,id=3201,type=$PARAM[type],method=$PARAM[method])</onclick>
-			<onclick condition="System.AddonIsEnabled(script.copacetic.helper) + Control.HasFocus(3202)">RunScript(script.copacetic.helper,action=play_items,id=3202,type=$PARAM[type],method=$PARAM[method])</onclick>
-			<onclick condition="System.AddonIsEnabled(script.copacetic.helper) + Control.HasFocus(3203)">RunScript(script.copacetic.helper,action=play_items,id=3203,type=$PARAM[type],method=$PARAM[method])</onclick>
-			<onclick condition="System.AddonIsEnabled(script.copacetic.helper) + Control.HasFocus(3204)">RunScript(script.copacetic.helper,action=play_items,id=3204,type=$PARAM[type],method=$PARAM[method])</onclick>
-			<onclick condition="System.AddonIsEnabled(script.copacetic.helper) + Control.HasFocus(3205)">RunScript(script.copacetic.helper,action=play_items,id=3205,type=$PARAM[type],method=$PARAM[method])</onclick>
-			<onclick condition="System.AddonIsEnabled(script.copacetic.helper) + Control.HasFocus(3206)">RunScript(script.copacetic.helper,action=play_items,id=3206,type=$PARAM[type],method=$PARAM[method])</onclick>
-			<onclick condition="System.AddonIsEnabled(script.copacetic.helper) + Control.HasFocus(3207)">RunScript(script.copacetic.helper,action=play_items,id=3207,type=$PARAM[type],method=$PARAM[method])</onclick>
-			<onclick condition="System.AddonIsEnabled(script.copacetic.helper) + Control.HasFocus(3208)">RunScript(script.copacetic.helper,action=play_items,id=3208,type=$PARAM[type],method=$PARAM[method])</onclick>
-			<onclick condition="System.AddonIsEnabled(script.copacetic.helper) + Control.HasFocus(3209)">RunScript(script.copacetic.helper,action=play_items,id=3209,type=$PARAM[type],method=$PARAM[method])</onclick>
+			<onclick condition="Control.HasFocus(3201)">RunScript(script.copacetic.helper,action=play_items,id=3201,type=$PARAM[type],method=$PARAM[method])</onclick>
+			<onclick condition="Control.HasFocus(3202)">RunScript(script.copacetic.helper,action=play_items,id=3202,type=$PARAM[type],method=$PARAM[method])</onclick>
+			<onclick condition="Control.HasFocus(3203)">RunScript(script.copacetic.helper,action=play_items,id=3203,type=$PARAM[type],method=$PARAM[method])</onclick>
+			<onclick condition="Control.HasFocus(3204)">RunScript(script.copacetic.helper,action=play_items,id=3204,type=$PARAM[type],method=$PARAM[method])</onclick>
+			<onclick condition="Control.HasFocus(3205)">RunScript(script.copacetic.helper,action=play_items,id=3205,type=$PARAM[type],method=$PARAM[method])</onclick>
+			<onclick condition="Control.HasFocus(3206)">RunScript(script.copacetic.helper,action=play_items,id=3206,type=$PARAM[type],method=$PARAM[method])</onclick>
+			<onclick condition="Control.HasFocus(3207)">RunScript(script.copacetic.helper,action=play_items,id=3207,type=$PARAM[type],method=$PARAM[method])</onclick>
+			<onclick condition="Control.HasFocus(3208)">RunScript(script.copacetic.helper,action=play_items,id=3208,type=$PARAM[type],method=$PARAM[method])</onclick>
+			<onclick condition="Control.HasFocus(3209)">RunScript(script.copacetic.helper,action=play_items,id=3209,type=$PARAM[type],method=$PARAM[method])</onclick>
 		</definition>
 	</include>
 
@@ -110,6 +110,11 @@
 		<onclick>ActivateWindow(music,musicdb://albums/$INFO[Container.ListItem.DBID]/-2/?albumid=$INFO[Container.ListItem.DBID],return)</onclick>
 	</include>
 
+	<include name="ClickAction_Play_All_Videos">
+		<onclick>Dialog.Close(all)</onclick>
+		<include content="Default_Play_Items" />
+	</include>
+
 	<include name="ClickAction_Play_All_Songs">
 		<include content="Default_Play_Items">
 			<param name="type" value="music" />
@@ -123,16 +128,33 @@
 		<onclick condition="Integer.IsGreater(ListItem.DBID,0) + !String.IsEqual(Container(3201).ListItem.DBID,window(movieinformation).property(SelectedItem))">PlayMedia($ESCINFO[ListItem.Filenameandpath])</onclick>
 	</include>
 
+	<include name="ClickAction_Play_File">
+		<onclick>Dialog.Close(all)</onclick>
+		<onclick>PlayMedia($ESCINFO[ListItem.Filenameandpath])</onclick>
+	</include>
+
 	<include name="ClickAction_Open_Season_Folder">
 		<onclick condition="Integer.IsGreater(ListItem.DBID,0)">Dialog.Close(all)</onclick>
 		<onclick condition="Integer.IsGreater(ListItem.DBID,0)">SetProperty(SentFromInfo,true,movieinformation)</onclick>
 		<onclick condition="Integer.IsGreater(ListItem.DBID,0)">ActivateWindow(Videos,$INFO[Container(3202).ListItem.FolderPath]/,return)</onclick>
 	</include>
 
+	<include name="ClickAction_Open_Artist">
+		<onclick>Dialog.Close(all)</onclick>
+		<onclick>SetProperty(SentFromInfo,true,musicinformation)</onclick>
+		<onclick condition="Control.HasFocus(3204)">ActivateWindow(music,musicdb://artists/$INFO[Container(3202).ListItem.DBID]/,return)</onclick>
+	</include>
+
 	<include name="ClickAction_Open_Album">
 		<onclick>Dialog.Close(all)</onclick>
 		<onclick>SetProperty(SentFromInfo,true,musicinformation)</onclick>
-		<onclick>ActivateWindow(music,musicdb://albums/$INFO[Container(3202).ListItem.DBID]/-2/,return)</onclick>
+		<onclick condition="Control.HasFocus(3202)">ActivateWindow(music,musicdb://albums/$INFO[Container(3202).ListItem.DBID]/-2/,return)</onclick>
+		<onclick condition="Control.HasFocus(3205)">ActivateWindow(music,musicdb://albums/$INFO[Container(3205).ListItem.DBID]/-2/,return)</onclick>
+	</include>
+
+	<include name="ClickAction_Open_TVShow">
+		<onclick>Dialog.Close(all)</onclick>
+		<onclick>ActivateWindow(videos,videodb://tvshows/titles/$INFO[ListItem.DBID]/,return)</onclick>
 	</include>
 
 	<include name="ClickAction_Open_Set">
