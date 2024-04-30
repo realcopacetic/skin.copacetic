@@ -578,6 +578,21 @@
 		<value>$LOCALIZE[207]</value>
 	</variable>
 
+	<variable name="PVR_Info_Box_Title_Label">
+		<value condition="Window.Is(tvchannels) | Window.Is(radiochannels)">$INFO[ListItem.EpisodeName]</value>
+		<value>$INFO[ListItem.Label]</value>
+	</variable>
+
+	<variable name="PVR_Info_Box_Info_Label">
+		<value condition="Window.Is(tvchannels) | Window.Is(radiochannels)">[UPPERCASE]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime,-]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</value>
+		<value>[UPPERCASE]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime,-]$VAR[ListItem_EpisodeName_Divider_Bold, ]$INFO[ListItem.EpisodeName, ]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</value>
+	</variable>
+
+	<variable name="PVR_Next_Up_Label">
+		<value condition="!String.IsEmpty(ListItem.NextStartTime) + !String.IsEmpty(ListItem.NextTitle)">$LOCALIZE[31201]$VAR[Copacetic_Divider_Bold, ]$INFO[ListItem.NextStartTime, ]$VAR[Copacetic_Divider_Bold, ]$INFO[ListItem.NextTitle, ]</value>
+		<value condition="!String.IsEmpty(ListItem.NextTitle)">$LOCALIZE[31201]$VAR[Copacetic_Divider_Bold, ]$INFO[ListItem.NextTitle]</value>
+	</variable>
+
 	<variable name="Random_Button_Label">
 		<!-- Shuffle On / Off -->
 		<value condition="Playlist.IsRandom">$LOCALIZE[191] $LOCALIZE[34222]</value>
