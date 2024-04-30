@@ -33,13 +33,13 @@
 				<param name="right" value="$PARAM[panel_edge_right]" />
 				<param name="colordiffuse" value="$PARAM[panel_colordiffuse]" />
 				<include content="$PARAM[window_animation_panel]" condition="$PARAM[window_animation_condition]" />
-				<include content="Visible_Fade_Animation" />
+				<include content="Visible_Fade_Delayed_Animation" />
 				<animation effect="zoom" end="60,240,1800,600" time="0" condition="Window.Is(selectvideoversion)">Conditional</animation>
 			</include>
 			<control type="group">
 				<include content="$PARAM[window_animation_content]" condition="$PARAM[window_animation_condition]" />
 				<visible>$PARAM[visible]</visible>
-				<include content="Visible_Fade_Delayed_Animation" />
+				<include content="Visible_Fade_Delayed_Long_Animation" />
 				<nested />
 			</control>
 		</definition>

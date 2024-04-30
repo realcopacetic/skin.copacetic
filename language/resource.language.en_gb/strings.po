@@ -47,7 +47,7 @@ msgctxt "#31000"
 msgid "List"
 msgstr ""
 
-#Common
+#Common#
 msgctxt "#31001"
 msgid "Billboard"
 msgstr ""
@@ -333,6 +333,7 @@ msgstr ""
 #/16x9/Components_Settings.xml
 #/16x9/Templates_Widgets.xml
 #/16x9/Variables_Labels_Widgets.xml
+#/16x9/MyPVRChannels.xml
 msgctxt "#31201"
 msgid "Next up"
 msgstr ""
@@ -1443,6 +1444,16 @@ msgstr ""
 #/16x9/Variables_Labels_Windows.xml
 msgctxt "#31622"
 msgid "items"
+msgstr ""
+
+
+
+
+#: M
+
+#/16x9/MyPVRChannels.xml
+msgctxt "#31634"
+msgid "Now playing channel"
 msgstr ""
 
 

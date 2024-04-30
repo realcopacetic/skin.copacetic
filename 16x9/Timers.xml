@@ -2,8 +2,8 @@
 <timers>
   <timer>
     <name>home_screensaver</name>
-    <start reset="true">Skin.HasSetting(Home_Screensaver_Enabled) + Window.Is(home) + Control.HasFocus(3000)</start>
-    <reset>!Control.HasFocus(3000)</reset>
+    <start reset="true">Skin.HasSetting(Home_Screensaver_Enabled) + Window.Is(home) + [Control.HasFocus(3000) | Control.HasFocus(4201)]</start>
+    <reset>!Control.HasFocus(3000) + !Control.HasFocus(4201)</reset>
     <stop>Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(home_screensaver),15) + System.IdleTime(15)</stop>
     <onstop>SetFocus(4300)</onstop>
   </timer>

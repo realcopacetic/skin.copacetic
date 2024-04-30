@@ -201,6 +201,13 @@
 		<value condition="Integer.IsEqual(Skin.String(Background_Opacity),50)">$VAR[Alpha_50]$VAR[Dark_Grey_Hex]</value>
 		<value>$VAR[Alpha_75]$VAR[Dark_Grey_Hex]</value>
 	</variable>
+	<variable name="PVR_Panel_Mask">
+		<value condition="Integer.IsEqual(Skin.String(Background_Opacity),100)">$VAR[Dark_Grey_Color]</value>
+		<value condition="Integer.IsEqual(Skin.String(Background_Opacity),85)">$VAR[Alpha_85]$VAR[Dark_Grey_Hex]</value>
+		<value condition="Integer.IsEqual(Skin.String(Background_Opacity),66)">$VAR[Alpha_66]$VAR[Dark_Grey_Hex]</value>
+		<value condition="Integer.IsEqual(Skin.String(Background_Opacity),50)">$VAR[Alpha_50]$VAR[Dark_Grey_Hex]</value>
+		<value>$VAR[Alpha_75]$VAR[Dark_Grey_Hex]</value>
+	</variable>
 	<variable name="Transparent_Dialog_Mask">
 		<value condition="VideoPlayer.IsFullscreen">$VAR[Alpha_75]$VAR[Dark_Hex]</value>
 		<value>$VAR[Alpha_50]$VAR[Dark_Hex]</value>
@@ -208,6 +215,9 @@
 	<variable name="visualisation_Mask">
 		<value condition="!Skin.HasSetting(visualisation_Disable_Background)">$VAR[Dark_Color]</value>
 		<value>$VAR[Secondary_Color]</value>
+	</variable>
+	<variable name="videoplayer_Mask">
+		<value>$VAR[Alpha_50]$VAR[Dark_Hex]</value>
 	</variable>
 
 	<!-- Labels -->
@@ -909,6 +919,9 @@
 	<variable name="epggrid_Focused_Color">
 		<value condition="Control.HasFocus(10)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
+	</variable>
+	<variable name="PVR_Channel_Progress_Color">
+		<value>$VAR[Alpha_50]$VAR[Dark_Hex]</value>
 	</variable>
 
 </includes>
