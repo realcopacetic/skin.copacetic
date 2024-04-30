@@ -234,6 +234,14 @@
 		</include>
 	</include>
 
+	<include name="VideoPlayer_Mask">
+		<control type="image">
+			<texture colordiffuse="$VAR[videoplayer_Mask]">views/white_100.png</texture>
+			<visible>$EXP[TransparentDialog_IsVisible]</visible>
+			<include content="VisibleHidden_Fade_Animation" />
+		</control>
+	</include>
+
 	<include name="Embedded_VideoPlayer">
 		<definition>
 			<control type="group">
@@ -241,6 +249,7 @@
 				<include content="Visible_Fade_Animation" />
 				<nested />
 				<control type="videowindow" />
+				<include content="VideoPlayer_Mask" condition="Window.Is(tvchannels) | Window.Is(tvguide) | Window.Is(home)" />
 			</control>
 		</definition>
 	</include>
