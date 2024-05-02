@@ -39,7 +39,7 @@
 					<include content="Ken_Burns_Effect_Animation" condition="$PARAM[kenburns]" />
 				</include>
 				<include content="Icon_Component_Indicator" condition="Skin.HasSetting(Secondary_List_Enabled)">
-					<param name="visible" value="Container($PARAM[target_id]).ListItemNoWrap($PARAM[position]).IsCollection | [Container($PARAM[target_id]).ListItemNoWrap($PARAM[position]).HasVideoVersions + !String.IsEqual(Container($PARAM[target_id]).FolderName,Container.ListItemNoWrap($PARAM[position]).Title)]" />
+					<param name="visible" value="Container($PARAM[target_id]).ListItemNoWrap($PARAM[position]).IsCollection" />
 				</include>
 				<!-- Progress overlay -->
 				<include content="Icon_Component_Progress_Overlay" condition="$PARAM[has_progress] + [Window.Is(home) | Window.Is(videos) | Window.Is(movieinformation)]">

@@ -51,7 +51,7 @@
 				<param name="visible" value="[!String.Contains(Container.FolderPath,/user/) + [ListItem.Property(Addon.IsInstalled) | String.Contains(ListItem.Label,Copacetic)]] | [$EXP[Container_Addons_NonRepo] + String.Contains(Container.FolderPath,/user/) + ListItem.Property(Addon.IsInstalled) + !ListItem.Property(Addon.IsEnabled)]" />
 			</include>
 			<include content="Icon_Component_Indicator_Grid" condition="Skin.HasSetting(Secondary_List_Enabled)">
-				<param name="visible" value="ListItem.IsCollection | [ListItem.HasVideoVersions + !String.IsEqual(Container.FolderName,ListItem.Title)]" />
+				<param name="visible" value="ListItem.IsCollection" />
 				<param name="backing" value="false" />
 			</include>
 		</include>
@@ -228,7 +228,7 @@
 				</include>
 				<!-- Indicator -->
 				<include content="Icon_Component_Indicator_Grid" condition="Skin.HasSetting(Secondary_List_Enabled)">
-					<param name="visible" value="ListItem.IsCollection | [ListItem.HasVideoVersions + !String.IsEqual(Container.FolderName,ListItem.Title)]" />
+					<param name="visible" value="ListItem.IsCollection" />
 				</include>
 			</control>
 		</definition>

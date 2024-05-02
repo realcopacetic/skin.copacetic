@@ -288,7 +288,7 @@
 				</include>
 				<nested />
 				<include content="Icon_Component_Indicator" condition="Skin.HasSetting(Secondary_List_Enabled) + $PARAM[indicator]">
-					<param name="visible" value="Container.ListItemNoWrap($PARAM[position]).IsCollection | [Container.ListItemNoWrap($PARAM[position]).HasVideoVersions + !String.IsEqual(Container.FolderName,Container.ListItemNoWrap($PARAM[position]).Title)]" />
+					<param name="visible" value="Container.ListItemNoWrap($PARAM[position]).IsCollection" />
 					<param name="width" value="$PARAM[icon_width]" />
 				</include>
 				<!-- Now Playing icon -->
@@ -332,7 +332,7 @@
 				</include>
 				<nested />
 				<include content="Icon_Component_Indicator" condition="Skin.HasSetting(Secondary_List_Enabled) + $PARAM[indicator]">
-					<param name="visible" value="Container.ListItemNoWrap($PARAM[position]).IsCollection | [Container.ListItemNoWrap($PARAM[position]).HasVideoVersions + !String.IsEqual(Container.FolderName,Container.ListItemNoWrap($PARAM[position]).Title)]" />
+					<param name="visible" value="Container.ListItemNoWrap($PARAM[position]).IsCollection" />
 					<include content="Secondary_List_Scroll_Animation" />
 				</include>
 				<!-- Now Playing icon -->
@@ -385,7 +385,7 @@
 				</include>
 				<nested />
 				<include content="Icon_Component_Indicator" condition="Skin.HasSetting(Secondary_List_Enabled) + $PARAM[indicator]">
-					<param name="visible" value="Container.ListItemNoWrap($PARAM[position]).IsCollection | [Container.ListItemNoWrap($PARAM[position]).HasVideoVersions + !String.IsEqual(Container.FolderName,Container.ListItemNoWrap($PARAM[position]).Title)]" />
+					<param name="visible" value="Container.ListItemNoWrap($PARAM[position]).IsCollection" />
 					<param name="width" value="$PARAM[icon_width]" />
 				</include>
 				<include content="Now_Playing_Icon" condition="!Window.Is(loginscreen) + !Window.Is(addoninformation) + !Window.Is(videobookmarks)">
