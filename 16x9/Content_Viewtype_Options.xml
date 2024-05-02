@@ -43,7 +43,15 @@
 	<include name="Common_Menu_Options">
 		<param name="target_id" default="50" /> 
 		<definition>
-<!-- Shared -->
+			<!-- globalsearch -->
+			<item>
+				<onclick>SetFocus(50)</onclick>
+				<onclick>RunScript(script.copacetic.helper,action=globalsearch_input)</onclick>
+				<label>$LOCALIZE[137]</label>
+				<label2>$LOCALIZE[137]</label2>
+				<visible>Control.IsEnabled(8)</visible>
+			</item>
+			<!-- Shared -->
 			<!-- Sort -->
 			<item id="2">
 				<onclick>SetFocus($PARAM[target_id])</onclick>
