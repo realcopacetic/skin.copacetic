@@ -21,6 +21,13 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ### Changelog
 ---
 **1.3.4**
+- Added visual listitem indicator for Collections (sets) and items with VideoVersions
+- Added tvchannels window
+- Improved tvguide window
+- Fixed issue with path tracer when navigating from one infoscreen widget to a new infoscreen. On pressing back, instead of going to the back to the previous infoscreen, Copacetic was closing all dialogs and the main lists were remaining hidden.
+- Staying idle on global search home button will now trigger screensaver if it is active
+
+**1.3.4**
 - fix for globalsearch scrollbar colour
 
 **1.3.3**

@@ -12,6 +12,7 @@
 				<param name="height" value="$PARAM[height]" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
 				<param name="art_diffuse" value="false" />
+				<param name="icon_width" value="50" />
 				<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 				<param name="fallback" value="$PARAM[fallback]" />
 				<nested />
@@ -68,6 +69,7 @@
 			<param name="art_icon" value="$PARAM[art_icon]" />
 			<param name="fallback" value="$PARAM[fallback]" />
 			<param name="art_diffuse" value="false" />
+			<param name="icon_width" value="$PARAM[icon_width]" />
 			<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 			<param name="animationtype" value="$PARAM[animationtype]" />
 			<param name="animationeffect" value="$PARAM[animationeffect]" />
@@ -396,6 +398,7 @@
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
 						<param name="fallback" value="$PARAM[fallback]" />
+						<param name="icon_width" value="50" />
 						<param name="animationtype" value="Hidden" />
 						<param name="animationcondition" value="true" />
 						<param name="animationeffect" value="zoom" />
