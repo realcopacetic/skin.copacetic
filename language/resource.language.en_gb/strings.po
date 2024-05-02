@@ -47,7 +47,7 @@ msgctxt "#31000"
 msgid "List"
 msgstr ""
 
-#Common#
+#Common
 msgctxt "#31001"
 msgid "Billboard"
 msgstr ""

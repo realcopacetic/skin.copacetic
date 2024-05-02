@@ -169,6 +169,55 @@
 		</definition>
 	</include>
 
+	<include name="Icon_Component_Indicator">
+		<param name="visible" />
+		<param name="top" default="0" />
+		<param name="width" default="60" />
+		<definition>
+			<control type="group">
+				<visible>$PARAM[visible]</visible>
+				<nested />
+				<right>0</right>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[width]</height>
+				<control type="image">
+					<visible>!$EXP[TransparentDialog_IsVisible]</visible>
+					<include content="Visible_Fade_Delayed_Animation" />
+					<texture colordiffuse="$VAR[Light_Color]">views/collection_indicator.png</texture>
+				</control>
+			</control>
+		</definition>
+	</include>
+
+	<include name="Icon_Component_Indicator_Grid">
+		<param name="visible" />
+		<param name="top" default="0" />
+		<param name="width" default="30" />
+		<param name="backing" default="true" />
+		<definition>
+			<control type="group">
+				<visible>$PARAM[visible]</visible>
+				<nested />
+				<right>0</right>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[width]</height>
+				<control type="group">
+					<visible>!$EXP[TransparentDialog_IsVisible]</visible>
+					<include content="Visible_Fade_Delayed_Animation" />
+					<control type="image">
+						<visible>$PARAM[backing]</visible>
+						<texture colordiffuse="$VAR[Accent_Color]">views/white_100.png</texture>
+					</control>
+					<control type="image">
+						<texture colordiffuse="$VAR[Light_Color]">views/collection_indicator_grid.png</texture>
+					</control>
+				</control>
+			</control>
+		</definition>
+	</include>
+
 	<include name="Icon_Component_Progress_Overlay">
 		<param name="visible" default="true" />
 		<definition>
@@ -217,6 +266,7 @@
 		<param name="width" default="100%" />
 		<param name="height" default="100%" />
 		<param name="art_icon" default="Thumbnail" />
+		<param name="indicator" default="true" />
 		<param name="fadetime" default="0" />
 		<param name="now_playing_size" default="Large" />
 		<definition>
@@ -237,6 +287,10 @@
 					<param name="now_playing" value="$PARAM[now_playing]" />
 				</include>
 				<nested />
+				<include content="Icon_Component_Indicator" condition="Skin.HasSetting(Secondary_List_Enabled) + $PARAM[indicator]">
+					<param name="visible" value="Container.ListItemNoWrap($PARAM[position]).IsCollection | [Container.ListItemNoWrap($PARAM[position]).HasVideoVersions + !String.IsEqual(Container.FolderName,Container.ListItemNoWrap($PARAM[position]).Title)]" />
+					<param name="width" value="$PARAM[icon_width]" />
+				</include>
 				<!-- Now Playing icon -->
 				<include content="Now_Playing_Icon" condition="!Window.Is(loginscreen) + !Window.Is(addoninformation) + !Window.Is(videobookmarks)">
 					<param name="visible" value="$PARAM[now_playing]" />
@@ -255,6 +309,7 @@
 		<param name="width" default="100%" />
 		<param name="height" default="100%" />
 		<param name="art_icon" default="Thumbnail" />
+		<param name="indicator" default="true" />
 		<param name="now_playing_size" default="Large" />
 		<definition>
 			<control type="group">
@@ -276,6 +331,10 @@
 					<param name="now_playing" value="$PARAM[now_playing]" />
 				</include>
 				<nested />
+				<include content="Icon_Component_Indicator" condition="Skin.HasSetting(Secondary_List_Enabled) + $PARAM[indicator]">
+					<param name="visible" value="Container.ListItemNoWrap($PARAM[position]).IsCollection | [Container.ListItemNoWrap($PARAM[position]).HasVideoVersions + !String.IsEqual(Container.FolderName,Container.ListItemNoWrap($PARAM[position]).Title)]" />
+					<include content="Secondary_List_Scroll_Animation" />
+				</include>
 				<!-- Now Playing icon -->
 				<control type="group">
 					<include content="Secondary_List_Scroll_Animation" />
@@ -298,6 +357,7 @@
 		<param name="width" default="100%" />
 		<param name="height" default="100%" />
 		<param name="art_icon" default="Thumbnail" />
+		<param name="indicator" default="true" />
 		<param name="now_playing_size" default="Large" />
 		<param name="animationeffect" default="fade" />
 		<param name="animationend" default="100" />
@@ -324,6 +384,10 @@
 					<param name="now_playing" value="$PARAM[now_playing]" />
 				</include>
 				<nested />
+				<include content="Icon_Component_Indicator" condition="Skin.HasSetting(Secondary_List_Enabled) + $PARAM[indicator]">
+					<param name="visible" value="Container.ListItemNoWrap($PARAM[position]).IsCollection | [Container.ListItemNoWrap($PARAM[position]).HasVideoVersions + !String.IsEqual(Container.FolderName,Container.ListItemNoWrap($PARAM[position]).Title)]" />
+					<param name="width" value="$PARAM[icon_width]" />
+				</include>
 				<include content="Now_Playing_Icon" condition="!Window.Is(loginscreen) + !Window.Is(addoninformation) + !Window.Is(videobookmarks)">
 					<param name="visible" value="$PARAM[now_playing]" />
 					<param name="size" value="$PARAM[now_playing_size]" />
