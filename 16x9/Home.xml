@@ -50,11 +50,11 @@
 		<!-- Content -->
 		<control type="group">
 			<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
-			<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 			<control type="group">
 				<visible>Control.HasFocus(3000) | $EXP[Music_Player_HasFocus] | Control.HasFocus(4201)</visible>
 				<visible>!$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(favourites) + !$EXP[Infoscreen_IsVisible] + !$EXP[globalsearch_IsVisible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
+				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 				<include content="Horizontal_List">
 					<param name="hidden_id" value="3000" />
 					<param name="focused_color" value="$VAR[Light_Color]" />
@@ -67,8 +67,6 @@
 					<top>30</top>
 					<texturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_browse_unfocused_120.png</texturenofocus>
 					<texturefocus colordiffuse="$VAR[Light_Color]">icons/icon_browse_focused_120.png</texturefocus>
-					<!-- <onclick>Skin.SetString(globalsearch)</onclick> -->
-					<!-- <onclick>ActivateWindow(1180)</onclick> -->
 					<onclick>RunScript(script.copacetic.helper,action=globalsearch_input)</onclick>
 					<onclick>SetFocus(3000)</onclick>
 					<include content="globalsearch_home_Navigation" />
@@ -81,7 +79,12 @@
 			<include content="Music_Player_Widget" condition="Skin.HasSetting(Music_Player_Enabled)">
 				<param name="left_label_visible" value="true" />
 				<param name="background_visible" value="false" />
+				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 			</include>
+		</control>
+		<control type="label">
+			<align>right</align>
+			<label>$INFO[Window(home).Property(Trailer_Autoscroll)]</label>
 		</control>
 	</controls>
 </window>

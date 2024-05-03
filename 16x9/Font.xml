@@ -114,6 +114,18 @@
 			<linespacing>0.9</linespacing>
 		</font>
 		<font>
+			<name>Spotlight_Title</name>
+			<filename>Inter/Inter-Black.ttf</filename>
+			<size>30</size>
+			<linespacing>0.9</linespacing>
+		</font>
+		<font>
+			<name>Spotlight_Title</name>
+			<filename>Inter/Inter-Black.ttf</filename>
+			<size>30</size>
+			<linespacing>0.9</linespacing>
+		</font>
+		<font>
 			<name>Body</name>
 			<filename>Inter/Inter-Light.ttf</filename>
 			<size>27</size>
@@ -689,6 +701,12 @@
 			<name>Grid_Info</name>
 			<filename>resource://resource.fonts.copacetic/Inter-NotoSansSC-SemiBold.ttf</filename>
 			<size>25</size>
+			<linespacing>0.9</linespacing>
+		</font>
+		<font>
+			<name>Spotlight_Title</name>
+			<filename>resource://resource.fonts.copacetic/Inter-NotoSansSC-Black.ttf</filename>
+			<size>30</size>
 			<linespacing>0.9</linespacing>
 		</font>
 		<font>

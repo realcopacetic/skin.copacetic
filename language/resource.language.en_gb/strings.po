@@ -26,10 +26,11 @@ msgstr ""
 #: MEDIA              311XX
 #: WIDGETS            312XX
 #: OSD                313XX
-#: SETTINGS           314XX-315XX
+#: SETTINGS           314XX, 317XX
+#: SETTINGS HINTS     315XX, 318XX
 #: WINDOWS/DIALOGS    316XX
-#: MPAA MESSAGES      317XX
-#: WELCOME MESSAGES   319XX
+#: WELCOME MESSAGES   31900-31949
+#: MPAA MESSAGES      31950-31999
 
 
 #: NEW                New additions since last renumbering
@@ -85,6 +86,12 @@ msgstr ""
 #Common
 msgctxt "#31008"
 msgid "Square"
+msgstr ""
+
+#: NEW
+#Common
+msgctxt "#31031"
+msgid "Spotlight"
 msgstr ""
 
 
@@ -530,7 +537,7 @@ msgstr ""
 
 #########################################################################################################
 
-#: SETTINGS           314XX
+#: SETTINGS           314XX, 318
 #: SETTINGS HINTS     315XX
 
 #########################################################################################################
@@ -688,6 +695,11 @@ msgid "Menus"
 msgstr ""
 
 #/16x9/Content_Settings.xml
+msgctxt "#31516"
+msgid "Choose the shortcuts you wish to add to your home and shutdown menus"
+msgstr ""
+
+#/16x9/Content_Settings.xml
 msgctxt "#31417"
 msgid "Home menu"
 msgstr ""
@@ -787,7 +799,7 @@ msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31526"
-msgid "Choose to include only fanarts from the selected sections of your library in the background slideshow, or select a custom path or playlist."
+msgid "Choose to include only fanarts from the selected sections of your library in the background slideshow, or select a custom path, playlist or folder of images."
 msgstr ""
 
 #/16x9/Content_Settings.xml
@@ -802,12 +814,19 @@ msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31428"
-msgid "Prefer keyart for poster views"
+msgid "Prefer keyart for poster views on info screens and dialogs"
 msgstr ""
 
+#: NEW
 #/16x9/Content_Settings.xml
-msgctxt "#31528"
-msgid "Keyart is a custom art type. To ensure it is fetched locally or remotely by scrapers, make sure 'keyart' is included in your art type whitelists for movies and / or tv shows. You can do this by choosing 'Recommended Kodi Settings' at the top of this menu, or by navigating to Settings > Media > Videos > Artwork."
+msgctxt "#31700"
+msgid "Prefer landscape art for fanart views on info screens and dialogs"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31701"
+msgid "Movement"
 msgstr ""
 
 
@@ -828,7 +847,7 @@ msgstr ""
 #: NEW
 #/16x9/Variables_Labels_Media.xml
 msgctxt "#31476"
-msgid "Enable clearlogos for home screen widgets"
+msgid "Enable clearlogos"
 msgstr ""
 
 #/16x9/Content_Settings.xml
@@ -957,8 +976,44 @@ msgstr ""
 
 #: NEW
 #/16x9/Content_Settings.xml
+msgctxt "#31496"
+msgid "Spotlight content with auto scroll"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31596"
+msgid "Widget will move forward one place every 10 seconds while system is idle. When combined with trailer autoplay option below to allow for each item's trailer to be played automatically as soon as the previous trailer is finished while system is idle."
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31498"
+msgid "Prefer keyart for poster views"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31598"
+msgid "Remember 'keyart' is a custom art type. To ensure it is fetched locally or remotely by scrapers, make sure 'keyart' is included in your art type whitelists for movies and / or tv shows. You can do this by choosing 'Recommended Kodi Settings' under Copacetic > General, or by navigating to Settings > Media > Videos > Artwork."
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31499"
+msgid "Prefer landscape art for fanart views"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31599"
+msgid "Remember 'landscape' is a custom art type. To ensure it is fetched locally or remotely by scrapers, make sure 'landscape' is included in your art type whitelists for movies and / or tv shows. You can do this by choosing 'Recommended Kodi Settings' under Copacetic > General, or by navigating to Settings > Media > Videos > Artwork."
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
 msgctxt "#31477"
-msgid "Prefer thumbnails for episodes instead of show fanart"
+msgid "Prefer thumbnails for episodes instead of tv show fanart"
 msgstr ""
 
 
@@ -1240,12 +1295,12 @@ msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31467"
-msgid "Play trailers for home widget movies and tv shows"
+msgid "Automatically play trailers for movies or tv shows in this widget"
 msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31567"
-msgid "Trailers will be played back automatically from any widgets showing movies or tv shows. Trailers cannot be played back from episodes currently."
+msgid "Trailers will be played back automatically from any widgets showing movies or tv shows. Enable 'Spotlight content with auto scroll' option above to create a dynamic playlist of trailers for all items in the widget. Set delay in seconds before trailer playback starts under Extras > Trailer autoplay"
 msgstr ""
 
 #/16x9/Content_Settings.xml
@@ -1524,7 +1579,8 @@ msgstr ""
 
 #########################################################################################################
 
-#: MPAA MESSAGES      317XX
+#: WELCOME MESSAGES   31900-31949
+#: MPAA MESSAGES   31950-31999
 
 #########################################################################################################
 
@@ -1532,66 +1588,57 @@ msgstr ""
 
 #/16x9/Content_Settings.xml
 #/16x9/Variables_Labels_Windows.xml
-msgctxt "#31701"
+msgctxt "#31951"
 msgid "BBFC (UK)"
 msgstr ""
 
 #/16x9/Content_Settings.xml
 #/16x9/Variables_Labels_Windows.xml
-msgctxt "#31702"
+msgctxt "#31952"
 msgid "MPAA / TV-PG (US / others)"
 msgstr ""
 
 #/16x9/Content_Settings.xml
 #/16x9/Variables_Labels_Windows.xml
-msgctxt "#31703"
+msgctxt "#31953"
 msgid "ACB (Australia)"
 msgstr ""
 
 #/16x9/Content_Settings.xml
 #/16x9/Variables_Labels_Windows.xml
-msgctxt "#31704"
+msgctxt "#31954"
 msgid "CHVRS / CBSC (Canada)"
 msgstr ""
 
 #/16x9/Content_Settings.xml
 #/16x9/Variables_Labels_Windows.xml
-msgctxt "#31705"
+msgctxt "#31955"
 msgid "DJCTQ (Brazil)"
 msgstr ""
 
 #/16x9/Content_Settings.xml
 #/16x9/Variables_Labels_Windows.xml
-msgctxt "#31706"
+msgctxt "#31956"
 msgid "EIRIN (Japan)"
 msgstr ""
 
 #/16x9/Content_Settings.xml
 #/16x9/Variables_Labels_Windows.xml
-msgctxt "#31707"
+msgctxt "#31957"
 msgid "FSK (Austria / Germany / Switzerland)"
 msgstr ""
 
 #/16x9/Content_Settings.xml
 #/16x9/Variables_Labels_Windows.xml
-msgctxt "#31708"
+msgctxt "#31958"
 msgid "IFCO (Ireland)"
 msgstr ""
 
 #/16x9/Content_Settings.xml
 #/16x9/Variables_Labels_Windows.xml
-msgctxt "#31709"
+msgctxt "#31959"
 msgid "KIJKWIJZER (Luxembourg / Netherlands)"
 msgstr ""
-
-
-
-
-#########################################################################################################
-
-#: WELCOME MESSAGES   319XX
-
-#########################################################################################################
 
 #: V
 

@@ -165,7 +165,7 @@
 						<include content="Icon_Component_Multiart_Static" condition="Skin.HasSetting(Multiart_Slideshow) + [Window.Is(videos) | Window.Is(music)]">
 							<param name="fadetime" value="360" />
 							<param name="now_playing" value="$EXP[ListItem(0)_NowPlaying]" />
-						</include>-->
+						</include>
 						<!-- Progress overlay -->
 						<include content="Icon_Component_Progress_Overlay" condition="Window.Is(home) | Window.Is(videos) | Window.Is(movieinformation)">
 							<param name="visible" value="[$EXP[GridView_Details_Off] | $EXP[GridView_Details_Breadcrumb]] + $EXP[Progress_IsVisible]" />
@@ -376,6 +376,41 @@
 		</definition>
 	</include>
 
+	<include name="GridView_Widget_Overlay">
+		<definition>
+			<control type="label" id="6004">
+				<include content="Hidden_Control" />
+				<label>$VAR[Info_Label]</label>
+			</control>
+			<control type="grouplist">
+				<visible>!$EXP[Content_Switching]</visible>
+				<include content="Visible_Fade_Delayed_Animation" />
+				<left>95</left>
+				<width>322</width>
+				<top>872</top>
+				<height>198</height>
+				<orientation>vertical</orientation>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<control type="textbox">
+					<height max="135">auto</height>
+					<font>Spotlight_Title</font>
+					<textcolor>$VAR[Light_Color]</textcolor>
+					<label>$VAR[Title_Label]</label>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>!String.IsEmpty(Control.GetLabel(6004))</visible>
+					<height>35</height>
+					<font>Grid_Info</font>
+					<textcolor>$VAR[Light_Color]</textcolor>
+					<label>$INFO[Control.GetLabel(6004)]</label>
+					<align>center</align>
+				</control>
+			</control>
+		</definition>
+	</include>
+
 	<!-- Widget -->
 	<include name="GridView_ListIcon_Static_Unfocused">
 		<include content="ListIcon_Static_Unfocused">
@@ -405,12 +440,12 @@
 			<param name="width" value="$PARAM[width]" />
 			<param name="height" value="$PARAM[height]" />
 			<param name="art_icon" value="$PARAM[art_icon]" />
-			<param name="art_diffuse" value="false" />
+			<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 			<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 			<param name="fallback" value="$PARAM[fallback]" />
 			<!-- Multiart -->
 			<include content="Icon_Component_Multiart_Static" condition="Skin.HasSetting(Multiart_Slideshow) + !Window.Is(movieinformation) + !Window.Is(musicinformation) + !Window.Is(songinformation)">
-				<param name="art_diffuse" value="false" />
+				<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 				<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 			</include>
 			<!-- Progress overlay -->
@@ -438,6 +473,7 @@
 			<param name="height" value="$PARAM[height]" />
 			<param name="art_icon" value="$PARAM[art_icon]" />
 			<param name="art_diffuse" value="false" />
+			<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
 			<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 			<param name="fallback" value="$PARAM[fallback]" />
 			<param name="animationtype" value="$PARAM[animationtype]" />
@@ -471,6 +507,9 @@
 				<param name="height" value="$PARAM[height]" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
 				<param name="art_diffuse" value="$PARAM[art_diffuse]" />
+				<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
+				<param name="art_diffuse_fadeout_1" value="$PARAM[art_diffuse_fadeout_1]" />
+				<param name="art_diffuse_fadeout_2" value="$PARAM[art_diffuse_fadeout_2]" />
 				<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 				<param name="fallback" value="$PARAM[fallback]" />
 				<param name="animationtype" value="$PARAM[animationtype]" />
@@ -481,6 +520,9 @@
 				<include content="Icon_Component_Multiart_Animated" condition="Skin.HasSetting(Multiart_Slideshow) + !Window.Is(movieinformation) + !Window.Is(musicinformation) + !Window.Is(songinformation)">
 					<param name="visible" value="$PARAM[multiart] + String.IsEqual(Window(home).Property(Multiart_Fadeout),true)" />
 					<param name="art_diffuse" value="$PARAM[art_diffuse]" />
+					<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
+					<param name="art_diffuse_fadeout_1" value="$PARAM[art_diffuse_fadeout_1]" />
+					<param name="art_diffuse_fadeout_2" value="$PARAM[art_diffuse_fadeout_2]" />
 					<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 					<param name="animationtype" value="$PARAM[multiartanimationtype]" />
 					<param name="animationeffect" value="$PARAM[multiartanimationeffect]" />
@@ -510,6 +552,7 @@
 		<param name="5x_item_width" />
 		<param name="6x_item_width" />
 		<param name="art_icon" />
+		<param name="art_diffuse" />
 		<param name="fallback" />
 		<param name="focus_border_visible" />
 		<param name="focus_border_edge" />
@@ -548,6 +591,8 @@
 						<param name="top" value="$PARAM[item_top]" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="art_diffuse_fadeout_1" value="Container($PARAM[target_id]).OnPrevious + $PARAM[art_diffuse]" />
+						<param name="art_diffuse_fadeout_2" value="!Container($PARAM[target_id]).OnPrevious + $PARAM[art_diffuse]" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="animationtype" value="Hidden" />
 						<param name="animationcondition" value="true" />
@@ -673,6 +718,7 @@
 						<param name="top" value="$PARAM[item_top]" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="art_diffuse_fadein" value="$PARAM[art_diffuse] + !Container($PARAM[target_id]).OnPrevious" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="animationtype" value="Hidden" />
 						<param name="animationcondition" value="true" />
@@ -712,6 +758,8 @@
 						<param name="top" value="$PARAM[item_top]" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="art_diffuse_fadeout_1" value="Container($PARAM[target_id]).OnNext + $PARAM[art_diffuse]" />
+						<param name="art_diffuse_fadeout_2" value="!Container($PARAM[target_id]).OnNext + $PARAM[art_diffuse]" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="animationtype" value="Hidden" />
 						<param name="animationcondition" value="true" />
@@ -836,6 +884,7 @@
 						<param name="top" value="$PARAM[item_top]" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="art_diffuse_fadein" value="$PARAM[art_diffuse] + !Container($PARAM[target_id]).OnNext" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="animationtype" value="Hidden" />
 						<param name="animationcondition" value="true" />
@@ -865,6 +914,7 @@
 		<param name="4x_item_width" />
 		<param name="5x_item_width" />
 		<param name="art_icon" />
+		<param name="art_diffuse" />
 		<param name="fallback" />
 		<param name="focus_border_visible" />
 		<param name="focus_border_protrusion" />
@@ -964,6 +1014,7 @@
 						<param name="width" value="$PARAM[item_width]" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="border_visible" value="$PARAM[focus_border_visible]" />
 						<param name="border_protrusion" value="$PARAM[focus_border_protrusion]" />
@@ -981,6 +1032,7 @@
 		<param name="displaytype_label" />
 		<param name="displaytype_isfanart" />
 		<param name="art_icon" />
+		<param name="art_diffuse" default="false" />
 		<param name="fallback" />
 		<param name="top" />
 		<param name="item_top" />
@@ -1014,6 +1066,7 @@
 					<param name="5x_item_width" value="$PARAM[5x_item_width]" />
 					<param name="6x_item_width" value="$PARAM[6x_item_width]" />
 					<param name="art_icon" value="$PARAM[art_icon]" />
+					<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 					<param name="fallback" value="$PARAM[fallback]" />
 					<param name="focus_border_visible" value="$PARAM[focus_border_visible]" />
 					<param name="focus_border_protrusion" value="10" />
@@ -1034,6 +1087,7 @@
 					<param name="4x_item_width" value="$PARAM[4x_item_width]" />
 					<param name="5x_item_width" value="$PARAM[5x_item_width]" />
 					<param name="art_icon" value="$PARAM[art_icon]" />
+					<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 					<param name="fallback" value="$PARAM[fallback]" />
 					<param name="focus_border_visible" value="$PARAM[focus_border_visible]" />
 					<param name="focus_border_protrusion" value="10" />
@@ -1064,6 +1118,7 @@
 				<param name="5x_item_width" value="1800" />
 				<param name="6x_item_width" value="2160" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
+				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 			</include>
 		</definition>
 	</include>
@@ -1087,6 +1142,35 @@
 				<param name="5x_item_width" value="2960" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
 				<param name="focus_border_visible" value="$PARAM[focus_border_visible]" />
+				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
+				<nested />
+			</include>
+		</definition>
+	</include>
+
+	<include name="GridView_Art_Spotlight">
+		<param name="target_id" />
+		<param name="art_icon" />
+		<param name="art_diffuse" />
+		<definition>
+			<include content="GridView_Art">
+				<param name="target_id" value="$PARAM[target_id]" />
+				<param name="displaytype_label" value="Spotlight" />
+				<param name="displaytype_isfanart" value="false" />
+				<param name="top" value="872" />
+				<param name="item_height" value="198" />
+				<param name="item_width_minus_dropshadow_width" value="232" />
+				<param name="item_width" value="352" />
+				<param name="item_width_plus_dropshadow_width" value="472" />
+				<param name="2x_item_width" value="704" />
+				<param name="3x_item_width" value="1056" />
+				<param name="4x_item_width" value="1408" />
+				<param name="5x_item_width" value="1760" />
+				<param name="6x_item_width" value="2112" />
+				<param name="art_icon" value="$PARAM[art_icon]" />
+				<param name="art_diffuse" value="$PARAM[art_diffuse]" />
+				<param name="focus_border_visible" value="$PARAM[focus_border_visible]" />
+				<animation effect="slide" start="0,0" end="20,0" time="0" condition="true">Conditional</animation>
 				<nested />
 			</include>
 		</definition>
@@ -1111,6 +1195,7 @@
 				<param name="5x_item_width" value="1800" />
 				<param name="6x_item_width" value="2160" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
+				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 			</include>
 		</definition>
 	</include>
@@ -1122,6 +1207,20 @@
 				<param name="id" value="$PARAM[id]" />
 				<param name="left" value="188" />
 				<param name="bottom" value="384" />
+				<param name="progress_indicator_background" value="$VAR[Accent_Color]" />
+				<param name="slides" value="Default" />
+			</include>
+		</definition>
+	</include>
+
+	<include name="Progress_Grid_Spotlight">
+		<param name="id" />
+		<definition>
+			<include content="Progress_Grid">
+				<param name="id" value="$PARAM[id]" />
+				<param name="left" value="136" />
+				<param name="width" value="240" />
+				<param name="bottom" value="25" />
 				<param name="progress_indicator_background" value="$VAR[Accent_Color]" />
 				<param name="slides" value="Default" />
 			</include>

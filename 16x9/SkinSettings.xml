@@ -27,7 +27,6 @@
 				<param name="onright" value="3001" />
 				<param name="left" value="570" />
 				<param name="width" value="1260" />
-				<param name="height" value="630" />
 				<param name="scrollbar_visible" value="ControlGroup(2).HasFocus" />
 				<onback>9</onback>
 				<include content="skinsettings_Right_List_Content_Home" />

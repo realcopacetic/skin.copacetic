@@ -39,6 +39,7 @@
 				<onunfocus>ClearProperty(billboard_cropped,home)</onunfocus>
 				<onunfocus>ClearProperty(clearlogo-alt_cropped,home)</onunfocus>
 				<onunfocus>ClearProperty(clearlogo_cropped,home)</onunfocus>
+				<onunfocus>ClearProperty(Trailer_Autoscroll,home)</onunfocus>
 				<viewtype label="widgetlist">list</viewtype>
 				<preloaditems>2</preloaditems>
 				<orientation>horizontal</orientation>
@@ -51,6 +52,7 @@
 						<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.DBID)">SetProperty(Widget_DBID,$INFO[Container($PARAM[id]).ListItem.DBID],home)</onfocus>
 						<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.DBType)">SetProperty(Widget_DBType,$INFO[Container($PARAM[id]).ListItem.DBType],home)</onfocus>
 						<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Genre)">SetProperty(Widget_Genre,$INFO[Container($PARAM[id]).ListItem.Genre],home)</onfocus>
+						<onfocus condition="Skin.HasSetting(Widget$PARAM[widget_position]_AutoScroll) + Skin.HasSetting(Widget$PARAM[widget_position]_Trailer_Autoplay)">SetProperty(Trailer_Autoscroll,true,home)</onfocus>
 					</control>
 					<include content="HiddenFocusButton" />
 					<include content="Multiart_Resetter" condition="Skin.HasSetting(Multiart_Slideshow)" />
@@ -127,18 +129,22 @@
 			<control type="group">
 				<visible>!$EXP[TransparentDialog_IsVisible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
+				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay) + ![Skin.String(Widget$PARAM[widget_position]_View,Grid) + Skin.String(Widget$PARAM[widget_position]_Display,Spotlight)]" />
 				<control type="group">
 					<visible>Control.HasFocus(320$PARAM[widget_position])</visible>
 					<include content="Visible_Fade_Delayed_Animation" />
 					<include content="BillboardView_Details" condition="Skin.String(Widget$PARAM[widget_position]_View,Billboard)">
 						<param name="id" value="$PARAM[id]" />
+						<param name="widget_clearlogos" value="Skin.HasSetting(Widget$PARAM[widget_position]_Clearlogos_Enabled)" />
 					</include>
 					<include content="ShowcaseView_Details" condition="Skin.String(Widget$PARAM[widget_position]_View,Showcase)">
-						<param name="media_view" value="false" />
 						<param name="id" value="$PARAM[id]" />
+						<param name="media_view" value="false" />
+						<param name="widget_clearlogos" value="Skin.HasSetting(Widget$PARAM[widget_position]_Clearlogos_Enabled)" />
 					</include>
 					<include content="StripView_Details" condition="Skin.String(Widget$PARAM[widget_position]_View,Strip)">
 						<param name="id" value="$PARAM[id]" />
+						<param name="widget_clearlogos" value="Skin.HasSetting(Widget$PARAM[widget_position]_Clearlogos_Enabled)" />
 					</include>
 					<include content="GridView_Details" condition="Skin.String(Widget$PARAM[widget_position]_View,Grid)">
 						<param name="id" value="$PARAM[id]" />
@@ -153,11 +159,12 @@
 					<param name="info_label_visible" value="true" />
 					<param name="info_label" value="$VAR[Copacetic_Divider_Bold,, ]$INFO[Container(320$PARAM[widget_position]).CurrentItem]$INFO[Container(320$PARAM[widget_position]).NumItems,/]" />
 					<param name="textcolor" value="$VAR[Breadcrumb_Label_Color]" />
+					<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay) + Skin.String(Widget$PARAM[widget_position]_View,Grid) + Skin.String(Widget$PARAM[widget_position]_Display,Spotlight)" />
 				</include>
 				<nested />
 				<!-- Busy spinner -->
 				<include content="Busy_Spinner">
-					<param name="visible" value="Control.HasFocus(320$PARAM[widget_position]) + Container(320$PARAM[widget_position]).IsUpdating + !Window.IsVisible(busydialog) + !Skin.String(Trailer_Autoplay_Home_Enabled,true)" />
+					<param name="visible" value="Control.HasFocus(320$PARAM[widget_position]) + Container(320$PARAM[widget_position]).IsUpdating + !Window.IsVisible(busydialog) + !Skin.HasSetting(Widget$PARAM[widget_position]_Trailer_Autoplay)" />
 					<param name="color" value="$VAR[Volume_Focused_Color]" />
 					<include content="Trailer_Autoplay_Fade_Delayed_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 				</include>

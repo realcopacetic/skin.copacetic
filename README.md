@@ -26,6 +26,16 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Improved tvguide window
 - Fixed issue with path tracer when navigating from one infoscreen widget to a new infoscreen. On pressing back, instead of going to the back to the previous infoscreen, Copacetic was closing all dialogs and the main lists were remaining hidden.
 - Staying idle on global search home button will now trigger screensaver if it is active
+- Added landscape to movieartwhitelist/tvshowartwhitelist recommended settings
+- Added support for landscape artwork across all fanart views and widgets
+- Added ability to prefer keyart and lanscape art on a per view / per widget basis
+- Added ability to enable trailer autoplay on a per widget basis
+- Added optional autoscroll to each widget, which can be combined with trailer autoplay to create a playlist of trailers
+- Added ability to choose to display clearlogos on a per widget basis
+- New 'Spotlight' display option for Grid widgets. This is the same as fanart, but smaller and stays on the screen when trailers are playing. Together with the options for autoscroll and trailer autoplay, the idea is to create a similar feel to the Netflix trailer auto-play view
+- Rebuilt widget settings section of Copacetic settings screen into its own window to make for easier management of the new options
+- Reordered some other parts of the Copacetic settings screen 
+
 
 **1.3.4**
 - fix for globalsearch scrollbar colour
