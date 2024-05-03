@@ -8,10 +8,11 @@
 			<height>200</height>
 			<right>0</right>
 			<texture colordiffuse="pink">views/white_100.png</texture>
+			<visible>Player.HasVideo</visible>
 		</control>
 		<control type="label">
 			<align>right</align>
-			<label>Booyah</label>
+			<label>$INFO[Window(home).Property(Trailer_Autoscroll)]</label>
 			<height>200</height>
 		</control>
 	</controls>

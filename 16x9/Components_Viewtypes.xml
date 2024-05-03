@@ -501,6 +501,7 @@
 		<param name="info_gap" default="-5" />
 		<param name="plot_label" default="$VAR[Plot_Label]" />
 		<param name="plot_maxheight" default="103" />
+		<param name="widget_clearlogos" default="false" />
 		<definition>
 			<include content="Hidden_Components">
 				<control type="label" id="6003">
@@ -527,14 +528,14 @@
 						<centerleft>50%</centerleft>
 					</include>
 					<control type="grouplist">
-						<include content="Common_Details_Slides" condition="Skin.HasSetting(Crop_Clearlogos) + ![Window.Is(home) + !Skin.HasSetting(Widgets_Clearlogos_Enabled)]">
+						<include content="Common_Details_Slides" condition="Skin.HasSetting(Crop_Clearlogos) + ![Window.Is(home) + !$PARAM[widget_clearlogos]]">
 							<param name="viewtype_label" value="$PARAM[viewtype_label]" />
 						</include>
 						<orientation>vertical</orientation>
 						<align>center</align>
 						<itemgap>$PARAM[itemgap]</itemgap>
 						<usecontrolcoords>true</usecontrolcoords>
-						<include content="Common_Details_Logo" condition="[Window.Is(home) + Skin.HasSetting(Widgets_Clearlogos_Enabled)] | Window.Is(videos) | Window.Is(music) | Window.Is(programs)">
+						<include content="Common_Details_Logo" condition="[Window.Is(home) + $PARAM[widget_clearlogos]] | Window.Is(videos) | Window.Is(music) | Window.Is(programs)">
 							<param name="visible" value="[!$EXP[BillboardView_IsVisible] + [$EXP[$PARAM[viewtype_label]View_Logo_IsVisible] | $EXP[Widget_HasLogo]] + !$EXP[$PARAM[viewtype_label]View_Details_Title]] | [$EXP[BillboardView_IsVisible] + $EXP[BillboardView_Logo_IsVisible]] | [Window.Is(home) + $EXP[Widget_HasLogo]]" />
 							<param name="align" value="left" />
 							<param name="aligny" value="bottom" />
@@ -543,7 +544,7 @@
 							<animation effect="slide" start="0,0" end="-60,366" time="0" condition="$EXP[BillboardView_IsVisible] + $EXP[BillboardView_Logo_IsVisible] + $EXP[BillboardView_Details_Title]">Conditional</animation>
 						</include>
 						<include content="Common_Details_Textbox">
-							<param name="visible" value="[$EXP[$PARAM[viewtype_label]View_Media_IsVisible] + !$EXP[$PARAM[viewtype_label]View_Logo_IsVisible]] | [$EXP[ShowcaseView_Media_IsVisible] + ![$EXP[ShowcaseView_Logo_IsVisible] | $EXP[ShowcaseView_Details_Overlay_IsVisible]]] | $EXP[Infoscreen_Widget_HasFocus] | [Window.Is(home) + [!$EXP[Widget_HasLogo] | !Skin.HasSetting(Widgets_Clearlogos_Enabled)]]" />
+							<param name="visible" value="[$EXP[$PARAM[viewtype_label]View_Media_IsVisible] + !$EXP[$PARAM[viewtype_label]View_Logo_IsVisible]] | [$EXP[ShowcaseView_Media_IsVisible] + ![$EXP[ShowcaseView_Logo_IsVisible] | $EXP[ShowcaseView_Details_Overlay_IsVisible]]] | $EXP[Infoscreen_Widget_HasFocus] | [Window.Is(home) + [!$EXP[Widget_HasLogo] | !$PARAM[widget_clearlogos]]]" />
 							<param name="font" value="$PARAM[viewtype_label]_Title" />
 							<param name="color" value="$PARAM[title_color]" />
 							<param name="maxheight" value="$PARAM[title_maxheight]" />
