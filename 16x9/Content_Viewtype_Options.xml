@@ -326,7 +326,7 @@
 			<label2>$LOCALIZE[31014] $VAR[Copacetic_Divider_Bold] $LOCALIZE[16100]$INFO[Container.NumItems, (,)]</label2>
 			<property name="ActionLeft">SendClick(14)</property>
 			<property name="ActionRight">SendClick(14)</property>
-			<visible>Window.Is(videos) + Control.IsEnabled(14) + !System.Setting(hidewatched) + !Container.Content(actors) + !Container.Content(sets) + Integer.IsGreater(Container.NumItems,1)</visible>
+			<visible>Window.Is(videos) + Control.IsEnabled(14) + !System.Setting(hidewatched) + !Container.Content(actors) + !Container.Content(sets)</visible>
 		</item>
 		<item id="2">
 			<onclick>SetFocus(50)</onclick>
@@ -334,7 +334,7 @@
 			<label2>$LOCALIZE[31014] $VAR[Copacetic_Divider_Bold] $LOCALIZE[16101]$INFO[Container.TotalUnWatched, (,)]</label2>
 			<property name="ActionLeft">SendClick(14)</property>
 			<property name="ActionRight">SendClick(14)</property>
-			<visible>Window.Is(videos) + Control.IsEnabled(14) + System.Setting(hidewatched) + !Container.Content(actors) + !Container.Content(sets) + Integer.IsGreater(Container.NumItems,1)</visible>
+			<visible>Window.Is(videos) + Control.IsEnabled(14) + System.Setting(hidewatched) + !Container.Content(actors) + !Container.Content(sets)</visible>
 		</item>
 		<!-- Current playlist -->
 		<item>

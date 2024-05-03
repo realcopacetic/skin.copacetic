@@ -113,13 +113,18 @@
 		<definition>
 			<include content="Viewtype_Display_Template">
 				<param name="viewtype_label" value="Grid" />
-				<include content="GridView_Art_Posters" condition="!Skin.String(Widget$PARAM[widget_position]_Display,Fanart) + !Skin.String(Widget$PARAM[widget_position]_Display,Square)">
+				<include content="GridView_Art_Posters" condition="!Skin.String(Widget$PARAM[widget_position]_Display,Fanart) + !Skin.String(Widget$PARAM[widget_position]_Display,Spotlight) + !Skin.String(Widget$PARAM[widget_position]_Display,Square)">
 					<param name="target_id" value="$PARAM[id]" />
 					<param name="art_icon" value="$PARAM[art_icon]" />
 				</include>
 				<include content="GridView_Art_Fanart" condition="Skin.String(Widget$PARAM[widget_position]_Display,Fanart)">
 					<param name="target_id" value="$PARAM[id]" />
 					<param name="art_icon" value="$PARAM[art_icon]" />
+				</include>
+				<include content="GridView_Art_Spotlight" condition="Skin.String(Widget$PARAM[widget_position]_Display,Spotlight)">
+					<param name="target_id" value="$PARAM[id]" />
+					<param name="art_icon" value="$PARAM[art_icon]" />
+					<param name="art_diffuse" value="!Skin.HasSetting(Widget$PARAM[widget_position]_Prefer_Landscape)" />
 				</include>
 				<include content="GridView_Art_Square" condition="Skin.String(Widget$PARAM[widget_position]_Display,Square)">
 					<param name="target_id" value="$PARAM[id]" />
@@ -140,16 +145,19 @@
 				<include content="Progress_Grid_$PARAM[widget_display]" condition="Window.Is(movieinformation)">
 					<param name="id" value="$PARAM[id]" />
 				</include>
-				<include content="Progress_Grid_Posters" condition="Window.Is(home) + !Skin.String(Widget$PARAM[widget_position]_Display,Fanart) + !Skin.String(Widget$PARAM[widget_position]_Display,Square)">
+				<include content="Progress_Grid_Posters" condition="Window.Is(home) + !Skin.String(Widget$PARAM[widget_position]_Display,Fanart) + !Skin.String(Widget$PARAM[widget_position]_Display,Spotlight) + !Skin.String(Widget$PARAM[widget_position]_Display,Square)">
 					<param name="id" value="$PARAM[id]" />
 				</include>
 				<include content="Progress_Grid_Fanart" condition="Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Fanart)">
 					<param name="id" value="$PARAM[id]" />
 				</include>
+				<include content="Progress_Grid_Spotlight" condition="Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Spotlight)">
+					<param name="id" value="$PARAM[id]" />
+				</include>
 				<include content="Progress_Grid_Square" condition="Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Square)">
 					<param name="id" value="$PARAM[id]" />
 				</include>
-				<include content="Breadcrumb_Label">
+				<include content="Breadcrumb_Label" condition="![Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Spotlight)]">
 					<param name="bar" value="false" />
 					<param name="title_label" value="$VAR[Title_Label]" />
 					<param name="title_label_id" value="$PARAM[id]4" />
@@ -163,7 +171,7 @@
 					<animation effect="slide" start="0" end="0,690" time="0" condition="String.IsEqual(Control.GetLabel(620$PARAM[widget_position]2),Square)">Conditional</animation>
 					<animation effect="slide" start="0" end="0,690" time="0" condition="Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Square)">Conditional</animation>
 				</include>
-				<nested />
+				<include content="GridView_Widget_Overlay" condition="Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Spotlight) + !Skin.HasSetting(Widget$PARAM[widget_position]_Prefer_Landscape)" />
 			</include>
 		</definition>
 	</include>

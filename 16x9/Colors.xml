@@ -429,77 +429,79 @@
 
 
 	<variable name="skinsettings_Widget1_View_Button_Textcolor">
-		<value condition="Control.HasFocus(121210) | Control.HasFocus(121211)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(1020) | Control.HasFocus(1021)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Widget2_View_Button_Textcolor">
-		<value condition="Control.HasFocus(122210) | Control.HasFocus(122211)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(2020) | Control.HasFocus(2021)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Widget3_View_Button_Textcolor">
-		<value condition="Control.HasFocus(123210) | Control.HasFocus(123211)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(3020) | Control.HasFocus(3021)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Widget4_View_Button_Textcolor">
-		<value condition="Control.HasFocus(124210) | Control.HasFocus(124211)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(4020) | Control.HasFocus(4021)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Widget5_View_Button_Textcolor">
-		<value condition="Control.HasFocus(125210) | Control.HasFocus(125211)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(5020) | Control.HasFocus(5021)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Widget6_View_Button_Textcolor">
-		<value condition="Control.HasFocus(126210) | Control.HasFocus(126211)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(6020) | Control.HasFocus(6021)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Widget7_View_Button_Textcolor">
-		<value condition="Control.HasFocus(127210) | Control.HasFocus(127211)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(7020) | Control.HasFocus(7021)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Widget8_View_Button_Textcolor">
-		<value condition="Control.HasFocus(128210) | Control.HasFocus(128211)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(8020) | Control.HasFocus(8021)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Widget9_View_Button_Textcolor">
-		<value condition="Control.HasFocus(129210) | Control.HasFocus(129211)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(9020) | Control.HasFocus(9021)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
+
 	<variable name="skinsettings_Widget1_Display_Button_Textcolor">
-		<value condition="Control.HasFocus(121300) | Control.HasFocus(121301)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(1030) | Control.HasFocus(1031)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Widget2_Display_Button_Textcolor">
-		<value condition="Control.HasFocus(122300) | Control.HasFocus(122301)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(2030) | Control.HasFocus(2031)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Widget3_Display_Button_Textcolor">
-		<value condition="Control.HasFocus(123300) | Control.HasFocus(123301)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(3030) | Control.HasFocus(3031)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Widget4_Display_Button_Textcolor">
-		<value condition="Control.HasFocus(124300) | Control.HasFocus(124301)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(4030) | Control.HasFocus(4031)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Widget5_Display_Button_Textcolor">
-		<value condition="Control.HasFocus(125300) | Control.HasFocus(125301)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(5030) | Control.HasFocus(5031)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Widget6_Display_Button_Textcolor">
-		<value condition="Control.HasFocus(126300) | Control.HasFocus(126301)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(6030) | Control.HasFocus(6031)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Widget7_Display_Button_Textcolor">
-		<value condition="Control.HasFocus(127300) | Control.HasFocus(127301)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(7030) | Control.HasFocus(7031)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Widget8_Display_Button_Textcolor">
-		<value condition="Control.HasFocus(128300) | Control.HasFocus(128301)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(8030) | Control.HasFocus(8031)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_Widget9_Display_Button_Textcolor">
-		<value condition="Control.HasFocus(129300) | Control.HasFocus(129301)">$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(9030) | Control.HasFocus(9031)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
+
 	<variable name="skinsettings_Music_Rating_Like_Threshold_Button_Textcolor">
 		<value condition="Control.HasFocus(14050) | Control.HasFocus(14051)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
