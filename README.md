@@ -20,6 +20,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.3.6**
+- Fix for preventing widgets from auto-playing trailers when auto-scroll also enabled
+
 **1.3.5**
 - Added visual listitem indicator for Collections (sets)
 - Added tvchannels window

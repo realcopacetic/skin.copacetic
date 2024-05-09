@@ -43,7 +43,7 @@
 	</include>
 
 	<include name="movieinformation_OnLoadUnload">
-		<onload condition="Skin.HasSetting(Trailer_Autoplay) + String.IsEqual(Window(home).Property(Trailer_Autoplay),true)">PlayerControl(Stop)</onload>
+		<onload condition="Skin.HasSetting(Trailer_Autoplay) + String.IsEqual(Window(home).Property(Trailer_Autoplay),true) + Player.HasVideo">PlayerControl(Stop)</onload>
 		<onload condition="Skin.HasSetting(Trailer_Autoplay) + String.IsEqual(Window(home).Property(Trailer_Autoplay),true)">ClearProperty(Trailer_Autoplay,home)</onload>
 		<onload condition="!String.IsEmpty(ListItem.DBID)">SetProperty(SelectedItem,$INFO[ListItem.DBID],movieinformation)</onload>
 		<onload condition="String.IsEmpty(ListItem.DBID) + !String.IsEmpty(ListItem.Property(tmdb_id))">SetProperty(SelectedItem,$INFO[ListItem.Property(tmdb_id)],movieinformation)</onload>

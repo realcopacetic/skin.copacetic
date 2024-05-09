@@ -36,8 +36,6 @@
 					<top>180</top>
 					<width>1920</width>
 					<height>900</height>
-					<onfocus condition="Skin.HasSetting(Trailer_Autoplay) + String.IsEqual(Window(home).Property(Trailer_Autoplay),true)">PlayerControl(Stop)</onfocus>
-					<onfocus condition="Skin.HasSetting(Trailer_Autoplay) + String.IsEqual(Window(home).Property(Trailer_Autoplay),true)">ClearProperty(Trailer_Autoplay,home)</onfocus>
 					<onfocus>ClearProperty(Widget_DBID,home)</onfocus>
 					<include content="Grid_Navigation" />
 					<pagecontrol>60</pagecontrol>
