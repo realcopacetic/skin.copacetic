@@ -30,7 +30,7 @@
 	<expression name="Background_FadeOut_Exceptions_musicplaylist">[$EXP[Background_FadeOut_Exceptions] + Skin.String(Background_Slideshow,Artists)] | Window.Next(music)</expression>
 	<!-- children -->
 	<expression name="Window.Previous(addonbrowser)">Window.Previous(addonbrowser) + String.IsEmpty(Window(home).Property(Container_Addons_NonRepo))</expression>
-	<expression name="Window.Previous(all_settings_windows)">[Window.Previous(skinsettings) + !Window.IsVisible(1140)] | Window.Previous(interfacesettings) | Window.Previous(mediasettings) | Window.Previous(playersettings) | Window.Previous(systemsettings) | Window.Previous(servicesettings) | Window.Previous(gamesettings) | Window.Previous(pvrsettings) | Window.Previous(profiles) | Window.Previous(systeminfo) | Window.Previous(filemanager)</expression>
+	<expression name="Window.Previous(all_settings_windows)">Window.Previous(skinsettings) | Window.Previous(interfacesettings) | Window.Previous(mediasettings) | Window.Previous(playersettings) | Window.Previous(systemsettings) | Window.Previous(servicesettings) | Window.Previous(gamesettings) | Window.Previous(pvrsettings) | Window.Previous(profiles) | Window.Previous(systeminfo) | Window.Previous(filemanager)</expression>
 	<expression name="Window.Previous(home)">Window.Previous(home) + Skin.HasSetting(Home_Background_Override_Enabled) + String.IsEmpty(window(home).property(Home_Widget))</expression>
 	<expression name="Window.Previous(music)">Window.Previous(music) + Container.Content(playlists) + Skin.String(Background_Slideshow,Artists)</expression>
 	<expression name="Window.Previous(musicplaylisteditor)">Window.Previous(musicplaylisteditor) + Skin.String(Background_Slideshow,Artists)</expression>

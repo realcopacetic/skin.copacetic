@@ -2,7 +2,7 @@
 <window>
 	<!-- home -->
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=3000&amp;group=mainmenu|shutdownmenu)</onload>
-	<onunload condition="String.IsEqual(Window(home).Property(Trailer_Autoplay),true)">PlayerControl(Stop)</onunload>
+	<onunload condition="String.IsEqual(Window(home).Property(Trailer_Autoplay),true) + Player.HasVideo">PlayerControl(Stop)</onunload>
 	<onunload condition="String.IsEqual(Window(home).Property(Trailer_Autoplay),true)">ClearProperty(Trailer_Autoplay,home)</onunload>
 	<defaultcontrol always="true">4010</defaultcontrol>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
@@ -81,10 +81,6 @@
 				<param name="background_visible" value="false" />
 				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 			</include>
-		</control>
-		<control type="label">
-			<align>right</align>
-			<label>$INFO[Window(home).Property(Trailer_Autoscroll)]</label>
 		</control>
 	</controls>
 </window>

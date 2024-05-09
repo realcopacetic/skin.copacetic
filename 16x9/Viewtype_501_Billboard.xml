@@ -43,11 +43,12 @@
 				<include content="Progress" condition="Window.Is(videos) | Window.Is(music) | Window.Is(home) | Window.Is(movieinformation)">
 					<param name="id" value="$PARAM[id]" />
 				</include>
-				<include content="Common_Details" />
+				<include content="Common_Details">
+					<param name="widget_clearlogos" value="$PARAM[widget_clearlogos]" />
+				</include>
 				<include content="Now_Playing_Icon" condition="Window.Is(videos) | Window.Is(music)">
 					<param name="visible" value="$EXP[ListItem(0)_NowPlaying]" />
 					<param name="color" value="$VAR[Light_Color]" />
-					<param name="widget_clearlogos" value="$PARAM[widget_clearlogos]" />
 					<animation effect="slide" end="510,450" time="0" condition="true">Conditional</animation>
 					<animation effect="slide" end="180,0" time="0" condition="!$EXP[BillboardView_Flags_Studio_IsVisible] | String.IsEqual(Control.GetLabel(6303),flags/blank.png)">Conditional</animation>
 					<animation effect="slide" end="180,0" time="0" condition="!$EXP[BillboardView_Flags_Rating_IsVisible] | String.IsEqual(Control.GetLabel(6304),flags/blank.png)">Conditional</animation>

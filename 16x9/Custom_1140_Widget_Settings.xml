@@ -3,7 +3,7 @@
 <window type="dialog" id="1140">
 	<defaultcontrol always="true">3200</defaultcontrol>
 	<controls>
-		<include content="Default_Settings_Panel_Layout">
+		<include content="Default_Dialog_Panel_Layout">
 			<param name="visible" value="!Window.IsVisible(shutdownmenu) + !Window.IsVisible(selectdialog) + !String.Contains(Window(home).Property(SelectDialog),Active) + !Window.IsVisible(virtualkeyboard)" />
 			<param name="left_list_id" value="3200" />
 			<param name="right_list_id" value="3201" />
