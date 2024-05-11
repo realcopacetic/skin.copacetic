@@ -59,6 +59,8 @@
 				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),tvshow.fanart) + !String.IsEmpty(ListItem.Art(tvshow.fanart))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(tvshow.fanart)],home)</onfocus>
 				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),tvshow.square) + !String.IsEmpty(ListItem.Art(tvshow.square))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(tvshow.square)],home)</onfocus>
 				<!-- Trailer Autoplay -->
+				<onunfocus condition="Skin.TimerIsRunning(trailer_autoplay)">Skin.TimerStop(trailer_autoplay)</onunfocus>
+				<onunfocus condition="Skin.TimerIsRunning(trailer_autoplay_home)">Skin.TimerStop(trailer_autoplay_home)</onunfocus>
 				<onunfocus condition="String.IsEqual(Window(home).Property(Trailer_Autoplay),true) + Player.HasVideo">PlayerControl(Stop)</onunfocus>
 				<onunfocus condition="String.IsEqual(Window(home).Property(Trailer_Autoplay),true)">ClearProperty(Trailer_Autoplay,home)</onunfocus>
 				<!-- Settings transition from addonbrowser -->

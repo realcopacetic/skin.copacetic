@@ -20,6 +20,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.3.7**
+- Further refinement of auto scroll/play timers
+
 **1.3.6**
 - Fix for preventing widgets from auto-playing trailers when auto-scroll also enabled
 
