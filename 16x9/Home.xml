@@ -82,12 +82,5 @@
 				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 			</include>
 		</control>
-		<control type="image">
-			<texture>views/white_100.png</texture>
-			<right>0</right>
-			<height>90</height>
-			<width>90</width>
-			<visible>[[!Skin.HasSetting(Widget1_Trailer_Autoplay) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(widget_spotlight),8) + System.IdleTime(8)] | [Skin.HasSetting(Widget1_Trailer_Autoplay) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(widget_spotlight),2) + Skin.TimerIsRunning(trailer_autoplay_home) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(trailer_autoplay_home),2)]] + !Player.HasVideo + !Window.IsVisible(movieinformation) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(busydialog)</visible>
-		</control>
 	</controls>
 </window>
