@@ -20,6 +20,16 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.3.8**
+- Updated widget paths with url_encoded strings from script.copacetic.helper to enable xsp filtering when titles have special characters
+- back when container empty thing
+- move url_decode script to monitor
+- check osd issue
+- Still to do:
+- OSD : (still to update --> Buttons, Settings, Stars, icon_Player)
+- login background
+- Create radio station button
+
 **1.3.7**
 - Further refinement of auto scroll/play timers
 
@@ -92,12 +102,6 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Made some fixes to videoplaylist/musicplaylist
 - Made some fixes to visualisation window https://github.com/realcopacetic/skin.copacetic/issues/130
 - Added support for artist fanart multiart to visualisation slideshow https://github.com/realcopacetic/skin.copacetic/issues/47
-
-Still to do:
-- OSD : (still to update --> Buttons, Settings, Stars, icon_Player)
-- login background
-- Create radio station button
-
 
 **1.1.24**
 - Disabled debugging flag
