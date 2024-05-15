@@ -2,6 +2,8 @@
 <window>
 	<!-- musicinformation -->
 	<include content="musicinformation_OnLoadUnload" />
+	<onload condition="String.IsEmpty(Window(home).Property(URL_Encoded_Artist)) + !String.IsEmpty(ListItem.Artist)">RunScript(script.copacetic.helper,action=url_encode,name=URL_Encoded_Artist,string='"$INFO[ListItem.Artist]"')</onload>
+	<onunload condition="!String.IsEmpty(Window(home).Property(URL_Encoded_Artist))">ClearProperty(URL_Encoded_Artist,home)</onunload>
 	<defaultcontrol always="true">97</defaultcontrol>
 	<controls>
 		<include content="Infoscreen_Header_Template">
