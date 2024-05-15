@@ -66,6 +66,8 @@
 				<!-- Settings transition from addonbrowser -->
 				<onfocus condition="Window.Is(addonbrowser) + $EXP[Container_Addons_NonRepo]">SetProperty(Container_Addons_NonRepo,true,home)</onfocus>
 				<onfocus condition="Window.Is(addonbrowser) + !$EXP[Container_Addons_NonRepo]">ClearProperty(Container_Addons_NonRepo,home)</onfocus>
+				<!-- Go back if container is empty -->
+				<onfocus condition="Skin.HasSetting(Experiment_ParentDir_IfEmptyContainer) + !Integer.IsGreater(Container.NumItems,0)">ParentDir</onfocus>
 			</control>
 		</definition>
 	</include>

@@ -849,6 +849,13 @@
 			<onclick>Skin.ToggleSetting(Experiment_GridView_Fanart_Pictures)</onclick>
 			<selected>Skin.HasSetting(Experiment_GridView_Fanart_Pictures)</selected>
 		</control>
+		<control type="radiobutton" id="1419">
+			<description>Move to parent directory automatically if episode container is empty</description>
+			<visible>ControlGroup(9).HasFocus(14)</visible>
+			<label>$LOCALIZE[31702]</label>
+			<onclick>Skin.ToggleSetting(Experiment_ParentDir_IfEmptyContainer)</onclick>
+			<selected>Skin.HasSetting(Experiment_ParentDir_IfEmptyContainer)</selected>
+		</control>
 
 		<!-- Extras -->
 		<control type="label" id="1500">
