@@ -22,13 +22,16 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ---
 **1.3.8**
 - Updated widget paths with url_encoded strings from script.copacetic.helper to enable xsp filtering when titles have special characters
-- back when container empty thing
-- move url_decode script to monitor
-- check osd issue
-- Still to do:
-- OSD : (still to update --> Buttons, Settings, Stars, icon_Player)
+- Videoosd next button now does bigskipforward if no chapters or playlist are present
+- Experimental option (Settings > Copacetic > Customisations > Experiments) to enable Kodi to automatically move to the parent directory in the event that you find yourself in an empty list, e.g. if you are in the Episodes folder of a TV Show and your filter is set to Unwatched but you don't have any unwatched episodes, this will return you to TV Shows, or Seasons if you have unwatched episodes in another season https://forum.kodi.tv/showthread.php?tid=376965&pid=3195627#pid3195627
+- New studio logos https://github.com/realcopacetic/skin.copacetic/issues/131#issuecomment-2040162305
+
+Still to do:
+- Escaping rest of ListItems used for widget xsp paths
+- landscape for list/billboard?
 - login background
 - Create radio station button
+- PVR
 
 **1.3.7**
 - Further refinement of auto scroll/play timers

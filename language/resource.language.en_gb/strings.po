@@ -1343,6 +1343,18 @@ msgctxt "#31571"
 msgid "Enables Grid view fanart layout for the pictures window. Because pictures can take any aspect ratio, it is recommended to stick to square layouts for the optimal experience. Keep disabled to improve performance."
 msgstr ""
 
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31702"
+msgid "Move to parent directory automatically if container is empty"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31802"
+msgid "Requested by Aaiemron: If your current container is empty, for example because your filter is set to unwatched episodes and you have no unwatched, enabling this will cause Kodi to automatically move to the parent directory."
+msgstr ""
+
 
 
 
