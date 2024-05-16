@@ -20,6 +20,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.3.9**
+- Updated more widget paths with URL-encoded strings from script.copacetic.helper
+
 **1.3.8**
 - Updated widget paths with url_encoded strings from script.copacetic.helper to enable xsp filtering when titles have special characters
 - Videoosd next button now does bigskipforward if no chapters or playlist are present
