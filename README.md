@@ -22,19 +22,27 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ---
 **1.3.9**
 - Updated more widget paths with URL-encoded strings from script.copacetic.helper
+- Added option to prefer TMDbHelper plugin if it's enabled as the content source for info screen widgets, under Settings > Copacetic > Customisations > Info screens https://github.com/realcopacetic/skin.copacetic/issues/105
+- Fixed bug in window transition animations between home, settings etc to ensure that when background slideshow is the same between two windows, the transition is instantaneous
+
+Still to do:
+- infoscreen transition when using tmdbhelper widgets
+-- actor credits action
+-- other actions (inc play episode with tmdb helper)
+-- tmdb helper for play button on infoscreen?
+- autoscroll bar
+- multiart on autoscroll
+- hide prefer landscape for billboard widgets
+- landscape for list/billboard?
+- login background
+- Create radio station button
+- PVR
 
 **1.3.8**
 - Updated widget paths with url_encoded strings from script.copacetic.helper to enable xsp filtering when titles have special characters
 - Videoosd next button now does bigskipforward if no chapters or playlist are present
 - Experimental option (Settings > Copacetic > Customisations > Experiments) to enable Kodi to automatically move to the parent directory in the event that you find yourself in an empty list, e.g. if you are in the Episodes folder of a TV Show and your filter is set to Unwatched but you don't have any unwatched episodes, this will return you to TV Shows, or Seasons if you have unwatched episodes in another season https://forum.kodi.tv/showthread.php?tid=376965&pid=3195627#pid3195627
 - New studio logos https://github.com/realcopacetic/skin.copacetic/issues/131#issuecomment-2040162305
-
-Still to do:
-- Escaping rest of ListItems used for widget xsp paths
-- landscape for list/billboard?
-- login background
-- Create radio station button
-- PVR
 
 **1.3.7**
 - Further refinement of auto scroll/play timers
