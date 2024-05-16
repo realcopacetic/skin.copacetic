@@ -57,7 +57,7 @@
 				<onfocus condition="!String.IsEqual(Window.Property(Breadcrumb_Level),1)">SetProperty(Breadcrumb_GoToPrevious,true,$PARAM[window])</onfocus>
 				<onfocus condition="!String.IsEqual(Window.Property(Breadcrumb_Level),1)">SetProperty(Infoscreen_Transition,true,home)</onfocus>
 
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),1) + String.IsEmpty(Window(home).Property(Origin))">ClearProperty(ContainerPath_1,$PARAM[window])</onfocus>
+				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),1)">ClearProperty(ContainerPath_1,$PARAM[window])</onfocus>
 				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),1) + String.IsEmpty(Window(home).Property(Origin))">ClearProperty(Breadcrumb_Level,$PARAM[window])</onfocus>
 				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),1) + String.IsEmpty(Window(home).Property(Origin))">Dialog.Close(all,true)</onfocus>
 				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),1) + !String.IsEmpty(Window(home).Property(Origin))">ActivateWindow(home)</onfocus>

@@ -762,6 +762,13 @@
 			<label>$LOCALIZE[31484]</label>
 			<visible>ControlGroup(9).HasFocus(14)</visible>
 		</control>
+		<control type="radiobutton" id="1420">
+			<description>Use jurialmunkey's TMDbHelper plugin as the content source for infoscreen widgets instead of local library content</description>
+			<label>$LOCALIZE[31703]</label>
+			<onclick>Skin.ToggleSetting(Infoscreen_Widget_Prefer_TMDbHelper)</onclick>
+			<selected>Skin.HasSetting(Infoscreen_Widget_Prefer_TMDbHelper)</selected>
+			<visible>ControlGroup(9).HasFocus(14) + System.AddonIsEnabled(plugin.video.themoviedb.helper)</visible>
+		</control>
 		<control type="radiobutton" id="1407">
 			<description>Disable star ratings</description>
 			<label>$LOCALIZE[31485]</label>

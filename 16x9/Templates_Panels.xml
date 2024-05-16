@@ -47,9 +47,6 @@
 
 	<include name="Default_Settings_Panel_Layout">
 		<param name="visible" default="!System.HasVisibleModalDialog" />
-		<param name="window_animation_panel" default="WindowOpenClose_Fade_Delayed_Animation" />
-		<param name="window_animation_content" default="WindowOpenClose_Fade_Delayed_Long_Animation" />
-		<param name="window_animation_condition" default="true" />
 		<param name="panel_edge_top" default="180" />
 		<param name="panel_edge_bottom" default="180" />
 		<param name="alt_right_id" default="20" />

@@ -691,7 +691,7 @@
 				<param name="id" value="$PARAM[widget_position]02" />
 				<param name="next" value="$PARAM[widget_position]03" />
 				<param name="next_condition" value="Control.IsVisible($PARAM[widget_position]03)" />
-				<param name="alt_next" value="$PARAM[widget_position]4" />
+				<param name="alt_next" value="$PARAM[widget_position]04" />
 				<param name="alt_next_condition" value="!Control.IsVisible($PARAM[widget_position]03) + Control.IsVisible($PARAM[widget_position]04)" />
 				<param name="alt2_next" value="$PARAM[widget_position]10" />
 				<param name="alt2_next_condition" value="!Control.IsVisible($PARAM[widget_position]03) + !Control.IsVisible($PARAM[widget_position]04)" />

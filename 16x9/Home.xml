@@ -11,6 +11,7 @@
 		<!-- Focus setter added to enable scrollbar to trigger on window load -->
 		<include content="Focus_Setter">
 			<param name="target_id" value="SetFocus(3000)" />
+			<param name="time" value="360" />
 		</include>
 		<include content="Home_Container_Update_Bounce_Test" />
 		<include content="User_Scroll_Delay" />

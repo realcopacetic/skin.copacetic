@@ -1352,7 +1352,19 @@ msgstr ""
 #: NEW
 #/16x9/Content_Settings.xml
 msgctxt "#31802"
-msgid "Requested by Aaiemron: If your current container is empty, for example because your filter is set to unwatched episodes and you have no unwatched, enabling this will cause Kodi to automatically move to the parent directory."
+msgid "If the current focused container is empty--for example because your filter is set to unwatched episodes and you have no unwatched episodes to view--enabling this will cause Kodi to automatically move to the parent directory."
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31703"
+msgid "Use TMDbHelper for info screen widgets instead of library content"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31803"
+msgid "As long as this plugin is enabled on your system, it will be used to populate info screen widgets including actor and director credits, similar movies/shows and more."
 msgstr ""
 
 
