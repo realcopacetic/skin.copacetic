@@ -16,9 +16,6 @@
 			<include content="Infoscreen_Path_Tracer_Button" condition="Window.Is(movieinformation)">
 				<param name="window" value="movieinformation" />
 			</include>
-			<include content="Infoscreen_Path_Tracer_Button" condition="Window.Is(musicinformation)">
-				<param name="window" value="musicinformation" />
-			</include>
 			<include content="MyViews_Multiart_Labels">
 				<param name="include_type_label" value="false" />
 				<param name="template" value="Infoscreen_Multiart" />

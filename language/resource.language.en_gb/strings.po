@@ -1529,10 +1529,26 @@ msgstr ""
 
 
 #: M
-
+#: NEW
 #/16x9/MyPVRChannels.xml
 msgctxt "#31634"
 msgid "Now playing channel"
+msgstr ""
+
+
+
+
+#: N
+#: NEW
+#/16x9/Navigation.xml
+msgctxt "#31635"
+msgid "Global search"
+msgstr ""
+
+#: NEW
+#/16x9/Navigation.xml
+msgctxt "#31636"
+msgid "Sorry no results found!"
 msgstr ""
 
 

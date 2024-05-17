@@ -20,8 +20,8 @@
 
 	<include name="Default_Transition">
 		<definition>
-			<onclick condition="!$EXP[Infoscreen_Widget_Prefer_TMDbHelper] + Integer.IsGreater(Container($PARAM[id]).ListItem.DBID,0) + !String.IsEqual(Container($PARAM[id]).ListItem.DBID,Window.Property(SelectedItem))">SetProperty(Breadcrumb_GoToNext,true)</onclick>
-			<onclick condition="!$EXP[Infoscreen_Widget_Prefer_TMDbHelper] + Integer.IsGreater(Container($PARAM[id]).ListItem.DBID,0) + !String.IsEqual(Container($PARAM[id]).ListItem.DBID,Window.Property(SelectedItem))">SetProperty(Infoscreen_Transition,true,home)</onclick>
+			<onclick condition="!String.IsEqual(Container($PARAM[id]).ListItem.DBID,Window.Property(SelectedItem))">SetProperty(Breadcrumb_GoToNext,true)</onclick>
+			<onclick condition="!String.IsEqual(Container($PARAM[id]).ListItem.DBID,Window.Property(SelectedItem))">SetProperty(Infoscreen_Transition,true,home)</onclick>
 			<onclick condition="!$EXP[Infoscreen_Widget_Prefer_TMDbHelper] + Integer.IsGreater(Container($PARAM[id]).ListItem.DBID,0) + !String.IsEqual(Container($PARAM[id]).ListItem.DBID,Window.Property(SelectedItem))">Dialog.Close(all,true)</onclick>
 			<onclick condition="!$EXP[Infoscreen_Widget_Prefer_TMDbHelper] + Integer.IsGreater(Container($PARAM[id]).ListItem.DBID,0) + !String.IsEqual(Container($PARAM[id]).ListItem.DBID,Window.Property(SelectedItem)) + String.IsEqual(Container($PARAM[id]).ListItem.DBType,movie) + !Window.IsVisible(videos)">ActivateWindow(Videos,videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B$ESCINFO[Container($PARAM[id]).ListItem.Title]%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D)</onclick>
 			<onclick condition="!$EXP[Infoscreen_Widget_Prefer_TMDbHelper] + Integer.IsGreater(Container($PARAM[id]).ListItem.DBID,0) + !String.IsEqual(Container($PARAM[id]).ListItem.DBID,Window.Property(SelectedItem)) + String.IsEqual(Container($PARAM[id]).ListItem.DBType,movie) + Window.IsVisible(videos)">Container.Update(videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B$ESCINFO[Container($PARAM[id]).ListItem.Title]%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D)</onclick>
@@ -34,8 +34,30 @@
 			<onclick condition="!$EXP[Infoscreen_Widget_Prefer_TMDbHelper] + Integer.IsGreater(Container($PARAM[id]).ListItem.DBID,0) + !String.IsEqual(Container($PARAM[id]).ListItem.DBID,Window.Property(SelectedItem)) + String.IsEqual(Container($PARAM[id]).ListItem.DBType,album) + !Window.IsVisible(music)">ActivateWindow(Music,musicdb://albums/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22album%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B$ESCINFO[Container($PARAM[id]).ListItem.Album]%5D%7D%5D%7D%2C%22type%22%3A%22album%22%7D)</onclick>
 			<onclick condition="!$EXP[Infoscreen_Widget_Prefer_TMDbHelper] + Integer.IsGreater(Container($PARAM[id]).ListItem.DBID,0) + !String.IsEqual(Container($PARAM[id]).ListItem.DBID,Window.Property(SelectedItem)) + String.IsEqual(Container($PARAM[id]).ListItem.DBType,album) + Window.IsVisible(music)">Container.Update(musicdb://albums/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22album%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B$ESCINFO[Container($PARAM[id]).ListItem.Album]%5D%7D%5D%7D%2C%22type%22%3A%22albums%22%7D)</onclick>
 			<onclick condition="!$EXP[Infoscreen_Widget_Prefer_TMDbHelper] + Integer.IsGreater(Container($PARAM[id]).ListItem.DBID,0) + !String.IsEqual(Container($PARAM[id]).ListItem.DBID,Window.Property(SelectedItem))">SetFocus(6001)</onclick>
-			<onclick>SetFocus(3000)</onclick>
+			<onclick condition="!$EXP[Infoscreen_Widget_Prefer_TMDbHelper] + Integer.IsGreater(Container($PARAM[id]).ListItem.DBID,0) + String.IsEqual(Container($PARAM[id]).ListItem.DBID,Window.Property(SelectedItem))">SetFocus(3000)</onclick>
 		</definition>
+	</include>
+
+	<include name="TMDb_Helper_Transition">
+		<definition>
+			<!-- If dbid/tmdb_id not same as current infoscreen item, load info using TMDb Helper script  -->
+			<onclick condition="[$EXP[Infoscreen_Widget_Prefer_TMDbHelper] | !Integer.IsGreater(ListItem.DBID,0)] + !String.IsEqual(Container($PARAM[id]).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[Container($PARAM[id]).ListItem.FolderPath],call_auto=1190)</onclick>
+			<!-- If tmdb_id is same as current infoscreen item, play item using TMDb Helper script-->
+			<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container($PARAM[id]).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">RunScript(plugin.video.themoviedb.helper,close_dialog=1190)</onclick>
+			<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container($PARAM[id]).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">Dialog.Close(all,true)</onclick>
+			<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container($PARAM[id]).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">ClearProperty(Infoscreen_Transition,home)</onclick>
+			<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container($PARAM[id]).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem)) + String.IsEqual(Container($PARAM[id]).ListItem.DBType,movie)">Runscript(plugin.video.themoviedb.helper,play=movie,tmdb_id=$INFO[Container($PARAM[id]).ListItem.UniqueID(tmdb)],imdb_id=$INFO[Container($PARAM[id]).ListItem.UniqueID(imdb)])</onclick>
+			<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container($PARAM[id]).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem)) + String.IsEqual(Container($PARAM[id]).ListItem.DBType,movie)">Runscript(plugin.video.themoviedb.helper,play=tv,query=$INFO[Container($PARAM[id]).ListItem.TVShowTitle],ep_year=$INFO[Container($PARAM[id]).ListItem.Year],season=$INFO[Container($PARAM[id]).ListItem.Season],episode=$INFO[Container($PARAM[id]).ListItem.Episode])</onclick>
+		</definition>
+	</include>
+
+	<include name="Default_Infoscreen_Widget_Open">
+		<include content="Default_Transition">
+			<param name="id" value="$PARAM[id]" />
+		</include>
+		<include content="TMDb_Helper_Transition">
+			<param name="id" value="$PARAM[id]" />
+		</include>
 	</include>
 
 	<!-- Click actions -->
@@ -43,58 +65,34 @@
 		<control type="group" />
 	</include>
 
-	<include name="ClickAction_Open_More_From_Director">
-		<include content="Default_Transition">
-			<param name="id" value="3205" />
-		</include>
-		<onclick condition="Integer.IsGreater(ListItem.DBID,0) + $EXP[Infoscreen_Widget_Prefer_TMDbHelper] + !String.IsEqual(Container(3205).ListItem.DBID,Window.Property(SelectedItem))">Dialog.Close(all,true)</onclick>
-		<onclick condition="Integer.IsGreater(ListItem.DBID,0) + $EXP[Infoscreen_Widget_Prefer_TMDbHelper] + !String.IsEqual(Container(3205).ListItem.DBID,Window.Property(SelectedItem))">RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(3205).ListItem.Label],type=movie,call_auto=1190)</onclick>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + !String.IsEqual(Container(3205).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">Dialog.Close(all,true)</onclick>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + !String.IsEqual(Container(3205).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[Container(3205).ListItem.FolderPath],call_auto=1190)</onclick>
-		
-		
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container(3205).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem)) + String.IsEqual(Container(3205).ListItem.DBType,movie)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190)</onclick>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container(3205).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem)) + String.IsEqual(Container(3205).ListItem.DBType,movie)">Runscript(plugin.video.themoviedb.helper,play=movie,tmdb_id=$INFO[Container(3205).ListItem.UniqueID(tmdb)],imdb_id=$INFO[Container(3205).ListItem.UniqueID(imdb)])</onclick>
-	</include>
-
 	<include name="ClickAction_Open_MovieSet">
-		<include content="Default_Transition">
+		<include content="Default_Infoscreen_Widget_Open">
 			<param name="id" value="3201" />
 		</include>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + !String.IsEqual(Container(3201).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">Dialog.Close(all,true)</onclick>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + !String.IsEqual(Container(3201).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[Container(3201).ListItem.FolderPath],call_auto=1190)</onclick>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container(3201).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">RunScript(plugin.video.themoviedb.helper,close_dialog=1190)</onclick>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container(3201).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">Runscript(plugin.video.themoviedb.helper,play=movie,tmdb_id=$INFO[Container(3201).ListItem.UniqueID(tmdb)],imdb_id=$INFO[Container(3201).ListItem.UniqueID(imdb)])</onclick>
-	</include>
+			</include>
 
 	<include name="ClickAction_ActorCredits">
-		<include content="Default_Transition">
+		<include content="Default_Infoscreen_Widget_Open">
 			<param name="id" value="3203" />
 		</include>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + !String.IsEqual(Container(3203).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">Dialog.Close(all,true)</onclick>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + !String.IsEqual(Container(3203).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[Container(3203).ListItem.FolderPath],call_auto=1190)</onclick>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container(3203).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem)) + String.IsEqual(Container(3203).ListItem.DBType,movie)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190)</onclick>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container(3203).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem)) + String.IsEqual(Container(3203).ListItem.DBType,movie)">Runscript(plugin.video.themoviedb.helper,play=movie,tmdb_id=$INFO[Container(3203).ListItem.UniqueID(tmdb)],imdb_id=$INFO[Container(3203).ListItem.UniqueID(imdb)])</onclick>
+	</include>
+
+	<include name="ClickAction_Open_More_From_Director">
+		<include content="Default_Infoscreen_Widget_Open">
+			<param name="id" value="3205" />
+		</include>
 	</include>
 
 	<include name="ClickAction_Open_More_From_Studio">
-		<include content="Default_Transition">
+		<include content="Default_Infoscreen_Widget_Open">
 			<param name="id" value="3206" />
 		</include>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + !String.IsEqual(Container(3206).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">Dialog.Close(all,true)</onclick>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + !String.IsEqual(Container(3206).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[Container(3206).ListItem.FolderPath],call_auto=1190)</onclick>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container(3206).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem)) + String.IsEqual(Container(3206).ListItem.DBType,movie)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190)</onclick>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container(3206).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem)) + String.IsEqual(Container(3206).ListItem.DBType,movie)">Runscript(plugin.video.themoviedb.helper,play=movie,tmdb_id=$INFO[Container(3206).ListItem.UniqueID(tmdb)],imdb_id=$INFO[Container(3206).ListItem.UniqueID(imdb)])</onclick>
 	</include>
 
 	<include name="ClickAction_Open_Similar">
-		<include content="Default_Transition">
+		<include content="Default_Infoscreen_Widget_Open">
 			<param name="id" value="3207" />
 		</include>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + !String.IsEqual(Container(3207).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">Dialog.Close(all,true)</onclick>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + !String.IsEqual(Container(3207).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[Container(3207).ListItem.FolderPath],call_auto=1190)</onclick>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container(3207).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem)) + String.IsEqual(Container(3207).ListItem.DBType,movie)">RunScript(plugin.video.themoviedb.helper,close_dialog=1190)</onclick>
-		<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container(3207).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem)) + String.IsEqual(Container(3207).ListItem.DBType,movie)">Runscript(plugin.video.themoviedb.helper,play=movie,tmdb_id=$INFO[Container(3207).ListItem.UniqueID(tmdb)],imdb_id=$INFO[Container(3207).ListItem.UniqueID(imdb)])</onclick>
 	</include>
 
 	<include name="ClickAction_Open_Similar_Artists">

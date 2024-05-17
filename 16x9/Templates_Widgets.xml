@@ -52,7 +52,7 @@
 						<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.DBID)">SetProperty(Widget_DBID,$INFO[Container($PARAM[id]).ListItem.DBID],home)</onfocus>
 						<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.DBType)">SetProperty(Widget_DBType,$INFO[Container($PARAM[id]).ListItem.DBType],home)</onfocus>
 						<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Genre)">SetProperty(Widget_Genre,$INFO[Container($PARAM[id]).ListItem.Genre],home)</onfocus>
-						<onfocus condition="Skin.HasSetting(Widget$PARAM[widget_position]_AutoScroll) + Skin.HasSetting(Widget$PARAM[widget_position]_Trailer_Autoplay)">SetProperty(Trailer_Autoscroll,true,home)</onfocus>
+						<onfocus condition="Window.Is(home) + Skin.HasSetting(Widget$PARAM[widget_position]_AutoScroll) + Skin.HasSetting(Widget$PARAM[widget_position]_Trailer_Autoplay)">SetProperty(Trailer_Autoscroll,true,home)</onfocus>
 					</control>
 					<include content="HiddenFocusButton" />
 					<include content="Multiart_Resetter" condition="Skin.HasSetting(Multiart_Slideshow)" />
