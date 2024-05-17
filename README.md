@@ -20,15 +20,18 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
-**1.3.9**
-- Updated more widget paths with URL-encoded strings from script.copacetic.helper
+**1.4.1**
+- Disable debug label
+
+**1.4.0**
 - Added option to prefer TMDbHelper plugin if it's enabled as the content source for info screen widgets, under Settings > Copacetic > Customisations > Info screens https://github.com/realcopacetic/skin.copacetic/issues/105
 - Fixed bug in window transition animations between home, settings etc to ensure that when background slideshow is the same between two windows, the transition is instantaneous
+- Fixed a bug in how views are displayed when a home widget redirects to a view in videos window https://github.com/realcopacetic/skin.copacetic/issues/167
+- Added error notification if global search returns 0 results.
+- fixed bugs in infoscreen breadcrumb system especially when using tmdbhelper for info screen widgets
 
 Still to do:
-- infoscreen transition when using tmdbhelper widgets
--- actor credits action
--- other actions (inc play episode with tmdb helper)
+-- check tmdb helper click actions for all infoscreen widgets (including episode ones etc)
 -- tmdb helper for play button on infoscreen?
 - autoscroll bar
 - multiart on autoscroll
@@ -37,6 +40,10 @@ Still to do:
 - login background
 - Create radio station button
 - PVR
+https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Extended-Info#direct-call-auto
+
+**1.3.9**
+- Updated more widget paths with URL-encoded strings from script.copacetic.helper
 
 **1.3.8**
 - Updated widget paths with url_encoded strings from script.copacetic.helper to enable xsp filtering when titles have special characters

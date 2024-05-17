@@ -20,7 +20,7 @@
 			<align>right</align>
 			<itemgap>0</itemgap>
 			<include content="Flag_Icon">
-				<animation effect="slide" start="0,0" end="-1560,0" time="0" condition="$EXP[StripView_Flags_Rating_IsVisible] + $EXP[StripView_Details_Title] + !$EXP[StripView_Logo_On] + !String.IsEqual(Control.GetLabel(6304),flags/blank.png)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-1560,0" time="0" condition="$EXP[StripView_Flags_Rating_IsVisible] + [$EXP[StripView_Details_Title] | $EXP[StripView_Details_Off]] + !$EXP[StripView_Logo_On] + !String.IsEqual(Control.GetLabel(6304),flags/blank.png)">Conditional</animation>
 				<param name="visible" value="$EXP[ListView_Flags_Studio_IsVisible] | $EXP[BillboardView_Flags_Studio_IsVisible] | $EXP[ShowcaseView_Flags_Studio_IsVisible] | $EXP[StripView_Flags_Studio_IsVisible]" />
 				<param name="id" value="6303" />
 				<param name="texture" value="$VAR[Studio_Flag]" />

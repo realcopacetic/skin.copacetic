@@ -53,10 +53,12 @@
 				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),keyart) + !String.IsEmpty(ListItem.Art(keyart))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(keyart)],home)</onfocus>
 				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),poster) + !String.IsEmpty(ListItem.Art(poster))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(poster)],home)</onfocus>
 				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),fanart) + !String.IsEmpty(ListItem.Art(fanart))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(fanart)],home)</onfocus>
+				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),landscape) + !String.IsEmpty(ListItem.Art(landscape))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(landscape)],home)</onfocus>
 				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),square) + !String.IsEmpty(ListItem.Art(square))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(square)],home)</onfocus>
 				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),tvshow.keyart) + !String.IsEmpty(ListItem.Art(tvshow.keyart))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(tvshow.keyart)],home)</onfocus>
 				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),tvshow.poster) + !String.IsEmpty(ListItem.Art(tvshow.poster))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(tvshow.poster)],home)</onfocus>
 				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),tvshow.fanart) + !String.IsEmpty(ListItem.Art(tvshow.fanart))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(tvshow.fanart)],home)</onfocus>
+				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),tvshow.landscape) + !String.IsEmpty(ListItem.Art(tvshow.landscape))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(tvshow.landscape)],home)</onfocus>
 				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),tvshow.square) + !String.IsEmpty(ListItem.Art(tvshow.square))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(tvshow.square)],home)</onfocus>
 				<!-- Trailer Autoplay -->
 				<onunfocus condition="Skin.TimerIsRunning(trailer_autoplay)">Skin.TimerStop(trailer_autoplay)</onunfocus>

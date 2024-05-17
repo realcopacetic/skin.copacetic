@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- musicinformation -->
+	<onload>ClearProperty(Infoscreen_Transition,home)</onload>
 	<include content="musicinformation_OnLoadUnload" />
 	<onload condition="String.IsEmpty(Window(home).Property(URL_Encoded_Artist)) + !String.IsEmpty(ListItem.Artist)">RunScript(script.copacetic.helper,action=url_encode,name=URL_Encoded_Artist,string='"$INFO[ListItem.Artist]"')</onload>
 	<onload condition="String.IsEmpty(Window(home).Property(URL_Encoded_Album)) + !String.IsEmpty(ListItem.Album)">RunScript(script.copacetic.helper,action=url_encode,name=URL_Encoded_Album,string='"$INFO[ListItem.Album]"')</onload>
