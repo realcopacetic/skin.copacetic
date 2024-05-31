@@ -358,7 +358,8 @@
 			</include>
 			<visible>!VideoPlayer.Content(LiveTV)</visible>
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[286],videoosd)</onfocus>
-			<onclick>NextSubtitle</onclick>
+			<onclick condition="Skin.String(Subtitle_Limiter)">RunScript(script.copacetic.helper,action=subtitle_limiter,lang=$INFO[Skin.String(Subtitle_Limiter)])</onclick>
+			<onclick condition="!Skin.String(Subtitle_Limiter)">NextSubtitle</onclick>
 			<onup>3010</onup>
 			<ondown>60</ondown>
 		</control>

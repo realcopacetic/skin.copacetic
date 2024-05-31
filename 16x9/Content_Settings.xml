@@ -438,7 +438,7 @@
 		<control type="button" id="1113">
 			<description>Configure widgets</description>
 			<visible>ControlGroup(9).HasFocus(11) + Skin.HasSetting(Widgets_Enabled)</visible>
-				<label>- $LOCALIZE[31489]</label>
+			<label>- $LOCALIZE[31489]</label>
 			<onclick>ActivateWindow(1140)</onclick>
 		</control>
 		<control type="button" id="1103">
@@ -447,6 +447,26 @@
 			<onclick>RunScript(script.copacetic.helper,action=dialog_yesno,heading=$LOCALIZE[31430],message=$LOCALIZE[31431],yes_actions=SetFocus(4200))</onclick>
 			<visible>ControlGroup(9).HasFocus(11) + Skin.HasSetting(Widgets_Enabled) + System.AddonIsEnabled(script.copacetic.helper)</visible>
 		</control>
+		<control type="label" id="1114">
+			<description>Global search</description>
+			<visible>ControlGroup(9).HasFocus(11)</visible>
+			<include content="skinsettings_Default_Label" />
+			<label>$LOCALIZE[31635]</label>
+		</control>
+		<control type="radiobutton" id="1115">
+			<description>Enable Global search</description>
+			<visible>ControlGroup(9).HasFocus(11)</visible>
+			<label>$LOCALIZE[31704]</label>
+			<onclick>Skin.ToggleSetting(GlobalSearch_Disabled)</onclick>
+			<selected>!Skin.HasSetting(GlobalSearch_Disabled)</selected>
+		</control>
+		<control type="button" id="1116">
+			<description>Configure global search</description>
+			<visible>ControlGroup(9).HasFocus(11) + !Skin.HasSetting(GlobalSearch_Disabled)</visible>
+			<label>- $LOCALIZE[31705]</label>
+			<onclick>ActivateWindow(1181)</onclick>
+		</control>
+
 		<control type="label" id="1104">
 			<description>General</description>
 			<visible>ControlGroup(9).HasFocus(11)</visible>
@@ -780,6 +800,13 @@
 			<description>Video Player</description>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[31478]</label>
+			<visible>ControlGroup(9).HasFocus(14)</visible>
+		</control>
+		<control type="button" id="1421">
+			<description>Subtitle limiter</description>
+			<label>$LOCALIZE[31711]</label>
+			<label2>$INFO[Skin.String(Subtitle_Limiter)]</label2>
+			<onclick>Skin.SetString(Subtitle_Limiter)</onclick>
 			<visible>ControlGroup(9).HasFocus(14)</visible>
 		</control>
 		<control type="radiobutton" id="1409">
@@ -1140,6 +1167,190 @@
 		<include content="widgetsettings_Content_Template">
 			<param name="side" value="Right" />
 		</include>
+	</include>
+
+	<include name="globalsearchsettings_Left_List_Content">
+		<definition>
+			<control type="button" id="1">
+				<description>Movies</description>
+				<label>$LOCALIZE[342]</label>
+				<texturefocus />
+			</control>
+			<control type="button" id="2">
+				<description>TV shows</description>
+				<label>$LOCALIZE[20343]</label>
+				<texturefocus />
+			</control>
+			<control type="button" id="3">
+				<description>Episodes</description>
+				<label>$LOCALIZE[20360]</label>
+				<texturefocus />
+			</control>
+			<control type="button" id="4">
+				<description>Artists</description>
+				<label>$LOCALIZE[133]</label>
+				<texturefocus />
+			</control>
+			<control type="button" id="5">
+				<description>Albums</description>
+				<label>$LOCALIZE[132]</label>
+				<texturefocus />
+			</control>
+			<control type="button" id="6">
+				<description>Songs</description>
+				<label>$LOCALIZE[134]</label>
+				<texturefocus />
+			</control>
+		</definition>
+	</include>
+
+	<include name="globalsearchsettings_Right_List_Content">
+		<!-- Movies -->
+		<control type="radiobutton" id="10">
+			<description>Enable movies search</description>
+			<visible>ControlGroup(3200).HasFocus(1)</visible>
+			<label>$LOCALIZE[31706]</label>
+			<onclick>Skin.ToggleSetting(GlobalSearch_Movies_Disabled)</onclick>
+			<selected>!Skin.HasSetting(GlobalSearch_Movies_Disabled)</selected>
+		</control>
+		<control type="button" id="11">
+			<description>Globalsearch limit</description>
+			<visible>ControlGroup(3200).HasFocus(1) + !Skin.HasSetting(GlobalSearch_Movies_Disabled)</visible>
+			<label>- $LOCALIZE[21427]</label>
+			<label2>$INFO[Skin.String(GlobalSearch_Movies_Limit)]</label2>
+			<onclick>Skin.SetNumeric(GlobalSearch_Movies_Limit)</onclick>
+		</control>
+		<control type="radiobutton" id="12">
+			<description>Include plot</description>
+			<visible>ControlGroup(3200).HasFocus(1) + !Skin.HasSetting(GlobalSearch_Movies_Disabled)</visible>
+			<label>- $LOCALIZE[31707]</label>
+			<onclick>Skin.ToggleSetting(GlobalSearch_Movies_Plot_Disabled)</onclick>
+			<selected>!Skin.HasSetting(GlobalSearch_Movies_Plot_Disabled)</selected>
+		</control>
+		<control type="radiobutton" id="13">
+			<description>Include tag</description>
+			<visible>ControlGroup(3200).HasFocus(1) + !Skin.HasSetting(GlobalSearch_Movies_Disabled)</visible>
+			<label>- $LOCALIZE[31708]</label>
+			<onclick>Skin.ToggleSetting(GlobalSearch_Movies_Tag_Disabled)</onclick>
+			<selected>!Skin.HasSetting(GlobalSearch_Movies_Tag_Disabled)</selected>
+		</control>
+		<!-- TV Shows -->
+		<control type="radiobutton" id="20">
+			<description>Enable tv shows search</description>
+			<visible>ControlGroup(3200).HasFocus(2)</visible>
+			<label>$LOCALIZE[31706]</label>
+			<onclick>Skin.ToggleSetting(GlobalSearch_TVShows_Disabled)</onclick>
+			<selected>!Skin.HasSetting(GlobalSearch_TVShows_Disabled)</selected>
+		</control>
+		<control type="button" id="21">
+			<description>Globalsearch limit</description>
+			<visible>ControlGroup(3200).HasFocus(2) + !Skin.HasSetting(GlobalSearch_TVShows_Disabled)</visible>
+			<label>- $LOCALIZE[21427]</label>
+			<label2>$INFO[Skin.String(GlobalSearch_TVShows_Limit)]</label2>
+			<onclick>Skin.SetNumeric(GlobalSearch_TVShows_Limit)</onclick>
+		</control>
+		<control type="radiobutton" id="22">
+			<description>Include plot</description>
+			<visible>ControlGroup(3200).HasFocus(2) + !Skin.HasSetting(GlobalSearch_TVShows_Disabled)</visible>
+			<label>- $LOCALIZE[31707]</label>
+			<onclick>Skin.ToggleSetting(GlobalSearch_TVShows_Plot_Disabled)</onclick>
+			<selected>!Skin.HasSetting(GlobalSearch_TVShows_Plot_Disabled)</selected>
+		</control>
+		<control type="radiobutton" id="23">
+			<description>Include tag</description>
+			<visible>ControlGroup(3200).HasFocus(2) + !Skin.HasSetting(GlobalSearch_TVShows_Disabled)</visible>
+			<label>- $LOCALIZE[31708]</label>
+			<onclick>Skin.ToggleSetting(GlobalSearch_TVShows_Tag_Disabled)</onclick>
+			<selected>!Skin.HasSetting(GlobalSearch_TVShows_Tag_Disabled)</selected>
+		</control>
+		<!-- Episodes -->
+		<control type="radiobutton" id="30">
+			<description>Enable tv shows search</description>
+			<visible>ControlGroup(3200).HasFocus(3)</visible>
+			<label>$LOCALIZE[31706]</label>
+			<onclick>Skin.ToggleSetting(GlobalSearch_Episodes_Disabled)</onclick>
+			<selected>!Skin.HasSetting(GlobalSearch_Episodes_Disabled)</selected>
+		</control>
+		<control type="button" id="31">
+			<description>Globalsearch limit</description>
+			<visible>ControlGroup(3200).HasFocus(3) + !Skin.HasSetting(GlobalSearch_Episodes_Disabled)</visible>
+			<label>- $LOCALIZE[21427]</label>
+			<label2>$INFO[Skin.String(GlobalSearch_Episodes_Limit)]</label2>
+			<onclick>Skin.SetNumeric(GlobalSearch_Episodes_Limit)</onclick>
+		</control>
+		<control type="radiobutton" id="32">
+			<description>Include plot</description>
+			<visible>ControlGroup(3200).HasFocus(3) + !Skin.HasSetting(GlobalSearch_Episodes_Disabled)</visible>
+			<label>- $LOCALIZE[31707]</label>
+			<onclick>Skin.ToggleSetting(GlobalSearch_Episodes_Plot_Disabled)</onclick>
+			<selected>!Skin.HasSetting(GlobalSearch_Episodes_Plot_Disabled)</selected>
+		</control>
+		<control type="radiobutton" id="33">
+			<description>Include tag</description>
+			<visible>ControlGroup(3200).HasFocus(3) + !Skin.HasSetting(GlobalSearch_Episodes_Disabled)</visible>
+			<label>- $LOCALIZE[31708]</label>
+			<onclick>Skin.ToggleSetting(GlobalSearch_Episodes_Tag_Disabled)</onclick>
+			<selected>!Skin.HasSetting(GlobalSearch_Episodes_Tag_Disabled)</selected>
+		</control>
+		<!-- Artists -->
+		<control type="radiobutton" id="40">
+			<description>Enable tv shows search</description>
+			<visible>ControlGroup(3200).HasFocus(4)</visible>
+			<label>$LOCALIZE[31706]</label>
+			<onclick>Skin.ToggleSetting(GlobalSearch_Artists_Disabled)</onclick>
+			<selected>!Skin.HasSetting(GlobalSearch_Artists_Disabled)</selected>
+		</control>
+		<control type="button" id="41">
+			<description>Globalsearch limit</description>
+			<visible>ControlGroup(3200).HasFocus(4) + !Skin.HasSetting(GlobalSearch_Artists_Disabled)</visible>
+			<label>- $LOCALIZE[21427]</label>
+			<label2>$INFO[Skin.String(GlobalSearch_Artists_Limit)]</label2>
+			<onclick>Skin.SetNumeric(GlobalSearch_Artists_Limit)</onclick>
+		</control>
+		<control type="radiobutton" id="42">
+			<description>Include biography</description>
+			<visible>ControlGroup(3200).HasFocus(4) + !Skin.HasSetting(GlobalSearch_Artists_Disabled)</visible>
+			<label>- $LOCALIZE[31709]</label>
+			<onclick>Skin.ToggleSetting(GlobalSearch_Artists_Biography_Disabled)</onclick>
+			<selected>!Skin.HasSetting(GlobalSearch_Artists_Biography_Disabled)</selected>
+		</control>
+		<!-- Albums -->
+		<control type="radiobutton" id="50">
+			<description>Enable tv shows search</description>
+			<visible>ControlGroup(3200).HasFocus(5)</visible>
+			<label>$LOCALIZE[31706]</label>
+			<onclick>Skin.ToggleSetting(GlobalSearch_Albums_Disabled)</onclick>
+			<selected>!Skin.HasSetting(GlobalSearch_Albums_Disabled)</selected>
+		</control>
+		<control type="button" id="51">
+			<description>Globalsearch limit</description>
+			<visible>ControlGroup(3200).HasFocus(5) + !Skin.HasSetting(GlobalSearch_Albums_Disabled)</visible>
+			<label>- $LOCALIZE[21427]</label>
+			<label2>$INFO[Skin.String(GlobalSearch_Albums_Limit)]</label2>
+			<onclick>Skin.SetNumeric(GlobalSearch_Albums_Limit)</onclick>
+		</control>
+		<control type="radiobutton" id="52">
+			<description>Include review</description>
+			<visible>ControlGroup(3200).HasFocus(5) + !Skin.HasSetting(GlobalSearch_Albums_Disabled)</visible>
+			<label>- $LOCALIZE[31710]</label>
+			<onclick>Skin.ToggleSetting(GlobalSearch_Albums_Review_Disabled)</onclick>
+			<selected>!Skin.HasSetting(GlobalSearch_Albums_Review_Disabled)</selected>
+		</control>
+		<!-- Songs -->
+		<control type="radiobutton" id="60">
+			<description>Enable tv shows search</description>
+			<visible>ControlGroup(3200).HasFocus(6)</visible>
+			<label>$LOCALIZE[31706]</label>
+			<onclick>Skin.ToggleSetting(GlobalSearch_Songs_Disabled)</onclick>
+			<selected>!Skin.HasSetting(GlobalSearch_Songs_Disabled)</selected>
+		</control>
+		<control type="button" id="61">
+			<description>Globalsearch limit</description>
+			<visible>ControlGroup(3200).HasFocus(6) + !Skin.HasSetting(GlobalSearch_Songs_Disabled)</visible>
+			<label>- $LOCALIZE[21427]</label>
+			<label2>$INFO[Skin.String(GlobalSearch_Songs_Limit)]</label2>
+			<onclick>Skin.SetNumeric(GlobalSearch_Songs_Limit)</onclick>
+		</control>
 	</include>
 
 </includes>

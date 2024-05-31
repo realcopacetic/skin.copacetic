@@ -234,6 +234,20 @@
 		</include>
 	</include>
 
+	<include name="globalsearch_Button">
+		<control type="button" id="4201">
+			<width>120</width>
+			<height>120</height>
+			<left>30</left>
+			<top>30</top>
+			<texturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_browse_unfocused_120.png</texturenofocus>
+			<texturefocus colordiffuse="$VAR[Light_Color]">icons/icon_browse_focused_120.png</texturefocus>
+			<onclick>RunScript(script.copacetic.helper,action=globalsearch_input)</onclick>
+			<onclick>SetFocus(3000)</onclick>
+			<include content="globalsearch_home_Navigation" />
+		</control>
+	</include>
+
 	<include name="VideoPlayer_Mask">
 		<control type="image">
 			<texture colordiffuse="$VAR[videoplayer_Mask]">views/white_100.png</texture>

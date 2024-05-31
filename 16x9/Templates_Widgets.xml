@@ -811,7 +811,7 @@
 			<param name="sortorder" value="descending" />
 			<param name="content" value="$VAR[Path_globalsearch_Movies]" />
 			<param name="click_action" value="Play_File" />
-			<param name="limit" value="30" />
+			<param name="limit" value="$INFO[Skin.String(GlobalSearch_Movies_Limit)]" />
 			<param name="widget_header" value="'$INFO[Skin.String(globalsearch)]'" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[342]" />
 		</include>
@@ -829,7 +829,7 @@
 			<param name="sortorder" value="descending" />
 			<param name="content" value="$VAR[Path_globalsearch_TVShows]" />
 			<param name="click_action" value="Open_TVShow" />
-			<param name="limit" value="30" />
+			<param name="limit" value="$INFO[Skin.String(GlobalSearch_TVShows_Limit)]" />
 			<param name="widget_header" value="'$INFO[Skin.String(globalsearch)]'" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[20343]" />
 		</include>
@@ -847,7 +847,7 @@
 			<param name="sortorder" value="descending" />
 			<param name="content" value="$VAR[Path_globalsearch_Episodes]" />
 			<param name="click_action" value="Play_File" />
-			<param name="limit" value="30" />
+			<param name="limit" value="$INFO[Skin.String(GlobalSearch_Episodes_Limit)]" />
 			<param name="widget_header" value="'$INFO[Skin.String(globalsearch)]'" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[20360]$VAR[Copacetic_Divider_Bold, ]$INFO[Container(3203).ListItem.TVShowTitle, ]" />
 		</include>
@@ -866,7 +866,7 @@
 			<param name="sortorder" value="ascending" />
 			<param name="content" value="$VAR[Path_globalsearch_Artists]" />
 			<param name="click_action" value="Open_Artist" />
-			<param name="limit" value="30" />
+			<param name="limit" value="$INFO[Skin.String(GlobalSearch_Artists_Limit)]" />
 			<param name="widget_header" value="'$INFO[Skin.String(globalsearch)]'" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[133]" />
 		</include>
@@ -885,7 +885,7 @@
 			<param name="sortorder" value="ascending" />
 			<param name="content" value="$VAR[Path_globalsearch_Albums]" />
 			<param name="click_action" value="Open_Album" />
-			<param name="limit" value="30" />
+			<param name="limit" value="$INFO[Skin.String(GlobalSearch_Albums_Limit)]" />
 			<param name="widget_header" value="'$INFO[Skin.String(globalsearch)]'" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[132]" />
 		</include>
@@ -904,18 +904,10 @@
 			<param name="sortorder" value="ascending" />
 			<param name="content" value="$VAR[Path_globalsearch_Songs]" />
 			<param name="click_action" value="Play_All_Songs" />
-			<param name="limit" value="30" />
+			<param name="limit" value="$INFO[Skin.String(GlobalSearch_Songs_Limit)]" />
 			<param name="widget_header" value="'$INFO[Skin.String(globalsearch)]'" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[134]" />
 		</include>
 	</include>
-
-	<!--
-
-		{"rules":{"or":[{"field":"title","operator":"contains","value":["XXXX"]},{"field":"album","operator":"contains","value":["XXXX"]},{"field":"artist","operator":"contains","value":["XXXX"]},{"field":"genre","operator":"contains","value":["XXXX"]}]},"type":"songs"}
-
-	 title, album, artist, genre
-
-	-->
 
 </includes>

@@ -543,7 +543,6 @@
 	</include>
 
 	<include name="widgetsettings_Left_Content">
-		<param name="list_position" />
 		<param name="widget_position" />
 		<param name="previous_widget_position" />
 		<param name="next_widget_position" />
@@ -664,7 +663,6 @@
 	</include>
 
 	<include name="widgetsettings_Right_Content">
-		<param name="list_position" />
 		<param name="widget_position" />
 		<param name="previous_widget_position" />
 		<param name="next_widget_position" />
@@ -820,7 +818,7 @@
 			</control>
 			<control type="radiobutton" id="$PARAM[widget_position]15">
 				<description>Prefer landscape art for fanart views</description>
-				<visible>[ControlGroup(3200).HasFocus($PARAM[widget_position]1) | ControlGroup(3200).HasFocus($PARAM[widget_position]2) | ControlGroup(3200).HasFocus($PARAM[widget_position]3)] + !Skin.HasSetting(Widget$PARAM[widget_position]_Content_Disabled) + [Skin.String(Widget$PARAM[widget_position]_Display,Fanart) | Skin.String(Widget$PARAM[widget_position]_Display,Spotlight)]</visible>
+				<visible>[ControlGroup(3200).HasFocus($PARAM[widget_position]1) | ControlGroup(3200).HasFocus($PARAM[widget_position]2) | ControlGroup(3200).HasFocus($PARAM[widget_position]3)] + !Skin.String(Widget$PARAM[widget_position]_View,Billboard) + !Skin.HasSetting(Widget$PARAM[widget_position]_Content_Disabled) + [Skin.String(Widget$PARAM[widget_position]_Display,Fanart) | Skin.String(Widget$PARAM[widget_position]_Display,Spotlight)]</visible>
 				<label>- $LOCALIZE[31499]</label>
 				<onclick>Skin.ToggleSetting(Widget$PARAM[widget_position]_Prefer_Landscape)</onclick>
 				<selected>Skin.HasSetting(Widget$PARAM[widget_position]_Prefer_Landscape)</selected>

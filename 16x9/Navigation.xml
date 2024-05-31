@@ -201,7 +201,7 @@
 		<onup condition="Window.Is(home) + !Control.IsVisible(3209) + !Control.IsVisible(3208) + !Control.IsVisible(3207) + !Control.IsVisible(3206) + !Control.IsVisible(3205) + !Control.IsVisible(3204) + !Control.IsVisible(3203) + !Control.IsVisible(3202) + !Control.IsVisible(3201)">3000</onup>
 		<ondown condition="Window.Is(home)">3000</ondown>
 		<onback condition="Window.Is(home)">3000</onback>
-		<onleft condition="Window.Is(home)">4201</onleft>
+		<onleft condition="Window.Is(home) + !Skin.HasSetting(GlobalSearch_Disabled)">4201</onleft>
 		<onback condition="Window.Is(favourites)">450</onback>
 		<onleft condition="Window.Is(favourites)">450</onleft>
 		<onright condition="Window.Is(favourites)">450</onright>
@@ -237,7 +237,16 @@
 
 	<include name="Home_Menu_Navigation">
 		<onup condition="Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio">SetFocus(3500,1)</onup>
-		<onup condition="![Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio]">4201</onup>
+		<onup condition="![Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio] + !Skin.HasSetting(GlobalSearch_Disabled)">4201</onup>
+		<onup condition="![Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio] + Skin.HasSetting(GlobalSearch_Disabled) + Control.IsVisible(3209)">3209</onup>
+		<onup condition="![Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio] + Skin.HasSetting(GlobalSearch_Disabled) + !Control.IsVisible(3209) + Control.IsVisible(3208)">3208</onup>
+		<onup condition="![Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio] + Skin.HasSetting(GlobalSearch_Disabled) + !Control.IsVisible(3209) + !Control.IsVisible(3208) + Control.IsVisible(3207)">3207</onup>
+		<onup condition="![Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio] + Skin.HasSetting(GlobalSearch_Disabled) + !Control.IsVisible(3209) + !Control.IsVisible(3208) + !Control.IsVisible(3207) + Control.IsVisible(3206)">3206</onup>
+		<onup condition="![Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio] + Skin.HasSetting(GlobalSearch_Disabled) + !Control.IsVisible(3209) + !Control.IsVisible(3208) + !Control.IsVisible(3207) + !Control.IsVisible(3206) + Control.IsVisible(3205)">3205</onup>
+		<onup condition="![Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio] + Skin.HasSetting(GlobalSearch_Disabled) + !Control.IsVisible(3209) + !Control.IsVisible(3208) + !Control.IsVisible(3207) + !Control.IsVisible(3206) + !Control.IsVisible(3205) + Control.IsVisible(3204)">3204</onup>
+		<onup condition="![Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio] + Skin.HasSetting(GlobalSearch_Disabled) + !Control.IsVisible(3209) + !Control.IsVisible(3208) + !Control.IsVisible(3207) + !Control.IsVisible(3206) + !Control.IsVisible(3205) + !Control.IsVisible(3204) + Control.IsVisible(3203)">3203</onup>
+		<onup condition="![Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio] + Skin.HasSetting(GlobalSearch_Disabled) + !Control.IsVisible(3209) + !Control.IsVisible(3208) + !Control.IsVisible(3207) + !Control.IsVisible(3206) + !Control.IsVisible(3205) + !Control.IsVisible(3204) + !Control.IsVisible(3203) + Control.IsVisible(3202)">3202</onup>
+		<onup condition="![Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio] + Skin.HasSetting(GlobalSearch_Disabled) + !Control.IsVisible(3209) + !Control.IsVisible(3208) + !Control.IsVisible(3207) + !Control.IsVisible(3206) + !Control.IsVisible(3205) + !Control.IsVisible(3204) + !Control.IsVisible(3203) + !Control.IsVisible(3202) + Control.IsVisible(3201)">3201</onup>
 		<ondown condition="Control.IsVisible(3201)">3201</ondown>
 		<ondown condition="!Control.IsVisible(3201) + Control.IsVisible(3202)">3202</ondown>
 		<ondown condition="!Control.IsVisible(3201) + !Control.IsVisible(3202) + Control.IsVisible(3203)">3203</ondown>

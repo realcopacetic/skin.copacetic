@@ -20,8 +20,23 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
-**1.4.1**
-- Disable debug label
+**1.4.2**
+- Improved visibility condition for widget settings screen
+- Added globalsearch configuration screen to skin settings under Settings > Copacetic > Home > 'Configure global search'
+- Disabled use of landscape artwork on Billboard widget views
+- Disabled 'Prefer landscape artwork' option when Billboard view selected on a home widget
+- Added script to quick subtitle switcher in videoOSD controls that allows it to toggle only between 'Off' and a preferred language, as set in skin settings. If preferred language is not available or no value is entered in skin settings, this button will toggle through all available subtitles instead https://github.com/realcopacetic/skin.copacetic/issues/170
+
+Still to do:
+-- check tmdb helper click actions for all infoscreen widgets (including episode ones etc)
+-- tmdb helper for play button on infoscreen?
+- autoscroll bar
+- multiart on autoscroll
+- login background
+- Create radio station button
+- remove window property hack for music ratings during playback in Omega
+- PVR
+https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Extended-Info#direct-call-auto
 
 **1.4.0**
 - Added option to prefer TMDbHelper plugin if it's enabled as the content source for info screen widgets, under Settings > Copacetic > Customisations > Info screens https://github.com/realcopacetic/skin.copacetic/issues/105
@@ -29,18 +44,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Fixed a bug in how views are displayed when a home widget redirects to a view in videos window https://github.com/realcopacetic/skin.copacetic/issues/167
 - Added error notification if global search returns 0 results.
 - fixed bugs in infoscreen breadcrumb system especially when using tmdbhelper for info screen widgets
-
-Still to do:
--- check tmdb helper click actions for all infoscreen widgets (including episode ones etc)
--- tmdb helper for play button on infoscreen?
-- autoscroll bar
-- multiart on autoscroll
-- hide prefer landscape for billboard widgets
-- landscape for list/billboard?
-- login background
-- Create radio station button
-- PVR
-https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Extended-Info#direct-call-auto
+- Allow flags to show on Strip View even when details set to 'Off' - this enables views where user wants poster or landscape artwork to be visible without additional title label but still showing flags https://github.com/realcopacetic/skin.copacetic/issues/169
 
 **1.3.9**
 - Updated more widget paths with URL-encoded strings from script.copacetic.helper

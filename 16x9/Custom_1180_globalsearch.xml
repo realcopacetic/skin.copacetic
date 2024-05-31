@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1180">
-  <!-- global search -->
+  <!-- globalsearch -->
   <include content="Widget_Position_Reset_OnLoad" />
   <defaultcontrol always="true">3000</defaultcontrol>
   <controls>
@@ -26,12 +26,12 @@
       <include content="Visible_Fade_Delayed_Animation" />
       <include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
       <include content="User_Scroll_Delay" />
-      <include content="globalsearch_Widget_3201_Movies" />
-      <include content="globalsearch_Widget_3202_TVShows" />
-      <include content="globalsearch_Widget_3203_Episodes" />
-      <include content="globalsearch_Widget_3204_Artists" />
-      <include content="globalsearch_Widget_3205_Albums" />
-      <include content="globalsearch_Widget_3206_Songs" />
+      <include content="globalsearch_Widget_3201_Movies" condition="!Skin.HasSetting(GlobalSearch_Movies_Disabled)" />
+      <include content="globalsearch_Widget_3202_TVShows" condition="!Skin.HasSetting(GlobalSearch_TVShows_Disabled)" />
+      <include content="globalsearch_Widget_3203_Episodes" condition="!Skin.HasSetting(GlobalSearch_Episodes_Disabled)" />
+      <include content="globalsearch_Widget_3204_Artists" condition="!Skin.HasSetting(GlobalSearch_Artists_Disabled)" />
+      <include content="globalsearch_Widget_3205_Albums" condition="!Skin.HasSetting(GlobalSearch_Albums_Disabled)" />
+      <include content="globalsearch_Widget_3206_Songs" condition="!Skin.HasSetting(GlobalSearch_Songs_Disabled)" />
       <include content="globalsearch_Scrollbar" />
     </control>
 
