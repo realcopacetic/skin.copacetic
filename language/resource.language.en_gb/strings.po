@@ -836,7 +836,7 @@ msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31429"
-msgid "Enable home screen widgets"
+msgid "Enable widgets on the home screen"
 msgstr ""
 
 #/16x9/Content_Settings.xml
@@ -951,6 +951,60 @@ msgstr ""
 #/16x9/Content_Settings.xml
 msgctxt "#31444"
 msgid "Hide clock"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31704"
+msgid "Enable global search on the home screen"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31705"
+msgid "Configure global search"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31706"
+msgid "Enable global search for this media type"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31707"
+msgid "Include 'plot' field in this search"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31708"
+msgid "Include 'tag' field in this search"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31709"
+msgid "Include 'biography' field in this search"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31710"
+msgid "Include 'review' field in this search"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31711"
+msgid "Limit quick subtitle switcher in video OSD controls to a preferred..."
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31811"
+msgid "Enter the three-letter code for your preferred language, e.g. 'eng' for English. If subtitles in this language are available for the currently playing video, the quick subtitle switcher will toggle on/off the first subtitle stream in this language. If the language is not available, the switcher will continue toggling between all languages."
 msgstr ""
 
 

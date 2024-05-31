@@ -61,17 +61,7 @@
 					<param name="focused_color" value="$VAR[Light_Color]" />
 					<param name="unfocused_color" value="$VAR[Light_Color]" />
 				</include>
-				<control type="button" id="4201">
-					<width>120</width>
-					<height>120</height>
-					<left>30</left>
-					<top>30</top>
-					<texturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_browse_unfocused_120.png</texturenofocus>
-					<texturefocus colordiffuse="$VAR[Light_Color]">icons/icon_browse_focused_120.png</texturefocus>
-					<onclick>RunScript(script.copacetic.helper,action=globalsearch_input)</onclick>
-					<onclick>SetFocus(3000)</onclick>
-					<include content="globalsearch_home_Navigation" />
-				</control>
+				<include content="globalsearch_Button" condition="!Skin.HasSetting(GlobalSearch_Disabled)" />
 				<include content="Clock" condition="!Skin.HasSetting(Hide_Home_Clock)">
 					<param name="textcolor" value="$VAR[Notification_Widget_Label_Color]" />
 				</include>
