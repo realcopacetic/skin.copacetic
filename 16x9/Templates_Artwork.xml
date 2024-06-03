@@ -128,7 +128,7 @@
 	</include>
 
 	<include name="Icon_Component_Multiart_Static">
-		<param name="visible" default="!String.IsEqual(Control.GetLabel(6400),flags/blank.png) + !$EXP[Content_Switching] + !String.IsEmpty(Window(home).Property(Multiart_Fadeout)) + !String.IsEqual(Container.FolderName,ListItem.Title)" />
+		<param name="visible" default="!String.IsEqual(Control.GetLabel(6400),flags/blank.png) + !Control.IsVisible(5006) + !$EXP[Content_Switching] + !String.IsEmpty(Window(home).Property(Multiart_Fadeout)) + !String.IsEqual(Container.FolderName,ListItem.Title)" />
 		<param name="fadetime" default="1000" />
 		<definition>
 			<include content="Icon_Art">

@@ -23,6 +23,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 **2.4.2**
 - Bumping version number by 1 to differentiate between Nexus and Omega versions. 
 - Increased version number of script.copacetic.helper dependency to 1.1.0
+- Added visibility delay to multiartwhen switching containers to prevent seeing it fade out immediately after moving from Movies to Sets, etc.
+- Added experimental feature to enable landscape artwork to be displayed instead of fanart for background artwork in List and Billboard view (enable under Settings > Copacetic > Customisations > Experiments) 
+
 Still to do:
 -- check tmdb helper click actions for all infoscreen widgets (including episode ones etc)
 -- tmdb helper for play button on infoscreen?

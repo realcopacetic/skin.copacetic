@@ -877,11 +877,18 @@
 			<selected>Skin.HasSetting(Experiment_Unwatched_Info)</selected>
 		</control>
 		<control type="radiobutton" id="1418">
-			<description>Enable fanart display for Grid view in Pictures window</description>
+			<description>Enable 'Fanart' display layout for Grid view in Pictures window</description>
 			<visible>ControlGroup(9).HasFocus(14)</visible>
 			<label>$LOCALIZE[31471]</label>
 			<onclick>Skin.ToggleSetting(Experiment_GridView_Fanart_Pictures)</onclick>
 			<selected>Skin.HasSetting(Experiment_GridView_Fanart_Pictures)</selected>
+		</control>
+		<control type="radiobutton" id="1422">
+			<description>Prefer landscape art to fanart for backgrounds in List and Billboard views</description>
+			<visible>ControlGroup(9).HasFocus(14)</visible>
+			<label>Enable landscape art for List and Billboard view backgrounds</label>
+			<onclick>Skin.ToggleSetting(Experiment_ListView_Prefer_Landscape)</onclick>
+			<selected>Skin.HasSetting(Experiment_ListView_Prefer_Landscape)</selected>
 		</control>
 		<control type="radiobutton" id="1419">
 			<description>Move to parent directory automatically if episode container is empty</description>
