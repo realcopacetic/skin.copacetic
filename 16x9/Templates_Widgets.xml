@@ -94,9 +94,9 @@
 			</include>
 			<control type="group">
 				<visible>Control.HasFocus(320$PARAM[widget_position])</visible>
-				<animation effect="slide" start="0" end="0,660" time="0" condition="Control.HasFocus(320$PARAM[widget_position])">Conditional</animation>
-				<animation effect="slide" start="0" end="0,-660" time="180" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus(320$PARAM[widget_position])">Conditional</animation>
-				<animation effect="fade" start="0" end="100" time="180" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus(320$PARAM[widget_position])">Conditional</animation>
+				<animation effect="slide" start="0" end="0,660" time="0" condition="Control.HasFocus(320$PARAM[widget_position]) + !Skin.HasSetting(Experiment_Disable_Transitions)">Conditional</animation>
+				<animation effect="slide" start="0" end="0,-660" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus(320$PARAM[widget_position]) + !Skin.HasSetting(Experiment_Disable_Transitions)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus(320$PARAM[widget_position])">Conditional</animation>
 				<include content="BillboardView_Display" condition="Skin.String(Widget$PARAM[widget_position]_View,Billboard)">
 					<param name="id" value="$PARAM[id]" />
 					<param name="art_icon" value="Widget$PARAM[widget_position]_Thumbnail" />
@@ -130,28 +130,27 @@
 				<visible>!$EXP[TransparentDialog_IsVisible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay) + ![Skin.String(Widget$PARAM[widget_position]_View,Grid) + Skin.String(Widget$PARAM[widget_position]_Display,Spotlight)]" />
-				<control type="group">
-					<visible>Control.HasFocus(320$PARAM[widget_position])</visible>
-					<include content="Visible_Fade_Delayed_Animation" />
-					<include content="BillboardView_Details" condition="Skin.String(Widget$PARAM[widget_position]_View,Billboard)">
-						<param name="id" value="$PARAM[id]" />
-						<param name="widget_clearlogos" value="Skin.HasSetting(Widget$PARAM[widget_position]_Clearlogos_Enabled)" />
-					</include>
-					<include content="ShowcaseView_Details" condition="Skin.String(Widget$PARAM[widget_position]_View,Showcase)">
-						<param name="id" value="$PARAM[id]" />
-						<param name="media_view" value="false" />
-						<param name="widget_clearlogos" value="Skin.HasSetting(Widget$PARAM[widget_position]_Clearlogos_Enabled)" />
-					</include>
-					<include content="StripView_Details" condition="Skin.String(Widget$PARAM[widget_position]_View,Strip)">
-						<param name="id" value="$PARAM[id]" />
-						<param name="widget_clearlogos" value="Skin.HasSetting(Widget$PARAM[widget_position]_Clearlogos_Enabled)" />
-					</include>
-					<include content="GridView_Details" condition="Skin.String(Widget$PARAM[widget_position]_View,Grid)">
-						<param name="id" value="$PARAM[id]" />
-						<param name="widget_position" value="$PARAM[widget_position]" />
-					</include>
-				</control>
-				<!-- Breadcrumb -->
+				<include content="BillboardView_Details" condition="Skin.String(Widget$PARAM[widget_position]_View,Billboard)">
+					<param name="id" value="$PARAM[id]" />
+					<param name="visible" value="Control.HasFocus(320$PARAM[widget_position])" />
+					<param name="widget_clearlogos" value="Skin.HasSetting(Widget$PARAM[widget_position]_Clearlogos_Enabled)" />
+				</include>
+				<include content="ShowcaseView_Details" condition="Skin.String(Widget$PARAM[widget_position]_View,Showcase)">
+					<param name="id" value="$PARAM[id]" />
+					<param name="visible" value="Control.HasFocus(320$PARAM[widget_position])" />
+					<param name="media_view" value="false" />
+					<param name="widget_clearlogos" value="Skin.HasSetting(Widget$PARAM[widget_position]_Clearlogos_Enabled)" />
+				</include>
+				<include content="StripView_Details" condition="Skin.String(Widget$PARAM[widget_position]_View,Strip)">
+					<param name="id" value="$PARAM[id]" />
+					<param name="visible" value="Control.HasFocus(320$PARAM[widget_position])" />
+					<param name="widget_clearlogos" value="Skin.HasSetting(Widget$PARAM[widget_position]_Clearlogos_Enabled)" />
+				</include>
+				<include content="GridView_Details" condition="Skin.String(Widget$PARAM[widget_position]_View,Grid)">
+					<param name="id" value="$PARAM[id]" />
+					<param name="visible" value="Control.HasFocus(320$PARAM[widget_position])" />
+					<param name="widget_position" value="$PARAM[widget_position]" />
+				</include>
 				<include content="Breadcrumb_Label">
 					<param name="visible" value="Control.HasFocus(320$PARAM[widget_position])" />
 					<param name="animation" value="Widget_Breadcrumb_Animation" />
@@ -491,9 +490,9 @@
 			<!-- Art -->
 			<control type="group">
 				<visible>Control.HasFocus($PARAM[id]) + !Container($PARAM[id]).IsUpdating</visible>
-				<animation effect="slide" start="0" end="0,660" time="0" condition="Control.HasFocus($PARAM[id])">Conditional</animation>
-				<animation effect="slide" start="0" end="0,-660" time="180" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus($PARAM[id])">Conditional</animation>
-				<animation effect="fade" start="0" end="100" time="180" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus($PARAM[id])">Conditional</animation>
+				<animation effect="slide" start="0" end="0,660" time="0" condition="Control.HasFocus($PARAM[id]) + !Skin.HasSetting(Experiment_Disable_Transitions)">Conditional</animation>
+				<animation effect="slide" start="0" end="0,-660" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus($PARAM[id]) + !Skin.HasSetting(Experiment_Disable_Transitions)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus($PARAM[id])">Conditional</animation>
 				<include content="$PARAM[widget_view]View_Art_$PARAM[widget_display]">
 					<param name="target_id" value="$PARAM[id]" />
 					<param name="art_icon" value="Widget_$PARAM[widget_display]_Thumbnail" />

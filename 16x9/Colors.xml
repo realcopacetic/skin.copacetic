@@ -265,6 +265,7 @@
 	<variable name="Plot_Color">
 		<value condition="$EXP[Container_HasBackground]">$VAR[Light_Color]</value>
 		<value condition="Skin.String(Theme,Light)">$VAR[Dark_Grey_Color]</value>
+		<value condition="Skin.HasSetting(Prefer_White_Plot_Color)">$VAR[Light_Color]</value>
 		<value>$VAR[Light_Grey_Color]</value>
 	</variable>
 	<variable name="Privacy_Policy_Color">
@@ -410,6 +411,10 @@
 		<value condition="Control.HasFocus(16010) | Control.HasFocus(16011)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
+	<variable name="skinsettings_GridView_Size_Button_Textcolor">
+		<value condition="Control.HasFocus(13400) | Control.HasFocus(13401)">$VAR[Light_Color]</value>
+		<value>$VAR[Unfocused_Color]</value>
+	</variable>
 	<variable name="skinsettings_Multiart_Interval_Button_Textcolor">
 		<value condition="Control.HasFocus(15240) | Control.HasFocus(15241)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
@@ -426,8 +431,7 @@
 		<value condition="Control.HasFocus(14130) | Control.HasFocus(14131)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
-
-
+	
 	<variable name="skinsettings_Widget1_View_Button_Textcolor">
 		<value condition="Control.HasFocus(1020) | Control.HasFocus(1021)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
@@ -914,6 +918,9 @@
 		<value condition="VideoPlayer.IsFullscreen + Integer.IsGreater(VideoPlayer.UserRating,1.5)">$VAR[User_Rating_Color]</value>
 		<value condition="VideoPlayer.IsFullscreen + Integer.IsGreater(VideoPlayer.UserRating,0.5) + !String.IsEqual(Window.(videoosd).Property(VideoPlayer_Rating_Fix),true)">$VAR[User_Rating_Color]</value>
 		<value condition="!String.IsEmpty(ListItem.UserRating)">$VAR[User_Rating_Color]</value>
+		<value condition="$EXP[Dominant_Color_View_Conditions] + Skin.String(Theme,Light) + !String.IsEmpty(Window(home).Property(clearlogo-alt_cropped-color)) + !String.IsEqual(Window(home).Property(clearlogo-alt_cropped-color),ff000000) + Integer.IsLessOrEqual(Window(home).Property(clearlogo-alt_cropped-luminosity),Skin.String(Background_High_Threshold))">$INFO[Window(home).Property(clearlogo-alt_cropped-color)]</value>
+		<value condition="$EXP[Dominant_Color_View_Conditions] + Skin.String(Theme,Light) + !String.IsEmpty(Window(home).Property(clearlogo_cropped-color)) + !String.IsEqual(Window(home).Property(clearlogo_cropped-color),ff000000) + Integer.IsLessOrEqual(Window(home).Property(clearlogo_cropped-luminosity),Skin.String(Background_High_Threshold))">$INFO[Window(home).Property(clearlogo_cropped-color)]</value>
+		<value condition="$EXP[Dominant_Color_View_Conditions] + !Skin.String(Theme,Light) + !String.IsEmpty(Window(home).Property(clearlogo_cropped-color)) + !String.IsEqual(Window(home).Property(clearlogo_cropped-color),ffffffff) + Integer.IsGreaterOrEqual(Window(home).Property(clearlogo_cropped-luminosity),Skin.String(Background_Low_Threshold))">$INFO[Window(home).Property(clearlogo_cropped-color)]</value>
 		<value>$VAR[Accent_Color]</value>
 	</variable>
 

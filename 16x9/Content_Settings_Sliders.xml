@@ -261,6 +261,17 @@
 		<animation effect="slide" end="110" time="0" condition="Skin.String(Background_Slideshow,Custom)">Conditional</animation>
 	</include>
 
+	<include name="skinsettings_GridView_Size_Button_Conditions">
+		<onleft condition="!Skin.String(GridView_Size,Small)">Skin.SetString(GridView_Size,Small)</onleft>
+		<onright condition="Skin.String(GridView_Size,Small)">Skin.SetString(GridView_Size,Large)</onright>
+	</include>
+	<include name="skinsettings_GridView_Size_Unfocused_Slides">
+		<animation effect="slide" end="120" time="0" condition="Skin.String(GridView_Size,Large) | !Skin.String(GridView_Size)">Conditional</animation>
+	</include>
+	<include name="skinsettings_GridView_Size_Focused_Slides">
+		<animation effect="slide" end="110" time="0" condition="Skin.String(GridView_Size,Large) | !Skin.String(GridView_Size)">Conditional</animation>
+	</include>
+
 	<include name="skinsettings_Multiart_Interval_Button_Conditions">
 		<onleft condition="Skin.String(Multiart_Interval,10)">Skin.SetString(Multiart_Interval,7)</onleft>
 		<onleft condition="Skin.String(Multiart_Interval,7)">Skin.SetString(Multiart_Interval,5)</onleft>

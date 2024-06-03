@@ -20,17 +20,26 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
-**1.4.2**
-- Improved visibility condition for widget settings screen
-- Added globalsearch configuration screen to skin settings under Settings > Copacetic > Home > 'Configure global search'
-- Disabled use of landscape artwork on Billboard widget views
-- Disabled 'Prefer landscape artwork' option when Billboard view selected on a home widget
-- Added script to quick subtitle switcher in videoOSD controls that allows it to toggle only between 'Off' and a preferred language, as set in skin settings. If preferred language is not available or no value is entered in skin settings, this button will toggle through all available subtitles instead https://github.com/realcopacetic/skin.copacetic/issues/170
+**1.4.3**
 - Increased version number of script.copacetic.helper dependency to 1.1.0
 - Added visibility delay to multiartwhen switching containers to prevent seeing it fade out immediately after moving from Movies to Sets, etc.
-- Added experimental feature to enable landscape artwork to be displayed instead of fanart for background artwork in List and Billboard view (enable under Settings > Copacetic > Customisations > Experiments) 
+- Added experimental feature to enable landscape artwork to be displayed instead of fanart for background artwork in List and Billboard view (Settings > Copacetic > Customisations > Experimentsle > 'Enable landscape art for List and Billboard view backgrounds')
+- Added small and large item layouts for Grid view panels (Copacetic > Views > Grid > 'Item artwork size') https://github.com/realcopacetic/skin.copacetic/issues/168
+- Added option to change plot text colour on Showcase and Strip views from grey to white (Copacetic > Customisations > Library > 'Prefer white to grey text for plot in Showcase and Strip views') https://github.com/realcopacetic/skin.copacetic/issues/168 https://github.com/realcopacetic/skin.copacetic/issues/173
+- Added label to video infoscreen showing end time when infolabel is available https://github.com/realcopacetic/skin.copacetic/issues/168
+- Added option to disable video information from being displayed at the top of the screen upon video playback (Copacetic > Customisations > Video Player > 'Disable video information from being displayed at the start of playback') https://github.com/realcopacetic/skin.copacetic/issues/173
+- Added option to show remaining time rather than item duration in the seekbar (Copacetic > Customisations > Video Player > 'Prefer time remaining to video duration in seek bar') https://github.com/realcopacetic/skin.copacetic/issues/173  
+- Fixed missing label when scrolling embedded lists in Thumbnails layout of List view
+- Added fadetime to episode artwork when in ListView Thumbnails layout https://github.com/realcopacetic/skin.copacetic/issues/173
+- Added video title to top of video player when osd is on the screen, with currently focused button moved to secondary info label in the top bar https://github.com/realcopacetic/skin.copacetic/issues/173
+- Added option to scroll long titles in ListView instead of truncating (Copacetic > Views > List > 'Enable scrolling on long titles instead of truncation (...)') https://github.com/realcopacetic/skin.copacetic/issues/173
+- Added wrap around on context/options menus so if you get to the bottom/top and press down/up, you will wrap back around to the other end of the list https://github.com/realcopacetic/skin.copacetic/issues/173
 
 Still to do:
+--- transparency of video player overlay
+--- checkmarks/fades for other views?
+--- check to see the player status labels
+-- transition times - check all animations are switched to constants, decide on content switching exclusions for each view. See if anything breaks or any other areas animations can be cut
 -- check tmdb helper click actions for all infoscreen widgets (including episode ones etc)
 -- tmdb helper for play button on infoscreen?
 - autoscroll bar
@@ -38,8 +47,18 @@ Still to do:
 - login background
 - Create radio station button
 - remove window property hack for music ratings during playback in Omega
+artwork slideshow label wrong when you go into places like music library
+<!-- temp fix to account for fact that DecreaseRating won't go lower than 1 for VideoPlayer.UserRating -->
 - PVR
 https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Extended-Info#direct-call-auto
+- Code cleanup - replace things like [skin.string(x,y) | !skin.string(x)] with !skin.string(z)
+
+**1.4.2**
+- Improved visibility condition for widget settings screen
+- Added globalsearch configuration screen to skin settings under Settings > Copacetic > Home > 'Configure global search'
+- Disabled use of landscape artwork on Billboard widget views
+- Disabled 'Prefer landscape artwork' option when Billboard view selected on a home widget
+- Added script to quick subtitle switcher in videoOSD controls that allows it to toggle only between 'Off' and a preferred language, as set in skin settings. If preferred language is not available or no value is entered in skin settings, this button will toggle through all available subtitles instead https://github.com/realcopacetic/skin.copacetic/issues/170
 
 **1.4.0**
 - Added option to prefer TMDbHelper plugin if it's enabled as the content source for info screen widgets, under Settings > Copacetic > Customisations > Info screens https://github.com/realcopacetic/skin.copacetic/issues/105

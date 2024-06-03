@@ -114,6 +114,18 @@
 			<linespacing>0.9</linespacing>
 		</font>
 		<font>
+			<name>Grid_Title_Small</name>
+			<filename>Inter/Inter-Black.ttf</filename>
+			<size>29</size>
+			<linespacing>0.9</linespacing>
+		</font>
+		<font>
+			<name>Grid_Info_Small</name>
+			<filename>Inter/Inter-SemiBold.ttf</filename>
+			<size>20</size>
+			<linespacing>0.9</linespacing>
+		</font>
+		<font>
 			<name>Spotlight_Title</name>
 			<filename>Inter/Inter-Black.ttf</filename>
 			<size>30</size>
@@ -415,6 +427,18 @@
 			<linespacing>0.9</linespacing>
 		</font>
 		<font>
+			<name>Grid_Title_Small</name>
+			<filename>resource://resource.fonts.copacetic/Inter-NotoSansKR-Black.ttf</filename>
+			<size>29</size>
+			<linespacing>0.9</linespacing>
+		</font>
+		<font>
+			<name>Grid_Info_Small</name>
+			<filename>resource://resource.fonts.copacetic/Inter-NotoSansKR-SemiBold.ttf</filename>
+			<size>20</size>
+			<linespacing>0.9</linespacing>
+		</font>
+		<font>
 			<name>Body</name>
 			<filename>resource://resource.fonts.copacetic/Inter-NotoSansKR-Light.ttf</filename>
 			<size>27</size>
@@ -701,6 +725,18 @@
 			<name>Grid_Info</name>
 			<filename>resource://resource.fonts.copacetic/Inter-NotoSansSC-SemiBold.ttf</filename>
 			<size>25</size>
+			<linespacing>0.9</linespacing>
+		</font>
+		<font>
+			<name>Grid_Title_Small</name>
+			<filename>resource://resource.fonts.copacetic/Inter-NotoSansSC-Black.ttf</filename>
+			<size>29</size>
+			<linespacing>0.9</linespacing>
+		</font>
+		<font>
+			<name>Grid_Info_Small</name>
+			<filename>resource://resource.fonts.copacetic/Inter-NotoSansSC-SemiBold.ttf</filename>
+			<size>20</size>
 			<linespacing>0.9</linespacing>
 		</font>
 		<font>

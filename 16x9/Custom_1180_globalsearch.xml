@@ -8,14 +8,14 @@
     <!-- Button bouncer until containers are populated -->
     <control type="button" id="3000">
       <visible allowhiddenfocus="true">false</visible>
-      <animation effect="slide" end="0,0" time="360" reversible="false">Focus</animation>
+      <animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Focus</animation>
       <include content="globalsearch_Focus_Setter">
         <param name="bounce_id" value="3001" />
       </include>
     </control>
     <control type="button" id="3001">
       <visible allowhiddenfocus="true">false</visible>
-      <animation effect="slide" end="0,0" time="360" reversible="false">Focus</animation>
+      <animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Focus</animation>
       <include content="globalsearch_Focus_Setter">
         <param name="bounce_id" value="3000" />
       </include>

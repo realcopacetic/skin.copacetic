@@ -372,7 +372,7 @@
 			</include>
 			<!-- Arrows when focused -->
 			<control type="group">
-				<animation effect="zoom" center="auto" start="112" end="100" time="135" tween="back" easing="in" condition="ControlGroup(3000).HasFocus">Conditional</animation>
+				<animation effect="zoom" center="auto" start="112" end="100" time="Default_Transition_0.5x" tween="back" easing="in" condition="ControlGroup(3000).HasFocus">Conditional</animation>
 				<visible>ControlGroup(3000).HasFocus</visible>
 				<left>30</left>
 				<width>60</width>
@@ -416,47 +416,47 @@
 				<itemgap>0</itemgap>
 				<scrolltime>0</scrolltime>
 				<control type="button" id="3001">
-					<animation effect="slide" start="0" end="0" time="90">Hidden</animation>
+					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
 					<onfocus condition="!Window.Is(skinsettings)">ReplaceWindowAndFocus(skinsettings,3001)</onfocus>
 				</control>
 				<control type="button" id="3002">
-					<animation effect="slide" start="0" end="0" time="90">Hidden</animation>
+					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
 					<onfocus condition="!Window.Is(interfacesettings)">ReplaceWindowAndFocus(interfacesettings,3002)</onfocus>
 				</control>
 				<control type="button" id="3003">
-					<animation effect="slide" start="0" end="0" time="90">Hidden</animation>
+					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
 					<onfocus condition="!Window.Is(mediasettings)">ReplaceWindowAndFocus(mediasettings,3003)</onfocus>
 				</control>
 				<control type="button" id="3004">
-					<animation effect="slide" start="0" end="0" time="90">Hidden</animation>
+					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
 					<onfocus condition="!Window.Is(playersettings)">ReplaceWindowAndFocus(playersettings,3004)</onfocus>
 				</control>
 				<control type="button" id="3005">
-					<animation effect="slide" start="0" end="0" time="90">Hidden</animation>
+					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
 					<onfocus condition="!Window.Is(systemsettings)">ReplaceWindowAndFocus(systemsettings,3005)</onfocus>
 				</control>
 				<control type="button" id="3006">
-					<animation effect="slide" start="0" end="0" time="90">Hidden</animation>
+					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
 					<onfocus condition="!Window.Is(servicesettings)">ReplaceWindowAndFocus(servicesettings,3006)</onfocus>
 				</control>
 				<control type="button" id="3007">
-					<animation effect="slide" start="0" end="0" time="90">Hidden</animation>
+					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
 					<onfocus condition="!Window.Is(gamesettings)">ReplaceWindowAndFocus(gamesettings,3007)</onfocus>
 				</control>
 				<control type="button" id="3008">
-					<animation effect="slide" start="0" end="0" time="90">Hidden</animation>
+					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
 					<onfocus condition="!Window.Is(pvrsettings)">ReplaceWindowAndFocus(pvrsettings,3008)</onfocus>
 				</control>
 				<control type="button" id="3009">
-					<animation effect="slide" start="0" end="0" time="90">Hidden</animation>
+					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
 					<onfocus condition="!Window.Is(profiles)">ReplaceWindowAndFocus(profiles,3009)</onfocus>
 				</control>
 				<control type="button" id="3010">
-					<animation effect="slide" start="0" end="0" time="90">Hidden</animation>
+					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
 					<onfocus condition="!Window.Is(systeminfo)">ReplaceWindowAndFocus(systeminfo,3010)</onfocus>
 				</control>
 				<control type="button" id="3011">
-					<animation effect="slide" start="0" end="0" time="90">Hidden</animation>
+					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
 					<onfocus condition="!Window.Is(filemanager)">ReplaceWindowAndFocus(filemanager,3011)</onfocus>
 				</control>
 			</control>

@@ -68,9 +68,10 @@
 					<animation effect="slide" end="0,15" time="0" condition="$EXP[StripView_Display_IsFanart] | $EXP[StripView_Display_IsSquare]">Conditional</animation>
 				</include>
 				<include content="Variable_Title_Label" condition="!Window.Is(home) + !Window.Is(addoninformation)">
-					<param name="visible" value="[!$EXP[Infoscreen_Widget_HasFocus] + $EXP[StripView_Details_Title] + !$EXP[StripView_Logo_On]] | [$EXP[Infoscreen_Widget_HasFocus] + ![String.IsEqual(Container(3202).ListItem.DBType,Season) + Control.HasFocus(3202)]] | Window.IsVisible(1180)" />
+					<param name="visible" value="[[$EXP[StripView_Media_IsVisible] | $EXP[StripView_Widget_Home_IsVisible]] + $EXP[StripView_Details_Title] + !$EXP[StripView_Logo_On]] | [$EXP[StripView_Widget_Infoscreen_IsVisible] + ![String.IsEqual(Container(3202).ListItem.DBType,Season) + Control.HasFocus(3202)]]" />
 					<param name="label" value="$VAR[Title_Label]" />
 					<param name="textcolor" value="$VAR[Primary_Color]" />
+					<animation effect="slide" end="0,-15" time="0" condition="$EXP[StripView_Display_IsSquare] | $EXP[StripView_Display_IsFanart]">Conditional</animation>
 				</include>
 			</include>
 		</definition>

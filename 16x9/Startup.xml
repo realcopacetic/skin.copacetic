@@ -196,6 +196,7 @@
 	<onload condition="!Skin.String(StripView_Flags_Episodes)">Skin.SetString(StripView_Flags_Episodes,All)</onload>
 	<onload condition="!Skin.String(StripView_Flags_Programs_Files)">Skin.SetString(StripView_Flags_Programs_Files,All)</onload>
 	<!-- Grid -->
+	<onload condition="!Skin.String(GridView_Size)">Skin.SetString(GridView_Size,Large)</onload>
 	<onload condition="!Skin.String(GridView_Display_Movies)">Skin.SetString(GridView_Display_Movies,Fanart)</onload>
 	<onload condition="!Skin.String(GridView_Display_Sets)">Skin.SetString(GridView_Display_Sets,Fanart)</onload>
 	<onload condition="!Skin.String(GridView_Display_TVShows)">Skin.SetString(GridView_Display_TVShows,Fanart)</onload>
