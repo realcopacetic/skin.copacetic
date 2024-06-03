@@ -16,8 +16,8 @@
 				<visible allowhiddenfocus="true">Integer.IsGreater(Container.NumItems,9)</visible>
 				<control type="scrollbar" id="60">
 					<visible allowhiddenfocus="true">Container.Scrolling | Control.HasFocus(60)</visible>
-					<animation effect="fade" start="0" end="100" time="360" tween="sine" easing="inout" reversible="true" condition="!Container.Scrolling">Visible</animation>
-					<animation effect="fade" start="0" end="100" time="360" delay="360" tween="sine" easing="inout" reversible="true" condition="Container.Scrolling">Visible</animation>
+					<animation effect="fade" start="0" end="100" time="Default_Transition_1x" tween="sine" easing="inout" reversible="true" condition="!Container.Scrolling">Visible</animation>
+					<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="Default_Transition_1x" tween="sine" easing="inout" reversible="true" condition="Container.Scrolling">Visible</animation>
 					<centertop>50%</centertop>
 					<onleft condition="Control.IsVisible($PARAM[target_id_1])">$PARAM[target_id_1]</onleft>
 					<onleft condition="Control.IsVisible($PARAM[target_id_2])">$PARAM[target_id_2]</onleft>
@@ -532,16 +532,16 @@
 			<control type="grouplist">
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
-				<animation effect="fade" start="100" end="0" time="360" delay="2560" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos0_active]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="360" delay="2560" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos1_active]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="360" delay="2560" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos2_active]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="360" delay="2560" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos3_active]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="360" delay="2560" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos4_active]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="360" delay="2560" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos5_active]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="360" delay="2560" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos6_active]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="360" delay="2560" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos7_active]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="360" delay="2560" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos8_active]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="360" delay="2560" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos9_active]">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos0_active]">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos1_active]">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos2_active]">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos3_active]">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos4_active]">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos5_active]">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos6_active]">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos7_active]">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos8_active]">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos9_active]">Conditional</animation>
 				<right>30</right>
 				<width>6</width>
 				<height>100%</height>

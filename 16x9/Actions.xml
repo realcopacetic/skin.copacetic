@@ -18,7 +18,7 @@
 		</definition>
 	</include>
 
-	<include name="Default_Transition">
+	<include name="Default_Transition_1x">
 		<definition>
 			<onclick condition="!String.IsEqual(Container($PARAM[id]).ListItem.DBID,Window.Property(SelectedItem))">SetProperty(Breadcrumb_GoToNext,true)</onclick>
 			<onclick condition="!String.IsEqual(Container($PARAM[id]).ListItem.DBID,Window.Property(SelectedItem))">SetProperty(Infoscreen_Transition,true,home)</onclick>
@@ -52,7 +52,7 @@
 	</include>
 
 	<include name="Default_Infoscreen_Widget_Open">
-		<include content="Default_Transition">
+		<include content="Default_Transition_1x">
 			<param name="id" value="$PARAM[id]" />
 		</include>
 		<include content="TMDb_Helper_Transition">
@@ -96,13 +96,13 @@
 	</include>
 
 	<include name="ClickAction_Open_Similar_Artists">
-		<include content="Default_Transition">
+		<include content="Default_Transition_1x">
 			<param name="id" value="3207" />
 		</include>
 	</include>
 
 	<include name="ClickAction_Open_Similar_Albums">
-		<include content="Default_Transition">
+		<include content="Default_Transition_1x">
 			<param name="id" value="3207" />
 		</include>
 	</include>

@@ -39,12 +39,12 @@
 		</control>
 		<control type="group" id="5005">
 			<visible>Control.HasFocus(4014)</visible>
-			<animation effect="slide" end="0,0" time="360" reversible="false">Hidden</animation>
+			<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Hidden</animation>
 		</control>
 		<!-- Container Update Bounce Test For Info_Infoscreens_Label -->
 		<control type="button" id="6001">
 			<visible allowhiddenfocus="true">false</visible>
-			<animation effect="slide" end="0,0" time="780" reversible="false" condition="[$EXP[Infoscreen_Widget_Prefer_TMDbHelper] | !Integer.IsGreater(ListItem.DBID,0)] + String.IsEqual(Window(movieinformation).Property(Breadcrumb_Level),02)">Focus</animation>
+			<animation effect="slide" end="0,0" time="Default_Transition_3x" reversible="false" condition="[$EXP[Infoscreen_Widget_Prefer_TMDbHelper] | !Integer.IsGreater(ListItem.DBID,0)] + String.IsEqual(Window(movieinformation).Property(Breadcrumb_Level),02)">Focus</animation>
 			<onfocus condition="Container.IsUpdating">SetFocus(6002)</onfocus>
 			<onfocus condition="!Container.IsUpdating">SetFocus(50)</onfocus>
 			<onfocus condition="!Container.IsUpdating">ClearProperty(Infoscreen_Transition,home)</onfocus>
@@ -685,8 +685,6 @@
 				<width>1080</width>
 				<centertop>50%</centertop>
 				<height>780</height>
-				<onup>0</onup>
-				<ondown>0</ondown>
 				<onback>4012</onback>
 				<onfocus>ClearProperty(Scrollbars,home)</onfocus>
 				<onfocus>SetProperty(OptionsMenu,Active,home)</onfocus>

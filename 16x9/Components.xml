@@ -33,7 +33,7 @@
 				<width>$PARAM[size]</width>
 				<height>$PARAM[size]</height>
 				<texture colordiffuse="$PARAM[color]">dialogs/busy.png</texture>
-				<animation effect="rotate" start="0" end="-360" center="auto" time="1800" loop="true" tween="cubic" easing="out" condition="true">Conditional</animation>
+				<animation effect="rotate" start="0" end="-360" center="auto" time="Default_Transition_5x" loop="true" tween="cubic" easing="out" condition="true">Conditional</animation>
 				<nested />
 			</control>
 		</definition>
@@ -191,7 +191,7 @@
 
 	<include name="Background_Home">
 		<control type="image">
-			<animation effect="fade" start="0" end="100" time="360" delay="1800" tween="sine" easing="inout" reversible="true">Visible</animation>
+			<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="Default_Transition_5x" tween="sine" easing="inout" reversible="true">Visible</animation>
 			<texture colordiffuse="$VAR[Dark_Color]">views/white_100.png</texture>
 		</control>
 		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,5)">

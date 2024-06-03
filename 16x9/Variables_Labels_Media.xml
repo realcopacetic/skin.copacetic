@@ -225,6 +225,7 @@
 		<value condition="[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,set)] + $EXP[ListView_Display_IsBackground] + !String.IsEmpty(Container(3100).ListItem.Year)">[UPPERCASE]$INFO[Container(3100).ListItem.Year]$VAR[3100_ListItem_Duration_Divider, , ]$INFO[Container(3100).ListItem.Duration(mins),, $LOCALIZE[31114]][/UPPERCASE]</value>
 		<value condition="[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,set)] + !String.IsEmpty(Container(3100).ListItem.Year)">[UPPERCASE]$INFO[Container(3100).ListItem.Year]$VAR[3100_ListItem_Duration_Divider, , ]$INFO[Container(3100).ListItem.Duration(mins),, $LOCALIZE[31114]]$VAR[Resolution_Label_3100_Divider, , ]$VAR[Resolution_Label_3100][/UPPERCASE]</value>
 		<value condition="[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,set)] + !String.IsEmpty(Container(3100).ListItem.Duration)">[UPPERCASE]$INFO[Container(3100).ListItem.Duration(mins),, $LOCALIZE[31114]][/UPPERCASE]</value>
+		<value condition="String.IsEqual(Container(3100).ListItem.DBTYpe,album) + !String.IsEmpty(Container(3100).ListItem.Year)">[UPPERCASE]$INFO[Container(3100).ListItem.Year][/UPPERCASE]</value>
 		<value condition="String.IsEqual(ListItem.DBType,artist) + $EXP[ShowcaseView_IsVisible] + !String.IsEmpty(Container(3100).ListItem.Year)">[UPPERCASE]$INFO[Container(3100).ListItem.Year][/UPPERCASE]</value>
 		<value condition="String.IsEqual(ListItem.DBType,artist) + $EXP[ListView_Display_IsThumbnails] + !String.IsEmpty(Container(3100).ListItem.Year)">[UPPERCASE]$INFO[Container(3100).ListItem.Year][/UPPERCASE]</value>
 		<value condition="String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(Container(3100).ListItem.Year)">[UPPERCASE]$INFO[Container(3100).ListItem.Year][/UPPERCASE]</value>
@@ -267,7 +268,7 @@
 	</variable>
 	
 	<variable name="Info_Label_DBType_Episodes">
-		<!-- ListView and Gridview: 1x01 / 42 mins -->
+		<!-- ListView and GridView: 1x01 / 42 mins -->
 		<!-- Episodes: 1x01 / Legion / 42 mins / -->
 		<value condition="[$EXP[ListView_IsVisible] | $EXP[GridView_IsVisible]] + !String.IsEmpty(ListItem.TVShowTitle) + Integer.IsGreater(ListItem.Episode,9)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x][UPPERCASE]$VAR[ListItem_Duration_Divider, , ]$INFO[ListItem.Duration(mins),, $LOCALIZE[31114]][/UPPERCASE]</value>
 		<value condition="[$EXP[ListView_IsVisible] | $EXP[GridView_IsVisible]] + !String.IsEmpty(ListItem.TVShowTitle) + Integer.IsGreater(ListItem.Episode,0)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x0][UPPERCASE]$VAR[ListItem_Duration_Divider, , ]$INFO[ListItem.Duration(mins),, $LOCALIZE[31114]][/UPPERCASE]</value>

@@ -407,21 +407,21 @@
 			<onclick>Skin.ToggleSetting(Background_Label_Enabled)</onclick>
 			<selected>Skin.HasSetting(Background_Label_Enabled)</selected>
 		</control>
-		<control type="label" id="1607">
-			<description>Home</description>
-			<visible>ControlGroup(9).HasFocus(16)</visible>
+
+		<!--Home-->
+		<control type="label" id="1117">
+			<description>Background</description>
+			<visible>ControlGroup(9).HasFocus(11)</visible>
 			<include content="skinsettings_Default_Label" />
-			<label>$LOCALIZE[31401]</label>
+			<label>$LOCALIZE[31432]</label>
 		</control>
-		<control type="radiobutton" id="1608">
+		<control type="radiobutton" id="1118">
 			<description>Override home menu backgrounds</description>
-			<visible>ControlGroup(9).HasFocus(16)</visible>
+			<visible>ControlGroup(9).HasFocus(11)</visible>
 			<label>$LOCALIZE[31433]</label>
 			<onclick>Skin.ToggleSetting(Home_Background_Override_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_Background_Override_Enabled)</selected>
 		</control>
-
-		<!--Home-->
 		<control type="label" id="1100">
 			<description>Widgets</description>
 			<visible>ControlGroup(9).HasFocus(11)</visible>
@@ -466,7 +466,6 @@
 			<label>- $LOCALIZE[31705]</label>
 			<onclick>ActivateWindow(1181)</onclick>
 		</control>
-
 		<control type="label" id="1104">
 			<description>General</description>
 			<visible>ControlGroup(9).HasFocus(11)</visible>
@@ -542,6 +541,13 @@
 			<label>$LOCALIZE[31498]</label>
 			<onclick>Skin.ToggleSetting(List_Prefer_Keyart)</onclick>
 			<selected>Skin.HasSetting(List_Prefer_Keyart)</selected>
+		</control>
+		<control type="radiobutton" id="1357">
+			<description>Enable scrolling on long titles instead of truncation (...)</description>
+			<visible>ControlGroup(9).HasFocus(13)</visible>
+			<label>$LOCALIZE[31717]</label>
+			<onclick>Skin.ToggleSetting(List_Prefer_Scrolling)</onclick>
+			<selected>Skin.HasSetting(List_Prefer_Scrolling)</selected>
 		</control>
 		<control type="label" id="1300">
 			<description>Billboard</description>
@@ -675,6 +681,15 @@
 			<include content="skinsettings_Detfault_Image" />
 			<texture>$VAR[skinsettings_View_Grid_Screenshots]</texture>
 		</control>
+		<include content="skinsettings_Slider_Button">
+			<param name="visible" value="ControlGroup(9).HasFocus(13) + Skin.HasSetting(GridView_Enabled)" />
+			<param name="info" value="GridView_Size" />
+			<param name="label" value="$LOCALIZE[31715]" />
+			<param name="label2" value="$VAR[skinsettings_GridView_Size_Label2]" />
+			<param name="previous" value="1324" />
+			<param name="id" value="1340" />
+			<param name="next" value="1332" />
+		</include>
 		<control type="radiobutton" id="1332">
 			<description>Grid - Videos/Music</description>
 			<visible>ControlGroup(9).HasFocus(13)</visible>
@@ -774,8 +789,15 @@
 			<param name="label2" value="$VAR[skinsettings_Music_Rating_Like_Threshold_Label]" />
 			<param name="previous" value="1404" />
 			<param name="id" value="1405" />
-			<param name="next" value="1406" />
+			<param name="next" value="1425" />
 		</include>
+		<control type="radiobutton" id="1425">
+			<description>Prefer white to grey text colour for plot in Showcase and Strip views</description>
+			<label>$LOCALIZE[31716]</label>
+			<onclick>Skin.ToggleSetting(Prefer_White_Plot_Color)</onclick>
+			<selected>Skin.HasSetting(Prefer_White_Plot_Color)</selected>
+			<visible>ControlGroup(9).HasFocus(14)</visible>
+		</control>
 		<control type="label" id="1406">
 			<description>Info screens</description>
 			<include content="skinsettings_Default_Label" />
@@ -807,6 +829,20 @@
 			<label>$LOCALIZE[31711]</label>
 			<label2>$INFO[Skin.String(Subtitle_Limiter)]</label2>
 			<onclick>Skin.SetString(Subtitle_Limiter)</onclick>
+			<visible>ControlGroup(9).HasFocus(14)</visible>
+		</control>
+		<control type="radiobutton" id="1424">
+			<description>Disable video information label during playback</description>
+			<label>$LOCALIZE[31713]</label>
+			<onclick>Skin.ToggleSetting(Video_Breadcrumb_Disabled)</onclick>
+			<selected>Skin.HasSetting(Video_Breadcrumb_Disabled)</selected>
+			<visible>ControlGroup(9).HasFocus(14)</visible>
+		</control>
+		<control type="radiobutton" id="1426">
+			<description>Prefer time remaining to video duration in player seek bar</description>
+			<label>$LOCALIZE[31718]</label>
+			<onclick>Skin.ToggleSetting(Prefer_TimeRemaining)</onclick>
+			<selected>Skin.HasSetting(Prefer_TimeRemaining)</selected>
 			<visible>ControlGroup(9).HasFocus(14)</visible>
 		</control>
 		<control type="radiobutton" id="1409">
@@ -886,7 +922,7 @@
 		<control type="radiobutton" id="1422">
 			<description>Prefer landscape art to fanart for backgrounds in List and Billboard views</description>
 			<visible>ControlGroup(9).HasFocus(14)</visible>
-			<label>Enable landscape art for List and Billboard view backgrounds</label>
+			<label>$LOCALIZE[31714]</label>
 			<onclick>Skin.ToggleSetting(Experiment_ListView_Prefer_Landscape)</onclick>
 			<selected>Skin.HasSetting(Experiment_ListView_Prefer_Landscape)</selected>
 		</control>
@@ -896,6 +932,13 @@
 			<label>$LOCALIZE[31702]</label>
 			<onclick>Skin.ToggleSetting(Experiment_ParentDir_IfEmptyContainer)</onclick>
 			<selected>Skin.HasSetting(Experiment_ParentDir_IfEmptyContainer)</selected>
+		</control>
+		<control type="radiobutton" id="1423">
+			<description>DISABLE TRANSITIONS</description>
+			<visible>ControlGroup(9).HasFocus(14)</visible>
+			<label>DISABLE TRANSITIONS</label>
+			<onclick>Skin.ToggleSetting(Experiment_Disable_Transitions)</onclick>
+			<selected>Skin.HasSetting(Experiment_Disable_Transitions)</selected>
 		</control>
 
 		<!-- Extras -->
