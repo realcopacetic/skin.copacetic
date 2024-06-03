@@ -60,6 +60,7 @@ ANIMATION DELAYS
 5003          Secondary list user scroll previous delay
 5004          Secondary list user scroll next delay
 5005          Options menu settings change
+5006          Container Switching delay (to hide multiart following container transition)
 
 CHECKERS
 6001/6001X    Container update bounce test

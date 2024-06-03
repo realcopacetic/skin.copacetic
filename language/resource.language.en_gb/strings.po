@@ -1007,6 +1007,12 @@ msgctxt "#31811"
 msgid "Enter the three-letter code for your preferred language, e.g. 'eng' for English. If subtitles in this language are available for the currently playing video, the quick subtitle switcher will toggle on/off the first subtitle stream in this language. If the language is not available, the switcher will continue toggling between all languages."
 msgstr ""
 
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31712"
+msgid "Prefer landscape art to fanart for backgrounds in List and Billboard views"
+msgstr ""
+
 
 
 
@@ -1389,7 +1395,7 @@ msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31471"
-msgid "Enable fanart display for Grid view in pictures window"
+msgid "Enable 'Fanart' display layout for Grid view in Pictures window"
 msgstr ""
 
 #/16x9/Content_Settings.xml

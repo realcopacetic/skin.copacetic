@@ -34,6 +34,10 @@
 				<visible>$PARAM[onnext_trigger]</visible>
 				<animation effect="slide" end="0,0" time="360" reversible="false">Hidden</animation>
 			</control>
+			<control type="group" id="5006">
+				<visible>$EXP[Container_Switching]</visible>
+				<animation effect="slide" end="0,0" time="720" reversible="false">Hidden</animation>
+			</control>
 		</definition>
 	</include>
 
