@@ -26,6 +26,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Disabled use of landscape artwork on Billboard widget views
 - Disabled 'Prefer landscape artwork' option when Billboard view selected on a home widget
 - Added script to quick subtitle switcher in videoOSD controls that allows it to toggle only between 'Off' and a preferred language, as set in skin settings. If preferred language is not available or no value is entered in skin settings, this button will toggle through all available subtitles instead https://github.com/realcopacetic/skin.copacetic/issues/170
+- Increased version number of script.copacetic.helper dependency to 1.1.0
 
 Still to do:
 -- check tmdb helper click actions for all infoscreen widgets (including episode ones etc)
