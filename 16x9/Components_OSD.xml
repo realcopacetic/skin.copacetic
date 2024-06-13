@@ -259,9 +259,8 @@
 
 	<include name="Player_Status_Icons_Label">
 		<control type="label">
-			<visible>Player.Rewinding | Player.Forwarding | Player.HasPerformedSeek(2)</visible>
-			<include content="PlayerSeekLabel_Fade_Delayed_Animation" />
-			<width>100%</width>
+			<width>360</width>
+			<centerleft>50%</centerleft>
 			<align>center</align>
 			<aligny>center</aligny>
 			<textcolor>$PARAM[color]</textcolor>

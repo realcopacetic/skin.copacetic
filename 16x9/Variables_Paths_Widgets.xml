@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+	<variable name="Widget1_Custom_Path">
+		<value>$INFO[Skin.String(Widget1_Custom_Path)]</value>
+	</variable>
+	<variable name="Widget2_Custom_Path">
+		<value>$INFO[Skin.String(Widget2_Custom_Path)]</value>
+	</variable>
+	<variable name="Widget3_Custom_Path">
+		<value>$INFO[Skin.String(Widget3_Custom_Path)]</value>
+	</variable>
+	<variable name="Widget4_Custom_Path">
+		<value>$INFO[Skin.String(Widget4_Custom_Path)]</value>
+	</variable>
+	<variable name="Widget5_Custom_Path">
+		<value>$INFO[Skin.String(Widget5_Custom_Path)]</value>
+	</variable>
+	<variable name="Widget6_Custom_Path">
+		<value>$INFO[Skin.String(Widget6_Custom_Path)]</value>
+	</variable>
+	<variable name="Widget7_Custom_Path">
+		<value>$INFO[Skin.String(Widget7_Custom_Path)]</value>
+	</variable>
+	<variable name="Widget8_Custom_Path">
+		<value>$INFO[Skin.String(Widget8_Custom_Path)]</value>
+	</variable>
+	<variable name="Widget9_Custom_Path">
+		<value>$INFO[Skin.String(Widget9_Custom_Path)]</value>
+	</variable>
+
+
 	<variable name="TMDBHelper_Default_Params">
 		<value>nextpage=false&amp;fanarttv=false</value>
 	</variable>

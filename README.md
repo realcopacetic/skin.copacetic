@@ -20,27 +20,34 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
-**2.4.3**
-- Bumping version number by 1 to differentiate between Nexus and Omega versions. 
-- Increased version number of script.copacetic.helper dependency to 1.1.0
-- Added visibility delay to multiartwhen switching containers to prevent seeing it fade out immediately after moving from Movies to Sets, etc.
-- Added experimental feature to enable landscape artwork to be displayed instead of fanart for background artwork in List and Billboard view (Settings > Copacetic > Customisations > Experimentsle > 'Enable landscape art for List and Billboard view backgrounds')
-- Added small and large item layouts for Grid view panels (Copacetic > Views > Grid > 'Item artwork size') https://github.com/realcopacetic/skin.copacetic/issues/168
-- Added option to change plot text colour on Showcase and Strip views from grey to white (Copacetic > Customisations > Library > 'Prefer white to grey text for plot in Showcase and Strip views') https://github.com/realcopacetic/skin.copacetic/issues/168 https://github.com/realcopacetic/skin.copacetic/issues/173
-- Added label to video infoscreen showing end time when infolabel is available https://github.com/realcopacetic/skin.copacetic/issues/168
-- Added option to disable video information from being displayed at the top of the screen upon video playback (Copacetic > Customisations > Video Player > 'Disable video information from being displayed at the start of playback') https://github.com/realcopacetic/skin.copacetic/issues/173
-- Added option to show remaining time rather than item duration in the seekbar (Copacetic > Customisations > Video Player > 'Prefer time remaining to video duration in seek bar') https://github.com/realcopacetic/skin.copacetic/issues/173  
-- Fixed missing label when scrolling embedded lists in Thumbnails layout of List view
-- Added fadetime to episode artwork when in ListView Thumbnails layout https://github.com/realcopacetic/skin.copacetic/issues/173
-- Added video title to top of video player when osd is on the screen, with currently focused button moved to secondary info label in the top bar https://github.com/realcopacetic/skin.copacetic/issues/173
-- Added option to scroll long titles in ListView instead of truncating (Copacetic > Views > List > 'Enable scrolling on long titles instead of truncation (...)') https://github.com/realcopacetic/skin.copacetic/issues/173
-- Added wrap around on context/options menus so if you get to the bottom/top and press down/up, you will wrap back around to the other end of the list https://github.com/realcopacetic/skin.copacetic/issues/173
+**2.5.0**
+- Added option to change transparency of video player overlay (Settings > Copacetic > Backgrounds > 'OSD background brightness during video playback')
+- Fixed bug in screen to choose preferred classification system (Settings > Copacetic > Customisations > Preferred classification ratings). Previously wrong labels were showing up in the dialog screen that opens https://github.com/realcopacetic/skin.copacetic/issues/173
+- Fixed bug in breadcrumb label colour when Addonbrowser window open and repository list is 
+- Added fallback for TV shows info label when ListItem.Property(unwatched episodes) is unavailable
+- Fixed animation glitch in artwork fadediffuse when a dialog window e.g. Context Menu is visible on top.
+- Transitioned majority of animations to constants
+- Fixed background slideshow label - in some scenarios it was showing names that didn't match the artwork currently on display
+- Prevented empty progress bar from showing on incomplete movie sets. This was showing as empty because ListItem.IsResumable returns True for collections, but ListItem.PercentPlayed returns empty i.e. 0.
+- Fixed glitch in progress bar gradient when navigating through secondary lists on some views
+- Disabled Multiart Reset Interrupter on GridView. This interrupter prevents the multiart timer resetting when the container loses focus to items such as the shutdown or view options menu. It's why multiart slideshows can continue in the background when these menus are focused for most views. However, Gridview cannot support this as it is constructed using a default panel, meaning that the focuslayout disappears whenever these other menus take focus. Without disabling the Reset Interruptor, multiart will be visible, then it will disappear if you bring up the shutdown menu, then it will immediately reappear after the menu is closed. This can be jarring so it's better to let the multiart timer reset and start counting again from 0 when gridview loses focus.
+- Added progress bar and remaining movies indicator for sets that aren't fully watched using a script.copacetic.helper script.
+- Improved accuracy and efficiency of conditional animations for the progress bar unwatched episodes/movies indicator.
+- Added ability to speed up animations and window transitions (Settings > Copacetic > General > Speed up animations and window transitions). This feature is currently in beta so further refinement may be necessary following wider testing. When enabled, there is a secondary option to 'Disable all viewtype scroll animations', which will further speed up the main media views by setting scrolltime to 0 https://github.com/realcopacetic/skin.copacetic/issues/73
+- Fix for glitch in widget spotlight auto scroll function, which could cause widgets to momentarily disappear 
+- Fix for bug where secondary list was sometimes showing Poster art even when 'Prefer keyart' was selected for the specified view and vice versa https://github.com/realcopacetic/skin.copacetic/issues/174
+- Added horizontal layouts for Gridview. In Settings > Copacetic > Views > Grid, you can now choose item layout. The options are 'Vertical small', 'Vertical large' and 'Horizontal' https://github.com/realcopacetic/skin.copacetic/issues/180
+- Fixed bug where square widgets were showing fanart even when a thumbnail was available https://github.com/realcopacetic/skin.copacetic/issues/179
+- Added new Time widget replacing the Clock. Now in Settings > Copacetic > Home > General, you can choose the furniture to include (None / Clock / Clock and Date / Clock, Date and Weather). Note: For weather to be displayed, you must install a weather addon and make sure it's enabled under Settings > Services > Weather https://github.com/realcopacetic/skin.copacetic/issues/177
+- Ability to make new Time widget persistent across the entire home screen (Settings > Copacetic > Home > General). In addition, time widget added to settings screens and shutdown menu dialog. https://github.com/realcopacetic/skin.copacetic/issues/178
+- Improved widget navigation by switching from visibility conditionals to Container.NumItems
+- Fixed animation issue affecting collections icon during scrolling in Stripview
 
 Still to do:
---- transparency of video player overlay
+---- Infoscreen transitions
+---- Grid small and horizontal - with MusicPlayer widget
 --- checkmarks/fades for other views?
 --- check to see the player status labels
--- transition times - check all animations are switched to constants, decide on content switching exclusions for each view. See if anything breaks or any other areas animations can be cut
 -- check tmdb helper click actions for all infoscreen widgets (including episode ones etc)
 -- tmdb helper for play button on infoscreen?
 - autoscroll bar
@@ -48,11 +55,25 @@ Still to do:
 - login background
 - Create radio station button
 - remove window property hack for music ratings during playback in Omega
-artwork slideshow label wrong when you go into places like music library
 <!-- temp fix to account for fact that DecreaseRating won't go lower than 1 for VideoPlayer.UserRating -->
 - PVR
 https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Extended-Info#direct-call-auto
-- Code cleanup - replace things like [skin.string(x,y) | !skin.string(x)] with !skin.string(z)
+
+**2.4.3**
+- Bumping version number by 1 to differentiate between Nexus and Omega versions. 
+- Increased version number of script.copacetic.helper dependency to 1.1.0
+- Added visibility delay to multiartwhen switching containers to prevent seeing it fade out immediately after moving from Movies to Sets, etc.
+- Added experimental feature to enable landscape artwork to be displayed instead of fanart for background artwork in List and Billboard view (Settings > Copacetic > Customisations > Experimentsle > 'Enable landscape art for List and Billboard view backgrounds')
+- Added small and large item layouts for Grid view panels (Settings > Copacetic > Views > Grid > 'Item artwork size') https://github.com/realcopacetic/skin.copacetic/issues/168
+- Added option to change plot text colour on Showcase and Strip views from grey to white (Settings > Copacetic > Customisations > Library > 'Prefer white to grey text for plot in Showcase and Strip views') https://github.com/realcopacetic/skin.copacetic/issues/168 https://github.com/realcopacetic/skin.copacetic/issues/173
+- Added label to video infoscreen showing end time when infolabel is available https://github.com/realcopacetic/skin.copacetic/issues/168
+- Added option to disable video information from being displayed at the top of the screen upon video playback (Settings > Copacetic > Customisations > Video Player > 'Disable video information from being displayed at the start of playback') https://github.com/realcopacetic/skin.copacetic/issues/173
+- Added option to show remaining time rather than item duration in the seekbar (Settings > Copacetic > Customisations > Video Player > 'Prefer time remaining to video duration in seek bar') https://github.com/realcopacetic/skin.copacetic/issues/173  
+- Fixed missing label when scrolling embedded lists in Thumbnails layout of List view
+- Added fadetime to episode artwork when in ListView Thumbnails layout https://github.com/realcopacetic/skin.copacetic/issues/173
+- Added video title to top of video player when osd is on the screen, with currently focused button moved to secondary info label in the top bar https://github.com/realcopacetic/skin.copacetic/issues/173
+- Added option to scroll long titles in ListView instead of truncating (Settings > Copacetic > Views > List > 'Enable scrolling on long titles instead of truncation (...)') https://github.com/realcopacetic/skin.copacetic/issues/173
+- Added wrap around on context/options menus so if you get to the bottom/top and press down/up, you will wrap back around to the other end of the list https://github.com/realcopacetic/skin.copacetic/issues/173
 
 **1.4.2**
 - Improved visibility condition for widget settings screen
