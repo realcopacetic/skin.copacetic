@@ -172,6 +172,7 @@
 	<!-- Diffuses  -->
 	<!-- Use solid alpha for dimmed artwork to improve performance -->
 	<variable name="Home_Artwork_Diffuse">
+		<value condition="Skin.String(Background_Brightness,100)">$VAR[Brightness_100]</value>
 		<value condition="Skin.String(Background_Brightness,50)">$VAR[Brightness_50]</value>
 		<value condition="Skin.String(Background_Brightness,25)">$VAR[Brightness_25]</value>
 		<value>$VAR[Brightness_33]</value>
