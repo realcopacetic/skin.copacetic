@@ -363,7 +363,7 @@
 			<param name="info" value="Background_Slideshow" />
 			<param name="label" value="$LOCALIZE[31426]" />
 			<param name="label2" value="$VAR[skinsettings_Background_Slideshow_Label]" />
-			<param name="previous" value="1608" />
+			<param name="previous" value="1607" />
 			<param name="id" value="1601" />
 			<param name="next" value="1602" />
 		</include>
@@ -400,7 +400,16 @@
 			<param name="id" value="1605" />
 			<param name="next" value="1606" />
 		</include>
-		<control type="radiobutton" id="1606">
+		<include content="skinsettings_Slider_Button">
+			<param name="visible" value="ControlGroup(9).HasFocus(16)" />
+			<param name="info" value="OSD_Background_Brightness" />
+			<param name="label" value="$LOCALIZE[31719]" />
+			<param name="label2" value="$INFO[Skin.String(OSD_Background_Brightness)]" />
+			<param name="previous" value="1605" />
+			<param name="id" value="1606" />
+			<param name="next" value="1607" />
+		</include>
+		<control type="radiobutton" id="1607">
 			<description>Show the name of currently displaying background artworks</description>
 			<visible>ControlGroup(9).HasFocus(16)</visible>
 			<label>$LOCALIZE[31495]</label>

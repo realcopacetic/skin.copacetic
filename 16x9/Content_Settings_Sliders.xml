@@ -2,22 +2,18 @@
 <includes>
 
 	<include name="skinsettings_Background_Brightness_Button_Conditions">
-		<onleft condition="Skin.String(Background_Brightness,25)">Skin.SetString(Background_Brightness,33)</onleft>
-		<onleft condition="Skin.String(Background_Brightness,33) | !Skin.String(Background_Brightness)">Skin.SetString(Background_Brightness,50)</onleft>
-		<onleft condition="Skin.String(Background_Brightness,50)">Skin.SetString(Background_Brightness,100)</onleft>
-		<onright condition="Skin.String(Background_Brightness,100)">Skin.SetString(Background_Brightness,50)</onright>
+		<onleft condition="Skin.String(Background_Brightness,25) | !Skin.String(Background_Brightness)">Skin.SetString(Background_Brightness,33)</onleft>
+		<onleft condition="Skin.String(Background_Brightness,33)">Skin.SetString(Background_Brightness,50)</onleft>
 		<onright condition="Skin.String(Background_Brightness,50)">Skin.SetString(Background_Brightness,33)</onright>
-		<onright condition="Skin.String(Background_Brightness,33) | !Skin.String(Background_Brightness)">Skin.SetString(Background_Brightness,25)</onright>
+		<onright condition="Skin.String(Background_Brightness,33)">Skin.SetString(Background_Brightness,25)</onright>
 	</include>
 	<include name="skinsettings_Background_Brightness_Unfocused_Slides">
-		<animation effect="slide" end="40" time="0" condition="Integer.IsLess(Skin.String(Background_Brightness),33) | !Skin.String(Background_Brightness)">Conditional</animation>
-		<animation effect="slide" end="40" time="0" condition="Integer.IsLess(Skin.String(Background_Brightness),50)">Conditional</animation>
-		<animation effect="slide" end="40" time="0" condition="Integer.IsLess(Skin.String(Background_Brightness),100)">Conditional</animation>
+		<animation effect="slide" end="60" time="0" condition="Integer.IsLess(Skin.String(Background_Brightness),33)">Conditional</animation>
+		<animation effect="slide" end="60" time="0" condition="Integer.IsLess(Skin.String(Background_Brightness),50)">Conditional</animation>
 	</include>
 	<include name="skinsettings_Background_Brightness_Focused_Slides">
-		<animation effect="slide" end="37" time="0" condition="Integer.IsLess(Skin.String(Background_Brightness),33) | !Skin.String(Background_Brightness)">Conditional</animation>
-		<animation effect="slide" end="36" time="0" condition="Integer.IsLess(Skin.String(Background_Brightness),50)">Conditional</animation>
-		<animation effect="slide" end="37" time="0" condition="Integer.IsLess(Skin.String(Background_Brightness),100)">Conditional</animation>
+		<animation effect="slide" end="55" time="0" condition="Integer.IsLess(Skin.String(Background_Brightness),33)">Conditional</animation>
+		<animation effect="slide" end="55" time="0" condition="Integer.IsLess(Skin.String(Background_Brightness),50)">Conditional</animation>
 	</include>
 
 	<include name="skinsettings_Background_High_Threshold_Button_Conditions">
@@ -344,6 +340,21 @@
 		<animation effect="slide" end="11" time="0" condition="Integer.IsGreater(Skin.String(Music_Rating_Like_Threshold),7)">Conditional</animation>
 		<animation effect="slide" end="11" time="0" condition="Integer.IsGreater(Skin.String(Music_Rating_Like_Threshold),8)">Conditional</animation>
 		<animation effect="slide" end="11" time="0" condition="Integer.IsGreater(Skin.String(Music_Rating_Like_Threshold),9)">Conditional</animation>
+	</include>
+
+	<include name="skinsettings_OSD_Background_Brightness_Button_Conditions">
+		<onleft condition="Skin.String(OSD_Background_Brightness,25)">Skin.SetString(OSD_Background_Brightness,33)</onleft>
+		<onleft condition="Skin.String(OSD_Background_Brightness,33) | !Skin.String(OSD_Background_Brightness)">Skin.SetString(OSD_Background_Brightness,50)</onleft>
+		<onright condition="Skin.String(OSD_Background_Brightness,50)">Skin.SetString(OSD_Background_Brightness,33)</onright>
+		<onright condition="Skin.String(OSD_Background_Brightness,33) | !Skin.String(OSD_Background_Brightness)">Skin.SetString(OSD_Background_Brightness,25)</onright>
+	</include>
+	<include name="skinsettings_OSD_Background_Brightness_Unfocused_Slides">
+		<animation effect="slide" end="60" time="0" condition="Integer.IsLess(Skin.String(OSD_Background_Brightness),33) | !Skin.String(OSD_Background_Brightness)">Conditional</animation>
+		<animation effect="slide" end="60" time="0" condition="Integer.IsLess(Skin.String(OSD_Background_Brightness),50)">Conditional</animation>
+	</include>
+	<include name="skinsettings_OSD_Background_Brightness_Focused_Slides">
+		<animation effect="slide" end="55" time="0" condition="Integer.IsLess(Skin.String(OSD_Background_Brightness),33) | !Skin.String(OSD_Background_Brightness)">Conditional</animation>
+		<animation effect="slide" end="55" time="0" condition="Integer.IsLess(Skin.String(OSD_Background_Brightness),50)">Conditional</animation>
 	</include>
 
 	<include name="skinsettings_script-upnext_Artwork_Button_Conditions">

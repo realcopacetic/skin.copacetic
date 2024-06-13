@@ -850,19 +850,36 @@ msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31440"
-msgid "Set brightness of background artwork (%)"
+msgid "Brightness of background artwork (%)"
+msgstr ""
+
+#/16x9/Content_Settings.xml
+msgctxt "#31540"
+msgid "Choose the brightness of backgrounds displayed on the home screen and other windows such as Settings and Add-ons. Default: 33%"
 msgstr ""
 
 #: NEW
 #/16x9/Content_Settings.xml
 msgctxt "#31487"
-msgid "Background panel opacity (%)"
+msgid "Opacity of background panels (%)"
 msgstr ""
 
 #: NEW
 #/16x9/Content_Settings.xml
 msgctxt "#31587"
 msgid "Adjust the opacity of background panels that appear on top of artwork. Default: 75%"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31719"
+msgid "OSD background brightness during video playback (%)"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31819"
+msgid "Adjust the brightness of videos when OSD controls or settings screens are visible on top. Default: 25%"
 msgstr ""
 
 #: NEW
