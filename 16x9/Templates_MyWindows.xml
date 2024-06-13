@@ -102,6 +102,7 @@
 			<!-- Layer 1 -->
 			<control type="group">
 				<include content="WindowOpenClose_Fade_Delayed_Animation" />
+				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="ListView_Display">
@@ -193,6 +194,7 @@
 			<!-- Layer 1 -->
 			<control type="group">
 				<include content="WindowOpenClose_Fade_Delayed_Animation" />
+				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" />
 				<visible>$PARAM[visible] + !Window.IsVisible(smartplaylisteditor)</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
@@ -257,6 +259,7 @@
 			<!-- Layer 1 -->
 			<control type="group">
 				<include content="WindowOpenClose_Fade_Delayed_Animation" />
+				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="ListView_Display">
@@ -532,6 +535,7 @@
 			<!-- Layer 2 -->
 			<control type="group">
 				<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
+				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Long_Animation" />
 				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
@@ -603,6 +607,7 @@
 			</include>
 			<control type="group">
 				<include content="WindowOpenClose_Fade_Delayed_Animation" />
+				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="ListView_Display">

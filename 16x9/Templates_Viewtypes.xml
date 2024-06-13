@@ -69,7 +69,7 @@
 		<definition>
 			<control type="group">
 				<visible>!$EXP[Container_Switching] + !$EXP[Content_Switching] + !$EXP[TransparentDialog_IsVisible] + !$EXP[Scrollbar_HasFocus] + !$EXP[Music_Player_HasFocus]</visible>
-				<include content="Visible_Fade_Delayed_Long_Animation" condition="Window.Is(videos)" />
+				<include content="Visible_Fade_Delayed_Animation" condition="Window.Is(videos)" />
 				<include content="Visible_Fade_Delayed_Animation" condition="!Window.Is(videos)" />
 				<left>$PARAM[left]</left>
 				<bottom>$PARAM[bottom]</bottom>
@@ -106,7 +106,7 @@
 		<param name="viewtype_label" />
 		<definition>
 			<control type="group">
-				<visible>$EXP[$PARAM[viewtype_label]View_IsVisible] + !$EXP[Container_Switching] + !$EXP[Content_Switching_Minus_Exclusions] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo) + !Window.IsVisible(textviewer) + !$EXP[Scrollbar_HasFocus] + !$EXP[Secondary_List_Taking_Focus] + !$EXP[Secondary_List_Container_Switching] + !$EXP[Secondary_List_Content_Switching]</visible>
+				<visible>$EXP[$PARAM[viewtype_label]View_IsVisible] + !$EXP[Container_Switching] + !$EXP[Content_Switching] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo) + !Window.IsVisible(textviewer) + !$EXP[Scrollbar_HasFocus] + !$EXP[Secondary_List_Taking_Focus] + !$EXP[Secondary_List_Container_Switching] + !$EXP[Secondary_List_Content_Switching]</visible>
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<nested />

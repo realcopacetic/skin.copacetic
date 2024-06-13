@@ -79,6 +79,7 @@
 		<definition>
 			<include content="Widget_List">
 				<param name="min_items" value="1" />
+				<param name="bypass_min_items" value="$PARAM[bypass_min_items]" />
 				<param name="widget_type" value="Widget" />
 				<param name="id" value="$PARAM[id]" />
 				<param name="widget_position" value="$PARAM[widget_position]" />
@@ -94,8 +95,8 @@
 			</include>
 			<control type="group">
 				<visible>Control.HasFocus(320$PARAM[widget_position])</visible>
-				<animation effect="slide" start="0" end="0,660" time="0" condition="Control.HasFocus(320$PARAM[widget_position]) + !Skin.HasSetting(Experiment_Disable_Transitions)">Conditional</animation>
-				<animation effect="slide" start="0" end="0,-660" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus(320$PARAM[widget_position]) + !Skin.HasSetting(Experiment_Disable_Transitions)">Conditional</animation>
+				<animation effect="slide" start="0" end="0,660" time="0" condition="Control.HasFocus(320$PARAM[widget_position]) + !Skin.HasSetting(Quick_Transitions)">Conditional</animation>
+				<animation effect="slide" start="0" end="0,-660" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus(320$PARAM[widget_position]) + !Skin.HasSetting(Quick_Transitions)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus(320$PARAM[widget_position])">Conditional</animation>
 				<include content="BillboardView_Display" condition="Skin.String(Widget$PARAM[widget_position]_View,Billboard)">
 					<param name="id" value="$PARAM[id]" />
@@ -308,13 +309,14 @@
 
 	<include name="Widget_Custom">
 		<include content="Widget_Template">
+			<param name="bypass_min_items" value="true" />
 			<param name="widget_position" value="$PARAM[widget_position]" />
 			<param name="widget_header" value="$INFO[Skin.String(Widget$PARAM[widget_position]_Custom_Name)]" />
 			<param name="id" value="$PARAM[id]" />
 			<param name="target" value="$INFO[Skin.String(Widget$PARAM[widget_position]_Custom_Target)]" />
 			<param name="sortby" value="$INFO[Skin.String(Widget$PARAM[widget_position]_Custom_SortMethod)]" />
 			<param name="sortorder" value="$INFO[Skin.String(Widget$PARAM[widget_position]_Custom_SortOrder)]" />
-			<param name="content" value="$INFO[Skin.String(Widget$PARAM[widget_position]_Custom_Path)]" />
+			<param name="content" value="$VAR[Widget$PARAM[widget_position]_Custom_Path]" />
 			<param name="limit" value="$INFO[Skin.String(Widget$PARAM[widget_position]_Custom_Limit)]" />
 		</include>
 	</include>
@@ -464,6 +466,7 @@
 		<param name="use_custom_click" default="true" />
 		<param name="min_items" default="2" />
 		<param name="bypass_min_items" default="false" />
+		<param name="include_progress" default="true" />
 		<definition>
 			<include content="Hidden_Components">
 				<control type="label" id="620$PARAM[widget_position]1">
@@ -490,8 +493,8 @@
 			<!-- Art -->
 			<control type="group">
 				<visible>Control.HasFocus($PARAM[id]) + !Container($PARAM[id]).IsUpdating</visible>
-				<animation effect="slide" start="0" end="0,660" time="0" condition="Control.HasFocus($PARAM[id]) + !Skin.HasSetting(Experiment_Disable_Transitions)">Conditional</animation>
-				<animation effect="slide" start="0" end="0,-660" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus($PARAM[id]) + !Skin.HasSetting(Experiment_Disable_Transitions)">Conditional</animation>
+				<animation effect="slide" start="0" end="0,660" time="0" condition="Control.HasFocus($PARAM[id]) + !Skin.HasSetting(Quick_Transitions)">Conditional</animation>
+				<animation effect="slide" start="0" end="0,-660" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus($PARAM[id]) + !Skin.HasSetting(Quick_Transitions)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus($PARAM[id])">Conditional</animation>
 				<include content="$PARAM[widget_view]View_Art_$PARAM[widget_display]">
 					<param name="target_id" value="$PARAM[id]" />
@@ -514,6 +517,7 @@
 				<param name="id" value="$PARAM[id]" />
 				<param name="widget_position" value="$PARAM[widget_position]" />
 				<param name="widget_display" value="$PARAM[widget_display]" />
+				<param name="include_progress" value="$PARAM[include_progress]" />
 			</include>
 			<!-- Busy spinner -->
 			<include content="Busy_Spinner">
@@ -630,6 +634,7 @@
 			<param name="use_custom_click" value="false" />
 			<param name="widget_header" value="$VAR[Infoscreen_Widget_Cast_Label]" />
 			<param name="widget_info" value="" />
+			<param name="include_progress" value="false" />
 		</include>
 	</include>
 

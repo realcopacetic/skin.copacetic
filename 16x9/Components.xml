@@ -104,7 +104,7 @@
 				<param name="content_source" value="$PARAM[content_source]" />
 				<param name="time" value="$PARAM[time]" />
 			</include>
-			<include content="Background_Multiart_Template">
+			<include content="Background_Multiart_Template" condition="$PARAM[include_list]">
 				<param name="transition_time" value="$PARAM[time]" />
 			</include>
 			<control type="group">
@@ -139,6 +139,7 @@
 	<include name="Background_Multiart_Global">
 		<param name="visible" default="true" />
 		<param name="texture_path" default="$VAR[Background_Global_Texture]" />
+		<param name="colordiffuse" default="$VAR[Home_Artwork_Diffuse]" />
 		<param name="fadein_animation_condition" default="true" />
 		<param name="fadeout_animation_condition" default="true" />
 		<definition>
@@ -146,18 +147,18 @@
 				<visible>!VideoPlayer.IsFullscreen + $PARAM[visible]</visible>
 				<include content="VisibleHidden_Background_Fade_Delayed_Animation" />
 				<include content="Background_Multiart">
-					<param name="colordiffuse" value="$VAR[Home_Artwork_Diffuse]" />
+					<param name="include_list" value="false" />
+					<param name="include_label" value="false" />
+					<param name="colordiffuse" value="$PARAM[colordiffuse]" />
 					<param name="texture_path" value="$PARAM[texture_path]" />
 					<param name="fadetime" value="0" />
-					<param name="include_label" value="false" />
 					<param name="fadein_animation_condition" value="$PARAM[fadein_animation_condition]" />
 					<param name="fadeout_animation_condition" value="$PARAM[fadeout_animation_condition]" />
 				</include>
 				<include content="Background_Multiart">
-					<param name="include_list" value="false" />
-					<param name="colordiffuse" value="$VAR[Home_Artwork_Diffuse]" />
+					<param name="colordiffuse" value="$PARAM[colordiffuse]" />
 					<param name="texture_path" value="$PARAM[texture_path]" />
-					<param name="fadetime" value="360" />
+					<param name="fadetime" value="Default_Transition_1x" />
 					<param name="fadein_animation_condition" value="$PARAM[fadein_animation_condition]" />
 					<param name="fadeout_animation_condition" value="$PARAM[fadeout_animation_condition]" />
 				</include>
@@ -184,7 +185,7 @@
 			<param name="fadeout_animation_condition" value="!$EXP[Background_FadeOut_Exceptions_home]" />
 			<param name="colordiffuse" value="$VAR[Home_Artwork_Diffuse]" />
 			<param name="texture_path" value="$VAR[Background_Home_Texture]" />
-			<param name="fadetime" value="360" />
+			<param name="fadetime" value="Default_Transition_1x" />
 			<param name="time" value="$PARAM[time]" />
 		</include>
 	</include>
@@ -230,7 +231,7 @@
 			<include content="Visible_Fade_Delayed_Animation" />
 			<left>60</left>
 			<bottom>60</bottom>
-			<fadetime>360</fadetime>
+			<fadetime>Default_Transition_1x</fadetime>
 		</include>
 	</include>
 

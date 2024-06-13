@@ -45,11 +45,12 @@
 	<include name="StripView_Details">
 		<param name="id" default="504" />
 		<param name="widget_clearlogos" default="false" />
+		<param name="include_progress" default="true" />
 		<definition>
 			<include content="Viewtype_Details_Template">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="viewtype_label" value="Strip" />
-				<include content="Progress" condition="Window.Is(videos) | Window.Is(music) | Window.Is(home) | Window.Is(movieinformation) | Window.Is(1180)">
+				<include content="Progress" condition="[Window.Is(videos) | Window.Is(home) | Window.Is(movieinformation) | Window.Is(1180)] + $PARAM[include_progress]">
 					<param name="id" value="$PARAM[id]" />
 					<param name="bottom" value="144" />
 					<animation effect="slide" end="0,-30" time="0" condition="$EXP[StripView_Display_IsSquare] | $EXP[StripView_Display_IsFanart]">Conditional</animation>

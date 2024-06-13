@@ -61,12 +61,11 @@
 					<param name="focused_color" value="$VAR[Light_Color]" />
 					<param name="unfocused_color" value="$VAR[Light_Color]" />
 				</include>
+				<include content="Home_Time_Widget" condition="!Skin.String(Time_Widget,None) + !Skin.HasSetting(Time_Widget_Persistent)" />
 				<include content="globalsearch_Button" condition="!Skin.HasSetting(GlobalSearch_Disabled)" />
-				<include content="Clock" condition="!Skin.HasSetting(Hide_Home_Clock)">
-					<param name="textcolor" value="$VAR[Notification_Widget_Label_Color]" />
-				</include>
 			</control>
 			<include content="Home_Widgets" condition="Skin.HasSetting(Widgets_Enabled)" />
+			<include content="Home_Time_Widget" condition="!Skin.String(Time_Widget,None) + Skin.HasSetting(Time_Widget_Persistent)" />
 			<include content="Music_Player_Widget" condition="Skin.HasSetting(Music_Player_Enabled)">
 				<param name="left_label_visible" value="true" />
 				<param name="background_visible" value="false" />
