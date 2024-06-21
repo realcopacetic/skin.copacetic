@@ -21,7 +21,8 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ### Changelog
 ---
 **2.4.4**
-- Added option to change transparency of video player overlay (Settings > Copacetic > Backgrounds > 'OSD background brightness during video playback'
+- Added option to change transparency of video player overlay (Settings > Copacetic > Backgrounds > 'OSD background brightness during video playback')
+- Fixed bug in screen to choose preferred classification system (Settings > Copacetic > Customisations > Preferred classification ratings). Previously wrong labels were showing up in the dialog screen that opens https://github.com/realcopacetic/skin.copacetic/issues/173
 
 Still to do:
 --- checkmarks/fades for other views?

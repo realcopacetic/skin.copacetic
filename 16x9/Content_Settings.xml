@@ -781,7 +781,7 @@
 			<description>Choose preferred classification ratings...</description>
 			<label>$VAR[skinsettings_Preferred_MPAA_Label]</label>
 			<label2>$VAR[skinsettings_Preferred_MPAA_Label2]</label2>
-			<onclick>Skin.SelectBool(31452, 31701|Preferred_Rating_BBFC, 31702|Preferred_Rating_MPAA, 31704|Preferred_Rating_CHVRS, 31703|Preferred_Rating_ACB, 31705|Preferred_Rating_DJCTQ, 31706|Preferred_Rating_EIRIN, 31707|Preferred_Rating_FSK, 31709|Preferred_Rating_KIJKWIJZER)</onclick>
+			<onclick>Skin.SelectBool(31452, 31951|Preferred_Rating_BBFC, 31952|Preferred_Rating_MPAA, 31953|Preferred_Rating_CHVRS, 31954|Preferred_Rating_ACB, 31955|Preferred_Rating_DJCTQ, 31956|Preferred_Rating_EIRIN, 31957|Preferred_Rating_FSK, 31959|Preferred_Rating_KIJKWIJZER)</onclick>
 			<visible>ControlGroup(9).HasFocus(14)</visible>
 		</control>
 		<control type="radiobutton" id="1404">
