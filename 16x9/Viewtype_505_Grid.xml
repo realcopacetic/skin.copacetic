@@ -38,7 +38,7 @@
 				<!-- List -->
 				<control type="panel" id="505">
 					<viewtype label="Grid">icon</viewtype>
-					<visible>![Container.Content() + String.IsEmpty(Container.PluginName)] + !$EXP[Container_Addons_Repo] + ![Container.Content(songs) + String.IsEmpty(Container.PluginName)] + !Container.Content(playlists) + !$EXP[Content_HasBackground]</visible>
+					<visible>true</visible>
 					<left>50</left>
 					<top>180</top>
 					<width>1820</width>

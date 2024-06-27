@@ -23,8 +23,13 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 **2.4.4**
 - Added option to change transparency of video player overlay (Settings > Copacetic > Backgrounds > 'OSD background brightness during video playback')
 - Fixed bug in screen to choose preferred classification system (Settings > Copacetic > Customisations > Preferred classification ratings). Previously wrong labels were showing up in the dialog screen that opens https://github.com/realcopacetic/skin.copacetic/issues/173
+- Fixed bug in breadcrumb label colour when Addonbrowser window open and repository list is 
+- Added fallback for TV shows info label when ListItem.Property(unwatched episodes) is unavailable
 
 Still to do:
+---- Gridview - going to dialog over the top (e.g shutdown menu) - multiart interrupter - should this restart the clock?
+---- Transition times
+---- Infoscreen transitions
 --- checkmarks/fades for other views?
 --- check to see the player status labels
 -- transition times - check all animations are switched to constants, decide on content switching exclusions for each view. See if anything breaks or any other areas animations can be cut

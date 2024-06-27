@@ -88,7 +88,11 @@
 				<param name="art_diffuse_fadeout_1" value="$PARAM[art_diffuse_fadeout_1]" />
 				<param name="art_diffuse_fadeout_2" value="$PARAM[art_diffuse_fadeout_2]" />
 				<param name="now_playing" value="$PARAM[now_playing] + !Window.IsVisible(1107)" />
+				<!-- Fade to 50% if Gridview and icon is focused -->
+				<include content="GridView_Fade_OnFocus_Animation" />
+				<!-- Fade to 33% if current focused item is now playing -->
 				<animation effect="fadediffuse" end="ff555555" time="Default_Transition_1x" delay="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="$PARAM[now_playing] + Window.IsVisible(1107) + !Skin.HasSetting(Experiment_Disable_Transitions)">Conditional</animation>
+				<!-- Fade to 0% when multiart visible on top -->
 				<animation effect="fadediffuse" end="80000000" time="Default_Transition_0.25x" delay="3500" condition="[Window.Is(videos) | Window.Is(home) | Window.Is(music)] + Skin.HasSetting(Multiart_Slideshow) + !String.IsEqual(Container.FolderName,ListItem.Title) + String.IsEqual(Window(home).Property(Multiart_Fadeout),true) + !String.IsEqual(Control.GetLabel(6400),flags/blank.png) + !$EXP[Content_Switching] + [!String.IsEmpty(Window(home).Property(Multiart_Fadeout)) | Control.HasFocus(3100)] + !$EXP[Multiart_Container_Switching] + ![$EXP[GridView_IsVisible] + $EXP[Scrollbar_HasFocus]]" reversible="false">Conditional</animation>
 				<include content="Secondary_List_Scroll_Animation" />
 			</include>
@@ -142,6 +146,7 @@
 				<animation effect="fadediffuse" end="ff555555" time="Default_Transition_1x" delay="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="$PARAM[now_playing] + Window.IsVisible(1107) + !Skin.HasSetting(Experiment_Disable_Transitions)">Conditional</animation>
 				<include content="Multiart_Fade_Animation" />
 				<include content="Secondary_List_Scroll_Animation" />
+				<include content="GridView_Fade_OnFocus_Animation" />
 			</include>
 		</definition>
 	</include>

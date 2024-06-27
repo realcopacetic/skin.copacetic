@@ -5,7 +5,7 @@
 		<scrolltime tween="sine" easing="inout">360</scrolltime>
 	</include>
 	<include name="Quick_Scrolltime">
-		<scrolltime tween="sine" easing="inout">90</scrolltime>
+		<scrolltime tween="sine" easing="inout">180</scrolltime>
 	</include>
 
 	<include name="Hidden_List">

@@ -21,12 +21,12 @@
 	<constant name="Quick_Transition_0.75x">135</constant>
 	<constant name="Quick_Transition_1x">180</constant>
 	<constant name="Quick_Transition_1.5x">180</constant>
-	<constant name="Default_Transition_2x">180</constant>
+	<constant name="Quick_Transition_2x">180</constant>
 	<constant name="Quick_Transition_3x">180</constant>
-	<constant name="Default_Transition_4x">180</constant>
-	<constant name="Default_Transition_5x">180</constant>
-	<constant name="Default_Transition_6x">180</constant>
-	<constant name="Default_Transition_7x">180</constant>
+	<constant name="Quick_Transition_4x">180</constant>
+	<constant name="Quick_Transition_5x">180</constant>
+	<constant name="Quick_Transition_6x">180</constant>
+	<constant name="Quick_Transition_7x">180</constant>
 
 	<!-- Autoscroll -->
 	<autoscroll delay="5000" time="7500" repeat="2000">true</autoscroll>
