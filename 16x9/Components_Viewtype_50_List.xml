@@ -26,6 +26,15 @@
 					<param name="fallback" value="$PARAM[fallback]" />
 					<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 					<param name="now_playing" value="false" />
+					<param name="fadetime" value="0" />
+					<include content="Ken_Burns_Effect_Animation" condition="$PARAM[kenburns]" />
+				</include>
+				<include content="Icon_Art">
+					<param name="texture" value="$VAR[$PARAM[art_icon](0)Content]" />
+					<param name="aspectratio" value="$PARAM[aspectratio]" />
+					<param name="fallback" value="$PARAM[fallback]" />
+					<param name="art_diffuse" value="$PARAM[art_diffuse]" />
+					<param name="now_playing" value="false" />
 					<param name="fadetime" value="Default_Transition_1x" />
 					<include content="Ken_Burns_Effect_Animation" condition="$PARAM[kenburns]" />
 				</include>
