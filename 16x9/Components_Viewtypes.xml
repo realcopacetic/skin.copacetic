@@ -828,6 +828,10 @@
 					<param name="background_color" value="$PARAM[background_color]" />
 					<param name="focus_color" value="$PARAM[focus_color]" />
 				</include>
+				<include content="Progress_Bar_SetProgress">
+					<param name="id" value="$PARAM[id]" />
+					<param name="focus_color" value="$PARAM[focus_color]" />
+				</include>
 				<include content="Progress_Bar_100">
 					<param name="id" value="$PARAM[id]" />
 					<param name="focus_color" value="$PARAM[focus_color]" />
@@ -844,8 +848,7 @@
 
 	<include name="Progress_Bar_0">
 		<control type="image">
-			<visible>Integer.IsGreater(Container($PARAM[id]).ListItem.Property(UnwatchedEpisodes),0) + Skin.HasSetting(Unwatched_Indicator)</visible>
-			<visible>[!String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedEpisodePercent)) + Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedEpisodePercent),0)] | [!String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)]</visible>
+			<visible>[Integer.IsGreater(Container($PARAM[id]).ListItem.Property(UnwatchedEpisodes),0) + Skin.HasSetting(Unwatched_Indicator)] | [!String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedEpisodePercent)) + Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedEpisodePercent),0)] | [!String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)] | [Container($PARAM[id]).ListItem.IsCollection + Container($PARAM[id]).ListItem.IsResumable + Integer.IsGreater(Window(home).Property(collection_watched_percentage),0) + Integer.IsLess(Window(home).Property(collection_watched_percentage),100)]</visible>
 			<width>100%</width>
 			<height>100%</height>
 			<texture colordiffuse="$PARAM[background_color]">views/white_100.png</texture>
@@ -886,6 +889,37 @@
 			<texturebg colordiffuse="$PARAM[background_color]">views/white_100.png</texturebg>
 			<midtexture colordiffuse="$PARAM[focus_color]">views/white_100.png</midtexture>
 			<info>Container($PARAM[id]).ListItem.PercentPlayed</info>
+		</control>
+	</include>
+
+	<include name="Progress_Bar_SetProgress">
+		<control type="image">
+			<visible>Container($PARAM[id]).ListItem.IsCollection + Container($PARAM[id]).ListItem.IsResumable + Integer.IsGreater(Window(home).Property(collection_watched_percentage),0) + Integer.IsLess(Window(home).Property(collection_watched_percentage),100)</visible>
+			<visible>![$EXP[ListView_IsVisible] + !$EXP[Infoscreen_IsVisible]]</visible>
+			<visible>![Control.HasFocus(505) + Skin.HasSetting(GridView_AltWatchedStatus_Enabled)]</visible>
+			<width>100%</width>
+			<height>100%</height>
+			<texture colordiffuse="$PARAM[focus_color]">views/white_100.png</texture>
+			<animation effect="zoom" center="0,0" end="95,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),93) + Integer.IsLess(Window(home).Property(collection_watched_percentage),100)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="90,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),88) + Integer.IsLess(Window(home).Property(collection_watched_percentage),93)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="85,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),83) + Integer.IsLess(Window(home).Property(collection_watched_percentage),88)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="80,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),78) + Integer.IsLess(Window(home).Property(collection_watched_percentage),83)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="75,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),73) + Integer.IsLess(Window(home).Property(collection_watched_percentage),78)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="70,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),68) + Integer.IsLess(Window(home).Property(collection_watched_percentage),73)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="65,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),63) + Integer.IsLess(Window(home).Property(collection_watched_percentage),68)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="60,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),58) + Integer.IsLess(Window(home).Property(collection_watched_percentage),63)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="55,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),53) + Integer.IsLess(Window(home).Property(collection_watched_percentage),58)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="50,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),48) + Integer.IsLess(Window(home).Property(collection_watched_percentage),53)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="45,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),43) + Integer.IsLess(Window(home).Property(collection_watched_percentage),48)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="40,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),38) + Integer.IsLess(Window(home).Property(collection_watched_percentage),43)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="35,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),33) + Integer.IsLess(Window(home).Property(collection_watched_percentage),38)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="30,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),28) + Integer.IsLess(Window(home).Property(collection_watched_percentage),33)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="25,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),23) + Integer.IsLess(Window(home).Property(collection_watched_percentage),28)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="20,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),18) + Integer.IsLess(Window(home).Property(collection_watched_percentage),23)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="15,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),13) + Integer.IsLess(Window(home).Property(collection_watched_percentage),18)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="10,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),8) + Integer.IsLess(Window(home).Property(collection_watched_percentage),13)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="5,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),3) + Integer.IsLess(Window(home).Property(collection_watched_percentage),8)" reversible="false">Conditional</animation>
+			<animation effect="zoom" center="0,0" end="3,100" time="0" condition="Integer.IsGreaterOrEqual(Window(home).Property(collection_watched_percentage),0) + Integer.IsLess(Window(home).Property(collection_watched_percentage),3)" reversible="false">Conditional</animation>
 		</control>
 	</include>
 
