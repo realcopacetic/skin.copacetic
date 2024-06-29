@@ -29,7 +29,9 @@
 	<constant name="Quick_Transition_7x">180</constant>
 
 	<!-- Autoscroll -->
-	<autoscroll delay="5000" time="7500" repeat="2000">true</autoscroll>
+	<constant name="Autoscroll_Delay">5000</constant>
+	<constant name="Autoscroll_Time">5000</constant>
+	<constant name="Autoscroll_Repeat">2000</constant>
 
 	<!-- Now playing bars animation-->
 	<constant name="NowPlaying_Bar_1">240</constant>

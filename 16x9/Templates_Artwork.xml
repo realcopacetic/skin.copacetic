@@ -44,7 +44,7 @@
 		<definition>
 			<control type="image">
 				<visible>$PARAM[visible]</visible>
-				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" />
+				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" condition="!Window.IsMedia | Window.IsVisible(1180)" />
 				<animation effect="fadediffuse" end="ff808080" time="0" condition="$PARAM[art_diffuse]">Conditional</animation>
 				<animation effect="fadediffuse" end="ff808080" time="Default_Transition_1x" tween="sine" easing="inout" condition="$PARAM[art_diffuse_fadein] + !Skin.HasSetting(Experiment_Disable_Transitions)" reversible="false">Conditional</animation>
 				<animation effect="fadediffuse" end="ff808080" time="0" condition="$PARAM[art_diffuse_fadein] + Skin.HasSetting(Experiment_Disable_Transitions)" reversible="false">Conditional</animation>
@@ -191,34 +191,6 @@
 					<visible>!$EXP[TransparentDialog_IsVisible]</visible>
 					<include content="Visible_Fade_Delayed_Animation" />
 					<texture colordiffuse="$VAR[Light_Color]">views/collection_indicator.png</texture>
-				</control>
-			</control>
-		</definition>
-	</include>
-
-	<include name="Icon_Component_Indicator_Grid">
-		<param name="visible" />
-		<param name="top" default="0" />
-		<param name="width" default="30" />
-		<param name="backing" default="true" />
-		<definition>
-			<control type="group">
-				<visible>$PARAM[visible]</visible>
-				<nested />
-				<right>0</right>
-				<top>$PARAM[top]</top>
-				<width>$PARAM[width]</width>
-				<height>$PARAM[width]</height>
-				<control type="group">
-					<visible>!$EXP[TransparentDialog_IsVisible]</visible>
-					<include content="Visible_Fade_Delayed_Animation" />
-					<control type="image">
-						<visible>$PARAM[backing]</visible>
-						<texture colordiffuse="$VAR[Accent_Color]">views/white_100.png</texture>
-					</control>
-					<control type="image">
-						<texture colordiffuse="$VAR[Light_Color]">views/collection_indicator_grid.png</texture>
-					</control>
 				</control>
 			</control>
 		</definition>

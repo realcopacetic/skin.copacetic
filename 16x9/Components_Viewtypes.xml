@@ -808,18 +808,17 @@
 		<definition>
 			<control type="group">
 				<visible>$PARAM[visible]</visible>
-				<visible>!String.IsEqual(Container($PARAM[id]).ListItem.DBType,artist) + !String.IsEqual(Container($PARAM[id]).ListItem.DBType,album) + !String.IsEqual(Container($PARAM[id]).ListItem.DBType,song) + !Container.Content(actors) + ![$EXP[Infoscreen_IsVisible] + Control.HasFocus(50)]</visible>
 				<animation effect="slide" start="0,0" end="0,6" time="0" condition="Skin.HasSetting(Unwatched_Indicator) + $EXP[ShowcaseView_IsVisible] + $EXP[ShowcaseView_Details_Off] + Integer.IsGreater(Container($PARAM[id]).ListItem.Property(UnwatchedEpisodes),0)">Conditional</animation>
-				<include content="Progress_Bar_0" condition="!Window.Is(music)">
+				<include content="Progress_Bar_0">
 					<param name="id" value="$PARAM[id]" />
 					<param name="background_color" value="$PARAM[background_color]" />
 				</include>
-				<include content="Progress_Bar_WatchedEpisodePercent" condition="!Window.Is(music)">
+				<include content="Progress_Bar_WatchedEpisodePercent">
 					<param name="id" value="$PARAM[id]" />
 					<param name="background_color" value="$PARAM[background_color]" />
 					<param name="focus_color" value="$PARAM[focus_color]" />
 				</include>
-				<include content="Progress_Bar_WatchedProgress" condition="!Window.Is(music)">
+				<include content="Progress_Bar_WatchedProgress">
 					<param name="id" value="$PARAM[id]" />
 					<param name="background_color" value="$PARAM[background_color]" />
 					<param name="focus_color" value="$PARAM[focus_color]" />
@@ -833,7 +832,7 @@
 					<param name="id" value="$PARAM[id]" />
 					<param name="focus_color" value="$PARAM[focus_color]" />
 				</include>
-				<include content="Unwatched_Indicator" condition="Skin.HasSetting(Unwatched_Indicator)">
+				<include content="Unwatched_Indicator" condition="Skin.HasSetting(Unwatched_Indicator) + !Window.Is(music)">
 					<param name="id" value="$PARAM[id]" />
 					<param name="slides" value="$PARAM[slides]" />
 					<param name="background" value="$PARAM[progress_indicator_background]" />
@@ -881,7 +880,7 @@
 
 	<include name="Progress_Bar_Resumable">
 		<control type="progress">
-			<visible>Container($PARAM[id]).ListItem.IsResumable</visible>
+			<visible>Container($PARAM[id]).ListItem.IsResumable + !Container($PARAM[id]).ListItem.IsCollection</visible>
 			<width>100%</width>
 			<height>100%</height>
 			<texturebg colordiffuse="$PARAM[background_color]">views/white_100.png</texturebg>

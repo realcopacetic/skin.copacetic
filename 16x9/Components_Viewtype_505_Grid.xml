@@ -12,11 +12,9 @@
 			<control type="group">
 				<visible>$PARAM[visible]</visible>
 				<visible>!$EXP[TransparentDialog_IsVisible] + !$EXP[Scrollbar_HasFocus]</visible>
-				<include content="Visible_Fade_Animation" />
+				<include content="Visible_Fade_Delayed_Animation" />
 				<height>$PARAM[width]</height>
-				<bottom>0</bottom>
 				<width>$PARAM[width]</width>
-				<centerleft>50%</centerleft>
 				<control type="image">
 					<texture colordiffuse="$VAR[Accent_Color]">views/white_100.png</texture>
 					<visible>$PARAM[backing_visible]</visible>
@@ -25,6 +23,7 @@
 					<param name="color" value="$PARAM[color]" />
 					<param name="width" value="$PARAM[width]" />
 				</include>
+				<nested />
 			</control>
 		</definition>
 	</include>
@@ -41,19 +40,29 @@
 			<include content="Visible_Fade_Animation" />
 			<animation effect="slide" end="4,0" time="0" condition="Skin.String(GridView_Size,Small)" reversible="false">Conditional</animation>
 			<animation effect="slide" end="12,0" time="0" condition="$EXP[GridView_Display_IsFanart] + !Skin.String(GridView_Size,Small)" reversible="false">Conditional</animation>
+			<!-- Check -->
 			<include content="Grid_Icon" condition="Skin.HasSetting(GridView_AltWatchedStatus_Enabled) + Window.Is(videos)">
 				<param name="backing_visible" value="false" />
 				<param name="color" value="$VAR[Light_Color]" />
+				<bottom>0</bottom>
+				<centerleft>50%</centerleft>
 			</include>
 			<include content="Grid_Icon" condition="Skin.HasSetting(GridView_AltWatchedStatus_Enabled) + [Window.Is(addonbrowser) | Window.Is(programs)]">
 				<param name="backing_visible" value="false" />
 				<param name="color" value="$VAR[Light_Color]" />
 				<param name="icon" value="Special_Addonbrowser_focused" />
 				<param name="visible" value="[!String.Contains(Container.FolderPath,/user/) + [ListItem.Property(Addon.IsInstalled) | String.Contains(ListItem.Label,Copacetic)]] | [$EXP[Container_Addons_NonRepo] + String.Contains(Container.FolderPath,/user/) + ListItem.Property(Addon.IsInstalled) + !ListItem.Property(Addon.IsEnabled)]" />
+				<bottom>0</bottom>
+				<centerleft>50%</centerleft>
 			</include>
-			<include content="Icon_Component_Indicator_Grid" condition="Skin.HasSetting(Secondary_List_Enabled)">
+			<!-- IsCollection or HasVideoVersions -->
+			<include content="Grid_Icon" condition="Skin.HasSetting(Secondary_List_Enabled) + Window.Is(videos)">
+				<param name="backing_visible" value="false" />
+				<param name="icon" value="Library_focused" />
+				<param name="color" value="$VAR[Light_Color]" />
 				<param name="visible" value="ListItem.IsCollection | [ListItem.HasVideoVersions + !String.IsEqual(Container.FolderName,ListItem.Title)]" />
-				<param name="backing" value="false" />
+				<top>0</top>
+				<right>0</right>
 			</include>
 		</include>
 	</include>
@@ -243,21 +252,29 @@
 					</control>
 				</control>
 				<!-- Progress -->
-				<include content="Progress_Grid" condition="Window.Is(videos) | Window.Is(music)">
+				<include content="Progress_Grid" condition="Window.Is(videos)">
 					<param name="id" value="505" />
 					<param name="left" value="$PARAM[progress_left]" />
 					<param name="width" value="$PARAM[progress_width]" />
 					<param name="slides" value="$PARAM[progress_slides]" />
 				</include>
 				<!-- Check -->
-				<include content="Grid_Icon" condition="Skin.HasSetting(GridView_AltWatchedStatus_Enabled) + Window.Is(videos)" />
+				<include content="Grid_Icon" condition="Skin.HasSetting(GridView_AltWatchedStatus_Enabled) + Window.Is(videos)">
+					<bottom>0</bottom>
+					<centerleft>50%</centerleft>
+				</include>
 				<include content="Grid_Icon" condition="Skin.HasSetting(GridView_AltWatchedStatus_Enabled) + [Window.Is(addonbrowser) | Window.Is(programs)]">
 					<param name="icon" value="Special_Addonbrowser_focused" />
 					<param name="visible" value="[!String.Contains(Container.FolderPath,/user/) + [ListItem.Property(Addon.IsInstalled) | String.Contains(ListItem.Label,Copacetic)]] | [$EXP[Container_Addons_NonRepo] + String.Contains(Container.FolderPath,/user/) + ListItem.Property(Addon.IsInstalled) + !ListItem.Property(Addon.IsEnabled)]" />
+					<bottom>0</bottom>
+					<centerleft>50%</centerleft>
 				</include>
-				<!-- Indicator -->
-				<include content="Icon_Component_Indicator_Grid" condition="Skin.HasSetting(Secondary_List_Enabled)">
+				<!-- IsCollection or HasVideoVersions -->
+				<include content="Grid_Icon" condition="Skin.HasSetting(Secondary_List_Enabled) + Window.Is(videos)">
+					<param name="icon" value="Library_focused" />
 					<param name="visible" value="ListItem.IsCollection | [ListItem.HasVideoVersions + !String.IsEqual(Container.FolderName,ListItem.Title)]" />
+					<top>0</top>
+					<right>0</right>
 				</include>
 			</control>
 		</definition>

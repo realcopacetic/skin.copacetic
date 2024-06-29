@@ -172,23 +172,24 @@
 		<param name="id" />
 		<param name="widget_position" />
 		<param name="widget_display" />
+		<param name="include_progress" default="true" />
 		<definition>
 			<include content="Viewtype_Details_Including_Content_Switching_Template">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="viewtype_label" value="Grid" />
-				<include content="Progress_Grid_$PARAM[widget_display]" condition="Window.Is(movieinformation)">
+				<include content="Progress_Grid_$PARAM[widget_display]" condition="Window.Is(movieinformation) + $PARAM[include_progress]">
 					<param name="id" value="$PARAM[id]" />
 				</include>
-				<include content="Progress_Grid_Posters" condition="Window.Is(home) + !Skin.String(Widget$PARAM[widget_position]_Display,Fanart) + !Skin.String(Widget$PARAM[widget_position]_Display,Spotlight) + !Skin.String(Widget$PARAM[widget_position]_Display,Square)">
+				<include content="Progress_Grid_Posters" condition="Window.Is(home) + !Skin.String(Widget$PARAM[widget_position]_Display,Fanart) + !Skin.String(Widget$PARAM[widget_position]_Display,Spotlight) + !Skin.String(Widget$PARAM[widget_position]_Display,Square) + $PARAM[include_progress]">
 					<param name="id" value="$PARAM[id]" />
 				</include>
-				<include content="Progress_Grid_Fanart" condition="Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Fanart)">
+				<include content="Progress_Grid_Fanart" condition="Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Fanart) + $PARAM[include_progress]">
 					<param name="id" value="$PARAM[id]" />
 				</include>
-				<include content="Progress_Grid_Spotlight" condition="Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Spotlight)">
+				<include content="Progress_Grid_Spotlight" condition="Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Spotlight) + $PARAM[include_progress]">
 					<param name="id" value="$PARAM[id]" />
 				</include>
-				<include content="Progress_Grid_Square" condition="Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Square)">
+				<include content="Progress_Grid_Square" condition="Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Square) + $PARAM[include_progress]">
 					<param name="id" value="$PARAM[id]" />
 				</include>
 				<include content="Breadcrumb_Label" condition="![Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Spotlight)]">

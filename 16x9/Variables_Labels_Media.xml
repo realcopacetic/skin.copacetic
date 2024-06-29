@@ -121,6 +121,10 @@
 	</variable>
 
 	<variable name="Background_Label">
+		<value condition="Window.IsVisible(loginscreen) + !String.IsEmpty(Container(3300).ListItem.Art(fanart))">$INFO[Container(3300).ListItem.Label]</value>
+		<value condition="!String.Contains(Container.FolderPath,plugin://) + $EXP[Content_HasBackground] + !String.IsEmpty(Container(3300).ListItem.Art(fanart))">$INFO[Container(3300).ListItem.Label]</value>
+		<value condition="Window.IsVisible(videos) + !String.IsEmpty(Window(home).Property(background_videos_fanart))">$INFO[Window(home).Property(background_videos_title)]</value>
+		<value condition="Window.IsVisible(music) + !String.IsEmpty(Window(home).Property(background_artists_fanart))">$INFO[Window(home).Property(background_artists_title)]</value>
 		<value condition="[Skin.HasSetting(Home_Background_Override_Enabled) | !Window.Is(home)] + Skin.String(Background_Slideshow,Custom) + Skin.String(Background_Slideshow_Custom_Path) + !String.IsEmpty(Window(home).Property(background_custom_title))">$INFO[Window(home).Property(background_custom_title)]</value>
 		<value condition="[Skin.HasSetting(Home_Background_Override_Enabled) | !Window.Is(home)] + Skin.String(Background_Slideshow,Global) + !String.IsEmpty(Window(home).Property(background_global_title))">$INFO[Window(home).Property(background_global_title)]</value>
 		<value condition="[Skin.HasSetting(Home_Background_Override_Enabled) | !Window.Is(home)] + Skin.String(Background_Slideshow,Videos) + !String.IsEmpty(Window(home).Property(background_videos_title))">$INFO[Window(home).Property(background_videos_title)]</value>

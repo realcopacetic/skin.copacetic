@@ -25,9 +25,15 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Fixed bug in screen to choose preferred classification system (Settings > Copacetic > Customisations > Preferred classification ratings). Previously wrong labels were showing up in the dialog screen that opens https://github.com/realcopacetic/skin.copacetic/issues/173
 - Fixed bug in breadcrumb label colour when Addonbrowser window open and repository list is 
 - Added fallback for TV shows info label when ListItem.Property(unwatched episodes) is unavailable
+- Fixed animation glitch in artwork fadediffuse when a dialog window e.g. Context Menu is visible on top.
+- Transitioned majority of animations to constants
+- Fixed background slideshow label - in some scenarios it was showing names that didn't match the artwork currently on display
+- Prevented empty progress bar from showing on incomplete movie sets. This was showing as empty because ListItem.IsResumable returns True for collections, but ListItem.PercentPlayed returns empty i.e. 0.
+- Fixed glitch in progress bar gradient when navigating through secondary lists on some views
+- Disabled Multiart Reset Interrupter on GridView. This interrupter prevents the multiart timer resetting when the container loses focus to items such as the shutdown or view options menu. It's why multiart slideshows can continue in the background when these menus are focused for most views. However, Gridview cannot support this as it is constructed using a default panel, meaning that the focuslayout disappears whenever these other menus take focus. Without disabling the Reset Interruptor, multiart will be visible, then it will disappear if you bring up the shutdown menu, then it will immediately reappear after the menu is closed. This can be jarring so it's better to let the multiart timer reset and start counting again from 0 when gridview loses focus.
 
 Still to do:
----- Gridview - going to dialog over the top (e.g shutdown menu) - multiart interrupter - should this restart the clock?
+---- Light_Theme_Background_Fade_Animation = does it need a separate animatio for when options menu is visible?
 ---- Transition times
 ---- Infoscreen transitions
 --- checkmarks/fades for other views?
