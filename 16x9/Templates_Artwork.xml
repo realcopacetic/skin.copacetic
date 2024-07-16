@@ -89,8 +89,6 @@
 				<param name="art_diffuse_fadeout_1" value="$PARAM[art_diffuse_fadeout_1]" />
 				<param name="art_diffuse_fadeout_2" value="$PARAM[art_diffuse_fadeout_2]" />
 				<param name="now_playing" value="$PARAM[now_playing] + !Window.IsVisible(1107)" />
-				<!-- Fade to 50% if Gridview and icon is focused -->
-				<include content="GridView_Fade_OnFocus_Animation" />
 				<!-- Fade to 33% if current focused item is now playing -->
 				<animation effect="fadediffuse" end="ff555555" time="Default_Transition_1x" delay="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="$PARAM[now_playing] + Window.IsVisible(1107) + !Skin.HasSetting(Quick_Transitions)">Conditional</animation>
 				<!-- Fade to 0% when multiart visible on top -->
@@ -147,7 +145,6 @@
 				<animation effect="fadediffuse" end="ff555555" time="Default_Transition_1x" delay="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="$PARAM[now_playing] + Window.IsVisible(1107) + !Skin.HasSetting(Quick_Transitions)">Conditional</animation>
 				<include content="Multiart_Fade_Animation" />
 				<include content="Secondary_List_Scroll_Animation" />
-				<include content="GridView_Fade_OnFocus_Animation" />
 			</include>
 		</definition>
 	</include>

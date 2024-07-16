@@ -256,18 +256,6 @@
 		</include>
 	</include>
 
-	<include name="GridView_Fade_OnFocus_Animation">
-		<include content="fadediffuse_template" condition="!Skin.HasSetting(Quick_Transitions)">
-			<param name="type" value="Focus" />
-			<param name="start" value="ffffffff" />
-			<param name="end" value="ff808080" />
-			<param name="time" value="Default_Transition_1x" />
-			<param name="delay" value="Default_Transition_2x" />
-			<param name="reversible" value="false" />
-			<param name="condition" value="![$EXP[GridView_Details_Off] | $EXP[GridView_Details_Breadcrumb] | $EXP[ListItem(0)_NowPlaying]] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo)" />
-		</include>
-	</include>
-
 	<!-- Rotations -->
 	<include name="Rotate_180_Animation">
 		<animation effect="rotate" start="0" end="180" center="auto" time="0" condition="true">Conditional</animation>
