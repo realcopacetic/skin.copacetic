@@ -55,19 +55,11 @@
 	</include>
 
 	<include name="User_Scroll_Delay">
-		<include content="User_Scroll_Delay_Template" condition="!Skin.HasSetting(Quick_Transitions)">
+		<include content="User_Scroll_Delay_Template" condition="![Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)]">
 			<param name="onprevious_id" value="$PARAM[onprevious_id]" />
 			<param name="onprevious_trigger" value="$PARAM[onprevious_trigger]" />
 			<param name="onnext_id" value="$PARAM[onnext_id]" />
 			<param name="onnext_trigger" value="$PARAM[onnext_trigger]" />
-		</include>
-		<include content="User_Scroll_Delay_Template" condition="Skin.HasSetting(Quick_Transitions) + !Skin.HasSetting(Zero_Transitions)">
-			<param name="onprevious_id" value="$PARAM[onprevious_id]" />
-			<param name="onprevious_trigger" value="$PARAM[onprevious_trigger]" />
-			<param name="onnext_id" value="$PARAM[onnext_id]" />
-			<param name="onnext_trigger" value="$PARAM[onnext_trigger]" />
-			<param name="content_delay" value="Quick_Transition_1x" />
-			<param name="container_delay" value="Quick_Transition_2x" />
 		</include>
 		<include content="User_Scroll_Delay_Template" condition="Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)">
 			<param name="onprevious_id" value="$PARAM[onprevious_id]" />
