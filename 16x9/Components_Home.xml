@@ -418,12 +418,12 @@
 					<param name="label" value="$INFO[System.Date(ddd)]$INFO[System.Date(mmm d),$COMMA ]" />
 					<param name="textcolor" value="$PARAM[textcolor]" />
 				</include>
-				<include content="Time_Widget_Icon" condition="Weather.IsFeetched + $PARAM[include_weather]">
-					<param name="visible" value="!String.IsEqual(Weather.Conditions,$LOCALIZE[503])" />
+				<include content="Time_Widget_Icon" condition="$PARAM[include_weather]">
+					<param name="visible" value="Weather.IsFetched + !String.IsEqual(Weather.Conditions,$LOCALIZE[503])" />
 					<param name="texture" value="$INFO[Weather.ConditionsIcon]" />
 				</include>
-				<include content="Time_Widget_Label_Small" condition="Weather.IsFetched + $PARAM[include_weather]">
-					<param name="visible" value="!String.IsEmpty(Weather.Temperature)" />
+				<include content="Time_Widget_Label_Small" condition="$PARAM[include_weather]">
+					<param name="visible" value="Weather.IsFetched + !String.IsEmpty(Weather.Temperature)" />
 					<param name="label" value="$INFO[Weather.Temperature]" />
 					<param name="textcolor" value="$PARAM[textcolor]" />
 				</include>

@@ -20,6 +20,10 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.5.1**
+- Fixed an animation bug when quick transitions are selected caused by the fact that the content switching scroll time was reduced but some scrolling animations in Strip and Showcase are hardcoded. Now the scrolling speed is the same for these views as the default transitions, but there is no longer a delay before the content appears, so it still feels quicker. Choosing to disable scrolling animations entirely still reduces the scroll speed to 0 for these views.
+- Fixed a bug in the new Time widget preventing the weather information from correctly displaying
+
 **1.5.0**
 - Added option to change transparency of video player overlay (Settings > Copacetic > Backgrounds > 'OSD background brightness during video playback')
 - Fixed bug in screen to choose preferred classification system (Settings > Copacetic > Customisations > Preferred classification ratings). Previously wrong labels were showing up in the dialog screen that opens https://github.com/realcopacetic/skin.copacetic/issues/173
