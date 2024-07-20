@@ -339,7 +339,7 @@
 	</include>
 
 	<include name="Home_Time_Widget">
-		<param name="visible" default="![$EXP[Music_Player_IsVisible] | $EXP[Music_Player_HasFocus] | Window.IsVisible(volumebar) | Window.IsVisible(notification) | Window.IsVisible(extendedprogressdialog)] | Window.IsVisible(shutdownmenu)" />
+		<param name="visible" default="![$EXP[Music_Player_IsVisible] | $EXP[Music_Player_HasFocus] | $EXP[Infoscreen_IsVisible] | Window.IsVisible(volumebar) | Window.IsVisible(notification) | Window.IsVisible(extendedprogressdialog)] | Window.IsVisible(shutdownmenu)" />
 		<param name="textcolor" default="$VAR[Notification_Widget_Label_Color]" />
 		<definition>
 			<include content="Clock" condition="!Skin.String(Time_Widget,Date) + !Skin.String(Time_Widget,Weather)">
@@ -399,7 +399,7 @@
 	</include>
 
 	<include name="Time_Widget">
-		<param name="visible" default="true" />
+		<param name="visible" default="![$EXP[Music_Player_IsVisible] | $EXP[Music_Player_HasFocus] | $EXP[Infoscreen_IsVisible] | Window.IsVisible(volumebar) | Window.IsVisible(notification) | Window.IsVisible(extendedprogressdialog)]" />
 		<param name="include_weather" default="true" />
 		<param name="textcolor" default="$VAR[Light_Color]" />
 		<definition>
