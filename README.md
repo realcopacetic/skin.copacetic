@@ -24,6 +24,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Fixed bug where square widgets were showing fanart even when a thumbnail was available https://github.com/realcopacetic/skin.copacetic/issues/179
 - Fixed an animation bug when quick transitions are selected caused by the fact that the content switching scroll time was reduced but some scrolling animations in Strip and Showcase are hardcoded. Now the scrolling speed is the same for these views as the default transitions, but there is no longer a delay before the content appears, so it still feels quicker. Choosing to disable scrolling animations entirely still reduces the scroll speed to 0 for these views.
 - Fixed a bug in the new Time widget preventing the weather information from correctly displaying
+- Fixed a bug in translations file - https://github.com/realcopacetic/skin.copacetic/issues/183
 
 Still to do:
 ----- slides on Grid horizontal landscape when 2 items, looks too high

@@ -1012,7 +1012,7 @@ msgstr ""
 #/16x9/Content_Settings.xml
 msgctxt "#31710"
 msgid "Include 'review' field in this search"
-msgstr "
+msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31442"
