@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-12-12 14:12+0000\n"
+"PO-Revision-Date: 2024-07-21 11:47+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: French (France) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/fr_fr/>\n"
 "Language: fr_fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.2.1\n"
+"X-Generator: Weblate 5.6.2\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -464,7 +464,7 @@ msgstr "Général"
 # /16x9/Content_Settings.xml
 msgctxt "#31500"
 msgid "Configure your Copacetic theme, menus and background artwork service."
-msgstr ""
+msgstr "Configurez votre thème Copacetic, vos menus et votre service d'arrière-plans."
 
 # /16x9/Content_Settings.xml
 # /16x9/Content.xml
@@ -568,7 +568,7 @@ msgstr "Réinitialiser la couleur contraste"
 # /16x9/Content_Settings.xml
 msgctxt "#31487"
 msgid "Background panel opacity (%)"
-msgstr ""
+msgstr "Opacité du panneau d'arrière-plan (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31587"
@@ -578,7 +578,7 @@ msgstr "Permet de régler l'opacité des panneaux d'arrière-plan qui apparaisse
 # /16x9/Content_Settings.xml
 msgctxt "#31412"
 msgid "Recommended Kodi settings for Copacetic"
-msgstr ""
+msgstr "Configuration Kodi recommandée pour Copacetic"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31512"
@@ -628,17 +628,17 @@ msgstr "Réinitialiser tous les menus"
 # /16x9/Content_Settings.xml
 msgctxt "#31492"
 msgid "Enable home shortcut in Shutdown menu"
-msgstr ""
+msgstr "Activer le raccourci accueil dans le menu arrêt"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31493"
 msgid "Enable theme switcher shortcut in Shutdown menu"
-msgstr ""
+msgstr "Activer le raccourci de changement de thème dans le menu d'arrêt"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31494"
 msgid "Enable LibreELEC menu shortcut in Shutdown menu"
-msgstr ""
+msgstr "Activer le raccourci LibreELEC dans le menu d'arrêt"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31420"
@@ -708,7 +708,7 @@ msgstr "Vitesse du diaporama d'arrière-plan (secondes)"
 # /16x9/Content_Settings.xml
 msgctxt "#31527"
 msgid "Choose how quickly artwork in the slideshow should be refreshed. Default: 10 seconds"
-msgstr ""
+msgstr "Choisissez la vitesse de rafraîchissement des illustrations du diaporama. Valeur par défaut : 10 secondes"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31428"
@@ -761,22 +761,22 @@ msgstr "Arrière-plan"
 # /16x9/Content.xml
 msgctxt "#31532"
 msgid "Customise background slideshows, brightness and panel opacity"
-msgstr ""
+msgstr "Personnalisation des diaporamas d'arrière-plan, de la luminosité et de l'opacité"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31495"
 msgid "Show the name of the current displayed background"
-msgstr ""
+msgstr "Afficher le nom de l'arrière-plan affiché"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31433"
 msgid "Override home background with global slideshow"
-msgstr ""
+msgstr "Remplacer l'arrière-plan de l'accueil par un diaporama global"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31533"
 msgid "Use the selected global slideshow on the homescreen instead of local or skin.shortcuts slideshows"
-msgstr ""
+msgstr "Utiliser le diaporama global sélectionné sur l'écran d'accueil à la place du diaporama local ou du diaporama skin.shortcuts"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31436"
@@ -806,7 +806,7 @@ msgstr "Régler la luminosité de l'arrière-plan (%)"
 # /16x9/Content_Settings.xml
 msgctxt "#31441"
 msgid "Add movement to fullscreen artwork"
-msgstr ""
+msgstr "Ajouter du mouvement aux illustrations en plein écran"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31541"
@@ -847,12 +847,12 @@ msgstr "Widget"
 # /16x9/Content_Settings.xml
 msgctxt "#31545"
 msgid "Click on a widget to expand it, use the arrows to reposition it, or select the cross to remove it. Empty widgets can be reset to skin defaults by clicking the reset button."
-msgstr ""
+msgstr "Cliquez sur un widget pour le développer, utilisez les flèches pour le repositionner ou sélectionnez la croix pour le supprimer. Les widgets vides peuvent être réinitialisés aux valeurs par défaut de l'habillage en cliquant sur le bouton de réinitialisation."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31489"
 msgid "Configure widgets"
-msgstr ""
+msgstr "Configurer les widgets"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31477"
@@ -873,7 +873,7 @@ msgstr "Lorsque le mode kiosque est activé, toutes les options de personnalisat
 # /16x9/Content_Settings.xml
 msgctxt "#31488"
 msgid "Add shutdown menu shortcut to hidden views menu"
-msgstr ""
+msgstr "Ajouter le raccourci du menu d'arrêt au menu des vues cachées"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31486"
@@ -909,12 +909,12 @@ msgstr "Activer l'affichage de la vue image"
 # /16x9/Content_Settings.xml
 msgctxt "#31449"
 msgid "Dim artwork for watched items or disabled add-ons"
-msgstr ""
+msgstr "Diminution des icônes des éléments visionnés ou des modules complémentaires désactivés"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31450"
 msgid "Checkmarks for watched items or enabled add-ons"
-msgstr ""
+msgstr "Cochez les éléments visionnés ou les modules complémentaires activés"
 
 # Customisations
 # /16x9/Content_Settings.xml
@@ -976,12 +976,12 @@ msgstr "Lecteur vidéo"
 # /16x9/Content_Settings.xml
 msgctxt "#31490"
 msgid "Enable Up Next widget during playback"
-msgstr ""
+msgstr "Activation du widget \"Up Next\" pendant la lecture"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31491"
 msgid "Choose artwork type to display in Up Next widget"
-msgstr ""
+msgstr "Choisissez le type d'illustration dans le widget \"Up Next\""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31479"

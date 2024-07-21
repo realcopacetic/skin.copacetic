@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2024-01-18 09:47+0000\n"
+"PO-Revision-Date: 2024-07-21 11:51+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Slovenian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/sl_si/>\n"
 "Language: sl_si\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 5.3\n"
+"X-Generator: Weblate 5.6.2\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -94,7 +94,7 @@ msgstr ""
 # /16x9/Content_Viewtype_Options.xml
 msgctxt "#31013"
 msgid "Order"
-msgstr ""
+msgstr "Red"
 
 # /16x9/Content_Viewtype_Options.xml
 msgctxt "#31014"
@@ -421,7 +421,7 @@ msgstr ""
 # /16x9/Components_OSD.xml
 msgctxt "#31300"
 msgid "Rated"
-msgstr ""
+msgstr "Ocenjeno"
 
 # /16x9/Content_OSD.xml
 # /16x9/Notifications.xml
@@ -470,7 +470,7 @@ msgstr ""
 # /16x9/Content.xml
 msgctxt "#31401"
 msgid "Home"
-msgstr ""
+msgstr "Domov"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31501"
@@ -1255,7 +1255,7 @@ msgstr "Hitrost sistemskega izrisovanja"
 # /16x9/Content.xml
 msgctxt "#31617"
 msgid "System memory usage"
-msgstr ""
+msgstr "Poraba sistemskega pomnilnika"
 
 # /16x9/Content.xml
 msgctxt "#31618"
@@ -1281,7 +1281,7 @@ msgstr "Predvajalnik"
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31622"
 msgid "items"
-msgstr ""
+msgstr "predmete"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31623"
