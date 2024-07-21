@@ -71,6 +71,11 @@ msgctxt "#31008"
 msgid "Square"
 msgstr "方块"
 
+# Common
+msgctxt "#31031"
+msgid "Spotlight"
+msgstr ""
+
 # /16x9/Templates_Dialogs.xml, /16x9/Notifications.xml
 msgctxt "#31009"
 msgid "Like song"
@@ -467,6 +472,28 @@ msgid "Configure your Copacetic theme, menus and background artwork service."
 msgstr "配置您的 Copacetic 主题、菜单和背景艺术作品服务。"
 
 # /16x9/Content_Settings.xml
+msgctxt "#31416"
+msgid "Menus"
+msgstr "菜单"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31516"
+msgid "Choose the shortcuts you wish to add to your home and shutdown menus"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+# /16x9/Content.xml
+msgctxt "#31432"
+msgid "Background"
+msgstr "背景"
+
+# /16x9/Content_Settings.xml
+# /16x9/Content.xml
+msgctxt "#31532"
+msgid "Customise background slideshows, brightness and panel opacity"
+msgstr "自定义背景幻灯片、亮度和面板不透明度"
+
+# /16x9/Content_Settings.xml
 # /16x9/Content.xml
 msgctxt "#31401"
 msgid "Home"
@@ -566,14 +593,24 @@ msgid "Reset accent colour"
 msgstr "重置强调色"
 
 # /16x9/Content_Settings.xml
-msgctxt "#31487"
-msgid "Background panel opacity (%)"
-msgstr "背景面板不透明度 (%)"
+msgctxt "#31720"
+msgid "Speed up animations and window transitions [BETA]"
+msgstr ""
 
 # /16x9/Content_Settings.xml
-msgctxt "#31587"
-msgid "Adjust the opacity of background panels that appear on top of artwork. Default: 75%"
-msgstr "调整出现在图稿顶部的背景面板的不透明度。默认：75%"
+msgctxt "#31820"
+msgid "Reduces the default animation times for transitioning between windows and visibility fades. Removes delays on certain animations and disabled others entirely."
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31721"
+msgid "Disable all viewtype scroll animations [BETA]"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31821"
+msgid "Further speeds up browsing by setting the scrolltime for views to 0, removing the transitionary animations when navigating between listitems."
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31412"
@@ -594,56 +631,6 @@ msgstr "Copacetic 建议更改以下 Kodi 设置以获得最佳用户体验。�
 msgctxt "#31414"
 msgid "These will not be changed."
 msgstr "这些不会改变。"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31416"
-msgid "Menus"
-msgstr "菜单"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31417"
-msgid "Home menu"
-msgstr "主菜单"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31517"
-msgid "Configure your home menu shortcuts. For each shortcut, you can select an optional background to override the default slideshows."
-msgstr "配置您的主菜单快捷方式。对于每个快捷方式，您可以选择一个可选背景来覆盖默认幻灯片。"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31418"
-msgid "Shutdown menu"
-msgstr "关机菜单"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31518"
-msgid "Configure your shutdown menu shortcuts. Context-dependent 'Home', 'Theme' and 'Settings' shortcuts cannot be removed."
-msgstr "配置关机菜单快捷方式。无法删除上下文相关的“主页”、“主题”和“设置”快捷方式。"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31419"
-msgid "Reset all menus"
-msgstr "重置所有菜单"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31492"
-msgid "Enable home shortcut in Shutdown menu"
-msgstr "在关机菜单中启用主页快捷方式"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31493"
-msgid "Enable theme switcher shortcut in Shutdown menu"
-msgstr "在关机菜单中启用主题切换器快捷方式"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31494"
-msgid "Enable LibreELEC menu shortcut in Shutdown menu"
-msgstr "在关机菜单中启用 LibreELEC 菜单快捷方式"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31420"
-msgid "Background service"
-msgstr "后台服务"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31421"
@@ -686,6 +673,56 @@ msgid "Adjust the amount of contrast required between the background and the fla
 msgstr "调整背景和标志颜色之间所需的对比度。提高底部阈值意味着深色背景上仅接受较浅的颜色。降低最高阈值意味着在浅色背景上只能使用较暗的颜色。避免在深色背景上使用深色标志或在浅色背景上使用浅色标志。默认范围：65 - 460。"
 
 # /16x9/Content_Settings.xml
+msgctxt "#31428"
+msgid "Prefer keyart for poster views on info screens and dialogs"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31700"
+msgid "Prefer landscape art for fanart views on info screens and dialogs"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31417"
+msgid "Home menu"
+msgstr "主菜单"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31517"
+msgid "Configure your home menu shortcuts. For each shortcut, you can select an optional background to override the default slideshows."
+msgstr "配置您的主菜单快捷方式。对于每个快捷方式，您可以选择一个可选背景来覆盖默认幻灯片。"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31418"
+msgid "Shutdown menu"
+msgstr "关机菜单"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31518"
+msgid "Configure your shutdown menu shortcuts. Context-dependent 'Home', 'Theme' and 'Settings' shortcuts cannot be removed."
+msgstr "配置关机菜单快捷方式。无法删除上下文相关的“主页”、“主题”和“设置”快捷方式。"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31492"
+msgid "Enable home shortcut in Shutdown menu"
+msgstr "在关机菜单中启用主页快捷方式"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31493"
+msgid "Enable theme switcher shortcut in Shutdown menu"
+msgstr "在关机菜单中启用主题切换器快捷方式"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31494"
+msgid "Enable LibreELEC menu shortcut in Shutdown menu"
+msgstr "在关机菜单中启用 LibreELEC 菜单快捷方式"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31419"
+msgid "Reset all menus"
+msgstr "重置所有菜单"
+
+# /16x9/Content_Settings.xml
 msgctxt "#31425"
 msgid "Global"
 msgstr "全局"
@@ -697,86 +734,8 @@ msgstr "将背景幻灯片艺术作品限制为..."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31526"
-msgid "Choose to include only fanarts from the selected sections of your library in the background slideshow, or select a custom path or playlist."
-msgstr "选择在背景幻灯片中仅包含库中选定部分的同人画，或选择自定义路径或播放列表。"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31427"
-msgid "Background slideshow speed (seconds)"
-msgstr "背景幻灯片播放速度（秒）"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31527"
-msgid "Choose how quickly artwork in the slideshow should be refreshed. Default: 10 seconds"
-msgstr "选择幻灯片中图稿的刷新速度。默认值：10 秒"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31428"
-msgid "Prefer keyart for poster views"
-msgstr "海报视图里使用 keyart"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31528"
-msgid "Keyart is a custom art type. To ensure it is fetched locally or remotely by scrapers, make sure 'keyart' is included in your art type whitelists for movies and / or tv shows. You can do this by choosing 'Recommended Kodi Settings' at the top of this menu, or by navigating to Settings > Media > Videos > Artwork."
-msgstr "Keyart 是一种自定义艺术类型。为了确保它被抓取工具本地或远程获取，请确保“keyart”包含在电影和/或电视节目的艺术类型白名单中。您可以通过选择此菜单顶部的“推荐的 Kodi 设置”或导航到“设置”>“媒体”>“视频”>“图稿”来执行此操作。"
-
-# Home
-# /16x9/Content_Settings.xml
-msgctxt "#31429"
-msgid "Enable home screen widgets"
-msgstr "启用主屏幕小部件"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31529"
-msgid "Add widgets to your homescreen. To configure, go to the Widgets tab in the left menu. Choose from preset widgets, such as 'Continue watching', 'Next up' and 'Liked songs', or configure your own using any plugin source. Then select the view and display type you want to use for each widget. For custom widgets, you can also set the name, sort method and limit."
-msgstr "将小部件添加到您的主屏幕。要进行配置，请转到左侧菜单中的“小部件”选项卡。从预设小部件中进行选择，例如“继续观看”、“下一首”和“喜欢的歌曲”，或使用任何插件源配置您自己的小部件。然后选择要用于每个小部件的视图和显示类型。对于自定义小部件，您还可以设置名称、排序方法和限制。"
-
-# /16x9/Variables_Labels_Media.xml
-msgctxt "#31476"
-msgid "Enable clearlogos for home screen widgets"
-msgstr "为主屏幕小部件启用clearlogos"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31430"
-msgid "Reset home screen widgets"
-msgstr "重置主屏幕小部件"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31530"
-msgid "Reset home widgets to Copacetic defaults: 1. Continue watching 2. Next up 3. Latest movies 4. Latest TV shows"
-msgstr "将主屏幕小部件重置为 Copacetic 默认值： 1. 继续观看 2. 下一个 3. 最新电影 4. 最新电视节目"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31431"
-msgid "Are you sure you want to reset all home widgets back to default?"
-msgstr "您确定要将所有主屏幕小部件重置为默认值吗？"
-
-# /16x9/Content_Settings.xml
-# /16x9/Content.xml
-msgctxt "#31432"
-msgid "Background"
-msgstr "背景"
-
-# /16x9/Content_Settings.xml
-# /16x9/Content.xml
-msgctxt "#31532"
-msgid "Customise background slideshows, brightness and panel opacity"
-msgstr "自定义背景幻灯片、亮度和面板不透明度"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31495"
-msgid "Show the name of the current displayed background"
-msgstr "显示当前背景的名称"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31433"
-msgid "Override home background with global slideshow"
-msgstr "使用全局幻灯片覆盖主屏幕背景"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31533"
-msgid "Use the selected global slideshow on the homescreen instead of local or skin.shortcuts slideshows"
-msgstr "在主屏幕上使用选定的全局幻灯片，而不是本地或 Skin.shortcuts 幻灯片"
+msgid "Choose to include only fanarts from the selected sections of your library in the background slideshow, or select a custom path, playlist or folder of images."
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31436"
@@ -799,19 +758,134 @@ msgid "Choose path or playlist..."
 msgstr "选择路径或播放列表..."
 
 # /16x9/Content_Settings.xml
+msgctxt "#31427"
+msgid "Background slideshow speed (seconds)"
+msgstr "背景幻灯片播放速度（秒）"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31527"
+msgid "Choose how quickly artwork in the slideshow should be refreshed. Default: 10 seconds"
+msgstr "选择幻灯片中图稿的刷新速度。默认值：10 秒"
+
+# /16x9/Content_Settings.xml
 msgctxt "#31440"
-msgid "Set brightness of background artwork (%)"
-msgstr "设置背景图稿的亮度 (%)"
+msgid "Background slideshow artwork brightness (%)"
+msgstr ""
 
 # /16x9/Content_Settings.xml
-msgctxt "#31441"
-msgid "Add movement to fullscreen artwork"
-msgstr "为全屏图稿添加动态效果"
+msgctxt "#31540"
+msgid "Choose the brightness of backgrounds displayed on the home screen and other windows such as Settings and Add-ons. Default: 33%"
+msgstr ""
 
 # /16x9/Content_Settings.xml
-msgctxt "#31541"
-msgid "Adds a subtle 'Ken Burns effect'-style pan and zoom to the fullscreen background artwork."
-msgstr "向全屏背景图稿添加微妙的“Ken Burns 效果”风格的平移和缩放。"
+msgctxt "#31487"
+msgid "Opacity of background panels (%)"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31587"
+msgid "Adjust the opacity of background panels that appear on top of artwork. Default: 75%"
+msgstr "调整出现在图稿顶部的背景面板的不透明度。默认：75%"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31722"
+msgid "Info screen background artwork brightness (%)"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31822"
+msgid "Choose the brightness of background artwork displayed when you bring up info for a list item. Default: 25%"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31723"
+msgid "Library/Playback"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31719"
+msgid "OSD background brightness during video playback (%)"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31819"
+msgid "Adjust the brightness of videos when OSD controls or settings screens are visible on top. Default: 25%"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31495"
+msgid "Show the name of the current displayed background"
+msgstr "显示当前背景的名称"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31433"
+msgid "Override home background with global slideshow"
+msgstr "使用全局幻灯片覆盖主屏幕背景"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31533"
+msgid "Use the selected global slideshow on the homescreen instead of local or skin.shortcuts slideshows"
+msgstr "在主屏幕上使用选定的全局幻灯片，而不是本地或 Skin.shortcuts 幻灯片"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31429"
+msgid "Enable widgets on the home screen"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31529"
+msgid "Add widgets to your homescreen. To configure, go to the Widgets tab in the left menu. Choose from preset widgets, such as 'Continue watching', 'Next up' and 'Liked songs', or configure your own using any plugin source. Then select the view and display type you want to use for each widget. For custom widgets, you can also set the name, sort method and limit."
+msgstr "将小部件添加到您的主屏幕。要进行配置，请转到左侧菜单中的“小部件”选项卡。从预设小部件中进行选择，例如“继续观看”、“下一首”和“喜欢的歌曲”，或使用任何插件源配置您自己的小部件。然后选择要用于每个小部件的视图和显示类型。对于自定义小部件，您还可以设置名称、排序方法和限制。"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31430"
+msgid "Reset home screen widgets"
+msgstr "重置主屏幕小部件"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31530"
+msgid "Reset home widgets to Copacetic defaults: 1. Continue watching 2. Next up 3. Latest movies 4. Latest TV shows"
+msgstr "将主屏幕小部件重置为 Copacetic 默认值： 1. 继续观看 2. 下一个 3. 最新电影 4. 最新电视节目"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31431"
+msgid "Are you sure you want to reset all home widgets back to default?"
+msgstr "您确定要将所有主屏幕小部件重置为默认值吗？"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31704"
+msgid "Enable global search on the home screen"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31705"
+msgid "Configure global search"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31706"
+msgid "Enable global search for this media type"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31707"
+msgid "Include 'plot' field in this search"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31708"
+msgid "Include 'tag' field in this search"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31709"
+msgid "Include 'biography' field in this search"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31710"
+msgid "Include 'review' field in this search"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31442"
@@ -835,8 +909,38 @@ msgstr "当 Clearlogos 可用时，它们将作为屏幕保护程序的一部分
 
 # /16x9/Content_Settings.xml
 msgctxt "#31444"
-msgid "Hide clock"
-msgstr "隐藏时钟"
+msgid "Furniture to include"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31544"
+msgid "Choose the furniture you wish to show in the top-right corner of the home screen. Note that for weather information to be included, you must first install a weather add-on and ensure it is enabled under Settings > Services > Weather."
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31724"
+msgid "Clock"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31725"
+msgid "None"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31726"
+msgid "Clock and date"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31727"
+msgid "Clock, date and weather"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31728"
+msgid "Make persistent across entire home screen, including widgets"
+msgstr ""
 
 # Widgets
 # /16x9/Content_Settings.xml
@@ -845,19 +949,64 @@ msgid "Widget"
 msgstr "小部件"
 
 # /16x9/Content_Settings.xml
-msgctxt "#31545"
-msgid "Click on a widget to expand it, use the arrows to reposition it, or select the cross to remove it. Empty widgets can be reset to skin defaults by clicking the reset button."
-msgstr "单击小部件将其展开，使用箭头重新定位它，或选择十字将其删除。 通过单击重置按钮，可以将空小部件重置为皮肤默认值。"
-
-# /16x9/Content_Settings.xml
 msgctxt "#31489"
 msgid "Configure widgets"
 msgstr "配置小部件"
 
 # /16x9/Content_Settings.xml
+msgctxt "#31701"
+msgid "Movement"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31496"
+msgid "Spotlight content with auto scroll"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31596"
+msgid "Widget will move forward one place every 10 seconds while system is idle. When combined with trailer autoplay option below to allow for each item's trailer to be played automatically as soon as the previous trailer is finished while system is idle."
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31467"
+msgid "Automatically play trailers for movies or tv shows in this widget"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31567"
+msgid "Trailers will be played back automatically from any widgets showing movies or tv shows. Enable 'Spotlight content with auto scroll' option above to create a dynamic playlist of trailers for all items in the widget. Set delay in seconds before trailer playback starts under Extras > Trailer autoplay"
+msgstr ""
+
+# /16x9/Variables_Labels_Media.xml
+msgctxt "#31476"
+msgid "Enable clearlogos"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31498"
+msgid "Prefer keyart for poster views"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31598"
+msgid "Remember 'keyart' is a custom art type. To ensure it is fetched locally or remotely by scrapers, make sure 'keyart' is included in your art type whitelists for movies and / or tv shows. You can do this by choosing 'Recommended Kodi Settings' under Copacetic > General, or by navigating to Settings > Media > Videos > Artwork."
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31499"
+msgid "Prefer landscape art for fanart views"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31599"
+msgid "Remember 'landscape' is a custom art type. To ensure it is fetched locally or remotely by scrapers, make sure 'landscape' is included in your art type whitelists for movies and / or tv shows. You can do this by choosing 'Recommended Kodi Settings' under Copacetic > General, or by navigating to Settings > Media > Videos > Artwork."
+msgstr ""
+
+# /16x9/Content_Settings.xml
 msgctxt "#31477"
-msgid "Prefer thumbnails for episodes instead of show fanart"
-msgstr "使用剧集缩略图而不是节目同人画"
+msgid "Prefer thumbnails for episodes instead of tv show fanart"
+msgstr ""
 
 # Views
 # /16x9/Content_Settings.xml
@@ -871,11 +1020,6 @@ msgid "When kiosk mode is enabled, all view customisation options in the hidden 
 msgstr "启用信息亭模式后，隐藏菜单中的所有视图自定义选项都将被删除，因此无法进行进一步的更改。"
 
 # /16x9/Content_Settings.xml
-msgctxt "#31488"
-msgid "Add shutdown menu shortcut to hidden views menu"
-msgstr "将关闭菜单快捷方式添加到隐藏视图菜单"
-
-# /16x9/Content_Settings.xml
 msgctxt "#31486"
 msgid "Disable hidden options menu"
 msgstr "禁用隐藏选项菜单"
@@ -884,6 +1028,21 @@ msgstr "禁用隐藏选项菜单"
 msgctxt "#31586"
 msgid "With koisk mode enabled, you have the option to completely disable the hidden options menu. Warning: This will limit your ability to switch between views, change sort method, filter or search."
 msgstr "启用信息亭模式后，您可以选择完全禁用隐藏选项菜单。 警告：这将限制您在视图之间切换、更改排序方法、过滤或搜索的能力。"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31488"
+msgid "Add shutdown menu shortcut to hidden views menu"
+msgstr "将关闭菜单快捷方式添加到隐藏视图菜单"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31441"
+msgid "Add movement to fullscreen artwork"
+msgstr "为全屏图稿添加动态效果"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31541"
+msgid "Adds a subtle 'Ken Burns effect'-style pan and zoom to the fullscreen background artwork."
+msgstr "向全屏背景图稿添加微妙的“Ken Burns 效果”风格的平移和缩放。"
 
 # Views
 # /16x9/Content_Settings.xml
@@ -897,14 +1056,34 @@ msgid "Choose which windows to enable for each of the four additional Copacetic 
 msgstr "选择为四个附加 Copacetic 视图中的每一个启用哪些窗口。 在 Kodi 中打开新媒体窗口时，将不使用的任何视图保留为禁用状态以加快加载速度。"
 
 # /16x9/Content_Settings.xml
+msgctxt "#31717"
+msgid "Enable scrolling on long titles instead of truncation (...)"
+msgstr ""
+
+# /16x9/Content_Settings.xml
 msgctxt "#31447"
 msgid "Enable view for add-on and program windows"
 msgstr "在附加组件和程序窗口启动视图"
 
 # /16x9/Content_Settings.xml
+msgctxt "#31496"
+msgid "Enable view for favourites browser"
+msgstr ""
+
+# /16x9/Content_Settings.xml
 msgctxt "#31448"
 msgid "Enable view for pictures window"
 msgstr "在图片窗口启用视图"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31715"
+msgid "Item artwork size and orientation"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31815"
+msgid "Choose how big you wish items to be presented in Grid panel views and whether you wish to scroll vertically or horizontally. For Fanart views, 'Horizontal large' displays 3 items per row and 'Horizontal small' displays 4. For Poster and Square views, 'Horizontal large' displays 5 items per row and 'Horizontal small' displays 7. 'Vertical' displays two rows at all times."
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31449"
@@ -954,14 +1133,9 @@ msgid "Liked song rating threshold"
 msgstr "点赞歌曲评分阈值"
 
 # /16x9/Content_Settings.xml
-msgctxt "#31484"
-msgid "Info screens"
-msgstr "信息屏幕"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31485"
-msgid "Disable star ratings"
-msgstr "禁用星级评定"
+msgctxt "#31716"
+msgid "Prefer white to grey text colour for plot in Showcase and Strip views"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31554"
@@ -969,9 +1143,54 @@ msgid "Overlay a binary user rating system (liked or not) on top of standard son
 msgstr "在标准歌曲用户评级之上叠加二元用户评级系统（喜欢或不喜欢）。 等于或高于此阈值的用户评级为“喜欢”。 您可以通过上下文菜单或嵌入式音乐播放器（如果在“附加”下启用）“喜欢”（设置等于阈值的用户评级）或“不喜欢”（清除用户评级）歌曲。 “喜欢的歌曲”小部件也将使用该阈值。 设置为“关闭”以禁用。"
 
 # /16x9/Content_Settings.xml
+msgctxt "#31484"
+msgid "Info screens"
+msgstr "信息屏幕"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31703"
+msgid "Use TMDbHelper for info screen widgets instead of library content"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31803"
+msgid "As long as this plugin is enabled on your system, it will be used to populate info screen widgets including actor and director credits, similar movies/shows and more."
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31485"
+msgid "Disable star ratings"
+msgstr "禁用星级评定"
+
+# /16x9/Content_Settings.xml
 msgctxt "#31478"
 msgid "Video player"
 msgstr "视频播放器"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31711"
+msgid "Limit quick subtitle switcher in video OSD to a preferred language"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31811"
+msgid "Enter the three-letter code of your preferred language, e.g. 'eng' for English. If subtitles in this language are available for the currently playing video, the quick subtitle switcher will toggle on/off for the first subtitle stream in this language, ignoring other streams. If the language is not available, it will toggle between all streams as normal."
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31713"
+msgid "Disable video information being displayed at the start of playback"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31718"
+msgid "Prefer time remaining to video duration in player seek bar"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31813"
+msgid "This disables the label that appears upon video playback showing information about the video including end time, resolution and age rating."
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31490"
@@ -979,34 +1198,19 @@ msgid "Enable Up Next widget during playback"
 msgstr "在播放期间启用“上一个下一个”小部件"
 
 # /16x9/Content_Settings.xml
+msgctxt "#31590"
+msgid "Up Next is a third-party addon that enabled Netflix-style autoplay of the next episode with an 'Are you still watching' prompt. Selecting this option will install and enable the addon, which can be configured under Add-ons."
+msgstr ""
+
+# /16x9/Content_Settings.xml
 msgctxt "#31491"
 msgid "Choose artwork type to display in Up Next widget"
 msgstr "选择要在“上一个 下一个”小部件中显示的艺术品类型"
 
 # /16x9/Content_Settings.xml
-msgctxt "#31479"
-msgid "Music player"
-msgstr "音乐播放器"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31480"
-msgid "Enable background fanart"
-msgstr "启用背景同人画"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31481"
-msgid "Visualisation screen album cover"
-msgstr "可视化屏幕专辑封面"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31482"
-msgid "Small"
-msgstr "小"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31483"
-msgid "Large"
-msgstr "大"
+msgctxt "#31591"
+msgid "Choose between different layout options for the Up Next widget that will appear on the screen as an episode concludes."
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31455"
@@ -1027,6 +1231,82 @@ msgstr "在暂停屏幕上显示信息"
 msgctxt "#31556"
 msgid "Video information, which can be displayed during fullscreen video playback by pressing <i>, will also be displayed automatically when the video is paused."
 msgstr "全屏视频播放时按<i>可显示视频信息，视频暂停时也会自动显示。"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31479"
+msgid "Music player"
+msgstr "音乐播放器"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31480"
+msgid "Enable background fanart"
+msgstr "启用背景同人画"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31481"
+msgid "Visualisation screen album cover"
+msgstr "可视化屏幕专辑封面"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31482"
+msgid "Vertical small"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31483"
+msgid "Vertical large"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31415"
+msgid "Horizontal"
+msgstr ""
+
+# Experiments
+# /16x9/Content_Settings.xml
+msgctxt "#31470"
+msgid "Use unwatched count in info details"
+msgstr "在信息详细信息中使用未观看计数"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31570"
+msgid "Replaced 'A/B watched' with 'X/Y unwatched' in all info lines. This information duplicates the unwatched episode count indicator, which can be enabled under Customisations and is integrated into the progress bar."
+msgstr "在所有信息行中将“A/B 已观看”替换为“X/Y 未观看”。 此信息重复未观看的剧集计数指示器，该指示器可以在“自定义”下启用并集成到进度栏中。"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31471"
+msgid "Enable 'Fanart' display layout for Grid view in Pictures window"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31571"
+msgid "Enables Grid view fanart layout for the pictures window. Because pictures can take any aspect ratio, it is recommended to stick to square layouts for the optimal experience. Keep disabled to improve performance."
+msgstr "为图片窗口启用网格视图同人画布局。 由于图片可以采用任何宽高比，因此建议坚持使用方形布局以获得最佳体验。 保持禁用以提高性能。"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31714"
+msgid "Enable landscape art for List and Billboard view backgrounds"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31712"
+msgid "Prefer landscape art to fanart for backgrounds in List and Billboard views"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31812"
+msgid "Will allow landscape artwork to be displayed instead of fanarts if landscape art is preferred - even on these two views where logos on the landscape artwork may interfere with readability of the details presented in these views."
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31702"
+msgid "Move to parent directory automatically if container is empty"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31802"
+msgid "If the current focused container is empty--for example because your filter is set to unwatched episodes and you have no unwatched episodes to view--enabling this will cause Kodi to automatically move to the parent directory."
+msgstr ""
 
 # Extras
 # /16x9/Content_Settings.xml
@@ -1105,50 +1385,19 @@ msgid "Choose how long you must wait on a selected movie or tv show before playb
 msgstr "选择在开始播放预告片之前您必须等待所选电影或电视节目的时间。"
 
 # /16x9/Content_Settings.xml
-msgctxt "#31467"
-msgid "Play trailers for home widget movies and tv shows"
-msgstr "播放主屏幕小部件电影和电视节目的预告片"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31567"
-msgid "Trailers will be played back automatically from any widgets showing movies or tv shows. Trailers cannot be played back from episodes currently."
-msgstr "预告片将自动从任何显示电影或电视节目的小部件中播放。 目前无法播放剧集的预告片。"
-
-# /16x9/Content_Settings.xml
 msgctxt "#31468"
-msgid "Play trailers for movies in video library"
-msgstr "播放视频库中的电影预告片"
+msgid "Autoplay trailers for movies in video library"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31568"
-msgid "Trailer autoplay can be quickly toggled on/off from the options menu within the video library."
-msgstr "可以从视频库中的选项菜单快速打开/关闭预告片自动播放。"
+msgid "Autoplay autoplay can be quickly toggled on/off from the options menu within the video library."
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31469"
 msgid "Play trailers for tv shows in video library"
 msgstr "播放视频库中电视节目的预告片"
-
-# Experiments
-# /16x9/Content_Settings.xml
-msgctxt "#31470"
-msgid "Use unwatched count in info details"
-msgstr "在信息详细信息中使用未观看计数"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31570"
-msgid "Replaced 'A/B watched' with 'X/Y unwatched' in all info lines. This information duplicates the unwatched episode count indicator, which can be enabled under Customisations and is integrated into the progress bar."
-msgstr "在所有信息行中将“A/B 已观看”替换为“X/Y 未观看”。 此信息重复未观看的剧集计数指示器，该指示器可以在“自定义”下启用并集成到进度栏中。"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31471"
-msgid "Enable fanart display for Grid view in pictures window"
-msgstr "在图片窗口中启用网格视图的同人画显示"
-
-# /16x9/Content_Settings.xml
-msgctxt "#31571"
-msgid "Enables Grid view fanart layout for the pictures window. Because pictures can take any aspect ratio, it is recommended to stick to square layouts for the optimal experience. Keep disabled to improve performance."
-msgstr "为图片窗口启用网格视图同人画布局。 由于图片可以采用任何宽高比，因此建议坚持使用方形布局以获得最佳体验。 保持禁用以提高性能。"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31472"
@@ -1283,6 +1532,21 @@ msgctxt "#31622"
 msgid "items"
 msgstr "项"
 
+# /16x9/MyPVRChannels.xml
+msgctxt "#31634"
+msgid "Now playing channel"
+msgstr ""
+
+# /16x9/Navigation.xml
+msgctxt "#31635"
+msgid "Global search"
+msgstr ""
+
+# /16x9/Navigation.xml
+msgctxt "#31636"
+msgid "Sorry no results found!"
+msgstr ""
+
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31623"
 msgid "item"
@@ -1342,57 +1606,57 @@ msgstr "使用所选内容作为剧集缩略图"
 # ########################################################################################################
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
-msgctxt "#31701"
+msgctxt "#31951"
 msgid "BBFC (UK)"
-msgstr "BBFC (英国)"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
-msgctxt "#31702"
+msgctxt "#31952"
 msgid "MPAA / TV-PG (US / others)"
-msgstr "MPAA / TV-PG (美国 / 其它)"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
-msgctxt "#31703"
+msgctxt "#31953"
 msgid "ACB (Australia)"
-msgstr "ACB (澳大利亚)"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
-msgctxt "#31704"
+msgctxt "#31954"
 msgid "CHVRS / CBSC (Canada)"
-msgstr "CHVRS / CBSC (加拿大)"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
-msgctxt "#31705"
+msgctxt "#31955"
 msgid "DJCTQ (Brazil)"
-msgstr "DJCTQ (巴西)"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
-msgctxt "#31706"
+msgctxt "#31956"
 msgid "EIRIN (Japan)"
-msgstr "EIRIN (日本)"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
-msgctxt "#31707"
+msgctxt "#31957"
 msgid "FSK (Austria / Germany / Switzerland)"
-msgstr "FSK (奥地利/ 德国 / 瑞士)"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
-msgctxt "#31708"
+msgctxt "#31958"
 msgid "IFCO (Ireland)"
-msgstr "IFCO (爱尔兰)"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
-msgctxt "#31709"
+msgctxt "#31959"
 msgid "KIJKWIJZER (Luxembourg / Netherlands)"
-msgstr "KIJKWIJZER (卢森堡/ 荷兰)"
+msgstr ""
 
 # ########################################################################################################
 # ########################################################################################################
@@ -1470,3 +1734,150 @@ msgstr "开斋节穆巴拉克"
 msgctxt "#31914"
 msgid "Happy Earth Day"
 msgstr "地球日快乐"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31487"
+#~ msgid "Background panel opacity (%)"
+#~ msgstr "背景面板不透明度 (%)"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31420"
+#~ msgid "Background service"
+#~ msgstr "后台服务"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31526"
+#~ msgid "Choose to include only fanarts from the selected sections of your library in the background slideshow, or select a custom path or playlist."
+#~ msgstr "选择在背景幻灯片中仅包含库中选定部分的同人画，或选择自定义路径或播放列表。"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31428"
+#~ msgid "Prefer keyart for poster views"
+#~ msgstr "海报视图里使用 keyart"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31528"
+#~ msgid "Keyart is a custom art type. To ensure it is fetched locally or remotely by scrapers, make sure 'keyart' is included in your art type whitelists for movies and / or tv shows. You can do this by choosing 'Recommended Kodi Settings' at the top of this menu, or by navigating to Settings > Media > Videos > Artwork."
+#~ msgstr "Keyart 是一种自定义艺术类型。为了确保它被抓取工具本地或远程获取，请确保“keyart”包含在电影和/或电视节目的艺术类型白名单中。您可以通过选择此菜单顶部的“推荐的 Kodi 设置”或导航到“设置”>“媒体”>“视频”>“图稿”来执行此操作。"
+
+# Home
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31429"
+#~ msgid "Enable home screen widgets"
+#~ msgstr "启用主屏幕小部件"
+
+# /16x9/Variables_Labels_Media.xml
+#~ msgctxt "#31476"
+#~ msgid "Enable clearlogos for home screen widgets"
+#~ msgstr "为主屏幕小部件启用clearlogos"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31440"
+#~ msgid "Set brightness of background artwork (%)"
+#~ msgstr "设置背景图稿的亮度 (%)"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31444"
+#~ msgid "Hide clock"
+#~ msgstr "隐藏时钟"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31545"
+#~ msgid "Click on a widget to expand it, use the arrows to reposition it, or select the cross to remove it. Empty widgets can be reset to skin defaults by clicking the reset button."
+#~ msgstr "单击小部件将其展开，使用箭头重新定位它，或选择十字将其删除。 通过单击重置按钮，可以将空小部件重置为皮肤默认值。"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31477"
+#~ msgid "Prefer thumbnails for episodes instead of show fanart"
+#~ msgstr "使用剧集缩略图而不是节目同人画"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31482"
+#~ msgid "Small"
+#~ msgstr "小"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31483"
+#~ msgid "Large"
+#~ msgstr "大"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31467"
+#~ msgid "Play trailers for home widget movies and tv shows"
+#~ msgstr "播放主屏幕小部件电影和电视节目的预告片"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31567"
+#~ msgid "Trailers will be played back automatically from any widgets showing movies or tv shows. Trailers cannot be played back from episodes currently."
+#~ msgstr "预告片将自动从任何显示电影或电视节目的小部件中播放。 目前无法播放剧集的预告片。"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31468"
+#~ msgid "Play trailers for movies in video library"
+#~ msgstr "播放视频库中的电影预告片"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31568"
+#~ msgid "Trailer autoplay can be quickly toggled on/off from the options menu within the video library."
+#~ msgstr "可以从视频库中的选项菜单快速打开/关闭预告片自动播放。"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31471"
+#~ msgid "Enable fanart display for Grid view in pictures window"
+#~ msgstr "在图片窗口中启用网格视图的同人画显示"
+
+# ########################################################################################################
+# ########################################################################################################
+# /16x9/Content_Settings.xml
+# /16x9/Variables_Labels_Windows.xml
+#~ msgctxt "#31701"
+#~ msgid "BBFC (UK)"
+#~ msgstr "BBFC (英国)"
+
+# /16x9/Content_Settings.xml
+# /16x9/Variables_Labels_Windows.xml
+#~ msgctxt "#31702"
+#~ msgid "MPAA / TV-PG (US / others)"
+#~ msgstr "MPAA / TV-PG (美国 / 其它)"
+
+# /16x9/Content_Settings.xml
+# /16x9/Variables_Labels_Windows.xml
+#~ msgctxt "#31703"
+#~ msgid "ACB (Australia)"
+#~ msgstr "ACB (澳大利亚)"
+
+# /16x9/Content_Settings.xml
+# /16x9/Variables_Labels_Windows.xml
+#~ msgctxt "#31704"
+#~ msgid "CHVRS / CBSC (Canada)"
+#~ msgstr "CHVRS / CBSC (加拿大)"
+
+# /16x9/Content_Settings.xml
+# /16x9/Variables_Labels_Windows.xml
+#~ msgctxt "#31705"
+#~ msgid "DJCTQ (Brazil)"
+#~ msgstr "DJCTQ (巴西)"
+
+# /16x9/Content_Settings.xml
+# /16x9/Variables_Labels_Windows.xml
+#~ msgctxt "#31706"
+#~ msgid "EIRIN (Japan)"
+#~ msgstr "EIRIN (日本)"
+
+# /16x9/Content_Settings.xml
+# /16x9/Variables_Labels_Windows.xml
+#~ msgctxt "#31707"
+#~ msgid "FSK (Austria / Germany / Switzerland)"
+#~ msgstr "FSK (奥地利/ 德国 / 瑞士)"
+
+# /16x9/Content_Settings.xml
+# /16x9/Variables_Labels_Windows.xml
+#~ msgctxt "#31708"
+#~ msgid "IFCO (Ireland)"
+#~ msgstr "IFCO (爱尔兰)"
+
+# /16x9/Content_Settings.xml
+# /16x9/Variables_Labels_Windows.xml
+#~ msgctxt "#31709"
+#~ msgid "KIJKWIJZER (Luxembourg / Netherlands)"
+#~ msgstr "KIJKWIJZER (卢森堡/ 荷兰)"
