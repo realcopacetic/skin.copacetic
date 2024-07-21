@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-11-16 15:18+0000\n"
+"PO-Revision-Date: 2024-07-21 11:51+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Slovak <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/sk_sk/>\n"
 "Language: sk_sk\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 5.1\n"
+"X-Generator: Weblate 5.6.2\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -69,7 +69,7 @@ msgstr "Fanart"
 # Common
 msgctxt "#31008"
 msgid "Square"
-msgstr ""
+msgstr "Štvorec"
 
 # /16x9/Templates_Dialogs.xml, /16x9/Notifications.xml
 msgctxt "#31009"
@@ -154,7 +154,7 @@ msgstr ""
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31025"
 msgid "Studio"
-msgstr ""
+msgstr "Štúdio"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31026"
@@ -169,7 +169,7 @@ msgstr ""
 # /16x9/Content_Viewtype_Options_Showcase.xml
 msgctxt "#31028"
 msgid "Side"
-msgstr ""
+msgstr "Strana"
 
 # /16x9/Content_Viewtype_Options_Showcase.xml
 msgctxt "#31029"
@@ -201,7 +201,7 @@ msgstr ""
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31103"
 msgid "for"
-msgstr ""
+msgstr "pre"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31104"
@@ -226,7 +226,7 @@ msgstr ""
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31108"
 msgid "HDR"
-msgstr ""
+msgstr "HDR"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31109"
@@ -369,7 +369,7 @@ msgstr ""
 # /16x9/Templates_Widgets.xml
 msgctxt "#31213"
 msgid "Similar"
-msgstr ""
+msgstr "Podobné"
 
 # /16x9/Templates_Widgets.xml
 msgctxt "#31214"
@@ -920,7 +920,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31451"
 msgid "Show unwatched episodes count"
-msgstr ""
+msgstr "Zobraziť počet nezhliadnutých epizód"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31551"
@@ -1286,7 +1286,7 @@ msgstr "položky"
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31623"
 msgid "item"
-msgstr ""
+msgstr "položka"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31624"
