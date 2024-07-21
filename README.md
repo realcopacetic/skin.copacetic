@@ -20,15 +20,10 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
-**1.5.1**
-- Fixed bug where square widgets were showing fanart even when a thumbnail was available https://github.com/realcopacetic/skin.copacetic/issues/179
-- Fixed an animation bug when quick transitions are selected caused by the fact that the content switching scroll time was reduced but some scrolling animations in Strip and Showcase are hardcoded. Now the scrolling speed is the same for these views as the default transitions, but there is no longer a delay before the content appears, so it still feels quicker. Choosing to disable scrolling animations entirely still reduces the scroll speed to 0 for these views.
-- Fixed a bug in the new Time widget preventing the weather information from correctly displaying
+**1.5.2**
 - Fixed a bug in translations file - https://github.com/realcopacetic/skin.copacetic/issues/183
-
+- Fixed slides for Grid Horizontal layout
 Still to do:
------ slides on Grid horizontal landscape when 2 items, looks too high
-PUSH ANOTHER UPDATE AFTER THESE THREE
 ---- Infoscreen transitions
 ---- Grid small and horizontal - with MusicPlayer widget
 --- checkmarks/fades for other views?
@@ -44,7 +39,12 @@ PUSH ANOTHER UPDATE AFTER THESE THREE
 - PVR
 https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Extended-Info#direct-call-auto
 
-**2.5.0**
+**1.5.1**
+- Fixed bug where square widgets were showing fanart even when a thumbnail was available https://github.com/realcopacetic/skin.copacetic/issues/179
+- Fixed an animation bug when quick transitions are selected caused by the fact that the content switching scroll time was reduced but some scrolling animations in Strip and Showcase are hardcoded. Now the scrolling speed is the same for these views as the default transitions, but there is no longer a delay before the content appears, so it still feels quicker. Choosing to disable scrolling animations entirely still reduces the scroll speed to 0 for these views.
+- Fixed a bug in the new Time widget preventing the weather information from correctly displaying
+
+**1.5.0**
 - Added option to change transparency of video player overlay (Settings > Copacetic > Backgrounds > 'OSD background brightness during video playback')
 - Fixed bug in screen to choose preferred classification system (Settings > Copacetic > Customisations > Preferred classification ratings). Previously wrong labels were showing up in the dialog screen that opens https://github.com/realcopacetic/skin.copacetic/issues/173
 - Fixed bug in breadcrumb label colour when Addonbrowser window open and repository list is 
@@ -66,23 +66,7 @@ https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Ex
 - Improved widget navigation by switching from visibility conditionals to Container.NumItems
 - Fixed animation issue affecting collections icon during scrolling in Stripview
 
-Still to do:
----- Infoscreen transitions
----- Grid small and horizontal - with MusicPlayer widget
---- checkmarks/fades for other views?
---- check to see the player status labels
--- check tmdb helper click actions for all infoscreen widgets (including episode ones etc)
--- tmdb helper for play button on infoscreen?
-- autoscroll bar
-- multiart on autoscroll
-- login background
-- Create radio station button
-- remove window property hack for music ratings during playback in Omega
-<!-- temp fix to account for fact that DecreaseRating won't go lower than 1 for VideoPlayer.UserRating -->
-- PVR
-https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Extended-Info#direct-call-auto
-
-**2.4.3**
+**1.4.3**
 - Bumping version number by 1 to differentiate between Nexus and Omega versions. 
 - Increased version number of script.copacetic.helper dependency to 1.1.0
 - Added visibility delay to multiartwhen switching containers to prevent seeing it fade out immediately after moving from Movies to Sets, etc.
