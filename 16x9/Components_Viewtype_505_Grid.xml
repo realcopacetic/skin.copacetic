@@ -521,12 +521,11 @@
 	</include>
 
 	<include name="GridView_Slides_Horizontal">
-		<animation effect="slide" end="0,279" time="0" reversible="false" condition="$EXP[GridView_Display_IsPosters] + Integer.IsEqual(Container.NumItems,1)">Conditional</animation>
-		<animation effect="slide" end="0,140" time="0" reversible="false" condition="$EXP[GridView_Display_IsPosters] + Integer.IsEqual(Container.NumItems,2)">Conditional</animation>
+		<animation effect="slide" end="0,281" time="0" reversible="false" condition="$EXP[GridView_Display_IsFanart] + Integer.IsEqual(Container.NumItems,1)">Conditional</animation>
+		<animation effect="slide" end="0,141" time="0" reversible="false" condition="$EXP[GridView_Display_IsFanart] + Integer.IsEqual(Container.NumItems,2)">Conditional</animation>
 		<animation effect="slide" end="662" time="0" reversible="false" condition="$EXP[GridView_Display_IsFanart] + Integer.IsLessOrEqual(Container.NumItems,3)">Conditional</animation>
 		<animation effect="slide" end="414" time="0" reversible="false" condition="$EXP[GridView_Display_IsFanart] + Integer.IsGreater(Container.NumItems,3) + Integer.IsLessOrEqual(Container.NumItems,6)">Conditional</animation>
 		<animation effect="slide" end="166" time="0" reversible="false" condition="$EXP[GridView_Display_IsFanart] + Integer.IsGreater(Container.NumItems,6) + Integer.IsLessOrEqual(Container.NumItems,9)">Conditional</animation>
-		
 		<animation effect="slide" end="0,210" time="0" reversible="false" condition="!$EXP[GridView_Display_IsFanart] + Integer.IsEqual(Container.NumItems,1)">Conditional</animation>
 		<animation effect="slide" end="770" time="0" reversible="false" condition="$EXP[GridView_Display_IsPosters] + Integer.IsLessOrEqual(Container.NumItems,2)">Conditional</animation>
 		<animation effect="slide" end="630" time="0" reversible="false" condition="$EXP[GridView_Display_IsPosters] + Integer.IsGreater(Container.NumItems,2) + Integer.IsLessOrEqual(Container.NumItems,4)">Conditional</animation>
