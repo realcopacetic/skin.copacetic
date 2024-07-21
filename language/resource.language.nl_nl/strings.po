@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-12-12 14:12+0000\n"
+"PO-Revision-Date: 2024-07-21 11:51+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Dutch <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/nl_nl/>\n"
 "Language: nl_nl\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.2.1\n"
+"X-Generator: Weblate 5.6.2\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -154,7 +154,7 @@ msgstr ""
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31025"
 msgid "Studio"
-msgstr ""
+msgstr "Studio"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31026"
@@ -169,7 +169,7 @@ msgstr ""
 # /16x9/Content_Viewtype_Options_Showcase.xml
 msgctxt "#31028"
 msgid "Side"
-msgstr ""
+msgstr "Zij"
 
 # /16x9/Content_Viewtype_Options_Showcase.xml
 msgctxt "#31029"
@@ -201,7 +201,7 @@ msgstr ""
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31103"
 msgid "for"
-msgstr ""
+msgstr "voor"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31104"
@@ -226,7 +226,7 @@ msgstr ""
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31108"
 msgid "HDR"
-msgstr ""
+msgstr "HDR"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31109"
@@ -920,7 +920,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31451"
 msgid "Show unwatched episodes count"
-msgstr ""
+msgstr "Toon niet-bekeken afleveringen teller"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31551"
@@ -1220,7 +1220,7 @@ msgstr "Audiokanalen"
 # /16x9/Content.xml
 msgctxt "#31610"
 msgid "Audio bitrate"
-msgstr ""
+msgstr "Audio bitsnelheid"
 
 # /16x9/Content.xml
 msgctxt "#31611"
@@ -1286,7 +1286,7 @@ msgstr "items"
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31623"
 msgid "item"
-msgstr ""
+msgstr "item"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31624"

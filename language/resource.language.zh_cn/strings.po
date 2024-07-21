@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2024-03-30 18:30+0000\n"
+"PO-Revision-Date: 2024-07-21 11:51+0000\n"
 "Last-Translator: \"Eric Z.\" <eric.zhu.ym@gmail.com>\n"
 "Language-Team: Chinese (China) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/zh_cn/>\n"
 "Language: zh_cn\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4\n"
+"X-Generator: Weblate 5.6.2\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -766,7 +766,7 @@ msgstr "自定义背景幻灯片、亮度和面板不透明度"
 # /16x9/Content_Settings.xml
 msgctxt "#31495"
 msgid "Show the name of the current displayed background"
-msgstr ""
+msgstr "显示当前背景的名称"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31433"
