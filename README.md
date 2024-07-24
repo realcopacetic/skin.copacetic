@@ -21,8 +21,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ### Changelog
 ---
 **2.5.2**
-- Fixed a bug in translations file - https://github.com/realcopacetic/skin.copacetic/issues/183
-- Fixed slides for Grid Horizontal layout
+- Fixed a bug in translations file https://github.com/realcopacetic/skin.copacetic/issues/183
+- Fixed slides for Grid Horizontal layout 
+- Added visibility condition to seek label https://github.com/realcopacetic/skin.copacetic/issues/187
 Still to do:
 ---- Infoscreen transitions
 ---- Grid small and horizontal - with MusicPlayer widget
