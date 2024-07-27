@@ -256,21 +256,20 @@
 						<height>$PARAM[border_width]</height>
 						<texture colordiffuse="$VAR[Accent_Color]">views/white_100.png</texture>
 					</control>
-					<control type="image"><!-- left filler -->
-						<visible>Container.Column(0)</visible>
-						<animation effect="slide" end="-$PARAM[border_width],-$PARAM[border_width]" time="0" condition="Container.Row(0) | [Container.Row(1) + $EXP[GridView_Display_IsFanart]]" reversible="false">Conditional</animation>
-						<animation effect="slide" end="-$PARAM[border_width],$PARAM[border_width]" time="0" condition="[Container.Row(1) + !$EXP[GridView_Display_IsFanart]] | [Container.Row(2) + $EXP[GridView_Display_IsFanart]]" reversible="false">Conditional</animation>
-						<left>0</left>
-						<width>$PARAM[border_width]</width>
-						<height>100%</height>
-						<texture colordiffuse="$VAR[Accent_Color]">views/white_100.png</texture>
-					</control>
 					<control type="image"><!-- left -->
-						<animation effect="slide" end="-$PARAM[border_width],0" time="0" condition="true" reversible="false">Conditional</animation>
+						<animation effect="slide" end="-$PARAM[border_width],-$PARAM[border_width]" time="0" condition="true" reversible="false">Conditional</animation> -->
+						<animation effect="zoom" start="0,0,$PARAM[border_width],$PARAM[height]" end="0,0,$PARAM[border_width],353" time="0" condition="$EXP[GridView_Display_IsFanart] + !Skin.String(GridView_Size,Small) + !Skin.String(GridView_Size,Horizontal)" reversible="false">Conditional</animation>
+						<animation effect="zoom" start="0,0,$PARAM[border_width],$PARAM[height]" end="0,0,$PARAM[border_width],268" time="0" condition="$EXP[GridView_Display_IsFanart] + Skin.String(GridView_Size,Small)" reversible="false">Conditional</animation>
+						<animation effect="zoom" start="0,0,$PARAM[border_width],$PARAM[height]" end="0,0,$PARAM[border_width],295" time="0" condition="$EXP[GridView_Display_IsFanart] + Skin.String(GridView_Size,Horizontal)" reversible="false">Conditional</animation>
+						<animation effect="zoom" start="0,0,$PARAM[border_width],$PARAM[height]" end="0,0,$PARAM[border_width],560" time="0" condition="$EXP[GridView_Display_IsPosters] + !Skin.String(GridView_Size,Small) + !Skin.String(GridView_Size,Horizontal)" reversible="false">Conditional</animation>
+						<animation effect="zoom" start="0,0,$PARAM[border_width],$PARAM[height]" end="0,0,$PARAM[border_width],400" time="0" condition="$EXP[GridView_Display_IsPosters] + Skin.String(GridView_Size,Small)" reversible="false">Conditional</animation>
+						<animation effect="zoom" start="0,0,$PARAM[border_width],$PARAM[height]" end="0,0,$PARAM[border_width],376" time="0" condition="$EXP[GridView_Display_IsSquare] + !Skin.String(GridView_Size,Small) + !Skin.String(GridView_Size,Horizontal)" reversible="false">Conditional</animation>
+						<animation effect="zoom" start="0,0,$PARAM[border_width],$PARAM[height]" end="0,0,$PARAM[border_width],272" time="0" condition="$EXP[GridView_Display_IsSquare] + Skin.String(GridView_Size,Small)" reversible="false">Conditional</animation>
+						<animation effect="zoom" start="0,0,$PARAM[border_width],$PARAM[height]" end="0,0,$PARAM[border_width],436" time="0" condition="!$EXP[GridView_Display_IsFanart] + Skin.String(GridView_Size,Horizontal)" reversible="false">Conditional</animation>
 						<left>0</left>
 						<width>$PARAM[border_width]</width>
-						<top>-$PARAM[border_width]</top>
-						<bottom>-$PARAM[border_width]</bottom>
+						<top>0</top>
+						<bottom>0</bottom>
 						<texture colordiffuse="$VAR[Accent_Color]">views/white_100.png</texture>
 					</control>
 					<control type="image"><!-- right -->
@@ -326,6 +325,7 @@
 				<include content="GridView_Icon_Focused">
 					<param name="left" value="$PARAM[left]" />
 					<param name="top" value="$PARAM[top]" />
+					<param name="height" value="$PARAM[height]" />
 					<param name="displaytype_label" value="$PARAM[displaytype_label]" />
 					<param name="art_icon" value="$PARAM[art_icon]" />
 					<param name="border_width" value="$PARAM[border_width]" />
