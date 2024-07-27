@@ -467,6 +467,7 @@
 		<param name="min_items" default="2" />
 		<param name="bypass_min_items" default="false" />
 		<param name="include_progress" default="true" />
+		<param name="global_search" default="false" />
 		<definition>
 			<include content="Hidden_Components">
 				<control type="label" id="620$PARAM[widget_position]1">
@@ -512,7 +513,7 @@
 				<param name="textcolor" value="$VAR[Breadcrumb_Label_Color]" />
 			</include>
 			<!-- Details -->
-			<include content="$PARAM[widget_view]View_Details">
+			<include content="$PARAM[widget_view]View_Details" condition="!$PARAM[global_search]">
 				<param name="visible" value="Control.HasFocus($PARAM[id]) + !Container($PARAM[id]).IsUpdating" />
 				<param name="id" value="$PARAM[id]" />
 				<param name="widget_position" value="$PARAM[widget_position]" />
@@ -818,6 +819,7 @@
 			<param name="limit" value="$INFO[Skin.String(GlobalSearch_Movies_Limit)]" />
 			<param name="widget_header" value="'$INFO[Skin.String(globalsearch)]'" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[342]" />
+			<param name="global_search" value="true" />
 		</include>
 	</include>
 
@@ -836,6 +838,7 @@
 			<param name="limit" value="$INFO[Skin.String(GlobalSearch_TVShows_Limit)]" />
 			<param name="widget_header" value="'$INFO[Skin.String(globalsearch)]'" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[20343]" />
+			<param name="global_search" value="true" />
 		</include>
 	</include>
 
@@ -854,6 +857,7 @@
 			<param name="limit" value="$INFO[Skin.String(GlobalSearch_Episodes_Limit)]" />
 			<param name="widget_header" value="'$INFO[Skin.String(globalsearch)]'" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[20360]$VAR[Copacetic_Divider_Bold, ]$INFO[Container(3203).ListItem.TVShowTitle, ]" />
+			<param name="global_search" value="true" />
 		</include>
 	</include>
 
@@ -873,6 +877,7 @@
 			<param name="limit" value="$INFO[Skin.String(GlobalSearch_Artists_Limit)]" />
 			<param name="widget_header" value="'$INFO[Skin.String(globalsearch)]'" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[133]" />
+			<param name="global_search" value="true" />
 		</include>
 	</include>
 
@@ -892,6 +897,7 @@
 			<param name="limit" value="$INFO[Skin.String(GlobalSearch_Albums_Limit)]" />
 			<param name="widget_header" value="'$INFO[Skin.String(globalsearch)]'" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[132]" />
+			<param name="global_search" value="true" />
 		</include>
 	</include>
 
@@ -911,6 +917,7 @@
 			<param name="limit" value="$INFO[Skin.String(GlobalSearch_Songs_Limit)]" />
 			<param name="widget_header" value="'$INFO[Skin.String(globalsearch)]'" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[134]" />
+			<param name="global_search" value="true" />
 		</include>
 	</include>
 

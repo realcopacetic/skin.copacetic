@@ -152,6 +152,8 @@
 	<expression name="programs_Level_3">$EXP[Container_Programs_IsFolders]</expression>
 	<expression name="programs_Level_4">$EXP[Container_Programs_IsFiles]</expression>
 
+	<expression name="globalsearch_Container_Switching">[Control.HasFocus(3201) + Window.IsVisible(1131)] | [Control.HasFocus(3202) + Window.IsVisible(1132)] | [Control.HasFocus(3203) + Window.IsVisible(1133)] | [Control.HasFocus(3204) + Window.IsVisible(1134)] | [Control.HasFocus(3205) + Window.IsVisible(1135)] | [Control.HasFocus(3206) + Window.IsVisible(1136)] | [Control.HasFocus(3207) + Window.IsVisible(1137)] | [Control.HasFocus(3208) + Window.IsVisible(1138)] | [Control.HasFocus(3209) + Window.IsVisible(1139)]</expression>
+
 	<!-- Extras -->
 	<expression name="Multiart_Container_Switching">[String.IsEqual(Window(home).Property(Home_Widget),3201) + Window.IsVisible(1131)] | [String.IsEqual(Window(home).Property(Home_Widget),3202) + Window.IsVisible(1132)] | [String.IsEqual(Window(home).Property(Home_Widget),3203) + Window.IsVisible(1133)] | [String.IsEqual(Window(home).Property(Home_Widget),3204) + Window.IsVisible(1134)] | [String.IsEqual(Window(home).Property(Home_Widget),3205) + Window.IsVisible(1135)] | [String.IsEqual(Window(home).Property(Home_Widget),3206) + Window.IsVisible(1136)] | [String.IsEqual(Window(home).Property(Home_Widget),3207) + Window.IsVisible(1137)] | [String.IsEqual(Window(home).Property(Home_Widget),3208) + Window.IsVisible(1138)] | [String.IsEqual(Window(home).Property(Home_Widget),3209) + Window.IsVisible(1139)]</expression>
 	<expression name="Music_Player_IsVisible">Skin.HasSetting(Music_Player_Enabled) + MusicPlayer.Offset(0).Exists</expression>

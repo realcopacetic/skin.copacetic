@@ -20,11 +20,15 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
-**1.5.2**
-- Fixed a bug in translations file https://github.com/realcopacetic/skin.copacetic/issues/183
-- Fixed slides for Grid Horizontal layout 
-- Added visibility condition to seek label https://github.com/realcopacetic/skin.copacetic/issues/187
+**1.5.4**
+- Improved animations for gridview border
+- Fixed label for visualisation layout in skin settings
+- Fixed stripview variable label in global search https://github.com/realcopacetic/skin.copacetic/issues/181
 Still to do:
+-----background colour when going to info from billboard homescreen widget
+-----colour of clock when going from light background to shutdownmenu
+-----different animation times for breadcrumb and content on home widgets
+
 ---- Infoscreen transitions
 ---- Grid small and horizontal - with MusicPlayer widget
 --- checkmarks/fades for other views?
@@ -39,6 +43,14 @@ Still to do:
 <!-- temp fix to account for fact that DecreaseRating won't go lower than 1 for VideoPlayer.UserRating -->
 - PVR
 https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Extended-Info#direct-call-auto
+
+**1.5.3**
+- Disabled debugging
+
+**1.5.2**
+- Fixed a bug in translations file https://github.com/realcopacetic/skin.copacetic/issues/183
+- Fixed slides for Grid Horizontal layout 
+- Added visibility condition to seek label https://github.com/realcopacetic/skin.copacetic/issues/187
 
 **1.5.1**
 - Fixed bug where square widgets were showing fanart even when a thumbnail was available https://github.com/realcopacetic/skin.copacetic/issues/179
