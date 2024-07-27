@@ -36,6 +36,7 @@
 		<param name="onnext_id" default="5002" />
 		<param name="onnext_trigger" default="Container.OnNext | Container(50).OnNext | Container(3201).OnNext | Container(3202).OnNext | Container(3203).OnNext | Container(3204).OnNext | Container(3205).OnNext | Container(3206).OnNext | Container(3207).OnNext | Container(3208).OnNext | Container(3209).OnNext | Container(11).OnNext | Container(52).OnNext" />
 		<param name="oncontainerswitch_id" default="5006" />
+		<param name="oncontainerswitch_trigger" default="$EXP[Container_Switching]" />
 		<param name="content_delay" default="Default_Transition_1x" />
 		<param name="container_delay" default="Default_Transition_2x" />
 		<definition>
@@ -48,7 +49,7 @@
 				<animation effect="slide" end="0,0" time="$PARAM[content_delay]" reversible="false">Hidden</animation>
 			</control>
 			<control type="group" id="$PARAM[oncontainerswitch_id]">
-				<visible>$EXP[Container_Switching]</visible>
+				<visible>$PARAM[oncontainerswitch_trigger]</visible>
 				<animation effect="slide" end="0,0" time="$PARAM[container_delay]" reversible="false">Hidden</animation>
 			</control>
 		</definition>
@@ -60,12 +61,16 @@
 			<param name="onprevious_trigger" value="$PARAM[onprevious_trigger]" />
 			<param name="onnext_id" value="$PARAM[onnext_id]" />
 			<param name="onnext_trigger" value="$PARAM[onnext_trigger]" />
+			<param name="oncontainerswitch_id" value="$PARAM[oncontainerswitch_id]" />
+			<param name="oncontainerswitch_trigger" value="$PARAM[oncontainerswitch_trigger]" />
 		</include>
 		<include content="User_Scroll_Delay_Template" condition="Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)">
 			<param name="onprevious_id" value="$PARAM[onprevious_id]" />
 			<param name="onprevious_trigger" value="$PARAM[onprevious_trigger]" />
 			<param name="onnext_id" value="$PARAM[onnext_id]" />
 			<param name="onnext_trigger" value="$PARAM[onnext_trigger]" />
+			<param name="oncontainerswitch_id" value="$PARAM[oncontainerswitch_id]" />
+			<param name="oncontainerswitch_trigger" value="$PARAM[oncontainerswitch_trigger]" />
 			<param name="content_delay" value="Quick_Transition_0x" />
 			<param name="container_delay" value="Quick_Transition_0x" />
 		</include>
