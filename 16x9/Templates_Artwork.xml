@@ -45,7 +45,7 @@
 		<definition>
 			<control type="image">
 				<visible>$PARAM[visible]</visible>
-				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" condition="!Window.IsMedia | Window.IsVisible(1180)" />
+				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" condition="!Window.IsMedia | Window.IsVisible(1180) | Window.Is(musicinformation) | Window.Is(songinformation) | Window.Is(addoninformation)" />
 				<animation effect="fadediffuse" end="ff808080" time="0" condition="$PARAM[art_diffuse]">Conditional</animation>
 				<animation effect="fadediffuse" end="ff808080" time="Default_Transition_1x" tween="sine" easing="inout" condition="$PARAM[art_diffuse_fadein] + !Skin.HasSetting(Quick_Transitions)" reversible="false">Conditional</animation>
 				<animation effect="fadediffuse" end="ff808080" time="0" condition="$PARAM[art_diffuse_fadein] + Skin.HasSetting(Quick_Transitions)" reversible="false">Conditional</animation>
