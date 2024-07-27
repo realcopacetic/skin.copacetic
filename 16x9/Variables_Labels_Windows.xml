@@ -297,8 +297,8 @@
 		<value>$LOCALIZE[31007]</value>
 	</variable>
 	<variable name="skinsettings_visualisation_Layout_Label2">
-		<value condition="Skin.String(visualisation_Layout,Large)">$LOCALIZE[31483]</value>
-		<value>$LOCALIZE[31482]</value>
+		<value condition="Skin.String(visualisation_Layout,Large)">$LOCALIZE[31829]</value>
+		<value>$LOCALIZE[31830]</value>
 	</variable>
 	<variable name="skinsettings_Time_Widget_Label">
 		<value condition="Skin.String(Time_Widget,Weather)">$LOCALIZE[31727]</value>
