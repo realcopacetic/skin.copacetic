@@ -1428,6 +1428,18 @@ msgstr ""
 
 #: NEW
 #/16x9/Content_Settings.xml
+msgctxt "#31829"
+msgid "Large"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31830"
+msgid "Small"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
 msgctxt "#31482"
 msgid "Vertical small"
 msgstr ""
