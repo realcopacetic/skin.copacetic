@@ -27,6 +27,8 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Fixed bug in infoscreen navigation that was causing navigation to break because !String.IsEqual(Container(3203).ListItem.Label,ListItem.Label) was evaluating to true even when Container(3203) was empty
 - Fixed a bug causing some infoscreen widget artwork not to dim when dialog window was open on top, e.g. shutdownmenu
 - Fixed a bug causing background colour to stay black on infoscreen widgets when Light theme selected and navigating to infoscreen from a Billboard view home widget
+- New WB logo
+- New DC logo
 
 Still to do:
 -----colour of clock when going from light background to shutdownmenu
