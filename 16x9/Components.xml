@@ -99,6 +99,7 @@
 		<param name="fadein_animation_condition" default="true" />
 		<param name="fadeout_animation_condition" default="true" />
 		<param name="include_label" default="true" />
+		<param name="texture_path" default="$INFO[Container(3300).ListItem.Art(fanart)]" />
 		<definition>
 			<include content="Background_List" condition="$PARAM[include_list]">
 				<param name="content_source" value="$PARAM[content_source]" />
@@ -187,6 +188,14 @@
 			<param name="texture_path" value="$VAR[Background_Home_Texture]" />
 			<param name="fadetime" value="Default_Transition_1x" />
 			<param name="time" value="$PARAM[time]" />
+		</include>
+	</include>
+
+	<include name="Background_Multiart_Login">
+		<include content="Background_Multiart">
+			<param name="content_source" value="Background_Login_Content" />
+			<param name="colordiffuse" value="$VAR[Home_Artwork_Diffuse]" />
+			<param name="fadetime" value="Default_Transition_1x" />
 		</include>
 	</include>
 

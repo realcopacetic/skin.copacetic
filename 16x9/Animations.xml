@@ -373,7 +373,7 @@
 	<include name="Widget_Breadcrumb_Animation">
 		<include content="fade_Visible" condition="!Skin.HasSetting(Quick_Transitions)">
 			<param name="time" value="Default_Transition_1x" />
-			<param name="delay" value="Default_Transition_1.5x" />
+			<param name="delay" value="Default_Transition_1x" />
 			<param name="reversible" value="false" />
 			<param name="condition" value="Control.HasFocus(50) | Control.HasFocus(3201) | Control.HasFocus(3202) | Control.HasFocus(3203) | Control.HasFocus(3204) | Control.HasFocus(3205) | Control.HasFocus(3206) | Control.HasFocus(3207) | Control.HasFocus(3208) | Control.HasFocus(3209)" />
 		</include>
