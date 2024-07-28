@@ -29,9 +29,10 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Fixed a bug causing background colour to stay black on infoscreen widgets when Light theme selected and navigating to infoscreen from a Billboard view home widget
 - New WB logo
 - New DC logo
+- Fixed time widget label colour when showing shutdown menu on top of a home screen widget with Light background theme enabled
+- Added container transition between Album and Album disc screen
 
 Still to do:
------colour of clock when going from light background to shutdownmenu
 -----different animation times for breadcrumb and content on home widgets
 
 ---- Infoscreen transitions

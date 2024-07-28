@@ -250,6 +250,10 @@
 	<variable name="Notification_Widget_Label_Color">
 		<value>$VAR[Breadcrumb_Label_Color]</value>
 	</variable>
+	<variable name="Time_Widget_Label_Color">
+		<value condition="$EXP[TransparentDialog_IsVisible]">$VAR[Light_Color]</value>
+		<value>$VAR[Breadcrumb_Label_Color]</value>
+	</variable>
 	<variable name="Volume_Focused_Color">
 		<value condition="$EXP[Music_Player_HasArt]">$VAR[Light_Color]</value>
 		<value condition="!$EXP[Infoscreen_IsVisible] + !Window.IsVisible(home) + [$EXP[ListView_Display_IsThumbnails] | $EXP[StripView_IsVisible] | $EXP[GridView_IsVisible]]">$VAR[Light_Color]</value>

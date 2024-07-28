@@ -123,15 +123,16 @@
 	<!-- children -->
 	<expression name="media_Level_0">String.IsEmpty(Container.FolderName) + Container.Content()</expression>
 	<expression name="media_Level_1">String.IsEmpty(Container.FolderName) + !Container.Content()</expression>
-	<expression name="media_Level_2">$EXP[Content_HasBackground] | Container.Content(actors)</expression>
+	<expression name="media_Level_2">$EXP[Content_HasBackground] | Container.Content(actors) | $EXP[music_Level_2]</expression>
 	<expression name="media_Level_3">$EXP[movies_Level_3] | $EXP[music_Level_3] | $EXP[tvshows_Level_3] | Container.Content(addons)</expression>
 	<expression name="media_Level_4">$EXP[movies_Level_4] | $EXP[music_Level_4] | $EXP[tvshows_Level_4]</expression>
 	<expression name="media_Level_5">$EXP[movies_Level_5] | $EXP[music_Level_5] | $EXP[tvshows_Level_5]</expression>
 	<expression name="movies_Level_3">Container.Content(sets) | [Container.Content(movies) + !String.IsEqual(Container.FolderName,ListItem.Set) + !String.IsEqual(Container.FolderName,ListItem.Title)]</expression>
 	<expression name="movies_Level_4">Container.Content(movies) + String.IsEqual(Container.FolderName,ListItem.Set)</expression>
 	<expression name="movies_Level_5">Container.Content(movies) + String.IsEqual(Container.FolderName,ListItem.Title)</expression><!-- video versions -->
-	<expression name="music_Level_3">Container.Content(artists)</expression>
-	<expression name="music_Level_4">Container.Content(albums)</expression>
+	<expression name="music_Level_2">Container.Content(artists)</expression>
+	<expression name="music_Level_3">Container.Content(albums) + String.IsEqual(Container.FolderName,ListItem.Artist)</expression>
+	<expression name="music_Level_4">Container.Content(albums) + String.IsEqual(Container.FolderName,ListItem.Album)</expression>
 	<expression name="music_Level_5">Container.Content(songs)</expression>
 	<expression name="tvshows_Level_3">Container.Content(tvshows)</expression>
 	<expression name="tvshows_Level_4">Container.Content(seasons) | [Container.Content(episodes) + ListItem.IsFolder + !String.Contains(Container.FolderPath,videodb)]</expression>
