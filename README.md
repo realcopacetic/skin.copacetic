@@ -31,19 +31,17 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - New DC logo
 - Fixed time widget label colour when showing shutdown menu on top of a home screen widget with Light background theme enabled
 - Added container transition between Album and Album disc screen
+- Adjusted fade delay times to be consistent between home widget details and breadcrumb label
+- Fixed loginscreen background with library fallbacks as script is not loaded until this screen is bypassed
 
 Still to do:
------different animation times for breadcrumb and content on home widgets
-
 ---- Infoscreen transitions
 ---- Grid small and horizontal - with MusicPlayer widget
---- checkmarks/fades for other views?
 --- check to see the player status labels
 -- check tmdb helper click actions for all infoscreen widgets (including episode ones etc)
 -- tmdb helper for play button on infoscreen?
 - autoscroll bar
 - multiart on autoscroll
-- login background
 - Create radio station button
 - remove window property hack for music ratings during playback in Omega
 <!-- temp fix to account for fact that DecreaseRating won't go lower than 1 for VideoPlayer.UserRating -->
