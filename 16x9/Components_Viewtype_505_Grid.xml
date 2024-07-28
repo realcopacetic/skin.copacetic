@@ -532,6 +532,7 @@
 		<animation effect="slide" end="490" time="0" reversible="false" condition="$EXP[GridView_Display_IsPosters] + Integer.IsGreater(Container.NumItems,4) + Integer.IsLessOrEqual(Container.NumItems,6)">Conditional</animation>
 		<animation effect="slide" end="350" time="0" reversible="false" condition="$EXP[GridView_Display_IsPosters] + Integer.IsGreater(Container.NumItems,6) + Integer.IsLessOrEqual(Container.NumItems,8)">Conditional</animation>
 		<animation effect="slide" end="210" time="0" reversible="false" condition="$EXP[GridView_Display_IsPosters] + Integer.IsGreater(Container.NumItems,8) + Integer.IsLessOrEqual(Container.NumItems,10)">Conditional</animation>
+		<animation effect="slide" end="700" time="0" reversible="false" condition="$EXP[GridView_Display_IsSquare] + Integer.IsLessOrEqual(Container.NumItems,2)">Conditional</animation>
 		<animation effect="slide" end="490" time="0" reversible="false" condition="$EXP[GridView_Display_IsSquare] + Integer.IsGreater(Container.NumItems,2) + Integer.IsLessOrEqual(Container.NumItems,4)">Conditional</animation>
 		<animation effect="slide" end="280" time="0" reversible="false" condition="$EXP[GridView_Display_IsSquare] + Integer.IsGreater(Container.NumItems,4) + Integer.IsLessOrEqual(Container.NumItems,6)">Conditional</animation>
 		<animation effect="slide" end="70" time="0" reversible="false" condition="$EXP[GridView_Display_IsSquare] + Integer.IsGreater(Container.NumItems,6) + Integer.IsLessOrEqual(Container.NumItems,8)">Conditional</animation>
