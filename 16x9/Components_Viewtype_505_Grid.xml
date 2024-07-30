@@ -30,13 +30,13 @@
 
 	<include name="GridView_Icon_Unfocused">
 		<include content="ListIcon_Static_Unfocused">
-			<param name="visible" value="$EXP[GridView_Display_Is$PARAM[displaytype_label]] + !$EXP[Container_Switching] + !$EXP[Options_Switching]" />
+			<param name="visible" value="!$EXP[Container_Switching] + !$EXP[Options_Switching]" />
 			<param name="left" value="$PARAM[left]" />
 			<param name="top" value="$PARAM[top]" />
 			<param name="art_icon" value="$PARAM[art_icon]" />
 			<param name="fallback" value="views/dark_grey_100.png" />
 			<param name="indicator" value="false" />
-			<param name="watched_diffuse" value="[Skin.HasSetting(GridView_WatchedStatus_Enabled) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(addons) + !ListItem.Property(Addon.IsEnabled)]" />
+			<param name="watched_diffuse" value="[Skin.HasSetting(GridView_WatchedStatus_Enabled) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(addons) + ListItem.Property(Addon.IsInstalled) + !ListItem.Property(Addon.IsEnabled)]" />
 			<param name="now_playing" value="$EXP[ListItem(0)_NowPlaying]" />
 			<include content="Visible_Fade_Animation" />
 			<animation effect="slide" end="4,0" time="0" condition="Skin.String(GridView_Size,Small)" reversible="false">Conditional</animation>
@@ -195,7 +195,7 @@
 			<include content="Multiart_Resetter" condition="Skin.HasSetting(Multiart_Slideshow)" />
 			<include content="Multiart_Setter" condition="Skin.HasSetting(Multiart_Slideshow)" />
 			<control type="group">
-				<visible>$EXP[GridView_Display_Is$PARAM[displaytype_label]] + !$EXP[Container_Switching] + !$EXP[Options_Switching]</visible>
+				<visible>!$EXP[Container_Switching] + !$EXP[Options_Switching]</visible>
 				<include content="Visible_Fade_Animation" />
 				<animation effect="slide" end="4,0" time="0" condition="Skin.String(GridView_Size,Small)" reversible="false">Conditional</animation>
 				<animation effect="slide" end="12,0" time="0" condition="$EXP[GridView_Display_IsFanart] + Skin.String(GridView_Size,Large)" reversible="false">Conditional</animation>
@@ -211,7 +211,6 @@
 				<control type="group">
 					<include content="Focus_Zoom_Animation" condition="![Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)]" />
 					<include content="ListIcon_Static_Focused">
-						<param name="visible" value="$EXP[GridView_Display_Is$PARAM[displaytype_label]]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
 						<param name="art_diffuse" value="Skin.HasSetting(Quick_Transitions) + ![$EXP[GridView_Details_Off] | $EXP[GridView_Details_Breadcrumb] | $EXP[ListItem(0)_NowPlaying]] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo)" />
 						<param name="indicator" value="false" />
@@ -231,7 +230,7 @@
 						<control type="image">
 							<visible>![$EXP[GridView_Details_Off] | $EXP[GridView_Details_Breadcrumb] | $EXP[ListItem(0)_NowPlaying]] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo) + !Skin.HasSetting(Quick_Transitions)</visible>
 							<include content="Visible_Fade_Animation" />
-							<animation effect="fade" start="0" end="50" time="Default_Transition_1x" delay="Default_Transition_2x" tween="sine" easing="inout" reversible="false">Focus</animation>
+							<animation effect="fade" start="0" end="66" time="Default_Transition_1x" delay="Default_Transition_2x" tween="sine" easing="inout" reversible="false">Focus</animation>
 							<texture colordiffuse="$VAR[Dark_Color]">views/white_100.png</texture>
 						</control>
 					</include>

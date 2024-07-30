@@ -925,6 +925,7 @@
 		<value condition="String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
 		<value condition="String.IsEqual(ListItem.DBType,song) + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
 		<value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+		<value condition="$EXP[GridView_IsVisible] + Container.Content()">$INFO[ListItem.Label]</value> 
 		<value condition="$EXP[GridView_IsVisible] + String.IsEmpty(ListItem.DBID) + String.Contains(ListItem.Label,.) + !String.IsEmpty(Window(home).Property(Return_Label))">$INFO[Window(home).Property(Return_Label)]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
@@ -970,6 +971,7 @@
 		<value condition="Container.Content(files) + !String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
 		<value condition="Container.Content(videos)">$INFO[ListItem.Artist]</value>
 		<value condition="$EXP[Container_Plugin_Empty] + $EXP[GridView_IsVisible]">$INFO[ListItem.Label]</value>
+		<value condition="Container.Content() + $EXP[GridView_IsVisible]">$INFO[ListItem.Label]</value>
 		<value condition="Window.Is(skinsettings)">$LOCALIZE[31472]</value>
 		<value condition="Window.Is(interfacesettings)">$LOCALIZE[14206]</value>
 		<value condition="Window.Is(mediasettings)">$LOCALIZE[14211]</value>
@@ -1011,7 +1013,6 @@
 	</variable>
 
 	<variable name="Unwatched_Indicator_Label">
-		<value condition="ListItem.IsCollection + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable">$INFO[Container(3100).NumItems]</value>
 		<value condition="ListItem.IsCollection + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !String.IsEmpty(Window(home).Property(collection_unwatched))">$INFO[Window(home).Property(collection_unwatched)]</value>
 		<value condition="Control.HasFocus(3100)">$INFO[Container(3100).ListItem.Property(UnwatchedEpisodes)]</value>
 		<value>$INFO[Container.ListItem.Property(UnwatchedEpisodes)]</value>

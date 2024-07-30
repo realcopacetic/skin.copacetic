@@ -68,8 +68,8 @@
 	</variable>
 
 	<variable name="Path_Episodes">
-		<value condition="String.IsEqual(Container.FolderName,ListItem.TVShowTitle) + !String.IsEmpty(Window(home).Property(Season_Number))">$INFO[ListItem.DBID,videodb://tvshows/titles/]$INFO[Window(home).Property(Season_Number),/,/]</value>
-		<value>videodb://tvshows/titles/$INFO[ListItem.TVShowDBID]/$INFO[ListItem.Season]/</value>
+		<value condition="Integer.IsGreater(ListItem.TVShowDBID,0) + !String.IsEmpty(Window(home).Property(Season_Number))">$INFO[ListItem.TVShowDBID,videodb://tvshows/titles/]$INFO[Window(home).Property(Season_Number),/,/]</value>
+		<value condition="Integer.IsGreater(ListItem.DBID,0)">videodb://tvshows/titles/$INFO[ListItem.DBID]/$INFO[ListItem.Season]/</value>
 	</variable>
 
 	<variable name="Path_Seasons">
@@ -77,7 +77,6 @@
 		<value condition="!$EXP[Infoscreen_Widget_Prefer_TMDbHelper] + Integer.IsGreater(ListItem.TVShowDBID,0)">videodb://tvshows/titles/$INFO[ListItem.TVShowDBID]/</value>
 		<value condition="System.AddonIsEnabled(plugin.video.themoviedb.helper) + String.IsEqual(ListItem.DBType,tvshow) + String.IsEqual(ListItem.TVShowTitle,ListItem.Label)">plugin://plugin.video.themoviedb.helper?info=seasons&amp;type=tv&amp;query='$ESCINFO[ListItem.TVShowTitle]'&amp;year=$INFO[ListItem.Year]&amp;$VAR[TMDBHelper_Default_Params]</value>
 		<value condition="System.AddonIsEnabled(plugin.video.themoviedb.helper) + !String.IsEmpty(ListItem.TVShowTitle) + !String.IsEmpty(ListItem.Season)">plugin://plugin.video.themoviedb.helper?info=episodes&amp;type=tv&amp;query='$ESCINFO[ListItem.TVShowTitle]'&amp;season=$INFO[ListItem.Season]&amp;year=$INFO[ListItem.Year]&amp;$VAR[TMDBHelper_Default_Params]</value>
-
 	</variable>
 
 	<variable name="Path_ActorCredits">

@@ -42,16 +42,17 @@
 		<param name="art_diffuse_fadeout_1" default="false" />
 		<param name="art_diffuse_fadeout_2" default="false" />
 		<param name="now_playing" default="false" />
+		<param name="fade_on_dialog" default="true" />
 		<definition>
 			<control type="image">
 				<visible>$PARAM[visible]</visible>
-				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" condition="!Window.IsMedia | Window.IsVisible(1180) | Window.Is(musicinformation) | Window.Is(songinformation) | Window.Is(addoninformation)" />
-				<animation effect="fadediffuse" end="ff808080" time="0" condition="$PARAM[art_diffuse]">Conditional</animation>
-				<animation effect="fadediffuse" end="ff808080" time="Default_Transition_1x" tween="sine" easing="inout" condition="$PARAM[art_diffuse_fadein] + !Skin.HasSetting(Quick_Transitions)" reversible="false">Conditional</animation>
-				<animation effect="fadediffuse" end="ff808080" time="0" condition="$PARAM[art_diffuse_fadein] + Skin.HasSetting(Quick_Transitions)" reversible="false">Conditional</animation>
-				<animation effect="fadediffuse" end="ff808080" time="0" condition="$PARAM[art_diffuse_fadeout_1]" reversible="false">Conditional</animation>
-				<animation effect="fadediffuse" start="ff808080" end="ffffffff" time="Default_Transition_1x" tween="sine" easing="inout" condition="$PARAM[art_diffuse_fadeout_2] + !Skin.HasSetting(Quick_Transitions)" reversible="false">Conditional</animation>
-				<animation effect="fadediffuse" end="ff555555" time="0" condition="$PARAM[now_playing]">Conditional</animation>
+				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" condition="[Window.Is(home) | Window.IsVisible(1180) | Window.Is(movieinformation) | Window.Is(musicinformation) | Window.Is(songinformation) | Window.Is(addoninformation)] + $PARAM[fade_on_dialog]" />
+				<animation effect="fadediffuse" end="ff808080" time="0" condition="$PARAM[art_diffuse]">Conditional</animation><!-- 50% -->
+				<animation effect="fadediffuse" end="ff808080" time="Default_Transition_1x" tween="sine" easing="inout" condition="$PARAM[art_diffuse_fadein] + !Skin.HasSetting(Quick_Transitions)" reversible="false">Conditional</animation><!-- 50% -->
+				<animation effect="fadediffuse" end="ff808080" time="0" condition="$PARAM[art_diffuse_fadein] + Skin.HasSetting(Quick_Transitions)" reversible="false">Conditional</animation><!-- 50% -->
+				<animation effect="fadediffuse" end="ff808080" time="0" condition="$PARAM[art_diffuse_fadeout_1]" reversible="false">Conditional</animation><!-- 50% -->
+				<animation effect="fadediffuse" start="ff808080" end="ffffffff" time="Default_Transition_1x" tween="sine" easing="inout" condition="$PARAM[art_diffuse_fadeout_2] + !Skin.HasSetting(Quick_Transitions)" reversible="false">Conditional</animation><!-- 50% -->
+				<animation effect="fadediffuse" end="ff262626" time="0" condition="$PARAM[now_playing]">Conditional</animation><!-- 15% -->
 				<nested />
 				<texture fallback="$PARAM[fallback]" background="true">$PARAM[texture]</texture>
 				<aspectratio align="center" aligny="center">$PARAM[aspectratio]</aspectratio>
