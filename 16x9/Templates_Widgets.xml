@@ -464,7 +464,7 @@
 		<param name="widget_position" default="0" />
 		<param name="use_custom_content" default="true" />
 		<param name="use_custom_click" default="true" />
-		<param name="min_items" default="2" />
+		<param name="min_items" default="1" />
 		<param name="bypass_min_items" default="false" />
 		<param name="include_progress" default="true" />
 		<param name="global_search" default="false" />
@@ -530,7 +530,6 @@
 
 	<include name="Infoscreen_Widget_3201_NextUp">
 		<include content="Infoscreen_Widget_Template">
-			<param name="min_items" value="1" />
 			<param name="widget_view" value="Strip" />
 			<param name="widget_display" value="Fanart" />
 			<param name="id" value="3201" />
@@ -562,6 +561,7 @@
 
 	<include name="Infoscreen_Widget_3201_MovieSet">
 		<include content="Infoscreen_Widget_Template">
+			<param name="min_items" value="2" />
 			<param name="widget_view" value="Strip" />
 			<param name="widget_display" value="Posters" />
 			<param name="id" value="3201" />
@@ -610,7 +610,6 @@
 
 	<include name="Infoscreen_Widget_3202_Discography">
 		<include content="Infoscreen_Widget_Template">
-			<param name="min_items" value="1" />
 			<param name="widget_view" value="Strip" />
 			<param name="widget_display" value="Square" />
 			<param name="id" value="3202" />
@@ -627,6 +626,7 @@
 
 	<include name="Infoscreen_Widget_50_Cast">
 		<include content="Infoscreen_Widget_Template">
+			<param name="min_items" value="2" />
 			<param name="widget_view" value="Grid" />
 			<param name="widget_display" value="Posters" />
 			<param name="widget_position" value="0" />
@@ -641,6 +641,7 @@
 
 	<include name="Infoscreen_Widget_50_Set">
 		<include content="Infoscreen_Widget_Template">
+			<param name="min_items" value="2" />
 			<param name="widget_view" value="Strip" />
 			<param name="widget_display" value="Posters" />
 			<param name="id" value="50" />
@@ -685,7 +686,6 @@
 
 	<include name="Infoscreen_Widget_3205_DirectorCredits">
 		<include content="Infoscreen_Widget_Template">
-			<param name="min_items" value="1" />
 			<param name="widget_view" value="Billboard" />
 			<param name="widget_display" value="Fanart" />
 			<param name="id" value="3205" />
@@ -703,7 +703,6 @@
 
 	<include name="Infoscreen_Widget_3205_MusicVideos">
 		<include content="Infoscreen_Widget_Template">
-			<param name="min_items" value="1" />
 			<param name="widget_view" value="Strip" />
 			<param name="widget_display" value="Fanart" />
 			<param name="id" value="3205" />
@@ -721,7 +720,6 @@
 
 	<include name="Infoscreen_Widget_3206_StudioCredits">
 		<include content="Infoscreen_Widget_Template">
-			<param name="min_items" value="1" />
 			<param name="widget_view" value="Strip" />
 			<param name="widget_display" value="Fanart" />
 			<param name="id" value="3206" />
@@ -755,7 +753,6 @@
 
 	<include name="Infoscreen_Widget_3207_SimilarArtists">
 		<include content="Infoscreen_Widget_Template">
-			<param name="min_items" value="1" />
 			<param name="widget_view" value="Grid" />
 			<param name="widget_display" value="Fanart" />
 			<param name="id" value="3207" />
