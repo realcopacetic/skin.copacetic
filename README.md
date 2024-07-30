@@ -36,6 +36,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 Still to do:
 ---- Infoscreen transitions
+---- Grid view for files accessed from settings
 ---- Grid small and horizontal - with MusicPlayer widget
 --- check to see the player status labels
 -- check tmdb helper click actions for all infoscreen widgets (including episode ones etc)

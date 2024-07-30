@@ -25,7 +25,7 @@
 				<orientation>vertical</orientation>
 				<itemlayout />
 				<focusedlayout />
-				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]">$PARAM[content]</content>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" browse="never">$PARAM[content]</content>
 			</control>
 		</definition>
 	</include>
