@@ -23,6 +23,7 @@
 			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3208) + !Container(3208).IsUpdating">SetFocus(3208)</onfocus>
 			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3209) + !Container(3209).IsUpdating">SetFocus(3209)</onfocus>
 			<onfocus condition="String.IsEmpty(Window(home).Property(Origin))">SetFocus(3000)</onfocus>
+			<onfocus>ClearProperty(Origin,home)</onfocus>
 		</control>
 		<control type="button" id="6002">
 			<visible allowhiddenfocus="true">false</visible>
@@ -45,6 +46,7 @@
 			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3208) + !Container(3208).IsUpdating">SetFocus(3208)</onfocus>
 			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3209) + !Container(3209).IsUpdating">SetFocus(3209)</onfocus>
 			<onfocus condition="String.IsEmpty(Window(home).Property(Origin))">SetFocus(3000)</onfocus>
+			<onfocus>ClearProperty(Origin,home)</onfocus>
 		</control>
 	</include>
 
@@ -97,8 +99,8 @@
 				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),08)">SetProperty(Breadcrumb_Level,07,$PARAM[window])</onfocus>
 				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),09)">SetProperty(Breadcrumb_Level,08,$PARAM[window])</onfocus>
 				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),10)">SetProperty(Breadcrumb_Level,09,$PARAM[window])</onfocus>
-
 			</control>
 		</definition>
 	</include>
+	
 </includes>

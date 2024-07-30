@@ -38,7 +38,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Fixed infoscreen path tracer when starting from an episode in a widget
 
 Still to do:
----- Infoscreen transitions
+------Seasons infoscreen widgets
 ---- Grid view for files accessed from settings
 ---- Grid small and horizontal - with MusicPlayer widget
 --- check to see the player status labels
