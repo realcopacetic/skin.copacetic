@@ -29,15 +29,6 @@
     <description>timer that starts whenever music visualisation is showing</description>
   </timer>
   <timer>
-    <name>season_info_monitor</name>
-    <description>Properties set as soon as navigation stops on a listitem</description>
-    <start reset="true">Container.Content(seasons)</start>
-    <stop>Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(season_info_monitor),0) + !Window.IsVisible(movieinformation)</stop>
-    <onstop>SetProperty(Season_Number,$INFO[ListItem.Season],home)</onstop>
-    <onstop>SetProperty(Season_Year,$INFO[ListItem.Year],home)</onstop>
-    <onstop>SetProperty(Season_Fanart,$ESCINFO[ListItem.Art(fanart)],home)</onstop>
-  </timer>
-  <timer>
     <name>trailer_autoplay</name>
     <start reset="true">Window.Is(videos) + Skin.HasSetting(Trailer_Autoplay) + [[Skin.String(Trailer_Autoplay_Movies_Enabled,true) + Container.Content(movies)] | [Skin.String(Trailer_Autoplay_TVShows_Enabled,true) + !Container.Content(tvshows)]] + Window.IsVisible(1160) + !Player.HasMedia</start>
     <reset>Player.HasVideo | Window.IsVisible(movieinformation) | Window.IsVisible(shutdownmenu) | Window.IsVisible(busydialog)</reset>
