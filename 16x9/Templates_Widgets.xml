@@ -11,8 +11,8 @@
 	<include name="Widget_Container_Content_InProgress">
 		<param name="limit" default="20" />
 		<definition>
-			<content target="videos" sortby="lastplayed" sortorder="descending" limit="$PARAM[limit]">special://skin/extras/playlists/inprogress_movies.xsp</content>
-			<content target="videos" sortby="lastplayed" sortorder="descending" limit="$PARAM[limit]">special://skin/extras/playlists/inprogress_episodes.xsp</content>
+			<content target="videos" sortby="lastplayed" sortorder="descending" limit="$PARAM[limit]" browse="never">special://skin/extras/playlists/inprogress_movies.xsp</content>
+			<content target="videos" sortby="lastplayed" sortorder="descending" limit="$PARAM[limit]" browse="never">special://skin/extras/playlists/inprogress_episodes.xsp</content>
 		</definition>
 	</include>
 

@@ -9,7 +9,7 @@
       <height>1</height>
       <itemlayout />
       <focusedlayout />
-      <content target="videos">$INFO[Window(Home).Property(TMDbHelper.Path.Current)]</content>
+      <content target="videos" browse="never">$INFO[Window(Home).Property(TMDbHelper.Path.Current)]</content>
     </control>
     <control type="image">
       <visible>Container(9999).IsUpdating</visible>
