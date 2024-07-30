@@ -26,7 +26,7 @@
 				<orientation>vertical</orientation>
 				<include content="Default_Scrolltime" condition="!Skin.HasSetting(Quick_Transitions)" />
 				<include content="$PARAM[layout]_Layout" />
-				<content target="$VAR[Secondary_List_Target]" sortby="$VAR[Secondary_List_Sort]" sortorder="$VAR[Secondary_List_Sort_Order]">$VAR[Secondary_List_Path]</content>
+				<content target="$VAR[Secondary_List_Target]" sortby="$VAR[Secondary_List_Sort]" sortorder="$VAR[Secondary_List_Sort_Order]" browse="never">$VAR[Secondary_List_Path]</content>
 			</control>
 		</definition>
 	</include>
