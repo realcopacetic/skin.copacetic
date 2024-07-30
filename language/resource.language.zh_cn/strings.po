@@ -669,8 +669,8 @@ msgstr "调整颜色对比度阈值"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31524"
-msgid "Adjust the amount of contrast required between the background and the flag colour. Raising the bottom threshold means only lighter colours will be accepted on dark backgrounds. Lowering the top threshold means only darker colours can be used on light backgrounds. Avoids dark flags on dark backgrounds or light flags on light backgrounds. Default range: 65 - 460."
-msgstr "调整背景和标志颜色之间所需的对比度。提高底部阈值意味着深色背景上仅接受较浅的颜色。降低最高阈值意味着在浅色背景上只能使用较暗的颜色。避免在深色背景上使用深色标志或在浅色背景上使用浅色标志。默认范围：65 - 460。"
+msgid "Adjust the amount of contrast required between the background and the flag colour. Raising the bottom threshold means only lighter colours will be accepted on dark backgrounds. Lowering the top threshold means only darker colours can be used on light backgrounds. Avoids dark flags on dark backgrounds or light flags on light backgrounds. Default range: 65 - 440."
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31428"
@@ -1248,6 +1248,16 @@ msgid "Visualisation screen album cover"
 msgstr "可视化屏幕专辑封面"
 
 # /16x9/Content_Settings.xml
+msgctxt "#31829"
+msgid "Large"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31830"
+msgid "Small"
+msgstr ""
+
+# /16x9/Content_Settings.xml
 msgctxt "#31482"
 msgid "Vertical small"
 msgstr ""
@@ -1734,6 +1744,11 @@ msgstr "开斋节穆巴拉克"
 msgctxt "#31914"
 msgid "Happy Earth Day"
 msgstr "地球日快乐"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31524"
+#~ msgid "Adjust the amount of contrast required between the background and the flag colour. Raising the bottom threshold means only lighter colours will be accepted on dark backgrounds. Lowering the top threshold means only darker colours can be used on light backgrounds. Avoids dark flags on dark backgrounds or light flags on light backgrounds. Default range: 65 - 460."
+#~ msgstr "调整背景和标志颜色之间所需的对比度。提高底部阈值意味着深色背景上仅接受较浅的颜色。降低最高阈值意味着在浅色背景上只能使用较暗的颜色。避免在深色背景上使用深色标志或在浅色背景上使用浅色标志。默认范围：65 - 460。"
 
 # /16x9/Content_Settings.xml
 #~ msgctxt "#31487"

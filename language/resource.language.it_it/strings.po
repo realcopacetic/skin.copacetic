@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2024-07-22 00:42+0000\n"
+"PO-Revision-Date: 2024-07-28 10:37+0000\n"
 "Last-Translator: Massimo Pissarello <mapi68@gmail.com>\n"
 "Language-Team: Italian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/it_it/>\n"
 "Language: it_it\n"
@@ -660,7 +660,7 @@ msgstr "Colora indicatori multimediali"
 # /16x9/Content_Settings.xml
 msgctxt "#31523"
 msgid "Media flags are colourised using the dominant colour from the processed clearlogo. The dominant colour will be used as long as there is enough contrast with the current background colour. You can adjust the contrast thresholds for dark and light backgrounds below."
-msgstr "indicatori multimedialiGli indicatori multimediali sono colorati utilizzando il colore dominante del clearlogo elaborato. Verrà utilizzato il colore dominante purché vi sia sufficiente contrasto con il colore di sfondo corrente. Di seguito puoi regolare le soglie di contrasto per sfondi scuri e chiari."
+msgstr "Gli indicatori multimediali sono colorati utilizzando il colore dominante del clearlogo elaborato. Verrà utilizzato il colore dominante purché vi sia sufficiente contrasto con il colore di sfondo corrente. Di seguito puoi regolare le soglie di contrasto per sfondi scuri e chiari."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31424"
@@ -669,8 +669,8 @@ msgstr "Regola soglie di contrasto del colore"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31524"
-msgid "Adjust the amount of contrast required between the background and the flag colour. Raising the bottom threshold means only lighter colours will be accepted on dark backgrounds. Lowering the top threshold means only darker colours can be used on light backgrounds. Avoids dark flags on dark backgrounds or light flags on light backgrounds. Default range: 65 - 460."
-msgstr "Regola la quantità di contrasto richiesta tra lo sfondo e il colore dell'indicatore. Alzare la soglia inferiore significa che solo i colori più chiari saranno accettati su sfondi scuri. Abbassare la soglia superiore significa che solo i colori più scuri possono essere utilizzati su sfondi chiari. Evita gli indicatori scuri su sfondi scuri o gli indicatori chiari su sfondi chiari. Intervallo predefinito: 65 - 460."
+msgid "Adjust the amount of contrast required between the background and the flag colour. Raising the bottom threshold means only lighter colours will be accepted on dark backgrounds. Lowering the top threshold means only darker colours can be used on light backgrounds. Avoids dark flags on dark backgrounds or light flags on light backgrounds. Default range: 65 - 440."
+msgstr "Regola la quantità di contrasto richiesta tra lo sfondo e il colore dell'indicatore. Aumentando la soglia inferiore, solo i colori più chiari saranno accettati su sfondi scuri. Abbassando la soglia superiore, solo i colori più scuri potranno essere usati su sfondi chiari. Evita indicatori scuri su sfondi scuri o indicatori chiari su sfondi chiari. Intervallo predefinito: 65 - 440."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31428"
@@ -1248,6 +1248,16 @@ msgid "Visualisation screen album cover"
 msgstr "Copertina album nella schermata di visualizzazione"
 
 # /16x9/Content_Settings.xml
+msgctxt "#31829"
+msgid "Large"
+msgstr "Grande"
+
+# /16x9/Content_Settings.xml
+msgctxt "#31830"
+msgid "Small"
+msgstr "Piccolo"
+
+# /16x9/Content_Settings.xml
 msgctxt "#31482"
 msgid "Vertical small"
 msgstr "Verticale piccolo"
@@ -1734,6 +1744,11 @@ msgstr "Buona festa"
 msgctxt "#31914"
 msgid "Happy Earth Day"
 msgstr "Felice giorno della terra"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31524"
+#~ msgid "Adjust the amount of contrast required between the background and the flag colour. Raising the bottom threshold means only lighter colours will be accepted on dark backgrounds. Lowering the top threshold means only darker colours can be used on light backgrounds. Avoids dark flags on dark backgrounds or light flags on light backgrounds. Default range: 65 - 460."
+#~ msgstr "Regola la quantità di contrasto richiesta tra lo sfondo e il colore dell'indicatore. Alzare la soglia inferiore significa che solo i colori più chiari saranno accettati su sfondi scuri. Abbassare la soglia superiore significa che solo i colori più scuri possono essere utilizzati su sfondi chiari. Evita gli indicatori scuri su sfondi scuri o gli indicatori chiari su sfondi chiari. Intervallo predefinito: 65 - 460."
 
 # /16x9/Content_Settings.xml
 #~ msgctxt "#31487"
