@@ -33,7 +33,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Added container transition between Album and Album disc screen
 - Adjusted fade delay times to be consistent between home widget details and breadcrumb label
 - Fixed loginscreen background with library fallbacks as script is not loaded until this screen is bypassed
-- Fixed a bug in navigation between infoscreens where clicking on an item from an infoscreen to load a new instance of the infoscreen for the new item, then going back, would not result in returning to the previous item's infoscreen. This required adding a tiny delay to the container update bounce check, as it may have been evaluating too quickly. 
+- Fixed a bug in navigation between infoscreens where clicking on an item from an infoscreen to load a new instance of the infoscreen for the new item, then going back, would not result in returning to the previous item's infoscreen. This required adding a tiny delay to the container update bounce check, as it may have been evaluating too quickly.
+- Removed season_info_monitor timer and replaced with script.copacetic.helper monitoring
+- Fixed infoscreen path tracer when starting from an episode in a widget
 
 Still to do:
 ---- Infoscreen transitions

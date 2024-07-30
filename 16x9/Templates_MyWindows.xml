@@ -44,7 +44,7 @@
 		<!-- Container Update Bounce Test For Info_Infoscreens_Label -->
 		<control type="button" id="6001">
 			<visible allowhiddenfocus="true">false</visible>
-			<animation effect="slide" end="0,0" time="Default_Transition_3x" reversible="false" condition="[$EXP[Infoscreen_Widget_Prefer_TMDbHelper] | !Integer.IsGreater(ListItem.DBID,0)] + String.IsEqual(Window(movieinformation).Property(Breadcrumb_Level),02)">Focus</animation>
+			<animation effect="slide" end="0,0" time="1080" reversible="false" condition="[$EXP[Infoscreen_Widget_Prefer_TMDbHelper] | !Integer.IsGreater(ListItem.DBID,0)] + String.IsEqual(Window(movieinformation).Property(Breadcrumb_Level),02)">Focus</animation>
 			<animation effect="slide" end="0,0" time="50" reversible="false" condition="![[$EXP[Infoscreen_Widget_Prefer_TMDbHelper] | !Integer.IsGreater(ListItem.DBID,0)] + String.IsEqual(Window(movieinformation).Property(Breadcrumb_Level),02)]">Focus</animation>
 			<onfocus condition="Container.IsUpdating">SetFocus(6002)</onfocus>
 			<onfocus condition="!Container.IsUpdating">SetFocus(50)</onfocus>
