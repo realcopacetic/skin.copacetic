@@ -29,6 +29,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Fixed a bug causing background colour to stay black on infoscreen widgets when Light theme selected and navigating to infoscreen from a Billboard view home widget
 - New WB logo
 - New DC logo
+- Added Prime Video studio flag logo
 - Fixed time widget label colour when showing shutdown menu on top of a home screen widget with Light background theme enabled
 - Added container transition between Album and Album disc screen
 - Adjusted fade delay times to be consistent between home widget details and breadcrumb label
@@ -36,14 +37,14 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Fixed a bug in navigation between infoscreens where clicking on an item from an infoscreen to load a new instance of the infoscreen for the new item, then going back, would not result in returning to the previous item's infoscreen. This required adding a tiny delay to the container update bounce check, as it may have been evaluating too quickly.
 - Removed season_info_monitor timer and replaced with script.copacetic.helper monitoring
 - Fixed infoscreen path tracer when starting from an episode in a widget
+- Fixed infoscreen widgets for Seasons view
+- Fixed bug preventing Grid view from displaying properly for windows where Container.Content() is empty, e.g. video sources 
+- Fixed musicplayer navigation for horizontal gridviews
+- Fixed alignment and shadow on musicplayer when horizontal gridviews are active
 
 Still to do:
----- Infoscreen transitions
----- Grid view for files accessed from settings
----- Grid small and horizontal - with MusicPlayer widget
 --- check to see the player status labels
--- check tmdb helper click actions for all infoscreen widgets (including episode ones etc)
--- tmdb helper for play button on infoscreen?
+- Evaluate Container.NumItems for scrollbars in each view / layout
 - autoscroll bar
 - multiart on autoscroll
 - Create radio station button

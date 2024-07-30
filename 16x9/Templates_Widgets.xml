@@ -468,6 +468,7 @@
 		<param name="bypass_min_items" default="false" />
 		<param name="include_progress" default="true" />
 		<param name="global_search" default="false" />
+		<param name="widget_info_visible" default="true" />
 		<definition>
 			<include content="Hidden_Components">
 				<control type="label" id="620$PARAM[widget_position]1">
@@ -508,7 +509,7 @@
 				<param name="animation" value="Widget_Breadcrumb_Animation" />
 				<param name="title_label_id" value="620$PARAM[widget_position]3" />
 				<param name="title_label" value="$PARAM[widget_header]" />
-				<param name="info_label_visible" value="true" />
+				<param name="info_label_visible" value="$PARAM[widget_info_visible]" />
 				<param name="info_label" value="$PARAM[widget_info]" />
 				<param name="textcolor" value="$VAR[Breadcrumb_Label_Color]" />
 			</include>
@@ -541,6 +542,7 @@
 			<param name="content" value="videodb://inprogresstvshows/$INFO[ListItem.DBID]/-2/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22playcount%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%220%22%5D%7D%5D%7D%2C%22type%22%3A%22episodes%22%7D" />
 			<param name="click_action" value="Play_Episodes" />
 			<param name="widget_header" value="$LOCALIZE[31201]" />
+			<param name="widget_info_visible" value="false" />
 		</include>
 	</include>
 
@@ -556,6 +558,7 @@
 			<param name="content" value="$VAR[Path_Episodes]" />
 			<param name="click_action" value="Play_Episodes" />
 			<param name="widget_header" value="$VAR[Infoscreen_Widget_Episodes_Label]" />
+			<param name="widget_info_visible" value="false" />
 		</include>
 	</include>
 
@@ -605,6 +608,7 @@
 			<param name="content" value="$VAR[Path_Seasons]" />
 			<param name="click_action" value="Open_Season_Folder" />
 			<param name="widget_header" value="$INFO[Container(3202).ListItem.Season,$LOCALIZE[20373] ]" />
+			<param name="widget_info_visible" value="false" />
 		</include>
 	</include>
 
@@ -634,7 +638,7 @@
 			<param name="use_custom_content" value="false" />
 			<param name="use_custom_click" value="false" />
 			<param name="widget_header" value="$VAR[Infoscreen_Widget_Cast_Label]" />
-			<param name="widget_info" value="" />
+			<param name="widget_info_visible" value="false" />
 			<param name="include_progress" value="false" />
 		</include>
 	</include>
@@ -763,7 +767,7 @@
 			<param name="content" value="$VAR[Path_SimilarArtists]" />
 			<param name="click_action" value="Open_Similar_Artists" />
 			<param name="widget_header" value="$LOCALIZE[31214]" />
-			<param name="widget_info" value="" />
+			<param name="widget_info_visible" value="false" />
 		</include>
 	</include>
 
@@ -795,7 +799,7 @@
 			<param name="content" value="$VAR[Path_SimilarSongs]" />
 			<param name="widget_header" value="$LOCALIZE[31215]" />
 			<param name="click_action" value="Play_All_Songs" />
-			<param name="widget_info" value="" />
+			<param name="widget_info_visible" value="false" />
 		</include>
 	</include>
 

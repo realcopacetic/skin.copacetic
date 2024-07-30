@@ -1,5 +1,11 @@
 <includes>
 
+	<include name="OnBack_Conditions">
+		<!-- return to previous infoscreen if that's where user came from -->
+		<onback condition="Window.Is(videos) + String.IsEqual(Window(movieinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
+		<onback condition="Window.Is(music) + String.IsEqual(Window(musicinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
+	</include>
+
 	<include name="List_Navigation">
 		<definition>
 			<onup condition="Integer.IsGreater(Container.NumItems,1)">50</onup>
@@ -17,8 +23,7 @@
 			<onright condition="!$EXP[Music_Player_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible] + Integer.IsGreater(Container.NumItems,22)">SetFocus(4013)</onright>
 			<onright condition="!$EXP[Music_Player_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible] + Integer.IsLessOrEqual(Container.NumItems,22) + !$EXP[Hidden_Options_Menu_Disabled]">SetFocus(3000,0,absolute)</onright>
 			<onright condition="!$EXP[Music_Player_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible] + Integer.IsLessOrEqual(Container.NumItems,22) + $EXP[Hidden_Options_Menu_Disabled]">50</onright>
-			<onback condition="Window.Is(videos) + String.IsEqual(Window(movieinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
-			<onback condition="Window.Is(music) + String.IsEqual(Window(musicinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
+			<include content="OnBack_Conditions" />
 		</definition>
 	</include>
 
@@ -85,8 +90,7 @@
 			<onright condition="Integer.IsLessOrEqual(Container.NumItems,3) + Integer.IsGreater(Container.NumItems,1)">0</onright>
 			<onright condition="Integer.IsEqual(Container.NumItems,1) + !$EXP[Hidden_Options_Menu_Disabled]">SetFocus(3000,0,absolute)</onright>
 			<onright condition="Integer.IsEqual(Container.NumItems,1) + $EXP[Hidden_Options_Menu_Disabled]">501</onright>
-			<onback condition="Window.Is(videos) + String.IsEqual(Window(movieinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
-			<onback condition="Window.Is(music) + String.IsEqual(Window(musicinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
+			<include content="OnBack_Conditions" />
 		</definition>
 	</include>
 
@@ -109,8 +113,7 @@
 			<onright condition="Integer.IsLessOrEqual(Container.NumItems,10) + Integer.IsGreater(Container.NumItems,1)">0</onright>
 			<onright condition="Integer.IsEqual(Container.NumItems,1) + !$EXP[Hidden_Options_Menu_Disabled]">SetFocus(3000,0,absolute)</onright>
 			<onright condition="Integer.IsEqual(Container.NumItems,1) + $EXP[Hidden_Options_Menu_Disabled]">502</onright>
-			<onback condition="Window.Is(videos) + String.IsEqual(Window(movieinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
-			<onback condition="Window.Is(music) + String.IsEqual(Window(musicinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
+			<include content="OnBack_Conditions" />
 		</definition>
 	</include>
 
@@ -133,8 +136,7 @@
 			<onright condition="Integer.IsLessOrEqual(Container.NumItems,10) + Integer.IsGreater(Container.NumItems,1)">0</onright>
 			<onright condition="Integer.IsEqual(Container.NumItems,1) + !$EXP[Hidden_Options_Menu_Disabled]">SetFocus(3000,0,absolute)</onright>
 			<onright condition="Integer.IsEqual(Container.NumItems,1) + $EXP[Hidden_Options_Menu_Disabled]">504</onright>
-			<onback condition="Window.Is(videos) + String.IsEqual(Window(movieinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
-			<onback condition="Window.Is(music) + String.IsEqual(Window(musicinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
+			<include content="OnBack_Conditions" />
 		</definition>
 	</include>
 
@@ -153,8 +155,7 @@
 			<ondown condition="!$EXP[GridView_Display_IsFanart] + Integer.IsGreater(Container.NumItems,5)">505</ondown>
 			<ondown condition="$EXP[GridView_Display_IsFanart] + Integer.IsLessorEqual(Container.NumItems,3)">0</ondown>
 			<ondown condition="!$EXP[GridView_Display_IsFanart] + Integer.IsLessorEqual(Container.NumItems,5)">0</ondown>
-			<onback condition="Window.Is(videos) + String.IsEqual(Window(movieinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
-			<onback condition="Window.Is(music) + String.IsEqual(Window(musicinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
+			<include content="OnBack_Conditions" />
 		</definition>
 	</include>
 
@@ -174,8 +175,7 @@
 			<onright condition="Integer.IsLessOrEqual(Container.NumItems,10) + Integer.IsGreater(Container.NumItems,1)">0</onright>
 			<onright condition="Integer.IsEqual(Container.NumItems,1) + !$EXP[Hidden_Options_Menu_Disabled]">SetFocus(3000,0,absolute)</onright>
 			<onright condition="Integer.IsEqual(Container.NumItems,1) + $EXP[Hidden_Options_Menu_Disabled]">505</onright>
-			<onback condition="Window.Is(videos) + String.IsEqual(Window(movieinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
-			<onback condition="Window.Is(music) + String.IsEqual(Window(musicinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
+			<include content="OnBack_Conditions" />
 		</definition>
 	</include>
 
@@ -243,17 +243,21 @@
 		<onup condition="$EXP[StripView_IsVisible] + !$EXP[Infoscreen_IsVisible] + !$EXP[Hidden_Options_Menu_Disabled]">SetFocus(3000,0,absolute)</onup>
 		<onup condition="$EXP[StripView_IsVisible] + !$EXP[Infoscreen_IsVisible] + $EXP[Hidden_Options_Menu_Disabled]">504</onup>
 		<ondown condition="$EXP[StripView_IsVisible] + !$EXP[Infoscreen_IsVisible]">504</ondown>
-		<onback condition="$EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible]">505</onback>
-		<onleft condition="$EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible]">505</onleft>
-		<onright condition="$EXP[GridView_Display_IsFanart] + Integer.IsGreater(Container.NumItems,3) + !$EXP[Infoscreen_IsVisible]">SetFocus(4013)</onright>
-		<onright condition="$EXP[GridView_Display_IsPosters] + Integer.IsGreater(Container.NumItems,5) + !$EXP[Infoscreen_IsVisible]">SetFocus(4013)</onright>
-		<onright condition="$EXP[GridView_Display_IsSquare] + Integer.IsGreater(Container.NumItems,10) + !$EXP[Infoscreen_IsVisible]">SetFocus(4013)</onright>
-		<onright condition="$EXP[GridView_Display_IsFanart] + Integer.IsLessorEqual(Container.NumItems,3) + !$EXP[Infoscreen_IsVisible] + !$EXP[Hidden_Options_Menu_Disabled]">SetFocus(3000,0,absolute)</onright>
-		<onright condition="$EXP[GridView_Display_IsFanart] + Integer.IsLessorEqual(Container.NumItems,3) + !$EXP[Infoscreen_IsVisible] + !$EXP[Hidden_Options_Menu_Disabled]">505</onright>
-		<onright condition="$EXP[GridView_Display_IsPosters] + Integer.IsLessorEqual(Container.NumItems,5) + !$EXP[Infoscreen_IsVisible] + !$EXP[Hidden_Options_Menu_Disabled]">SetFocus(3000,0,absolute)</onright>
-		<onright condition="$EXP[GridView_Display_IsPosters] + Integer.IsLessorEqual(Container.NumItems,5) + !$EXP[Infoscreen_IsVisible] + $EXP[Hidden_Options_Menu_Disabled]">505</onright>
-		<onright condition="$EXP[GridView_Display_IsSquare] + Integer.IsLessorEqual(Container.NumItems,10) + !$EXP[Infoscreen_IsVisible] + !$EXP[Hidden_Options_Menu_Disabled]">SetFocus(3000,0,absolute)</onright>
-		<onright condition="$EXP[GridView_Display_IsSquare] + Integer.IsLessorEqual(Container.NumItems,10) + !$EXP[Infoscreen_IsVisible] + $EXP[Hidden_Options_Menu_Disabled]">505</onright>
+		<onback condition="!Skin.String(GridView_Size,Horizontal) + $EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible]">505</onback>
+		<onleft condition="!Skin.String(GridView_Size,Horizontal) + $EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible]">505</onleft>
+		<onright condition="!Skin.String(GridView_Size,Horizontal) + $EXP[GridView_Display_IsFanart] + Integer.IsGreater(Container.NumItems,3) + !$EXP[Infoscreen_IsVisible]">SetFocus(4013)</onright>
+		<onright condition="!Skin.String(GridView_Size,Horizontal) + $EXP[GridView_Display_IsPosters] + Integer.IsGreater(Container.NumItems,5) + !$EXP[Infoscreen_IsVisible]">SetFocus(4013)</onright>
+		<onright condition="!Skin.String(GridView_Size,Horizontal) + $EXP[GridView_Display_IsSquare] + Integer.IsGreater(Container.NumItems,10) + !$EXP[Infoscreen_IsVisible]">SetFocus(4013)</onright>
+		<onright condition="!Skin.String(GridView_Size,Horizontal) + $EXP[GridView_Display_IsFanart] + Integer.IsLessorEqual(Container.NumItems,3) + !$EXP[Infoscreen_IsVisible] + !$EXP[Hidden_Options_Menu_Disabled]">SetFocus(3000,0,absolute)</onright>
+		<onright condition="!Skin.String(GridView_Size,Horizontal) + $EXP[GridView_Display_IsFanart] + Integer.IsLessorEqual(Container.NumItems,3) + !$EXP[Infoscreen_IsVisible] + $EXP[Hidden_Options_Menu_Disabled]">505</onright>
+		<onright condition="!Skin.String(GridView_Size,Horizontal) + $EXP[GridView_Display_IsPosters] + Integer.IsLessorEqual(Container.NumItems,5) + !$EXP[Infoscreen_IsVisible] + !$EXP[Hidden_Options_Menu_Disabled]">SetFocus(3000,0,absolute)</onright>
+		<onright condition="!Skin.String(GridView_Size,Horizontal) + $EXP[GridView_Display_IsPosters] + Integer.IsLessorEqual(Container.NumItems,5) + !$EXP[Infoscreen_IsVisible] + $EXP[Hidden_Options_Menu_Disabled]">505</onright>
+		<onright condition="!Skin.String(GridView_Size,Horizontal) + $EXP[GridView_Display_IsSquare] + Integer.IsLessorEqual(Container.NumItems,10) + !$EXP[Infoscreen_IsVisible] + !$EXP[Hidden_Options_Menu_Disabled]">SetFocus(3000,0,absolute)</onright>
+		<onright condition="!Skin.String(GridView_Size,Horizontal) + $EXP[GridView_Display_IsSquare] + Integer.IsLessorEqual(Container.NumItems,10) + !$EXP[Infoscreen_IsVisible] + $EXP[Hidden_Options_Menu_Disabled]">505</onright>
+		<onback condition="Skin.String(GridView_Size,Horizontal) + $EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible]">504</onback>
+		<onup condition="Skin.String(GridView_Size,Horizontal) + $EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible] + !$EXP[Hidden_Options_Menu_Disabled]">SetFocus(3000,0,absolute)</onup>
+		<onup condition="Skin.String(GridView_Size,Horizontal) + $EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible] + $EXP[Hidden_Options_Menu_Disabled]">504</onup>
+		<ondown condition="Skin.String(GridView_Size,Horizontal) + $EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible]">504</ondown>
 	</include>
 
 	<include name="Home_Menu_Navigation">
