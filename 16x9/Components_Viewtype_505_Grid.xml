@@ -230,7 +230,7 @@
 						<control type="image">
 							<visible>![$EXP[GridView_Details_Off] | $EXP[GridView_Details_Breadcrumb] | $EXP[ListItem(0)_NowPlaying]] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo) + !Skin.HasSetting(Quick_Transitions)</visible>
 							<include content="Visible_Fade_Animation" />
-							<animation effect="fade" start="0" end="50" time="Default_Transition_1x" delay="Default_Transition_2x" tween="sine" easing="inout" reversible="false">Focus</animation>
+							<animation effect="fade" start="0" end="66" time="Default_Transition_1x" delay="Default_Transition_2x" tween="sine" easing="inout" reversible="false">Focus</animation>
 							<texture colordiffuse="$VAR[Dark_Color]">views/white_100.png</texture>
 						</control>
 					</include>

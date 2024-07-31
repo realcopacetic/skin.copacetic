@@ -39,12 +39,12 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Fixed infoscreen path tracer when starting from an episode in a widget
 - Fixed infoscreen widgets for Seasons view
 - Fixed bug preventing Grid view from displaying properly for windows where Container.Content() is empty, e.g. video sources 
+- Fixed musicplayer navigation for horizontal gridviews
+- Fixed alignment and shadow on musicplayer when horizontal gridviews are active
 
 Still to do:
----- Grid small and horizontal - with MusicPlayer widget
------ do we need window props for this?
-musicplayer controls when gridview is horizontal needs to be flipped
 --- check to see the player status labels
+- Evaluate Container.NumItems for scrollbars in each view / layout
 - autoscroll bar
 - multiart on autoscroll
 - Create radio station button
