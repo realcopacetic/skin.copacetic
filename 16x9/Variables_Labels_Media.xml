@@ -1011,7 +1011,6 @@
 	</variable>
 
 	<variable name="Unwatched_Indicator_Label">
-		<value condition="ListItem.IsCollection + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable">$INFO[Container(3100).NumItems]</value>
 		<value condition="ListItem.IsCollection + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !String.IsEmpty(Window(home).Property(collection_unwatched))">$INFO[Window(home).Property(collection_unwatched)]</value>
 		<value condition="Control.HasFocus(3100)">$INFO[Container(3100).ListItem.Property(UnwatchedEpisodes)]</value>
 		<value>$INFO[Container.ListItem.Property(UnwatchedEpisodes)]</value>

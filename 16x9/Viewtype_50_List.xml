@@ -53,6 +53,11 @@
 					<param name="width" value="720" />
 					<param name="art_icon" value="$PARAM[art_icon]" />
 					<param name="include_progress" value="true" />
+					<control type="image">
+						<height>200</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Art(fanart)]</texture>
+					</control>
 				</include>
 				<include content="Artwork_Transition_Fade" condition="Window.Is(videos) | Window.Is(music) | Window.Is(musicplaylist) | Window.Is(pictures)">
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + $EXP[Containers_Square]" />
@@ -63,7 +68,6 @@
 				</include>
 				<include content="Artwork_Transition_Fade" condition="Window.Is(addonbrowser)">
 					<animation effect="slide" end="194,0" time="0" condition="true">Conditional</animation>
-					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + $EXP[Containers_Square]" />
 					<param name="width" value="512" />
 					<param name="height" value="512" />
 					<param name="target_id" value="$PARAM[id]" />
