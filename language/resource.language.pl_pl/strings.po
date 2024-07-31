@@ -671,7 +671,7 @@ msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31524"
-msgid "Adjust the amount of contrast required between the background and the flag colour. Raising the bottom threshold means only lighter colours will be accepted on dark backgrounds. Lowering the top threshold means only darker colours can be used on light backgrounds. Avoids dark flags on dark backgrounds or light flags on light backgrounds. Default range: 65 - 460."
+msgid "Adjust the amount of contrast required between the background and the flag colour. Raising the bottom threshold means only lighter colours will be accepted on dark backgrounds. Lowering the top threshold means only darker colours can be used on light backgrounds. Avoids dark flags on dark backgrounds or light flags on light backgrounds. Default range: 65 - 440."
 msgstr ""
 
 # /16x9/Content_Settings.xml
@@ -1247,6 +1247,16 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31481"
 msgid "Visualisation screen album cover"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31829"
+msgid "Large"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31830"
+msgid "Small"
 msgstr ""
 
 # /16x9/Content_Settings.xml
