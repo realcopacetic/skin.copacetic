@@ -98,7 +98,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>!Control.IsVisible(5006) + !$EXP[Container_Switching] + !$EXP[Content_Switching] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo) + !$EXP[Scrollbar_HasFocus] + !$EXP[Music_Player_HasFocus]</visible>
+				<visible>Control.IsVisible(505) + !Control.IsVisible(5006) + !$EXP[Container_Switching] + !$EXP[Content_Switching] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo) + !$EXP[Scrollbar_HasFocus] + !$EXP[Music_Player_HasFocus]</visible>
 				<include content="Grid_Details_Overlay_Fade_Animation" />
 				<include content="GridView_Slides_Large" condition="!Skin.String(GridView_Size,Small) + !Skin.String(GridView_Size,Horizontal)" />
 				<include content="GridView_Slides_Small" condition="Skin.String(GridView_Size,Small)" />

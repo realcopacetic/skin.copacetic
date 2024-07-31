@@ -262,7 +262,7 @@
 
 	<include name="Notification_GridView_Shadow">
 		<control type="image">
-			<visible>!$EXP[Music_Player_HasFocus] + Container.Row(0) + [[$EXP[GridView_Display_IsFanart] + Skin.String(GridView_Size,Large) + Container.Column(2)] | [$EXP[GridView_Display_IsFanart] + Skin.String(GridView_Size,Small) + Container.Column(3)] | [[$EXP[GridView_Display_IsPosters] | $EXP[GridView_Display_IsSquare]] + Skin.String(GridView_Size,Large) + Container.Column(4)] | Container.Column(6)]</visible>
+			<visible>!$EXP[Music_Player_HasFocus] + Container.Row(0) + [[Container.Column(2) + $EXP[GridView_Display_IsFanart] + Skin.String(GridView_Size,Large)] | [Container.Column(3) + $EXP[GridView_Display_IsFanart] + Skin.String(GridView_Size,Small)] | [Container.Column(3) + $EXP[GridView_Display_IsSquare] + Skin.String(GridView_Size,Horizontal)] | [Container.Column(4) + !$EXP[GridView_Display_IsFanart] + Skin.String(GridView_Size,Large)] | [Container.Column(5) + $EXP[GridView_Display_IsPosters] + Skin.String(GridView_Size,Horizontal)] | Container.Column(6)]</visible>
 			<bottom>0</bottom>
 			<height>120</height>
 			<texture colordiffuse="$VAR[Dropshadow_Diffuse]">views/dropshadow_top_120.png</texture>
@@ -602,6 +602,8 @@
 					<animation effect="slide" end="-60,0" time="0" condition="true">Conditional</animation>
 					<animation effect="slide" end="-12,0" time="0" condition="$EXP[GridView_Display_IsFanart] + Skin.String(GridView_Size,Large)" reversible="false">Conditional</animation>
 					<animation effect="slide" end="-4,0" time="0" condition="Skin.String(GridView_Size,Small)" reversible="false">Conditional</animation>
+					<animation effect="slide" end="-130,0" time="0" condition="Skin.String(GridView_Size,Horizontal)" reversible="false">Conditional</animation>
+					<animation effect="slide" end="-12,0" time="0" condition="Skin.String(GridView_Size,Horizontal) + String.IsEqual(Window(home).Property(GridView_Display),fanart)" reversible="false">Conditional</animation>
 				</include>
 			</control>
 		</definition>

@@ -925,6 +925,7 @@
 		<value condition="String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
 		<value condition="String.IsEqual(ListItem.DBType,song) + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
 		<value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+		<value condition="$EXP[GridView_IsVisible] + Container.Content()">$INFO[ListItem.Label]</value> 
 		<value condition="$EXP[GridView_IsVisible] + String.IsEmpty(ListItem.DBID) + String.Contains(ListItem.Label,.) + !String.IsEmpty(Window(home).Property(Return_Label))">$INFO[Window(home).Property(Return_Label)]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
@@ -970,6 +971,7 @@
 		<value condition="Container.Content(files) + !String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
 		<value condition="Container.Content(videos)">$INFO[ListItem.Artist]</value>
 		<value condition="$EXP[Container_Plugin_Empty] + $EXP[GridView_IsVisible]">$INFO[ListItem.Label]</value>
+		<value condition="Container.Content() + $EXP[GridView_IsVisible]">$INFO[ListItem.Label]</value>
 		<value condition="Window.Is(skinsettings)">$LOCALIZE[31472]</value>
 		<value condition="Window.Is(interfacesettings)">$LOCALIZE[14206]</value>
 		<value condition="Window.Is(mediasettings)">$LOCALIZE[14211]</value>

@@ -85,6 +85,9 @@
 				<onfocus condition="Control.HasFocus(505) + Container.Content(files) + System.AddonIsEnabled(script.copacetic.helper)">RunScript(script.copacetic.helper,action=clean_filename)</onfocus>
 				<onfocus condition="Control.Hasfocus(505)">SetProperty(GridView_Column,$INFO[Container.Column],home)</onfocus>
 				<onfocus condition="Control.Hasfocus(505)">SetProperty(GridView_Row,$INFO[Container.Row],home)</onfocus>
+				<onfocus condition="Control.HasFocus(505) + $EXP[GridView_Display_IsFanart]">SetProperty(GridView_Display,fanart,home)</onfocus>
+				<onfocus condition="Control.HasFocus(505) + $EXP[GridView_Display_IsPosters]">SetProperty(GridView_Display,posters,home)</onfocus>
+				<onfocus condition="Control.HasFocus(505) + $EXP[GridView_Display_IsSquare]">SetProperty(GridView_Display,square,home)</onfocus>
 				<!-- Multiart -->
 				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Window(home).Property(Multiart_Fadeout),true) + !Control.HasFocus(3100)">ClearProperty(Multiart_Fadeout,home)</onfocus>
 				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Window(home).Property(Multiart_Fadeout),delayed) + !Control.HasFocus(3100)">SetProperty(Multiart_Fadeout,true,home)</onfocus>
