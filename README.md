@@ -20,6 +20,11 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.5.5**
+- Fixed bug in tvshow infoscreen widgets where 'Next up' and 'More episodes from Season X' widgets would both display on top of each other
+- Fixed bug in 'More from Actor Name' widget where it was not removing the current item if widget was opened from an episode infoscreen. This fix is in conjunction with a fix in script.copacetic.helper (1.1.5).
+-  Attempted fix for bug in Infoscreen Path Tracer Button that was not resolved in previous update on less powerful hardware, where the container takes too long to update on the exit route from ContainerPath_02 to ContainerPath_01. Previously when control 6001 received focus, it would only pause if Container.IsUpdating. Theory is that it was receiving focus before the container update began and so redirecting back to the infoscreen for the same item before the container update had completed. Now the condition for the delay is set to true to hopefully give the container update time to begin. Once it begins, the Container Update Bounce Test will proceed to check every 100ms if the update is finished, before redirecting to the updated infoscreen. --> To be tested on different devices...
+
 **1.5.4**
 - Improved animations for gridview border
 - Fixed label for visualisation layout in skin settings
