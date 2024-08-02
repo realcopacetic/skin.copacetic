@@ -41,19 +41,25 @@
 			<visible>Control.HasFocus(4014)</visible>
 			<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Hidden</animation>
 		</control>
-		<!-- Container Update Bounce Test For Info_Infoscreens_Label -->
+		<!-- Container Update Bounce Test For Infoscreen Widget Navigation -->
+		<control type="button" id="6000">
+			<visible allowhiddenfocus="true">false</visible>
+			<animation effect="slide" end="0,0" time="50">Focus</animation>
+			<onfocus condition="Container.IsUpdating">SetFocus(6001)</onfocus>
+			<onfocus condition="!Container.IsUpdating">SetFocus(50)</onfocus>
+			<onfocus condition="!Container.IsUpdating">SetFocus(6002)</onfocus>
+		</control>
 		<control type="button" id="6001">
 			<visible allowhiddenfocus="true">false</visible>
 			<animation effect="slide" end="0,0" time="50">Focus</animation>
-			<onfocus condition="Container.IsUpdating">SetFocus(6002)</onfocus>
-			<onfocus condition="!Container.IsUpdating">SetFocus(50)</onfocus>
-			<onfocus condition="!Container.IsUpdating">ClearProperty(Infoscreen_Transition,home)</onfocus>
-			<onfocus condition="!Container.IsUpdating">Action(Info)</onfocus>
+			<onfocus>SetFocus(6000)</onfocus>
 		</control>
 		<control type="button" id="6002">
 			<visible allowhiddenfocus="true">false</visible>
 			<animation effect="slide" end="0,0" time="50">Focus</animation>
-			<onfocus>SetFocus(6001)</onfocus>
+			<onfocus>ClearProperty(Infoscreen_Transition,home)</onfocus>
+			<onfocus>SetFocus(50)</onfocus>
+			<onfocus>Action(Info)</onfocus>
 		</control>
 		<include content="Embedded_VideoPlayer">
 			<param name="visible" value="String.IsEqual(Window(home).Property(Trailer_Autoplay),true)" />
