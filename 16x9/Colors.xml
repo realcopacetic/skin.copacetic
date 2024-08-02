@@ -248,6 +248,7 @@
 		<value>$VAR[Breadcrumb_Label_Color]</value>
 	</variable>
 	<variable name="Time_Widget_Label_Color">
+		<value condition="$EXP[Home_HasBackground]">$VAR[Light_Color]</value>
 		<value condition="$EXP[TransparentDialog_IsVisible]">$VAR[Light_Color]</value>
 		<value>$VAR[Breadcrumb_Label_Color]</value>
 	</variable>
