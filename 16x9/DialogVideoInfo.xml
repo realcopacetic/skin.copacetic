@@ -46,9 +46,5 @@
 			<include content="Infoscreen_Widget_3207_Similar" condition="!String.IsEqual(ListItem.DBType,set) + !String.IsEqual(ListItem.DBType,musicvideo)" />
 			<include content="DialogVideoInfo_Scrollbar" />
 		</include>
-		<control type="label">
-			<align>right</align>
-			<label>$INFO[Container(3203).NumItems]</label>
-		</control>
 	</controls>
 </window>
