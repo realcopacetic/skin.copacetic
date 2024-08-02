@@ -4,6 +4,7 @@
 	<include name="Infoscreen_PathTracing">
 		<!-- first load -->
 		<onload condition="!String.IsEqual(Window.Property(Breadcrumb_GoToNext),true) + !String.IsEqual(Window.Property(Breadcrumb_GoToPrevious),true) + !String.IsEqual(Window.Property(SentFromInfo),true)">SetProperty(Breadcrumb_Level,01)</onload>
+		<onload condition="!String.IsEqual(Window.Property(Breadcrumb_GoToNext),true) + !String.IsEqual(Window.Property(Breadcrumb_GoToPrevious),true) + !String.IsEqual(Window.Property(SentFromInfo),true)">SetProperty(ContainerPath_00,$VAR[ContainerPath_0])</onload>
 		<onload condition="!String.IsEqual(Window.Property(Breadcrumb_GoToNext),true) + !String.IsEqual(Window.Property(Breadcrumb_GoToPrevious),true) + !String.IsEqual(Window.Property(SentFromInfo),true)">SetProperty(ContainerPath_01,$VAR[ContainerPath_X])</onload>
 		<onload condition="!String.IsEqual(Window.Property(Breadcrumb_GoToNext),true) + !String.IsEqual(Window.Property(Breadcrumb_GoToPrevious),true) + !String.IsEqual(Window.Property(SentFromInfo),true)">SetProperty(Origin,$INFO[Window(home).Property(Home_Widget)],home)</onload>
 		<onload condition="!String.IsEqual(Window.Property(Breadcrumb_GoToNext),true) + !String.IsEqual(Window.Property(Breadcrumb_GoToPrevious),true) + !String.IsEqual(Window.Property(SentFromInfo),true)">ClearProperty(ContainerPath_02)</onload>

@@ -20,7 +20,10 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
-**1.5.7**
+**1.5.8**
+- New attempted fix for infoscreen path tracer bug
+
+**1.5.6**
 - New attempted fix for Infoscreen Path Tracer Button bug (see below). Rearchitected logic of the loop so it's no longer reliant on a timed delay
 
 **1.5.5**
