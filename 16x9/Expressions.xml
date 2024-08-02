@@ -12,7 +12,7 @@
 	
 	<expression name="Infoscreen_IsVisible">Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(songinformation) | Window.IsVisible(addoninformation) | $EXP[Infoscreen_Widget_Transition] | Window.IsVisible(pvrguideinfo) | Window.IsVisible(pvrrecordinginfo)</expression>
 	<expression name="Infoscreen_Widget_HasFocus">$EXP[Infoscreen_IsVisible] + [String.IsEmpty(Window(movieinformation).Property(Focused_Button)) + String.IsEmpty(Window(musicinformation).Property(Focused_Button)) + String.IsEmpty(Window(addoninformation).Property(Focused_Button)) + String.IsEmpty(Window(pvrguideinfo).Property(Focused_Button))]</expression>
-	<expression name="Infoscreen_Widget_Transition">Control.HasFocus(6001) | Control.HasFocus(6002) | String.IsEqual(Window(home).Property(Infoscreen_Transition),true)</expression>
+	<expression name="Infoscreen_Widget_Transition">Control.HasFocus(6000) | Control.HasFocus(6001) | Control.HasFocus(6002) | String.IsEqual(Window(home).Property(Infoscreen_Transition),true)</expression>
 	<expression name="Infoscreen_Widget_Prefer_TMDbHelper">Skin.HasSetting(Infoscreen_Widget_Prefer_TMDbHelper) + System.AddonIsEnabled(plugin.video.themoviedb.helper)</expression>
 	<expression name="globalsearch_IsVisible">Window.IsVisible(1180)</expression>
 

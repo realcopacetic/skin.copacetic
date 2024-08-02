@@ -2,8 +2,8 @@
 
 	<include name="OnBack_Conditions">
 		<!-- return to previous infoscreen if that's where user came from -->
-		<onback condition="Window.Is(videos) + String.IsEqual(Window(movieinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
-		<onback condition="Window.Is(music) + String.IsEqual(Window(musicinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
+		<onback condition="Window.Is(videos) + String.IsEqual(Window(movieinformation).Property(SentFromInfo),true)">SetFocus(6000)</onback>
+		<onback condition="Window.Is(music) + String.IsEqual(Window(musicinformation).Property(SentFromInfo),true)">SetFocus(6000)</onback>
 	</include>
 
 	<include name="List_Navigation">

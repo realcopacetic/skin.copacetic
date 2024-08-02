@@ -63,8 +63,7 @@ ANIMATION DELAYS
 5006          Container Switching delay (to hide multiart following container transition)
 
 CHECKERS
-6001          Container update bounce test
-6002          Container update bounce test
+6000-2        Container update bounce test
 6003          Plot label empty
 6004          Info label empty
 6005-7        Variable title label lengths
