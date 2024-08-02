@@ -4,6 +4,7 @@
 	<include name="Home_Container_Update_Bounce_Test">
 		<control type="button" id="6001">
 			<visible allowhiddenfocus="true">false</visible>
+			<animation effect="slide" end="0,0" time="50">Focus</animation>
 			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3201) + Container(3201).IsUpdating">SetFocus(6002)</onfocus>
 			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3202) + Container(3202).IsUpdating">SetFocus(6002)</onfocus>
 			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3203) + Container(3203).IsUpdating">SetFocus(6002)</onfocus>
@@ -27,26 +28,8 @@
 		</control>
 		<control type="button" id="6002">
 			<visible allowhiddenfocus="true">false</visible>
-			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3201) + Container(3201).IsUpdating">SetFocus(6001)</onfocus>
-			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3202) + Container(3202).IsUpdating">SetFocus(6001)</onfocus>
-			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3203) + Container(3203).IsUpdating">SetFocus(6001)</onfocus>
-			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3204) + Container(3204).IsUpdating">SetFocus(6001)</onfocus>
-			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3205) + Container(3205).IsUpdating">SetFocus(6001)</onfocus>
-			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3206) + Container(3206).IsUpdating">SetFocus(6001)</onfocus>
-			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3207) + Container(3207).IsUpdating">SetFocus(6001)</onfocus>
-			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3208) + Container(3208).IsUpdating">SetFocus(6001)</onfocus>
-			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3209) + Container(3209).IsUpdating">SetFocus(6001)</onfocus>
-			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3201) + !Container(3201).IsUpdating">SetFocus(3201)</onfocus>
-			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3202) + !Container(3202).IsUpdating">SetFocus(3202)</onfocus>
-			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3203) + !Container(3203).IsUpdating">SetFocus(3203)</onfocus>
-			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3204) + !Container(3204).IsUpdating">SetFocus(3204)</onfocus>
-			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3205) + !Container(3205).IsUpdating">SetFocus(3205)</onfocus>
-			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3206) + !Container(3206).IsUpdating">SetFocus(3206)</onfocus>
-			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3207) + !Container(3207).IsUpdating">SetFocus(3207)</onfocus>
-			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3208) + !Container(3208).IsUpdating">SetFocus(3208)</onfocus>
-			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3209) + !Container(3209).IsUpdating">SetFocus(3209)</onfocus>
-			<onfocus condition="String.IsEmpty(Window(home).Property(Origin))">SetFocus(3000)</onfocus>
-			<onfocus>ClearProperty(Origin,home)</onfocus>
+			<animation effect="slide" end="0,0" time="50">Focus</animation>
+			<onfocus>SetFocus(6001)</onfocus>
 		</control>
 	</include>
 
@@ -89,16 +72,6 @@
 				<onfocus condition="!String.IsEqual(Window.Property(Breadcrumb_Level),01) + $EXP[Infoscreen_Widget_Prefer_TMDbHelper] + String.Contains(Window($PARAM[window]).Property(ContainerPath_01),db://)">SetFocus(6001)</onfocus>
 				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),01) + !String.IsEmpty(Window(home).Property(Origin))">ActivateWindow(home)</onfocus>
 				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),01) + !String.IsEmpty(Window(home).Property(Origin))">SetFocus(6001)</onfocus>
-				<!-- update breadcrub -->
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),02)">SetProperty(Breadcrumb_Level,01,$PARAM[window])</onfocus>
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),03)">SetProperty(Breadcrumb_Level,02,$PARAM[window])</onfocus>
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),04)">SetProperty(Breadcrumb_Level,03,$PARAM[window])</onfocus>
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),05)">SetProperty(Breadcrumb_Level,04,$PARAM[window])</onfocus>
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),06)">SetProperty(Breadcrumb_Level,05,$PARAM[window])</onfocus>
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),07)">SetProperty(Breadcrumb_Level,06,$PARAM[window])</onfocus>
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),08)">SetProperty(Breadcrumb_Level,07,$PARAM[window])</onfocus>
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),09)">SetProperty(Breadcrumb_Level,08,$PARAM[window])</onfocus>
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),10)">SetProperty(Breadcrumb_Level,09,$PARAM[window])</onfocus>
 			</control>
 		</definition>
 	</include>
