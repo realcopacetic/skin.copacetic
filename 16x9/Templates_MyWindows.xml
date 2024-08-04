@@ -406,7 +406,7 @@
 					<scrolltime tween="sine" easing="inout">360</scrolltime>
 					<timeblocks>30</timeblocks>
 					<rulerunit>6</rulerunit>
-					<progresstexture border="0,92,3,0" colordiffuse="$VAR[Accent_Color]">pvr/tvguide_progress_indicator.png</progresstexture>
+					<!-- <progresstexture border="0,92,3,0" colordiffuse="$VAR[Accent_Color]">pvr/tvguide_progress_indicator.png</progresstexture> -->
 					<orientation>vertical</orientation>
 					<onup>11</onup>
 					<ondown>SetFocus(3000,0,absolute)</ondown>
@@ -436,6 +436,7 @@
 						</control>
 						<control type="label" id="1">
 							<label>$INFO[ListItem.Label]</label>
+							<font>PVR_Guide</font>
 							<width>450</width>
 							<left>90</left>
 							<textoffsetx>30</textoffsetx>
@@ -457,6 +458,7 @@
 						</control>
 						<control type="label" id="1">
 							<label>$INFO[ListItem.Label]</label>
+							<font>PVR_Guide</font>
 							<textcolor>$VAR[epggrid_Focused_Color]</textcolor>
 							<left>90</left>
 							<width>450</width>
@@ -467,6 +469,7 @@
 					<itemlayout width="45" height="90">
 						<control type="label" id="1">
 							<label>$INFO[ListItem.Label]</label>
+							<font>PVR_Guide</font>
 							<textoffsetx>15</textoffsetx>
 							<scroll>false</scroll>
 						</control>
@@ -479,6 +482,7 @@
 						<control type="label" id="1">
 							<textcolor>$VAR[epggrid_Focused_Color]</textcolor>
 							<label>$INFO[ListItem.Label]</label>
+							<font>PVR_Guide</font>
 							<textoffsetx>15</textoffsetx>
 							<scroll>false</scroll>
 						</control>

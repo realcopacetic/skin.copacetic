@@ -293,6 +293,11 @@
 		</font>
 		<!-- PVR -->
 		<font>
+			<name>PVR_Guide</name>
+			<filename>Inter/Inter-ExtraLight.ttf</filename>
+			<size>27</size>
+		</font>
+		<font>
 			<name>PVR_Channel</name>
 			<filename>Inter/Inter-Regular.ttf</filename>
 			<size>27</size>
