@@ -20,6 +20,10 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**2.6.1**
+- Added a three second delay when entering movies or home windows before trailers will autoplay
+- Minor tweaks to design for pvr guide and channels
+
 **2.6.0**
 - Fixed typo in trailer autoplay preventing tvshow trailers from autoplaying in videos window unless container content was NOT tvshows. 
 
