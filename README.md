@@ -20,6 +20,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**2.6.0**
+- Fixed typo in trailer autoplay preventing tvshow trailers from autoplaying in videos window unless container content was NOT tvshows. 
+
 **2.5.9**
 - Switched OSD idle timer from custom window to skin timer
 

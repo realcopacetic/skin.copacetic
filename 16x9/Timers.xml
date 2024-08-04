@@ -37,7 +37,7 @@
   </timer>
   <timer>
     <name>trailer_autoplay</name>
-    <start reset="true">Window.Is(videos) + Skin.HasSetting(Trailer_Autoplay) + [[Skin.String(Trailer_Autoplay_Movies_Enabled,true) + Container.Content(movies)] | [Skin.String(Trailer_Autoplay_TVShows_Enabled,true) + !Container.Content(tvshows)]] + Window.IsVisible(1160) + !Player.HasMedia</start>
+    <start reset="true">Window.Is(videos) + Skin.HasSetting(Trailer_Autoplay) + [[Skin.String(Trailer_Autoplay_Movies_Enabled,true) + Container.Content(movies)] | [Skin.String(Trailer_Autoplay_TVShows_Enabled,true) + Container.Content(tvshows)]] + Window.IsVisible(1160) + !Player.HasMedia</start>
     <reset>Player.HasVideo | Window.IsVisible(movieinformation) | Window.IsVisible(shutdownmenu) | Window.IsVisible(busydialog)</reset>
     <stop>!String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(home).Property(Trailer_Autoplay)) + !Player.HasVideo</stop>
     <onstart condition="[Control.HasFocus(50) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(504)] + !String.IsEmpty(ListItem.Trailer)">SetProperty(Trailer_Autoplay,true,home)</onstart>

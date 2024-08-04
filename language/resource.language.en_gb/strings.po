@@ -1598,12 +1598,12 @@ msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31568"
-msgid "Autoplay autoplay can be quickly toggled on/off from the options menu within the video library."
+msgid "Autoplay can be quickly toggled on/off from the options menu within the video library."
 msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31469"
-msgid "Play trailers for tv shows in video library"
+msgid "Autoplay trailers for tv shows in video library"
 msgstr ""
 
 
