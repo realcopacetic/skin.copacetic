@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <timers>
   <timer>
+    <name>home_visible</name>
+    <start reset="true">Window.IsVisible(home)</start>
+    <stop>!Window.IsVisible(home)</stop>
+  </timer>
+  <timer>
+    <name>videos_visible</name>
+    <start reset="true">Window.IsVisible(videos)</start>
+    <stop>!Window.IsVisible(videos)</stop>
+  </timer>
+  <timer>
     <name>osd_idle</name>
     <start reset="true">String.IsEqual(System.CurrentWindow,Fullscreen OSD) | String.IsEqual(System.CurrentWindow,Music OSD)</start>
     <reset>[VideoPlayer.IsFullscreen + !String.IsEqual(System.CurrentWindow,Fullscreen OSD)] | [Window.IsVisible(visualisation) + !String.IsEqual(System.CurrentWindow,Music OSD)] | [!System.IdleTime(1) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(osd_idle),1)]</reset>
@@ -37,7 +47,7 @@
   </timer>
   <timer>
     <name>trailer_autoplay</name>
-    <start reset="true">Window.Is(videos) + Skin.HasSetting(Trailer_Autoplay) + [[Skin.String(Trailer_Autoplay_Movies_Enabled,true) + Container.Content(movies)] | [Skin.String(Trailer_Autoplay_TVShows_Enabled,true) + Container.Content(tvshows)]] + Window.IsVisible(1160) + !Player.HasMedia</start>
+    <start reset="true">Window.Is(videos) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(videos_visible),3) + Skin.HasSetting(Trailer_Autoplay) + [[Skin.String(Trailer_Autoplay_Movies_Enabled,true) + Container.Content(movies)] | [Skin.String(Trailer_Autoplay_TVShows_Enabled,true) + Container.Content(tvshows)]] + Window.IsVisible(1160) + !Player.HasMedia</start>
     <reset>Player.HasVideo | Window.IsVisible(movieinformation) | Window.IsVisible(shutdownmenu) | Window.IsVisible(busydialog)</reset>
     <stop>!String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(home).Property(Trailer_Autoplay)) + !Player.HasVideo</stop>
     <onstart condition="[Control.HasFocus(50) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(504)] + !String.IsEmpty(ListItem.Trailer)">SetProperty(Trailer_Autoplay,true,home)</onstart>
@@ -47,7 +57,7 @@
   </timer>
   <timer>
     <name>trailer_autoplay_home</name>
-    <start reset="true">Window.Is(home) + Skin.HasSetting(Trailer_Autoplay) + !String.IsEmpty(window(home).property(Home_Widget)) + Window.IsVisible(1160) + !Player.HasMedia</start>
+    <start reset="true">Window.Is(home) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(home_visible),3) + Skin.HasSetting(Trailer_Autoplay) + !String.IsEmpty(window(home).property(Home_Widget)) + Window.IsVisible(1160) + !Player.HasMedia</start>
     <reset>Player.HasVideo | Window.IsVisible(movieinformation) | Window.IsVisible(shutdownmenu) | Window.IsVisible(busydialog)</reset>
     <stop>!String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(home).Property(Trailer_Autoplay)) + !Player.HasVideo</stop>
     <onstart condition="Control.HasFocus(3201) + Skin.HasSetting(Widget1_Trailer_Autoplay) + !String.IsEmpty(ListItem.Trailer)">SetProperty(Trailer_Autoplay,true,home)</onstart>
