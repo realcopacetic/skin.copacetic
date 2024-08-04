@@ -78,7 +78,7 @@
 					<param name="textcolor" value="$VAR[Breadcrumb_Label_Color]" />
 				</include>
 				<include content="Breadcrumb_Label" condition="!String.IsEmpty(ListItem.Endtime) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBTYpe,episode)]">
-					<param name="visible" value="!Window.IsVisible(volumebar) + !Window.IsVisible(notification) + !Window.IsVisible(extendedprogressdialog)" />
+					<param name="visible" value="!Window.IsVisible(volumebar) + !Window.IsVisible(notification) + !Window.IsVisible(extendedprogressdialog) + !$EXP[Music_Player_IsVisible]" />
 					<param name="bar" value="false" />
 					<param name="align" value="right" />
 					<param name="title_label" value="$LOCALIZE[31100]" />
