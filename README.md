@@ -20,6 +20,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.5.10**
+- Switched OSD idle timer from custom window to skin timer
+
 **1.5.9**
 - Hide dialogvideinfo.xml label for ends time in top right corner when musicplayer widget is active.
 - Attempted fix for crashes in when browsing settings screens on certain platforms, courtesy of @mikeSILVO

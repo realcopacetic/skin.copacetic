@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <timers>
   <timer>
+    <name>osd_idle</name>
+    <start reset="true">String.IsEqual(System.CurrentWindow,Fullscreen OSD) | String.IsEqual(System.CurrentWindow,Music OSD)</start>
+    <reset>[VideoPlayer.IsFullscreen + !String.IsEqual(System.CurrentWindow,Fullscreen OSD)] | [Window.IsVisible(visualisation) + !String.IsEqual(System.CurrentWindow,Music OSD)] | [!System.IdleTime(1) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(osd_idle),1)]</reset>
+    <stop>[Window.IsActive(videoosd) | Window.IsVisible(musicosd)] + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(osd_idle),3)</stop>
+    <onstop>Dialog.Close(all)</onstop>
+  </timer>
+  <timer>
     <name>home_screensaver</name>
     <start reset="true">Skin.HasSetting(Home_Screensaver_Enabled) + Window.Is(home) + [Control.HasFocus(3000) | Control.HasFocus(4201)]</start>
     <reset>!Control.HasFocus(3000) + !Control.HasFocus(4201)</reset>
