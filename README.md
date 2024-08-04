@@ -20,6 +20,10 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.5.9**
+- Hide dialogvideinfo.xml label for ends time in top right corner when musicplayer widget is active.
+- Attempted fix for crashes in when browsing settings screens on certain platforms, courtesy of @mikeSILVO
+
 **1.5.8**
 - New attempted fix for infoscreen path tracer bug
 
