@@ -406,6 +406,7 @@
 		<definition>
 			<!-- Background -->
 			<include content="Background_Multiart_Global">
+				<param name="visible" value="!VideoPlayer.Content(livetv)" />
 				<param name="fadein_animation_condition" value="!$EXP[Background_FadeIn_Exceptions]" />
 				<param name="fadeout_animation_condition" value="!$EXP[Background_FadeOut_Exceptions]" />
 			</include>
@@ -559,6 +560,7 @@
 		<definition>
 			<!-- Background -->
 			<include content="Background_Multiart_Global">
+				<param name="visible" value="!VideoPlayer.Content(livetv)" />
 				<param name="fadein_animation_condition" value="!$EXP[Background_FadeIn_Exceptions]" />
 				<param name="fadeout_animation_condition" value="!$EXP[Background_FadeOut_Exceptions]" />
 			</include>

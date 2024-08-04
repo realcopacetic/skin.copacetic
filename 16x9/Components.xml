@@ -95,6 +95,7 @@
 	</include>
 
 	<include name="Background_Multiart">
+		<param name="visible" default="true" />
 		<param name="time" default="10000" />
 		<param name="include_list" default="true" />
 		<param name="content_source" default="Background_Global_Content" />
@@ -111,6 +112,8 @@
 				<param name="transition_time" value="$PARAM[time]" />
 			</include>
 			<control type="group">
+				<visible>!VideoPlayer.IsFullscreen + $PARAM[visible]</visible>
+				<include content="VisibleHidden_Background_Fade_Delayed_Animation" />
 				<include content="WindowOpenClose_Fade_Delayed_Animation">
 					<param name="fadein_condition" value="$PARAM[fadein_animation_condition]" />
 					<param name="fadeout_condition" value="$PARAM[fadeout_animation_condition]" />
@@ -183,6 +186,7 @@
 
 	<include name="Background_Multiart_Home">
 		<include content="Background_Multiart">
+			<param name="visible" value="$PARAM[visible]" />
 			<param name="content_source" value="Background_Home_Content" />
 			<param name="fadein_animation_condition" value="!$EXP[Background_FadeIn_Exceptions_home]" />
 			<param name="fadeout_animation_condition" value="!$EXP[Background_FadeOut_Exceptions_home]" />
@@ -202,28 +206,37 @@
 	</include>
 
 	<include name="Background_Home">
-		<control type="image">
-			<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="Default_Transition_5x" tween="sine" easing="inout" reversible="true">Visible</animation>
-			<texture colordiffuse="$VAR[Dark_Color]">views/white_100.png</texture>
-		</control>
-		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,5)">
-			<param name="time" value="5000" />
-		</include>
-		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,10) | !Skin.String(Background_Interval)">
-			<param name="time" value="10000" />
-		</include>
-		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,15)">
-			<param name="time" value="15000" />
-		</include>
-		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,20)">
-			<param name="time" value="20000" />
-		</include>
-		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,25)">
-			<param name="time" value="25000" />
-		</include>
-		<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,30)">
-			<param name="time" value="30000" />
-		</include>
+		<param name="visible" default="!VideoPlayer.Content(livetv)" />
+		<definition>
+			<control type="image">
+				<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="Default_Transition_5x" tween="sine" easing="inout" reversible="true">Visible</animation>
+				<texture colordiffuse="$VAR[Dark_Color]">views/white_100.png</texture>
+			</control>
+			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,5)">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="time" value="5000" />
+			</include>
+			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,10) | !Skin.String(Background_Interval)">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="time" value="10000" />
+			</include>
+			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,15)">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="time" value="15000" />
+			</include>
+			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,20)">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="time" value="20000" />
+			</include>
+			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,25)">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="time" value="25000" />
+			</include>
+			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,30)">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="time" value="30000" />
+			</include>
+		</definition>
 	</include>
 
 	<include name="Home_Clearlogo">
