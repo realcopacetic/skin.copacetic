@@ -25,8 +25,10 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Minor tweaks to design for pvr guide and channels
 
 Still to do:
-- infoscreen bug
 - remaining pvr screens
+- disable grid on certain list only views
+- favourites all viewtype options (omega only)
+- infoscreen bug
 - infoscreen widget navigation for music widgets + music videos (songvideourl)
 - check to see the player status labels
 - Evaluate Container.NumItems for scrollbars in each view / layout
