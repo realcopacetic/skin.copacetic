@@ -556,7 +556,6 @@
 	</include>
 
 	<include name="tvsearch_Views">
-		<param name="visible" default="!$EXP[Infoscreen_IsVisible]" />
 		<definition>
 			<!-- Background -->
 			<include content="Background_Multiart_Global">
@@ -567,22 +566,10 @@
 			<include content="Embedded_VideoPlayer">
 				<param name="visible" value="VideoPlayer.Content(livetv)" />
 			</include>
-			<!-- Layer 1 -->
-			<control type="group">
-				<include content="WindowOpenClose_Fade_Delayed_Animation" />
-				<visible>$PARAM[visible]</visible>
-				<include content="Visible_Fade_Delayed_Animation" />
-				<include content="ListView_Display" />
-			</control>
-			<!-- Layer 2 -->
-			<control type="group">
-				<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
-				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" />
-				<visible>$PARAM[visible]</visible>
-				<include content="Visible_Fade_Delayed_Long_Animation" />
-				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
-				<include content="ListView_Container" />
-				<include content="ListView_Details" />
+			<!-- Content -->
+			<include content="Default_Dialog_Panel_Layout">
+				<param name="visible" value="!$EXP[Infoscreen_IsVisible] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pvrguidesearch)" />
+				<param name="panel_colordiffuse" value="$VAR[PVR_Panel_Mask]" />
 				<include content="Breadcrumb_Label">
 					<param name="bar" value="true" />
 					<param name="title_label_id" value="29" />
@@ -590,20 +577,50 @@
 					<param name="info_label" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[137]$INFO[Control.GetLabel(30), ]" />
 					<param name="textcolor" value="$VAR[Light_Color]" />
 				</include>
-				<include content="Default_Dialog_Panel_Layout">
-					<param name="visible" value="!$EXP[TransparentDialog_IsVisible] + ListItem.HasEPG" />
-					<param name="panel_edge_left" value="1140" />
-					<param name="panel_edge_right" value="60" />
-					<param name="panel_colordiffuse" value="$VAR[Panel_Mask]" />
-					<include content="PVR_Info_Box">
-						<param name="left" value="1200" />
-						<param name="right" value="120" />
-						<param name="bottom" value="225" />
-						<param name="height" value="630" />
-						<param name="plot_height_max" value="540" />
-					</include>
+				<control type="list" id="50">
+					<viewtype label="List">list</viewtype>
+					<left>120</left>
+					<width>1080</width>
+					<height>630</height>
+					<centertop>50%</centertop>
+					<preloaditems>2</preloaditems>
+					<pagecontrol>60</pagecontrol>
+					<orientation>vertical</orientation>
+					<onleft>SetFocus(3000,0,absolute)</onleft>
+					<onright condition="Integer.IsGreater(Container(50).NumItems,7)">60</onright>
+					<onright condition="!Integer.IsGreater(Container(50).NumItems,7)">SetFocus(3000,0,absolute)</onright>
+					<scrolltime tween="sine" easing="inout">360</scrolltime>
+					<itemlayout width="1080" height="90" infoupdate="5000">
+						<include content="PVR_ChannelList_Item" />
+					</itemlayout>
+					<focusedlayout width="1080" height="90" infoupdate="5000">
+						<include content="PVR_ChannelList_Item">
+							<param name="color" value="$VAR[Light_Color]" />
+						</include>
+						<control type="image">
+							<bottom>0</bottom>
+							<height>1</height>
+							<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+						</control>
+					</focusedlayout>
+				</control>
+				<include content="Dialog_Divider_With_Scrollbar">
+					<param name="scrollbarvisible" value="Integer.IsGreater(Container(50).NumItems,7)" />
+					<param name="id" value="60" />
+					<param name="left" value="1200" />
+					<param name="scrollbaralignleft" value="true" />
+					<param name="onleft" value="50" />
+					<param name="onright" value="50" />
 				</include>
-			</control>
+				<include content="PVR_Info_Box">
+					<param name="visible" value="!$EXP[TransparentDialog_IsVisible] + ListItem.HasEPG" />
+					<param name="left" value="1200" />
+					<param name="right" value="120" />
+					<param name="bottom" value="225" />
+					<param name="height" value="630" />
+					<param name="plot_height_max" value="540" />
+				</include>
+			</include>
 		</definition>
 	</include>
 
@@ -684,128 +701,158 @@
 
 	<include name="Hidden_Options_Menu">
 		<param name="target_id" />
+		<param name="include_pvr_menu" default="false" />
 		<definition>
-			<control type="fixedlist" id="3000">
-				<viewtype label="535">list</viewtype>
-				<visible allowhiddenfocus="true">String.IsEqual(Window(home).Property(OptionsMenu),Active) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog)</visible>
+			<control type="group">
+				<visible allowhiddenfocus="true">[ControlGroup(3600).HasFocus | Control.HasFocus(3000) | String.IsEqual(Window(home).Property(OptionsMenu),Active)] + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog)</visible>
 				<include content="VisibleHidden_Fade_Delayed_Animation" />
-				<include content="OptionsMenu_Slides" />
-				<description>Options menu</description>
-				<left>120</left>
-				<width>1080</width>
-				<centertop>50%</centertop>
-				<height>780</height>
-				<onback>4012</onback>
-				<onfocus>ClearProperty(Scrollbars,home)</onfocus>
-				<onfocus>SetProperty(OptionsMenu,Active,home)</onfocus>
-				<onunfocus>ClearProperty(OptionsMenu,home)</onunfocus>
-				<onleft condition="String.IsEmpty(Container(3000).ListItem.Property(ActionLeft))">4012</onleft>
-				<onright condition="String.IsEmpty(Container(3000).ListItem.Property(ActionRight))">4012</onright>
-				<onleft condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionLeft))">$INFO[Container(3000).ListItem.Property(ActionLeft)]</onleft>
-				<onright condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionRight))">$INFO[Container(3000).ListItem.Property(ActionRight)]</onright>
-				<onleft condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionLeft2))">$INFO[Container(3000).ListItem.Property(ActionLeft2)]</onleft>
-				<onright condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionRight2))">$INFO[Container(3000).ListItem.Property(ActionRight2)]</onright>
-				<onleft condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionLeft3))">$INFO[Container(3000).ListItem.Property(ActionLeft3)]</onleft>
-				<onright condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionRight3))">$INFO[Container(3000).ListItem.Property(ActionRight3)]</onright>
-				<!-- Reset multiart on viewchange -->
-				<onleft condition="Container(3000).HasFocus(1)">SetFocus(4014)</onleft>
-				<onright condition="Container(3000).HasFocus(1)">SetFocus(4014)</onright>
-				<!-- Transition on left or right -->
-				<onleft condition="Container(3000).HasFocus(2)">SetFocus(4014)</onleft>
-				<onright condition="Container(3000).HasFocus(2)">SetFocus(4014)</onright>
-				<!-- Transition on left only -->
-				<onleft condition="Container(3000).HasFocus(3)">SetFocus(4014)</onleft>
-				<!-- Transition on right only -->
-				<onright condition="Container(3000).HasFocus(4)">SetFocus(4014)</onright>
-				<!-- Showcase: Turn off Logos & transition on left only -->
-				<onleft condition="Container(3000).HasFocus(5) + Container.Content(movies)">Skin.SetString(ShowcaseView_Logo_Movies,Off)</onleft>
-				<onleft condition="Container(3000).HasFocus(5) + Container.Content(sets)">Skin.SetString(ShowcaseView_Logo_Sets,Off)</onleft>
-				<onleft condition="Container(3000).HasFocus(5) + Container.Content(tvshows)">Skin.SetString(ShowcaseView_Logo_TVShows,Off)</onleft>
-				<onleft condition="Container(3000).HasFocus(5) + Container.Content(artists)">Skin.SetString(ShowcaseView_Logo_Artists,Off)</onleft>
-				<onleft condition="Container(3000).HasFocus(5)">SetFocus(4014)</onleft>
-				<!-- Showcase: Turn off Logos & transition on right only -->
-				<onright condition="Container(3000).HasFocus(6) + Container.Content(movies)">Skin.SetString(ShowcaseView_Logo_Movies,Off)</onright>
-				<onright condition="Container(3000).HasFocus(6) + Container.Content(sets)">Skin.SetString(ShowcaseView_Logo_Sets,Off)</onright>
-				<onright condition="Container(3000).HasFocus(6) + Container.Content(tvshows)">Skin.SetString(ShowcaseView_Logo_TVShows,Off)</onright>
-				<onright condition="Container(3000).HasFocus(6) + Container.Content(artists)">Skin.SetString(ShowcaseView_Logo_Artists,Off)</onright>
-				<onright condition="Container(3000).HasFocus(6)">SetFocus(4014)</onright>
-				<!-- Strip: Turn off Logos & transition on right only -->
-				<onright condition="Container(3000).HasFocus(7) + Container.Content(movies)">Skin.SetString(StripView_Logo_Movies,Off)</onright>
-				<onright condition="Container(3000).HasFocus(7) + Container.Content(sets)">Skin.SetString(StripView_Logo_Sets,Off)</onright>
-				<onright condition="Container(3000).HasFocus(7) + Container.Content(tvshows)">Skin.SetString(StripView_Logo_TVShows,Off)</onright>
-				<onright condition="Container(3000).HasFocus(7) + Container.Content(artists)">Skin.SetString(StripView_Logo_Artists,Off)</onright>
-				<onright condition="Container(3000).HasFocus(7)">SetFocus(4014)</onright>
-				<!-- Strip: Turn off Logos & transition on left only -->
-				<onleft condition="Container(3000).HasFocus(8) + Container.Content(movies)">Skin.SetString(StripView_Logo_Movies,Off)</onleft>
-				<onleft condition="Container(3000).HasFocus(8) + Container.Content(sets)">Skin.SetString(StripView_Logo_Sets,Off)</onleft>
-				<onleft condition="Container(3000).HasFocus(8) + Container.Content(tvshows)">Skin.SetString(StripView_Logo_TVShows,Off)</onleft>
-				<onright condition="Container(3000).HasFocus(8) + Container.Content(artists)">Skin.SetString(StripView_Logo_Artists,Off)</onright>
-				<onleft condition="Container(3000).HasFocus(8)">SetFocus(4014)</onleft>
-				<!-- Strip: Turn off Logos on left only -->
-				<onleft condition="Container(3000).HasFocus(9) + Container.Content(movies)">Skin.SetString(StripView_Logo_Movies,Off)</onleft>
-				<onleft condition="Container(3000).HasFocus(9) + Container.Content(sets)">Skin.SetString(StripView_Logo_Sets,Off)</onleft>
-				<onleft condition="Container(3000).HasFocus(9) + Container.Content(tvshows)">Skin.SetString(StripView_Logo_TVShows,Off)</onleft>
-				<onleft condition="Container(3000).HasFocus(9) + Container.Content(artists)">Skin.SetString(StripView_Logo_Artists,Off)</onleft>
-				<!-- Strip: Turn off Logos on right only -->
-				<onright condition="Container(3000).HasFocus(10) + Container.Content(movies)">Skin.SetString(StripView_Logo_Movies,Off)</onright>
-				<onright condition="Container(3000).HasFocus(10) + Container.Content(sets)">Skin.SetString(StripView_Logo_Sets,Off)</onright>
-				<onright condition="Container(3000).HasFocus(10) + Container.Content(tvshows)">Skin.SetString(StripView_Logo_TVShows,Off)</onright>
-				<onright condition="Container(3000).HasFocus(10) + Container.Content(artists)">Skin.SetString(StripView_Logo_Artists,Off)</onright>
-				<!--Grid: Transition from keyart to poster -->
-				<onleft condition="Container(3000).HasFocus(11)">SetFocus(505)</onleft>
-				<onleft condition="Container(3000).HasFocus(11)">SetFocus(4014)</onleft>
-				<onright condition="Container(3000).HasFocus(12)">SetFocus(505)</onright>
-				<onright condition="Container(3000).HasFocus(12)">SetFocus(4014)</onright>
-				<orientation>vertical</orientation>
-				<focusposition>0</focusposition>
-				<movement>12</movement>
-				<defaultcontrol>1</defaultcontrol>
-				<scrolltime tween="sine" easing="inout">380</scrolltime>
-				<itemlayout height="60" width="1080">
-					<include content="Simple_List_Layout">
-						<param name="label" value="$INFO[ListItem.Label2]" />
-						<param name="label_left" value="0" />
-						<param name="label_maxwidth" value="1080" />
-					</include>
-				</itemlayout>
-				<focusedlayout height="60" width="1080">
-					<include content="Simple_List_Layout">
-						<param name="font" value="Main_Menu_Focused" />
-						<param name="label" value="$INFO[ListItem.Label]" />
-						<param name="label_left" value="0" />
-						<param name="label_maxwidth" value="1080" />
-					</include>
-				</focusedlayout>
-				<content>
-					<include content="ListView_Menu_Options" condition="!Skin.HasSetting(Kiosk_Mode)" />
-					<include content="BillboardView_Menu_Options" condition="$EXP[BillboardView_Enabled] + !Skin.HasSetting(Kiosk_Mode)" />
-					<include content="ShowcaseView_Menu_Options" condition="$EXP[ShowcaseView_Enabled] + !Skin.HasSetting(Kiosk_Mode)" />
-					<include content="StripView_Menu_Options" condition="$EXP[StripView_Enabled] + !Skin.HasSetting(Kiosk_Mode)" />
-					<include content="GridView_Menu_Options" condition="$EXP[GridView_Enabled] + !Skin.HasSetting(Kiosk_Mode)" />
-					<include content="Trailer_Autoplay_Menu_Options" condition="Window.Is(videos) + Skin.HasSetting(Trailer_Autoplay)" />
-					<include content="tvchannels_Menu_Options" condition="Window.Is(tvchannels) | Window.Is(radiochannels)" />
-					<include content="tvguide_Menu_Options" condition="Window.Is(tvguide) | Window.Is(radioguide)" />
-					<include content="tvsearch_Menu_Options" condition="Window.Is(tvsearch) | Window.Is(radiosearch)" />
-					<include content="Common_Menu_Options">
-						<param name="target_id" value="$PARAM[target_id]" />
-					</include>
-					<include content="Video_Menu_Options" condition="Window.Is(videos)" />
-					<include content="MusicVideo_Menu_Options" condition="Window.Is(videos) | Window.Is(music)" />
-					<include content="AddonBrowser_Menu_Options" condition="Window.Is(addonbrowser)" />
-					<include content="Pictures_Menu_Options" condition="Window.Is(pictures)" />
-					<include content="Playlist_Menu_Options" condition="Window.Is(musicplaylist) | Window.Is(videoplaylist)" />
-					<include content="shutdownmenu_Shortcut" condition="Skin.HasSetting(shutdownmenu_Shortcut)" />
-				</content>
+				<control type="fixedlist" id="3000">
+					<viewtype label="535">list</viewtype>
+					<visible allowhiddenfocus="true">true</visible>
+					<include content="OptionsMenu_Slides" />
+					<include content="PVR_Menu_Navigation" condition="$PARAM[include_pvr_menu]" />
+					<description>Options menu</description>
+					<left>120</left>
+					<width>1080</width>
+					<centertop>50%</centertop>
+					<height>780</height>
+					<onback>4012</onback>
+					<onfocus>ClearProperty(Scrollbars,home)</onfocus>
+					<onfocus>SetProperty(OptionsMenu,Active,home)</onfocus>
+					<onunfocus>ClearProperty(OptionsMenu,home)</onunfocus>
+					<onleft condition="String.IsEmpty(Container(3000).ListItem.Property(ActionLeft))">4012</onleft>
+					<onright condition="String.IsEmpty(Container(3000).ListItem.Property(ActionRight))">4012</onright>
+					<onleft condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionLeft))">$INFO[Container(3000).ListItem.Property(ActionLeft)]</onleft>
+					<onright condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionRight))">$INFO[Container(3000).ListItem.Property(ActionRight)]</onright>
+					<onleft condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionLeft2))">$INFO[Container(3000).ListItem.Property(ActionLeft2)]</onleft>
+					<onright condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionRight2))">$INFO[Container(3000).ListItem.Property(ActionRight2)]</onright>
+					<onleft condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionLeft3))">$INFO[Container(3000).ListItem.Property(ActionLeft3)]</onleft>
+					<onright condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionRight3))">$INFO[Container(3000).ListItem.Property(ActionRight3)]</onright>
+					<!-- Reset multiart on viewchange -->
+					<onleft condition="Container(3000).HasFocus(1)">SetFocus(4014)</onleft>
+					<onright condition="Container(3000).HasFocus(1)">SetFocus(4014)</onright>
+					<!-- Transition on left or right -->
+					<onleft condition="Container(3000).HasFocus(2)">SetFocus(4014)</onleft>
+					<onright condition="Container(3000).HasFocus(2)">SetFocus(4014)</onright>
+					<!-- Transition on left only -->
+					<onleft condition="Container(3000).HasFocus(3)">SetFocus(4014)</onleft>
+					<!-- Transition on right only -->
+					<onright condition="Container(3000).HasFocus(4)">SetFocus(4014)</onright>
+					<!-- Showcase: Turn off Logos & transition on left only -->
+					<onleft condition="Container(3000).HasFocus(5) + Container.Content(movies)">Skin.SetString(ShowcaseView_Logo_Movies,Off)</onleft>
+					<onleft condition="Container(3000).HasFocus(5) + Container.Content(sets)">Skin.SetString(ShowcaseView_Logo_Sets,Off)</onleft>
+					<onleft condition="Container(3000).HasFocus(5) + Container.Content(tvshows)">Skin.SetString(ShowcaseView_Logo_TVShows,Off)</onleft>
+					<onleft condition="Container(3000).HasFocus(5) + Container.Content(artists)">Skin.SetString(ShowcaseView_Logo_Artists,Off)</onleft>
+					<onleft condition="Container(3000).HasFocus(5)">SetFocus(4014)</onleft>
+					<!-- Showcase: Turn off Logos & transition on right only -->
+					<onright condition="Container(3000).HasFocus(6) + Container.Content(movies)">Skin.SetString(ShowcaseView_Logo_Movies,Off)</onright>
+					<onright condition="Container(3000).HasFocus(6) + Container.Content(sets)">Skin.SetString(ShowcaseView_Logo_Sets,Off)</onright>
+					<onright condition="Container(3000).HasFocus(6) + Container.Content(tvshows)">Skin.SetString(ShowcaseView_Logo_TVShows,Off)</onright>
+					<onright condition="Container(3000).HasFocus(6) + Container.Content(artists)">Skin.SetString(ShowcaseView_Logo_Artists,Off)</onright>
+					<onright condition="Container(3000).HasFocus(6)">SetFocus(4014)</onright>
+					<!-- Strip: Turn off Logos & transition on right only -->
+					<onright condition="Container(3000).HasFocus(7) + Container.Content(movies)">Skin.SetString(StripView_Logo_Movies,Off)</onright>
+					<onright condition="Container(3000).HasFocus(7) + Container.Content(sets)">Skin.SetString(StripView_Logo_Sets,Off)</onright>
+					<onright condition="Container(3000).HasFocus(7) + Container.Content(tvshows)">Skin.SetString(StripView_Logo_TVShows,Off)</onright>
+					<onright condition="Container(3000).HasFocus(7) + Container.Content(artists)">Skin.SetString(StripView_Logo_Artists,Off)</onright>
+					<onright condition="Container(3000).HasFocus(7)">SetFocus(4014)</onright>
+					<!-- Strip: Turn off Logos & transition on left only -->
+					<onleft condition="Container(3000).HasFocus(8) + Container.Content(movies)">Skin.SetString(StripView_Logo_Movies,Off)</onleft>
+					<onleft condition="Container(3000).HasFocus(8) + Container.Content(sets)">Skin.SetString(StripView_Logo_Sets,Off)</onleft>
+					<onleft condition="Container(3000).HasFocus(8) + Container.Content(tvshows)">Skin.SetString(StripView_Logo_TVShows,Off)</onleft>
+					<onright condition="Container(3000).HasFocus(8) + Container.Content(artists)">Skin.SetString(StripView_Logo_Artists,Off)</onright>
+					<onleft condition="Container(3000).HasFocus(8)">SetFocus(4014)</onleft>
+					<!-- Strip: Turn off Logos on left only -->
+					<onleft condition="Container(3000).HasFocus(9) + Container.Content(movies)">Skin.SetString(StripView_Logo_Movies,Off)</onleft>
+					<onleft condition="Container(3000).HasFocus(9) + Container.Content(sets)">Skin.SetString(StripView_Logo_Sets,Off)</onleft>
+					<onleft condition="Container(3000).HasFocus(9) + Container.Content(tvshows)">Skin.SetString(StripView_Logo_TVShows,Off)</onleft>
+					<onleft condition="Container(3000).HasFocus(9) + Container.Content(artists)">Skin.SetString(StripView_Logo_Artists,Off)</onleft>
+					<!-- Strip: Turn off Logos on right only -->
+					<onright condition="Container(3000).HasFocus(10) + Container.Content(movies)">Skin.SetString(StripView_Logo_Movies,Off)</onright>
+					<onright condition="Container(3000).HasFocus(10) + Container.Content(sets)">Skin.SetString(StripView_Logo_Sets,Off)</onright>
+					<onright condition="Container(3000).HasFocus(10) + Container.Content(tvshows)">Skin.SetString(StripView_Logo_TVShows,Off)</onright>
+					<onright condition="Container(3000).HasFocus(10) + Container.Content(artists)">Skin.SetString(StripView_Logo_Artists,Off)</onright>
+					<!--Grid: Transition from keyart to poster -->
+					<onleft condition="Container(3000).HasFocus(11)">SetFocus(505)</onleft>
+					<onleft condition="Container(3000).HasFocus(11)">SetFocus(4014)</onleft>
+					<onright condition="Container(3000).HasFocus(12)">SetFocus(505)</onright>
+					<onright condition="Container(3000).HasFocus(12)">SetFocus(4014)</onright>
+					<orientation>vertical</orientation>
+					<focusposition>0</focusposition>
+					<movement>12</movement>
+					<defaultcontrol>1</defaultcontrol>
+					<scrolltime tween="sine" easing="inout">380</scrolltime>
+					<itemlayout height="60" width="1080">
+						<include content="Simple_List_Layout">
+							<param name="label" value="$INFO[ListItem.Label2]" />
+							<param name="label_left" value="0" />
+							<param name="label_maxwidth" value="1080" />
+						</include>
+					</itemlayout>
+					<focusedlayout height="60" width="1080">
+						<include content="Simple_List_Layout">
+							<param name="font" value="Main_Menu_Focused" />
+							<param name="label" value="$INFO[ListItem.Label]" />
+							<param name="label_left" value="0" />
+							<param name="label_maxwidth" value="1080" />
+						</include>
+					</focusedlayout>
+					<content>
+						<include content="ListView_Menu_Options" condition="!Skin.HasSetting(Kiosk_Mode)" />
+						<include content="BillboardView_Menu_Options" condition="$EXP[BillboardView_Enabled] + !Skin.HasSetting(Kiosk_Mode)" />
+						<include content="ShowcaseView_Menu_Options" condition="$EXP[ShowcaseView_Enabled] + !Skin.HasSetting(Kiosk_Mode)" />
+						<include content="StripView_Menu_Options" condition="$EXP[StripView_Enabled] + !Skin.HasSetting(Kiosk_Mode)" />
+						<include content="GridView_Menu_Options" condition="$EXP[GridView_Enabled] + !Skin.HasSetting(Kiosk_Mode)" />
+						<include content="Trailer_Autoplay_Menu_Options" condition="Window.Is(videos) + Skin.HasSetting(Trailer_Autoplay)" />
+						<include content="tvchannels_Menu_Options" condition="Window.Is(tvchannels) | Window.Is(radiochannels)" />
+						<include content="tvguide_Menu_Options" condition="Window.Is(tvguide) | Window.Is(radioguide)" />
+						<include content="tvsearch_Menu_Options" condition="Window.Is(tvsearch) | Window.Is(radiosearch)" />
+						<include content="Common_Menu_Options">
+							<param name="target_id" value="$PARAM[target_id]" />
+						</include>
+						<include content="Video_Menu_Options" condition="Window.Is(videos)" />
+						<include content="MusicVideo_Menu_Options" condition="Window.Is(videos) | Window.Is(music)" />
+						<include content="AddonBrowser_Menu_Options" condition="Window.Is(addonbrowser)" />
+						<include content="Pictures_Menu_Options" condition="Window.Is(pictures)" />
+						<include content="Playlist_Menu_Options" condition="Window.Is(musicplaylist) | Window.Is(videoplaylist)" />
+						<include content="shutdownmenu_Shortcut" condition="Skin.HasSetting(shutdownmenu_Shortcut)" />
+					</content>
+				</control>
+				<include content="PVR_Menu" condition="$PARAM[include_pvr_menu]" />
 			</control>
 		</definition>
 	</include>
 
+	<include name="PVR_Menu">
+		<control type="grouplist" id="3600">
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<ondown>3000</ondown>
+			<onup>3000</onup>
+			<width>360</width>
+			<height>60</height>
+			<align>center</align>
+			<itemgap>0</itemgap>
+			<usecontrolcoords>true</usecontrolcoords>
+			<control type="button" id="10">
+				<label>hello</label>
+			</control>
+		</control>
+	</include>
+
+	<include name="PVR_Menu_Navigation">
+		<onup>3600</onup>
+		<ondown>3600</ondown>
+	</include>
+	
 	<include name="MyViews_Menu_and_Scrollbars">
 		<param name="target_id" default="50" />
+		<param name="include_pvr_menu" default="false" />
 		<definition>
 			<include content="Scrollbars" condition="!Window.Is(tvguide) + !Window.Is(radioguide) + !Window.Is(tvchannels) + !Window.Is(radiochannels)" />
 			<include content="Hidden_Options_Menu" condition="!$EXP[Hidden_Options_Menu_Disabled]">
 				<param name="target_id" value="$PARAM[target_id]" />
+				<param name="include_pvr_menu" value="$PARAM[include_pvr_menu]" />
 			</include>
 		</definition>
 	</include>

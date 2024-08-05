@@ -24,6 +24,21 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Added a three second delay when entering movies or home windows before trailers will autoplay
 - Minor tweaks to design for pvr guide and channels
 
+Still to do:
+- remaining pvr screens
+- disable grid on certain list only views
+- favourites all viewtype options (omega only)
+- infoscreen bug
+- infoscreen widget navigation for music widgets + music videos (songvideourl)
+- check to see the player status labels
+- Evaluate Container.NumItems for scrollbars in each view / layout
+- autoscroll bar
+- multiart on autoscroll
+- Create radio station button
+- remove window property hack for music ratings during playback in Omega
+= <!-- temp fix to account for fact that DecreaseRating won't go lower than 1 for VideoPlayer.UserRating -->
+- https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Extended-Info#direct-call-auto
+
 **2.6.0**
 - Fixed typo in trailer autoplay preventing tvshow trailers from autoplaying in videos window unless container content was NOT tvshows. 
 
@@ -66,17 +81,6 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - Fixed bug preventing Grid view from displaying properly for windows where Container.Content() is empty, e.g. video sources 
 - Fixed musicplayer navigation for horizontal gridviews
 - Fixed alignment and shadow on musicplayer when horizontal gridviews are active
-
-Still to do:
---- check to see the player status labels
-- Evaluate Container.NumItems for scrollbars in each view / layout
-- autoscroll bar
-- multiart on autoscroll
-- Create radio station button
-- remove window property hack for music ratings during playback in Omega
-<!-- temp fix to account for fact that DecreaseRating won't go lower than 1 for VideoPlayer.UserRating -->
-- PVR
-https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Extended-Info#direct-call-auto
 
 **2.5.3**
 - Disabled debugging

@@ -34,14 +34,14 @@
 				<onright condition="Integer.IsGreater(Container(50).NumItems,7)">60</onright>
 				<onright condition="!Integer.IsGreater(Container(50).NumItems,7)">SetFocus(3000,0,absolute)</onright>
 				<scrolltime tween="sine" easing="inout">360</scrolltime>
-				<itemlayout width="1080" height="90">
+				<itemlayout width="1080" height="90" infoupdate="5000">
 					<include content="PVR_ChannelList_Item" />
 				</itemlayout>
 				<focusedlayout width="1080" height="90" infoupdate="5000">
 					<include content="PVR_ChannelList_Item">
 						<param name="color" value="$VAR[Light_Color]" />
 					</include>
-					<control type="image" infoupdate="5000">
+					<control type="image">
 						<bottom>0</bottom>
 						<height>1</height>
 						<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
@@ -76,6 +76,8 @@
 				<param name="include_logo" value="false" />
 			</include>
 		</include>
-		<include content="MyViews_Menu_and_Scrollbars" />
+		<include content="MyViews_Menu_and_Scrollbars">
+			<param name="include_pvr_menu" value="true" />
+		</include>
 	</controls>
 </window>

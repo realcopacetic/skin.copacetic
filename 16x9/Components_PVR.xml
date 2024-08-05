@@ -64,7 +64,7 @@
 		<param name="color" default="$VAR[Unfocused_Color]" />
 		<definition>
 			<control type="progress">
-				<visible>ListItem.HasEpg</visible>
+				<visible>ListItem.HasEpg + Integer.IsGreater(ListItem.Progress,0)</visible>
 				<height>100%</height>
 				<width>100%</width>
 				<texturebg colordiffuse="$VAR[Blank_Color]">views/white_100.png</texturebg>

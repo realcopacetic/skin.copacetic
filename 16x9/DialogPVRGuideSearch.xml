@@ -3,27 +3,82 @@
 	<!-- pvrguidesearch -->
 	<defaultcontrol always="true">9</defaultcontrol>
 	<controls>
-		<control type="grouplist">
-			<control type="edit" id="9" />
-			<control type="radiobutton" id="10" />
-			<control type="radiobutton" id="11" />
-			<control type="spincontrolex" id="12" />
-			<control type="spincontrolex" id="13" />
-			<control type="edit" id="14" />
-			<control type="edit" id="15" />
-			<control type="edit" id="16" />
-			<control type="edit" id="17" />
-			<control type="spincontrolex" id="18" />
-			<control type="radiobutton" id="19" />
-			<control type="radiobutton" id="20" />
-			<control type="spincontrolex" id="21" />
-			<control type="radiobutton" id="22" />
-			<control type="spincontrolex" id="23" />
-			<control type="radiobutton" id="24" />
-			<control type="button" id="25" />
-			<control type="button" id="26" />
-			<control type="radiobutton" id="27" />
-			<control type="button" id="28" />
-		</control>
+		<include content="Default_Dialog_Panel_Layout">
+			<param name="visible" value="!Window.IsVisible(shutdownmenu) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput)" />
+			<param name="panel_colordiffuse" value="$VAR[PVR_Panel_Mask]" />
+			<include content="Breadcrumb_Label">
+				<param name="title_label_id" value="2" />
+				<param name="title_label" value="$LOCALIZE[19142]" />
+			</include>
+			<control type="edit" id="9">
+				<left>150</left>
+				<width>1620</width>
+				<top>225</top>
+				<hinttext>$LOCALIZE[137]...</hinttext>
+				<ondown>10</ondown>
+				<onup>4000</onup>
+				<onleft>4000</onleft>
+				<onright>100</onright>
+				<textoffsetx>0</textoffsetx>
+				<texturefocus border="2,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_focused.png</texturefocus>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,45" time="0" condition="true">Conditional</animation>
+				<include content="Settings_Grouplist_Template">
+					<param name="id" value="100" />
+					<param name="height" value="540" />
+					<param name="width" value="870" />
+					<param name="onleft" value="9" />
+					<param name="onright" value="200" />
+					<param name="scrollbar_height" value="540" />
+					<param name="scrollbar_visible" value="ControlGroup(100).HasFocus" />
+					<param name="scrollbar_mirror" value="true" />
+					<include content="pvrguidesearch_Left_Grouplist_Content" />
+					<onup>9</onup>
+					<ondown>12</ondown>
+				</include>
+				<include content="Settings_Grouplist_Template">
+					<param name="id" value="200" />
+					<param name="pagecontrol" value="61" />
+					<param name="height" value="540" />
+					<param name="left" value="960" />
+					<param name="width" value="870" />
+					<param name="onleft" value="100" />
+					<param name="onright" value="4000" />
+					<param name="divider_visible" value="false" />
+					<param name="scrollbar_height" value="540" />
+					<param name="scrollbar_visible" value="ControlGroup(200).HasFocus" />
+					<include content="pvrguidesearch_Right_Grouplist_Content" />
+					<onup>24</onup>
+					<ondown>4000</ondown>
+				</include>
+			</control>
+			<include content="Description_Label">
+				<param name="type" value="textbox" />
+				<param name="label" value="$LOCALIZE[19001] $LOCALIZE[19002]" />
+				<param name="left" value="150" />
+				<param name="right" value="660" />
+				<param name="height" value="180" />
+				<param name="textcolor" value="$VAR[Light_Color]" />
+			</include>
+			<include content="Button_Group_Template">
+				<param name="onup" value="27" />
+				<param name="ondown" value="9" />
+				<param name="onleft" value="200" />
+				<param name="onright" value="9" />
+				<param name="button1" value="true" />
+				<param name="button1_id" value="26" />
+				<param name="button1_texture" value="Browse" />
+				<param name="button2" value="true" />
+				<param name="button2_id" value="28" />
+				<param name="button2_texture" value="Refresh" />
+				<param name="button3" value="true" />
+				<param name="button3_id" value="25" />
+				<param name="button3_texture" value="Cross" />
+				<param name="button4" value="true" />
+				<param name="button4_id" value="29" />
+				<param name="button4_texture" value="Download" />
+			</include>
+		</include>
 	</controls>
 </window>
