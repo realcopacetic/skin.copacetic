@@ -777,6 +777,54 @@
 		</definition>
 	</include>
 
+	<include name="Download_unfocused_template_120">
+		<include content="Arrow_With_Tail_Template">
+			<param name="visible" value="$PARAM[visible]" />
+			<param name="width" value="20" />
+			<param name="arrowhead" value="15" />
+			<param name="tail" value="26" />
+			<param name="thickness" value="2" />
+			<param name="rotateend" value="225" />
+			<param name="color" value="$PARAM[color]" />
+		</include>
+	</include>
+
+	<include name="Download_unfocused">
+		<param name="visible" default="true" />
+		<param name="color" default="$VAR[Breadcrumb_Label_Color]" />
+		<param name="width" default="120" />
+		<definition>
+			<include content="Download_unfocused_template_$PARAM[width]">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="color" value="$PARAM[color]" />
+			</include>
+		</definition>
+	</include>
+
+	<include name="Download_focused_template_120">
+		<include content="Arrow_With_Tail_Template">
+			<param name="visible" value="$PARAM[visible]" />
+			<param name="width" value="34" />
+			<param name="arrowhead" value="26" />
+			<param name="tail" value="34" />
+			<param name="thickness" value="8" />
+			<param name="rotateend" value="225" />
+			<param name="color" value="$PARAM[color]" />
+		</include>
+	</include>
+
+	<include name="Download_focused">
+		<param name="visible" default="true" />
+		<param name="color" default="$VAR[Breadcrumb_Label_Color]" />
+		<param name="width" default="120" />
+		<definition>
+			<include content="Download_focused_template_$PARAM[width]">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="color" value="$PARAM[color]" />
+			</include>
+		</definition>
+	</include>
+
 	<include name="Space_Template">
 		<param name="visible" default="true" />
 		<param name="width" default="34" />

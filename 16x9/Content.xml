@@ -263,6 +263,111 @@
 		</control>
 	</include>
 
+	<include name="pvrguidesearch_Left_Grouplist_Content">
+		<control type="radiobutton" id="10">
+			<description>Include description</description>
+			<label>$LOCALIZE[19134]</label>
+			<textwidth>660</textwidth>
+			<radioposx>750</radioposx>
+			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>
+		</control>
+		<control type="radiobutton" id="11">
+			<description>Case sensitive</description>
+			<label>$LOCALIZE[19135]</label>
+			<textwidth>660</textwidth>
+			<radioposx>750</radioposx>
+			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>
+		</control>
+		<control type="edit" id="14">
+			<description>Start date</description>
+			<label>$LOCALIZE[19128]</label>
+			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>
+		</control>
+		<control type="edit" id="15">
+			<description>Stop date</description>
+			<label>$LOCALIZE[19129]</label>
+			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>
+		</control>
+		<control type="radiobutton" id="30">
+			<description>Ignore finished broadcasts</description>
+			<label>$LOCALIZE[19339]</label>
+			<textwidth>660</textwidth>
+			<radioposx>750</radioposx>
+			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>
+		</control>
+		<control type="spincontrolex" id="18">
+			<description>Genre</description>
+			<label>$LOCALIZE[515]</label>
+			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>
+		</control>
+		<control type="radiobutton" id="20">
+			<description>Include unknown genres</description>
+			<label>$LOCALIZE[19132]</label>
+			<textwidth>660</textwidth>
+			<radioposx>750</radioposx>
+			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>
+		</control>
+		<control type="radiobutton" id="22">
+			<description>FTA only</description>
+			<label>$LOCALIZE[19123]</label>
+			<textwidth>660</textwidth>
+			<radioposx>750</radioposx>
+			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>
+		</control>
+		<control type="radiobutton" id="24">
+			<description>Ignore timers</description>
+			<label>$LOCALIZE[19124]</label>
+			<textwidth>660</textwidth>
+			<radioposx>750</radioposx>
+			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>
+		</control>
+	</include>
+
+	<include name="pvrguidesearch_Right_Grouplist_Content">
+		<control type="spincontrolex" id="12">
+			<description>Min duration</description>
+			<label>$LOCALIZE[19130]</label>
+		</control>
+		<control type="spincontrolex" id="13">
+			<description>Max duration</description>
+			<label>$LOCALIZE[19131]</label>
+		</control>
+		<control type="edit" id="16">
+			<description>Start time</description>
+			<label>$LOCALIZE[19126]</label>
+		</control>
+		<control type="edit" id="17">
+			<description>Stop time</description>
+			<label>$LOCALIZE[19127]</label>
+		</control>
+		<control type="radiobutton" id="31">
+			<description>Ignore future broadcasts</description>>
+			<label>$LOCALIZE[19340]</label>
+			<textwidth>660</textwidth>
+			<radioposx>750</radioposx>
+		</control>
+		<control type="radiobutton" id="19">
+			<description>Avoid repeats</description>
+			<label>$LOCALIZE[19121]</label>
+			<textwidth>660</textwidth>
+			<radioposx>750</radioposx>
+		</control>
+		<control type="spincontrolex" id="21">
+			<description>Groups</description>
+			<label>$LOCALIZE[19141]</label>
+		</control>
+		<control type="spincontrolex" id="23">
+			<description>Channels</description>
+			<label>$LOCALIZE[19148]</label>
+		</control>
+		<control type="radiobutton" id="27">
+			<description>Ignore recordings</description>
+			<label>$LOCALIZE[19125]</label>
+			<textwidth>660</textwidth>
+			<radioposx>750</radioposx>
+		</control>
+	</include>
+
 	<include name="shutdownmenu_Content">
 		<item>
 			<description>Home</description>
