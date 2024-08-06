@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+	<include name="PVR_Info_Label">
+		<param name="visible" default="true" />
+		<param name="height" default="30" />
+		<definition>
+			<control type="label">
+				<visible>$PARAM[visible]</visible>
+				<height>$PARAM[height]</height>
+				<font>Grid_Info_Small</font>
+				<label>$PARAM[label]</label>
+				<textcolor>$VAR[Light_Color]</textcolor>
+				<nested />
+			</control>
+		</definition>
+	</include>
+
 	<include name="PVR_Info_Box">
 		<param name="visible" default="true" />
-		<param name="left" />
-		<param name="right" />
+		<param name="left" default="1230" />
+		<param name="right" default="120" />
 		<param name="bottom" />
 		<param name="height" />
-		<param name="plot_height_max" />
 		<param name="align" default="center" />
+		<param name="title_font" default="Grid_Title_Medium" />
 		<param name="title_label" default="$VAR[PVR_Info_Box_Title_Label]" />
 		<param name="info_label" default="$VAR[PVR_Info_Box_Info_Label]" />
+		<param name="plot_padding" default="0" />
+		<param name="plot_height_max" />
 		<definition>
 			<control type="grouplist">
 				<visible>$PARAM[visible]</visible>
@@ -23,23 +40,21 @@
 				<align>$PARAM[align]</align>
 				<usecontrolcoords>true</usecontrolcoords>
 				<nested />
-				<control type="textbox">
-					<height min="45" max="180">auto</height>
-					<font>MusicPlayer_Title</font>
+				<control type="label">
+					<height>45</height>
+					<font>$PARAM[title_font]</font>
 					<label>$PARAM[title_label]</label>
 					<textcolor>$VAR[Light_Color]</textcolor>
 					<visible>!String.IsEmpty(ListItem.Label)</visible>
 				</control>
-				<control type="label">
-					<height>35</height>
-					<font>Grid_Info</font>
-					<label>$PARAM[info_label]</label>
-					<textcolor>$VAR[Light_Color]</textcolor>
-				</control>
+				<include content="PVR_Info_Label">
+					<param name="label">$PARAM[info_label]</param>
+				</include>
 				<control type="textbox">
-					<top>10</top>
-					<height min="90" max="$PARAM[plot_height_max]">auto</height>
-					<font>Description</font>
+					<top>$PARAM[plot_padding]</top>
+					<height min="30" max="$PARAM[plot_height_max]">auto</height>
+					<aligny>top</aligny>
+					<font>PVR_Description</font>
 					<label>$INFO[ListItem.Plot]</label>
 					<visible>!String.IsEmpty(ListItem.Plot)</visible>
 				</control>
@@ -49,108 +64,192 @@
 
 	<include name="PVR_Progress">
 		<control type="progress">
-			<visible>ListItem.HasEpg</visible>
-			<width>90</width>
-			<left>15</left>
-			<height>6</height>
-			<centertop>50%</centertop>
+			<visible>ListItem.HasEpg + Integer.IsGreater(ListItem.Progress,0)</visible>
+			<height>100%</height>
+			<width>100%</width>
+			<texturebg colordiffuse="$VAR[Blank_Color]">views/white_100.png</texturebg>
+			<midtexture colordiffuse="$VAR[tvchannels_Progress_Color]">views/white_100.png</midtexture>
 			<info>ListItem.Progress</info>
-			<texturebg colordiffuse="$VAR[Progress_Light_Background_Color]">views/white_100.png</texturebg>
-			<midtexture colordiffuse="$VAR[Light_Color]">views/white_100.png</midtexture>
 		</control>
 	</include>
 
-	<include name="PVR_ChannelList_Item">
-		<param name="color" default="$VAR[Unfocused_Color]" />
+	<include name="PVR_Recordings_List">
+		<control type="panel" id="5000">
+			<visible>ListItem.IsFolder</visible>
+			<left>1230</left>
+			<right>120</right>
+			<top>270</top>
+			<bottom>270</bottom>
+			<orientation>vertical</orientation>
+			<focusedlayout height="90" width="570" />
+			<itemlayout height="90" width="570">
+				<control type="label">
+					<height>40</height>
+					<top>10</top>
+					<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, - ]</label>
+					<font>PVR_Channel</font>
+				</control>
+				<control type="label">
+					<height>30</height>
+					<bottom>10</bottom>
+					<label>$VAR[tvrecordings_dateandsize_label]</label>
+					<font>PVR_Info</font>
+				</control>
+			</itemlayout>
+			<content sortby="date" sortorder="descending">$INFO[ListItem.FilenameAndPath]</content>
+		</control>
+	</include>
+
+	<include name="PVR_Channel_Number_Label">
+		<param name="color" default="$VAR[Light_Color]" />
 		<definition>
-			<control type="progress">
-				<visible>ListItem.HasEpg + Integer.IsGreater(ListItem.Progress,0)</visible>
-				<height>100%</height>
-				<width>100%</width>
-				<texturebg colordiffuse="$VAR[Blank_Color]">views/white_100.png</texturebg>
-				<midtexture colordiffuse="$VAR[PVR_Channel_Progress_Color]">views/white_100.png</midtexture>
-				<info>ListItem.Progress</info>
-			</control>
 			<control type="label">
 				<width>90</width>
 				<label>$INFO[ListItem.ChannelNumberLabel]</label>
 				<align>center</align>
 				<textcolor>$PARAM[color]</textcolor>
-				<font>Player_Status</font>
-			</control>
-			<control type="label">
-				<height>40</height>
-				<top>10</top>
-				<left>105</left>
-				<right>120</right>
-				<label>$INFO[ListItem.Label]</label>
 				<font>PVR_Channel</font>
-				<textcolor>$PARAM[color]</textcolor>
-			</control>
-			<control type="label">
-				<height>30</height>
-				<bottom>10</bottom>
-				<left>105</left>
-				<right>120</right>
-				<label>$INFO[ListItem.EpisodeName]</label>
-				<font>PVR_Channel2</font>
-				<textcolor>$PARAM[color]</textcolor>
-			</control>
-			<control type="image">
-				<right>30</right>
-				<top>15</top>
-				<height>60</height>
-				<width>90</width>
-				<texture colordiffuse="$PARAM[color]">$INFO[ListItem.Art(thumb)]</texture>
-				<aspectratio align="center">keep</aspectratio>
 			</control>
 		</definition>
 	</include>
 
-	<include name="PVR_Now_Playing_Image">
-		<control type="image">
-			<right>120</right>
-			<top>240</top>
-			<height>60</height>
-			<width>90</width>
-			<texture colordiffuse="$PARAM[color]">$INFO[Player.Art(thumb)]</texture>
-			<aspectratio align="center">keep</aspectratio>
-		</control>
+	<include name="PVR_logo">
+		<param name="texture" default="$INFO[ListItem.Icon]" />
+		<param name="right" default="120" />
+		<param name="top" default="0" />
+		<param name="height" default="60" />
+		<param name="width" default="90" />
+		<param name="align" default="center" />
+		<param name="color" defalut="ffffffff" />
+		<param name="fadetime" default="0" />
+		<definition>
+			<control type="image">
+				<right>$PARAM[right]</right>
+				<top>$PARAM[top]</top>
+				<height>$PARAM[height]</height>
+				<width>$PARAM[width]</width>
+				<texture colordiffuse="$PARAM[color]">$PARAM[texture]</texture>
+				<aspectratio align="$PARAM[align]">keep</aspectratio>
+				<fadetime>$PARAM[fadetime]</fadetime>
+			</control>
+		</definition>
 	</include>
 
-	<include name="PVR_Now_Playing_Info">
-		<param name="visible" default="VideoPlayer.HasEpg" />
-		<param name="label" default="$INFO[VideoPlayer.ChannelNumberLabel,$LOCALIZE[31634] ]   " />
-		<param name="top" default="225" />
-		<param name="label_width" default="470" />
-		<param name="label_align" default="right" />
-		<param name="line_bottom" default="0" />
-		<param name="include_logo" default="true" />
+	<include name="PVR_icon">
+		<param name="visible" default="true" />
+		<definition>
+			<control type="image">
+				<visible>$PARAM[visible]</visible>
+				<animation effect="fade" start="100" end="33" time="1500" delay="750" tween="sine" easing="inout" pulse="true" condition="ListItem.IsRecording">Conditional</animation>
+				<nested />
+				<width>30</width>
+				<height>30</height>
+				<texture colordiffuse="$PARAM[color]">$PARAM[texture]</texture>
+				<aspectratio>scale</aspectratio>
+				<nested />
+			</control>
+		</definition>
+	</include>
+
+	<include name="PVR_ChannelList_Item">
+		<param name="visible" default="true" />
+		<param name="progress" default="true" />
+		<param name="channel_number" default="true" />
+		<param name="icon" default="true" />
+		<param name="logo" default="true" />
+		<param name="title_label" default="$VAR[PVR_List_Title_Label]" />
+		<param name="title_scroll" default="false" />
+		<param name="info_label" default="$VAR[PVR_List_Info_Label]" />
+		<param name="color" default="$VAR[Unfocused_Color]" />
 		<definition>
 			<control type="group">
 				<visible>$PARAM[visible]</visible>
-				<include content="Visible_Fade_Delayed_Animation" />
+				<include content="PVR_Progress" condition="$PARAM[progress]" />
+				<include content="PVR_Channel_Number_Label" condition="$PARAM[channel_number]">
+					<param name="color" value="$PARAM[color]" />
+				</include>
+				<control type="group">
+					<animation effect="slide" end="-105" time="0" condition="Window.Is(tvrecordings) | Window.Is(radiorecordings) | Window.Is(tvtimers) | Window.Is(radiotimers) | Window.is(tvtimerrules) | Window.Is(radiotimerrules)">Conditional</animation>
+					<control type="label">
+						<height>40</height>
+						<top>10</top>
+						<left>105</left>
+						<right>120</right>
+						<label>$PARAM[title_label]</label>
+						<font>PVR_Channel</font>
+						<textcolor>$PARAM[color]</textcolor>
+						<scroll>$PARAM[title_scroll]</scroll>
+					</control>
+					<control type="label">
+						<height>30</height>
+						<bottom>10</bottom>
+						<left>105</left>
+						<right>120</right>
+						<label>[UPPERCASE]$PARAM[info_label][/UPPERCASE]</label>
+						<font>PVR_Info</font>
+						<textcolor>$PARAM[color]</textcolor>
+					</control>
+				</control>
+				<include content="PVR_icon">
+					<param name="visible" value="$PARAM[icon]" />
+					<param name="texture" value="$VAR[tvchannels_Icon_Texture]" />
+					<param name="color" value="$VAR[tvchannels_Icon_Color]" />
+					<right>10</right>
+					<centertop>50%</centertop>
+				</include>
+				<include content="PVR_logo" condition="$PARAM[logo]">
+					<param name="color" value="ffffffff" />
+					<param name="right" value="30" />
+					<param name="top" value="15" />
+					<param name="height" value="60" />
+					<param name="width" value="90" />
+				</include>
+				<include content="Timer_unfocused" condition="$PARAM[timer]">
+					<param name="visible" value="!String.Contains(ListItem.Comment,$LOCALIZE[1223])" />
+					<param name="color" value="$PARAM[color]" />
+					<width>90</width>
+				</include>
+				<nested />
+			</control>
+		</definition>
+	</include>
+
+	<include name="PVR_Now_Playing_Label">
+		<param name="visible" default="true" />
+		<param name="label" default="[UPPERCASE]$INFO[VideoPlayer.ChannelNumberLabel,$LOCALIZE[31634] ][/UPPERCASE]" />
+		<param name="top" default="180" />
+		<param name="height" default="90" />
+		<param name="label_width" default="570" />
+		<param name="label_align" default="left" />
+		<param name="line_bottom" default="0" />
+		<param name="logo" default="false" />
+		<definition>
+			<control type="group">
 				<top>$PARAM[top]</top>
-				<height>90</height>
+				<height>$PARAM[height]</height>
 				<width>600</width>
 				<left>1200</left>
 				<control type="grouplist">
+					<visible>$PARAM[visible]</visible>
+					<include content="Visible_Fade_Delayed_Animation" />
 					<left>30</left>
 					<top>15</top>
 					<bottom>15</bottom>
 					<orientation>horizontal</orientation>
-					<align>right</align>
+					<align>$PARAM[label_align]</align>
 					<itemgap>10</itemgap>
 					<control type="label">
-						<height>57</height>
+						<height>100%</height>
 						<width>$PARAM[label_width]</width>
-						<label>[UPPERCASE]$PARAM[label][/UPPERCASE]</label>
+						<label>$PARAM[label]</label>
 						<align>$PARAM[label_align]</align>
 						<aligny>center</aligny>
-						<font>Unwatched_Indicator</font>
+						<font>Grid_Info_Small</font>
 						<textcolor>$VAR[Light_Color]</textcolor>
 					</control>
-					<include content="PVR_Now_Playing_Image" condition="$PARAM[include_logo]" />
+					<include content="PVR_logo" condition="$PARAM[logo]">
+						<param name="texture" value="$INFO[Player.Art(thumb)]" />
+					</include>
 				</control>
 				<control type="image">
 					<height>1</height>

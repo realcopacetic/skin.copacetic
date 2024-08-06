@@ -25,7 +25,7 @@
 					<param name="fallback" value="$PARAM[fallback]" />
 					<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 					<param name="now_playing" value="false" />
-					<param name="fadetime" value="0" />
+					<param name="fadetime" value="5" />
 					<param name="fade_on_dialog" value="false" />
 					<include content="Ken_Burns_Effect_Animation" condition="$PARAM[kenburns]" />
 					<include content="Secondary_List_Scroll_Animation" />

@@ -134,4 +134,29 @@
 		</definition>
 	</include>
 
+	<include name="PVR_Layout_Template">
+		<param name="visible" default="true" />
+		<definition>
+			<!-- Background -->
+			<include content="Background_Multiart_Global">
+				<param name="visible" value="!VideoPlayer.Content(livetv)" />
+				<param name="fadein_animation_condition" value="!$EXP[Background_FadeIn_Exceptions]" />
+				<param name="fadeout_animation_condition" value="!$EXP[Background_FadeOut_Exceptions]" />
+			</include>
+			<include content="Embedded_VideoPlayer">
+				<param name="visible" value="VideoPlayer.Content(livetv)" />
+			</include>
+			<!-- Content -->
+			<include content="Default_Dialog_Panel_Layout">
+				<param name="visible" value="!$EXP[TransparentDialog_IsVisible] + !$EXP[Infoscreen_IsVisible] + $PARAM[visible]" />
+				<param name="panel_edge_top" value="$PARAM[panel_edge_top]" />
+				<param name="panel_edge_bottom" value="$PARAM[panel_edge_bottom]" />
+				<param name="panel_edge_left" value="$PARAM[panel_edge_left]" />
+				<param name="panel_edge_right" value="$PARAM[panel_edge_right]" />
+				<param name="panel_colordiffuse" value="$VAR[PVR_Panel_Mask]" />
+				<nested />
+			</include>
+		</definition>
+	</include>
+
 </includes>

@@ -129,7 +129,7 @@
 			<name>Grid_Info_Small</name>
 			<filename>Inter/Inter-SemiBold.ttf</filename>
 			<size>20</size>
-			<linespacing>0.9</linespacing>
+			<linespacing>1.1</linespacing>
 		</font>
 		<font>
 			<name>Spotlight_Title</name>
@@ -299,18 +299,18 @@
 		</font>
 		<font>
 			<name>PVR_Channel</name>
-			<filename>Inter/Inter-Regular.ttf</filename>
-			<size>27</size>
+			<filename>Inter/Inter-ExtraLight.ttf</filename>
+			<size>30</size>
 		</font>
 		<font>
-			<name>PVR_Channel2</name>
-			<filename>Inter/Inter-Light.ttf</filename>
+			<name>PVR_Description</name>
+			<filename>Inter/Inter-Light.ttf</filename>	
 			<size>22</size>
 		</font>
 		<font>
-			<name>PVR_Date</name>
+			<name>PVR_Info</name>
 			<filename>Inter/Inter-SemiBold.ttf</filename>
-			<size>27</size>
+			<size>20</size>
 		</font>
 		<font>
 			<name>PVR_Time</name>
@@ -453,7 +453,7 @@
 			<name>Grid_Info_Small</name>
 			<filename>resource://resource.fonts.copacetic/Inter-NotoSansKR-SemiBold.ttf</filename>
 			<size>20</size>
-			<linespacing>0.9</linespacing>
+			<linespacing>1.1</linespacing>
 		</font>
 		<font>
 			<name>Body</name>
@@ -605,19 +605,24 @@
 		</font>
 		<!-- PVR -->
 		<font>
-			<name>PVR_Channel</name>
-			<filename>resource://resource.fonts.copacetic/Inter-NotoSansKR-Regular.ttf</filename>
+			<name>PVR_Guide</name>
+			<filename>resource://resource.fonts.copacetic/Inter-NotoSansKR-ExtraLight.ttf</filename>
 			<size>27</size>
 		</font>
 		<font>
-			<name>PVR_Channel2</name>
+			<name>PVR_Channel</name>
+			<filename>resource://resource.fonts.copacetic/Inter-NotoSansKR-ExtraLight.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>PVR_Description</name>
 			<filename>resource://resource.fonts.copacetic/Inter-NotoSansKR-Light.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
-			<name>PVR_Date</name>
+			<name>PVR_Info</name>
 			<filename>resource://resource.fonts.copacetic/Inter-NotoSansKR-SemiBold.ttf</filename>
-			<size>27</size>
+			<size>20</size>
 		</font>
 		<font>
 			<name>PVR_Time</name>
@@ -760,7 +765,7 @@
 			<name>Grid_Info_Small</name>
 			<filename>resource://resource.fonts.copacetic/Inter-NotoSansSC-SemiBold.ttf</filename>
 			<size>20</size>
-			<linespacing>0.9</linespacing>
+			<linespacing>1.1</linespacing>
 		</font>
 		<font>
 			<name>Spotlight_Title</name>
@@ -918,19 +923,24 @@
 		</font>
 		<!-- PVR -->
 		<font>
-			<name>PVR_Channel</name>
-			<filename>resource://resource.fonts.copacetic/Inter-NotoSansSC-Regular.ttf</filename>
+			<name>PVR_Guide</name>
+			<filename>resource://resource.fonts.copacetic/Inter-NotoSansSC-ExtraLight.ttf</filename>
 			<size>27</size>
 		</font>
 		<font>
-			<name>PVR_Channel2</name>
+			<name>PVR_Channel</name>
+			<filename>resource://resource.fonts.copacetic/Inter-NotoSansSC-ExtraLight.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>PVR_Description</name>
 			<filename>resource://resource.fonts.copacetic/Inter-NotoSansSC-Light.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
-			<name>PVR_Date</name>
+			<name>PVR_Info</name>
 			<filename>resource://resource.fonts.copacetic/Inter-NotoSansSC-SemiBold.ttf</filename>
-			<size>27</size>
+			<size>20</size>
 		</font>
 		<font>
 			<name>PVR_Time</name>

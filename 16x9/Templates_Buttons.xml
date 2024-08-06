@@ -36,13 +36,16 @@
 		<param name="unfocused_color" default="$VAR[Light_Color]" />
 		<param name="rotate_180" default="false" />
 		<definition>
-			<description>$PARAM[description]</description>
-			<width>$PARAM[width]</width>
-			<height>$PARAM[width]</height>
-			<font />
-			<texturefocus colordiffuse="$PARAM[focused_color]">icons/icon_$PARAM[icon]_focused_$PARAM[width].png</texturefocus>
-			<texturenofocus colordiffuse="$PARAM[unfocused_color]">icons/icon_$PARAM[icon]_unfocused_$PARAM[width].png</texturenofocus>
-			<include content="Rotate_180_Animation" condition="$PARAM[rotate_180]" />
+			<control type="button" id="$PARAM[id]">
+				<description>$PARAM[description]</description>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[width]</height>
+				<font />
+				<texturefocus colordiffuse="$PARAM[focused_color]">icons/icon_$PARAM[icon]_focused_$PARAM[width].png</texturefocus>
+				<texturenofocus colordiffuse="$PARAM[unfocused_color]">icons/icon_$PARAM[icon]_unfocused_$PARAM[width].png</texturenofocus>
+				<include content="Rotate_180_Animation" condition="$PARAM[rotate_180]" />
+				<nested />
+			</control>
 		</definition>
 	</include>
 
@@ -71,6 +74,31 @@
 					<visible>$PARAM[focused]</visible>
 					<texture colordiffuse="$PARAM[color]">icons/icon_$PARAM[icon]_focused_$PARAM[width].png</texture>
 				</control>
+			</control>
+		</definition>
+	</include>
+
+	<include name="PVR_Button_Template">
+		<param name="width" default="60" />
+		<param name="focused_color" default="$VAR[Light_Color]" />
+		<param name="unfocused_color" default="$VAR[Light_Color]" />
+		<param name="rotate_180" default="false" />
+		<definition>
+			<control type="button" id="$PARAM[id]">
+				<description>$PARAM[description]</description>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[width]</height>
+				<font />
+				<texturefocus colordiffuse="$PARAM[focused_color]">icons/icon_$PARAM[icon]_focused_$PARAM[width].png</texturefocus>
+				<texturenofocus colordiffuse="$PARAM[unfocused_color]">icons/icon_$PARAM[icon]_unfocused_$PARAM[width].png</texturenofocus>
+				<include content="Rotate_180_Animation" condition="$PARAM[rotate_180]" />
+				<onclick>Dialog.Close(all, true)</onclick>
+				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(tv$PARAM[description])</onclick>
+				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(radio$PARAM[description])</onclick>
+				<onfocus condition="!VideoPlayer.IsFullscreen">SetProperty(PVR_Controls,$PARAM[label],home)</onfocus>
+				<onfocus condition="VideoPlayer.IsFullscreen">SetProperty(VideoOSD_Controls,$PARAM[label],videoosd)</onfocus>
+				<enable>!Window.IsActive(TV$PARAM[description]) + !Window.IsActive(radio$PARAM[description])</enable>
+				<nested />
 			</control>
 		</definition>
 	</include>

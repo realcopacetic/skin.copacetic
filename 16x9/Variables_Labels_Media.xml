@@ -416,7 +416,7 @@
 	</variable>
 
 		<variable name="Info_PVR_Label">
-			<value condition="!String.IsEmpty(ListItem.EpisodeName)">[UPPERCASE]$INFO[ListItem.Title]$VAR[ListItem_ChannelName_Divider_Bold, ]$INFO[ListItem.ChannelName, ][CR]$INFO[ListItem.Date]$VAR[ListItem_Endtime_Divider_Bold, ]$INFO[ListItem.EndTime, $LOCALIZE[31100] ]$VAR[ListItem_Duration_Divider_Bold, ]$INFO[ListItem.Duration(mins), , $LOCALIZE[31114]]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</value>
+			<value condition="!String.IsEmpty(ListItem.EpisodeName)">[UPPERCASE]$INFO[ListItem.Title]$VAR[ListItem_ChannelName_Divider_Bold, ]$INFO[ListItem.ChannelName, ][CR]$INFO[ListItem.Date]$INFO[ListItem.EndTime,-]$VAR[ListItem_Duration_Divider_Bold, ]$INFO[ListItem.Duration(mins), , $LOCALIZE[31114]]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</value>
 		</variable>
 
 	<variable name="MPAA_Description_Label">
@@ -586,19 +586,38 @@
 		<value>$LOCALIZE[207]</value>
 	</variable>
 
-	<variable name="PVR_Info_Box_Title_Label">
-		<value condition="Window.Is(tvchannels) | Window.Is(radiochannels)">$INFO[ListItem.EpisodeName]</value>
+	<variable name="PVR_List_Title_Label">
+		<value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
+	<variable name="PVR_List_Info_Label">
+		<value condition="!String.IsEmpty(ListItem.ChannelName)">$INFO[ListItem.ChannelName]$VAR[ListItem_Date_Divider, ]$INFO[ListItem.Date, ]</value>
+		<value condition="!String.IsEmpty(ListItem.Date)">$INFO[ListItem.Date]"</value>
+	</variable>
+
+	<variable name="PVR_Info_Box_Title_Label">
+		<value condition="[Window.Is(tvchannels) | Window.Is(radiochannels)] + !String.IsEmpty(ListItem.EpisodeName)">$INFO[ListItem.EpisodeName]</value>
+		<value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+	</variable>
+
 	<variable name="PVR_Info_Box_Info_Label">
-		<value condition="Window.Is(tvchannels) | Window.Is(radiochannels)">[UPPERCASE]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime,-]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</value>
-		<value>[UPPERCASE]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime,-]$VAR[ListItem_EpisodeName_Divider_Bold, ]$INFO[ListItem.EpisodeName, ]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</value>
+		<value condition="[Window.Is(tvguide) | Window.Is(radioguide)] + !String.IsEmpty(ListItem.StartTime)">[UPPERCASE]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</value>
+		<value condition="[Window.Is(tvchannels) | Window.Is(radiochannels)] + !String.IsEmpty(ListItem.Title)">[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</value>
+		<value condition="!String.IsEmpty(ListItem.EpisodeName)">[UPPERCASE]$INFO[ListItem.EpisodeName][/UPPERCASE]</value>
+	</variable>
+
+	<variable name="PVR_Info_Box_Info_Label2">
+		<value condition="Window.Is(tvchannels) | Window.Is(radiochannels)">[UPPERCASE]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime,-]$VAR[ListItem_Duration_Divider_Bold, ]$INFO[ListItem.Duration(mins), , $LOCALIZE[31114]]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</value>
+		<value condition="Window.Is(tvsearch) | Window.Is(radiosearch)">[UPPERCASE]$INFO[ListItem.Date]$INFO[ListItem.EndTime,-]$VAR[ListItem_Duration_Divider_Bold, ]$INFO[ListItem.Duration(mins), , $LOCALIZE[31114]][/UPPERCASE]</value>
+		<value>[UPPERCASE]$INFO[ListItem.Date]$VAR[ListItem_Duration_Divider_Bold, ]$INFO[ListItem.Duration(mins), , $LOCALIZE[31114]][/UPPERCASE]</value>
 	</variable>
 
 	<variable name="PVR_Next_Up_Label">
-		<value condition="!String.IsEmpty(ListItem.NextStartTime) + !String.IsEmpty(ListItem.NextTitle)">$LOCALIZE[31201]$VAR[Copacetic_Divider_Bold, ]$INFO[ListItem.NextStartTime, ]$VAR[Copacetic_Divider_Bold, ]$INFO[ListItem.NextTitle, ]</value>
-		<value condition="!String.IsEmpty(ListItem.NextTitle)">$LOCALIZE[31201]$VAR[Copacetic_Divider_Bold, ]$INFO[ListItem.NextTitle]</value>
+		<value condition="Window.Is(tvsearch) | Window.Is(radiosearch)">$VAR[PVR_Info_Box_Info_Label2]</value>
+		<value condition="!String.IsEmpty(ListItem.TimerType)">[UPPERCASE]$INFO[ListItem.TimerType][/UPPERCASE]</value>
+		<value condition="!String.IsEmpty(ListItem.NextStartTime) + !String.IsEmpty(ListItem.NextTitle)">[UPPERCASE]$LOCALIZE[31201]$VAR[Copacetic_Divider_Bold, ]$INFO[ListItem.NextStartTime, ]$VAR[Copacetic_Divider_Bold, ]$INFO[ListItem.NextTitle, ][/UPPERCASE]</value>
+		<value condition="!String.IsEmpty(ListItem.NextTitle)">[UPPERCASE]$LOCALIZE[31201]$VAR[Copacetic_Divider_Bold, ]$INFO[ListItem.NextTitle][/UPPERCASE]</value>
 	</variable>
 
 	<variable name="Random_Button_Label">

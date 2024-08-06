@@ -46,7 +46,7 @@
 
 	<include name="Infoscreen_Flags_Layout">
 		<control type="grouplist">
-			<visible>![String.IsEqual(Control.GetLabel(6303),flags/blank.png) + String.IsEqual(Control.GetLabel(6304),flags/blank.png)]</visible>
+			<visible>![String.IsEqual(Control.GetLabel(6303),flags/blank.png) + String.IsEqual(Control.GetLabel(6304),flags/blank.png) + String.IsEqual(Control.GetLabel(6305),flags/blank.png) + String.IsEqual(Control.GetLabel(6306),flags/blank.png) + String.IsEqual(Control.GetLabel(6307),flags/blank.png)]</visible>
 			<nested />
 			<width>100%</width>
 			<height>180</height>

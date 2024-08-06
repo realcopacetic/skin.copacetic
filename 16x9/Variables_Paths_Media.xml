@@ -26,9 +26,10 @@
 		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + Skin.String(Background_Slideshow_Custom_Path)">$INFO[Skin.String(Background_Slideshow_Custom_Path)]</value>
 		<!-- Item override -->
 		<value condition="!String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist))">$INFO[Container(3000).ListItem.Property(backgroundPlaylist)]</value>
-		<!-- playlists and xml library paths e.g. inprogress or sets -->
+		<!-- playlists, xml library paths e.g. inprogress or sets, video and music db:// -->
 		<value condition="String.Contains(Container(3000).ListItem.Property(list),.xsp)">$INFO[Container(3000).ListItem.Property(list)]</value>
 		<value condition="String.Contains(Container(3000).ListItem.Property(list),.xml)">$INFO[Container(3000).ListItem.Property(list)]</value>
+		<value condition="String.Contains(Container(3000).ListItem.Property(list),db://)">$INFO[Container(3000).ListItem.Property(list)]</value>
 		<!-- music paths -->
 		<value condition="String.Contains(Container(3000).ListItem.Property(list),recentlyaddedalbums)">musicdb://recentlyaddedalbums/</value>
 		<value condition="String.Contains(Container(3000).ListItem.Property(list),recentlyplayedalbums)">musicdb://recentlyplayedalbums/</value>

@@ -20,6 +20,28 @@
 		<value>icons/icon_repeat_50%_unfocused_60.png</value>
 	</variable>
 
+	<variable name="PVR_Icon_Texture">
+		<value condition="!String.IsEmpty(ListItem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
+		<value>$INFO[ListItem.Icon]</value>
+	</variable>
+
+	<variable name="tvguide_Icon_Texture">
+		<value condition="ListItem.IsRecording">pvr/icon_recording.png</value>
+		<value condition="ListItem.HasReminder">pvr/icon_reminder.png</value>
+		<value condition="ListItem.HasRecording">pvr/icon_bookmark.png</value>
+		<value condition="ListItem.IsPlayable">pvr/icon_check.png</value>
+		<value condition="[ListItem.HasTimer | ListItem.HasTimerSchedule] + [!ListItem.TimerIsActive | ListItem.TimerHasError | ListItem.TimerHasConflict]">pvr/icon_timer_50%.png</value>
+		<value condition="ListItem.HasTimer | ListItem.HasTimerSchedule">pvr/icon_timer.png</value>
+	</variable>
+
+	<variable name="tvchannels_Icon_Texture">a
+		<value condition="ListItem.IsRecording">pvr/icon_recording.png</value>
+		<value condition="[Window.Is(tvtimers) | Window.Is(radiotimers) | Window.Is(tvtimerrules) | Window.Is(radiotimerrules)] + String.Contains(ListItem.Comment,$LOCALIZE[1223])">pvr/icon_timer_50%.png</value>
+		<value condition="ListItem.HasTimer | ListItem.HasTimerSchedule">pvr/icon_timer.png</value>
+		<value condition="ListItem.HasArchive">pvr/icon_play_from_archive.png</value>
+		<value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png)">pvr/icon_check.png</value>
+	</variable>
+
 	<variable name="selectdialog_Icon_Texture">
 		<value condition="!String.IsEmpty(Container(6).ListItem.Art(keyart)) + Skin.HasSetting(Infoscreens_Prefer_Keyart)">$INFO[Container(6).ListItem.Art(keyart)]</value>
 		<value condition="!String.IsEmpty(Container(6).ListItem.Art(poster))">$INFO[Container(6).ListItem.Art(poster)]</value>

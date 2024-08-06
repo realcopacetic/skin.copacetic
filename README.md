@@ -22,10 +22,25 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ---
 **1.6.1**
 - Added a three second delay when entering movies or home windows before trailers will autoplay
-- Minor tweaks to design for pvr guide and channels
+- Minor improvements to visualisation
+- Minor improvements to design for MyPVRChannels.xml and MyPVRGuide.xml
+- Addition of PVR shortcuts in hidden menu screen when in PVR windows
+- DialogPVRGuideSearch.xml
+- MyPVRRecordings.xml 
+- MyPVRSearch.xml
+- MyPVRTimers.xml
+- Home background will now by default show fanarts from any destination path if it's in the db://, e.g. if you make a shortcut to Videos > Movies > Genres > Horror, it will show fanarts of the movies at that destination instead of generic movie fanarts.
+- Fixed bug where grid artwork would sometimes go black in certain scenarios
 
 Still to do:
-- remaining pvr screens
+- playerprocessinfo for pvr
+- pvr timeshift
+- pvr channel icons on info screens and videoplayer info
+- pvr stream info in videobreadcrumb
+
+
+- does label need to fade out and in when home screen > music player controls?
+- Views break after coming out of a playlist (next episode)
 - disable grid on certain list only views
 - favourites all viewtype options (omega only)
 - infoscreen bug

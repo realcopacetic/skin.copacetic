@@ -4,6 +4,10 @@
 	<onload condition="!Skin.TimerIsRunning(video_playback_label_interruptor)">Skin.TimerStart(video_playback_label_interruptor)</onload>
 	<zorder>2</zorder>
 	<controls>
-		<include content="Fullscreen_Info" />
+		<include content="Fullscreen_Info">
+			<include content="WindowOpenClose_Fade_Delayed_Animation" />
+			<visible>!$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(playerprocessinfo)</visible>
+			<include content="Visible_Fade_Delayed_Animation" />
+		</include>
 	</controls>
 </window>

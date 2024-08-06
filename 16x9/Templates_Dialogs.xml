@@ -40,9 +40,9 @@
 				<include content="Transparent_Dialog_Panel" condition="[Window.Is(musicinformation) + String.IsEqual(ListItem.DBType,album)] | Window.Is(songinformation) | Window.Is(addoninformation) | Window.Is(pvrguideinfo) | Window.Is(pvrrecordinginfo)">
 					<param name="visible" value="[!ControlGroup(3000).HasFocus(10) + !ControlGroup(3000).HasFocus(12) + !Window.Is(addoninformation)] | [Window.Is(addoninformation) + !ControlGroup(3000).HasFocus(99)] | Window.Is(pvrguideinfo) | Window.Is(pvrrecordinginfo)" />
 					<param name="left" value="720" />
-					<param name="colordiffuse" value="$VAR[Dark_Grey_Color]" />
+					<param name="colordiffuse" value="$VAR[Infoscreen_Panel_Mask]" />
 					<include content="VisibleHidden_Fade_Delayed_Animation" />
-					<animation effect="zoom" end="60,180,1800,720" time="0" condition="Window.Is(pvrguideinfo) | Window.Is(pvrrecordinginfo)">Conditional</animation>
+					<animation effect="zoom" end="60,120,1800,840" time="0" condition="Window.Is(pvrguideinfo) | Window.Is(pvrrecordinginfo)">Conditional</animation>
 				</include>
 				<include content="Simple_ListIcon" condition="[Window.Is(musicinformation) + String.IsEqual(ListItem.DBType,album)] | Window.Is(songinformation) | Window.Is(addoninformation)">
 					<param name="visible" value="[!ControlGroup(3000).HasFocus(10) + !ControlGroup(3000).HasFocus(12) + !Window.Is(addoninformation)] | [Window.Is(addoninformation) + !ControlGroup(3000).HasFocus(99)]" />
@@ -70,12 +70,13 @@
 			<!-- Content -->
 			<control type="group">
 				<include content="$PARAM[window_animation_content]" />
-				<visible>!Window.IsVisible(1104) + !$EXP[Infoscreen_Widget_HasFocus] + $PARAM[content_visible] + !$EXP[TransparentDialog_IsVisible]</visible>
+				<visible>!Window.IsVisible(1104) + !$EXP[Infoscreen_Widget_HasFocus] + $PARAM[content_visible] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pvrtimersetting)</visible>
 				<include content="$PARAM[visible_animation_content]" />
 				<include content="Breadcrumb_Label">
 					<param name="bar" value="false" />
 					<param name="title_label" value="$VAR[Copacetic_Chevron_Left] $INFO[Window($PARAM[windowname]).Property(Focused_Button)] $VAR[Copacetic_Chevron_Right]" />
 					<param name="textcolor" value="$VAR[Breadcrumb_Label_Color]" />
+					<animation effect="slide" end="0,-30" time="0" condition="Window.Is(pvrguideinfo) | Window.Is(pvrrecordinginfo)">Conditional</animation>
 				</include>
 				<include content="Breadcrumb_Label" condition="!String.IsEmpty(ListItem.Endtime) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBTYpe,episode)]">
 					<param name="visible" value="!Window.IsVisible(volumebar) + !Window.IsVisible(notification) + !Window.IsVisible(extendedprogressdialog) + !$EXP[Music_Player_IsVisible]" />
@@ -114,6 +115,8 @@
 		<param name="info_label" default="$VAR[Info_Label_FullscreenVideo]" />
 		<param name="info_label_max_height" default="70" />
 		<param name="plot_label" default="$VAR[Plot_Label]" />
+		<param name="plot_gap" default="60" />
+		<param name="plot_maxheight" default="300" />
 		<param name="align" default="center" />
 		<definition>
 			<include content="Hidden_Components">
@@ -127,10 +130,6 @@
 				<param name="AudioCodec_condition" value="true" />
 			</include>
 			<control type="grouplist">
-				<include content="WindowOpenClose_Fade_Delayed_Animation" />
-				<visible>!$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(playerprocessinfo)</visible>
-				<include content="Visible_Fade_Delayed_Animation" />
-				<nested />
 				<width>1560</width>
 				<centerleft>50%</centerleft>
 				<height>100%</height>
@@ -138,6 +137,7 @@
 				<align>center</align>
 				<itemgap>0</itemgap>
 				<usecontrolcoords>true</usecontrolcoords>
+				<nested />
 				<include content="Common_Details_Logo" condition="$PARAM[show_logo]">
 					<param name="align" value="center" />
 					<centerleft>50%</centerleft>
@@ -159,8 +159,8 @@
 				</include>
 				<include content="Common_Details_Textbox">
 					<param name="visible" value="!String.IsEmpty(Control.GetLabel(6003))" />
-					<param name="maxheight" value="300" />
-					<param name="gap" value="60" />
+					<param name="maxheight" value="$PARAM[plot_maxheight]" />
+					<param name="gap" value="$PARAM[plot_gap]" />
 					<param name="font" value="Body" />
 					<param name="color" value="$PARAM[color]" />
 					<param name="label" value="$PARAM[plot_label]" />

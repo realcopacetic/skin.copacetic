@@ -24,10 +24,10 @@
 			<param name="visible" value="!Visualisation.Enabled | [Skin.TimerIsRunning(music_visualisation) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(music_visualisation),1)]" />
 			<param name="texture" value="$VAR[visualisation_Background_Texture]" />
 			<param name="fadetime" value="360" />
+			<param name="colordiffuse" value="ff808080" />
 			<param name="fade_diffuse_override" value="true" />
 			<include content="VisibleHidden_Fade_Animation" condtion="!Visualisation.Enabled" />
 			<include content="Ken_Burns_Effect_Animation" />
-			<colordiffuse>$VAR[Windows_Artwork_Diffuse]</colordiffuse>
 		</include>
 		<include content="Visualisation" condition="Visualisation.Enabled" />
 		<!-- Foreground -->

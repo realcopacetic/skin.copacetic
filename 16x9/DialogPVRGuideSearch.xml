@@ -4,11 +4,12 @@
 	<defaultcontrol always="true">9</defaultcontrol>
 	<controls>
 		<include content="Default_Dialog_Panel_Layout">
-			<param name="visible" value="!Window.IsVisible(shutdownmenu) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput)" />
+			<param name="visible" value="!Window.IsVisible(shutdownmenu) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(numericinput) + !Window.IsVisible(progressdialog)" />
 			<param name="panel_colordiffuse" value="$VAR[PVR_Panel_Mask]" />
 			<include content="Breadcrumb_Label">
 				<param name="title_label_id" value="2" />
 				<param name="title_label" value="$LOCALIZE[19142]" />
+				<param name="textcolor" value="$VAR[Light_Color]" />
 			</include>
 			<control type="edit" id="9">
 				<left>150</left>
@@ -62,6 +63,7 @@
 				<param name="textcolor" value="$VAR[Light_Color]" />
 			</include>
 			<include content="Button_Group_Template">
+				<param name="color" value="$VAR[Light_Color]" />
 				<param name="onup" value="27" />
 				<param name="ondown" value="9" />
 				<param name="onleft" value="200" />

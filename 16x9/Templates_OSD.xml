@@ -27,7 +27,9 @@
 				<include content="Visible_Fade_Delayed_Animation" />
 			</include>
 			<include content="Fullscreen_Info" condition="VideoPlayer.IsFullscreen + Skin.HasSetting(Pause_Screen_Info_Enabled)">
-				<visible>Player.Paused + !Window.IsVisible(videoosd) + !Window.IsVisible(fullscreeninfo)</visible>
+				<include content="WindowOpenClose_Fade_Delayed_Animation" />
+				<visible>Player.Paused + !Window.IsVisible(videoosd) + !Window.IsVisible(fullscreeninfo) + !$EXP[TransparentDialog_IsVisible]</visible>
+				<include content="Visible_Fade_Delayed_Animation" />
 			</include>
 			<control type="group">
 				<visible>!Window.IsVisible(fullscreeninfo)</visible>
@@ -85,6 +87,7 @@
 				<orientation>horizontal</orientation>
 				<align>center</align>
 				<itemgap>$PARAM[itemgap]</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
 				<nested />
 			</control>
 		</definition>
@@ -121,11 +124,13 @@
 					<usecontrolcoords>true</usecontrolcoords>
 					<include content="OSD_Row">
 						<param name="id" value="3000" />
-						<include content="$PARAM[windowname]_Top_Row_Content" />
+						<include content="$PARAM[windowname]_Top_Row_Content" condition="!VideoPlayer.Content(livetv)" />
+						<include content="pvrosd_Top_Row_Content" condition="VideoPlayer.Content(livetv)" />
 					</include>
 					<include content="OSD_Row">
 						<param name="id" value="3010" />
-						<include content="$PARAM[windowname]_Bottom_Row_Content" />
+						<include content="$PARAM[windowname]_Bottom_Row_Content" condition="!VideoPlayer.Content(livetv)" />
+						<include content="pvrosd_Bottom_Row_Content" condition="VideoPlayer.Content(livetv)" />
 					</include>
 				</control>
 				<!-- Toggle row -->

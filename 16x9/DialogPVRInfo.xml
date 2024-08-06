@@ -5,10 +5,18 @@
 	<controls>
 		<include content="Infoscreen_Header_Template">
 			<param name="windowname" value="pvrguideinfo" />
-			<param name="content_visible" value="!Window.IsVisible(pvrtimersetting) + !Window.IsVisible(shutdownmenu)" />
 			<include content="Fullscreen_Info">
 				<param name="show_logo" value="false" />
 				<param name="info_label" value="$VAR[Info_PVR_Label]" />
+				<param name="plot_gap" value="30" />
+				<param name="plot_maxheight" value="300" />
+				<include content="Simple_ListIcon">
+					<param name="width" value="320" />
+					<param name="left" value="600" />
+					<param name="height" value="180" />
+					<param name="texture" value="$VAR[PVR_Icon_Texture]" />
+					<param name="aspectratio" value="keep" />
+				</include>
 			</include>
 		</include>
 	</controls>

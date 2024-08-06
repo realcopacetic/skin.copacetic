@@ -12,6 +12,7 @@
 		<param name="fallback" default="flags/blank.png" />
 		<param name="fade_diffuse_override" default="false" />
 		<param name="align" default="center" />
+		<param name="aligny" default="center" />
 		<param name="aspectratio" default="scale" />
 		<param name="fadetime" default="0" />
 		<param name="colordiffuse" default="ffffffff" />
@@ -24,7 +25,7 @@
 				<top>$PARAM[top]</top>
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
-				<aspectratio align="$PARAM[align]" aligny="center">$PARAM[aspectratio]</aspectratio>
+				<aspectratio align="$PARAM[align]" aligny="$PARAM[aligny]">$PARAM[aspectratio]</aspectratio>
 				<texture colordiffuse="$PARAM[colordiffuse]" fallback="$PARAM[fallback]" background="true">$PARAM[texture]</texture>
 				<fadetime>$PARAM[fadetime]</fadetime>
 			</control>

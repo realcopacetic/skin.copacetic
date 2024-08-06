@@ -535,6 +535,15 @@ msgstr ""
 
 
 
+#: T
+
+#/16x9/Templates_MyPVR.xml
+msgctxt "#31307"
+msgid "Go to"
+msgstr ""
+
+
+
 #########################################################################################################
 
 #: SETTINGS           314XX, 318
@@ -1755,17 +1764,6 @@ msgstr ""
 
 
 
-#: F
-
-#/16x9/FileManager.xml
-#/16x9/Variables_Labels_Windows.xml
-msgctxt "#31622"
-msgid "items"
-msgstr ""
-
-
-
-
 #: M
 #: NEW
 #/16x9/MyPVRChannels.xml
@@ -1793,6 +1791,11 @@ msgstr ""
 
 
 #: V
+
+#/16x9/Variables_Labels_Windows.xml
+msgctxt "#31622"
+msgid "items"
+msgstr ""
 
 #/16x9/Variables_Labels_Windows.xml
 msgctxt "#31623"

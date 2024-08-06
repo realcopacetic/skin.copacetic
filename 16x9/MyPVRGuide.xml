@@ -4,13 +4,13 @@
 	<onunload>ClearProperty(OptionsMenu,home)</onunload>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
-	<menucontrol>3000</menucontrol>
+	<menucontrol>3700</menucontrol>
 	<views>10</views>
 	<controls>
 		<include content="Common_Controls" />
 		<include content="tvguide_Controls" />
 		<include content="tvguide_Views" />
-		<include content="MyViews_Menu_and_Scrollbars">
+		<include content="Hidden_PVR_Menu">
 			<param name="target_id" value="10" />
 		</include>
 	</controls>
