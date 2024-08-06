@@ -61,6 +61,10 @@
 		<value condition="!String.Contains(Container.FolderPath,plugin://)">$INFO[ListItem.FolderPath]</value>
 	</variable>
 
+	<variable name="Secondary_List_Path">
+		<value>$INFO[ListItem.FolderPath]</value>
+	</variable>
+
 	<variable name="Secondary_List_Sort">
 		<value condition="Container.Content(tvshows)">season</value>
 		<value>year</value>
