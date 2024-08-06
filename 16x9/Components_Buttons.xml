@@ -913,6 +913,8 @@
 		</definition>
 	</include>
 
+
+	<!-- Texture buttons -->
 	<include name="Texture_Button_Template">
 		<param name="visible" default="true" />
 		<param name="width" />
@@ -921,8 +923,6 @@
 		<definition>
 			<control type="group">
 				<visible>$PARAM[visible]</visible>
-				<width>100%</width>
-				<height>100%</height>
 				<nested />
 				<control type="image">
 					<centertop>50%</centertop>
@@ -931,7 +931,6 @@
 					<height>$PARAM[width]</height>
 					<texture colordiffuse="$PARAM[color]">$PARAM[texture]</texture>
 					<aspectratio>scale</aspectratio>
-					<nested />
 				</control>
 			</control>
 		</definition>
@@ -1050,36 +1049,6 @@
 			<include content="Texture_Button_Template">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="texture" value="icons/icon_ip_focused_$PARAM[width].png" />
-				<param name="width" value="$PARAM[width]" />
-				<param name="color" value="$PARAM[color]" />
-				<nested />
-			</include>
-		</definition>
-	</include>
-
-	<include name="Library_unfocused">
-		<param name="visible" default="true" />
-		<param name="color" default="$VAR[Breadcrumb_Label_Color]" />
-		<param name="width" default="60" />
-		<definition>
-			<include content="Texture_Button_Template">
-				<param name="visible" value="$PARAM[visible]" />
-				<param name="texture" value="icons/icon_library_unfocused_$PARAM[width].png" />
-				<param name="width" value="$PARAM[width]" />
-				<param name="color" value="$PARAM[color]" />
-				<nested />
-			</include>
-		</definition>
-	</include>
-
-	<include name="Library_focused">
-		<param name="visible" default="true" />
-		<param name="color" default="$VAR[Breadcrumb_Label_Color]" />
-		<param name="width" default="60" />
-		<definition>
-			<include content="Texture_Button_Template">
-				<param name="visible" value="$PARAM[visible]" />
-				<param name="texture" value="icons/icon_library_focused_$PARAM[width].png" />
 				<param name="width" value="$PARAM[width]" />
 				<param name="color" value="$PARAM[color]" />
 				<nested />
@@ -1321,6 +1290,21 @@
 			<include content="Texture_Button_Template">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="texture" value="icons/icon_symbols_focused_$PARAM[width].png" />
+				<param name="width" value="$PARAM[width]" />
+				<param name="color" value="$PARAM[color]" />
+				<nested />
+			</include>
+		</definition>
+	</include>
+
+	<include name="Timer_unfocused">
+		<param name="visible" default="true" />
+		<param name="color" default="white" />
+		<param name="width" default="60" />
+		<definition>
+			<include content="Texture_Button_Template">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="texture" value="icons/icon_timer_unfocused_$PARAM[width].png" />
 				<param name="width" value="$PARAM[width]" />
 				<param name="color" value="$PARAM[color]" />
 				<nested />

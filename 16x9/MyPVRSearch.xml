@@ -2,13 +2,13 @@
 <window>
 	<!-- tvsearch / radiosearch -->
 	<defaultcontrol always="true">50</defaultcontrol>
-	<menucontrol>3000</menucontrol>
+	<menucontrol>3700</menucontrol>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
 	<views>50</views>
 	<controls>
 		<include content="Common_Controls" />
 		<include content="tvguide_Controls" />
 		<include content="tvsearch_Views" />
-		<include content="MyViews_Menu_and_Scrollbars" />
+		<include content="Hidden_PVR_Menu" />
 	</controls>
 </window>

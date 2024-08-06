@@ -49,6 +49,7 @@
 	<include file="Templates_OSD.xml" />
 	<include file="Templates_Panels.xml" />
 	<include file="Templates_script-upnext.xml" />
+	<include file="Templates_MyPVR.xml" />
 	<include file="Templates_MyWindows.xml" />
 	<include file="Templates_Viewtypes.xml" />
 	<include file="Templates_Widgets.xml" />

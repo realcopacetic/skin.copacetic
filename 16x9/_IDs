@@ -36,7 +36,8 @@ LISTS
 3300          Background slideshow container
 3400          Multiart fadelabel
 3500          Music player controls
-3600          PVR Menu
+3600          PVR Navigation Menu
+3700          PVR Options menu
 
 BUTTONS
 4000          Button group default

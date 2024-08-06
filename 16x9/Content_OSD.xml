@@ -2,26 +2,24 @@
 <includes>
 
 	<include name="musicosd_Top_Row_Content">
-		<control type="button" id="3">
-			<include content="Simple_Button_Template">
-				<param name="description" value="Previous" />
-				<param name="icon" value="arrow_horizontal" />
-			</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="3" />
+			<param name="description" value="Previous" />
+			<param name="icon" value="arrow_horizontal" />
 			<onfocus>SetProperty(MusicOSD_Controls,$LOCALIZE[210],musicosd)</onfocus>
 			<onclick>PlayerControl(Previous)</onclick>
 			<onup>60</onup>
 			<ondown>9</ondown>
-		</control>
-		<control type="button" id="6">
-			<include content="Simple_Button_Template">
-				<param name="description" value="Rewind" />
-				<param name="icon" value="chevron_horizontal" />
-			</include>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="6" />
+			<param name="description" value="Rewind" />
+			<param name="icon" value="chevron_horizontal" />
 			<onfocus>SetProperty(MusicOSD_Controls,$LOCALIZE[31302],musicosd)</onfocus>
 			<onclick>PlayerControl(Rewind)</onclick>
 			<onup>60</onup>
 			<ondown>8</ondown>
-		</control>
+		</include>
 		<control type="togglebutton" id="1">
 			<description>Play/Pause</description>
 			<width>60</width>
@@ -37,17 +35,16 @@
 			<onup>60</onup>
 			<ondown>2</ondown>
 		</control>
-		<control type="button" id="7">
-			<include content="Simple_Button_Template">
-				<param name="description" value="Forward" />
-				<param name="icon" value="chevron_horizontal" />
-				<param name="rotate_180" value="true" />
-			</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="7" />
+			<param name="description" value="Forward" />
+			<param name="icon" value="chevron_horizontal" />
+			<param name="rotate_180" value="true" />
 			<onfocus>SetProperty(MusicOSD_Controls,$LOCALIZE[31303],musicosd)</onfocus>
 			<onclick>PlayerControl(Forward)</onclick>
 			<onup>60</onup>
 			<ondown>5</ondown>
-		</control>
+		</include>
 		<control type="togglebutton" id="4">
 			<include content="Rotate_180_Animation" />
 			<description>Next</description>
@@ -100,39 +97,35 @@
 				<texture colordiffuse="$VAR[Light_Color]">$VAR[Repeat_Button_Icon_Texture]</texture>
 			</control>
 		</control>
-		<control type="button" id="2">
-			<include content="Simple_Button_Template">
-				<param name="description" value="stop" />
-				<param name="icon" value="stop" />
-			</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="2" />
+			<param name="description" value="stop" />
+			<param name="icon" value="stop" />
 			<onfocus>SetProperty(MusicOSD_Controls,$LOCALIZE[31301],musicosd)</onfocus>
 			<onclick>PlayerControl(Stop)</onclick>
 			<onup>1</onup>
 			<ondown>60</ondown>
-		</control>
-		<control type="button" id="5">
-			<include content="Simple_Button_Template">
-				<param name="description" value="Playlist" />
-				<param name="icon" value="discs" />
-			</include>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="5" />
+			<param name="description" value="Playlist" />
+			<param name="icon" value="discs" />
 			<onfocus>SetProperty(MusicOSD_Controls,$LOCALIZE[31305],musicosd)</onfocus>
 			<onclick>Dialog.Close(all, true)</onclick>
 			<onclick>ActivateWindow(musicplaylist)</onclick>
 			<onup>7</onup>
 			<ondown>60</ondown>
-		</control>
-		<control type="button" id="10">
-			<visible>!Skin.String(Music_Rating_Like_Threshold)</visible>
-			<include content="Simple_Button_Template">
-				<param name="description" value="Rating" />
-				<param name="icon" value="star" />
-			</include>
+		</include>
+		<include content="Simple_Button_Template" condition="!Skin.String(Music_Rating_Like_Threshold)">
+			<param name="id" value="10" />
+			<param name="description" value="Rating" />
+			<param name="icon" value="star" />
 			<onfocus>SetProperty(MusicOSD_Controls,$LOCALIZE[31304],musicosd)</onfocus>
 			<onclick>Dialog.Close(all, true)</onclick>
 			<onclick>SetRating</onclick>
 			<onup>4</onup>
 			<ondown>60</ondown>
-		</control>
+		</include>
 		<control type="togglebutton" id="11">
 			<visible>Skin.String(Music_Rating_Like_Threshold)</visible>
 			<description>Like/Unlike</description>
@@ -151,39 +144,204 @@
 		</control>
 	</include>
 
+	<include name="pvrosd_Content">
+		<include content="PVR_Button_Template">
+			<param name="description" value="channels" />
+			<param name="id" value="100" />
+			<param name="icon" value="library" />
+			<param name="label" value="$LOCALIZE[14301]" />
+			<visible>!Window.Is(tvchannels) + !Window.Is(radiochannels)</visible>
+		</include>
+		<include content="PVR_Button_Template">
+			<param name="description" value="guide" />
+			<param name="id" value="101" />
+			<param name="icon" value="list" />
+			<param name="label" value="$LOCALIZE[19069]" />
+			<visible>!Window.Is(tvguide) + !Window.Is(radioguide)</visible>
+		</include>
+		<include content="PVR_Button_Template">
+			<param name="description" value="recordings" />
+			<param name="id" value="102" />
+			<param name="icon" value="record" />
+			<param name="radio_label" value="$LOCALIZE[10706]" />
+			<param name="label" value="$LOCALIZE[19017]" />
+			<visible>!Window.Is(tvrecordings) + !Window.Is(radiorecordings)</visible>
+		</include>
+		<include content="PVR_Button_Template">
+			<param name="description" value="timerrules" />
+			<param name="id" value="103" />
+			<param name="icon" value="settings_cog" />
+			<param name="label" value="$LOCALIZE[19138]" />
+			<visible>!Window.Is(tvtimerrules) + !Window.Is(radiotimerrules)</visible>
+		</include>
+		<include content="PVR_Button_Template">
+			<param name="description" value="timers" />
+			<param name="id" value="104" />
+			<param name="icon" value="timer" />
+			<param name="label" value="$LOCALIZE[19040]" />
+			<visible>!Window.Is(tvtimers) + !Window.Is(tvtimers)</visible>
+		</include>
+		<include content="PVR_Button_Template">
+			<param name="description" value="search" />
+			<param name="id" value="105" />
+			<param name="icon" value="browse" />
+			<param name="label" value="$LOCALIZE[10605]" />
+			<visible>!Window.Is(tvsearch) + !Window.Is(radiosearch)</visible>
+		</include>
+	</include>
+
+	<include name="pvrosd_Top_Row_Content">
+		<animation effect="slide" end="30,0" time="0" condition="!Control.IsVisible(1) + Control.IsVisible(7)">Conditional</animation>
+		<animation effect="slide" end="-30,0" time="0" condition="Control.IsVisible(1) + !Control.IsVisible(7)">Conditional</animation>
+		<include content="Simple_Button_Template">
+			<param name="id" value="1" />
+			<param name="description" value="Previous" />
+			<param name="icon" value="arrow_horizontal" />
+			<visible>Player.SeekEnabled</visible>
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[210],videoosd)</onfocus>
+			<onclick>PlayerControl(Previous)</onclick>
+			<onup>60</onup>
+			<ondown>8</ondown>
+		</include>
+		<include content="PVR_Button_Template">
+			<param name="description" value="channels" />
+			<param name="id" value="2" />
+			<param name="icon" value="library" />
+			<param name="label" value="$LOCALIZE[14301]" />
+			<onup>60</onup>
+			<ondown>8</ondown>
+		</include>
+		<include content="PVR_Button_Template">
+			<param name="description" value="guide" />
+			<param name="id" value="3" />
+			<param name="icon" value="list" />
+			<param name="label" value="$LOCALIZE[19069]" />
+			<onup>60</onup>
+			<ondown>9</ondown>
+		</include>
+		<control type="togglebutton" id="4">
+			<description>Play/Pause</description>
+			<width>60</width>
+			<height>60</height>
+			<texturefocus colordiffuse="$VAR[Light_Color]">icons/icon_play_focused_60.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_play_unfocused_60.png</texturenofocus>
+			<usealttexture>![Player.Paused | Player.Forwarding | Player.Rewinding]</usealttexture>
+			<alttexturefocus colordiffuse="$VAR[Light_Color]">icons/icon_pause_focused_60.png</alttexturefocus>
+			<alttexturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_pause_unfocused_60.png</alttexturenofocus>
+			<onfocus>SetProperty(VideoOSD_Controls,$VAR[Play_Pause_Label],videoosd)</onfocus>
+			<onclick>PlayerControl(Play)</onclick>
+			<onclick>SetProperty(VideoOSD_Controls,$VAR[Play_Pause_Label],videoosd)</onclick>
+			<onup>60</onup>
+			<ondown>10</ondown>
+		</control>
+		<include content="PVR_Button_Template">
+			<param name="description" value="recordings" />
+			<param name="id" value="5" />
+			<param name="icon" value="record" />
+			<param name="radio_label" value="$LOCALIZE[10706]" />
+			<param name="label" value="$LOCALIZE[19017]" />
+			<onup>60</onup>
+			<ondown>11</ondown>
+		</include>
+		<include content="PVR_Button_Template">
+			<param name="description" value="search" />
+			<param name="id" value="6" />
+			<param name="icon" value="browse" />
+			<param name="label" value="$LOCALIZE[10605]" />
+			<onup>60</onup>
+			<ondown>12</ondown>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="7" />
+			<param name="description" value="Next" />
+			<param name="icon" value="arrow_horizontal" />
+			<param name="rotate_180" value="true" />
+			<visible>PVR.IsTimeShift</visible>
+			<onclick>PlayerControl(Next)</onclick>
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[209],videoosd)</onfocus>
+			<onup>60</onup>
+			<ondown>12</ondown>
+		</include>
+	</include>
+
+	<include name="pvrosd_Bottom_Row_Content">
+		<include content="Simple_Button_Template">
+			<param name="id" value="8" />
+			<param name="description" value="Player process info" />
+			<param name="icon" value="settings_cpu" />
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10116],videoosd)</onfocus>
+			<onclick>Dialog.Close(all,true)</onclick>
+			<onclick>ActivateWindow(playerprocessinfo)</onclick>
+			<onup>2</onup>
+			<ondown>60</ondown>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="9" />
+			<param name="description" value="Video OSD settings" />
+			<param name="icon" value="video" />
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10123],videoosd)</onfocus>
+			<onclick>ActivateWindow(osdvideosettings)</onclick>
+			<onup>3</onup>
+			<ondown>60</ondown>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="10" />
+			<param name="description" value="Stop" />
+			<param name="icon" value="stop" />
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[31301],videoosd)</onfocus>
+			<onclick>PlayerControl(Stop)</onclick>
+			<onup>4</onup>
+			<ondown>60</ondown>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="11" />
+			<param name="description" value="Audio OSD Settings" />
+			<param name="icon" value="audio" />
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10124],videoosd)</onfocus>
+			<onclick>ActivateWindow(osdaudiosettings)</onclick>
+			<onup>5</onup>
+			<ondown>60</ondown>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="12" />
+			<param name="description" value="Subtitle OSD settings" />
+			<param name="icon" value="subtitles" />
+			<onclick>ActivateWindow(OSDSubtitleSettings)</onclick>
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10159],videoosd)</onfocus>
+			<onup>6</onup>
+			<ondown>60</ondown>
+		</include>
+	</include>
+
 	<include name="videoosd_Top_Row_Content">
-		<control type="button" id="1">
-			<include content="Simple_Button_Template">
-				<param name="description" value="Rating" />
-				<param name="icon" value="star" />
-			</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="1" />
+			<param name="description" value="Rating" />
+			<param name="icon" value="star" />
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[563],videoosd)</onfocus>
 			<onclick>SetFocus(4023)</onclick>
 			<onup>60</onup>
 			<ondown>8</ondown>
-		</control>
-		<control type="radiobutton" id="2">
-			<include content="Simple_Button_Template">
-				<param name="description" value="Previous" />
-				<param name="icon" value="arrow_horizontal" />
-			</include>
-			<visible>!VideoPlayer.Content(livetv)</visible>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="2" />
+			<param name="description" value="Previous" />
+			<param name="icon" value="arrow_horizontal" />
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[210],videoosd)</onfocus>
 			<onclick>PlayerControl(Previous)</onclick>
 			<onup>60</onup>
 			<ondown>9</ondown>
-		</control>
-		<control type="button" id="3">
-			<include content="Simple_Button_Template">
-				<param name="description" value="Rewind" />
-				<param name="icon" value="chevron_horizontal" />
-			</include>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="3" />
+			<param name="description" value="Rewind" />
+			<param name="icon" value="chevron_horizontal" />
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[31302] $VAR[Player_Status_Label],videoosd)</onfocus>
 			<onclick>PlayerControl(Rewind)</onclick>
 			<onclick>SetProperty(VideoOSD_Controls,$LOCALIZE[31302] $VAR[Player_Status_Label],videoosd)</onclick>
 			<onup>60</onup>
 			<ondown>10</ondown>
-		</control>
+		</include>
 		<control type="togglebutton" id="4">
 			<description>Play/Pause</description>
 			<width>60</width>
@@ -199,141 +357,120 @@
 			<onup>60</onup>
 			<ondown>11</ondown>
 		</control>
-		<control type="button" id="5">
-			<include content="Simple_Button_Template">
-				<param name="description" value="Forward" />
-				<param name="icon" value="chevron_horizontal" />
-				<param name="rotate_180" value="true" />
-			</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="5" />
+			<param name="description" value="Forward" />
+			<param name="icon" value="chevron_horizontal" />
+			<param name="rotate_180" value="true" />
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[31303] $VAR[Player_Status_Label],videoosd)</onfocus>
 			<onclick>PlayerControl(Forward)</onclick>
 			<onclick>SetProperty(VideoOSD_Controls,$LOCALIZE[31303] $VAR[Player_Status_Label],videoosd)</onclick>
 			<onup>60</onup>
 			<ondown>12</ondown>
-		</control>
-		<control type="radiobutton" id="6">
-			<include content="Simple_Button_Template">
-				<param name="icon" value="arrow_horizontal" />
-				<param name="rotate_180" value="true" />
-			</include>
-			<visible>!VideoPlayer.Content(livetv)</visible>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="6" />
+			<param name="description" value="Next" />
+			<param name="icon" value="arrow_horizontal" />
+			<param name="rotate_180" value="true" />
 			<onclick condition="Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1)">PlayerControl(Next)</onclick>
 			<onclick condition="!Player.ChapterCount + !Integer.IsGreater(Playlist.Length(video),1)">PlayerControl(BigSkipForward)</onclick>
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[209],videoosd)</onfocus>
 			<onup>60</onup>
 			<ondown>13</ondown>
-		</control>
-		<control type="button" id="7">
-			<include content="Simple_Button_Template">
-				<param name="description" value="Video Bookmarks" />
-				<param name="icon" value="library" />
-			</include>
-			<visible>!VideoPlayer.Content(LiveTV)</visible>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="7" />
+			<param name="description" value="Video Bookmarks" />
+			<param name="icon" value="bookmark" />
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[298],videoosd)</onfocus>
 			<onclick>Dialog.Close(all,true)</onclick>
 			<onclick>ActivateWindow(videobookmarks)</onclick>
 			<onup>60</onup>
 			<ondown>14</ondown>
-		</control>
+		</include>
 	</include>
 
-
 	<include name="videoosd_Bottom_Row_Content">
-		<control type="button" id="8">
-			<include content="Simple_Button_Template">
-				<param name="description" value="Player settings" />
-				<param name="icon" value="settings_cog" />
-			</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="8" />
+			<param name="description" value="Player settings" />
+			<param name="icon" value="settings_cog" />
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[14201],videoosd)</onfocus>
 			<onclick>Dialog.Close(all,true)</onclick>
 			<onclick>ActivateWindow(playersettings)</onclick>
 			<onup>1</onup>
-			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
-			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
-		</control>
-		<control type="button" id="9">
-			<include content="Simple_Button_Template">
-				<param name="description" value="Player process info" />
-				<param name="icon" value="settings_cpu" />
-			</include>
+			<ondown>3020</ondown>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="9" />
+			<param name="description" value="Player process info" />
+			<param name="icon" value="settings_cpu" />
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10116],videoosd)</onfocus>
 			<onclick>Dialog.Close(all,true)</onclick>
 			<onclick>ActivateWindow(playerprocessinfo)</onclick>
 			<onup>2</onup>
-			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
-			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
-		</control>
-		<control type="button" id="10">
-			<include content="Simple_Button_Template">
-				<param name="description" value="Video OSD settings" />
-				<param name="icon" value="video" />
-			</include>
+			<ondown>3020</ondown>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="10" />
+			<param name="description" value="Video OSD settings" />
+			<param name="icon" value="video" />
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10123],videoosd)</onfocus>
 			<onclick>ActivateWindow(osdvideosettings)</onclick>
 			<onup>3</onup>
-			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
-			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
-		</control>
-		<control type="button" id="11">
-			<include content="Simple_Button_Template">
-				<param name="description" value="Stop" />
-				<param name="icon" value="stop" />
-			</include>
+			<ondown>3020</ondown>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="11" />
+			<param name="description" value="Stop" />
+			<param name="icon" value="stop" />
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[31301],videoosd)</onfocus>
 			<onclick>PlayerControl(Stop)</onclick>
 			<onup>4</onup>
-			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
-			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
-		</control>
-		<control type="button" id="12">
-			<include content="Simple_Button_Template">
-				<param name="description" value="Audio OSD Settings" />
-				<param name="icon" value="audio" />
-			</include>
+			<ondown>3020</ondown>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="12" />
+			<param name="description" value="Audio OSD Settings" />
+			<param name="icon" value="audio" />
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10124],videoosd)</onfocus>
 			<onclick>ActivateWindow(osdaudiosettings)</onclick>
 			<onup>5</onup>
-			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
-			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>> </control>
-		<control type="button" id="13">
-			<include content="Simple_Button_Template">
-				<param name="description" value="Subtitle OSD settings" />
-				<param name="icon" value="subtitles" />
-			</include>
-			<visible>!VideoPlayer.Content(LiveTV)</visible>
+			<ondown>3020</ondown>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="13" />
+			<param name="description" value="Subtitle OSD settings" />
+			<param name="icon" value="subtitles" />
 			<onclick>ActivateWindow(OSDSubtitleSettings)</onclick>
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10159],videoosd)</onfocus>
 			<onup>6</onup>
-			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
-			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
-		</control>
-		<control type="button" id="14">
-			<include content="Simple_Button_Template">
-				<param name="description" value="Current playlist" />
-				<param name="icon" value="discs" />
-			</include>
+			<ondown>3020</ondown>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="14" />
+			<param name="description" value="Current playlist" />
+			<param name="icon" value="library" />
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[13350],videoosd)</onfocus>
 			<onclick>Dialog.Close(all,true)</onclick>
 			<onclick>ActivateWindow(videoplaylist)</onclick>
 			<onup>7</onup>
-			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
-			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
-		</control>
+			<ondown>3020</ondown>
+		</include>
 	</include>
 
 	<include name="videoosd_Toggle_Row_Content">
 		<usecontrolcoords>true</usecontrolcoords>
-		<control type="button" id="15">
-			<include content="Simple_Button_Template">
-				<param name="description" value="Subtitle Language toggle" />
-				<param name="icon" value="audio" />
-			</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="15" />
+			<param name="description" value="Subtitle Language toggle" />
+			<param name="icon" value="audio" />
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[285],videoosd)</onfocus>
 			<onclick>AudioNextLanguage</onclick>
-			<visible>!VideoPlayer.Content(LiveTV)</visible>
 			<onup>3010</onup>
 			<ondown>60</ondown>
-		</control>
+		</include>
 		<control type="label" id="16">
 			<visible>!Control.HasFocus(15)</visible>
 			<height>60</height>
@@ -351,18 +488,16 @@
 			<textcolor>$VAR[Light_Color]</textcolor>
 			<font>MusicPlayer_Title</font>
 		</control>
-		<control type="button" id="19">
-			<include content="Simple_Button_Template">
-				<param name="description" value="Subtitle Language toggle" />
-				<param name="icon" value="subtitles" />
-			</include>
-			<visible>!VideoPlayer.Content(LiveTV)</visible>
+		<include content="Simple_Button_Template">
+			<param name="id" value="19" />
+			<param name="description" value="Subtitle Language toggle" />
+			<param name="icon" value="subtitles" />
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[286],videoosd)</onfocus>
 			<onclick condition="Skin.String(Subtitle_Limiter)">RunScript(script.copacetic.helper,action=subtitle_limiter,lang=$INFO[Skin.String(Subtitle_Limiter)])</onclick>
 			<onclick condition="!Skin.String(Subtitle_Limiter)">NextSubtitle</onclick>
 			<onup>3010</onup>
 			<ondown>60</ondown>
-		</control>
+		</include>
 		<control type="label" id="20">
 			<visible>!Control.HasFocus(19)</visible>
 			<height>60</height>

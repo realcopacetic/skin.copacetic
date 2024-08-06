@@ -325,6 +325,34 @@
 		<value>$INFO[Container(11).ListItem.Label]</value>
 	</variable>
 
+	<variable name="tvrecordings_Breadcrumb_Info_Label">
+		<value condition="Window.Is(tvrecordings)">$LOCALIZE[19020]</value>
+		<value condition="Window.Is(radiorecordings)">$LOCALIZE[19021]</value>
+	</variable>
+
+	<variable name="tvrecordings_top_label">
+		<value condition="ListItem.IsFolder + Integer.IsGreater(Container(5000).NumItems,1)">[UPPERCASE]$LOCALIZE[19076]$VAR[Copacetic_Divider_Bold, ]$INFO[Container(5000).NumItems, , $LOCALIZE[31622]][/UPPERCASE]</value>
+		<value condition="ListItem.IsFolder + Integer.IsGreater(Container(5000).NumItems,0)">[UPPERCASE]$LOCALIZE[19076]$VAR[Copacetic_Divider_Bold, ]$INFO[Container(5000).NumItems, , $LOCALIZE[31623]][/UPPERCASE]</value>
+		<value>[UPPERCASE]$INFO[ListItem.ChannelName]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</value>
+	</variable>
+
+	<variable name="tvrecordings_dateandsize_label">
+		<value condition="!String.IsEmpty(ListItem.Size) + !String.IsEqual(ListItem.Size,0.00 B)">[UPPERCASE]$INFO[ListItem.Date]$VAR[ListItem_Size_Divider_Bold, ]$INFO[ListItem.Size, ][/UPPERCASE]</value>
+		<value>[UPPERCASE]$INFO[ListItem.Date][/UPPERCASE]</value>
+	</variable>
+
+	<variable name="tvtimers_Breadcrumb_Label">
+		<value condition="Window.Is(tvtimers) | Window.Is(radiotimers)">$LOCALIZE[19040]</value>
+		<value>$LOCALIZE[19138]</value>
+	</variable>
+
+	<variable name="tvtimers_Breadcrumb_Info_Label">
+		<value condition="Window.Is(tvtimers)">$LOCALIZE[19020]</value>
+		<value condition="Window.Is(radiotimers)">$LOCALIZE[19021]</value>
+		<value condition="Window.Is(tvtimerrules)">$LOCALIZE[19020]$INFO[Control.GetLabel(29), / ]</value>
+		<value>$LOCALIZE[19021]$INFO[Control.GetLabel(29), / ]</value>
+	</variable>
+
 	<variable name="videoosd_Subtitle_Toggle_Label">
 		<!-- LANG / Disabled / Not available -->
 		<value condition="VideoPlayer.SubtitlesEnabled + VideoPlayer.HasSubtitles">[UPPERCASE]$INFO[VideoPlayer.SubtitlesLanguage][/UPPERCASE]</value>

@@ -367,263 +367,6 @@
 		</definition>
 	</include>
 
-	<include name="tvchannels_Controls">
-		<control type="radiobutton" id="6">
-			<description>Show hidden channels</description>
-			<visible allowhiddenfocus="true">false</visible>
-		</control>
-		<control type="button" id="28">
-			<description>Channel groups button</description>
-			<visible allowhiddenfocus="true">false</visible>
-		</control>
-		<control type="label" id="29">
-			<description>Channel groups name</description>
-			<visible>false</visible>
-		</control>
-		<control type="radiobutton" id="31">
-			<description>Filter</description>
-			<visible allowhiddenfocus="true">false</visible>
-		</control>
-	</include>
-
-	<include name="tvguide_Controls">
-		<control type="button" id="28">
-			<description>Channel groups button</description>
-			<visible allowhiddenfocus="true">false</visible>
-		</control>
-		<control type="label" id="29">
-			<description>View name / Search term</description>
-			<visible>false</visible>
-		</control>
-		<control type="label" id="30">
-			<description>Channel groups name / Saved status</description>
-			<visible>false</visible>
-		</control>
-	</include>
-
-	<include name="tvguide_Views">
-		<param name="visible" default="!$EXP[Infoscreen_IsVisible]" />
-		<definition>
-			<!-- Background -->
-			<include content="Background_Multiart_Global">
-				<param name="visible" value="!VideoPlayer.Content(livetv)" />
-				<param name="fadein_animation_condition" value="!$EXP[Background_FadeIn_Exceptions]" />
-				<param name="fadeout_animation_condition" value="!$EXP[Background_FadeOut_Exceptions]" />
-			</include>
-			<include content="Embedded_VideoPlayer">
-				<param name="visible" value="VideoPlayer.Content(livetv)" />
-			</include>
-			<!-- Content -->
-			<include content="Default_Dialog_Panel_Layout">
-				<param name="visible" value="!$EXP[TransparentDialog_IsVisible] + $PARAM[visible]" />
-				<param name="panel_edge_top" value="165" />
-				<param name="panel_edge_bottom" value="0" />
-				<param name="panel_edge_left" value="60" />
-				<param name="panel_edge_right" value="60" />
-				<param name="panel_colordiffuse" value="$VAR[PVR_Panel_Mask]" />
-				<include content="Breadcrumb_Label">
-					<param name="visible" value="Control.HasFocus(11)" />
-					<param name="animation" value="Visible_Fade_Delayed_Animation" />
-					<param name="bar" value="false" />
-					<param name="title_label" value="$VAR[tvguide_Group_Label]" />
-					<param name="textcolor" value="$VAR[Light_Color]" />
-				</include>
-				<control type="list" id="11">
-					<visible allowhiddenfocus="true">false</visible>
-					<orientation>horizontal</orientation>
-					<onup>SetFocus(3000,0,absolute)</onup>
-					<ondown>10</ondown>
-					<itemlayout width="100" height="100" />
-					<focusedlayout width="100" height="100" />
-				</control>
-				<control type="epggrid" id="10">
-					<description>EPG Grid</description>
-					<top>180</top>
-					<height>630</height>
-					<width>1680</width>
-					<centerleft>50%</centerleft>
-					<scrolltime tween="sine" easing="inout">360</scrolltime>
-					<timeblocks>30</timeblocks>
-					<rulerunit>6</rulerunit>
-					<!-- <progresstexture border="0,92,3,0" colordiffuse="$VAR[Accent_Color]">pvr/tvguide_progress_indicator.png</progresstexture> -->
-					<orientation>vertical</orientation>
-					<onup>11</onup>
-					<ondown>SetFocus(3000,0,absolute)</ondown>
-					<pagecontrol>60</pagecontrol>
-					<rulerlayout width="210" height="90">
-						<control type="label" id="2">
-							<label>$INFO[ListItem.Label]</label>
-							<font>PVR_Time</font>
-							<width>1020</width>
-							<centertop>50%</centertop>
-							<height>30</height>
-							<textcolor>$VAR[Light_Color]</textcolor>
-							<textoffsetx>10</textoffsetx>
-						</control>
-						<control type="image">
-							<centertop>50%</centertop>
-							<height>30</height>
-							<texture colordiffuse="$VAR[Accent_Color]" border="4">pvr/tvguide_focusedlayout_border_left.png</texture>
-						</control>
-					</rulerlayout>
-					<channellayout width="540" height="90">
-						<control type="image">
-							<height>90</height>
-							<width>90</width>
-							<texture>$INFO[ListItem.Art(thumb)]</texture>
-							<aspectratio>keep</aspectratio>
-						</control>
-						<control type="label" id="1">
-							<label>$INFO[ListItem.Label]</label>
-							<font>PVR_Guide</font>
-							<width>450</width>
-							<left>90</left>
-							<textoffsetx>30</textoffsetx>
-							<scroll>false</scroll>
-						</control>
-					</channellayout>
-					<focusedchannellayout width="540" height="90">
-						<control type="image" id="1">
-							<bottom>0</bottom>
-							<height>1</height>
-							<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
-							<animation effect="zoom" end="311,100" time="0" condition="true">Conditional</animation>
-						</control>
-						<control type="image">
-							<height>90</height>
-							<width>90</width>
-							<texture>$INFO[ListItem.Art(thumb)]</texture>
-							<aspectratio>keep</aspectratio>
-						</control>
-						<control type="label" id="1">
-							<label>$INFO[ListItem.Label]</label>
-							<font>PVR_Guide</font>
-							<textcolor>$VAR[epggrid_Focused_Color]</textcolor>
-							<left>90</left>
-							<width>450</width>
-							<textoffsetx>30</textoffsetx>
-							<scroll>false</scroll>
-						</control>
-					</focusedchannellayout>
-					<itemlayout width="45" height="90">
-						<control type="label" id="1">
-							<label>$INFO[ListItem.Label]</label>
-							<font>PVR_Guide</font>
-							<textoffsetx>15</textoffsetx>
-							<scroll>false</scroll>
-						</control>
-					</itemlayout>
-					<focusedlayout width="45" height="90">
-						<control type="image" id="14">
-							<texture colordiffuse="$VAR[PVR_Channel_Progress_Color]">views/white_100.png</texture>
-							<bottom>1</bottom>
-						</control>
-						<control type="label" id="1">
-							<textcolor>$VAR[epggrid_Focused_Color]</textcolor>
-							<label>$INFO[ListItem.Label]</label>
-							<font>PVR_Guide</font>
-							<textoffsetx>15</textoffsetx>
-							<scroll>false</scroll>
-						</control>
-					</focusedlayout>
-				</control>
-				<include content="Dialog_Divider_With_Scrollbar">
-					<param name="scrollbarvisible" value="true" />
-					<param name="id" value="60" />
-					<param name="height" value="540" />
-					<param name="left" value="660" />
-					<param name="scrollbaralignleft" value="true" />
-				</include>
-				<!-- Details -->
-				<include content="PVR_Info_Box">
-					<param name="left" value="470" />
-					<param name="right" value="120" />
-					<param name="bottom" value="30" />
-					<param name="height" value="210" />
-					<param name="plot_height_max" value="100" />
-				</include>
-				<control type="image">
-					<bottom>45</bottom>
-					<height>180</height>
-					<left>120</left>
-					<width>320</width>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<aspectratio align="right" aligny="center">scale</aspectratio>
-					<fadetime>360</fadetime>
-				</control>
-			</include>
-		</definition>
-	</include>
-
-	<include name="tvsearch_Views">
-		<definition>
-			<!-- Background -->
-			<include content="Background_Multiart_Global">
-				<param name="visible" value="!VideoPlayer.Content(livetv)" />
-				<param name="fadein_animation_condition" value="!$EXP[Background_FadeIn_Exceptions]" />
-				<param name="fadeout_animation_condition" value="!$EXP[Background_FadeOut_Exceptions]" />
-			</include>
-			<include content="Embedded_VideoPlayer">
-				<param name="visible" value="VideoPlayer.Content(livetv)" />
-			</include>
-			<!-- Content -->
-			<include content="Default_Dialog_Panel_Layout">
-				<param name="visible" value="!$EXP[Infoscreen_IsVisible] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pvrguidesearch)" />
-				<param name="panel_colordiffuse" value="$VAR[PVR_Panel_Mask]" />
-				<include content="Breadcrumb_Label">
-					<param name="bar" value="true" />
-					<param name="title_label_id" value="29" />
-					<param name="info_label_visible" value="true" />
-					<param name="info_label" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[137]$INFO[Control.GetLabel(30), ]" />
-					<param name="textcolor" value="$VAR[Light_Color]" />
-				</include>
-				<control type="list" id="50">
-					<viewtype label="List">list</viewtype>
-					<left>120</left>
-					<width>1080</width>
-					<height>630</height>
-					<centertop>50%</centertop>
-					<preloaditems>2</preloaditems>
-					<pagecontrol>60</pagecontrol>
-					<orientation>vertical</orientation>
-					<onleft>SetFocus(3000,0,absolute)</onleft>
-					<onright condition="Integer.IsGreater(Container(50).NumItems,7)">60</onright>
-					<onright condition="!Integer.IsGreater(Container(50).NumItems,7)">SetFocus(3000,0,absolute)</onright>
-					<scrolltime tween="sine" easing="inout">360</scrolltime>
-					<itemlayout width="1080" height="90" infoupdate="5000">
-						<include content="PVR_ChannelList_Item" />
-					</itemlayout>
-					<focusedlayout width="1080" height="90" infoupdate="5000">
-						<include content="PVR_ChannelList_Item">
-							<param name="color" value="$VAR[Light_Color]" />
-						</include>
-						<control type="image">
-							<bottom>0</bottom>
-							<height>1</height>
-							<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
-						</control>
-					</focusedlayout>
-				</control>
-				<include content="Dialog_Divider_With_Scrollbar">
-					<param name="scrollbarvisible" value="Integer.IsGreater(Container(50).NumItems,7)" />
-					<param name="id" value="60" />
-					<param name="left" value="1200" />
-					<param name="scrollbaralignleft" value="true" />
-					<param name="onleft" value="50" />
-					<param name="onright" value="50" />
-				</include>
-				<include content="PVR_Info_Box">
-					<param name="visible" value="!$EXP[TransparentDialog_IsVisible] + ListItem.HasEPG" />
-					<param name="left" value="1200" />
-					<param name="right" value="120" />
-					<param name="bottom" value="225" />
-					<param name="height" value="630" />
-					<param name="plot_height_max" value="540" />
-				</include>
-			</include>
-		</definition>
-	</include>
-
 	<include name="videoplaylist_Controls">
 		<control type="radiobutton" id="20">
 			<description>Shuffle the playlist</description>
@@ -685,33 +428,34 @@
 	</include>
 
 	<include name="OptionsMenu_Slides">
-		<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container(3000).NumItems,12)">Conditional</animation>
-		<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container(3000).NumItems,11)">Conditional</animation>
-		<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container(3000).NumItems,10)">Conditional</animation>
-		<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container(3000).NumItems,9)">Conditional</animation>
-		<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container(3000).NumItems,8)">Conditional</animation>
-		<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container(3000).NumItems,7)">Conditional</animation>
-		<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container(3000).NumItems,6)">Conditional</animation>
-		<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container(3000).NumItems,5)">Conditional</animation>
-		<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container(3000).NumItems,4)">Conditional</animation>
-		<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container(3000).NumItems,3)">Conditional</animation>
-		<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container(3000).NumItems,2)">Conditional</animation>
-		<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container(3000).NumItems,1)">Conditional</animation>
+		<param name="id" default="3000" />
+		<definition>
+			<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container($PARAM[id]).NumItems,12)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container($PARAM[id]).NumItems,11)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container($PARAM[id]).NumItems,10)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container($PARAM[id]).NumItems,9)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container($PARAM[id]).NumItems,8)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container($PARAM[id]).NumItems,7)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container($PARAM[id]).NumItems,6)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container($PARAM[id]).NumItems,5)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container($PARAM[id]).NumItems,4)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container($PARAM[id]).NumItems,3)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container($PARAM[id]).NumItems,2)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,30" time="0" condition="Integer.IsLessOrEqual(Container($PARAM[id]).NumItems,1)">Conditional</animation>
+		</definition>
 	</include>
 
 	<include name="Hidden_Options_Menu">
 		<param name="target_id" />
-		<param name="include_pvr_menu" default="false" />
 		<definition>
 			<control type="group">
-				<visible allowhiddenfocus="true">[ControlGroup(3600).HasFocus | Control.HasFocus(3000) | String.IsEqual(Window(home).Property(OptionsMenu),Active)] + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog)</visible>
+				<visible allowhiddenfocus="true">[Control.HasFocus(3000) | String.IsEqual(Window(home).Property(OptionsMenu),Active)] + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(okdialog)</visible>
 				<include content="VisibleHidden_Fade_Delayed_Animation" />
 				<control type="fixedlist" id="3000">
+					<description>Options menu</description>
 					<viewtype label="535">list</viewtype>
 					<visible allowhiddenfocus="true">true</visible>
 					<include content="OptionsMenu_Slides" />
-					<include content="PVR_Menu_Navigation" condition="$PARAM[include_pvr_menu]" />
-					<description>Options menu</description>
 					<left>120</left>
 					<width>1080</width>
 					<centertop>50%</centertop>
@@ -804,9 +548,6 @@
 						<include content="StripView_Menu_Options" condition="$EXP[StripView_Enabled] + !Skin.HasSetting(Kiosk_Mode)" />
 						<include content="GridView_Menu_Options" condition="$EXP[GridView_Enabled] + !Skin.HasSetting(Kiosk_Mode)" />
 						<include content="Trailer_Autoplay_Menu_Options" condition="Window.Is(videos) + Skin.HasSetting(Trailer_Autoplay)" />
-						<include content="tvchannels_Menu_Options" condition="Window.Is(tvchannels) | Window.Is(radiochannels)" />
-						<include content="tvguide_Menu_Options" condition="Window.Is(tvguide) | Window.Is(radioguide)" />
-						<include content="tvsearch_Menu_Options" condition="Window.Is(tvsearch) | Window.Is(radiosearch)" />
 						<include content="Common_Menu_Options">
 							<param name="target_id" value="$PARAM[target_id]" />
 						</include>
@@ -818,41 +559,17 @@
 						<include content="shutdownmenu_Shortcut" condition="Skin.HasSetting(shutdownmenu_Shortcut)" />
 					</content>
 				</control>
-				<include content="PVR_Menu" condition="$PARAM[include_pvr_menu]" />
 			</control>
 		</definition>
 	</include>
 
-	<include name="PVR_Menu">
-		<control type="grouplist" id="3600">
-			<centerleft>50%</centerleft>
-			<centertop>50%</centertop>
-			<ondown>3000</ondown>
-			<onup>3000</onup>
-			<width>360</width>
-			<height>60</height>
-			<align>center</align>
-			<itemgap>0</itemgap>
-			<usecontrolcoords>true</usecontrolcoords>
-			<control type="button" id="10">
-				<label>hello</label>
-			</control>
-		</control>
-	</include>
-
-	<include name="PVR_Menu_Navigation">
-		<onup>3600</onup>
-		<ondown>3600</ondown>
-	</include>
-	
 	<include name="MyViews_Menu_and_Scrollbars">
 		<param name="target_id" default="50" />
-		<param name="include_pvr_menu" default="false" />
+		<param name="type" default="Options" />
 		<definition>
-			<include content="Scrollbars" condition="!Window.Is(tvguide) + !Window.Is(radioguide) + !Window.Is(tvchannels) + !Window.Is(radiochannels)" />
-			<include content="Hidden_Options_Menu" condition="!$EXP[Hidden_Options_Menu_Disabled]">
+			<include content="Scrollbars" />
+			<include content="Hidden_$PARAM[type]_Menu" condition="!$EXP[Hidden_Options_Menu_Disabled]">
 				<param name="target_id" value="$PARAM[target_id]" />
-				<param name="include_pvr_menu" value="$PARAM[include_pvr_menu]" />
 			</include>
 		</definition>
 	</include>

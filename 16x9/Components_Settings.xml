@@ -168,7 +168,7 @@
 			<nested />
 		</definition>
 	</include>
-	
+
 	<include name="Settings_List_Template">
 		<param name="visible" default="true" />
 		<param name="pagecontrol" default="60" />
@@ -561,34 +561,32 @@
 					<label>$LOCALIZE[31445] $PARAM[widget_position]</label>
 					<width>330</width>
 				</control>
-				<control type="button" id="$PARAM[widget_position]1">
+				<include content="Simple_Button_Template">
+					<param name="id" value="$PARAM[widget_position]1" />
+					<param name="description" value="MoveDown" />
+					<param name="icon" value="chevron_vertical" />
+					<param name="rotate_180" value="true" />
+					<param name="unfocused_color" value="$VAR[Unfocused_Color]" />
 					<visible allowhiddenfocus="true">Integer.IsEqual(Container(3200).CurrentItem,$PARAM[widget_position])</visible>
-					<include content="Simple_Button_Template">
-						<param name="description" value="MoveDown" />
-						<param name="icon" value="chevron_vertical" />
-						<param name="rotate_180" value="true" />
-						<param name="unfocused_color" value="$VAR[Unfocused_Color]" />
-					</include>
 					<top>15</top>
 					<onclick condition="!Control.HasFocus(91)">RunScript(script.copacetic.helper,action=widget_move,posa=$PARAM[widget_position],posb=$PARAM[next_widget_position])</onclick>
 					<onclick condition="!Control.HasFocus(91)">SetFocus($PARAM[next_widget_position]1)</onclick>
 					<ondown>$PARAM[next_widget_position]1</ondown>
 					<onup>$PARAM[previous_widget_position]1</onup>
-				</control>
-				<control type="button" id="$PARAM[widget_position]2">
+				</include>					
+				<include content="Simple_Button_Template">
+					<param name="id" value="$PARAM[widget_position]2" />
+					<param name="description" value="Move up" />
+					<param name="icon" value="chevron_vertical" />
+					<param name="unfocused_color" value="$VAR[Unfocused_Color]" />
 					<visible allowhiddenfocus="true">Integer.IsEqual(Container(3200).CurrentItem,$PARAM[widget_position])</visible>
-					<include content="Simple_Button_Template">
-						<param name="description" value="Move up" />
-						<param name="icon" value="chevron_vertical" />
-						<param name="unfocused_color" value="$VAR[Unfocused_Color]" />
-					</include>
 					<top>15</top>
 					<left>15</left>
 					<onclick condition="!Control.HasFocus(12)">RunScript(script.copacetic.helper,action=widget_move,posa=$PARAM[widget_position],posb=$PARAM[previous_widget_position])</onclick>
 					<onclick condition="!Control.HasFocus(12)">SetFocus($PARAM[previous_widget_position]2)</onclick>
 					<ondown>$PARAM[next_widget_position]2</ondown>
 					<onup>$PARAM[previous_widget_position]2</onup>
-				</control>
+				</include>
 				<control type="togglebutton" id="$PARAM[widget_position]3">
 					<visible allowhiddenfocus="true">Integer.IsEqual(Container(3200).CurrentItem,$PARAM[widget_position])</visible>
 					<width>60</width>

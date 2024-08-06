@@ -189,6 +189,15 @@
 	<variable name="ListItem_AudioLanguage_Divider_Bold">
 		<value condition="!String.IsEmpty(ListItem.AudioLanguage)">$VAR[Copacetic_Divider_Bold_Dominant]</value>
 	</variable>
+	<variable name="ListItem_Comment_Divider_Bold">
+		<value condition="!String.IsEmpty(ListItem.Comment)">$VAR[Copacetic_Divider_Bold_Dominant]</value>
+	</variable>
+	<variable name="ListItem_Date_Divider">
+		<value condition="!String.IsEmpty(ListItem.Date)">$VAR[Copacetic_Divider_Dominant]</value>
+	</variable>
+	<variable name="ListItem_Date_Divider_Bold">
+		<value condition="!String.IsEmpty(ListItem.Date)">$VAR[Copacetic_Divider_Bold_Dominant]</value>
+	</variable>
 	<variable name="ListItem_Director_Divider">
 		<value condition="!String.IsEmpty(ListItem.Director)">$VAR[Copacetic_Divider_Dominant]</value>
 	</variable>

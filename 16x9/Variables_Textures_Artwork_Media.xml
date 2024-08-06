@@ -1,28 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-	<variable name="Cropped_Clearlogo">
-		<!-- VideoPlayer -->
-		<value condition="VideoPlayer.IsFullscreen + Skin.HasSetting(Crop_Clearlogos) + !String.IsEmpty(Window(home).Property(clearlogo-billboard_cropped)) + String.IsEqual(Window(home).Property(clearlogo-billboard_cropped),VideoPlayer.DBID)">$INFO[Window(home).Property(clearlogo-billboard_cropped)]</value>
-		<value condition="VideoPlayer.IsFullscreen + !String.IsEmpty(VideoPlayer.Art(clearlogo-billboard))">$INFO[VideoPlayer.Art(clearlogo-billboard)]</value>
-		<value condition="VideoPlayer.IsFullscreen + Skin.HasSetting(Crop_Clearlogos) + !String.IsEmpty(Window(home).Property(clearlogo_cropped)) + String.IsEqual(Window(home).Property(clearlogo_cropped),VideoPlayer.DBID)">$INFO[Window(home).Property(clearlogo_cropped)]</value>
-		<value condition="VideoPlayer.IsFullscreen + !String.IsEmpty(VideoPlayer.Art(clearlogo))">$INFO[VideoPlayer.Art(clearlogo)]</value>
-		<!-- Secondary list -->
-		<value condition="Control.HasFocus(3100) + $EXP[BillboardView_IsVisible] + !Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Crop_Clearlogos) + !String.IsEmpty(Window(home).Property(clearlogo-billboard_cropped)) + String.IsEqual(Window(home).Property(clearlogo-billboard_cropped-id),Container(3100).ListItem.DBID)">$INFO[Window(home).Property(clearlogo-billboard_cropped)]</value>
-		<value condition="Control.HasFocus(3100) + $EXP[BillboardView_IsVisible] + !String.IsEmpty(Container(3100).ListItem.Art(clearlogo-billboard))">$INFO[Container(3100).ListItem.Art(clearlogo-billboard)]</value>
-		<value condition="Control.HasFocus(3100) + !$EXP[BillboardView_IsVisible] + ![Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)] + Skin.HasSetting(Crop_Clearlogos)  + Skin.String(Theme,Light) + !String.IsEmpty(Window(home).Property(clearlogo-alt_cropped)) + String.IsEqual(Window(home).Property(clearlogo-alt_cropped-id),Container(3100).ListItem.DBID)">$INFO[Window(home).Property(clearlogo-alt_cropped)]</value>
-		<value condition="Control.HasFocus(3100) + !$EXP[BillboardView_IsVisible] + Skin.String(Theme,Light) + !String.IsEmpty(Container(3100).ListItem.Art(clearlogo-alt))">$INFO[Container(3100).ListItem.Art(clearlogo-alt)]</value>
-		<value condition="Control.HasFocus(3100) + ![$EXP[BillboardView_IsVisible] + Skin.HasSetting(Quick_Transitions)] + ![Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)] + Skin.HasSetting(Crop_Clearlogos)  + !String.IsEmpty(Window(home).Property(clearlogo_cropped)) + String.IsEqual(Window(home).Property(clearlogo_cropped-id),Container(3100).ListItem.DBID)">$INFO[Window(home).Property(clearlogo_cropped)]</value>
-		<value condition="Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.Art(clearlogo))">$INFO[Container(3100).ListItem.Art(clearlogo)]</value>
-		<!-- Primary list -->
-		<value condition="$EXP[BillboardView_IsVisible] + !Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Crop_Clearlogos)  + !String.IsEmpty(Window(home).Property(clearlogo-billboard_cropped)) + String.IsEqual(Window(home).Property(clearlogo-billboard_cropped-id),ListItem.DBID)">$INFO[Window(home).Property(clearlogo-billboard_cropped)]</value>
-		<value condition="$EXP[BillboardView_IsVisible] + !String.IsEmpty(ListItem.Art(clearlogo-billboard))">$INFO[ListItem.Art(clearlogo-billboard)]</value>
-		<value condition="!$EXP[BillboardView_IsVisible] + ![Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)] + Skin.HasSetting(Crop_Clearlogos) + Skin.String(Theme,Light) + !String.IsEmpty(Window(home).Property(clearlogo-alt_cropped)) + String.IsEqual(Window(home).Property(clearlogo-alt_cropped-id),ListItem.DBID)">$INFO[Window(home).Property(clearlogo-alt_cropped)]</value>
-		<value condition="!$EXP[BillboardView_IsVisible] + ![Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)] + Skin.String(Theme,Light) + !String.IsEmpty(ListItem.Art(clearlogo-alt))">$INFO[ListItem.Art(clearlogo-alt)]</value>
-		<value condition="![$EXP[BillboardView_IsVisible] + Skin.HasSetting(Quick_Transitions)] + ![Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)] + Skin.HasSetting(Crop_Clearlogos)  + !String.IsEmpty(Window(home).Property(clearlogo_cropped)) + String.IsEqual(Window(home).Property(clearlogo_cropped-id),ListItem.DBID)">$INFO[Window(home).Property(clearlogo_cropped)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
-	</variable>
-
 	<variable name="Background_Global_Texture">
 		<value condition="Window.IsVisible(loginscreen) + !String.IsEmpty(Container(3300).ListItem.Art(fanart))">$INFO[Container(3300).ListItem.Art(fanart)]</value>
 		<value condition="!String.Contains(Container.FolderPath,plugin://) + $EXP[Content_HasBackground] + !String.IsEmpty(Container(3300).ListItem.Art(fanart))">$INFO[Container(3300).ListItem.Art(fanart)]</value>
@@ -62,6 +40,28 @@
 		<value condition="!Skin.HasSetting(Home_Background_Override_Enabled) + !String.IsEmpty(Container(3300).ListItem.Art(clearlogo))">$INFO[Container(3300).ListItem.Art(clearlogo)]</value>
 	</variable>
 
+	<variable name="Cropped_Clearlogo">
+		<!-- VideoPlayer -->
+		<value condition="VideoPlayer.IsFullscreen + Skin.HasSetting(Crop_Clearlogos) + !String.IsEmpty(Window(home).Property(clearlogo-billboard_cropped)) + String.IsEqual(Window(home).Property(clearlogo-billboard_cropped),VideoPlayer.DBID)">$INFO[Window(home).Property(clearlogo-billboard_cropped)]</value>
+		<value condition="VideoPlayer.IsFullscreen + !String.IsEmpty(VideoPlayer.Art(clearlogo-billboard))">$INFO[VideoPlayer.Art(clearlogo-billboard)]</value>
+		<value condition="VideoPlayer.IsFullscreen + Skin.HasSetting(Crop_Clearlogos) + !String.IsEmpty(Window(home).Property(clearlogo_cropped)) + String.IsEqual(Window(home).Property(clearlogo_cropped),VideoPlayer.DBID)">$INFO[Window(home).Property(clearlogo_cropped)]</value>
+		<value condition="VideoPlayer.IsFullscreen + !String.IsEmpty(VideoPlayer.Art(clearlogo))">$INFO[VideoPlayer.Art(clearlogo)]</value>
+		<!-- Secondary list -->
+		<value condition="Control.HasFocus(3100) + $EXP[BillboardView_IsVisible] + !Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Crop_Clearlogos) + !String.IsEmpty(Window(home).Property(clearlogo-billboard_cropped)) + String.IsEqual(Window(home).Property(clearlogo-billboard_cropped-id),Container(3100).ListItem.DBID)">$INFO[Window(home).Property(clearlogo-billboard_cropped)]</value>
+		<value condition="Control.HasFocus(3100) + $EXP[BillboardView_IsVisible] + !String.IsEmpty(Container(3100).ListItem.Art(clearlogo-billboard))">$INFO[Container(3100).ListItem.Art(clearlogo-billboard)]</value>
+		<value condition="Control.HasFocus(3100) + !$EXP[BillboardView_IsVisible] + ![Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)] + Skin.HasSetting(Crop_Clearlogos)  + Skin.String(Theme,Light) + !String.IsEmpty(Window(home).Property(clearlogo-alt_cropped)) + String.IsEqual(Window(home).Property(clearlogo-alt_cropped-id),Container(3100).ListItem.DBID)">$INFO[Window(home).Property(clearlogo-alt_cropped)]</value>
+		<value condition="Control.HasFocus(3100) + !$EXP[BillboardView_IsVisible] + Skin.String(Theme,Light) + !String.IsEmpty(Container(3100).ListItem.Art(clearlogo-alt))">$INFO[Container(3100).ListItem.Art(clearlogo-alt)]</value>
+		<value condition="Control.HasFocus(3100) + ![$EXP[BillboardView_IsVisible] + Skin.HasSetting(Quick_Transitions)] + ![Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)] + Skin.HasSetting(Crop_Clearlogos)  + !String.IsEmpty(Window(home).Property(clearlogo_cropped)) + String.IsEqual(Window(home).Property(clearlogo_cropped-id),Container(3100).ListItem.DBID)">$INFO[Window(home).Property(clearlogo_cropped)]</value>
+		<value condition="Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.Art(clearlogo))">$INFO[Container(3100).ListItem.Art(clearlogo)]</value>
+		<!-- Primary list -->
+		<value condition="$EXP[BillboardView_IsVisible] + !Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Crop_Clearlogos)  + !String.IsEmpty(Window(home).Property(clearlogo-billboard_cropped)) + String.IsEqual(Window(home).Property(clearlogo-billboard_cropped-id),ListItem.DBID)">$INFO[Window(home).Property(clearlogo-billboard_cropped)]</value>
+		<value condition="$EXP[BillboardView_IsVisible] + !String.IsEmpty(ListItem.Art(clearlogo-billboard))">$INFO[ListItem.Art(clearlogo-billboard)]</value>
+		<value condition="!$EXP[BillboardView_IsVisible] + ![Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)] + Skin.HasSetting(Crop_Clearlogos) + Skin.String(Theme,Light) + !String.IsEmpty(Window(home).Property(clearlogo-alt_cropped)) + String.IsEqual(Window(home).Property(clearlogo-alt_cropped-id),ListItem.DBID)">$INFO[Window(home).Property(clearlogo-alt_cropped)]</value>
+		<value condition="!$EXP[BillboardView_IsVisible] + ![Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)] + Skin.String(Theme,Light) + !String.IsEmpty(ListItem.Art(clearlogo-alt))">$INFO[ListItem.Art(clearlogo-alt)]</value>
+		<value condition="![$EXP[BillboardView_IsVisible] + Skin.HasSetting(Quick_Transitions)] + ![Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)] + Skin.HasSetting(Crop_Clearlogos)  + !String.IsEmpty(Window(home).Property(clearlogo_cropped)) + String.IsEqual(Window(home).Property(clearlogo_cropped-id),ListItem.DBID)">$INFO[Window(home).Property(clearlogo_cropped)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+	</variable>
+
 	<variable name="Infoscreen_Background_Texture">
 		<value condition="!String.IsEmpty(ListItem.Art(fanart1))">$INFO[Control.GetLabel(3401)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
@@ -91,6 +91,28 @@
 		<value condition="!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</value>
 		<value condition="!String.IsEmpty(Player.Art(artist.fanart1))">$INFO[Control.GetLabel(3401)]</value>
 		<value condtion="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
+	</variable>
+
+
+	<!-- Views -->
+	<variable name="Default(0)Content">
+		<value condition="!String.IsEmpty(ListItem(0).Art(thumb)) + [String.IsEqual(ListItem(0).DBType,episode) | [String.IsEqual(ListItem(0).DBType,artist) + $EXP[ListView_Display_IsThumbnails_Artists]] | [String.IsEqual(ListItem(0).DBType,album) + !$EXP[ListView_Display_IsBackground_Albums]] | [String.IsEqual(ListItem(0).DBType,song) + !$EXP[ListView_Display_IsBackground_Songs]] | [Container.Content(songs) + !String.IsEmpty(Container.PluginName)] | [Container.Content(addons) + $EXP[ListView_IsVisible]] | Container.Content(videos)]">$INFO[ListItem(0).Art(thumb)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(album.fanart)) + !$EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(album.fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(landscape)) + !$EXP[ListView_Display_IsThumbnails] + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">$INFO[ListItem(0).Art(landscape)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(fanart)) + !$EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.landscape)) + !$EXP[ListView_Display_IsThumbnails] + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">$INFO[ListItem(0).Art(tvshow.landscape)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.fanart)) + !$EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(tvshow.fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(artist.fanart)) + !$EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(artist.fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(artist.fanart)) + !$EXP[ListView_Display_IsThumbnails] + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">$INFO[ListItem(0).Art(artist.landscape)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(keyart)) + $EXP[ListView_Display_IsThumbnails] + $EXP[Prefer_Keyart_List]">$INFO[ListItem(0).Art(keyart)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(poster)) + $EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(boxfront)) + $EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(boxfront)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.keyart)) + $EXP[ListView_Display_IsThumbnails] + $EXP[Prefer_Keyart_List]">$INFO[ListItem(0).Art(tvshow.keyart)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.poster)) + $EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(tvshow.poster)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(artist.thumb))">$INFO[ListItem(0).Art(artist.thumb)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(landscape)) + !Container.Content(files) + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">$INFO[ListItem(0).Art(landscape)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(fanart)) + !Container.Content(files)">$INFO[ListItem(0).Art(fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Icon)">$INFO[ListItem(0).Icon]</value>
 	</variable>
 
 	<variable name="Grid(0)Content">
@@ -366,26 +388,6 @@
 		<value />
 	</variable>
 
-	<variable name="Default(0)Content">
-		<value condition="!String.IsEmpty(ListItem(0).Art(thumb)) + [String.IsEqual(ListItem(0).DBType,episode) | [String.IsEqual(ListItem(0).DBType,artist) + $EXP[ListView_Display_IsThumbnails_Artists]] | [String.IsEqual(ListItem(0).DBType,album) + !$EXP[ListView_Display_IsBackground_Albums]] | [String.IsEqual(ListItem(0).DBType,song) + !$EXP[ListView_Display_IsBackground_Songs]] | [Container.Content(songs) + !String.IsEmpty(Container.PluginName)] | [Container.Content(addons) + $EXP[ListView_IsVisible]] | Container.Content(videos)]">$INFO[ListItem(0).Art(thumb)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Art(album.fanart)) + !$EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(album.fanart)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Art(landscape)) + !$EXP[ListView_Display_IsThumbnails] + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">$INFO[ListItem(0).Art(landscape)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Art(fanart)) + !$EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(fanart)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.landscape)) + !$EXP[ListView_Display_IsThumbnails] + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">$INFO[ListItem(0).Art(tvshow.landscape)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.fanart)) + !$EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(tvshow.fanart)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Art(artist.fanart)) + !$EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(artist.fanart)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Art(artist.fanart)) + !$EXP[ListView_Display_IsThumbnails] + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">$INFO[ListItem(0).Art(artist.landscape)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Art(keyart)) + $EXP[ListView_Display_IsThumbnails] + $EXP[Prefer_Keyart_List]">$INFO[ListItem(0).Art(keyart)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Art(poster)) + $EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(poster)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Art(boxfront)) + $EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(boxfront)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.keyart)) + $EXP[ListView_Display_IsThumbnails] + $EXP[Prefer_Keyart_List]">$INFO[ListItem(0).Art(tvshow.keyart)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.poster)) + $EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(tvshow.poster)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Art(artist.thumb))">$INFO[ListItem(0).Art(artist.thumb)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Art(landscape)) + !Container.Content(files) + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">$INFO[ListItem(0).Art(landscape)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Art(fanart)) + !Container.Content(files)">$INFO[ListItem(0).Art(fanart)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Icon)">$INFO[ListItem(0).Icon]</value>
-	</variable>
-
 	<variable name="Secondary(0)Content">
 		<value condition="$EXP[ShowcaseView_IsVisible]">$VAR[Showcase(0)Content]</value>
 		<value>$VAR[Default(0)Content]</value>
@@ -474,6 +476,7 @@
 		<value>flags/blank.png</value>
 	</variable>
 
+	<!-- windows -->
 	<variable name="addonbrowser(-3)Content">
 		<value condition="!String.IsEmpty(ListItemNoWrap(-3).Label) + !String.IsEmpty(ListItem(-3).Icon)">$INFO[ListItem(-3).Icon]</value>
 	</variable>
@@ -570,6 +573,11 @@
 	</variable>
 	<variable name="pictures(3)Content">
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(2).Icon)">$INFO[ListItem(2).Icon]</value>
+	</variable>
+
+	<variable name="pvr_Artwork">
+		<value condition="!String.IsEmpty(Listitem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
+		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 
 	<variable name="script-upnext_Artwork">
