@@ -10,7 +10,7 @@
 		<include content="tvguide_Controls" />
 		<include content="tvsearch_Views" />
 		<include content="MyViews_Menu_and_Scrollbars">
-			<param name="include_pvr_menu" value="true" />
+			<param name="type" value="PVR" />
 		</include>
 	</controls>
 </window>

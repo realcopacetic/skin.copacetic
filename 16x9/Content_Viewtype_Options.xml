@@ -61,7 +61,7 @@
 				<property name="ActionRight">Container.NextSortMethod</property>
 				<visible>Control.IsEnabled(3) + Integer.IsGreater(Container.NumItems,1)</visible>
 			</item>
-			<!-- Sort mode -->
+			<!-- Sort mode if menu has focus -->
 			<item id="2">
 				<description>Order / Ascending</description>
 				<onclick>SetFocus($PARAM[target_id])</onclick>
@@ -69,7 +69,7 @@
 				<label2>$LOCALIZE[31013] $VAR[Copacetic_Divider_Bold] $LOCALIZE[584]</label2>
 				<property name="ActionLeft">Container.SetSortDirection</property>
 				<property name="ActionRight">Container.SetSortDirection</property>
-				<visible>Control.IsEnabled(3) + Control.IsEnabled(4) + Container.SortDirection(ascending) + Integer.IsGreater(Container.NumItems,1)</visible>
+				<visible>Control.IsEnabled(3) + Control.IsEnabled(4) + Container.SortDirection(ascending) + Integer.IsGreater(Container.NumItems,1) + Control.HasFocus(3000)</visible>
 			</item>
 			<item id="2">
 				<description>Order / Descending</description>
@@ -78,7 +78,26 @@
 				<label2>$LOCALIZE[31013] $VAR[Copacetic_Divider_Bold] $LOCALIZE[585]</label2>
 				<property name="ActionLeft">Container.SetSortDirection</property>
 				<property name="ActionRight">Container.SetSortDirection</property>
-				<visible>Control.IsEnabled(3) + Control.IsEnabled(4) + Container.SortDirection(descending) + Integer.IsGreater(Container.NumItems,1)</visible>
+				<visible>Control.IsEnabled(3) + Control.IsEnabled(4) + Container.SortDirection(descending) + Integer.IsGreater(Container.NumItems,1) + Control.HasFocus(3000)</visible>
+			</item>
+			<!-- Sort mode if menu does not have focus (when PVR menu is activated) -->
+			<item id="2">
+				<description>Order / Ascending</description>
+				<onclick>SetFocus($PARAM[target_id])</onclick>
+				<label>$LOCALIZE[31013] $VAR[Copacetic_Divider_Bold] $LOCALIZE[584]</label>
+				<label2>$LOCALIZE[31013] $VAR[Copacetic_Divider_Bold] $LOCALIZE[584]</label2>
+				<property name="ActionLeft">Container.SetSortDirection</property>
+				<property name="ActionRight">Container.SetSortDirection</property>
+				<visible>Control.IsEnabled(3) + Control.IsEnabled(4) + Container.SortDirection(ascending) + Integer.IsGreater(Container.NumItems,1) + !Control.HasFocus(3000)</visible>
+			</item>
+			<item id="2">
+				<description>Order / Descending</description>
+				<onclick>SetFocus($PARAM[target_id])</onclick>
+				<label>$LOCALIZE[31013] $VAR[Copacetic_Divider_Bold] $LOCALIZE[585]</label>
+				<label2>$LOCALIZE[31013] $VAR[Copacetic_Divider_Bold] $LOCALIZE[585]</label2>
+				<property name="ActionLeft">Container.SetSortDirection</property>
+				<property name="ActionRight">Container.SetSortDirection</property>
+				<visible>Control.IsEnabled(3) + Control.IsEnabled(4) + Container.SortDirection(descending) + Integer.IsGreater(Container.NumItems,1) + !Control.HasFocus(3000)</visible>
 			</item>
 			<!-- Party mode -->
 			<item>
@@ -315,6 +334,14 @@
 			<label>$INFO[Container(11).ListItem.Label]</label>
 			<label2>$LOCALIZE[19146] $VAR[Copacetic_Divider_Bold] $INFO[Container(11).ListItem.Label]</label2>
 			<onclick>SendClick(28)</onclick>
+			<visible>Control.HasFocus(3000)</visible>
+		</item>
+		<item>
+			<description>Channel Groups</description>
+			<label>$LOCALIZE[19146] $VAR[Copacetic_Divider_Bold] $INFO[Container(11).ListItem.Label]</label>
+			<label2>$LOCALIZE[19146] $VAR[Copacetic_Divider_Bold] $INFO[Container(11).ListItem.Label]</label2>
+			<onclick>SendClick(28)</onclick>
+			<visible>!Control.HasFocus(3000)</visible>
 		</item>
 	</include>
 

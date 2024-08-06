@@ -652,11 +652,6 @@
 		<onunload condition="Skin.HasSetting(Multiart_Slideshow)">ClearProperty(Multiart_Fadeout,home)</onunload>
 	</include>
 
-	<include name="PVR_Menu_Navigation">
-		<onup>3600</onup>
-		<ondown>3600</ondown>
-	</include>
-
 	<include name="Widget_Position_Reset_OnLoad">
 		<onload condition="!Window.IsVisible(1180) + Integer.IsGreater(Container(3000).CurrentItem,1)">Control.Move(3000,$INFO[Container(3000).CurrentItem,-])</onload>
 		<onload condition="!Window.IsVisible(1180) + Integer.IsGreater(Container(3000).CurrentItem,1)">Control.Move(3000,1)</onload>

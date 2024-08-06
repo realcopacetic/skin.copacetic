@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<include name="tvchannels_Controls">
+		<control type="radiobutton" id="6">
+			<description>Show hidden channels</description>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+		<control type="button" id="28">
+			<description>Channel groups button</description>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+		<control type="label" id="29">
+			<description>Channel groups name</description>
+			<visible>false</visible>
+		</control>
+		<control type="radiobutton" id="31">
+			<description>Filter</description>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+	</include>
+
+	<include name="tvchannels_Views">
+		<definition>
+			<!-- Background -->
+			<include content="Background_Multiart_Global">
+				<param name="visible" value="!VideoPlayer.Content(livetv)" />
+				<param name="fadein_animation_condition" value="!$EXP[Background_FadeIn_Exceptions]" />
+				<param name="fadeout_animation_condition" value="!$EXP[Background_FadeOut_Exceptions]" />
+			</include>
+			<include content="Embedded_VideoPlayer">
+				<param name="visible" value="VideoPlayer.Content(livetv)" />
+			</include>
+			<!-- Content -->
+			<include content="Default_Dialog_Panel_Layout">
+				<param name="visible" value="!$EXP[TransparentDialog_IsVisible] + !$EXP[Infoscreen_IsVisible]" />
+				<param name="panel_colordiffuse" value="$VAR[PVR_Panel_Mask]" />
+				<control type="list" id="50">
+					<viewtype label="List">list</viewtype>
+					<left>120</left>
+					<width>1080</width>
+					<height>630</height>
+					<centertop>50%</centertop>
+					<preloaditems>2</preloaditems>
+					<pagecontrol>60</pagecontrol>
+					<orientation>vertical</orientation>
+					<onleft>SetFocus(3600,0,absolute)</onleft>
+					<onright condition="Integer.IsGreater(Container(50).NumItems,7)">60</onright>
+					<onright condition="!Integer.IsGreater(Container(50).NumItems,7)">SetFocus(3000,0,absolute)</onright>
+					<scrolltime tween="sine" easing="inout">360</scrolltime>
+					<itemlayout width="1080" height="90" infoupdate="5000">
+						<include content="PVR_ChannelList_Item" />
+					</itemlayout>
+					<focusedlayout width="1080" height="90" infoupdate="5000">
+						<include content="PVR_ChannelList_Item">
+							<param name="color" value="$VAR[Light_Color]" />
+						</include>
+						<control type="image">
+							<bottom>0</bottom>
+							<height>1</height>
+							<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+						</control>
+					</focusedlayout>
+				</control>
+				<include content="Dialog_Divider_With_Scrollbar">
+					<param name="scrollbarvisible" value="Integer.IsGreater(Container(50).NumItems,7)" />
+					<param name="id" value="60" />
+					<param name="left" value="1200" />
+					<param name="scrollbaralignleft" value="true" />
+					<param name="onleft" value="50" />
+					<param name="onright" value="50" />
+				</include>
+				<include content="PVR_Info_Box">
+					<param name="visible" default="true" />
+					<param name="left" value="1230" />
+					<param name="right" value="120" />
+					<param name="bottom" value="350" />
+					<param name="height" value="450" />
+					<param name="align" value="center" />
+					<param name="plot_height_max" value="360" />
+				</include>
+				<include content="PVR_Now_Playing_Info" />
+				<include content="PVR_Now_Playing_Info">
+					<param name="visible" value="true" />
+					<param name="top" value="765" />
+					<param name="label_width" value="570" />
+					<param name="label_align" value="right" />
+					<param name="label" value="$VAR[PVR_Next_Up_Label]" />
+					<param name="line_bottom" value="90" />
+					<param name="include_logo" value="false" />
+				</include>
+			</include>
+		</definition>
+	</include>
+
+	<include name="tvguide_Controls">
+		<control type="button" id="28">
+			<description>Channel groups button</description>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+		<control type="label" id="29">
+			<description>View name / Search term</description>
+			<visible>false</visible>
+		</control>
+		<control type="label" id="30">
+			<description>Channel groups name / Saved status</description>
+			<visible>false</visible>
+		</control>
+	</include>
+
+	<include name="tvguide_Views">
+		<definition>
+			<!-- Background -->
+			<include content="Background_Multiart_Global">
+				<param name="visible" value="!VideoPlayer.Content(livetv)" />
+				<param name="fadein_animation_condition" value="!$EXP[Background_FadeIn_Exceptions]" />
+				<param name="fadeout_animation_condition" value="!$EXP[Background_FadeOut_Exceptions]" />
+			</include>
+			<include content="Embedded_VideoPlayer">
+				<param name="visible" value="VideoPlayer.Content(livetv)" />
+			</include>
+			<!-- Content -->
+			<include content="Default_Dialog_Panel_Layout">
+				<param name="visible" value="!$EXP[TransparentDialog_IsVisible] + !$EXP[Infoscreen_IsVisible]" />
+				<param name="panel_edge_top" value="165" />
+				<param name="panel_edge_bottom" value="0" />
+				<param name="panel_edge_left" value="60" />
+				<param name="panel_edge_right" value="60" />
+				<param name="panel_colordiffuse" value="$VAR[PVR_Panel_Mask]" />
+				<include content="Breadcrumb_Label">
+					<param name="visible" value="Control.HasFocus(11)" />
+					<param name="animation" value="Visible_Fade_Delayed_Animation" />
+					<param name="bar" value="false" />
+					<param name="title_label" value="$VAR[tvguide_Group_Label]" />
+					<param name="textcolor" value="$VAR[Light_Color]" />
+				</include>
+				<control type="list" id="11">
+					<visible allowhiddenfocus="true">false</visible>
+					<orientation>horizontal</orientation>
+					<onup>SetFocus(3600,0,absolute)</onup>
+					<ondown>10</ondown>
+					<itemlayout width="100" height="100" />
+					<focusedlayout width="100" height="100" />
+				</control>
+				<control type="epggrid" id="10">
+					<description>EPG Grid</description>
+					<top>180</top>
+					<height>630</height>
+					<width>1680</width>
+					<centerleft>50%</centerleft>
+					<scrolltime tween="sine" easing="inout">360</scrolltime>
+					<timeblocks>30</timeblocks>
+					<rulerunit>6</rulerunit>
+					<!-- <progresstexture border="0,92,3,0" colordiffuse="$VAR[Accent_Color]">pvr/tvguide_progress_indicator.png</progresstexture> -->
+					<orientation>vertical</orientation>
+					<onup>11</onup>
+					<ondown>SetFocus(3000,0,absolute)</ondown>
+					<pagecontrol>60</pagecontrol>
+					<rulerlayout width="210" height="90">
+						<control type="label" id="2">
+							<label>$INFO[ListItem.Label]</label>
+							<font>PVR_Time</font>
+							<width>1020</width>
+							<centertop>50%</centertop>
+							<height>30</height>
+							<textcolor>$VAR[Light_Color]</textcolor>
+							<textoffsetx>10</textoffsetx>
+						</control>
+						<control type="image">
+							<centertop>50%</centertop>
+							<height>30</height>
+							<texture colordiffuse="$VAR[Accent_Color]" border="4">pvr/tvguide_focusedlayout_border_left.png</texture>
+						</control>
+					</rulerlayout>
+					<channellayout width="540" height="90">
+						<control type="image">
+							<height>90</height>
+							<width>90</width>
+							<texture>$INFO[ListItem.Art(thumb)]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label" id="1">
+							<label>$INFO[ListItem.Label]</label>
+							<font>PVR_Guide</font>
+							<width>450</width>
+							<left>90</left>
+							<textoffsetx>30</textoffsetx>
+							<scroll>false</scroll>
+						</control>
+					</channellayout>
+					<focusedchannellayout width="540" height="90">
+						<control type="image" id="1">
+							<bottom>0</bottom>
+							<height>1</height>
+							<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+							<animation effect="zoom" end="311,100" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<height>90</height>
+							<width>90</width>
+							<texture>$INFO[ListItem.Art(thumb)]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label" id="1">
+							<label>$INFO[ListItem.Label]</label>
+							<font>PVR_Guide</font>
+							<textcolor>$VAR[epggrid_Focused_Color]</textcolor>
+							<left>90</left>
+							<width>450</width>
+							<textoffsetx>30</textoffsetx>
+							<scroll>false</scroll>
+						</control>
+					</focusedchannellayout>
+					<itemlayout width="45" height="90">
+						<control type="label" id="1">
+							<label>$INFO[ListItem.Label]</label>
+							<font>PVR_Guide</font>
+							<textoffsetx>15</textoffsetx>
+							<scroll>false</scroll>
+						</control>
+					</itemlayout>
+					<focusedlayout width="45" height="90">
+						<control type="image" id="14">
+							<texture colordiffuse="$VAR[PVR_Channel_Progress_Color]">views/white_100.png</texture>
+							<bottom>1</bottom>
+						</control>
+						<control type="label" id="1">
+							<textcolor>$VAR[epggrid_Focused_Color]</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<font>PVR_Guide</font>
+							<textoffsetx>15</textoffsetx>
+							<scroll>false</scroll>
+						</control>
+					</focusedlayout>
+				</control>
+				<include content="Dialog_Divider_With_Scrollbar">
+					<param name="scrollbarvisible" value="true" />
+					<param name="id" value="60" />
+					<param name="height" value="540" />
+					<param name="left" value="660" />
+					<param name="scrollbaralignleft" value="true" />
+				</include>
+				<!-- Details -->
+				<include content="PVR_Info_Box">
+					<param name="left" value="470" />
+					<param name="right" value="120" />
+					<param name="bottom" value="30" />
+					<param name="height" value="210" />
+					<param name="plot_height_max" value="100" />
+				</include>
+				<control type="image">
+					<bottom>45</bottom>
+					<height>180</height>
+					<left>120</left>
+					<width>320</width>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio align="right" aligny="center">scale</aspectratio>
+					<fadetime>360</fadetime>
+				</control>
+			</include>
+		</definition>
+	</include>
+
+	<include name="tvsearch_Views">
+		<definition>
+			<!-- Background -->
+			<include content="Background_Multiart_Global">
+				<param name="visible" value="!VideoPlayer.Content(livetv)" />
+				<param name="fadein_animation_condition" value="!$EXP[Background_FadeIn_Exceptions]" />
+				<param name="fadeout_animation_condition" value="!$EXP[Background_FadeOut_Exceptions]" />
+			</include>
+			<include content="Embedded_VideoPlayer">
+				<param name="visible" value="VideoPlayer.Content(livetv)" />
+			</include>
+			<!-- Content -->
+			<include content="Default_Dialog_Panel_Layout">
+				<param name="visible" value="!$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pvrguidesearch) + !$EXP[Infoscreen_IsVisible]" />
+				<param name="panel_colordiffuse" value="$VAR[PVR_Panel_Mask]" />
+				<include content="Breadcrumb_Label">
+					<param name="bar" value="true" />
+					<param name="title_label_id" value="29" />
+					<param name="info_label_visible" value="true" />
+					<param name="info_label" value="$VAR[Copacetic_Divider_Bold] $LOCALIZE[137]$INFO[Control.GetLabel(30), ]" />
+					<param name="textcolor" value="$VAR[Light_Color]" />
+				</include>
+				<control type="list" id="50">
+					<viewtype label="List">list</viewtype>
+					<left>120</left>
+					<width>1080</width>
+					<height>630</height>
+					<centertop>50%</centertop>
+					<preloaditems>2</preloaditems>
+					<pagecontrol>60</pagecontrol>
+					<orientation>vertical</orientation>
+					<onleft>SetFocus(3600,0,absolute)</onleft>
+					<onright condition="Integer.IsGreater(Container(50).NumItems,7)">60</onright>
+					<onright condition="!Integer.IsGreater(Container(50).NumItems,7)">SetFocus(3000,0,absolute)</onright>
+					<scrolltime tween="sine" easing="inout">360</scrolltime>
+					<itemlayout width="1080" height="90" infoupdate="5000">
+						<include content="PVR_ChannelList_Item" />
+					</itemlayout>
+					<focusedlayout width="1080" height="90" infoupdate="5000">
+						<include content="PVR_ChannelList_Item">
+							<param name="color" value="$VAR[Light_Color]" />
+						</include>
+						<control type="image">
+							<bottom>0</bottom>
+							<height>1</height>
+							<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+						</control>
+					</focusedlayout>
+				</control>
+				<include content="Dialog_Divider_With_Scrollbar">
+					<param name="scrollbarvisible" value="Integer.IsGreater(Container(50).NumItems,7)" />
+					<param name="id" value="60" />
+					<param name="left" value="1200" />
+					<param name="scrollbaralignleft" value="true" />
+					<param name="onleft" value="50" />
+					<param name="onright" value="50" />
+				</include>
+				<include content="PVR_Info_Box">
+					<param name="visible" value="!$EXP[TransparentDialog_IsVisible] + ListItem.HasEPG" />
+					<param name="left" value="1200" />
+					<param name="right" value="120" />
+					<param name="bottom" value="225" />
+					<param name="height" value="630" />
+					<param name="plot_height_max" value="540" />
+				</include>
+			</include>
+		</definition>
+	</include>
+
+	<include name="Hidden_PVR_Menu">
+		<param name="target_id" />
+		<definition>
+			<control type="group">
+				<visible allowhiddenfocus="true">[ControlGroup(3600).HasFocus | Control.HasFocus(3000) | String.IsEqual(Window(home).Property(OptionsMenu),Active)] + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog)</visible>
+				<include content="VisibleHidden_Fade_Delayed_Animation" />
+				<control type="fixedlist" id="3000">
+					<description>Options menu</description>
+					<viewtype label="535">list</viewtype>
+					<visible allowhiddenfocus="true">true</visible>
+					<include content="OptionsMenu_Slides" />
+					<onup>3600</onup>
+					<ondown>3600</ondown>
+					<left>120</left>
+					<width>1080</width>
+					<centertop>50%</centertop>
+					<height>780</height>
+					<onback>4012</onback>
+					<onfocus>ClearProperty(Scrollbars,home)</onfocus>
+					<onfocus>SetProperty(OptionsMenu,Active,home)</onfocus>
+					<onunfocus>ClearProperty(OptionsMenu,home)</onunfocus>
+					<onleft condition="String.IsEmpty(Container(3000).ListItem.Property(ActionLeft))">4012</onleft>
+					<onright condition="String.IsEmpty(Container(3000).ListItem.Property(ActionRight))">4012</onright>
+					<onleft condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionLeft))">$INFO[Container(3000).ListItem.Property(ActionLeft)]</onleft>
+					<onright condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionRight))">$INFO[Container(3000).ListItem.Property(ActionRight)]</onright>
+					<!-- Reset multiart on viewchange -->
+					<onleft condition="Container(3000).HasFocus(1)">SetFocus(4014)</onleft>
+					<onright condition="Container(3000).HasFocus(1)">SetFocus(4014)</onright>
+					<!-- Transition on left or right -->
+					<onleft condition="Container(3000).HasFocus(2)">SetFocus(4014)</onleft>
+					<onright condition="Container(3000).HasFocus(2)">SetFocus(4014)</onright>
+					<orientation>vertical</orientation>
+					<focusposition>0</focusposition>
+					<movement>12</movement>
+					<defaultcontrol>1</defaultcontrol>
+					<scrolltime tween="sine" easing="inout">380</scrolltime>
+					<itemlayout height="60" width="1080">
+						<include content="Simple_List_Layout">
+							<param name="label" value="$INFO[ListItem.Label2]" />
+							<param name="label_left" value="0" />
+							<param name="label_maxwidth" value="1080" />
+						</include>
+					</itemlayout>
+					<focusedlayout height="60" width="1080">
+						<include content="Simple_List_Layout">
+							<param name="visible" value="Control.HasFocus(3000)" />
+							<param name="font" value="Main_Menu_Focused" />
+							<param name="label" value="$INFO[ListItem.Label]" />
+							<param name="label_left" value="0" />
+							<param name="label_maxwidth" value="1080" />
+						</include>
+						<include content="Simple_List_Layout">
+							<param name="visible" value="!Control.HasFocus(3000)" />
+							<param name="label" value="$INFO[ListItem.Label]" />
+							<param name="label_left" value="0" />
+							<param name="label_maxwidth" value="1080" />
+						</include>
+					</focusedlayout>
+					<content>
+						<include content="tvchannels_Menu_Options" condition="Window.Is(tvchannels) | Window.Is(radiochannels)" />
+						<include content="tvguide_Menu_Options" condition="Window.Is(tvguide) | Window.Is(radioguide)" />
+						<include content="tvsearch_Menu_Options" condition="Window.Is(tvsearch) | Window.Is(radiosearch)" />
+						<include content="Common_Menu_Options">
+							<param name="target_id" value="$PARAM[target_id]" />
+						</include>
+					</content>
+				</control>
+				<include content="PVR_OSD"/>
+			</control>
+		</definition>
+	</include>
+
+
+	<include name="PVR_OSD">
+		<include content="Breadcrumb_Label">
+			<param name="visible" value="ControlGroup(3600).HasFocus" />
+			<param name="animation" value="VisibleHidden_Fade_Animation" />
+			<param name="title_label" value="$INFO[Window(home).Property(PVR_Controls)]" />
+			<param name="textcolor" value="$VAR[Light_Color]" />
+		</include>
+		<control type="grouplist" id="3600">
+			<centerleft>50%</centerleft>
+			<top>60</top>
+			<ondown>SetFocus(3000,0,absolute)</ondown>
+			<onup>SetFocus(3000,0,absolute)</onup>
+			<onup>Control.Move(3000,-1)</onup>
+			<onback>4012</onback>
+			<onunfocus>ClearProperty(PVR_Controls,home)</onunfocus>
+			<width>360</width>
+			<height>60</height>
+			<orientation>horizontal</orientation>
+			<align>center</align>
+			<itemgap>0</itemgap>
+			<usecontrolcoords>true</usecontrolcoords>
+			<include content="pvrosd_Content" />
+		</control>
+	</include>
+
+</includes>
