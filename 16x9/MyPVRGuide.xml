@@ -12,6 +12,7 @@
 		<include content="tvguide_Views" />
 		<include content="MyViews_Menu_and_Scrollbars">
 			<param name="target_id" value="10" />
+			<param name="include_pvr_menu" value="true" />
 		</include>
 	</controls>
 </window>

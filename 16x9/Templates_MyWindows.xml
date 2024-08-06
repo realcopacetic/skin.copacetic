@@ -791,7 +791,14 @@
 					</itemlayout>
 					<focusedlayout height="60" width="1080">
 						<include content="Simple_List_Layout">
+							<param name="visible" value="Control.HasFocus(3000)" />
 							<param name="font" value="Main_Menu_Focused" />
+							<param name="label" value="$INFO[ListItem.Label]" />
+							<param name="label_left" value="0" />
+							<param name="label_maxwidth" value="1080" />
+						</include>
+						<include content="Simple_List_Layout">
+							<param name="visible" value="!Control.HasFocus(3000)" />
 							<param name="label" value="$INFO[ListItem.Label]" />
 							<param name="label_left" value="0" />
 							<param name="label_maxwidth" value="1080" />
@@ -824,27 +831,66 @@
 	</include>
 
 	<include name="PVR_Menu">
+		<include content="Breadcrumb_Label">
+			<param name="visible" value="ControlGroup(3600).HasFocus" />
+			<param name="animation" value="VisibleHidden_Fade_Animation" />
+			<param name="title_label" value="$INFO[Window(home).Property(PVR_Controls)]" />
+			<param name="textcolor" value="$VAR[Light_Color]" />
+		</include>
 		<control type="grouplist" id="3600">
 			<centerleft>50%</centerleft>
-			<centertop>50%</centertop>
-			<ondown>3000</ondown>
-			<onup>3000</onup>
+			<top>60</top>
+			<ondown>SetFocus(3000,0,absolute)</ondown>
+			<onup>SetFocus(3000,0,absolute)</onup>
+			<onup>Control.Move(3000,-1)</onup>
+			<onback>4012</onback>
+			<onunfocus>ClearProperty(PVR_Controls,home)</onunfocus>
 			<width>360</width>
 			<height>60</height>
+			<orientation>horizontal</orientation>
 			<align>center</align>
 			<itemgap>0</itemgap>
 			<usecontrolcoords>true</usecontrolcoords>
-			<control type="button" id="10">
-				<label>hello</label>
-			</control>
+			<include content="PVR_Button_Template">
+				<param name="description" value="channels" />
+				<param name="id" value="100" />
+				<param name="icon" value="library" />
+				<param name="label" value="$LOCALIZE[14301]" />
+			</include>
+			<include content="PVR_Button_Template">
+				<param name="description" value="guide" />
+				<param name="id" value="101" />
+				<param name="icon" value="list" />
+				<param name="label" value="$LOCALIZE[19069]" />
+			</include>
+			<include content="PVR_Button_Template">
+				<param name="description" value="recordings" />
+				<param name="id" value="102" />
+				<param name="icon" value="record" />
+				<param name="radio_label" value="$LOCALIZE[10706]" />
+				<param name="label" value="$LOCALIZE[19017]" />
+			</include>
+			<include content="PVR_Button_Template">
+				<param name="description" value="timerrules" />
+				<param name="id" value="103" />
+				<param name="icon" value="settings_cog" />
+				<param name="label" value="$LOCALIZE[19138]" />
+			</include>
+			<include content="PVR_Button_Template">
+				<param name="description" value="timers" />
+				<param name="id" value="104" />
+				<param name="icon" value="timer" />
+				<param name="label" value="$LOCALIZE[19040]" />
+			</include>
+			<include content="PVR_Button_Template">
+				<param name="description" value="search" />
+				<param name="id" value="105" />
+				<param name="icon" value="browse" />
+				<param name="label" value="$LOCALIZE[10605]" />
+			</include>
 		</control>
 	</include>
 
-	<include name="PVR_Menu_Navigation">
-		<onup>3600</onup>
-		<ondown>3600</ondown>
-	</include>
-	
 	<include name="MyViews_Menu_and_Scrollbars">
 		<param name="target_id" default="50" />
 		<param name="include_pvr_menu" default="false" />
