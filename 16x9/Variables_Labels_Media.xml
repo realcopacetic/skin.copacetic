@@ -442,7 +442,7 @@
 	</variable>
 
 		<variable name="Info_PVR_Label">
-			<value condition="!String.IsEmpty(ListItem.EpisodeName)">[UPPERCASE]$INFO[ListItem.Title]$VAR[ListItem_ChannelName_Divider_Bold, ]$INFO[ListItem.ChannelName, ][CR]$INFO[ListItem.Date]$VAR[ListItem_Endtime_Divider_Bold, ]$INFO[ListItem.EndTime, $LOCALIZE[31100] ]$VAR[ListItem_Duration_Divider_Bold, ]$INFO[ListItem.Duration(mins), , $LOCALIZE[31114]]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</value>
+			<value condition="!String.IsEmpty(ListItem.EpisodeName)">[UPPERCASE]$INFO[ListItem.Title]$VAR[ListItem_ChannelName_Divider_Bold, ]$INFO[ListItem.ChannelName, ][CR]$INFO[ListItem.Date]$INFO[ListItem.EndTime,-]$VAR[ListItem_Duration_Divider_Bold, ]$INFO[ListItem.Duration(mins), , $LOCALIZE[31114]]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</value>
 		</variable>
 
 	<variable name="MPAA_Description_Label">

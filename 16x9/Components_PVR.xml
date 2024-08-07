@@ -80,47 +80,49 @@
 
 	<include name="PVR_ChannelList_Item">
 		<param name="color" default="$VAR[Unfocused_Color]" />
+		<param name="visible" default="true" />
 		<definition>
-			<control type="progress">
-				<visible>ListItem.HasEpg + Integer.IsGreater(ListItem.Progress,0)</visible>
-				<height>100%</height>
-				<width>100%</width>
-				<texturebg colordiffuse="$VAR[Blank_Color]">views/white_100.png</texturebg>
-				<midtexture colordiffuse="$VAR[PVR_Channel_Progress_Color]">views/white_100.png</midtexture>
-				<info>ListItem.Progress</info>
-			</control>
-			<control type="label">
-				<width>90</width>
-				<label>$INFO[ListItem.ChannelNumberLabel]</label>
-				<align>center</align>
-				<textcolor>$PARAM[color]</textcolor>
-				<font>Player_Status</font>
-			</control>
-			<control type="label">
-				<height>40</height>
-				<top>10</top>
-				<left>105</left>
-				<right>120</right>
-				<label>$INFO[ListItem.Label]</label>
-				<font>PVR_Channel</font>
-				<textcolor>$PARAM[color]</textcolor>
-			</control>
-			<control type="label">
-				<height>30</height>
-				<bottom>10</bottom>
-				<left>105</left>
-				<right>120</right>
-				<label>$INFO[ListItem.Title]</label>
-				<font>PVR_Channel2</font>
-				<textcolor>$PARAM[color]</textcolor>
-			</control>
-			<control type="image">
-				<right>30</right>
-				<top>15</top>
-				<height>60</height>
-				<width>90</width>
-				<texture colordiffuse="$PARAM[color]">$INFO[ListItem.Art(thumb)]</texture>
-				<aspectratio align="center">keep</aspectratio>
+			<control type="group">
+					<visible>$PARAM[visible]</visible>
+				<control type="progress">
+					<visible>ListItem.HasEpg + Integer.IsGreater(ListItem.Progress,0)</visible>
+					<height>100%</height>
+					<width>100%</width>
+					<texturebg colordiffuse="$VAR[Blank_Color]">views/white_100.png</texturebg>
+					<midtexture colordiffuse="$VAR[PVR_Channel_Progress_Color]">views/white_100.png</midtexture>
+					<info>ListItem.Progress</info>
+				</control>
+				<control type="label">
+					<width>90</width>
+					<label>$INFO[ListItem.ChannelNumberLabel]</label>
+					<align>center</align>
+					<textcolor>$PARAM[color]</textcolor>
+				</control>
+				<control type="label">
+					<height>40</height>
+					<top>10</top>
+					<left>105</left>
+					<right>120</right>
+					<label>$INFO[ListItem.Title]</label>
+					<textcolor>$PARAM[color]</textcolor>
+				</control>
+				<control type="label">
+					<height>30</height>
+					<bottom>10</bottom>
+					<left>105</left>
+					<right>120</right>
+					<label>[UPPERCASE]$INFO[ListItem.ChannelName][/UPPERCASE]</label>
+					<font>Grid_Info_Small</font>
+					<textcolor>$PARAM[color]</textcolor>
+				</control>
+				<control type="image">
+					<right>30</right>
+					<top>15</top>
+					<height>60</height>
+					<width>90</width>
+					<texture colordiffuse="$PARAM[color]">$INFO[ListItem.Art(thumb)]</texture>
+					<aspectratio align="center">keep</aspectratio>
+				</control>
 			</control>
 		</definition>
 	</include>

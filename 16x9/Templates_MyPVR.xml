@@ -299,12 +299,24 @@
 					<onright condition="!Integer.IsGreater(Container(50).NumItems,7)">SetFocus(3600,0,absolute)</onright>
 					<scrolltime tween="sine" easing="inout">360</scrolltime>
 					<itemlayout width="1080" height="90" infoupdate="5000">
-						<include content="PVR_ChannelList_Item" />
+						<include content="PVR_ChannelList_Item">
+							<param name="visible" value="!String.IsEmpty(ListItem.Date)" />
+						</include>
+						<control type="label">
+							<visible>String.IsEmpty(ListItem.Date)</visible>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
 					</itemlayout>
 					<focusedlayout width="1080" height="90" infoupdate="5000">
 						<include content="PVR_ChannelList_Item">
+							<param name="visible" value="!String.IsEmpty(ListItem.Date)" />
 							<param name="color" value="$VAR[Light_Color]" />
 						</include>
+						<control type="label">
+							<visible>String.IsEmpty(ListItem.Date)</visible>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>$VAR[Light_Color]</textcolor>
+						</control>
 						<control type="image">
 							<bottom>0</bottom>
 							<height>1</height>

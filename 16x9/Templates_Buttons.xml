@@ -92,10 +92,13 @@
 				<texturefocus colordiffuse="$PARAM[focused_color]">icons/icon_$PARAM[icon]_focused_$PARAM[width].png</texturefocus>
 				<texturenofocus colordiffuse="$PARAM[unfocused_color]">icons/icon_$PARAM[icon]_unfocused_$PARAM[width].png</texturenofocus>
 				<include content="Rotate_180_Animation" condition="$PARAM[rotate_180]" />
+				<onclick>Dialog.Close(all, true)</onclick>
 				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(tv$PARAM[description])</onclick>
 				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(radio$PARAM[description])</onclick>
-				<onfocus>SetProperty(PVR_Controls,$PARAM[label],home)</onfocus>
+				<onfocus condition="!VideoPlayer.IsFullscreen">SetProperty(PVR_Controls,$PARAM[label],home)</onfocus>
+				<onfocus condition="VideoPlayer.IsFullscreen">SetProperty(VideoOSD_Controls,$PARAM[label],videoosd)</onfocus>
 				<enable>!Window.IsActive(TV$PARAM[description]) + !Window.IsActive(radio$PARAM[description])</enable>
+				<nested />
 			</control>
 		</definition>
 	</include>

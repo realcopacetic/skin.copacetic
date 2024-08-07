@@ -304,8 +304,8 @@
 		</font>
 		<font>
 			<name>PVR_Channel2</name>
-			<filename>Inter/Inter-Light.ttf</filename>
-			<size>22</size>
+			<filename>Inter/Inter-Regular.ttf</filename>	
+			<size>20</size>
 		</font>
 		<font>
 			<name>PVR_Date</name>

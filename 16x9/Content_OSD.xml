@@ -184,6 +184,129 @@
 		</include>
 	</include>
 
+	<include name="pvrosd_Top_Row_Content">
+		<animation effect="slide" end="30,0" time="0" condition="!Control.IsVisible(1) + Control.IsVisible(7)">Conditional</animation>
+		<animation effect="slide" end="-30,0" time="0" condition="Control.IsVisible(1) + !Control.IsVisible(7)">Conditional</animation>
+		<include content="Simple_Button_Template">
+			<param name="id" value="1" />
+			<param name="description" value="Previous" />
+			<param name="icon" value="arrow_horizontal" />
+			<visible>Player.SeekEnabled</visible>
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[210],videoosd)</onfocus>
+			<onclick>PlayerControl(Previous)</onclick>
+			<onup>60</onup>
+			<ondown>8</ondown>
+		</include>
+		<include content="PVR_Button_Template">
+			<param name="description" value="channels" />
+			<param name="id" value="2" />
+			<param name="icon" value="library" />
+			<param name="label" value="$LOCALIZE[14301]" />
+			<onup>60</onup>
+			<ondown>8</ondown>
+		</include>
+		<include content="PVR_Button_Template">
+			<param name="description" value="guide" />
+			<param name="id" value="3" />
+			<param name="icon" value="list" />
+			<param name="label" value="$LOCALIZE[19069]" />
+			<onup>60</onup>
+			<ondown>9</ondown>
+		</include>
+		<control type="togglebutton" id="4">
+			<description>Play/Pause</description>
+			<width>60</width>
+			<height>60</height>
+			<texturefocus colordiffuse="$VAR[Light_Color]">icons/icon_play_focused_60.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_play_unfocused_60.png</texturenofocus>
+			<usealttexture>![Player.Paused | Player.Forwarding | Player.Rewinding]</usealttexture>
+			<alttexturefocus colordiffuse="$VAR[Light_Color]">icons/icon_pause_focused_60.png</alttexturefocus>
+			<alttexturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_pause_unfocused_60.png</alttexturenofocus>
+			<onfocus>SetProperty(VideoOSD_Controls,$VAR[Play_Pause_Label],videoosd)</onfocus>
+			<onclick>PlayerControl(Play)</onclick>
+			<onclick>SetProperty(VideoOSD_Controls,$VAR[Play_Pause_Label],videoosd)</onclick>
+			<onup>60</onup>
+			<ondown>10</ondown>
+		</control>
+		<include content="PVR_Button_Template">
+			<param name="description" value="recordings" />
+			<param name="id" value="5" />
+			<param name="icon" value="record" />
+			<param name="radio_label" value="$LOCALIZE[10706]" />
+			<param name="label" value="$LOCALIZE[19017]" />
+			<onup>60</onup>
+			<ondown>11</ondown>
+		</include>
+		<include content="PVR_Button_Template">
+			<param name="description" value="search" />
+			<param name="id" value="6" />
+			<param name="icon" value="browse" />
+			<param name="label" value="$LOCALIZE[10605]" />
+			<onup>60</onup>
+			<ondown>12</ondown>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="7" />
+			<param name="description" value="Next" />
+			<param name="icon" value="arrow_horizontal" />
+			<param name="rotate_180" value="true" />
+			<visible>PVR.IsTimeShift</visible>
+			<onclick>PlayerControl(Next)</onclick>
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[209],videoosd)</onfocus>
+			<onup>60</onup>
+			<ondown>12</ondown>
+		</include>
+	</include>
+
+	<include name="pvrosd_Bottom_Row_Content">
+		<include content="Simple_Button_Template">
+			<param name="id" value="8" />
+			<param name="description" value="Player process info" />
+			<param name="icon" value="settings_cpu" />
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10116],videoosd)</onfocus>
+			<onclick>Dialog.Close(all,true)</onclick>
+			<onclick>ActivateWindow(playerprocessinfo)</onclick>
+			<onup>2</onup>
+			<ondown>60</ondown>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="9" />
+			<param name="description" value="Video OSD settings" />
+			<param name="icon" value="video" />
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10123],videoosd)</onfocus>
+			<onclick>ActivateWindow(osdvideosettings)</onclick>
+			<onup>3</onup>
+			<ondown>60</ondown>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="10" />
+			<param name="description" value="Stop" />
+			<param name="icon" value="stop" />
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[31301],videoosd)</onfocus>
+			<onclick>PlayerControl(Stop)</onclick>
+			<onup>4</onup>
+			<ondown>60</ondown>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="11" />
+			<param name="description" value="Audio OSD Settings" />
+			<param name="icon" value="audio" />
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10124],videoosd)</onfocus>
+			<onclick>ActivateWindow(osdaudiosettings)</onclick>
+			<onup>5</onup>
+			<ondown>60</ondown>
+		</include>
+		<include content="Simple_Button_Template">
+			<param name="id" value="12" />
+			<param name="description" value="Subtitle OSD settings" />
+			<param name="icon" value="subtitles" />
+			<onclick>ActivateWindow(OSDSubtitleSettings)</onclick>
+			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10159],videoosd)</onfocus>
+			<onup>6</onup>
+			<ondown>60</ondown>
+		</include>
+	</include>
+
 	<include name="videoosd_Top_Row_Content">
 		<include content="Simple_Button_Template">
 			<param name="id" value="1" />
@@ -198,13 +321,12 @@
 			<param name="id" value="2" />
 			<param name="description" value="Previous" />
 			<param name="icon" value="arrow_horizontal" />
-			<visible>!VideoPlayer.Content(livetv) | [Player.SeekEnabled + VideoPlayer.Content(livetv)]</visible>
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[210],videoosd)</onfocus>
 			<onclick>PlayerControl(Previous)</onclick>
 			<onup>60</onup>
 			<ondown>9</ondown>
 		</include>
-		<include content="Simple_Button_Template" condition="!VideoPlayer.Content(livetv)">
+		<include content="Simple_Button_Template">
 			<param name="id" value="3" />
 			<param name="description" value="Rewind" />
 			<param name="icon" value="chevron_horizontal" />
@@ -229,7 +351,7 @@
 			<onup>60</onup>
 			<ondown>11</ondown>
 		</control>
-		<include content="Simple_Button_Template" condition="!VideoPlayer.Content(livetv)">
+		<include content="Simple_Button_Template">
 			<param name="id" value="5" />
 			<param name="description" value="Forward" />
 			<param name="icon" value="chevron_horizontal" />
@@ -245,14 +367,13 @@
 			<param name="description" value="Next" />
 			<param name="icon" value="arrow_horizontal" />
 			<param name="rotate_180" value="true" />
-			<visible>!VideoPlayer.Content(livetv) | PVR.IsTimeShift</visible>
 			<onclick condition="Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1)">PlayerControl(Next)</onclick>
 			<onclick condition="!Player.ChapterCount + !Integer.IsGreater(Playlist.Length(video),1)">PlayerControl(BigSkipForward)</onclick>
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[209],videoosd)</onfocus>
 			<onup>60</onup>
 			<ondown>13</ondown>
 		</include>
-		<include content="Simple_Button_Template" condition="!VideoPlayer.Content(livetv)">
+		<include content="Simple_Button_Template">
 			<param name="id" value="7" />
 			<param name="description" value="Video Bookmarks" />
 			<param name="icon" value="library" />
@@ -273,8 +394,7 @@
 			<onclick>Dialog.Close(all,true)</onclick>
 			<onclick>ActivateWindow(playersettings)</onclick>
 			<onup>1</onup>
-			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
-			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
+			<ondown>3020</ondown>
 		</include>
 		<include content="Simple_Button_Template">
 			<param name="id" value="9" />
@@ -284,8 +404,7 @@
 			<onclick>Dialog.Close(all,true)</onclick>
 			<onclick>ActivateWindow(playerprocessinfo)</onclick>
 			<onup>2</onup>
-			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
-			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
+			<ondown>3020</ondown>
 		</include>
 		<include content="Simple_Button_Template">
 			<param name="id" value="10" />
@@ -294,8 +413,7 @@
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10123],videoosd)</onfocus>
 			<onclick>ActivateWindow(osdvideosettings)</onclick>
 			<onup>3</onup>
-			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
-			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
+			<ondown>3020</ondown>
 		</include>
 		<include content="Simple_Button_Template">
 			<param name="id" value="11" />
@@ -304,8 +422,7 @@
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[31301],videoosd)</onfocus>
 			<onclick>PlayerControl(Stop)</onclick>
 			<onup>4</onup>
-			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
-			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
+			<ondown>3020</ondown>
 		</include>
 		<include content="Simple_Button_Template">
 			<param name="id" value="12" />
@@ -314,18 +431,16 @@
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10124],videoosd)</onfocus>
 			<onclick>ActivateWindow(osdaudiosettings)</onclick>
 			<onup>5</onup>
-			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
-			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
+			<ondown>3020</ondown>
 		</include>
-		<include content="Simple_Button_Template" condition="!VideoPlayer.Content(livetv)">
+		<include content="Simple_Button_Template">
 			<param name="id" value="13" />
 			<param name="description" value="Subtitle OSD settings" />
 			<param name="icon" value="subtitles" />
 			<onclick>ActivateWindow(OSDSubtitleSettings)</onclick>
 			<onfocus>SetProperty(VideoOSD_Controls,$LOCALIZE[10159],videoosd)</onfocus>
 			<onup>6</onup>
-			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
-			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
+			<ondown>3020</ondown>
 		</include>
 		<include content="Simple_Button_Template">
 			<param name="id" value="14" />
@@ -335,8 +450,7 @@
 			<onclick>Dialog.Close(all,true)</onclick>
 			<onclick>ActivateWindow(videoplaylist)</onclick>
 			<onup>7</onup>
-			<ondown condition="!VideoPlayer.Content(livetv)">3020</ondown>
-			<ondown condition="VideoPlayer.Content(livetv)">60</ondown>
+			<ondown>3020</ondown>
 		</include>
 	</include>
 
