@@ -613,13 +613,18 @@
 	</variable>
 
 	<variable name="PVR_Info_Box_Title_Label">
-		<value condition="Window.Is(tvchannels) | Window.Is(radiochannels)">$INFO[ListItem.EpisodeName]</value>
+		<value condition="Window.Is(tvchannels) | Window.Is(radiochannels)">$INFO[ListItem.Title]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
 	<variable name="PVR_Info_Box_Info_Label">
-		<value condition="Window.Is(tvchannels) | Window.Is(radiochannels)">[UPPERCASE]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime,-]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</value>
+		<value condition="Window.Is(tvchannels) | Window.Is(radiochannels)">[UPPERCASE]$INFO[ListItem.EpisodeName][/UPPERCASE]</value>
 		<value>[UPPERCASE]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime,-]$VAR[ListItem_EpisodeName_Divider_Bold, ]$INFO[ListItem.EpisodeName, ]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</value>
+	</variable>
+
+	<variable name="PVR_Info_Box_Info_Label2">
+		<value condition="Window.Is(tvchannels) | Window.Is(radiochannels)">[UPPERCASE]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime,-]$VAR[ListItem_Duration_Divider_Bold, ]$INFO[ListItem.Duration(mins), , $LOCALIZE[31114]]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</value>
+		<value>[UPPERCASE]$INFO[ListItem.Date]$INFO[ListItem.EndTime,-]$VAR[ListItem_Duration_Divider_Bold, ]$INFO[ListItem.Duration(mins), , $LOCALIZE[31114]][/UPPERCASE]</value>
 	</variable>
 
 	<variable name="PVR_Next_Up_Label">

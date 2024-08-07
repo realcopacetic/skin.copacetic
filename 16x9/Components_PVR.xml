@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+	<include name="PVR_Info_Label">
+		<param name="height" default="35" />
+		<definition>
+			<control type="label">
+				<height>$PARAM[height]</height>
+				<font>Grid_Info_Small</font>
+				<label>$PARAM[label]</label>
+				<textcolor>$VAR[Light_Color]</textcolor>
+				<nested />
+			</control>
+		</definition>
+	</include>
+
 	<include name="PVR_Info_Box">
 		<param name="visible" default="true" />
 		<param name="left" />
 		<param name="right" />
 		<param name="bottom" />
 		<param name="height" />
-		<param name="plot_height_max" />
 		<param name="align" default="center" />
+		<param name="title_font" default="MusicPlayer_Title" />
 		<param name="title_label" default="$VAR[PVR_Info_Box_Title_Label]" />
 		<param name="info_label" default="$VAR[PVR_Info_Box_Info_Label]" />
+		<param name="plot_padding" default="10" />
+		<param name="plot_height_max" />
+		<param name="include_label2" default="false" />
+		<param name="info_label2" default="$VAR[PVR_Info_Box_Info_Label2]" />
 		<definition>
 			<control type="grouplist">
 				<visible>$PARAM[visible]</visible>
@@ -25,24 +42,25 @@
 				<nested />
 				<control type="textbox">
 					<height min="45" max="180">auto</height>
-					<font>MusicPlayer_Title</font>
+					<font>$PARAM[title_font]</font>
 					<label>$PARAM[title_label]</label>
 					<textcolor>$VAR[Light_Color]</textcolor>
 					<visible>!String.IsEmpty(ListItem.Label)</visible>
 				</control>
-				<control type="label">
-					<height>35</height>
-					<font>Grid_Info</font>
-					<label>$PARAM[info_label]</label>
-					<textcolor>$VAR[Light_Color]</textcolor>
-				</control>
+				<include content="PVR_Info_Label">
+					<param name="label">$PARAM[info_label]</param>
+				</include>
 				<control type="textbox">
-					<top>10</top>
+					<top>$PARAM[plot_padding]</top>
 					<height min="90" max="$PARAM[plot_height_max]">auto</height>
 					<font>Description</font>
 					<label>$INFO[ListItem.Plot]</label>
 					<visible>!String.IsEmpty(ListItem.Plot)</visible>
 				</control>
+				<include content="PVR_Info_Label" condition="$PARAM[include_label2]">
+					<param name="label">$PARAM[info_label2]</param>
+					<top>$PARAM[plot_padding]</top>
+				</include>
 			</control>
 		</definition>
 	</include>
@@ -92,7 +110,7 @@
 				<bottom>10</bottom>
 				<left>105</left>
 				<right>120</right>
-				<label>$INFO[ListItem.EpisodeName]</label>
+				<label>$INFO[ListItem.Title]</label>
 				<font>PVR_Channel2</font>
 				<textcolor>$PARAM[color]</textcolor>
 			</control>
@@ -142,12 +160,12 @@
 					<align>right</align>
 					<itemgap>10</itemgap>
 					<control type="label">
-						<height>57</height>
+						<height>100%</height>
 						<width>$PARAM[label_width]</width>
 						<label>[UPPERCASE]$PARAM[label][/UPPERCASE]</label>
 						<align>$PARAM[label_align]</align>
 						<aligny>center</aligny>
-						<font>Unwatched_Indicator</font>
+						<font>Grid_Info_Small</font>
 						<textcolor>$VAR[Light_Color]</textcolor>
 					</control>
 					<include content="PVR_Now_Playing_Image" condition="$PARAM[include_logo]" />

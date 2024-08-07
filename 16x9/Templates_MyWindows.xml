@@ -564,7 +564,7 @@
 		<param name="target_id" default="50" />
 		<param name="type" default="Options" />
 		<definition>
-			<include content="Scrollbars" condition="!Window.Is(tvguide) + !Window.Is(radioguide) + !Window.Is(tvchannels) + !Window.Is(radiochannels)" />
+			<include content="Scrollbars" />
 			<include content="Hidden_$PARAM[type]_Menu" condition="!$EXP[Hidden_Options_Menu_Disabled]">
 				<param name="target_id" value="$PARAM[target_id]" />
 			</include>

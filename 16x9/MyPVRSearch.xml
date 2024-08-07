@@ -9,8 +9,6 @@
 		<include content="Common_Controls" />
 		<include content="tvguide_Controls" />
 		<include content="tvsearch_Views" />
-		<include content="MyViews_Menu_and_Scrollbars">
-			<param name="type" value="PVR" />
-		</include>
+		<include content="Hidden_PVR_Menu" />
 	</controls>
 </window>

@@ -10,9 +10,8 @@
 		<include content="Common_Controls" />
 		<include content="tvguide_Controls" />
 		<include content="tvguide_Views" />
-		<include content="MyViews_Menu_and_Scrollbars">
+		<include content="Hidden_PVR_Menu">
 			<param name="target_id" value="10" />
-			<param name="type" value="PVR" />
 		</include>
 	</controls>
 </window>

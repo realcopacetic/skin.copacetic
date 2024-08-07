@@ -22,9 +22,15 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ---
 **2.6.1**
 - Added a three second delay when entering movies or home windows before trailers will autoplay
-- Minor tweaks to design for pvr guide and channels
+- Minor improvements to visualisation
+- Minor improvements to design for pvr guide and channels
+- Addition of PVR shortcuts in hidden menu screen when in PVR windows
+- DialogPVRGuideSearch.xml
+- MyPVRSearch.xml
 
 Still to do:
+- does label need to fade out and in when home screen > music player controls?
+- Views break after coming out of a playlist (next episode)
 - remaining pvr screens
 - disable grid on certain list only views
 - favourites all viewtype options (omega only)
