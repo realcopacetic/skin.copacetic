@@ -67,43 +67,67 @@
 
 	<include name="PVR_Progress">
 		<control type="progress">
-			<visible>ListItem.HasEpg</visible>
-			<width>90</width>
-			<left>15</left>
-			<height>6</height>
-			<centertop>50%</centertop>
+			<visible>ListItem.HasEpg + Integer.IsGreater(ListItem.Progress,0)</visible>
+			<height>100%</height>
+			<width>100%</width>
+			<texturebg colordiffuse="$VAR[Blank_Color]">views/white_100.png</texturebg>
+			<midtexture colordiffuse="$VAR[PVR_Channel_Progress_Color]">views/white_100.png</midtexture>
 			<info>ListItem.Progress</info>
-			<texturebg colordiffuse="$VAR[Progress_Light_Background_Color]">views/white_100.png</texturebg>
-			<midtexture colordiffuse="$VAR[Light_Color]">views/white_100.png</midtexture>
 		</control>
 	</include>
 
+	<include name="PVR_Channel_Number_Label">
+		<param name="color" default="$VAR[Light_Color]" />
+		<definition>
+			<control type="label">
+				<width>90</width>
+				<label>$INFO[ListItem.ChannelNumberLabel]</label>
+				<align>center</align>
+				<textcolor>$PARAM[color]</textcolor>
+			</control>
+		</definition>
+	</include>
+
+	<include name="PVR_Icon">
+		<param name="texture" default="$INFO[Player.Art(thumb)]" />
+		<param name="right" default="120" />
+		<param name="top" default="0" />
+		<param name="height" default="60" />
+		<param name="width" default="90" />
+		<param name="color" defalut="$VAR[Light_Color]" />
+		<definition>
+			<control type="image">
+				<right>$PARAM[right]</right>
+				<top>$PARAM[top]</top>
+				<height>$PARAM[height]</height>
+				<width>$PARAM[width]</width>
+				<texture colordiffuse="$PARAM[color]">$PARAM[texture]</texture>
+				<aspectratio align="center">keep</aspectratio>
+			</control>
+		</definition>
+	</include>
+
 	<include name="PVR_ChannelList_Item">
-		<param name="color" default="$VAR[Unfocused_Color]" />
 		<param name="visible" default="true" />
+		<param name="progress" default="true" />
+		<param name="channel_number" default="true" />
+		<param name="icon" default="true" />
+		<param name="title_label" default="$INFO[ListItem.Title]" />
+		<param name="info_label" default="$INFO[ListItem.ChannelName]" />
+		<param name="color" default="$VAR[Unfocused_Color]" />
 		<definition>
 			<control type="group">
-					<visible>$PARAM[visible]</visible>
-				<control type="progress">
-					<visible>ListItem.HasEpg + Integer.IsGreater(ListItem.Progress,0)</visible>
-					<height>100%</height>
-					<width>100%</width>
-					<texturebg colordiffuse="$VAR[Blank_Color]">views/white_100.png</texturebg>
-					<midtexture colordiffuse="$VAR[PVR_Channel_Progress_Color]">views/white_100.png</midtexture>
-					<info>ListItem.Progress</info>
-				</control>
-				<control type="label">
-					<width>90</width>
-					<label>$INFO[ListItem.ChannelNumberLabel]</label>
-					<align>center</align>
-					<textcolor>$PARAM[color]</textcolor>
-				</control>
+				<visible>$PARAM[visible]</visible>
+				<include content="PVR_Progress" condition="$PARAM[progress]" />
+				<include content="PVR_Channel_Number_Label" condition="$PARAM[channel_number]">
+					<param name="color" value="$PARAM[color]" />
+				</include>
 				<control type="label">
 					<height>40</height>
 					<top>10</top>
 					<left>105</left>
 					<right>120</right>
-					<label>$INFO[ListItem.Title]</label>
+					<label>$PARAM[title_label]</label>
 					<textcolor>$PARAM[color]</textcolor>
 				</control>
 				<control type="label">
@@ -111,31 +135,19 @@
 					<bottom>10</bottom>
 					<left>105</left>
 					<right>120</right>
-					<label>[UPPERCASE]$INFO[ListItem.ChannelName][/UPPERCASE]</label>
+					<label>[UPPERCASE]$PARAM[info_label][/UPPERCASE]</label>
 					<font>Grid_Info_Small</font>
 					<textcolor>$PARAM[color]</textcolor>
 				</control>
-				<control type="image">
-					<right>30</right>
-					<top>15</top>
-					<height>60</height>
-					<width>90</width>
-					<texture colordiffuse="$PARAM[color]">$INFO[ListItem.Art(thumb)]</texture>
-					<aspectratio align="center">keep</aspectratio>
-				</control>
+				<include content="PVR_Icon" condition="$PARAM[icon]">
+					<param name="color" value="$PARAM[color]" />
+					<param name="right" value="30" />
+					<param name="top" value="15" />
+					<param name="height" value="60" />
+					<param name="width" value="90" />
+				</include>
 			</control>
 		</definition>
-	</include>
-
-	<include name="PVR_Now_Playing_Image">
-		<control type="image">
-			<right>120</right>
-			<top>240</top>
-			<height>60</height>
-			<width>90</width>
-			<texture colordiffuse="$PARAM[color]">$INFO[Player.Art(thumb)]</texture>
-			<aspectratio align="center">keep</aspectratio>
-		</control>
 	</include>
 
 	<include name="PVR_Now_Playing_Info">
@@ -170,7 +182,7 @@
 						<font>Grid_Info_Small</font>
 						<textcolor>$VAR[Light_Color]</textcolor>
 					</control>
-					<include content="PVR_Now_Playing_Image" condition="$PARAM[include_logo]" />
+					<include content="PVR_Icon" condition="$PARAM[include_logo]" />
 				</control>
 				<control type="image">
 					<height>1</height>

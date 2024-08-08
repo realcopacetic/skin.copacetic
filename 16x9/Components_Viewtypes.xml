@@ -272,7 +272,6 @@
 					<param name="color" value="$PARAM[music_rating_color]" />
 					<param name="slide" value="$PARAM[music_rating_slide]" />
 				</include>
-				<include content="PVR_Progress" condition="Window.Is(tvsearch)" />
 				<include content="Simple_List_Layout" condition="!Skin.HasSetting(List_Prefer_Scrolling)">
 					<param name="label_left" value="$PARAM[label_left]" />
 					<param name="label_maxwidth" value="$PARAM[label_maxwidth]" />

@@ -325,6 +325,18 @@
 		<value>$INFO[Container(11).ListItem.Label]</value>
 	</variable>
 
+	<variable name="tvtimers_Breadcrumb_Label">
+		<value condition="Window.Is(tvtimers) | Window.Is(radiotimers)">$LOCALIZE[19040]</value>
+		<value>$LOCALIZE[19138]</value>
+	</variable>
+
+	<variable name="tvtimers_Breadcrumb_Info_Label">
+		<value condition="Window.Is(tvtimers)">$LOCALIZE[19020]</value>
+		<value condition="Window.Is(radiotimers)">$LOCALIZE[19021]</value>
+		<value condition="Window.Is(tvtimerrules)">$LOCALIZE[19020]$INFO[Control.GetLabel(29), / ]</value>
+		<value>$LOCALIZE[19021]$INFO[Control.GetLabel(29), / ]</value>
+	</variable>
+
 	<variable name="videoosd_Subtitle_Toggle_Label">
 		<!-- LANG / Disabled / Not available -->
 		<value condition="VideoPlayer.SubtitlesEnabled + VideoPlayer.HasSubtitles">[UPPERCASE]$INFO[VideoPlayer.SubtitlesLanguage][/UPPERCASE]</value>
