@@ -20,8 +20,7 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
-**1.6.1**
-- Added a three second delay when entering movies or home windows before trailers will autoplay
+**1.6.2**
 - Minor improvements to visualisation
 - Minor improvements to design for MyPVRChannels.xml and MyPVRGuide.xml
 - Addition of PVR shortcuts in hidden menu screen when in PVR windows
@@ -37,8 +36,6 @@ Still to do:
 - pvr timeshift
 - pvr channel icons on info screens and videoplayer info
 - pvr stream info in videobreadcrumb
-
-
 - does label need to fade out and in when home screen > music player controls?
 - Views break after coming out of a playlist (next episode)
 - disable grid on certain list only views
@@ -53,6 +50,9 @@ Still to do:
 - remove window property hack for music ratings during playback in Omega
 = <!-- temp fix to account for fact that DecreaseRating won't go lower than 1 for VideoPlayer.UserRating -->
 - https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Extended-Info#direct-call-auto
+
+**1.6.1**
+- Added a three second delay when entering movies or home windows before trailers will autoplay
 
 **1.6.0**
 - Fixed typo in trailer autoplay preventing tvshow trailers from autoplaying in videos window unless container content was NOT tvshows. 
