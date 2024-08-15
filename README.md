@@ -20,6 +20,11 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.6.3**
+- Fix for gridview artwork mask being on top of icons
+- Fix for accidental deletion of grid icon when a listitem is a collection
+- Added missing description label addonbrowser
+
 **1.6.2**
 - Minor improvements to visualisation
 - Minor improvements to design for MyPVRChannels.xml and MyPVRGuide.xml
