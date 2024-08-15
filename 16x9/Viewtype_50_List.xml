@@ -45,7 +45,7 @@
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + !$EXP[PanelDialog_IsVisible] + !Window.Is(videoplaylist)" />
 					<param name="colordiffuse" value="$VAR[ListView_Panel_Mask]" />
 					<include content="Visible_Fade_Animation" />
-					<animation effect="zoom" start="60,180,1800,720" end="720,180,1140,720" time="0" condition="$EXP[Containers_Posters] | [!Window.Is(addonbrowser) + $EXP[Containers_Square]]">Conditional</animation>
+					<animation effect="zoom" start="60,180,1800,720" end="720,180,1140,720" time="0" condition="$EXP[Containers_Posters] | $EXP[Containers_Square]">Conditional</animation>
 				</include>
 				<include content="Artwork_Transition_Fade" condition="Window.Is(videos) | Window.Is(programs)">
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + $EXP[Containers_Posters]" />
@@ -54,21 +54,12 @@
 					<param name="art_icon" value="$PARAM[art_icon]" />
 					<param name="include_progress" value="true" />
 				</include>
-				<include content="Artwork_Transition_Fade" condition="Window.Is(videos) | Window.Is(music) | Window.Is(musicplaylist) | Window.Is(pictures)">
+				<include content="Artwork_Transition_Fade" condition="Window.Is(videos) | Window.Is(music) | Window.Is(musicplaylist) | Window.Is(pictures) | Window.Is(addonbrowser)">
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + $EXP[Containers_Square]" />
 					<param name="width" value="720" />
 					<param name="height" value="720" />
 					<param name="target_id" value="$PARAM[id]" />
 					<param name="art_icon" value="$PARAM[art_icon]" />
-				</include>
-				<include content="Artwork_Transition_Fade" condition="Window.Is(addonbrowser)">
-					<animation effect="slide" end="194,0" time="0" condition="true">Conditional</animation>
-					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + $EXP[Containers_Square]" />
-					<param name="width" value="512" />
-					<param name="height" value="512" />
-					<param name="target_id" value="$PARAM[id]" />
-					<param name="art_icon" value="$PARAM[art_icon]" />
-					<param name="aspectratio" value="center" />
 				</include>
 				<include content="Artwork_Transition_Fade" condition="Window.Is(videos)">
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + [Container.Content(videos) | Container.Content(episodes)]" />
@@ -128,6 +119,15 @@
 					<param name="animation" value="VisibleHidden_Fade_Delayed_Animation" />
 					<param name="info_label_visible" value="true" />
 					<param name="textcolor" value="$VAR[Breadcrumb_Label_Color]" />
+				</include>
+				<include content="Description_Label" condition="Window.Is(addonbrowser)">
+					<param name="type" value="textbox" />
+					<param name="label" value="$INFO[ListItem.AddonDescription]" />
+					<param name="left" value="120" />
+					<param name="right" value="120" />
+					<param name="bottom" value="40" />
+					<param name="height" value="100" />
+					<param name="font" value="LoginScreen_Info" />
 				</include>
 			</include>
 		</definition>

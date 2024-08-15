@@ -623,7 +623,7 @@
 							<param name="color" value="$PARAM[title_color]" />
 							<param name="label" value="$PARAM[info_label]" />
 						</include>
-						<include content="Common_Details_Textbox" condition="Window.Is(videos) | Window.Is(music) | Window.Is(programs)">
+						<include content="Common_Details_Textbox" condition="Window.Is(addonbrowser) | Window.Is(music) | Window.Is(programs) | Window.Is(videos)">
 							<param name="visible" value="$EXP[$PARAM[viewtype_label]View_Details_Plot_IsVisible] + !String.IsEmpty(Control.GetLabel(6003)) + ![Control.HasFocus(3100) + Container.Content(tvshows)]" />
 							<param name="gap" value="60" />
 							<param name="maxheight" value="$PARAM[plot_maxheight]" />
