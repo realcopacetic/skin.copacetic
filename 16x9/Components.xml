@@ -50,6 +50,7 @@
 				<onleft>$PARAM[target_id]</onleft>
 				<ontop>$PARAM[target_id]</ontop>
 				<onbottom>$PARAM[target_id]</onbottom>
+				<onback>$PARAM[target_id]</onback>
 				<nested />
 			</control>
 		</definition>
@@ -267,6 +268,7 @@
 			<top>30</top>
 			<texturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_browse_unfocused_120.png</texturenofocus>
 			<texturefocus colordiffuse="$VAR[Light_Color]">icons/icon_browse_focused_120.png</texturefocus>
+			<onclick>SetProperty(globalsearch_focusing,true,home)</onclick>
 			<onclick>RunScript(script.copacetic.helper,action=globalsearch_input)</onclick>
 			<onclick>SetFocus(3000)</onclick>
 			<include content="globalsearch_home_Navigation" />

@@ -20,6 +20,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**2.6.4**
+- Added a workaround for the focus glitch on homescreen when globalsearch icon is clicked and focus temporarily returns to home menu before keyboard loads. This is required to ensure that after keyboard or global search is exited, the homescreen is properly focused on the main menu. Added a window property to hide main menu during this transition.
+
 **2.6.3**
 - Fix for gridview artwork mask being on top of icons
 - Fix for accidental deletion of grid icon when a listitem is a collection

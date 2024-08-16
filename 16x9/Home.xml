@@ -11,7 +11,7 @@
 		<!-- Focus setter added to enable scrollbar to trigger on window load -->
 		<include content="Focus_Setter">
 			<param name="target_id" value="SetFocus(3000)" />
-			<animation effect="slide" end="0,0" time="360" reversible="false">Focus</animation>
+			<animation effect="slide" end="0,0" time="500" reversible="false">Focus</animation>
 		</include>
 		<include content="Home_Container_Update_Bounce_Test" />
 		<include content="User_Scroll_Delay" />
@@ -59,6 +59,7 @@
 				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 				<include content="Horizontal_List">
 					<param name="hidden_id" value="3000" />
+					<param name="visible" value="!String.IsEqual(Window(home).Property(globalsearch_focusing),true)" />
 					<param name="focused_color" value="$VAR[Light_Color]" />
 					<param name="unfocused_color" value="$VAR[Light_Color]" />
 				</include>

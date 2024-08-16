@@ -120,9 +120,9 @@
 					<param name="info_label_visible" value="true" />
 					<param name="textcolor" value="$VAR[Breadcrumb_Label_Color]" />
 				</include>
-				<include content="Description_Label" condition="Window.Is(addonbrowser)">
+				<include content="Description_Label" condition="Window.Is(addonbrowser) | Window.Is(programs)">
 					<param name="type" value="textbox" />
-					<param name="label" value="$INFO[ListItem.AddonDescription]" />
+					<param name="label" value="$VAR[Plot_Label]" />
 					<param name="left" value="120" />
 					<param name="right" value="120" />
 					<param name="bottom" value="40" />
