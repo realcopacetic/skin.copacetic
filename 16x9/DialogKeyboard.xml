@@ -3,6 +3,7 @@
 	<!-- virtualkeyboard -->
 	<defaultcontrol always="true">4010</defaultcontrol>
 	<zorder>2</zorder>
+	<onload condition="String.IsEqual(Window(home).Property(globalsearch_focusing),true)">ClearProperty(globalsearch_focusing,home)</onload>
 	<controls>
 		<include content="DialogKeyboard_Hidden" />
 		<include content="Default_Dialog_Panel_Layout">
