@@ -313,12 +313,41 @@
 			<param name="reversible" value="true" />
 		</include>
 	</include>
-	
+
+	<include name="VideoPlayer_Mask_Fade_Animation">
+		<param name="fadein_condition" default="[Window.Previous(VideoFullScreen.xml) + !Player.Paused + !$EXP[TransparentDialog_IsVisible]] | Window.Previous(MyPVRChannels.xml) | Window.Previous(MyPVRGuide.xml) | Window.Previous(MyPVRRecordings.xml) | Window.Previous(MyPVRSearch.xml) | Window.Previous(MyPVRTimers.xml)" />
+		<param name="fadeout_condition" default="[Window.Next(VideoFullScreen.xml) + !Player.Paused + !$EXP[TransparentDialog_IsVisible]] | Window.Next(MyPVRChannels.xml) | Window.Next(MyPVRGuide.xml) | Window.Next(MyPVRRecordings.xml) | Window.Next(MyPVRSearch.xml) | Window.Next(MyPVRTimers.xml)" />
+		<definition>
+			<include content="fade_animation">
+				<param name="type" value="WindowOpen" />
+				<param name="time" value="1x" />
+				<param name="condition" value="$PARAM[fadein_condition]" />
+				<param name="reversible" value="true" />
+			</include>
+			<include content="fade_animation">
+				<param name="type" value="WindowClose" />
+				<param name="time" value="1x" />
+				<param name="condition" value="$PARAM[fadeout_condition]" />
+				<param name="reversible" value="true" />
+			</include>
+			<include content="fade_animation">
+				<param name="type" value="Visible" />
+				<param name="time" value="1x" />
+				<param name="reversible" value="true" />
+			</include>
+			<include content="fade_animation">
+				<param name="type" value="Visible" />
+				<param name="time" value="1x" />
+				<param name="reversible" value="true" />
+			</include>
+		</definition>
+	</include>
+
 	<include name="Multiart_Fade_Animation">
 		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="4000" tween="sine" easing="inout" reversible="false">WindowOpen</animation>
 		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="1500" tween="sine" easing="inout" reversible="false">Visible</animation>
 	</include>
-	
+
 	<include name="MusicPlayer_Fade_Animation">
 		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" tween="sine" easing="inout" reversible="true">VisibleChange</animation>
 	</include>
@@ -337,7 +366,7 @@
 		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" tween="sine" easing="inout" reversible="true" condition="!Container.Scrolling">Visible</animation>
 		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="Default_Transition_1x" tween="sine" easing="inout" reversible="true" condition="Container.Scrolling">Visible</animation>
 	</include>
-	
+
 	<include name="Secondary_List_Scroll_Animation">
 		<param name="fadeout" default="true" />
 		<definition>
@@ -369,7 +398,7 @@
 		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="![!Skin.TimerIsRunning(video_playback_label_interruptor) + Integer.IsGreater(Skin.TimerElapsedSecs(video_playback),2) + Integer.IsLess(Skin.TimerElapsedSecs(video_playback),11)]">Visible</animation>
 		<animation effect="fade" start="100" end="0" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="![!Skin.TimerIsRunning(video_playback_label_interruptor) + Integer.IsGreater(Skin.TimerElapsedSecs(video_playback),2) + Integer.IsLess(Skin.TimerElapsedSecs(video_playback),11)]">Hidden</animation>
 	</include>
-	
+
 	<include name="Widget_Breadcrumb_Animation">
 		<include content="fade_Visible" condition="!Skin.HasSetting(Quick_Transitions)">
 			<param name="time" value="Default_Transition_1x" />

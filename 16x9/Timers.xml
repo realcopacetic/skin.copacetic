@@ -19,9 +19,9 @@
   </timer>
   <timer>
     <name>home_screensaver</name>
-    <start reset="true">Skin.HasSetting(Home_Screensaver_Enabled) + Window.Is(home) + [Control.HasFocus(3000) | Control.HasFocus(4201)]</start>
+    <start reset="true">Skin.HasSetting(Home_Screensaver_Enabled) + Window.Is(home) + [Control.HasFocus(3000) | Control.HasFocus(4201)] + !VideoPlayer.Content(livetv)</start>
     <reset>!Control.HasFocus(3000) + !Control.HasFocus(4201)</reset>
-    <stop>Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(home_screensaver),15) + System.IdleTime(15)</stop>
+    <stop>Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(home_screensaver),15) + System.IdleTime(15) + !VideoPlayer.Content(livetv)</stop>
     <onstop>SetFocus(4300)</onstop>
   </timer>
   <timer>

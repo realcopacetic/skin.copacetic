@@ -51,6 +51,7 @@
 	<include file="Templates_script-upnext.xml" />
 	<include file="Templates_MyPVR.xml" />
 	<include file="Templates_MyWindows.xml" />
+	<include file="Templates_Viewtypes_PVR.xml" />
 	<include file="Templates_Viewtypes.xml" />
 	<include file="Templates_Widgets.xml" />
 	<include file="Viewtype_50_List.xml" />

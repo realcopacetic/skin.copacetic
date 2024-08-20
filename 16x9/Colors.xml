@@ -70,6 +70,9 @@
 	<variable name="Alpha_15">
 		<value>26</value>
 	</variable>
+	<variable name="Alpha_8">
+		<value>14</value>
+	</variable>
 	<variable name="Alpha_0">
 		<value>01</value>
 	</variable>
@@ -189,6 +192,7 @@
 	<variable name="Dropshadow_Diffuse">
 		<value>$VAR[Brightness_0]</value>
 	</variable>
+
 	<!-- Alpha overlay masks -->
 	<variable name="Grid_Mask">
 		<value>$VAR[Alpha_66]$VAR[Dark_Hex]</value>
@@ -218,21 +222,18 @@
 		<value condition="Skin.String(Background_Opacity,50)">$VAR[Alpha_50]$VAR[Dark_Grey_Hex]</value>
 		<value>$VAR[Alpha_75]$VAR[Dark_Grey_Hex]</value>
 	</variable>
-	<variable name="OSD_Background_Diffuse">
+	<variable name="OSD_Background_Mask">
 		<value condition="Skin.String(OSD_Background_Brightness,50)">$VAR[Alpha_50]$VAR[Dark_Hex]</value>
 		<value condition="Skin.String(OSD_Background_Brightness,33)">$VAR[Alpha_66]$VAR[Dark_Hex]</value>
 		<value>$VAR[Alpha_75]$VAR[Dark_Hex]</value>
 	</variable>
 	<variable name="Transparent_Dialog_Mask">
-		<value condition="VideoPlayer.IsFullscreen">$VAR[OSD_Background_Diffuse]</value>
+		<value condition="VideoPlayer.IsFullscreen">$VAR[OSD_Background_Mask]</value>
 		<value>$VAR[Alpha_50]$VAR[Dark_Hex]</value>
 	</variable>
 	<variable name="visualisation_Mask">
 		<value condition="!Skin.HasSetting(visualisation_Disable_Background)">$VAR[Dark_Color]</value>
 		<value>$VAR[Secondary_Color]</value>
-	</variable>
-	<variable name="videoplayer_Mask">
-		<value>$VAR[Alpha_50]$VAR[Dark_Hex]</value>
 	</variable>
 
 	<!-- Labels -->
@@ -295,6 +296,14 @@
 		<value condition="Control.HasFocus(62)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
+	<variable name="pvrgroupmanager_11_Focus_Color">
+		<value condition="Window.Is(pvrgroupmanager) + Control.HasFocus(11)">$VAR[Light_Color]</value>
+		<value>$VAR[Unfocused_Color]</value>
+	</variable>
+	<variable name="pvrgroupmanager_12_Focus_Color">
+		<value condition="Window.Is(pvrgroupmanager) + Control.HasFocus(12)">$VAR[Light_Color]</value>
+		<value>$VAR[Unfocused_Color]</value>
+	</variable>
 	<variable name="Settings_Grouplist_Label_Color">
 		<value condition="Window.Is(smartplaylisteditor) + Control.HasFocus(10)">$VAR[Light_Color]</value>
 		<value condition="Window.Is(addonsettings) + String.IsEqual(Container(5).CurrentItem,-1) + !ControlGroup(4000).HasFocus">$VAR[Light_Color]</value>
@@ -306,6 +315,8 @@
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="Settings_Left_List_Focus_Color">
+		<value condition="Window.Is(pvrgroupmanager) + [Control.HasFocus(13) | Control.HasFocus(25) | Control.HasFocus(27) | Control.HasFocus(28)]">$VAR[Light_Color]</value>
+		<value condition="Window.Is(pvrchannelmanager) + Control.HasFocus(20)">$VAR[Light_Color]</value>
 		<value condition="Window.Is(filemanager) + Control.HasFocus(20)">$VAR[Light_Color]</value>
 		<value condition="Window.Is(musicplaylisteditor) + Control.HasFocus(50)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
@@ -621,14 +632,18 @@
 		<value condition="Skin.String(Accent_Color_Contrast,dark) + !Skin.String(User_Defined_Accent_Color,copacetic_accent_color)">$VAR[Dark_Color]</value>
 		<value>$VAR[Light_Color]</value>
 	</variable>
+
 	<variable name="Scroll_Background_Color">
-		<value condition="$EXP[Background_IsVisible]">$VAR[Alpha_15]$VAR[Light_Hex]</value>
+		<value condition="$EXP[Background_IsVisible] | $EXP[PVR_IsVisible]">$VAR[Alpha_15]$VAR[Light_Hex]</value>
 		<value condition="Skin.String(Theme,Light)">$VAR[Alpha_15]$VAR[Dark_Hex]</value>
 		<value>$VAR[Alpha_15]$VAR[Light_Hex]</value>
 	</variable>
 	<variable name="Scroll_Focused_Color">
-		<value condition="$EXP[Background_IsVisible]">$VAR[Light_Color]</value>
+		<value condition="$EXP[Background_IsVisible] | $EXP[PVR_IsVisible]">$VAR[Light_Color]</value>
 		<value>$VAR[Primary_Color]</value>
+	</variable>
+	<variable name="PVR_Scroll_Background_Color">
+		<value>$VAR[Alpha_8]$VAR[Light_Hex]</value>
 	</variable>
 	
 	<variable name="Scroll_Widget_Background_Color">
@@ -936,7 +951,7 @@
 		<value>$VAR[Alpha_15]$VAR[Light_Hex]</value>
 	</variable>
 	<variable name="Seekbar_Focused_Color">
-		<value condition="Control.HasFocus(60)">$VAR[Accent_Color]</value>
+		<value condition="Control.HasFocus(60) + !VideoPlayer.Content(livetv)">$VAR[Accent_Color]</value>
 		<value condition="Skin.String(Theme,Light) + $EXP[visualisation_Background_IsEmpty] + Skin.String(visualisation_Layout,Large)">$VAR[Dark_Color]</value>
 		<value>$VAR[Light_Color]</value>
 	</variable>
@@ -966,7 +981,8 @@
 	</variable>
 	<variable name="tvguide_Icon_Focused_Color">
 		<value condition="ListItem.IsRecording">$VAR[Alpha_100]$VAR[Accent_Hex]</value>
-		<value>$VAR[Light_Color]</value>
+		<value condition="Control.HasFocus(10)">$VAR[Light_Color]</value>
+		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="tvguide_Icon_Unfocused_Color">
 		<value condition="ListItem.IsRecording">$VAR[Alpha_100]$VAR[Accent_Hex]</value>
@@ -978,5 +994,8 @@
 	</variable>
 	<variable name="tvchannels_Progress_Color">
 		<value>$VAR[Alpha_50]$VAR[Dark_Hex]</value>
+	</variable>
+	<variable name="PVR_DetailedListView_Focus_Color">
+		<value>ff191D1E</value><!-- 4% white on top of Dark grey color, but with no transparency -->
 	</variable>
 </includes>

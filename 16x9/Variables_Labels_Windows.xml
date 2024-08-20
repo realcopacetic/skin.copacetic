@@ -78,16 +78,29 @@
 		<value>$LOCALIZE[31628]</value>
 	</variable>
 
+	<variable name="pvrchannelmanager_Info_Label">
+		<value condition="!String.IsEmpty(Window.Property(IsRadio))">$VAR[Copacetic_Divider_Bold]$INFO[Container(20).NumItems, , $LOCALIZE[19024]]</value>
+		<value>$VAR[Copacetic_Divider_Bold]$INFO[Container(20).NumItems, , $LOCALIZE[19023]]</value>
+	</variable>
+
+	<variable name="pvrgroupmanager_Info_Label">
+		<value condition="!String.IsEmpty(Window.Property(IsRadio))">$VAR[Copacetic_Divider_Bold]$INFO[Container(13).NumItems, , $LOCALIZE[19174]]</value>
+		<value>$VAR[Copacetic_Divider_Bold]$INFO[Container(13).NumItems, , $LOCALIZE[19173]]</value>
+	</variable>
+
 	<variable name="script-upnext_Label">
 		<value condition="!Integer.IsGreater(Window.Property(Episode),9)">$VAR[Window_Property_Season_Divider_Bold]$INFO[Window.Property(season), ]$INFO[Window.Property(episode),x0]</value>
 		<value>$VAR[Window_Property_Season_Divider_Bold]$INFO[Window.Property(season), ]$INFO[Window.Property(episode),x]</value>
 	</variable>
 
 	<variable name="seekbar_Left_Label">
+		<value condition="!String.IsEmpty(PVR.EPGEventElapsedTime)">$INFO[PVR.EPGEventElapsedTime]</value>
 		<value condition="Integer.IsGreater(Player.ChapterCount,0)">$VAR[seekbar_Chapter_Label]$VAR[seekbar_Chapter_Count_Label,/][CR]$INFO[Player.Time]</value>
 		<value>$INFO[Player.Time]</value>
 	</variable>
 	<variable name="seekbar_Right_Label">
+		<value condition="Skin.HasSetting(Prefer_TimeRemaining) + !String.IsEmpty(PVR.EPGEventRemainingTime)">$INFO[PVR.EPGEventRemainingTime,-]</value>
+		<value condition="!String.IsEmpty(PVR.EPGEventDuration)">$INFO[PVR.EPGEventDuration]</value>
 		<value condition="Skin.HasSetting(Prefer_TimeRemaining)">$INFO[Player.TimeRemaining,-]</value>
 		<value>$INFO[Player.Duration]</value>
 	</variable>
@@ -194,7 +207,6 @@
 		<value condition="Control.HasFocus(16060) | Control.HasFocus(16061)">$LOCALIZE[31587]</value>
 		<value condition="Control.HasFocus(16070) | Control.HasFocus(16071)">$LOCALIZE[31822]</value>
 		<value condition="Control.HasFocus(16080) | Control.HasFocus(16081)">$LOCALIZE[31819]</value>
-
 		<!-- Home -->
 		<value condition="Control.HasFocus(1101)">$LOCALIZE[31529]</value>
 		<value condition="Control.HasFocus(1103)">$LOCALIZE[31530]</value>

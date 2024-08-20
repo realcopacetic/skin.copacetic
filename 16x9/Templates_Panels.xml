@@ -137,7 +137,9 @@
 						<param name="height" value="$PARAM[left_list_height]" />
 						<param name="onleft" value="$PARAM[left_list_onleft]" />
 						<param name="onright" value="$PARAM[right_list_id]" />
-						<param name="focus_color" value="$PARAM[left_list_focus_color]" />
+						<param name="onright_condition" value="![Container($PARAM[left_list_id]).HasPrevious | Container($PARAM[left_list_id]).HasNext]" />
+						<param name="onright2" value="$PARAM[left_list_pagecontrol]" />
+						<param name="onright2_condition" value="Container($PARAM[left_list_id]).HasPrevious | Container($PARAM[left_list_id]).HasNext" /> --> <param name="focus_color" value="$PARAM[left_list_focus_color]" />
 						<param name="label" value="$PARAM[left_list_label]" />
 						<param name="label2" value="$PARAM[left_list_label2]" />
 						<param name="label2_visible" value="$PARAM[left_list_label2_visible]" />
@@ -150,8 +152,11 @@
 						<param name="width" value="$PARAM[right_list_width]" />
 						<param name="height" value="$PARAM[right_list_height]" />
 						<param name="top" value="$PARAM[right_list_top]" />
-						<param name="onleft" value="$PARAM[left_list_id]" />
 						<param name="onright" value="$PARAM[right_list_onright]" />
+						<param name="onleft" value="$PARAM[left_list_id]" />
+						<param name="onleft_condition" value="![Container($PARAM[right_list_id]).HasPrevious | Container($PARAM[right_list_id]).HasNext]" />
+						<param name="onleft2" value="$PARAM[right_list_pagecontrol]" />
+						<param name="onleft2_condition" value="Container($PARAM[right_list_id]).HasPrevious | Container($PARAM[right_list_id]).HasNext" />
 						<param name="focus_color" value="$PARAM[right_list_focus_color]" />
 						<param name="focus_border_visible" value="$PARAM[right_list_focus_border_visible]" />
 						<param name="label" value="$PARAM[right_list_label]" />

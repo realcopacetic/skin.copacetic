@@ -151,7 +151,7 @@
 		<param name="fadeout_animation_condition" default="true" />
 		<definition>
 			<control type="group">
-				<visible>!VideoPlayer.IsFullscreen + $PARAM[visible]</visible>
+				<visible>!VideoPlayer.IsFullscreen + !$EXP[globalsearch_IsVisible] + $PARAM[visible]</visible>
 				<include content="VisibleHidden_Background_Fade_Delayed_Animation" />
 				<include content="Background_Multiart">
 					<param name="include_list" value="false" />
@@ -171,6 +171,7 @@
 				</include>
 				<include content="Embedded_VideoPlayer">
 					<param name="visible" value="VideoPlayer.Content(livetv)" />
+					<param name="mask_visible" value="VideoPlayer.Content(livetv)" />
 				</include>
 				<nested />
 			</control>
@@ -277,20 +278,22 @@
 
 	<include name="VideoPlayer_Mask">
 		<control type="image">
-			<texture colordiffuse="$VAR[videoplayer_Mask]">views/white_100.png</texture>
-			<visible>$EXP[TransparentDialog_IsVisible]</visible>
-			<include content="VisibleHidden_Fade_Animation" />
+			<texture colordiffuse="$VAR[OSD_Background_Mask]">views/white_100.png</texture>
+			<visible>$EXP[TransparentDialog_IsVisible] | $PARAM[visible]</visible>
+			<include content="VideoPlayer_Mask_Fade_Animation" />
 		</control>
 	</include>
 
 	<include name="Embedded_VideoPlayer">
+		<param name="mask_visible" default="false" />
 		<definition>
 			<control type="group">
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Animation" />
-				<nested />
 				<control type="videowindow" />
-				<include content="VideoPlayer_Mask" condition="Window.Is(tvchannels) | Window.Is(tvguide) | Window.Is(home)" />
+				<include content="VideoPlayer_Mask" condition="Window.Is(home) | $EXP[Settings_Window_IsVisible] | $EXP[PVR_IsVisible]">
+					<param name="visible" value="$PARAM[mask_visible]" />
+				</include>
 			</control>
 		</definition>
 	</include>

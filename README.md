@@ -22,6 +22,28 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 ---
 **2.6.4**
 - Added a workaround for the focus glitch on homescreen when globalsearch icon is clicked and focus temporarily returns to home menu before keyboard loads. This is required to ensure that after keyboard or global search is exited, the homescreen is properly focused on the main menu. Added a window property to hide main menu during this transition.
+- All windows should now have background/content hidden if global search is opened on top
+- More PVR improvements including a new view for channels with more details, fixed osd and seek bar controls
+- pvrchannelmananger window added
+- pvrgroupmanager window added
+
+- localise 'channels in'
+- detailed list as new view for Media?
+- does label need to fade out and in when home screen > music player controls?
+- Views break after coming out of a playlist (next episode)
+- disable grid on certain list only views
+- favourites all viewtype options (omega only)
+- infoscreen bug
+- infoscreen widget navigation for music widgets + music videos (songvideourl)
+- check to see the player status labels
+- Evaluate Container.NumItems for scrollbars in each view / layout
+- autoscroll bar
+- multiart on autoscroll
+- Create radio station button
+- remove window property hack for music ratings during playback in Omega
+= <!-- temp fix to account for fact that DecreaseRating won't go lower than 1 for VideoPlayer.UserRating -->
+- https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Extended-Info#direct-call-auto
+
 
 **2.6.3**
 - Fix for gridview artwork mask being on top of icons
@@ -38,25 +60,6 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 - MyPVRTimers.xml
 - Home background will now by default show fanarts from any destination path if it's in the db://, e.g. if you make a shortcut to Videos > Movies > Genres > Horror, it will show fanarts of the movies at that destination instead of generic movie fanarts.
 - Fixed bug where grid artwork would sometimes go black in certain scenarios
-Still to do:
-- playerprocessinfo for pvr
-- pvr timeshift
-- pvr channel icons on info screens and videoplayer info
-- pvr stream info in videobreadcrumb
-- does label need to fade out and in when home screen > music player controls?
-- Views break after coming out of a playlist (next episode)
-- disable grid on certain list only views
-- favourites all viewtype options (omega only)
-- infoscreen bug
-- infoscreen widget navigation for music widgets + music videos (songvideourl)
-- check to see the player status labels
-- Evaluate Container.NumItems for scrollbars in each view / layout
-- autoscroll bar
-- multiart on autoscroll
-- Create radio station button
-- remove window property hack for music ratings during playback in Omega
-= <!-- temp fix to account for fact that DecreaseRating won't go lower than 1 for VideoPlayer.UserRating -->
-- https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Extended-Info#direct-call-auto
 
 **2.6.1**
 - Added a three second delay when entering movies or home windows before trailers will autoplay

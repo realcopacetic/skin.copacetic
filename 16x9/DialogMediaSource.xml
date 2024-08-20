@@ -13,20 +13,19 @@
 			</include>
 			<include content="Settings_List_Template">
 				<param name="id" value="10" />
-				<param name="window_name" value="mediasource" />
+				<param name="embedded_buttons" value="true" />
 				<param name="left" value="360" />
 				<param name="width" value="1200" />
 				<param name="top" value="300" />
 				<param name="height" value="270" />
-				<param name="onleft" value="14" />
-				<param name="onright" value="11" />
 				<param name="onup" value="4000" />
 				<param name="ondown" value="12" />
 				<param name="focus_border_visible" value="Control.HasFocus(10) | Control.HasFocus(11) | Control.HasFocus(13) | Control.HasFocus(14)" />
 				<param name="focus_color" value="$VAR[mediasource_Focus_Color]" />
 				<param name="focus_border_margin_left" value="0" />
 				<param name="focus_border_margin_right" vaue="0" />
-				<param name="mediasource" value="true" />
+				<onleft>14</onleft>
+				<onright>11</onright>
 			</include>
 			<include content="Dialog_Divider_With_Scrollbar">
 				<param name="left" value="360" />

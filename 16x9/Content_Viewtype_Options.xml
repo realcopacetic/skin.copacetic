@@ -286,6 +286,42 @@
 	</include>
 
 	<include name="tvcommon_Menu_Options">
+		<item id="1">
+			<description>Change view</description>
+			<onclick>SetFocus(50)</onclick>
+			<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31032] $VAR[Copacetic_Chevron_Right]</label>
+			<label2>$LOCALIZE[31005] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31032]</label2>
+			<property name="ActionLeft">Container.PreviousViewMode</property>
+			<property name="ActionRight">Container.NextViewMode</property>
+			<visible>Control.IsVisible(50) + Integer.IsGreater(Container.ViewCount,1) + Control.HasFocus(3700)</visible>
+		</item>
+		<item id="1">
+			<description>Change view</description>
+			<onclick>SetFocus(50)</onclick>
+			<label>$LOCALIZE[31005] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31032]</label>
+			<label2>$LOCALIZE[31005] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31032]</label2>
+			<property name="ActionLeft">Container.PreviousViewMode</property>
+			<property name="ActionRight">Container.NextViewMode</property>
+			<visible>Control.IsVisible(50) + Integer.IsGreater(Container.ViewCount,1) + !Control.HasFocus(3700)</visible>
+		</item>
+		<item id="1">
+			<description>Change view</description>
+			<onclick>SetFocus(51)</onclick>
+			<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31033] $VAR[Copacetic_Chevron_Right]</label>
+			<label2>$LOCALIZE[31005] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31033]</label2>
+			<property name="ActionLeft">Container.PreviousViewMode</property>
+			<property name="ActionRight">Container.NextViewMode</property>
+			<visible>Control.IsVisible(51) + Integer.IsGreater(Container.ViewCount,1) + Control.HasFocus(3700)</visible>
+		</item>
+		<item id="1">
+			<description>Change view</description>
+			<onclick>SetFocus(51)</onclick>
+			<label>$LOCALIZE[31005] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31033]</label>
+			<label2>$LOCALIZE[31005] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31033]</label2>
+			<property name="ActionLeft">Container.PreviousViewMode</property>
+			<property name="ActionRight">Container.NextViewMode</property>
+			<visible>Control.IsVisible(51) + Integer.IsGreater(Container.ViewCount,1) + !Control.HasFocus(3700)</visible>
+		</item>
 		<item>
 			<description>Channel Groups</description>
 			<label>$INFO[Control.GetLabel(28)]</label>

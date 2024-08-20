@@ -1,22 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- pvrchannelmanager -->
-	<defaultcontrol always="true">4</defaultcontrol>
+	<defaultcontrol always="true">4010</defaultcontrol>
 	<controls>
-		<control type="grouplist">
-			<control type="button" id="4" />
-			<control type="button" id="5" />
-			<control type="button" id="6" />
-			<control type="radiobutton" id="7" />
-			<control type="edit" id="8" />
-			<control type="button" id="9" />
-			<control type="spincontrolex" id="11" />
-			<control type="radiobutton" id="12" />
-			<control type="spincontrolex" id="13" />
-			<control type="list" id="20" />
-			<control type="button" id="30" />
-			<control type="button" id="31" />
-			<control type="button" id="34" />
-		</control>
+		<include content="Focus_Setter">
+			<param name="target_id" value="SetFocus(20)" />
+			<animation effect="slide" end="0,0" time="500" reversible="false">Focus</animation>
+		</include>
+		<include content="Default_Dialog_Panel_Layout">
+			<param name="visible" value="![Window.IsVisible(pvrgroupmanager) | Window.IsVisible(shutdownmenu) | Window.IsVisible(selectdialog) | Window.IsVisible(filebrowser) | Window.IsVisible(okdialog) | Window.IsVisible(yesnodialog) | Window.IsVisible(progressdialog) | Window.IsVisible(virtualkeyboard) | Window.IsVisible(numericinput)]" />
+			<include content="Breadcrumb_Label">
+				<param name="title_label_id" value="2" />
+				<param name="title_label" value="$LOCALIZE[19199]" />
+				<param name="info_label_visible" value="true" />
+				<param name="info_label" value="$VAR[pvrchannelmanager_Info_Label]" />
+			</include>
+			<include content="Settings_Left_List_Template">
+				<param name="id" value="20" />
+				<param name="pagecontrol" value="60" />
+				<param name="width" value="870" />
+				<param name="height" value="630" />
+				<param name="onleft" value="6" />
+				<param name="onright" value="3100" />
+				<param name="onright_condition" value="![Container(20).HasPrevious | Container(20).HasNext]" />
+				<param name="onright2" value="60" />
+				<param name="onright2_condition" value="Container(20).HasPrevious | Container(20).HasNext" />
+				<param name="label" value="$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.Label]" />
+				<param name="label_width" value="770" />
+				<param name="label2_visible" value="true" />
+				<param name="label2" value="$INFO[ListItem.Label2]" />
+				<param name="divider_visible" value="true" />
+				<param name="divider_left" value="960" />
+				<animation effect="slide" end="90" time="0" condition="true">Conditional</animation>
+			</include>
+			<include content="Settings_Grouplist_Template">
+				<param name="id" value="3100" />
+				<param name="pagecontrol" value="61" />
+				<param name="left" value="960" />
+				<param name="width" value="870" />
+				<param name="onleft" value="20" />
+				<param name="onright" value="34" />
+				<param name="divider_visible" value="false" />
+				<param name="scrollbar_visible" value="ControlGroup(3100).HasFocus" />
+				<control type="radiobutton" id="7">
+					<description>Channel activated</description>
+					<label>$LOCALIZE[19074]</label>
+					<radioposx>750</radioposx>
+				</control>
+				<control type="edit" id="8">
+					<description>Channel name</description>
+					<label>$LOCALIZE[19201]</label>
+				</control>
+				<control type="button" id="9">
+					<description>Channel logo Button</description>
+					<label>$LOCALIZE[19202]</label>
+				</control>
+				<control type="radiobutton" id="12">
+					<description>EPG activated</description>
+					<label>$LOCALIZE[19206]</label>
+					<radioposx>750</radioposx>
+					</control>
+				<control type="spincontrolex" id="13">
+					<description>EPG source</description>
+					<label>$LOCALIZE[19200]</label>
+				</control>
+				<control type="radiobutton" id="14">
+					<description>Parental locked</description>
+					<label>$LOCALIZE[19267]</label>
+					<radioposx>750</radioposx>
+				</control>
+				<control type="button" id="35">
+					<description>Refresh channel logos Button</description>
+					<label>$LOCALIZE[19041]</label>
+				</control>
+			</include>
+			<include content="PVR_logo" condition="Window.Is(pvrchannelmanager)">
+				<param name="texture" value="$INFO[Container(20).ListItem.Property(icon)]" />
+				<param name="right" value="150" />
+				<param name="top" value="420" />
+				<param name="width" value="90" />
+				<param name="align" value="right" />
+				<param name="aligny" value="center" />
+			</include>
+			<include content="Button_Group_Template">
+				<param name="onup" value="3100" />
+				<param name="onleft" value="3100" />
+				<param name="onright" value="20" />
+				<param name="ondown" value="20" />
+				<param name="color" value="$VAR[Light_Color]" />
+				<param name="unfocused_color" value="$VAR[Light_Color]" />
+				<param name="button1" value="true" /><!-- tv / radio toggle -->
+				<param name="button1_id" value="34" />
+				<param name="button1_texture" value="Screen" />
+				<param name="button1_toggle_button" value="true" />
+				<param name="button1_alt_texture" value="Headphones" />
+				<param name="button1_use_alt_texture" value="!String.IsEmpty(Window.Property(IsRadio))" />
+				<param name="button2" value="true" />
+				<param name="button2_id" value="31" /><!-- new channel -->
+				<param name="button2_texture" value="Plus" />
+				<param name="button3" value="true" />
+				<param name="button3_id" value="5" /><!-- apply changes now -->
+				<param name="button3_texture" value="Bookmark" />
+				<param name="button4" value="true" />
+				<param name="button4_id" value="4" /><!-- ok -->
+				<param name="button4_texture" value="Check" />
+			</include>
+		</include>
+
+
 	</controls>
 </window>

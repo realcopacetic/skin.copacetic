@@ -36,6 +36,7 @@
 				<param name="height" value="300" />
 				<param name="texture" value="$VAR[musicplaylisteditor_Icon_Texture]" />
 				<param name="fadetime" value="360" />
+				<param name="fade_diffuse_override" value="true" />
 			</include>
 			<!-- Middle label -->
 			<include content="Description_Label">
@@ -81,7 +82,7 @@
 				<param name="button2_id" value="7" />
 				<param name="button3" value="true" />
 				<param name="button3_id" value="8" />
-				<param name="button3_texture" value="Refresh" />
+				<param name="button3_texture" value="Reset" />
 			</include>
 		</include>
 	</controls>

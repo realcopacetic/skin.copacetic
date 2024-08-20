@@ -936,6 +936,36 @@
 		</definition>
 	</include>
 
+	<include name="Bookmark_unfocused">
+		<param name="visible" default="true" />
+		<param name="color" default="$VAR[Breadcrumb_Label_Color]" />
+		<param name="width" default="120" />
+		<definition>
+			<include content="Texture_Button_Template">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="texture" value="icons/icon_bookmark_unfocused_$PARAM[width].png" />
+				<param name="width" value="$PARAM[width]" />
+				<param name="color" value="$PARAM[color]" />
+				<nested />
+			</include>
+		</definition>
+	</include>
+
+	<include name="Bookmark_focused">
+		<param name="visible" default="true" />
+		<param name="color" default="$VAR[Breadcrumb_Label_Color]" />
+		<param name="width" default="120" />
+		<definition>
+			<include content="Texture_Button_Template">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="texture" value="icons/icon_bookmark_focused_$PARAM[width].png" />
+				<param name="width" value="$PARAM[width]" />
+				<param name="color" value="$PARAM[color]" />
+				<nested />
+			</include>
+		</definition>
+	</include>
+
 	<include name="Browse_unfocused">
 		<param name="visible" default="true" />
 		<param name="color" default="$VAR[Breadcrumb_Label_Color]" />
@@ -959,6 +989,36 @@
 			<include content="Texture_Button_Template">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="texture" value="icons/icon_browse_focused_$PARAM[width].png" />
+				<param name="width" value="$PARAM[width]" />
+				<param name="color" value="$PARAM[color]" />
+				<nested />
+			</include>
+		</definition>
+	</include>
+
+	<include name="Headphones_unfocused">
+		<param name="visible" default="true" />
+		<param name="color" default="$VAR[Breadcrumb_Label_Color]" />
+		<param name="width" default="120" />
+		<definition>
+			<include content="Texture_Button_Template">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="texture" value="icons/icon_headphones_unfocused_$PARAM[width].png" />
+				<param name="width" value="$PARAM[width]" />
+				<param name="color" value="$PARAM[color]" />
+				<nested />
+			</include>
+		</definition>
+	</include>
+
+	<include name="Headphones_focused">
+		<param name="visible" default="true" />
+		<param name="color" default="$VAR[Breadcrumb_Label_Color]" />
+		<param name="width" default="120" />
+		<definition>
+			<include content="Texture_Button_Template">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="texture" value="icons/icon_headphones_focused_$PARAM[width].png" />
 				<param name="width" value="$PARAM[width]" />
 				<param name="color" value="$PARAM[color]" />
 				<nested />
@@ -1215,6 +1275,66 @@
 			<include content="Texture_Button_Template">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="texture" value="icons/icon_refresh_focused_$PARAM[width].png" />
+				<param name="width" value="$PARAM[width]" />
+				<param name="color" value="$PARAM[color]" />
+				<nested />
+			</include>
+		</definition>
+	</include>
+
+	<include name="Reset_unfocused">
+		<param name="visible" default="true" />
+		<param name="color" default="$VAR[Breadcrumb_Label_Color]" />
+		<param name="width" default="120" />
+		<definition>
+			<include content="Texture_Button_Template">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="texture" value="icons/icon_reset_unfocused_$PARAM[width].png" />
+				<param name="width" value="$PARAM[width]" />
+				<param name="color" value="$PARAM[color]" />
+				<nested />
+			</include>
+		</definition>
+	</include>
+
+	<include name="Reset_focused">
+		<param name="visible" default="true" />
+		<param name="color" default="$VAR[Breadcrumb_Label_Color]" />
+		<param name="width" default="120" />
+		<definition>
+			<include content="Texture_Button_Template">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="texture" value="icons/icon_reset_focused_$PARAM[width].png" />
+				<param name="width" value="$PARAM[width]" />
+				<param name="color" value="$PARAM[color]" />
+				<nested />
+			</include>
+		</definition>
+	</include>
+
+	<include name="Screen_unfocused">
+		<param name="visible" default="true" />
+		<param name="color" default="$VAR[Breadcrumb_Label_Color]" />
+		<param name="width" default="120" />
+		<definition>
+			<include content="Texture_Button_Template">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="texture" value="icons/icon_screen_unfocused_$PARAM[width].png" />
+				<param name="width" value="$PARAM[width]" />
+				<param name="color" value="$PARAM[color]" />
+				<nested />
+			</include>
+		</definition>
+	</include>
+
+	<include name="Screen_focused">
+		<param name="visible" default="true" />
+		<param name="color" default="$VAR[Breadcrumb_Label_Color]" />
+		<param name="width" default="120" />
+		<definition>
+			<include content="Texture_Button_Template">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="texture" value="icons/icon_screen_focused_$PARAM[width].png" />
 				<param name="width" value="$PARAM[width]" />
 				<param name="color" value="$PARAM[color]" />
 				<nested />

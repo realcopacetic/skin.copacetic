@@ -1,18 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- pvrgroupmanager -->
-	<defaultcontrol always="true">11</defaultcontrol>
+	<defaultcontrol always="true">4010</defaultcontrol>
 	<controls>
-		<control type="grouplist">
-			<control type="list" id="11" />
-			<control type="list" id="12" />
-			<control type="list" id="13" />
-			<control type="radiobutton" id="25" />
-			<control type="button" id="26" />
-			<control type="button" id="27" />
-			<control type="button" id="28" />
-			<control type="button" id="29" />
-			<control type="togglebutton" id="34" />
-		</control>
+		<include content="Focus_Setter">
+			<param name="target_id" value="SetFocus(13)" />
+			<animation effect="slide" end="0,0" time="500" reversible="false">Focus</animation>
+		</include>
+		<include content="pvrgroupmanager_Hidden" />
+		<include content="Default_Dialog_Panel_Layout">
+			<param name="visible" value="![Window.IsVisible(shutdownmenu) | Window.IsVisible(selectdialog) | Window.IsVisible(filebrowser) | Window.IsVisible(okdialog) | Window.IsVisible(yesnodialog) | Window.IsVisible(progressdialog) | Window.IsVisible(virtualkeyboard) | Window.IsVisible(numericinput)]" />
+			<include content="Breadcrumb_Label">
+				<param name="title_label_id" value="2" />
+				<param name="title_label" value="$LOCALIZE[19048]" />
+				<param name="info_label_visible" value="true" />
+				<param name="info_label" value="$VAR[pvrgroupmanager_Info_Label]" />
+			</include>
+			<include content="PVR_Date_Label">
+				<param name="left" value="150" />
+				<param name="width" value="730" />
+				<param name="top" value="203" />
+				<param name="label" value="[UPPERCASE]$INFO[Container(13).NumItems,, $LOCALIZE[19146]][/UPPERCASE]" />
+			</include>
+			<include content="PVR_Date_Label">
+				<param name="left" value="820" />
+				<param name="width" value="490" />
+				<param name="top" value="203" />
+				<param name="label" value="[UPPERCASE]$LOCALIZE[19219][/UPPERCASE]" />
+			</include>
+			<include content="PVR_Date_Label">
+				<param name="left" value="1310" />
+				<param name="width" value="460" />
+				<param name="top" value="203" />
+				<param name="label" value="[UPPERCASE]$INFO[Container(12).NumItems,, channels in]$INFO[Container(13).ListItem.Label, ][/UPPERCASE]" />
+			</include>
+			<include content="Settings_Left_List_Template">
+				<param name="id" value="13" />
+				<param name="pagecontrol" value="60" />
+				<param name="embedded_buttons" value="true" />
+				<param name="width" value="730" />
+				<param name="height" value="540" />
+				<param name="onleft" value="29" />
+				<param name="onright" value="11" />
+				<param name="onright_condition" value="false" />
+				<param name="onright2" value="27" />
+				<param name="onright2_condition" value="true" />
+				<param name="label_width" value="430" />
+				<param name="label" value="$INFO[ListItem.Label]" />
+				<param name="label_scroll" value="Control.HasFocus(13)" />
+				<param name="label2_visible" value="true" />
+				<param name="label2" value="$INFO[ListItem.Label2]" />
+				<param name="divider_visible" value="true" />
+				<param name="divider_left" value="820" />
+				<param name="scrollbar_visible_extras" value="Control.HasFocus(25) | Control.HasFocus(27) | Control.HasFocus(28)" />
+				<animation effect="slide" end="90,45" time="0" condition="true">Conditional</animation>
+			</include>
+			<include content="Settings_Left_List_Template">
+				<param name="id" value="11" />
+				<param name="pagecontrol" value="61" />
+				<param name="width" value="490" />
+				<param name="height" value="540" />
+				<param name="onleft" value="13" />
+				<param name="onright" value="12" />
+				<param name="onright_condition" value="![Container(11).HasPrevious | Container(11).HasNext]" />
+				<param name="onright2" value="61" />
+				<param name="onright2_condition" value="Container(11).HasPrevious | Container(11).HasNext" />
+				<param name="label_width" value="430" />
+				<param name="label_shift" value="true" />
+				<param name="label" value="$INFO[ListItem.CurrentItem,,. ]$INFO[ListItem.Label]" />
+				<param name="label_scroll" value="Control.HasFocus(11)" />
+				<param name="focus_border_visible" value="Control.HasFocus(11) | Control.HasFocus(61)" />
+				<param name="focus_border_margin_left" value="0" />
+				<param name="focus_color" value="$VAR[pvrgroupmanager_11_Focus_Color]" />
+				<animation effect="slide" end="820,45" time="0" condition="true">Conditional</animation>
+			</include>
+			<include content="Settings_Right_List_Template">
+				<param name="id" value="12" />
+				<param name="pagecontrol" value="62" />
+				<param name="width" value="460" />
+				<param name="height" value="540" />
+				<param name="onright" value="34" />
+				<param name="onleft" value="11" />
+				<param name="onleft_condition" value="![Container(12).HasPrevious | Container(12).HasNext]" />
+				<param name="onleft2" value="62" />
+				<param name="onleft2_condition" value="Container(12).HasPrevious | Container(12).HasNext" />
+				<param name="focus_border_visible" value="Control.HasFocus(12) | Control.HasFocus(62)" />
+				<param name="focus_border_margin_right" value="0" />
+				<param name="focus_color" value="$VAR[pvrgroupmanager_12_Focus_Color]" />
+				<param name="label_scroll" value="Control.HasFocus(12)" />
+				<param name="label_width" value="430" />
+				<param name="label_shift" value="true" />
+				<param name="label" value="$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.Label]" />
+				<param name="icon_right" value="0" />
+				<param name="divider_visible" value="true" />
+				<animation effect="slide" end="1310,45" time="0" condition="true">Conditional</animation>
+			</include>
+			<include content="Button_Group_Template">
+				<param name="onup" value="12" />
+				<param name="ondown" value="13" />
+				<param name="onright" value="13" />
+				<param name="onleft" value="12" />
+				<param name="color" value="$VAR[Light_Color]" />
+				<param name="unfocused_color" value="$VAR[Light_Color]" />
+				<param name="button1" value="true" />
+				<param name="button1_id" value="34" /><!-- tv / radio toggle -->
+				<param name="button1_texture" value="Screen" />
+				<param name="button1_toggle_button" value="true" />
+				<param name="button1_alt_texture" value="Headphones" />
+				<param name="button1_use_alt_texture" value="!String.IsEmpty(Window.Property(IsRadio))" />
+				<param name="button2" value="true" />
+				<param name="button2_id" value="26" /><!-- add group -->
+				<param name="button2_texture" value="Plus" />
+				<param name="button3" value="true" />
+				<param name="button3_id" value="35" /><!-- regenerate thumbnails -->
+				<param name="button3_texture" value="Refresh" />
+				<param name="button4" value="true" />
+				<param name="button4_id" value="29" /><!-- ok -->
+				<param name="button4_texture" value="Check" />
+			</include>
+		</include>
 	</controls>
 </window>

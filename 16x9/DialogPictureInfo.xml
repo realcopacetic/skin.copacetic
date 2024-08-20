@@ -19,12 +19,12 @@
 				<param name="item_height" value="60" />
 				<param name="onup" value="5" />
 				<param name="ondown" value="5" />
-				<param name="onleft" value="4000" />
-				<param name="onright" value="4000" />
 				<param name="label2_scroll" value="true" />
 				<param name="focus_border_visible" value="true" />
 				<param name="focus_border_margin_right" value="60" />
 				<param name="focus_color" value="$VAR[pictureinfo_Focused_Label_Color]" />
+				<onleft>4000</onleft>
+				<onright>4000</onright>
 			</include>
 			<include content="Dialog_Divider_With_Scrollbar">
 				<param name="height" value="600" />

@@ -73,13 +73,13 @@
 				<param name="button1_texture" value="Browse" />
 				<param name="button2" value="true" />
 				<param name="button2_id" value="28" />
-				<param name="button2_texture" value="Refresh" />
+				<param name="button2_texture" value="Reset" />
 				<param name="button3" value="true" />
-				<param name="button3_id" value="25" />
-				<param name="button3_texture" value="Cross" />
+				<param name="button3_id" value="29" />
+				<param name="button3_texture" value="Bookmark" />
 				<param name="button4" value="true" />
-				<param name="button4_id" value="29" />
-				<param name="button4_texture" value="Download" />
+				<param name="button4_id" value="25" />
+				<param name="button4_texture" value="Cross" />
 			</include>
 		</include>
 	</controls>

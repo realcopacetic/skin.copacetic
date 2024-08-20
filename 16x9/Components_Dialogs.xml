@@ -16,7 +16,7 @@
 				<right>$PARAM[right]</right>
 				<top>$PARAM[top]</top>
 				<bottom>$PARAM[bottom]</bottom>
-				<texture colordiffuse="$PARAM[colordiffuse]">views/white_100.png</texture>
+				<texture border="10" colordiffuse="$PARAM[colordiffuse]">$VAR[Panel_Texture]</texture>
 			</control>
 		</definition>
 	</include>
@@ -150,19 +150,24 @@
 
 	<!-- playerprocessinfo -->
 	<include name="playerprocessinfo_Grouplist">
-		<control type="grouplist">
-			<description>$PARAM[description]</description>
-			<visible>$PARAM[visible]</visible>
-			<include content="Visible_Fade_Animation" />
-			<width>1200</width>
-			<centerleft>50%</centerleft>
-			<bottom>60</bottom>
-			<height>420</height>
-			<itemgap>0</itemgap>
-			<align>top</align>
-			<pagecontrol>60</pagecontrol>
-			<nested />
-		</control>
+		<param name="bottom" default="150" />
+		<param name="height" default="400" />
+		<param name="align" default="center" />
+		<definition>
+			<control type="grouplist">
+				<description>$PARAM[description]</description>
+				<visible>$PARAM[visible]</visible>
+				<include content="Visible_Fade_Animation" />
+				<width>1200</width>
+				<centerleft>50%</centerleft>
+				<bottom>$PARAM[bottom]</bottom>
+				<height>$PARAM[height]</height>
+				<itemgap>0</itemgap>
+				<align>$PARAM[align]</align>
+				<pagecontrol>60</pagecontrol>
+				<nested />
+			</control>
+		</definition>
 	</include>
 
 	<include name="playerprocessinfo_Button">
