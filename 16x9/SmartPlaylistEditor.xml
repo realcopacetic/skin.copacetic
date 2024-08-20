@@ -23,20 +23,16 @@
 			</include>
 			<include content="Settings_List_Template">
 				<param name="id" value="10" />
-				<param name="window_name" value="smartplaylisteditor" />
-				<param name="side" value="right" />
+				<param name="embedded_buttons" value="true" />
 				<param name="width" value="870" />
 				<param name="height" value="720" />
 				<param name="top" value="0" />
-				<param name="onleft" value="100" />
-				<param name="onright" value="14" />
-				<param name="onright_condition" value="!String.IsEqual(Container(10).ListItem.Label,$LOCALIZE[21423])" />
-				<param name="onright2" value="21" />
-				<param name="onright2_condition" value="String.IsEqual(Container(10).ListItem.Label,$LOCALIZE[21423])" />
 				<param name="focus_color" value="$VAR[Settings_Grouplist_Label_Color]" />
 				<param name="focus_border_visible" value="String.IsEqual(Container(100).CurrentItem,-1) + !ControlGroup(4000).HasFocus" />
 				<param name="focus_border_margin_right" value="60" />
-				<param name="smartplaylisteditor" value="true" />
+				<onleft>100</onleft>
+				<onright condition="!String.IsEqual(Container(10).ListItem.Label,$LOCALIZE[21423])">14</onright>
+				<onright condition="String.IsEqual(Container(10).ListItem.Label,$LOCALIZE[21423])">21</onright>
 			</include>
 			<include content="Dialog_Divider_With_Scrollbar">
 				<param name="scrollbarvisible" value="Control.HasFocus(10)" />

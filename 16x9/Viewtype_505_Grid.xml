@@ -50,7 +50,7 @@
 				<!-- List -->
 				<control type="panel" id="505">
 					<viewtype label="Grid">icon</viewtype>
-					<visible>true</visible>
+					<visible>!Container.Content(songs)</visible>
 					<left>50</left>
 					<top>180</top>
 					<include content="GridView_Vertical_Scrolling" condition="!Skin.String(GridView_Size,Horizontal)" />

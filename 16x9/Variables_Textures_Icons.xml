@@ -20,6 +20,13 @@
 		<value>icons/icon_repeat_50%_unfocused_60.png</value>
 	</variable>
 
+	<variable name="Panel_Texture">
+		<value condition="Window.Is(addoninformation) | [Window.Is(songinformation) + !Control.HasFocus(10)] | [Window.Is(musicinformation) + !Control.HasFocus(10)]">views/white_100_rightrounded10.png</value>
+		<value condition="Window.IsMedia + $EXP[ListView_IsVisible] + $EXP[ListView_Display_IsThumbnails]">views/white_100_rightrounded10.png</value>
+		<value condition="Window.Is(radioguide) | Window.Is(tvguide) | [[Window.Is(radiochannels) | Window.Is(tvchannels)] + Control.IsVisible(51)]">views/white_100_toprounded10.png</value>
+		<value>views/white_100_rounded10.png</value>
+	</variable>
+
 	<variable name="PVR_Icon_Texture">
 		<value condition="!String.IsEmpty(ListItem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
 		<value>$INFO[ListItem.Icon]</value>
@@ -34,7 +41,7 @@
 		<value condition="ListItem.HasTimer | ListItem.HasTimerSchedule">pvr/icon_timer.png</value>
 	</variable>
 
-	<variable name="tvchannels_Icon_Texture">a
+	<variable name="tvchannels_Icon_Texture">
 		<value condition="ListItem.IsRecording">pvr/icon_recording.png</value>
 		<value condition="[Window.Is(tvtimers) | Window.Is(radiotimers) | Window.Is(tvtimerrules) | Window.Is(radiotimerrules)] + String.Contains(ListItem.Comment,$LOCALIZE[1223])">pvr/icon_timer_50%.png</value>
 		<value condition="ListItem.HasTimer | ListItem.HasTimerSchedule">pvr/icon_timer.png</value>

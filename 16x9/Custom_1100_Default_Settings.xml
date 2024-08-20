@@ -18,7 +18,7 @@
 	<defaultcontrol always="true">4000</defaultcontrol>
 	<controls>
 		<include content="Default_Dialog_Panel_Layout">
-			<param name="visible" value="true" />
+			<param name="visible" value="!Window.IsVisible(shutdownmenu)" />
 			<param name="panel_edge_top" value="180" />
 			<param name="panel_edge_bottom" value="180" />
 			<include content="Breadcrumb_Label">
@@ -65,7 +65,7 @@
 				<param name="ondown" value="3000" />
 				<param name="button1" value="true" />
 				<param name="button1_id" value="30" />
-				<param name="button1_texture" value="Refresh" />
+				<param name="button1_texture" value="Reset" />
 				<param name="button1_onclick" value="SetFocus(9050)" />
 				<param name="button2" value="true" />
 				<param name="button2_id" value="29" />

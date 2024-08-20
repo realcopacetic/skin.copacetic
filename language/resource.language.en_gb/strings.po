@@ -94,6 +94,18 @@ msgctxt "#31031"
 msgid "Spotlight"
 msgstr ""
 
+#: NEW
+#Common
+msgctxt "#31032"
+msgid "Simple"
+msgstr ""
+
+#: NEW
+#Common
+msgctxt "#31033"
+msgid "Detailed"
+msgstr ""
+
 
 
 
@@ -540,6 +552,16 @@ msgstr ""
 #/16x9/Templates_MyPVR.xml
 msgctxt "#31307"
 msgid "Go to"
+msgstr ""
+
+
+
+
+#: V
+
+#/16x9/Variables_Labels_Media.xml
+msgctxt "#31308"
+msgid "Timeshift"
 msgstr ""
 
 

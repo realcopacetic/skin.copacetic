@@ -41,7 +41,6 @@
 	</include>
 
 	<include name="Settings_Grouplist_Template">
-		<param name="id" />
 		<param name="pagecontrol" default="60" />
 		<param name="left" default="90" />
 		<param name="width" default="480" />
@@ -100,7 +99,6 @@
 	</include>
 
 	<include name="Settings_Grouplist_Underline">
-		<param name="id" />
 		<param name="left" default="150" />
 		<param name="width" default="420" />
 		<param name="top" default="314" />
@@ -135,52 +133,66 @@
 
 
 	<include name="Settings_List_Label">
+		<param name="label_width" default="100%" />
+		<param name="label_shift" default="false" />
 		<param name="label" default="$INFO[ListItem.Label]" />
+		<param name="label_scroll" default="false" />
 		<param name="label2_visible" default="true" />
 		<param name="label2" default="$INFO[ListItem.Label2]" />
 		<param name="label2_scroll" default="false" />
-		<param name="show_underline" default="false" />
+		<param name="icon_right" default="30" />
+		<param name="focus_border_enabled" default="false" />
 		<param name="color" default="$VAR[Unfocused_Color]" />
 		<definition>
-			<control type="label">
-				<height>100%</height>
-				<textoffsetx>60</textoffsetx>
-				<label>$PARAM[label]</label>
-				<textcolor>$PARAM[color]</textcolor>
-				<selectedcolor>$PARAM[color]</selectedcolor>
-				<scroll>false</scroll>
+			<control type="group">
+				<animation effect="slide" end="-30,0" time="0" condition="$PARAM[label_shift]">Conditional</animation>
+				<control type="label">
+					<height>100%</height>
+					<width>$PARAM[label_width]</width>
+					<textoffsetx>60</textoffsetx>
+					<label>$PARAM[label]</label>
+					<textcolor>$PARAM[color]</textcolor>
+					<selectedcolor>$PARAM[color]</selectedcolor>
+					<scroll>$PARAM[label_scroll]</scroll>
+				</control>
+				<control type="label">
+					<height>100%</height>
+					<width>$PARAM[label_width]</width>
+					<visible>$PARAM[label2_visible]</visible>
+					<textoffsetx>60</textoffsetx>
+					<align>right</align>
+					<label>$PARAM[label2]</label>
+					<textcolor>$PARAM[color]</textcolor>
+					<selectedcolor>$PARAM[color]</selectedcolor>
+					<scroll>$PARAM[label2_scroll]</scroll>
+				</control>
 			</control>
-			<control type="label">
-				<height>100%</height>
-				<visible>$PARAM[label2_visible]</visible>
-				<textoffsetx>60</textoffsetx>
-				<align>right</align>
-				<label>$PARAM[label2]</label>
-				<textcolor>$PARAM[color]</textcolor>
-				<selectedcolor>$PARAM[color]</selectedcolor>
-				<scroll>$PARAM[label2_scroll]</scroll>
-			</control>
-			<include content="Settings_List_Underline" condition="$PARAM[show_underline]">
+			<include content="PVR_logo" condition="Window.Is(pvrchannelmanager) | Window.Is(pvrgroupmanager)">
+				<param name="texture" value="$INFO[ListItem.Art(thumb)]" />
+				<param name="right" value="$PARAM[icon_right]" />
+				<param name="top" value="15" />
+				<param name="width" value="90" />
+				<param name="align" value="center" />
+				<param name="aligny" value="center" />
+			</include>
+			<include content="Settings_List_Underline" condition="$PARAM[focus_border_enabled]">
 				<param name="focus_border_visible" value="$PARAM[focus_border_visible]" />
 				<param name="focus_border_margin_left" value="$PARAM[focus_border_margin_left]" />
 				<param name="focus_border_margin_right" value="$PARAM[focus_border_margin_right]" />
 			</include>
-			<nested />
 		</definition>
 	</include>
 
 	<include name="Settings_List_Template">
 		<param name="visible" default="true" />
+		<param name="window_name" default="home" />
+		<param name="embedded_buttons" default="false" />
 		<param name="pagecontrol" default="60" />
 		<param name="left" default="0" />
 		<param name="width" default="100%" />
 		<param name="top" default="0" />
 		<param name="height" default="100%" />
 		<param name="item_height" default="90" />
-		<param name="onleft_condition" default="true" />
-		<param name="onleft2_condition" default="false" />
-		<param name="onright_condition" default="true" />
-		<param name="onright2_condition" default="false" />
 		<param name="focus_border_visible" default="true" />
 		<param name="focus_border_margin_left" default="0" />
 		<param name="focus_border_margin_right" default="0" />
@@ -188,9 +200,6 @@
 		<param name="label" default="$INFO[ListItem.Label]" />
 		<param name="label2_visible" default="true" />
 		<param name="label2" default="$INFO[ListItem.Label2]" />
-		<param name="mediasource" default="false" />
-		<param name="skinshortcuts" default="false" />
-		<param name="smartplaylisteditor" default="false" />
 		<definition>
 			<control type="list" id="$PARAM[id]">
 				<visible allowhiddenfocus="true">$PARAM[visible]</visible>
@@ -202,70 +211,104 @@
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
 				<top>$PARAM[top]</top>
-				<onfocus>SetProperty(ActiveList,$PARAM[side],$PARAM[window_name])</onfocus>
-				<onleft condition="$PARAM[onleft_condition]">$PARAM[onleft]</onleft>
-				<onleft condition="$PARAM[onleft2_condition]">$PARAM[onleft2]</onleft>
-				<onright condition="$PARAM[onright_condition]">$PARAM[onright]</onright>
-				<onright condition="$PARAM[onright2_condition]">$PARAM[onright2]</onright>
+				<onfocus condition="Window.Is(filemanager) | Window.Is(musicplaylisteditor)">SetProperty(ActiveList,$PARAM[side],$PARAM[window_name])</onfocus>
 				<onup>$PARAM[onup]</onup>
 				<ondown>$PARAM[ondown]</ondown>
 				<orientation>vertical</orientation>
 				<align>top</align>
 				<pagecontrol>$PARAM[pagecontrol]</pagecontrol>
 				<scrolltime tween="sine" easing="inout">360</scrolltime>
+				<nested />
 				<itemlayout height="$PARAM[item_height]" width="$PARAM[width]">
 					<include content="Settings_List_Label">
+						<param name="label_width" value="$PARAM[label_width]" />
+						<param name="label_shift" value="$PARAM[label_shift]" />
 						<param name="label" value="$PARAM[label]" />
 						<param name="label2_visible" value="$PARAM[label2_visible]" />
 						<param name="label2" value="$PARAM[label2]" />
+						<param name="icon_right" value="$PARAM[icon_right]" />
 					</include>
 				</itemlayout>
 				<focusedlayout height="$PARAM[item_height]" width="$PARAM[width]">
 					<include content="Settings_List_Label">
+						<param name="label_width" value="$PARAM[label_width]" />
+						<param name="label_shift" value="$PARAM[label_shift]" />
 						<param name="label" value="$PARAM[label]" />
+						<param name="label_scroll" value="$PARAM[label_scroll]" />
 						<param name="label2_visible" value="$PARAM[label2_visible]" />
 						<param name="label2" value="$PARAM[label2]" />
 						<param name="label2_scroll" value="$PARAM[label2_scroll]" />
+						<param name="icon_right" value="$PARAM[icon_right]" />
 						<param name="color" value="$PARAM[focus_color]" />
-						<param name="show_underline" value="true" />
+						<param name="focus_border_enabled" value="true" />
 						<param name="focus_border_visible" value="$PARAM[focus_border_visible]" />
 						<param name="focus_border_margin_left" value="$PARAM[focus_border_margin_left]" />
 						<param name="focus_border_margin_right" value="$PARAM[focus_border_margin_right]" />
-						<include content="mediasource_List_Content" condition="$PARAM[mediasource]" />
-						<include content="skinshortcuts_Left_List_Content" condition="$PARAM[skinshortcuts]" />
-						<include content="smartplaylisteditor_Right_List_Content" condition="$PARAM[smartplaylisteditor]" />
 					</include>
+					<include content="Button_Template" condition="$PARAM[embedded_buttons]">
+						<param name="target_id" value="11" />
+						<param name="visible" value="Window.Is(mediasource) + [Control.HasFocus(10) | Control.HasFocus(11) | Control.HasFocus(13) | Control.HasFocus(14)]" />
+						<param name="right" value="180" />
+						<param name="width" value="90" />
+						<param name="texture" value="Browse" />
+						<animation effect="slide" end="90,0" time="0" condition="!Control.IsEnabled(13)">Conditional</animation>
+						<animation effect="slide" end="90,0" time="0" condition="!Control.IsEnabled(14)">Conditional</animation>
+					</include>
+					<include content="Button_Template" condition="$PARAM[embedded_buttons]">
+						<param name="target_id" value="13" />
+						<param name="visible" value="Window.Is(mediasource) + [Control.HasFocus(10) | Control.HasFocus(11) | Control.HasFocus(13) | Control.HasFocus(14)]" />
+						<param name="right" value="90" />
+						<param name="width" value="90" />
+						<param name="texture" value="Plus" />
+						<animation effect="slide" end="90,0" time="0" condition="!Control.IsEnabled(14)">Conditional</animation>
+					</include>
+					<include content="Button_Template" condition="$PARAM[embedded_buttons]">
+						<param name="target_id" value="14" />
+						<param name="visible" value="Window.Is(mediasource) + [Control.HasFocus(10) | Control.HasFocus(11) | Control.HasFocus(13) | Control.HasFocus(14)]" />
+						<param name="right" value="0" />
+						<param name="width" value="90" />
+						<param name="texture" value="Cross" />
+					</include>
+					<include content="Button_Template" condition="$PARAM[embedded_buttons]">
+						<param name="visible" value="Window.Is(smartplaylisteditor) + [Control.HasFocus(10) | Control.HasFocus(14)] + !String.IsEqual(Container(10).ListItem.Label,$LOCALIZE[21423])" />
+						<param name="target_id" value="14" />
+						<param name="right" value="45" />
+						<param name="width" value="90" />
+						<param name="texture" value="Cross" />
+					</include>
+					<include content="pvrgroupmanager_List_Content" condition="$PARAM[embedded_buttons] + Window.Is(pvrgroupmanager)" />
+					<include content="skinshortcuts_Left_List_Content" condition="$PARAM[embedded_buttons] + String.Contains(Window.Property(xmlfile),script-skinshortcuts.xml)" />
 				</focusedlayout>
 			</control>
-			<nested />
 		</definition>
 	</include>
 
 	<include name="Settings_Left_List_Template">
 		<param name="visible" default="true" />
-		<param name="id" />
-		<param name="pagecontrol" />
-		<param name="window_name" />
-		<param name="left" default="0" />
 		<param name="width" default="900" />
 		<param name="height" default="100%" />
+		<param name="onright_condition" default="true" />
+		<param name="onright2_condition" default="false" />
 		<param name="scrollbar_height" default="100%" />
-		<param name="onleft" default="0" />
-		<param name="onright" default="0" />
 		<param name="focus_border_visible" default="true" />
+		<param name="focus_border_margin_left" default="60" />
 		<param name="focus_color" default="$VAR[Settings_Left_List_Focus_Color]" />
 		<param name="label" default="$INFO[ListItem.Label]" />
 		<param name="label2_visible" default="true" />
 		<param name="label2" default="$INFO[ListItem.Label2]" />
 		<param name="divider_visible" default="true" />
 		<param name="divider_left" default="720" />
+		<param name="scrollbar_visible_extras" default="false" />
 		<definition>
 			<control type="group">
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
+				<centertop>50%</centertop>
+				<nested />
 				<include content="Settings_List_Template">
 					<param name="visible" value="$PARAM[visible]" />
 					<param name="id" value="$PARAM[id]" />
+					<param name="embedded_buttons" value="$PARAM[embedded_buttons]" />
 					<param name="pagecontrol" value="$PARAM[pagecontrol]" />
 					<param name="window_name" value="$PARAM[window_name]" />
 					<param name="side" value="left" />
@@ -274,20 +317,23 @@
 					<param name="onup" value="$PARAM[id]" />
 					<param name="ondown" value="$PARAM[id]" />
 					<param name="onleft" value="$PARAM[onleft]" />
-					<param name="onright" value="$PARAM[onright]" />
-					<param name="onright_condition" value="![Container($PARAM[id]).HasPrevious | Container($PARAM[id]).HasNext]" />
-					<param name="onright2" value="$PARAM[pagecontrol]" />
-					<param name="onright2_condition" value="Container($PARAM[id]).HasPrevious | Container($PARAM[id]).HasNext" />
 					<param name="focus_border_visible" value="$PARAM[focus_border_visible]" />
-					<param name="focus_border_margin_left" value="60" />
+					<param name="focus_border_margin_left" value="$PARAM[focus_border_margin_left]" />
 					<param name="focus_border_margin_right" value="0" />
 					<param name="focus_color" value="$PARAM[focus_color]" />
+					<param name="label_width" value="$PARAM[label_width]" />
+					<param name="label_shift" value="$PARAM[label_shift]" />
 					<param name="label" value="$PARAM[label]" />
+					<param name="label_scroll" value="$PARAM[label_scroll]" />
 					<param name="label2" value="$PARAM[label2]" />
 					<param name="label2_visible" value="$PARAM[label2_visible]" />
+					<param name="icon_right" value="$PARAM[icon_right]" />
+					<onleft>$PARAM[onleft]</onleft>
+					<onright condition="$PARAM[onright_condition]">$PARAM[onright]</onright>
+					<onright condition="$PARAM[onright2_condition]">$PARAM[onright2]</onright>
 				</include>
 				<include content="Dialog_Divider_With_Scrollbar">
-					<param name="scrollbarvisible" value="[Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[pagecontrol])] + !Window.IsVisible(contextmenu)" />
+					<param name="scrollbarvisible" value="[Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[pagecontrol]) | $PARAM[scrollbar_visible_extras]] + !Window.IsVisible(contextmenu)" />
 					<param name="dividervisible" value="$PARAM[divider_visible]" />
 					<param name="id" value="$PARAM[pagecontrol]" />
 					<param name="height" value="$PARAM[scrollbar_height]" />
@@ -301,16 +347,12 @@
 
 	<include name="Settings_Right_List_Template">
 		<param name="visible" default="true" />
-		<param name="id" />
-		<param name="pagecontrol" />
-		<param name="window_name" />
 		<param name="width" default="900" />
 		<param name="height" default="100%" />
 		<param name="top" default="0" />
 		<param name="scrollbar_height" default="100%" />
-		<param name="onleft" default="0" />
-		<param name="onright" default="0" />
 		<param name="focus_border_visible" default="true" />
+		<param name="focus_border_margin_right" default="60" />
 		<param name="focus_color" default="$VAR[Settings_Right_List_Focus_Color]" />
 		<param name="label" default="$INFO[ListItem.Label]" />
 		<param name="label2" default="$INFO[ListItem.Label2]" />
@@ -320,7 +362,9 @@
 		<definition>
 			<control type="group">
 				<width>$PARAM[width]</width>
-				<height>100%</height>
+				<height>$PARAM[height]</height>
+				<centertop>50%</centertop>
+				<nested />
 				<include content="Settings_List_Template">
 					<param name="visible" value="$PARAM[visible]" />
 					<param name="id" value="$PARAM[id]" />
@@ -332,18 +376,21 @@
 					<param name="top" value="$PARAM[top]" />
 					<param name="onup" value="$PARAM[id]" />
 					<param name="ondown" value="$PARAM[id]" />
-					<param name="onleft" value="$PARAM[onleft]" />
-					<param name="onleft_condition" value="![Container($PARAM[id]).HasPrevious | Container($PARAM[id]).HasNext]" />
-					<param name="onleft2" value="$PARAM[pagecontrol]" />
-					<param name="onleft2_condition" value="Container($PARAM[id]).HasPrevious | Container($PARAM[id]).HasNext" />
-					<param name="onright" value="$PARAM[onright]" />
 					<param name="focus_border_visible" value="$PARAM[focus_border_visible]" />
 					<param name="focus_border_margin_left" value="0" />
-					<param name="focus_border_margin_right" value="60" />
+					<param name="focus_border_margin_right" value="$PARAM[focus_border_margin_right]" />
 					<param name="focus_color" value="$PARAM[focus_color]" />
+					<param name="textoffset" value="$PARAM[textoffset]" />
+					<param name="label_width" value="$PARAM[label_width]" />
+					<param name="label_shift" value="$PARAM[label_shift]" />
 					<param name="label" value="$PARAM[label]" />
+					<param name="label_scroll" value="$PARAM[label_scroll]" />
 					<param name="label2" value="$PARAM[label2]" />
 					<param name="label2_visible" value="$PARAM[label2_visible]" />
+					<param name="icon_right" value="$PARAM[icon_right]" />
+					<onleft condition="$PARAM[onleft_condition]">$PARAM[onleft]</onleft>
+					<onleft condition="$PARAM[onleft2_condition]">$PARAM[onleft2]</onleft>
+					<onright>$PARAM[onright]</onright>
 				</include>
 				<include content="Dialog_Divider_With_Scrollbar">
 					<param name="scrollbarvisible" value="[Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[pagecontrol])] + !Window.IsVisible(contextmenu)" />
@@ -360,8 +407,6 @@
 	</include>
 
 	<include name="SettingsCategory_Layout">
-		<param name="left_list_id" />
-		<param name="right_list_id" />
 		<param name="alt_right_id" default="20" />
 		<param name="alt_right_condition" default="false" />
 		<param name="iconborder" default="false" />

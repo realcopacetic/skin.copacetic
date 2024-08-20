@@ -32,7 +32,7 @@
 				<param name="ondown" value="5" />
 				<param name="button1" value="true" />
 				<param name="button1_id" value="30" />
-				<param name="button1_texture" value="Refresh" />
+				<param name="button1_texture" value="Reset" />
 				<param name="button2" value="true" />
 				<param name="button2_id" value="29" />
 				<param name="button2_texture" value="Cross" />

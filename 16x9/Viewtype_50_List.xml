@@ -45,7 +45,7 @@
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + !$EXP[PanelDialog_IsVisible] + !Window.Is(videoplaylist)" />
 					<param name="colordiffuse" value="$VAR[Dark_Grey_Color]" />
 					<include content="Visible_Fade_Animation" />
-					<animation effect="zoom" start="60,180,1800,720" end="720,180,1140,720" time="0" condition="$EXP[Containers_Posters] | $EXP[Containers_Square]">Conditional</animation>
+					<animation effect="zoom" start="60,180,1800,720" end="720,180,1140,720" time="0" condition="$EXP[Containers_Posters] | $EXP[Containers_Square]">Conditional</animation>x
 				</include>
 				<include content="Artwork_Transition_Fade" condition="Window.Is(videos) | Window.Is(programs)">
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + $EXP[Containers_Posters]" />

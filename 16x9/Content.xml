@@ -1,35 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-	<include name="mediasource_List_Content">
-		<param name="visible" default="Control.HasFocus(10) | Control.HasFocus(11) | Control.HasFOcus(13) | Control.HasFocus(14)" />
-		<definition>
-			<include content="Button_Template">
-				<param name="target_id" value="11" />
-				<param name="visible" value="$PARAM[visible]" />
-				<param name="right" value="180" />
-				<param name="width" value="90" />
-				<param name="texture" value="Browse" />
-				<animation effect="slide" end="90,0" time="0" condition="!Control.IsEnabled(13)">Conditional</animation>
-				<animation effect="slide" end="90,0" time="0" condition="!Control.IsEnabled(14)">Conditional</animation>
-			</include>
-			<include content="Button_Template">
-				<param name="target_id" value="13" />
-				<param name="visible" value="$PARAM[visible]" />
-				<param name="right" value="90" />
-				<param name="width" value="90" />
-				<param name="texture" value="Plus" />
-				<animation effect="slide" end="90,0" time="0" condition="!Control.IsEnabled(14)">Conditional</animation>
-			</include>
-			<include content="Button_Template">
-				<param name="target_id" value="14" />
-				<param name="visible" value="$PARAM[visible]" />
-				<param name="right" value="0" />
-				<param name="width" value="90" />
-				<param name="texture" value="Cross" />
-			</include>
-		</definition>
+	<include name="managevideoversions_List_Content">
+		<control type="button" id="21">
+			<description>Play</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[208],managevideoversions)</onfocus>
+		</control>
+		<control type="button" id="22">
+			<description>Add version</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[40014],managevideoversions)</onfocus>
+		</control>
+		<control type="button" id="27">
+			<description>Choose art</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[13511],managevideoversions)</onfocus>
+		</control>
+		<control type="button" id="24">
+			<description>Choose type</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[40004],managevideoversions)</onfocus>
+		</control>
+		<control type="button" id="25">
+			<description>Set default</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[40023],managevideoversions)</onfocus>
+		</control>
+		<control type="button" id="26">
+			<description>Remove</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[15015],managevideoversions)</onfocus>
+		</control>
 	</include>
+
+	<include name="managevideoversions_Buttons_Content">
+		<include content="Button_Template">
+			<param name="target_id" value="21" />
+			<param name="texture" value="Play" />
+		</include>
+		<include content="Button_Template">
+			<param name="target_id" value="22" />
+			<param name="texture" value="Plus" />
+		</include>
+		<include content="Button_Template">
+			<param name="target_id" value="27" />
+			<param name="texture" value="Image" />
+		</include>
+		<include content="Button_Template">
+			<param name="target_id" value="24" />
+			<param name="texture" value="List" />
+		</include>
+		<include content="Button_Template">
+			<param name="target_id" value="25" />
+			<param name="texture" value="Star" />
+		</include>
+		<include content="Button_Template">
+			<param name="target_id" value="26" />
+			<param name="texture" value="Cross" />
+		</include>
+	</include>
+
+	<include name="managevideoextras_List_Content">
+		<control type="button" id="21">
+			<description>Play</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[208],managevideoversions)</onfocus>
+		</control>
+		<control type="button" id="23">
+			<description>Add extra</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[40014],managevideoversions)</onfocus>
+		</control>
+		<control type="button" id="27">
+			<description>Choose art</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[13511],managevideoversions)</onfocus>
+		</control>
+		<control type="button" id="28">
+			<description>Rename</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[40004],managevideoversions)</onfocus>
+		</control>
+		<control type="button" id="26">
+			<description>Remove</description>
+			<include content="Hidden_Button_Template" />
+			<onfocus>SetProperty(Focused_Button,$LOCALIZE[15015],managevideoversions)</onfocus>
+		</control>
+	</include>
+
+	<include name="managevideoextras_Buttons_Content">
+		<include content="Button_Template">
+			<param name="target_id" value="21" />
+			<param name="texture" value="Play" />
+		</include>
+		<include content="Button_Template">
+			<param name="target_id" value="23" />
+			<param name="texture" value="Plus" />
+		</include>
+		<include content="Button_Template">
+			<param name="target_id" value="27" />
+			<param name="texture" value="Image" />
+		</include>
+		<include content="Button_Template">
+			<param name="target_id" value="28" />
+			<param name="texture" value="Write" />
+		</include>
+		<include content="Button_Template">
+			<param name="target_id" value="26" />
+			<param name="texture" value="Cross" />
+		</include>
+	</include>
+
+	<include name="playerprocessinfo_PVR_List_Content">
+		<control type="button">
+			<description>PVR backend</description>
+			<include content="playerprocessinfo_Button" />
+			<label>$LOCALIZE[19012]</label>
+			<label2>$INFO[PVR.ActStreamClient]</label2>
+		</control>
+		<control type="button">
+			<description>PVR receiving device</description>
+			<include content="playerprocessinfo_Button" />
+			<label>$LOCALIZE[19006]</label>
+			<label2>$INFO[PVR.ActStreamDevice]</label2>
+		</control>
+		<control type="button">
+			<description>PVR stream status</description>
+			<include content="playerprocessinfo_Button" />
+			<label>$LOCALIZE[19007]</label>
+			<label2>$INFO[PVR.ActStreamStatus]</label2>
+		</control>
+		<control type="button">
+			<description>PVR stream service name / provider name</description>
+			<include content="playerprocessinfo_Button" />
+			<label>$LOCALIZE[19099]$VAR[Copacetic_Divider_Bold, , $LOCALIZE[19101]]</label>
+			<label2>$INFO[PVR.ActStreamServiceName]$VAR[Copacetic_Divider_Bold, ]$INFO[PVR.ActStreamProviderName, ]</label2>
+		</control>
+		<control type="button">
+			<description>PVR stream signal / SNR</description>
+			<include content="playerprocessinfo_Button" />
+			<label>$LOCALIZE[19008]$VAR[Copacetic_Divider_Bold, , $LOCALIZE[19009]]</label>
+			<label2>$INFO[PVR.ActStreamSignal]$VAR[Copacetic_Divider_Bold, ]$INFO[PVR.ActStreamSNR, ]</label2>
+		</control>
+		<control type="button">
+			<description>PVR stream BER</description>
+			<include content="playerprocessinfo_Button" />
+			<label>$LOCALIZE[19010]$VAR[Copacetic_Divider_Bold, , $LOCALIZE[19011]]</label>
+			<label2>$INFO[PVR.ActStreamBER]$VAR[Copacetic_Divider_Bold, ]$INFO[PVR.ActStreamUNC, ]</label2>
+		</control>
+		<control type="button">
+			<description>PVR stream encryption</description>
+			<include content="playerprocessinfo_Button" />
+			<label>$LOCALIZE[19015]</label>
+			<label2>$INFO[PVR.ActStreamEncryptionName]</label2>
+		</control>
+		<control type="button">
+			<description>PVR stream mux</description>
+			<include content="playerprocessinfo_Button" />
+			<label>$LOCALIZE[19100]</label>
+			<label2>$INFO[PVR.ActStreamMux]</label2>
+		</control>
+	</include>
+
 
 	<include name="playerprocessinfo_Media_List_Content">
 		<control type="button">
@@ -212,6 +345,36 @@
 		</control>
 	</include>
 
+	<include name="pvrgroupmanager_List_Content">
+		<include content="Button_Template"><!-- rename -->
+			<param name="target_id" value="27" />
+			<param name="visible" value="Control.HasFocus(13) | Control.HasFocus(27) | Control.HasFocus(25) | Control.HasFocus(28)" />
+			<param name="right" value="270" />
+			<param name="width" value="90" />
+			<param name="texture" value="Write" />
+			<animation effect="slide" end="75,0" time="0" condition="!Control.IsEnabled(25)">Conditional</animation>
+			<animation effect="slide" end="75,0" time="0" condition="!Control.IsEnabled(28)">Conditional</animation>
+		</include>
+		<include content="Button_Template"><!-- hide -->
+			<param name="target_id" value="25" />
+			<param name="visible" value="Control.HasFocus(13) | Control.HasFocus(27) | Control.HasFocus(25) | Control.HasFocus(28)" />
+			<param name="right" value="195" />
+			<param name="width" value="90" />
+			<param name="texture" value="Visible" />
+			<param name="toggle_button" value="true" />
+			<param name="alt_texture" value="Hidden" />
+			<param name="use_alt_texture" value="!String.Contains(Control.GetLabel(25),*)" />
+			<animation effect="slide" end="75,0" time="0" condition="!Control.IsEnabled(28)">Conditional</animation>
+		</include>
+		<include content="Button_Template"><!-- delete -->
+			<param name="target_id" value="28" />
+			<param name="visible" value="Control.HasFocus(13) | Control.HasFocus(27) | Control.HasFocus(25) | Control.HasFocus(28)" />
+			<param name="right" value="120" />
+			<param name="width" value="90" />
+			<param name="texture" value="Cross" />
+		</include>
+	</include>
+
 	<include name="pvrguidesearch_Right_Grouplist_Content">
 		<control type="spincontrolex" id="12">
 			<description>Min duration</description>
@@ -392,16 +555,6 @@
 			<description>Mixed</description>
 			<label>$LOCALIZE[467]: $LOCALIZE[21459]</label>
 		</control>
-	</include>
-
-	<include name="smartplaylisteditor_Right_List_Content">
-		<include content="Button_Template">
-			<param name="visible" value="[Control.HasFocus(10) | Control.HasFocus(14)] + !String.IsEqual(Container(10).ListItem.Label,$LOCALIZE[21423])" />
-			<param name="target_id" value="14" />
-			<param name="right" value="45" />
-			<param name="width" value="90" />
-			<param name="texture" value="Cross" />
-		</include>
 	</include>
 
 	<include name="smartplaylistrule_List_Content">

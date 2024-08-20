@@ -4,7 +4,7 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>3700</menucontrol>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
-	<views>50</views>
+	<views>50,51</views>
 	<controls>
 		<include content="Common_Controls" />
 		<include content="tvchannels_Controls" />

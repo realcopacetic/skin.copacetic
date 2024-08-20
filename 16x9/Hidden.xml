@@ -347,6 +347,41 @@
 		</include>
 	</include>
 
+	<include name="pvrgroupmanager_Hidden">
+		<control type="grouplist" id="4005">
+			<visible allowhiddenfocus="true">false</visible>
+			<orientation>horizontal</orientation>
+			<onleft>13</onleft>
+			<onright condition="Container(13).HasPrevious | Container(13).HasNext">60</onright>
+			<onright condition="![Container(13).HasPrevious | Container(13).HasNext] + Integer.IsGreater(Container(11).NumItems,0)">11</onright>
+			<onright condition="![Container(13).HasPrevious | Container(13).HasNext] + !Integer.IsGreater(Container(11).NumItems,0)">12</onright>
+			<control type="button" id="27">
+				<ondown>SetFocus(13)</ondown>
+				<ondown>Down</ondown>
+				<ondown>SetFocus(27)</ondown>
+				<onup>SetFocus(13)</onup>
+				<onup>Up</onup>
+				<onup>SetFocus(27)</onup>
+			</control>
+			<control type="radiobutton" id="25">
+				<ondown>SetFocus(13)</ondown>
+				<ondown>Down</ondown>
+				<ondown>SetFocus(25)</ondown>
+				<onup>SetFocus(13)</onup>
+				<onup>Up</onup>
+				<onup>SetFocus(25)</onup>
+			</control>
+			<control type="button" id="28">
+				<ondown>SetFocus(13)</ondown>
+				<ondown>Down</ondown>
+				<ondown>SetFocus(28)</ondown>
+				<onup>SetFocus(13)</onup>
+				<onup>Up</onup>
+				<onup>SetFocus(28)</onup>
+			</control>
+		</control>
+	</include>
+
 	<include name="seekbar_Hidden">
 		<control type="slider" id="401">
 			<visible allowhiddenfocus="true">false</visible>
@@ -370,7 +405,7 @@
 			<onfocus condition="Control.IsVisible(6)">SetFocus(6)</onfocus>
 		</control>
 	</include>
-	
+
 	<include name="skinshortcuts_Hidden">
 		<include content="Hidden_Components">
 			<control type="label" id="101" />

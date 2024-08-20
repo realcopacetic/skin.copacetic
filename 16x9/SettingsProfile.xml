@@ -37,11 +37,11 @@
 				<param name="id" value="2" />
 				<param name="width" value="1260" />
 				<param name="top" value="225" />
-				<param name="onleft" value="101" />
-				<param name="onright" value="3009" />
 				<param name="focus_border_visible" value="Control.HasFocus(2)" />
 				<param name="focus_border_margin_right" value="60" />
 				<param name="focus_color" value="$VAR[Settings_Grouplist_Label_Color]" />
+				<onleft>101</onleft>
+				<onright>3009</onright>
 			</include>
 			<include content="Simple_ListIcon">
 				<param name="left" value="150" />

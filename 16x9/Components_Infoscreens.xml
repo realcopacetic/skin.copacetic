@@ -367,7 +367,9 @@
 			<visible>$PARAM[visible]</visible>
 			<visible>![$EXP[TransparentDialog_IsVisible] + [Window.Is(movieinformation) | String.IsEqual(ListItem.DBType,artist)]] + ![$EXP[PanelDialog_IsVisible] + [String.IsEqual(ListItem.DBtype,album) | Window.Is(songinformation)]]</visible>
 			<include content="Visible_Fade_Delayed_Animation" />
-			<include content="Transparent_Dialog_Panel" />
+			<include content="Transparent_Dialog_Panel">
+				<param name="colordiffuse" value="$VAR[Dark_Grey_Color]" />
+			</include>
 			<include content="Simple_ListIcon" condition="String.IsEqual(ListItem.DBType,episode) | [String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(poster))]">
 				<param name="left" value="420" />
 				<param name="top" value="235" />

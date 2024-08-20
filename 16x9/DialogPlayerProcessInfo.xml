@@ -5,10 +5,15 @@
 	<controls>
 		<include content="Default_Dialog_Panel_Layout">
 			<param name="visible" value="!Window.IsVisible(shutdownmenu) | Window.IsVisible(sliderdialog)" />
-			<param name="panel_edge_top" value="540" />
+			<param name="panel_edge_top" value="480" />
 			<param name="panel_edge_bottom" value="0" />
 			<param name="panel_edge_left" value="0" />
 			<param name="panel_edge_right" value="0" />
+			<include content="playerprocessinfo_Grouplist" condition="VideoPlayer.Content(livetv)">
+				<param name="description" value="PVR process info" />
+				<param name="visible" value="Control.HasFocus(4001)" />
+				<include content="playerprocessinfo_PVR_List_Content" />
+			</include>
 			<include content="playerprocessinfo_Grouplist">
 				<param name="description" value="Media process info" />
 				<param name="visible" value="Control.HasFocus(4002)" />

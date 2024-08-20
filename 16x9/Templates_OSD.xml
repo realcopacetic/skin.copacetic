@@ -143,7 +143,11 @@
 				<include content="Player_Status_Icons" condition="!Window.Is(visualisation)">
 					<param name="large_label" value="true" />
 				</include>
-				<include content="musicosd_Slider" condition="[Window.Is(musicosd) + Skin.String(visualisation_Layout,Large)] | Window.Is(videoosd)" />
+				<include content="musicosd_Slider" condition="[Window.Is(musicosd) + Skin.String(visualisation_Layout,Large)] | [Window.Is(videoosd) + !VideoPlayer.Content(livetv)]" />
+				<include content="musicosd_Slider" condition="Window.Is(videoosd) + VideoPlayer.Content(livetv)">
+					<param name="info" value="PVR.TimeshiftProgressPlayPos" />
+					<param name="action" value="pvr.seek" />
+				</include>
 				<include content="musicosd_Slider" condition="Window.Is(musicosd) + !Skin.String(visualisation_Layout,Large)">
 					<param name="left" value="720" />
 					<param name="width" value="720" />

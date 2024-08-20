@@ -147,7 +147,6 @@
 					<param name="left" value="120" />
 					<param name="top" value="60" />
 				</include>
-
 			</control>
 		</definition>
 	</include>
@@ -175,8 +174,8 @@
 				<visible>!Player.Muted</visible>
 				<centerleft>50%</centerleft>
 				<centertop>50%</centertop>
-				<width>120</width>
-				<height>30</height>
+				<width>60</width>
+				<height>20</height>
 				<info>Player.Volume</info>
 				<reveal>true</reveal>
 				<texturebg colordiffuse="$VAR[Volume_Focused_Color]">views/white_15.png</texturebg>
@@ -186,8 +185,8 @@
 				<visible>Player.Muted</visible>
 				<centerleft>50%</centerleft>
 				<centertop>50%</centertop>
-				<width>120</width>
-				<height>30</height>
+				<width>60</width>
+				<height>20</height>
 				<texture colordiffuse="$VAR[Volume_Focused_Color]">views/white_15.png</texture>
 			</control>
 			<control type="group">
@@ -359,6 +358,7 @@
 		<definition>
 			<control type="group" id="$PARAM[id]">
 				<visible>$PARAM[visible]</visible>
+				<animation effect="slide" end="0,-30" time="0" condition="Window.IsVisible(radiochannels) | Window.IsVisible(radiorecordings) | Window.IsVisible(radiosearch) | Window.IsVisible(radiotimers) | Window.IsVisible(radiotimerrules) | Window.IsVisible(tvchannels) | Window.IsVisible(tvrecordings) | Window.IsVisible(tvsearch) | Window.IsVisible(tvtimers) | Window.IsVisible(tvtimerrules)">Conditional</animation>
 				<width>$PARAM[width]</width>
 				<top>$PARAM[top]</top>
 				<height>$PARAM[height]</height>
@@ -528,7 +528,7 @@
 				<include content="MusicPlayer_Fade_Animation" />
 				<include content="$PARAM[type]_Widget">
 					<param name="id" value="6500" />
-					<param name="visible" value="!Window.IsMedia | $EXP[ListView_Display_IsBackground] | $EXP[BillboardView_IsVisible] | [$EXP[ShowcaseView_Display_IsPosters] + ![!$EXP[ShowcaseView_Details_Off] + $EXP[Music_Player_IsVisible]]] | $EXP[ShowcaseView_Display_IsSquare] | $EXP[Infoscreen_IsVisible] | $EXP[Trailer_Autoplay_IsVisible]" />
+					<param name="visible" value="!Window.IsMedia | $EXP[ListView_Display_IsBackground] | $EXP[BillboardView_IsVisible] | [$EXP[ShowcaseView_Display_IsPosters] + ![!$EXP[ShowcaseView_Details_Off] + $EXP[Music_Player_IsVisible]]] | $EXP[ShowcaseView_Display_IsSquare] | $EXP[Infoscreen_IsVisible] | $EXP[Trailer_Autoplay_IsVisible] | Window.Is(addonbrowser) | Window.Is(programs) | $EXP[PVR_IsVisible]" />
 					<param name="content_visible" value="$PARAM[content_visible]" />
 					<param name="background_visible" value="false" />
 					<param name="label_width" value="600" />
