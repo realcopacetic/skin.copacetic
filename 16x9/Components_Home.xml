@@ -342,15 +342,18 @@
 		<param name="visible" default="![$EXP[Music_Player_IsVisible] | $EXP[Music_Player_HasFocus] | $EXP[Infoscreen_IsVisible] | $EXP[globalsearch_IsVisible] | Control.HasFocus(4300) | Window.IsVisible(volumebar) | Window.IsVisible(notification) | Window.IsVisible(extendedprogressdialog) | Window.IsVisible(shutdownmenu)]" />
 		<param name="textcolor" default="$VAR[Time_Widget_Label_Color]" />
 		<definition>
-			<include content="Clock" condition="!Skin.String(Time_Widget,Date) + !Skin.String(Time_Widget,Weather)">
-				<param name="visible" value="$PARAM[visible]" />
-				<param name="textcolor" value="$PARAM[textcolor]" />
-			</include>
-			<include content="Time_Widget" condition="Skin.String(Time_Widget,Date) | Skin.String(Time_Widget,Weather)">
-				<param name="visible" value="$PARAM[visible]" />
-				<param name="include_weather" value="Skin.String(Time_Widget,Weather)" />
-				<param name="textcolor" value="$PARAM[textcolor]" />
-			</include>
+			<control type="group">
+				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
+				<include content="Clock" condition="!Skin.String(Time_Widget,Date) + !Skin.String(Time_Widget,Weather)">
+					<param name="visible" value="$PARAM[visible]" />
+					<param name="textcolor" value="$PARAM[textcolor]" />
+				</include>
+				<include content="Time_Widget" condition="Skin.String(Time_Widget,Date) | Skin.String(Time_Widget,Weather)">
+					<param name="visible" value="$PARAM[visible]" />
+					<param name="include_weather" value="Skin.String(Time_Widget,Weather)" />
+					<param name="textcolor" value="$PARAM[textcolor]" />
+				</include>
+			</control>
 		</definition>
 	</include>
 

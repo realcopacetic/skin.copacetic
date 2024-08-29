@@ -54,40 +54,44 @@
 		<param name="show_thumb" default="true" />
 		<param name="use_alt_button" default="false" />
 		<definition>
-			<include content="script-upnext_layout" condition="$PARAM[show_thumb] + !Skin.String(script-upnext_Artwork,Square) + !Skin.String(script-upnext_Artwork,Posters)">
-				<param name="title_label" value="$PARAM[title_label]" />
-				<param name="info_label_visible" value="$PARAM[info_label_visible]" />
-			</include>
-			<include content="script-upnext_layout" condition="$PARAM[show_thumb] + Skin.String(script-upnext_Artwork,Square)">
-				<param name="height" value="320" />
-				<param name="title_label" value="$PARAM[title_label]" />
-				<param name="info_label_visible" value="$PARAM[info_label_visible]" />
-			</include>
-			<include content="script-upnext_layout" condition="$PARAM[show_thumb] + Skin.String(script-upnext_Artwork,Posters)">
-				<param name="height" value="480" />
-				<param name="title_label" value="$PARAM[title_label]" />
-				<param name="info_label_visible" value="$PARAM[info_label_visible]" />
-			</include>
-			<include content="script-upnext_layout" condition="!$PARAM[show_thumb]">
-				<param name="title_label" value="$PARAM[title_label]" />
-				<param name="info_label_visible" value="$PARAM[info_label_visible]" />
-				<param name="show_thumb" default="false" />
-			</include>
-			<include content="Button_Group_Template">
-				<param name="right" value="40" />
-				<param name="bottom" value="0" />
-				<param name="button1" value="true" />
-				<param name="button1_id" value="3012" />
-				<param name="button1_texture" value="Play" />
-				<param name="button1_toggle_button" value="true" />
-				<param name="button1_alt_texture" value="Check" />
-				<param name="button1_use_alt_texture" value="$PARAM[use_alt_button]" />
-				<param name="button2" value="true" />
-				<param name="button2_id" value="3013" />
-				<param name="button2_texture" value="Cross" />
-				<param name="color" value="$VAR[Light_Color]" />
-				<param name="unfocused_color" value="$VAR[Light_Color]" />
-			</include>
+			<control type="group">
+				<visible>!Player.Paused</visible>
+				<include content="Visible_Fade_Delayed_Animation" />
+				<include content="script-upnext_layout" condition="$PARAM[show_thumb] + !Skin.String(script-upnext_Artwork,Square) + !Skin.String(script-upnext_Artwork,Posters)">
+					<param name="title_label" value="$PARAM[title_label]" />
+					<param name="info_label_visible" value="$PARAM[info_label_visible]" />
+				</include>
+				<include content="script-upnext_layout" condition="$PARAM[show_thumb] + Skin.String(script-upnext_Artwork,Square)">
+					<param name="height" value="320" />
+					<param name="title_label" value="$PARAM[title_label]" />
+					<param name="info_label_visible" value="$PARAM[info_label_visible]" />
+				</include>
+				<include content="script-upnext_layout" condition="$PARAM[show_thumb] + Skin.String(script-upnext_Artwork,Posters)">
+					<param name="height" value="480" />
+					<param name="title_label" value="$PARAM[title_label]" />
+					<param name="info_label_visible" value="$PARAM[info_label_visible]" />
+				</include>
+				<include content="script-upnext_layout" condition="!$PARAM[show_thumb]">
+					<param name="title_label" value="$PARAM[title_label]" />
+					<param name="info_label_visible" value="$PARAM[info_label_visible]" />
+					<param name="show_thumb" default="false" />
+				</include>
+				<include content="Button_Group_Template">
+					<param name="right" value="40" />
+					<param name="bottom" value="0" />
+					<param name="button1" value="true" />
+					<param name="button1_id" value="3012" />
+					<param name="button1_texture" value="Play" />
+					<param name="button1_toggle_button" value="true" />
+					<param name="button1_alt_texture" value="Check" />
+					<param name="button1_use_alt_texture" value="$PARAM[use_alt_button]" />
+					<param name="button2" value="true" />
+					<param name="button2_id" value="3013" />
+					<param name="button2_texture" value="Cross" />
+					<param name="color" value="$VAR[Light_Color]" />
+					<param name="unfocused_color" value="$VAR[Light_Color]" />
+				</include>
+			</control>
 		</definition>
 	</include>
 </includes>

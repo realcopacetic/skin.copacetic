@@ -6,7 +6,7 @@
 	<onunload>ClearProperty(Scrollbars,home)</onunload>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>3000</menucontrol>
-	<views>50,501,502,504,505</views>
+	<views>50,500,501,502,504,505</views>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
 	<controls>
 		<include content="music_Controls" />

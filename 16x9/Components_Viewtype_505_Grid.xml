@@ -756,67 +756,73 @@
 	</include>
 
 	<include name="GridView_ListIcon_Static_Focused">
-		<include content="ListIcon_Static_Focused">
-			<param name="visible" value="$PARAM[visible]" />
-			<param name="position" value="$PARAM[position]" />
-			<param name="left" value="$PARAM[left]" />
-			<param name="top" value="$PARAM[top]" />
-			<param name="width" value="$PARAM[width]" />
-			<param name="height" value="$PARAM[height]" />
-			<param name="art_icon" value="$PARAM[art_icon]" />
-			<param name="art_diffuse" value="$PARAM[art_diffuse]" />
-			<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
-			<param name="fallback" value="$PARAM[fallback]" />
-			<!-- Multiart -->
-			<include content="Icon_Component_Multiart_Static" condition="Skin.HasSetting(Multiart_Slideshow) + !Window.Is(movieinformation) + !Window.Is(musicinformation) + !Window.Is(songinformation)">
+		<param name="border_protrusion" default="10" />
+		<definition>
+			<include content="ListIcon_Static_Focused">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="position" value="$PARAM[position]" />
+				<param name="left" value="$PARAM[left]" />
+				<param name="top" value="$PARAM[top]" />
+				<param name="width" value="$PARAM[width]" />
+				<param name="height" value="$PARAM[height]" />
+				<param name="art_icon" value="$PARAM[art_icon]" />
 				<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 				<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
+				<param name="fallback" value="$PARAM[fallback]" />
+				<!-- Multiart -->
+				<include content="Icon_Component_Multiart_Static" condition="Skin.HasSetting(Multiart_Slideshow) + !Window.Is(movieinformation) + !Window.Is(musicinformation) + !Window.Is(songinformation)">
+					<param name="art_diffuse" value="$PARAM[art_diffuse]" />
+					<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
+				</include>
+				<!-- Progress overlay -->
+				<include content="Icon_Component_Progress_Overlay" condition="Window.Is(home) | Window.Is(videos) | Window.Is(movieinformation)">
+					<param name="visible" value="!String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap($PARAM[position]).Label) + ![Window.Is(movieinformation) + Control.HasFocus(50)]" />
+				</include>
+				<!-- Border -->
+				<include content="Icon_Component_Border">
+					<param name="visible" value="$PARAM[border_visible]" />
+					<param name="protrusion" value="$PARAM[border_protrusion]" />
+					<param name="size" value="$PARAM[border_size]" />
+					<param name="color" value="$PARAM[border_color]" />
+					<param name="texture" value="$PARAM[border_texture]" />
+				</include>
 			</include>
-			<!-- Progress overlay -->
-			<include content="Icon_Component_Progress_Overlay" condition="Window.Is(home) | Window.Is(videos) | Window.Is(movieinformation)">
-				<param name="visible" value="!String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap($PARAM[position]).Label) + ![Window.Is(movieinformation) + Control.HasFocus(50)]" />
-			</include>
-			<!-- Border -->
-			<include content="Icon_Component_Border">
-				<param name="visible" value="$PARAM[border_visible]" />
-				<param name="protrusion" value="10" />
-				<param name="size" value="$PARAM[border_size]" />
-				<param name="color" value="$PARAM[border_color]" />
-				<param name="texture" value="$PARAM[border_texture]" />
-			</include>
-		</include>
+		</definition>
 	</include>
 
 	<include name="GridView_ListIcon_Animated">
-		<include content="ListIcon_Animated">
-			<param name="visible" value="$PARAM[visible]" />
-			<param name="position" value="$PARAM[position]" />
-			<param name="left" value="$PARAM[left]" />
-			<param name="top" value="$PARAM[top]" />
-			<param name="width" value="$PARAM[width]" />
-			<param name="height" value="$PARAM[height]" />
-			<param name="art_icon" value="$PARAM[art_icon]" />
-			<param name="art_diffuse" value="false" />
-			<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
-			<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
-			<param name="fallback" value="$PARAM[fallback]" />
-			<param name="animationtype" value="$PARAM[animationtype]" />
-			<param name="animationeffect" value="$PARAM[animationeffect]" />
-			<param name="animationend" value="$PARAM[animationend]" />
-			<param name="animationcondition" value="$PARAM[animationcondition]" />
-			<!-- Progress overlay -->
-			<include content="Icon_Component_Progress_Overlay" condition="Window.Is(home) | Window.Is(videos) | Window.Is(movieinformation)">
-				<param name="visible" value="!String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap($PARAM[position]).Label) + ![Window.Is(movieinformation) + Control.HasFocus(50)]" />
+		<param name="border_protrusion" default="10" />
+		<definition>
+			<include content="ListIcon_Animated">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="position" value="$PARAM[position]" />
+				<param name="left" value="$PARAM[left]" />
+				<param name="top" value="$PARAM[top]" />
+				<param name="width" value="$PARAM[width]" />
+				<param name="height" value="$PARAM[height]" />
+				<param name="art_icon" value="$PARAM[art_icon]" />
+				<param name="art_diffuse" value="false" />
+				<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
+				<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
+				<param name="fallback" value="$PARAM[fallback]" />
+				<param name="animationtype" value="$PARAM[animationtype]" />
+				<param name="animationeffect" value="$PARAM[animationeffect]" />
+				<param name="animationend" value="$PARAM[animationend]" />
+				<param name="animationcondition" value="$PARAM[animationcondition]" />
+				<!-- Progress overlay -->
+				<include content="Icon_Component_Progress_Overlay" condition="Window.Is(home) | Window.Is(videos) | Window.Is(movieinformation)">
+					<param name="visible" value="!String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap($PARAM[position]).Label) + ![Window.Is(movieinformation) + Control.HasFocus(50)]" />
+				</include>
+				<!-- Border -->
+				<include content="Icon_Component_Border">
+					<param name="visible" value="$PARAM[border_visible]" />
+					<param name="protrusion" value="$PARAM[border_protrusion]" />
+					<param name="size" value="$PARAM[border_size]" />
+					<param name="color" value="$PARAM[border_color]" />
+					<param name="texture" value="$PARAM[border_texture]" />
+				</include>
 			</include>
-			<!-- Border -->
-			<include content="Icon_Component_Border">
-				<param name="visible" value="$PARAM[border_visible]" />
-				<param name="protrusion" value="10" />
-				<param name="size" value="$PARAM[border_size]" />
-				<param name="color" value="$PARAM[border_color]" />
-				<param name="texture" value="$PARAM[border_texture]" />
-			</include>
-		</include>
+		</definition>
 	</include>
 
 	<include name="GridView_Multiart_Animated">
@@ -879,7 +885,7 @@
 		<param name="art_diffuse" />
 		<param name="fallback" />
 		<param name="focus_border_visible" />
-		<param name="focus_border_edge" />
+		<param name="focus_border_protrusion" />
 		<param name="focus_border_size" />
 		<param name="focus_border_color" />
 		<param name="focus_border_texture" />
@@ -1049,6 +1055,7 @@
 						<param name="animationeffect" value="slide" />
 						<param name="animationend" value="$PARAM[item_width],0" />
 						<param name="border_visible" value="$PARAM[focus_border_visible]" />
+						<param name="border_protrusion" value="$PARAM[focus_border_protrusion]" />
 						<param name="border_size" value="$PARAM[focus_border_size]" />
 						<param name="border_color" value="$PARAM[focus_border_color]" />
 						<param name="border_texture" value="$PARAM[focus_border_texture]" />
@@ -1215,6 +1222,7 @@
 						<param name="animationeffect" value="slide" />
 						<param name="animationend" value="-$PARAM[item_width],0" />
 						<param name="border_visible" value="$PARAM[focus_border_visible]" />
+						<param name="border_protrusion" value="$PARAM[focus_border_protrusion]" />
 						<param name="border_size" value="$PARAM[focus_border_size]" />
 						<param name="border_color" value="$PARAM[focus_border_color]" />
 						<param name="border_texture" value="$PARAM[focus_border_texture]" />
@@ -1370,6 +1378,8 @@
 		<param name="5x_item_width" />
 		<param name="6x_item_width" />
 		<param name="focus_border_visible" default="true" />
+		<param name="focus_border_protrusion" default="10" />
+		<param name="focus_border_size" default="11" />
 		<definition>
 			<control type="group">
 				<animation effect="slide" start="0,0" end="60,0" time="0" condition="true">Conditional</animation>
@@ -1393,8 +1403,8 @@
 					<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 					<param name="fallback" value="$PARAM[fallback]" />
 					<param name="focus_border_visible" value="$PARAM[focus_border_visible]" />
-					<param name="focus_border_protrusion" value="10" />
-					<param name="focus_border_size" value="11" />
+					<param name="focus_border_protrusion" value="$PARAM[focus_border_protrusion]" />
+					<param name="focus_border_size" value="$PARAM[focus_border_size]" />
 					<param name="focus_border_color" value="$VAR[Accent_Color]" />
 					<param name="focus_border_texture" value="views/border_10px.png" />
 				</include>
@@ -1414,8 +1424,8 @@
 					<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 					<param name="fallback" value="$PARAM[fallback]" />
 					<param name="focus_border_visible" value="$PARAM[focus_border_visible]" />
-					<param name="focus_border_protrusion" value="10" />
-					<param name="focus_border_size" value="11" />
+					<param name="focus_border_protrusion" value="$PARAM[focus_border_protrusion]" />
+					<param name="focus_border_size" value="$PARAM[focus_border_size]" />
 					<param name="focus_border_color" value="$VAR[Accent_Color]" />
 					<param name="focus_border_texture" value="views/border_10px.png" />
 				</include>
@@ -1465,7 +1475,6 @@
 				<param name="4x_item_width" value="2368" />
 				<param name="5x_item_width" value="2960" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
-				<param name="focus_border_visible" value="$PARAM[focus_border_visible]" />
 				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 				<nested />
 			</include>
@@ -1493,7 +1502,8 @@
 				<param name="6x_item_width" value="2112" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
 				<param name="art_diffuse" value="$PARAM[art_diffuse]" />
-				<param name="focus_border_visible" value="$PARAM[focus_border_visible]" />
+				<param name="focus_border_protrusion" value="6" />
+				<param name="focus_border_size" value="7" />
 				<animation effect="slide" start="0,0" end="20,0" time="0" condition="true">Conditional</animation>
 				<nested />
 			</include>

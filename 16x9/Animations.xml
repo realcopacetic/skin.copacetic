@@ -262,8 +262,11 @@
 	</include>
 
 	<!-- Conditionals/scenarios -->
-	<include name="Focus_Zoom_Animation" reversible="true">
+	<include name="Focus_Zoom_Animation" >
 		<animation effect="zoom" center="auto" start="103" end="100" time="Default_Transition_0.75x" tween="back" easing="in" condition="$EXP[GridView_IsVisible]" reversible="false">Focus</animation>
+	</include>
+	<include name="Multiart_Focus_Fade_Animation">
+		<animation effect="fade" start="0" end="100" time="Default_Transition_0.75x" delay="3000" tween="sine" easing="inout" reversible="false">Focus</animation>
 	</include>
 
 	<include name="Grid_Details_Overlay_Fade_Animation">

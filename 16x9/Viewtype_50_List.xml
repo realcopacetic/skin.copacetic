@@ -38,7 +38,7 @@
 		<param name="art_icon" default="Thumbnail" />
 		<definition>
 			<include content="Viewtype_Display_Template">
-				<param name="visible" value="!$EXP[Container_Switching] + !$EXP[Options_Switching] + ![$EXP[ListView_Display_IsThumbnails] + Window.IsVisible(selectvideoversion)]" />
+				<param name="visible" value="![$EXP[ListView_Display_IsThumbnails] + Window.IsVisible(selectvideoversion)]" />
 				<param name="viewtype_label" value="List" />
 				<param name="media_view" value="true" />
 				<include content="Transparent_Dialog_Panel">
@@ -114,6 +114,7 @@
 			</include>
 			<include content="Viewtype_Details_Including_Content_Switching_Template">
 				<param name="viewtype_label" value="List" />
+				<param name="visible" value="!$EXP[Scrollbar_HasFocus]" />
 				<include content="Breadcrumb_Label">
 					<param name="visible" value="!Container.Content(sets) + !Container.Content(movies) + !Container.Content(tvshows) + ![Container.Content(seasons) + $EXP[ListView_Details_Info_Seasons]] + ![Container.Content(actors) + String.IsEmpty(ListItem.Appearances)] + ![Container.Content(files) + !Window.Is(videoplaylist) + !String.IsEmpty(ListItem.Art(poster))] + ![$EXP[ListView_Display_IsBackground] + $EXP[Notification_Widget_IsVisible]]" />
 					<param name="animation" value="VisibleHidden_Fade_Delayed_Animation" />
