@@ -51,7 +51,6 @@
 		</include>
 		<!-- Content -->
 		<control type="group">
-			<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 			<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
 			<control type="group">
 				<visible>Control.HasFocus(3000) | $EXP[Music_Player_HasFocus] | Control.HasFocus(4201)</visible>
@@ -72,6 +71,7 @@
 			<include content="Music_Player_Widget" condition="Skin.HasSetting(Music_Player_Enabled)">
 				<param name="left_label_visible" value="true" />
 				<param name="background_visible" value="false" />
+				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 			</include>
 		</control>
 	</controls>

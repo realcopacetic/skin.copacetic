@@ -602,6 +602,7 @@
 			<param name="widget_display" value="Posters" />
 			<param name="id" value="3202" />
 			<param name="widget_position" value="2" />
+			<param name="min_items" value="2" />
 			<param name="target" value="videos" />
 			<param name="sortby" value="season" />
 			<param name="sortorder" value="ascending" />

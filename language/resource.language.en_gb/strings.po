@@ -106,6 +106,12 @@ msgctxt "#31033"
 msgid "Detailed"
 msgstr ""
 
+#: NEW
+#Common
+msgctxt "#31034"
+msgid "Detailed list (WIP)"
+msgstr ""
+
 
 
 
@@ -1783,6 +1789,11 @@ msgctxt "#31621"
 msgid "Player"
 msgstr ""
 
+#: NEW
+#/16x9/DialogPlayerProcessInfo.xml
+msgctxt "#31637"
+msgid "channels in"
+msgstr ""
 
 
 

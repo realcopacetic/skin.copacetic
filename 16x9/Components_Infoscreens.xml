@@ -54,23 +54,23 @@
 			<align>center</align>
 			<itemgap>0</itemgap>
 			<include content="Flag_Icon">
-				<param name="id" value="6303" />
+				<param name="visible" value="!String.IsEqual(Control.GetLabel(6303),flags/blank.png)" />
 				<param name="texture" value="$VAR[Studio_Flag]" />
 			</include>
 			<include content="Flag_Icon">
-				<param name="id" value="6304" />
+				<param name="visible" value="!String.IsEqual(Control.GetLabel(6304),flags/blank.png)" />
 				<param name="texture" value="$VAR[MPAA_Flag]" />
 			</include>
 			<include content="Flag_Icon" condition="$PARAM[VideoSource_condition]">
-				<param name="id" value="6305" />
+				<param name="visible" value="!String.IsEqual(Control.GetLabel(6305),flags/blank.png)" />
 				<param name="texture" value="$VAR[VideoSource_Flag]" />
 			</include>
 			<include content="Flag_Icon" condition="$PARAM[VideoCodec_condition]">
-				<param name="id" value="6306" />
+				<param name="visible" value="!String.IsEqual(Control.GetLabel(6306),flags/blank.png)" />
 				<param name="texture" value="$VAR[VideoCodec_Flag]" />
 			</include>
 			<include content="Flag_Icon" condition="$PARAM[AudioCodec_condition]">
-				<param name="id" value="6307" />
+				<param name="visible" value="!String.IsEqual(Control.GetLabel(6307),flags/blank.png)" />
 				<param name="texture" value="$VAR[AudioCodec_Flag]" />
 			</include>
 		</control>

@@ -103,7 +103,7 @@
 		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.landscape)) + !$EXP[ListView_Display_IsThumbnails] + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">$INFO[ListItem(0).Art(tvshow.landscape)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.fanart)) + !$EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(tvshow.fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(artist.fanart)) + !$EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(artist.fanart)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Art(artist.fanart)) + !$EXP[ListView_Display_IsThumbnails] + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">$INFO[ListItem(0).Art(artist.landscape)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(artist.landscape)) + !$EXP[ListView_Display_IsThumbnails] + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">$INFO[ListItem(0).Art(artist.landscape)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(keyart)) + $EXP[ListView_Display_IsThumbnails] + $EXP[Prefer_Keyart_List]">$INFO[ListItem(0).Art(keyart)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(poster)) + $EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(poster)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(boxfront)) + $EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(boxfront)]</value>
@@ -112,6 +112,28 @@
 		<value condition="!String.IsEmpty(ListItem(0).Art(artist.thumb))">$INFO[ListItem(0).Art(artist.thumb)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(landscape)) + !Container.Content(files) + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">$INFO[ListItem(0).Art(landscape)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(fanart)) + !Container.Content(files)">$INFO[ListItem(0).Art(fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Icon)">$INFO[ListItem(0).Icon]</value>
+	</variable>
+
+	<variable name="DetailedList_Focused(0)Content">
+		<value condition="[Window.Is(videos) | Window.Is(music)] + Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Window(home).Property(Multiart_Fadeout))">$INFO[Control.GetLabel(3400)]</value>
+		<value>$VAR[DetailedList(0)Content]</value>
+	</variable>
+
+	<variable name="DetailedList(0)Content">
+		<value condition="!String.IsEmpty(ListItem(0).Art(thumb)) + String.IsEqual(ListItem(0).DBType,episode) | String.IsEqual(ListItem(0).DBType,album) | String.IsEqual(ListItem(0).DBType,song) | [Container.Content(songs) + !String.IsEmpty(Container.PluginName)] | Container.Content(addons) | Container.Content(videos)">$INFO[ListItem(0).Art(thumb)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(album.fanart))]">$INFO[ListItem(0).Art(album.fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(landscape)) + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">$INFO[ListItem(0).Art(landscape)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(fanart))">$INFO[ListItem(0).Art(fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.landscape)) + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">$INFO[ListItem(0).Art(tvshow.landscape)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.fanart))">$INFO[ListItem(0).Art(tvshow.fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(artist.fanart))">$INFO[ListItem(0).Art(artist.fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(artist.landscape)) + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">$INFO[ListItem(0).Art(artist.landscape)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(keyart)) + $EXP[ListView_Display_IsThumbnails] + $EXP[Prefer_Keyart_List]">$INFO[ListItem(0).Art(keyart)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(poster)) + $EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(boxfront)) + $EXP[ListView_Display_IsThumbnails]">$INFO[ListItem(0).Art(boxfront)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(artist.thumb))">$INFO[ListItem(0).Art(artist.thumb)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(landscape)) + !Container.Content(files) + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">$INFO[ListItem(0).Art(landscape)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Icon)">$INFO[ListItem(0).Icon]</value>
 	</variable>
 
@@ -125,6 +147,8 @@
 		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.landscape)) + !$EXP[GridView_Display_IsPosters] + $EXP[Prefer_Landscape_Grid]">$INFO[ListItem(0).Art(tvshow.landscape)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.fanart)) + !$EXP[GridView_Display_IsPosters]">$INFO[ListItem(0).Art(tvshow.fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.square)) + !$EXP[GridView_Display_IsPosters]">$INFO[ListItem(0).Art(tvshow.square)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(artist.fanart))">$INFO[ListItem(0).Art(artist.fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(artist.landscape)) + $EXP[Prefer_Landscape_Grid]">$INFO[ListItem(0).Art(artist.landscape)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(keyart)) + [$EXP[GridView_Details_On] | $EXP[Prefer_Keyart]]">$INFO[ListItem(0).Art(keyart)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(poster))">$INFO[ListItem(0).Art(poster)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(boxfront))">$INFO[ListItem(0).Art(boxfront)]</value>
@@ -452,8 +476,8 @@
 		<value condition="$EXP[ListView_Display_IsThumbnails] + String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Art(thumb1))">thumb</value>
 		<value condition="$EXP[ListView_Display_IsThumbnails] + $EXP[Prefer_Keyart_List] + !String.IsEmpty(ListItem.Art(keyart1))">keyart</value>
 		<value condition="$EXP[ListView_Display_IsThumbnails] + [!$EXP[Prefer_Keyart_List] | String.IsEmpty(ListItem.Art(keyart))] + !String.IsEmpty(ListItem.Art(poster1))">poster</value>
-		<value condition="![String.Contains(ListItem.Path,themoviedb.helper) + !Window.Is(home)] + [$EXP[ListView_Display_IsBackground] | $EXP[BillboardView_IsVisible]] + !String.IsEmpty(ListItem.Art(landscape1)) + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">landscape</value>
-		<value condition="![String.Contains(ListItem.Path,themoviedb.helper) + !Window.Is(home)] + [$EXP[ListView_Display_IsBackground] | $EXP[BillboardView_IsVisible]] + !String.IsEmpty(ListItem.Art(fanart1)) + !Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">fanart</value>
+		<value condition="![String.Contains(ListItem.Path,themoviedb.helper) + !Window.Is(home)] + [$EXP[ListView_Display_IsBackground] | $EXP[DetailedListView_IsVisible] | $EXP[BillboardView_IsVisible]] + !String.IsEmpty(ListItem.Art(landscape1)) + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">landscape</value>
+		<value condition="![String.Contains(ListItem.Path,themoviedb.helper) + !Window.Is(home)] + [$EXP[ListView_Display_IsBackground] | $EXP[DetailedListView_IsVisible] | $EXP[BillboardView_IsVisible]] + !String.IsEmpty(ListItem.Art(fanart1)) + !Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">fanart</value>
 		<value condition="$EXP[ShowcaseView_Display_IsPosters] + $EXP[ShowcaseView_Details_Overlay_IsVisible] + !String.IsEmpty(ListItem.Art(keyart1))">keyart</value>
 		<value condition="$EXP[ShowcaseView_Display_IsPosters] + $EXP[ShowcaseView_Logo_On] + !String.IsEmpty(ListItem.Art(clearlogo)) + !String.IsEmpty(ListItem.Art(keyart1))">keyart</value>
 		<value condition="$EXP[ShowcaseView_Display_IsPosters] + $EXP[Prefer_Keyart] + !String.IsEmpty(ListItem.Art(keyart1))">keyart</value>

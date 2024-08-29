@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="DetailedListView_Menu_Options">
+		<param name="visible" default="Control.IsVisible(500)" />
+		<definition>
+			<item id="1">
+				<description>Layout / Detailed List</description>
+				<onclick>SetFocus(50)</onclick>
+				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31034] $VAR[Copacetic_Chevron_Right]</label>
+				<label2>$LOCALIZE[31005] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31034]</label2>
+				<property name="ActionLeft">Container.PreviousViewMode</property>
+				<property name="ActionRight">Container.NextViewMode</property>
+				<visible>$PARAM[visible] + Integer.IsGreater(Container.ViewCount,1)</visible>
+			</item>
+		</definition>
+	</include>
+</includes>

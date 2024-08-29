@@ -32,7 +32,7 @@
 				<param name="left" value="1310" />
 				<param name="width" value="460" />
 				<param name="top" value="203" />
-				<param name="label" value="[UPPERCASE]$INFO[Container(12).NumItems,, channels in]$INFO[Container(13).ListItem.Label, ][/UPPERCASE]" />
+				<param name="label" value="[UPPERCASE]$INFO[Container(12).NumItems,, $LOCALIZE[31637]]$INFO[Container(13).ListItem.Label, ][/UPPERCASE]" />
 			</include>
 			<include content="Settings_Left_List_Template">
 				<param name="id" value="13" />

@@ -20,15 +20,23 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
-**1.6.4**
-- Added a workaround for the focus glitch on homescreen when globalsearch icon is clicked and focus temporarily returns to home menu before keyboard loads. This is required to ensure that after keyboard or global search is exited, the homescreen is properly focused on the main menu. Added a window property to hide main menu during this transition.
-- All windows should now have background/content hidden if global search is opened on top
-- More PVR improvements including a new view for channels with more details, fixed osd and seek bar controls
-- pvrchannelmananger window added
-- pvrgroupmanager window added
-
-- localise 'channels in'
-- detailed list as new view for Media?
+**1.6.6**
+To do:
+- pvr switching from windows to fullscreen there's a transition animation but it should be instant
+- detailed list
+   - progress bar
+   - collection icon
+   - navigation
+   - secondary list
+   - view options (flags, details)
+   - variable length textbox depending on how big the plot is
+   - better differentiation between itemlayout and focuslayout
+   - now playing
+   - track number / heart icon
+   - musicplayer
+- PVR seek like estuary
+- pvr icons from studio flags folder?
+- make sure multiart control is disabled after autoscroll
 - does label need to fade out and in when home screen > music player controls?
 - Views break after coming out of a playlist (next episode)
 - disable grid on certain list only views
@@ -44,6 +52,23 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 = <!-- temp fix to account for fact that DecreaseRating won't go lower than 1 for VideoPlayer.UserRating -->
 - https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Extended-Info#direct-call-auto
 
+**1.6.5**
+- Work in Progress (WIP) new view called Detailed List based on PVR view
+- Skydance, Epix, MGM flags updated
+- Fixed missing like icon when a song when song's user rating exceeds the value set in (Settings > Copacetic > Customisations > Liked song rating threshold)
+- Fixed issue where gridview spotlight widget was hiding during trailer autoplay
+- Fixed bug causing widget multiart to fallback to square on other layout types if expected multiart type was not present
+- Fixed bug in Variable length title label that was causing it to switch between different sizes erroneously
+- Changed seasons infoscreen widget to only appear if more than one season is present
+- Added delay to auto trailer playback for widgets when switching between widgets
+- Changed visibility condition so that infoscreen widget scrollbar doesn't momentarily appear when pressing back to exit infoscreen
+
+**1.6.4**
+- Added a workaround for the focus glitch on homescreen when globalsearch icon is clicked and focus temporarily returns to home menu before keyboard loads. This is required to ensure that after keyboard or global search is exited, the homescreen is properly focused on the main menu. Added a window property to hide main menu during this transition.
+- All windows should now have background/content hidden if global search is opened on top
+- More PVR improvements including a new view for channels with more details, fixed osd and seek bar controls
+- pvrchannelmananger window added
+- pvrgroupmanager window added
 
 **1.6.3**
 - Fix for gridview artwork mask being on top of icons

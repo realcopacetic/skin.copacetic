@@ -576,12 +576,12 @@
 		<value condition="Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.Property(Artist_Description))">$INFO[Container(3100).ListItem.Property(Artist_Description)]</value>
 		<value condition="Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.PlotOutline)">$INFO[Container(3100).ListItem.PlotOutline]</value>
 		<value condition="Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.Plot)">$INFO[Container(3100).ListItem.Plot]</value>
+		<value condition="!String.IsEmpty(ListItem.AddonDescription)">$INFO[ListItem.AddonDescription]</value>
+		<value condition="!String.IsEmpty(ListItem.AddonSummary)">$INFO[ListItem.AddonSummary]</value>
 		<value condition="!String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
 		<value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
 		<value condition="!String.IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.Plot]</value>
 		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
-		<value condition="!String.IsEmpty(ListItem.AddonDescription)">$INFO[ListItem.AddonDescription]</value>
-		<value condition="!String.IsEmpty(ListItem.AddonSummary)">$INFO[ListItem.AddonSummary]</value>
 	</variable>
 
 	<variable name="PlotType_Label">

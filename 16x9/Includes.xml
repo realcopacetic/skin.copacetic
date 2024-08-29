@@ -14,7 +14,7 @@
 	<include file="Components_PVR.xml" />
 	<include file="Components_Settings.xml" />
 	<include file="Components_Viewtype_50_List.xml" />
-	<include file="Components_Viewtype_501_Billboard.xml" />
+	<include file="Components_Viewtype_500_DetailedList.xml" />
 	<include file="Components_Viewtype_502_Showcase.xml" />
 	<include file="Components_Viewtype_504_Strip.xml" />
 	<include file="Components_Viewtype_505_Grid.xml" />
@@ -27,6 +27,7 @@
 	<include file="Content_Settings.xml" />
 	<include file="Content_Settings_Sliders.xml" />
 	<include file="Content_Viewtype_50_List.xml" />
+	<include file="Content_Viewtype_500_DetailedList.xml" />
 	<include file="Content_Viewtype_501_Billboard.xml" />
 	<include file="Content_Viewtype_502_Showcase.xml" />
 	<include file="Content_Viewtype_504_Strip.xml" />
@@ -55,6 +56,7 @@
 	<include file="Templates_Viewtypes.xml" />
 	<include file="Templates_Widgets.xml" />
 	<include file="Viewtype_50_List.xml" />
+	<include file="Viewtype_500_DetailedList.xml" />
 	<include file="Viewtype_501_Billboard.xml" />
 	<include file="Viewtype_502_Showcase.xml" />
 	<include file="Viewtype_504_Strip.xml" />
