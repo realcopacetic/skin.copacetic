@@ -445,6 +445,14 @@
 		<value condition="Control.HasFocus(16010) | Control.HasFocus(16011)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
+	<variable name="skinsettings_Background_Slideshow2_Button_Textcolor">
+		<value condition="Control.HasFocus(16100) | Control.HasFocus(16101)">$VAR[Light_Color]</value>
+		<value>$VAR[Unfocused_Color]</value>
+	</variable>
+	<variable name="skinsettings_Background_Slideshow_Timer_Button_Textcolor">
+		<value condition="Control.HasFocus(16130) | Control.HasFocus(16131) | Control.HasFocus(16132)">$VAR[Light_Color]</value>
+		<value>$VAR[Unfocused_Color]</value>
+	</variable>
 	<variable name="skinsettings_GridView_Size_Button_Textcolor">
 		<value condition="Control.HasFocus(13400) | Control.HasFocus(13401)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
@@ -952,6 +960,7 @@
 	</variable>
 	<variable name="Seekbar_Focused_Color">
 		<value condition="Control.HasFocus(60) + !VideoPlayer.Content(livetv)">$VAR[Accent_Color]</value>
+		<value condition="Player.Seeking">$VAR[Accent_Color]</value>
 		<value condition="Skin.String(Theme,Light) + $EXP[visualisation_Background_IsEmpty] + Skin.String(visualisation_Layout,Large)">$VAR[Dark_Color]</value>
 		<value>$VAR[Light_Color]</value>
 	</variable>

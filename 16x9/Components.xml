@@ -238,6 +238,26 @@
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="time" value="30000" />
 			</include>
+			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,60)">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="time" value="60000" />
+			</include>
+			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,300)">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="time" value="300000" />
+			</include>
+			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,600)">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="time" value="600000" />
+			</include>
+			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,900)">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="time" value="900000" />
+			</include>
+			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,1800)">
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="time" value="1800000" />
+			</include>
 		</definition>
 	</include>
 

@@ -24,17 +24,6 @@
 			<texturebg colordiffuse="$VAR[Cachebar_Background_Color]">views/white_100.png</texturebg>
 			<midtexture colordiffuse="$VAR[Seekbar_Background_Color]">views/white_100.png</midtexture>
 		</control>
-		<!-- Seek bar -->
-		<control type="progress">
-			<visible>Player.HasPerformedSeek(2)</visible>
-			<centertop>50%</centertop>
-			<left>$PARAM[progress_bar_padding]</left>
-			<right>$PARAM[progress_bar_padding]</right>
-			<height>6</height>
-			<info>Player.SeekBar</info>
-			<texturebg colordiffuse="$VAR[Blank_Color]">views/white_100.png</texturebg>
-			<midtexture colordiffuse="$VAR[Accent_Color]">views/white_100.png</midtexture>
-		</control>
 		<!-- Ranges -->
 		<include content="Player_Ranges" condition="$PARAM[include_ranges]">
 			<param name="left" value="$PARAM[progress_bar_padding]" />
@@ -46,10 +35,22 @@
 			<left>$PARAM[progress_bar_padding]</left>
 			<right>$PARAM[progress_bar_padding]</right>
 			<height>6</height>
-			<info>Player.Progress</info>
+			<!--<info>Player.Progress</info>-->
+			<info>Player.SeekBar</info>
 			<texturebg colordiffuse="$VAR[Blank_Color]">views/white_100.png</texturebg>
 			<midtexture colordiffuse="$VAR[Seekbar_Focused_Color]">views/white_100.png</midtexture>
 		</control>
+		<!-- Seek bar -->
+		<!--<control type="progress">
+			<visible>Player.Seeking</visible>
+			<centertop>50%</centertop>
+			<left>$PARAM[progress_bar_padding]</left>
+			<right>$PARAM[progress_bar_padding]</right>
+			<height>6</height>
+			<info>Player.SeekBar</info>
+			<texturebg colordiffuse="$VAR[Blank_Color]">views/white_100.png</texturebg>
+			<midtexture colordiffuse="$VAR[Accent_Color]">views/white_100.png</midtexture>
+		</control>-->
 	</include>
 
 	<include name="PVR_Progress_Bars">
@@ -138,7 +139,7 @@
 		<param name="action" default="seek" />
 		<definition>
 			<control type="slider" id="60">
-				<visible allowhiddenfocus="true">Control.HasFocus(60)</visible>
+				<visible allowhiddenfocus="true">[Window.IsVisible(videoosd) + !System.IdleTime(3)]</visible>
 				<animation effect="slide" end="0,-18" time="0" condition="VideoPlayer.Content(livetv)">Conditional</animation>
 				<bottom>20</bottom>
 				<left>$PARAM[left]</left>
@@ -301,8 +302,8 @@
 	<include name="Player_Status_Icons_Label">
 		<definition>
 			<control type="label">
-				<visible>Player.Rewinding | Player.Forwarding | Player.HasPerformedSeek(2) | [Window.Is(videoosd) + VideoPlayer.Content(livetv) + !String.IsEmpty(PVR.TimeShiftOffset)]</visible>
-				<include content="PlayerSeekLabel_Fade_Delayed_Animation" />
+				<visible>Player.Rewinding | Player.Forwarding | !String.IsEmpty(Player.SeekStepSize) | [!String.IsEmpty(Player.SeekOffset) + Player.HasPerformedSeek(3)] | [Window.Is(videoosd) + VideoPlayer.Content(livetv) + !String.IsEmpty(PVR.TimeShiftOffset)]</visible>
+				<include content="Visible_Fade_Delayed_Animation" />
 				<width>360</width>
 				<centerleft>50%</centerleft>
 				<align>center</align>
@@ -399,7 +400,7 @@
 				<include content="Player_Status_Icons_Label" condition="$PARAM[large_label]">
 					<param name="color" value="$PARAM[color]" />
 					<param name="font" value="Player_Status" />
-					<animation effect="slide" end="0,60" condition="true">Conditional</animation>
+					<animation effect="slide" end="0,90" condition="true">Conditional</animation>
 				</include>
 				<include content="Player_Status_Icons_Label" condition="$PARAM[small_label]">
 					<param name="color" value="$PARAM[color]" />

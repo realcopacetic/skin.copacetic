@@ -23,6 +23,7 @@
 
 	<variable name="Background_Home_Path">
 		<!-- Global override - script.copacetic.helper -->
+		<value condition="Skin.HasSetting(Background_Slideshow2) + String.Contains(Window(home).Property(CurrentSlideshow),2) + Skin.String(Background_Slideshow2,Custom) + Skin.String(Background_Slideshow2_Custom_Path)">$INFO[Skin.String(Background_Slideshow2_Custom_Path)]</value>
 		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + Skin.String(Background_Slideshow_Custom_Path)">$INFO[Skin.String(Background_Slideshow_Custom_Path)]</value>
 		<!-- Item override -->
 		<value condition="!String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist))">$INFO[Container(3000).ListItem.Property(backgroundPlaylist)]</value>
@@ -55,6 +56,7 @@
 	</variable>
 
 	<variable name="Background_Global_Path">
+		<value condition="Skin.HasSetting(Background_Slideshow2) + String.Contains(Window(home).Property(CurrentSlideshow),2) + Skin.String(Background_Slideshow2,Custom) + Skin.String(Background_Slideshow2_Custom_Path)">$INFO[Skin.String(Background_Slideshow2_Custom_Path)]</value>
 		<value condition="Skin.String(Background_Slideshow,Custom) + Skin.String(Background_Slideshow_Custom_Path)">$INFO[Skin.String(Background_Slideshow_Custom_Path)]</value>
 	</variable>
 
