@@ -574,8 +574,8 @@ msgstr ""
 
 #########################################################################################################
 
-#: SETTINGS           314XX, 318
-#: SETTINGS HINTS     315XX
+#: SETTINGS           314XX, 317XX
+#: SETTINGS HINTS     315XX, 318XX
 
 #########################################################################################################
 
@@ -903,7 +903,17 @@ msgstr ""
 
 #/16x9/Content_Settings.xml
 msgctxt "#31427"
-msgid "Background slideshow speed (seconds)"
+msgid "Background slideshow speed"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31732"
+msgid "seconds"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31733"
+msgid "minutes"
 msgstr ""
 
 #/16x9/Content_Settings.xml
@@ -1110,6 +1120,25 @@ msgstr ""
 msgctxt "#31728"
 msgid "Make persistent across entire home screen, including widgets"
 msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31729"
+msgid "Enable second background slideshow"
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31730"
+msgid "Limit second background slideshow to..."
+msgstr ""
+
+#: NEW
+#/16x9/Content_Settings.xml
+msgctxt "#31731"
+msgid "Start times"
+msgstr ""
+
 
 
 

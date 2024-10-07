@@ -110,6 +110,11 @@
 	</include>
 
 	<include name="skinsettings_Background_Interval_Button_Conditions">
+		<onleft condition="Skin.String(Background_Interval,1800)">Skin.SetString(Background_Interval,900)</onleft>
+		<onleft condition="Skin.String(Background_Interval,900)">Skin.SetString(Background_Interval,600)</onleft>
+		<onleft condition="Skin.String(Background_Interval,600)">Skin.SetString(Background_Interval,300)</onleft>
+		<onleft condition="Skin.String(Background_Interval,300)">Skin.SetString(Background_Interval,60)</onleft>
+		<onleft condition="Skin.String(Background_Interval,60)">Skin.SetString(Background_Interval,30)</onleft>
 		<onleft condition="Skin.String(Background_Interval,30)">Skin.SetString(Background_Interval,25)</onleft>
 		<onleft condition="Skin.String(Background_Interval,25)">Skin.SetString(Background_Interval,20)</onleft>
 		<onleft condition="Skin.String(Background_Interval,20)">Skin.SetString(Background_Interval,15)</onleft>
@@ -120,20 +125,35 @@
 		<onright condition="Skin.String(Background_Interval,15)">Skin.SetString(Background_Interval,20)</onright>
 		<onright condition="Skin.String(Background_Interval,20)">Skin.SetString(Background_Interval,25)</onright>
 		<onright condition="Skin.String(Background_Interval,25)">Skin.SetString(Background_Interval,30)</onright>
+		<onright condition="Skin.String(Background_Interval,30)">Skin.SetString(Background_Interval,60)</onright>
+		<onright condition="Skin.String(Background_Interval,60)">Skin.SetString(Background_Interval,300)</onright>
+		<onright condition="Skin.String(Background_Interval,300)">Skin.SetString(Background_Interval,600)</onright>
+		<onright condition="Skin.String(Background_Interval,600)">Skin.SetString(Background_Interval,900)</onright>
+		<onright condition="Skin.String(Background_Interval,900)">Skin.SetString(Background_Interval,1800)</onright>
 	</include>
 	<include name="skinsettings_Background_Interval_Unfocused_Slides">
-		<animation effect="slide" end="24" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),5)">Conditional</animation>
-		<animation effect="slide" end="24" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),10) | !Skin.String(Background_Interval)">Conditional</animation>
-		<animation effect="slide" end="24" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),15)">Conditional</animation>
-		<animation effect="slide" end="24" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),20)">Conditional</animation>
-		<animation effect="slide" end="24" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),25)">Conditional</animation>
+		<animation effect="slide" end="12" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),5)">Conditional</animation>
+		<animation effect="slide" end="12" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),10) | !Skin.String(Background_Interval)">Conditional</animation>
+		<animation effect="slide" end="12" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),15)">Conditional</animation>
+		<animation effect="slide" end="12" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),20)">Conditional</animation>
+		<animation effect="slide" end="12" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),25)">Conditional</animation>
+		<animation effect="slide" end="12" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),30)">Conditional</animation>
+		<animation effect="slide" end="12" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),60)">Conditional</animation>
+		<animation effect="slide" end="12" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),300)">Conditional</animation>
+		<animation effect="slide" end="12" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),600)">Conditional</animation>
+		<animation effect="slide" end="12" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),900)">Conditional</animation>
 	</include>
 	<include name="skinsettings_Background_Interval_Focused_Slides">
-		<animation effect="slide" end="22" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),5)">Conditional</animation>
-		<animation effect="slide" end="22" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),10) | !Skin.String(Background_Interval)">Conditional</animation>
-		<animation effect="slide" end="22" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),15)">Conditional</animation>
-		<animation effect="slide" end="22" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),20)">Conditional</animation>
-		<animation effect="slide" end="22" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),25)">Conditional</animation>
+		<animation effect="slide" end="11" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),5)">Conditional</animation>
+		<animation effect="slide" end="11" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),10) | !Skin.String(Background_Interval)">Conditional</animation>
+		<animation effect="slide" end="11" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),15)">Conditional</animation>
+		<animation effect="slide" end="11" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),20)">Conditional</animation>
+		<animation effect="slide" end="11" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),25)">Conditional</animation>
+		<animation effect="slide" end="11" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),30)">Conditional</animation>
+		<animation effect="slide" end="11" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),60)">Conditional</animation>
+		<animation effect="slide" end="11" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),300)">Conditional</animation>
+		<animation effect="slide" end="11" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),600)">Conditional</animation>
+		<animation effect="slide" end="11" time="0" condition="Integer.IsGreater(Skin.String(Background_Interval),900)">Conditional</animation>
 	</include>
 
 
@@ -263,6 +283,242 @@
 		<animation effect="slide" end="66" time="0" condition="Skin.String(Background_Slideshow,TVShows)">Conditional</animation>
 		<animation effect="slide" end="88" time="0" condition="Skin.String(Background_Slideshow,Artists)">Conditional</animation>
 		<animation effect="slide" end="110" time="0" condition="Skin.String(Background_Slideshow,Custom)">Conditional</animation>
+	</include>
+
+	<include name="skinsettings_Background_Slideshow_Timer_Button_Conditions">
+		<onleft condition="Skin.String(Background_Slideshow_Timer,23)">Skin.SetString(Background_Slideshow_Timer,22)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,22)">Skin.SetString(Background_Slideshow_Timer,21)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,21)">Skin.SetString(Background_Slideshow_Timer,20)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,20)">Skin.SetString(Background_Slideshow_Timer,19)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,19)">Skin.SetString(Background_Slideshow_Timer,18)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,18)">Skin.SetString(Background_Slideshow_Timer,17)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,17)">Skin.SetString(Background_Slideshow_Timer,16)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,16)">Skin.SetString(Background_Slideshow_Timer,15)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,15)">Skin.SetString(Background_Slideshow_Timer,14)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,14)">Skin.SetString(Background_Slideshow_Timer,13)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,13)">Skin.SetString(Background_Slideshow_Timer,12)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,12)">Skin.SetString(Background_Slideshow_Timer,11)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,11)">Skin.SetString(Background_Slideshow_Timer,10)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,10)">Skin.SetString(Background_Slideshow_Timer,09)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,09)">Skin.SetString(Background_Slideshow_Timer,08)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,08)">Skin.SetString(Background_Slideshow_Timer,07)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,07)">Skin.SetString(Background_Slideshow_Timer,06)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,06) | !Skin.String(Background_Slideshow_Timer)">Skin.SetString(Background_Slideshow_Timer,05)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,05)">Skin.SetString(Background_Slideshow_Timer,04)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,04)">Skin.SetString(Background_Slideshow_Timer,03)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,03)">Skin.SetString(Background_Slideshow_Timer,02)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,02)">Skin.SetString(Background_Slideshow_Timer,01)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow_Timer,01)">Skin.SetString(Background_Slideshow_Timer,00)</onleft>
+		<onright condition="Skin.String(Background_Slideshow_Timer,00)">Skin.SetString(Background_Slideshow_Timer,01)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,01)">Skin.SetString(Background_Slideshow_Timer,02)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,02)">Skin.SetString(Background_Slideshow_Timer,03)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,03)">Skin.SetString(Background_Slideshow_Timer,04)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,04)">Skin.SetString(Background_Slideshow_Timer,05)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,05)">Skin.SetString(Background_Slideshow_Timer,06)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,06) | !Skin.String(Background_Slideshow_Timer)">Skin.SetString(Background_Slideshow_Timer,07)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,07)">Skin.SetString(Background_Slideshow_Timer,08)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,08)">Skin.SetString(Background_Slideshow_Timer,09)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,09)">Skin.SetString(Background_Slideshow_Timer,10)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,10)">Skin.SetString(Background_Slideshow_Timer,11)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,11)">Skin.SetString(Background_Slideshow_Timer,12)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,12)">Skin.SetString(Background_Slideshow_Timer,13)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,13)">Skin.SetString(Background_Slideshow_Timer,14)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,14)">Skin.SetString(Background_Slideshow_Timer,15)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,15)">Skin.SetString(Background_Slideshow_Timer,16)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,16)">Skin.SetString(Background_Slideshow_Timer,17)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,17)">Skin.SetString(Background_Slideshow_Timer,18)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,18)">Skin.SetString(Background_Slideshow_Timer,19)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,19)">Skin.SetString(Background_Slideshow_Timer,20)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,20)">Skin.SetString(Background_Slideshow_Timer,21)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,21)">Skin.SetString(Background_Slideshow_Timer,22)</onright>
+		<onright condition="Skin.String(Background_Slideshow_Timer,22)">Skin.SetString(Background_Slideshow_Timer,23)</onright>
+	</include>
+	<include name="skinsettings_Background_Slideshow_Timer_Unfocused_Slides">
+		<animation effect="slide" end="5" time="0" condition="Skin.String(Background_Slideshow_Timer,01)">Conditional</animation>
+		<animation effect="slide" end="10" time="0" condition="Skin.String(Background_Slideshow_Timer,02)">Conditional</animation>
+		<animation effect="slide" end="15" time="0" condition="Skin.String(Background_Slideshow_Timer,03)">Conditional</animation>
+		<animation effect="slide" end="20" time="0" condition="Skin.String(Background_Slideshow_Timer,04)">Conditional</animation>
+		<animation effect="slide" end="26" time="0" condition="Skin.String(Background_Slideshow_Timer,05)">Conditional</animation>
+		<animation effect="slide" end="31" time="0" condition="Skin.String(Background_Slideshow_Timer,06) | !Skin.String(Background_Slideshow_Timer)">Conditional</animation>
+		<animation effect="slide" end="36" time="0" condition="Skin.String(Background_Slideshow_Timer,07)">Conditional</animation>
+		<animation effect="slide" end="41" time="0" condition="Skin.String(Background_Slideshow_Timer,08)">Conditional</animation>
+		<animation effect="slide" end="46" time="0" condition="Skin.String(Background_Slideshow_Timer,09)">Conditional</animation>
+		<animation effect="slide" end="52" time="0" condition="Skin.String(Background_Slideshow_Timer,10)">Conditional</animation>
+		<animation effect="slide" end="57" time="0" condition="Skin.String(Background_Slideshow_Timer,11)">Conditional</animation>
+		<animation effect="slide" end="62" time="0" condition="Skin.String(Background_Slideshow_Timer,12)">Conditional</animation>
+		<animation effect="slide" end="67" time="0" condition="Skin.String(Background_Slideshow_Timer,13)">Conditional</animation>
+		<animation effect="slide" end="72" time="0" condition="Skin.String(Background_Slideshow_Timer,14)">Conditional</animation>
+		<animation effect="slide" end="78" time="0" condition="Skin.String(Background_Slideshow_Timer,15)">Conditional</animation>
+		<animation effect="slide" end="83" time="0" condition="Skin.String(Background_Slideshow_Timer,16)">Conditional</animation>
+		<animation effect="slide" end="88" time="0" condition="Skin.String(Background_Slideshow_Timer,17)">Conditional</animation>
+		<animation effect="slide" end="93" time="0" condition="Skin.String(Background_Slideshow_Timer,18)">Conditional</animation>
+		<animation effect="slide" end="98" time="0" condition="Skin.String(Background_Slideshow_Timer,19)">Conditional</animation>
+		<animation effect="slide" end="104" time="0" condition="Skin.String(Background_Slideshow_Timer,20)">Conditional</animation>
+		<animation effect="slide" end="109" time="0" condition="Skin.String(Background_Slideshow_Timer,21)">Conditional</animation>
+		<animation effect="slide" end="114" time="0" condition="Skin.String(Background_Slideshow_Timer,22)">Conditional</animation>
+		<animation effect="slide" end="120" time="0" condition="Skin.String(Background_Slideshow_Timer,23)">Conditional</animation>
+	</include>
+	<include name="skinsettings_Background_Slideshow_Timer_Focused_Slides">
+		<animation effect="slide" end="4" time="0" condition="Skin.String(Background_Slideshow_Timer,01)">Conditional</animation>
+		<animation effect="slide" end="9" time="0" condition="Skin.String(Background_Slideshow_Timer,02)">Conditional</animation>
+		<animation effect="slide" end="14" time="0" condition="Skin.String(Background_Slideshow_Timer,03)">Conditional</animation>
+		<animation effect="slide" end="19" time="0" condition="Skin.String(Background_Slideshow_Timer,04)">Conditional</animation>
+		<animation effect="slide" end="24" time="0" condition="Skin.String(Background_Slideshow_Timer,05)">Conditional</animation>
+		<animation effect="slide" end="28" time="0" condition="Skin.String(Background_Slideshow_Timer,06) | !Skin.String(Background_Slideshow_Timer)">Conditional</animation>
+		<animation effect="slide" end="33" time="0" condition="Skin.String(Background_Slideshow_Timer,07)">Conditional</animation>
+		<animation effect="slide" end="38" time="0" condition="Skin.String(Background_Slideshow_Timer,08)">Conditional</animation>
+		<animation effect="slide" end="43" time="0" condition="Skin.String(Background_Slideshow_Timer,09)">Conditional</animation>
+		<animation effect="slide" end="48" time="0" condition="Skin.String(Background_Slideshow_Timer,10)">Conditional</animation>
+		<animation effect="slide" end="53" time="0" condition="Skin.String(Background_Slideshow_Timer,11)">Conditional</animation>
+		<animation effect="slide" end="57" time="0" condition="Skin.String(Background_Slideshow_Timer,12)">Conditional</animation>
+		<animation effect="slide" end="62" time="0" condition="Skin.String(Background_Slideshow_Timer,13)">Conditional</animation>
+		<animation effect="slide" end="67" time="0" condition="Skin.String(Background_Slideshow_Timer,14)">Conditional</animation>
+		<animation effect="slide" end="72" time="0" condition="Skin.String(Background_Slideshow_Timer,15)">Conditional</animation>
+		<animation effect="slide" end="77" time="0" condition="Skin.String(Background_Slideshow_Timer,16)">Conditional</animation>
+		<animation effect="slide" end="82" time="0" condition="Skin.String(Background_Slideshow_Timer,17)">Conditional</animation>
+		<animation effect="slide" end="86" time="0" condition="Skin.String(Background_Slideshow_Timer,18)">Conditional</animation>
+		<animation effect="slide" end="91" time="0" condition="Skin.String(Background_Slideshow_Timer,19)">Conditional</animation>
+		<animation effect="slide" end="96" time="0" condition="Skin.String(Background_Slideshow_Timer,20)">Conditional</animation>
+		<animation effect="slide" end="101" time="0" condition="Skin.String(Background_Slideshow_Timer,21)">Conditional</animation>
+		<animation effect="slide" end="106" time="0" condition="Skin.String(Background_Slideshow_Timer,22)">Conditional</animation>
+		<animation effect="slide" end="110" time="0" condition="Skin.String(Background_Slideshow_Timer,23)">Conditional</animation>
+	</include>
+
+	<include name="skinsettings_Background_Slideshow2_Button_Conditions">
+		<onleft condition="Skin.String(Background_Slideshow2,Custom) + Library.HasContent(music)">Skin.SetString(Background_Slideshow2,Artists)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2,Custom) + !Library.HasContent(music) + Library.HasContent(tvshows)">Skin.SetString(Background_Slideshow2,TVShows)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2,Custom) + !Library.HasContent(music) + !Library.HasContent(tvshows) + Library.HasContent(movies)">Skin.SetString(Background_Slideshow2,Movies)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2,Artists) + Library.HasContent(tvshows)">Skin.SetString(Background_Slideshow2,TVShows)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2,Artists) + !Library.HasContent(tvshows) + Library.HasContent(movies)">Skin.SetString(Background_Slideshow2,Movies)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2,TVShows) + Library.HasContent(movies)">Skin.SetString(Background_Slideshow2,Movies)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2,Movies)">Skin.SetString(Background_Slideshow2,Videos)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2,Videos)">Skin.SetString(Background_Slideshow2,Global)</onleft>
+		<onright condition="[Skin.String(Background_Slideshow2,Global) | !Skin.String(Background_Slideshow2)] + Library.HasContent(video)">Skin.SetString(Background_Slideshow2,Videos)</onright>
+		<onright condition="[Skin.String(Background_Slideshow2,Global) | !Skin.String(Background_Slideshow2)] + !Library.HasContent(video) + Library.HasContent(music)">Skin.SetString(Background_Slideshow2,Artists)</onright>
+		<onright condition="[Skin.String(Background_Slideshow2,Global) | !Skin.String(Background_Slideshow2)] + !Library.HasContent(video) + !Library.HasContent(music)">Skin.SetString(Background_Slideshow2,Custom)</onright>
+		<onright condition="Skin.String(Background_Slideshow2,Videos) + Library.HasContent(movies)">Skin.SetString(Background_Slideshow2,Movies)</onright>
+		<onright condition="Skin.String(Background_Slideshow2,Videos) + !Library.HasContent(movies) + Library.HasContent(tvshows)">Skin.SetString(Background_Slideshow2,TVShows)</onright>
+		<onright condition="Skin.String(Background_Slideshow2,Videos) + !Library.HasContent(movies) + !Library.HasContent(tvshows) + Library.HasContent(music)">Skin.SetString(Background_Slideshow2,Artists)</onright>
+		<onright condition="Skin.String(Background_Slideshow2,Videos) + !Library.HasContent(movies) + !Library.HasContent(tvshows) + !Library.HasContent(music)">Skin.SetString(Background_Slideshow2,Custom)</onright>
+		<onright condition="Skin.String(Background_Slideshow2,Movies) + Library.HasContent(tvshows)">Skin.SetString(Background_Slideshow2,TVShows)</onright>
+		<onright condition="Skin.String(Background_Slideshow2,Movies) + !Library.HasContent(tvshows) + Library.HasContent(music)">Skin.SetString(Background_Slideshow2,Artists)</onright>
+		<onright condition="Skin.String(Background_Slideshow2,Movies) + !Library.HasContent(tvshows) + !Library.HasContent(music)">Skin.SetString(Background_Slideshow2,Custom)</onright>
+		<onright condition="Skin.String(Background_Slideshow2,TVShows) + Library.HasContent(music)">Skin.SetString(Background_Slideshow2,Artists)</onright>
+		<onright condition="Skin.String(Background_Slideshow2,TVShows) + !Library.HasContent(music)">Skin.SetString(Background_Slideshow2,Custom)</onright>
+		<onright condition="Skin.String(Background_Slideshow2,Artists)">Skin.SetString(Background_Slideshow2,Custom)</onright>
+	</include>
+	<include name="skinsettings_Background_Slideshow2_Unfocused_Slides">
+		<animation effect="slide" end="24" time="0" condition="Skin.String(Background_Slideshow2,Videos)">Conditional</animation>
+		<animation effect="slide" end="48" time="0" condition="Skin.String(Background_Slideshow2,Movies)">Conditional</animation>
+		<animation effect="slide" end="72" time="0" condition="Skin.String(Background_Slideshow2,TVShows)">Conditional</animation>
+		<animation effect="slide" end="96" time="0" condition="Skin.String(Background_Slideshow2,Artists)">Conditional</animation>
+		<animation effect="slide" end="120" time="0" condition="Skin.String(Background_Slideshow2,Custom)">Conditional</animation>
+	</include>
+	<include name="skinsettings_Background_Slideshow2_Focused_Slides">
+		<animation effect="slide" end="22" time="0" condition="Skin.String(Background_Slideshow2,Videos)">Conditional</animation>
+		<animation effect="slide" end="44" time="0" condition="Skin.String(Background_Slideshow2,Movies)">Conditional</animation>
+		<animation effect="slide" end="66" time="0" condition="Skin.String(Background_Slideshow2,TVShows)">Conditional</animation>
+		<animation effect="slide" end="88" time="0" condition="Skin.String(Background_Slideshow2,Artists)">Conditional</animation>
+		<animation effect="slide" end="110" time="0" condition="Skin.String(Background_Slideshow2,Custom)">Conditional</animation>
+	</include>
+
+	<include name="skinsettings_Background_Slideshow2_Timer_Button_Conditions">
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,23)">Skin.SetString(Background_Slideshow2_Timer,22)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,22)">Skin.SetString(Background_Slideshow2_Timer,21)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,21)">Skin.SetString(Background_Slideshow2_Timer,20)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,20) | !Skin.String(Background_Slideshow2_Timer)">Skin.SetString(Background_Slideshow2_Timer,19)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,19)">Skin.SetString(Background_Slideshow2_Timer,18)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,18)">Skin.SetString(Background_Slideshow2_Timer,17)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,17)">Skin.SetString(Background_Slideshow2_Timer,16)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,16)">Skin.SetString(Background_Slideshow2_Timer,15)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,15)">Skin.SetString(Background_Slideshow2_Timer,14)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,14)">Skin.SetString(Background_Slideshow2_Timer,13)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,13)">Skin.SetString(Background_Slideshow2_Timer,12)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,12)">Skin.SetString(Background_Slideshow2_Timer,11)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,11)">Skin.SetString(Background_Slideshow2_Timer,10)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,10)">Skin.SetString(Background_Slideshow2_Timer,09)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,09)">Skin.SetString(Background_Slideshow2_Timer,08)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,08)">Skin.SetString(Background_Slideshow2_Timer,07)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,07)">Skin.SetString(Background_Slideshow2_Timer,06)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,06)">Skin.SetString(Background_Slideshow2_Timer,05)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,05)">Skin.SetString(Background_Slideshow2_Timer,04)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,04)">Skin.SetString(Background_Slideshow2_Timer,03)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,03)">Skin.SetString(Background_Slideshow2_Timer,02)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,02)">Skin.SetString(Background_Slideshow2_Timer,01)</onleft>
+		<onleft condition="Skin.String(Background_Slideshow2_Timer,01)">Skin.SetString(Background_Slideshow2_Timer,00)</onleft>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,00)">Skin.SetString(Background_Slideshow2_Timer,01)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,01)">Skin.SetString(Background_Slideshow2_Timer,02)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,02)">Skin.SetString(Background_Slideshow2_Timer,03)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,03)">Skin.SetString(Background_Slideshow2_Timer,04)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,04)">Skin.SetString(Background_Slideshow2_Timer,05)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,05)">Skin.SetString(Background_Slideshow2_Timer,06)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,06)">Skin.SetString(Background_Slideshow2_Timer,07)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,07)">Skin.SetString(Background_Slideshow2_Timer,08)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,08)">Skin.SetString(Background_Slideshow2_Timer,09)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,09)">Skin.SetString(Background_Slideshow2_Timer,10)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,10)">Skin.SetString(Background_Slideshow2_Timer,11)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,11)">Skin.SetString(Background_Slideshow2_Timer,12)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,12)">Skin.SetString(Background_Slideshow2_Timer,13)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,13)">Skin.SetString(Background_Slideshow2_Timer,14)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,14)">Skin.SetString(Background_Slideshow2_Timer,15)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,15)">Skin.SetString(Background_Slideshow2_Timer,16)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,16)">Skin.SetString(Background_Slideshow2_Timer,17)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,17)">Skin.SetString(Background_Slideshow2_Timer,18)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,18)">Skin.SetString(Background_Slideshow2_Timer,19)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,19)">Skin.SetString(Background_Slideshow2_Timer,20)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,20) | !Skin.String(Background_Slideshow2_Timer)">Skin.SetString(Background_Slideshow2_Timer,21)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,21)">Skin.SetString(Background_Slideshow2_Timer,22)</onright>
+		<onright condition="Skin.String(Background_Slideshow2_Timer,22)">Skin.SetString(Background_Slideshow2_Timer,23)</onright>
+	</include>
+	<include name="skinsettings_Background_Slideshow2_Timer_Unfocused_Slides">
+		<animation effect="slide" end="5" time="0" condition="Skin.String(Background_Slideshow2_Timer,01)">Conditional</animation>
+		<animation effect="slide" end="10" time="0" condition="Skin.String(Background_Slideshow2_Timer,02)">Conditional</animation>
+		<animation effect="slide" end="15" time="0" condition="Skin.String(Background_Slideshow2_Timer,03)">Conditional</animation>
+		<animation effect="slide" end="20" time="0" condition="Skin.String(Background_Slideshow2_Timer,04)">Conditional</animation>
+		<animation effect="slide" end="26" time="0" condition="Skin.String(Background_Slideshow2_Timer,05)">Conditional</animation>
+		<animation effect="slide" end="31" time="0" condition="Skin.String(Background_Slideshow2_Timer,06)">Conditional</animation>
+		<animation effect="slide" end="36" time="0" condition="Skin.String(Background_Slideshow2_Timer,07)">Conditional</animation>
+		<animation effect="slide" end="41" time="0" condition="Skin.String(Background_Slideshow2_Timer,08)">Conditional</animation>
+		<animation effect="slide" end="46" time="0" condition="Skin.String(Background_Slideshow2_Timer,09)">Conditional</animation>
+		<animation effect="slide" end="52" time="0" condition="Skin.String(Background_Slideshow2_Timer,10)">Conditional</animation>
+		<animation effect="slide" end="57" time="0" condition="Skin.String(Background_Slideshow2_Timer,11)">Conditional</animation>
+		<animation effect="slide" end="62" time="0" condition="Skin.String(Background_Slideshow2_Timer,12)">Conditional</animation>
+		<animation effect="slide" end="67" time="0" condition="Skin.String(Background_Slideshow2_Timer,13)">Conditional</animation>
+		<animation effect="slide" end="72" time="0" condition="Skin.String(Background_Slideshow2_Timer,14)">Conditional</animation>
+		<animation effect="slide" end="78" time="0" condition="Skin.String(Background_Slideshow2_Timer,15)">Conditional</animation>
+		<animation effect="slide" end="83" time="0" condition="Skin.String(Background_Slideshow2_Timer,16)">Conditional</animation>
+		<animation effect="slide" end="88" time="0" condition="Skin.String(Background_Slideshow2_Timer,17)">Conditional</animation>
+		<animation effect="slide" end="93" time="0" condition="Skin.String(Background_Slideshow2_Timer,18)">Conditional</animation>
+		<animation effect="slide" end="98" time="0" condition="Skin.String(Background_Slideshow2_Timer,19)">Conditional</animation>
+		<animation effect="slide" end="104" time="0" condition="Skin.String(Background_Slideshow2_Timer,20) | !Skin.String(Background_Slideshow2_Timer)">Conditional</animation>
+		<animation effect="slide" end="109" time="0" condition="Skin.String(Background_Slideshow2_Timer,21)">Conditional</animation>
+		<animation effect="slide" end="114" time="0" condition="Skin.String(Background_Slideshow2_Timer,22)">Conditional</animation>
+		<animation effect="slide" end="120" time="0" condition="Skin.String(Background_Slideshow2_Timer,23)">Conditional</animation>
+	</include>
+	<include name="skinsettings_Background_Slideshow2_Timer_Focused_Slides">
+		<animation effect="slide" end="4" time="0" condition="Skin.String(Background_Slideshow2_Timer,01)">Conditional</animation>
+		<animation effect="slide" end="9" time="0" condition="Skin.String(Background_Slideshow2_Timer,02)">Conditional</animation>
+		<animation effect="slide" end="14" time="0" condition="Skin.String(Background_Slideshow2_Timer,03)">Conditional</animation>
+		<animation effect="slide" end="19" time="0" condition="Skin.String(Background_Slideshow2_Timer,04)">Conditional</animation>
+		<animation effect="slide" end="24" time="0" condition="Skin.String(Background_Slideshow2_Timer,05)">Conditional</animation>
+		<animation effect="slide" end="28" time="0" condition="Skin.String(Background_Slideshow2_Timer,06) | !Skin.String(Background_Slideshow2_Timer)">Conditional</animation>
+		<animation effect="slide" end="33" time="0" condition="Skin.String(Background_Slideshow2_Timer,07)">Conditional</animation>
+		<animation effect="slide" end="38" time="0" condition="Skin.String(Background_Slideshow2_Timer,08)">Conditional</animation>
+		<animation effect="slide" end="43" time="0" condition="Skin.String(Background_Slideshow2_Timer,09)">Conditional</animation>
+		<animation effect="slide" end="48" time="0" condition="Skin.String(Background_Slideshow2_Timer,10)">Conditional</animation>
+		<animation effect="slide" end="53" time="0" condition="Skin.String(Background_Slideshow2_Timer,11)">Conditional</animation>
+		<animation effect="slide" end="57" time="0" condition="Skin.String(Background_Slideshow2_Timer,12)">Conditional</animation>
+		<animation effect="slide" end="62" time="0" condition="Skin.String(Background_Slideshow2_Timer,13)">Conditional</animation>
+		<animation effect="slide" end="67" time="0" condition="Skin.String(Background_Slideshow2_Timer,14)">Conditional</animation>
+		<animation effect="slide" end="72" time="0" condition="Skin.String(Background_Slideshow2_Timer,15)">Conditional</animation>
+		<animation effect="slide" end="77" time="0" condition="Skin.String(Background_Slideshow2_Timer,16)">Conditional</animation>
+		<animation effect="slide" end="82" time="0" condition="Skin.String(Background_Slideshow2_Timer,17)">Conditional</animation>
+		<animation effect="slide" end="86" time="0" condition="Skin.String(Background_Slideshow2_Timer,18)">Conditional</animation>
+		<animation effect="slide" end="91" time="0" condition="Skin.String(Background_Slideshow2_Timer,19)">Conditional</animation>
+		<animation effect="slide" end="96" time="0" condition="Skin.String(Background_Slideshow2_Timer,20)">Conditional</animation>
+		<animation effect="slide" end="101" time="0" condition="Skin.String(Background_Slideshow2_Timer,21)">Conditional</animation>
+		<animation effect="slide" end="106" time="0" condition="Skin.String(Background_Slideshow2_Timer,22)">Conditional</animation>
+		<animation effect="slide" end="110" time="0" condition="Skin.String(Background_Slideshow2_Timer,23)">Conditional</animation>
 	</include>
 
 	<include name="skinsettings_GridView_Size_Button_Conditions">

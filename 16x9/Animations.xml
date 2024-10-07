@@ -360,11 +360,6 @@
 		<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_1x" tween="sine" easing="inout" reversible="true" condition="!$EXP[TransparentDialog_IsVisible] | [$EXP[Container_HasBackground] + $EXP[PanelDialog_IsVisible]]">Hidden</animation>
 	</include>
 
-	<include name="PlayerSeekLabel_Fade_Delayed_Animation">
-		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="Default_Transition_1.5x" tween="sine" easing="inout" reversible="false">Visible</animation>
-		<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="0" tween="sine" easing="inout" reversible="false">Hidden</animation>
-	</include>
-
 	<include name="Scrollbar_Fade_Animation">
 		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" tween="sine" easing="inout" reversible="true" condition="!Container.Scrolling">Visible</animation>
 		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="Default_Transition_1x" tween="sine" easing="inout" reversible="true" condition="Container.Scrolling">Visible</animation>
@@ -380,6 +375,20 @@
 			<animation effect="slide" start="0" end="0,-630" time="Default_Transition_1x" tween="sine" easing="inout" reversible="true" condition="Control.HasFocus(3100) + [$EXP[StripView_Display_IsFanart] | $EXP[StripView_Display_IsSquare]]">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="Default_Transition_0.25x" delay="Default_Transition_1x" reversible="false" tween="sine" easing="inout" condition="Control.HasFocus(3100) + $PARAM[fadeout]">Conditional</animation>
 		</definition>
+	</include>
+
+	<include name="seekbar_Fade_Animation">
+		<include name="VisibleHidden_Fade_Animation">
+			<include content="fade_animation">
+				<param name="type" value="Visible" />
+				<param name="time" value="1x" />
+			</include>
+			<include content="fade_animation">
+				<param name="type" value="Hidden" />
+				<param name="time" value="1x" />
+				<param name="delay" value="1x" />
+			</include>
+		</include>
 	</include>
 
 	<include name="Trailer_Autoplay_Fade_Animation">

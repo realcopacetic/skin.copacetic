@@ -580,6 +580,8 @@
 	</variable>
 
 	<variable name="Player_Status_Label">
+		<value condition="!String.IsEmpty(Player.SeekStepSize)">$INFO[Player.SeekStepSize]</value>
+		<value condition="!String.IsEmpty(Player.SeekOffset) + Player.HasPerformedSeek(3)">$INFO[Player.SeekOffset]</value>
 		<value condition="VideoPlayer.Content(livetv) + Integer.IsGreater(PVR.TimeShiftOffset,5)">[UPPERCASE]$INFO[PVR.TimeShiftOffset, -, $LOCALIZE[31308]][/UPPERCASE]</value>
 		<value condition="Player.Forwarding2x">x2</value>
 		<value condition="Player.Forwarding4x">x4</value>
@@ -591,8 +593,7 @@
 		<value condition="Player.Rewinding8x">x8</value>
 		<value condition="Player.Rewinding16x">x16</value>
 		<value condition="Player.Rewinding32x">x32</value>
-		<value condition="!String.IsEmpty(Player.SeekOffset) + Player.HasPerformedSeek(3)">$INFO[Player.SeekOffset]</value>
-		<value condition="!String.IsEmpty(Player.SeekStepSize) + Player.HasPerformedSeek(3)">$INFO[Player.SeekStepSize]</value>
+
 	</variable>
 
 	<variable name="Plot_Label">

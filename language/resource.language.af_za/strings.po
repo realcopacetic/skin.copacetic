@@ -759,7 +759,17 @@ msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31427"
-msgid "Background slideshow speed (seconds)"
+msgid "Background slideshow speed"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31728"
+msgid "Make persistent across entire home screen, including widgets"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31728"
+msgid "Make persistent across entire home screen, including widgets"
 msgstr ""
 
 # /16x9/Content_Settings.xml
