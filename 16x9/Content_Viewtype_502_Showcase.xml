@@ -127,9 +127,28 @@
 				<property name="ActionRight">Skin.SetString(ShowcaseView_Display_Programs_Files,Posters)</property>
 				<visible>$PARAM[visible] + $EXP[ShowcaseView_Display_IsSquare_Programs_Files]</visible>
 			</item>
+			<!-- Favourites -->
+			<item id="2">
+				<description>Display (Favourites) / Posters</description>
+				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31006] $VAR[Copacetic_Chevron_Right]</label>
+				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31006]</label2>
+				<onclick>SetFocus(502)</onclick>
+				<property name="ActionLeft">Skin.SetString(ShowcaseView_Display_Favourites,Square)</property>
+				<property name="ActionRight">Skin.SetString(ShowcaseView_Display_Favourites,Square)</property>
+				<visible>$PARAM[visible] + $EXP[ShowcaseView_Display_IsPosters_Favourites]</visible>
+			</item>
+			<item id="2">
+				<description>Display (Favourites) / Square</description>
+				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31008] $VAR[Copacetic_Chevron_Right]</label>
+				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31008]</label2>
+				<onclick>SetFocus(502)</onclick>
+				<property name="ActionLeft">Skin.SetString(ShowcaseView_Display_Favourites,Posters)</property>
+				<property name="ActionRight">Skin.SetString(ShowcaseView_Display_Favourites,Posters)</property>
+				<visible>$PARAM[visible] + $EXP[ShowcaseView_Display_IsSquare_Favourites]</visible>
+			</item>
 			<!-- Details -->
 			<!-- Movies -->
-			<item id="2">
+			<item id="3">
 				<description>Details (Movies) / Off</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[591] $VAR[Copacetic_Chevron_Right]</label>
 				<label2>$LOCALIZE[31016] $VAR[Copacetic_Divider_Bold] $LOCALIZE[591]</label2>
@@ -138,7 +157,7 @@
 				<property name="ActionRight">Skin.SetString(ShowcaseView_Details_Movies,Title_Overlay)</property>
 				<visible>$PARAM[visible] + $EXP[ShowcaseView_Details_Off_Movies]</visible>
 			</item>
-			<item id="3">
+			<item>
 				<description>Details (Movies) / Title (Overlay)</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31017] ($LOCALIZE[31029]) $VAR[Copacetic_Chevron_Right]</label>
 				<label2>$LOCALIZE[31016] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31017] ($LOCALIZE[31029])</label2>
@@ -795,6 +814,34 @@
 				<property name="ActionLeft">Skin.SetString(ShowcaseView_Details_Programs_Files,TitleAndPlot_Side)</property>
 				<property name="ActionRight">Skin.SetString(ShowcaseView_Details_Programs_Files,Off)</property>
 				<visible>$PARAM[visible] + $EXP[ShowcaseView_Details_All_Programs_Files]</visible>
+			</item>
+			<!-- Favourites -->
+			<item id="3">
+				<description>Details (Favourites) / Off</description>
+				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[591] $VAR[Copacetic_Chevron_Right]</label>
+				<label2>$LOCALIZE[31016] $VAR[Copacetic_Divider_Bold] $LOCALIZE[591]</label2>
+				<onclick>SetFocus(502)</onclick>
+				<property name="ActionLeft">Skin.SetString(ShowcaseView_Details_Favourites,Title_Side)</property>
+				<property name="ActionRight">Skin.SetString(ShowcaseView_Details_Favourites,Title_Overlay)</property>
+				<visible>$PARAM[visible] + $EXP[ShowcaseView_Details_Off_Favourites]</visible>
+			</item>
+			<item id="4">
+				<description>Details (Favourites) / Title (Overlay)</description>
+				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31017] ($LOCALIZE[31029]) $VAR[Copacetic_Chevron_Right]</label>
+				<label2>$LOCALIZE[31016] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31017] ($LOCALIZE[31029])</label2>
+				<onclick>SetFocus(502)</onclick>
+				<property name="ActionLeft">Skin.SetString(ShowcaseView_Details_Favourites,Off)</property>
+				<property name="ActionRight">Skin.SetString(ShowcaseView_Details_Favourites,Title_Side)</property>
+				<visible>$PARAM[visible] + $EXP[ShowcaseView_Details_Title_Overlay_Favourites]</visible>
+			</item>
+			<item id="2">
+				<description>Details (Favourites) / Title (Side)</description>
+				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31017] ($LOCALIZE[31028]) $VAR[Copacetic_Chevron_Right]</label>
+				<label2>$LOCALIZE[31016] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31017] ($LOCALIZE[31028])</label2>
+				<onclick>SetFocus(502)</onclick>
+				<property name="ActionLeft">Skin.SetString(ShowcaseView_Details_Favourites,Title_Overlay)</property>
+				<property name="ActionRight">Skin.SetString(ShowcaseView_Details_Favourites,Off)</property>
+				<visible>$PARAM[visible] + $EXP[ShowcaseView_Details_Title_Favourites]</visible>
 			</item>
 			<!-- Clearlogos -->
 			<!-- Movies -->

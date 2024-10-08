@@ -20,6 +20,7 @@
 					<orientation>vertical</orientation>
 					<include content="List_Navigation" />
 					<onfocus>ClearProperty(Widget_DBID,home)</onfocus>
+					<onfocus condition="Container.Content(favourites)">Skin.SetString(favourites_Viewmode,List)</onfocus>
 					<include content="Default_Scrolltime" condition="!Skin.HasSetting(Quick_Transitions)" />
 					<include content="Quick_Scrolltime" condition="Skin.HasSetting(Quick_Transitions)" />
 					<include content="ListView_Layout_addonbrowser" condition="Window.Is(addonbrowser) | Window.Is(programs)" />
@@ -35,10 +36,11 @@
 
 	<include name="ListView_Display">
 		<param name="id" default="50" />
+		<param name="visible" default="true" />
 		<param name="art_icon" default="Thumbnail" />
 		<definition>
 			<include content="Viewtype_Display_Template">
-				<param name="visible" value="![$EXP[ListView_Display_IsThumbnails] + Window.IsVisible(selectvideoversion)]" />
+				<param name="visible" value="![$EXP[ListView_Display_IsThumbnails] + Window.IsVisible(selectvideoversion)] + $PARAM[visible]" />
 				<param name="viewtype_label" value="List" />
 				<param name="media_view" value="true" />
 				<include content="Transparent_Dialog_Panel">

@@ -102,6 +102,7 @@
 	<onload condition="!Skin.String(ListView_Display_MusicVideos)">Skin.SetString(ListView_Display_MusicVideos,Background)</onload>
 	<onload condition="!Skin.String(ListView_Display_Songs)">Skin.SetString(ListView_Display_Songs,Thumbnails)</onload>
 	<onload condition="!Skin.String(ListView_Display_Programs_Files)">Skin.SetString(ListView_Display_Programs_Files,Thumbnails)</onload>
+	<onload condition="!Skin.String(ListView_Display_Favourites)">Skin.SetString(ListView_Display_Favourites,Thumbnails)</onload>
 	<onload condition="!Skin.String(ListView_Details_Movies)">Skin.SetString(ListView_Details_Movies,TitleAndInfo)</onload>
 	<onload condition="!Skin.String(ListView_Details_Sets)">Skin.SetString(ListView_Details_Sets,TitleAndInfo)</onload>
 	<onload condition="!Skin.String(ListView_Details_TVShows)">Skin.SetString(ListView_Details_TVShows,TitleAndInfo)</onload>
@@ -147,6 +148,7 @@
 	<onload condition="!Skin.String(ShowcaseView_Display_Seasons)">Skin.SetString(ShowcaseView_Display_Seasons,Posters)</onload>
 	<onload condition="!Skin.String(ShowcaseView_Display_Programs_Folders)">Skin.SetString(ShowcaseView_Display_Programs_Folders,Posters)</onload>
 	<onload condition="!Skin.String(ShowcaseView_Display_Programs_Files)">Skin.SetString(ShowcaseView_Display_Programs_Files,Posters)</onload>
+	<onload condition="!Skin.String(ShowcaseView_Display_Favourites)">Skin.SetString(ShowcaseView_Display_Favourites,Square)</onload>
 	<onload condition="!Skin.String(ShowcaseView_Details_Movies)">Skin.SetString(ShowcaseView_Details_Movies,All_Side)</onload>
 	<onload condition="!Skin.String(ShowcaseView_Details_Sets)">Skin.SetString(ShowcaseView_Details_Sets,All_Side)</onload>
 	<onload condition="!Skin.String(ShowcaseView_Details_TVShows)">Skin.SetString(ShowcaseView_Details_TVShows,All_Side)</onload>
@@ -158,6 +160,7 @@
 	<onload condition="!Skin.String(ShowcaseView_Details_Images)">Skin.SetString(ShowcaseView_Details_Images,TitleAndInfo_Overlay)</onload>
 	<onload condition="!Skin.String(ShowcaseView_Details_Programs_Folders)">Skin.SetString(ShowcaseView_Details_Programs_Folders,All_Side)</onload>
 	<onload condition="!Skin.String(ShowcaseView_Details_Programs_Files)">Skin.SetString(ShowcaseView_Details_Programs_Files,All_Side)</onload>
+	<onload condition="!Skin.String(ShowcaseView_Details_Favourites)">Skin.SetString(ShowcaseView_Details_Favourites,Title_Overlay)</onload>
 	<onload condition="!Skin.String(ShowcaseView_Logo_Movies)">Skin.SetString(ShowcaseView_Logo_Movies,Off)</onload>
 	<onload condition="!Skin.String(ShowcaseView_Logo_Sets)">Skin.SetString(ShowcaseView_Logo_Sets,Off)</onload>
 	<onload condition="!Skin.String(ShowcaseView_Logo_TVShows)">Skin.SetString(ShowcaseView_Logo_TVShows,Off)</onload>
@@ -176,6 +179,7 @@
 	<onload condition="!Skin.String(StripView_Display_Albums)">Skin.SetString(StripView_Display_Albums,Square)</onload>
 	<onload condition="!Skin.String(StripView_Display_Programs_Folders)">Skin.SetString(StripView_Display_Programs_Folders,Posters)</onload>
 	<onload condition="!Skin.String(StripView_Display_Programs_Files)">Skin.SetString(StripView_Display_Programs_Files,Fanart)</onload>
+	<onload condition="!Skin.String(StripView_Display_Favourites)">Skin.SetString(StripView_Display_Favourites,Square)</onload>
 	<onload condition="!Skin.String(StripView_Details_Movies)">Skin.SetString(StripView_Details_Movies,All)</onload>
 	<onload condition="!Skin.String(StripView_Details_Sets)">Skin.SetString(StripView_Details_Sets,All)</onload>
 	<onload condition="!Skin.String(StripView_Details_TVShows)">Skin.SetString(StripView_Details_TVShows,All)</onload>
@@ -187,6 +191,7 @@
 	<onload condition="!Skin.String(StripView_Details_Addons)">Skin.SetString(StripView_Details_Addons,TitleAndInfo)</onload>
 	<onload condition="!Skin.String(StripView_Details_Programs_Folders)">Skin.SetString(StripView_Details_Programs_Folders,TitleAndInfo)</onload>
 	<onload condition="!Skin.String(StripView_Details_Programs_Files)">Skin.SetString(StripView_Details_Programs_Files,TitleAndInfo)</onload>
+	<onload condition="!Skin.String(StripView_Details_Favourites)">Skin.SetString(StripView_Details_Favourites,Title)</onload>
 	<onload condition="!Skin.String(StripView_Logo_Movies)">Skin.SetString(StripView_Logo_Movies,Off)</onload>
 	<onload condition="!Skin.String(StripView_Logo_Sets)">Skin.SetString(StripView_Logo_Sets,Off)</onload>
 	<onload condition="!Skin.String(StripView_Logo_TVShows)">Skin.SetString(StripView_Logo_TVShows,Off)</onload>
@@ -209,6 +214,7 @@
 	<onload condition="!Skin.String(GridView_Display_Images)">Skin.SetString(GridView_Display_Artists,Square)</onload>
 	<onload condition="!Skin.String(GridView_Display_Programs_Folders)">Skin.SetString(GridView_Display_Programs_Folders,Posters)</onload>
 	<onload condition="!Skin.String(GridView_Display_Programs_Files)">Skin.SetString(GridView_Display_Programs_Files,Fanart)</onload>
+	<onload condition="!Skin.String(GridView_Display_Favourites)">Skin.SetString(GridView_Display_Favourites,Square)</onload>
 	<onload condition="!Skin.String(GridView_Details_Movies)">Skin.SetString(GridView_Details_Movies,TitleAndInfo)</onload>
 	<onload condition="!Skin.String(GridView_Details_Sets)">Skin.SetString(GridView_Details_Sets,TitleAndInfo)</onload>
 	<onload condition="!Skin.String(GridView_Details_TVShows)">Skin.SetString(GridView_Details_TVShows,TitleAndInfo)</onload>
@@ -221,6 +227,7 @@
 	<onload condition="!Skin.String(GridView_Details_Images)">Skin.SetString(GridView_Details_Images,Off)</onload>
 	<onload condition="!Skin.String(GridView_Details_Programs_Folders)">Skin.SetString(GridView_Details_Programs_Folders,TitleAndInfo)</onload>
 	<onload condition="!Skin.String(GridView_Details_Programs_Files)">Skin.SetString(GridView_Details_Programs_Files,TitleAndInfo)</onload>
+	<onload condition="!Skin.String(GridView_Details_Favourites)">Skin.SetString(GridView_Details_Programs_Files,Title)</onload>
 	<!-- Startup -->
 	<onload>SetProperty(SkinInitStarted,1,Home)</onload>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>

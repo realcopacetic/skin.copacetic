@@ -121,7 +121,7 @@
 			<item id="2">
 				<description>Display (Programs_Folders) / Square</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31008] $VAR[Copacetic_Chevron_Right]</label>
-				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31007]</label2>
+				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31008]</label2>
 				<onclick>SetFocus(504)</onclick>
 				<property name="ActionLeft">Skin.SetString(StripView_Display_Programs_Folders,Posters)</property>
 				<property name="ActionRight">Skin.SetString(StripView_Display_Programs_Folders,Posters)</property>
@@ -149,11 +149,39 @@
 			<item id="2">
 				<description>Display (Programs_Files) / Square</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31008] $VAR[Copacetic_Chevron_Right]</label>
-				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31007]</label2>
+				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31008]</label2>
 				<onclick>SetFocus(504)</onclick>
 				<property name="ActionLeft">Skin.SetString(StripView_Display_Programs_Files,Fanart)</property>
 				<property name="ActionRight">Skin.SetString(StripView_Display_Programs_Files,Posters)</property>
 				<visible>$PARAM[visible] + $EXP[StripView_Display_IsSquare_Programs_Files]</visible>
+			</item>
+			<!-- Favourites -->
+			<item id="2">
+				<description>Display (Favourites) / Posters</description>
+				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31006] $VAR[Copacetic_Chevron_Right]</label>
+				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31006]</label2>
+				<onclick>SetFocus(504)</onclick>
+				<property name="ActionLeft">Skin.SetString(StripView_Display_Favourites,Square)</property>
+				<property name="ActionRight">Skin.SetString(StripView_Display_Favourites,Fanart)</property>
+				<visible>$PARAM[visible] + $EXP[StripView_Display_IsPosters_Favourites]</visible>
+			</item>
+			<item id="2">
+				<description>Display (Favourites) / Fanart</description>
+				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31007] $VAR[Copacetic_Chevron_Right]</label>
+				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31007]</label2>
+				<onclick>SetFocus(504)</onclick>
+				<property name="ActionLeft">Skin.SetString(StripView_Display_Favourites,Posters)</property>
+				<property name="ActionRight">Skin.SetString(StripView_Display_Favourites,Square)</property>
+				<visible>$PARAM[visible] + $EXP[StripView_Display_IsFanart_Favourites]</visible>
+			</item>
+			<item id="2">
+				<description>Display (Favourites) / Square</description>
+				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31008] $VAR[Copacetic_Chevron_Right]</label>
+				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31008]</label2>
+				<onclick>SetFocus(504)</onclick>
+				<property name="ActionLeft">Skin.SetString(StripView_Display_Favourites,Fanart)</property>
+				<property name="ActionRight">Skin.SetString(StripView_Display_Favourites,Posters)</property>
+				<visible>$PARAM[visible] + $EXP[StripView_Display_IsSquare_Favourites]</visible>
 			</item>
 			<!-- Details-->
 			<!-- Movies -->
@@ -1160,6 +1188,27 @@
 				<property name="ActionLeft">Skin.SetString(StripView_Details_Programs_Files,TitleAndPlot)</property>
 				<property name="ActionRight">Skin.SetString(StripView_Details_Programs_Files,Off)</property>
 				<visible>$PARAM[visible] + $EXP[StripView_Details_All_Programs_Files] + $EXP[StripView_Logo_On_Programs_Files] + ![$EXP[StripView_Display_IsPosters_Programs_Files] + String.IsEqual(Container(504).CurrentItem,1)]</visible>
+			</item>
+			<!-- Favourites -->
+			<!-- Off -->
+			<item>
+				<description>Details (Favourites) / Off</description>
+				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[591] $VAR[Copacetic_Chevron_Right]</label>
+				<label2>$LOCALIZE[31016] $VAR[Copacetic_Divider_Bold] $LOCALIZE[591]</label2>
+				<onclick>SetFocus(504)</onclick>
+				<property name="ActionLeft">Skin.SetString(StripView_Details_Favourites,Title)</property>
+				<property name="ActionRight">Skin.SetString(StripView_Details_Favourites,Title)</property>
+				<visible>$PARAM[visible] + $EXP[StripView_Details_Off_Favourites]</visible>
+			</item>
+			<!-- Title -->
+			<item>
+				<description>Details (Favourites) / Title</description>
+				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31017] $VAR[Copacetic_Chevron_Right]</label>
+				<label2>$LOCALIZE[31016] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31017]</label2>
+				<onclick>SetFocus(504)</onclick>
+				<property name="ActionLeft">Skin.SetString(StripView_Details_Favourites,Off)</property>
+				<property name="ActionRight">Skin.SetString(StripView_Details_Favourites,Off)</property>
+				<visible>$PARAM[visible] + $EXP[StripView_Details_Title_Favourites]</visible>
 			</item>
 			<!-- Clearlogo -->
 			<!-- Movies -->

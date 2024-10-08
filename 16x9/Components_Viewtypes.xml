@@ -167,6 +167,7 @@
 				<pagecontrol>60</pagecontrol>
 				<preloaditems>2</preloaditems>
 				<orientation>$PARAM[orientation]</orientation>
+				<nested />
 				<include content="Default_Scrolltime" condition="!Skin.HasSetting(Quick_Transitions)" />
 				<include content="Quick_Scrolltime" condition="Skin.HasSetting(Quick_Transitions) + !Skin.HasSetting(Zero_Transitions)" />
 				<include content="Zero_Scrolltime" condition="Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)" />

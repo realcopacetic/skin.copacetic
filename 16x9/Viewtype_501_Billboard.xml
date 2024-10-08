@@ -10,6 +10,7 @@
 				<param name="viewtype_label" value="Billboard" />
 				<param name="viewtype" value="wide" />
 				<param name="orientation" value="horizontal" />
+				<onfocus condition="Container.Content(favourites)">Skin.SetString(favourites_Viewmode,Billboard)</onfocus>
 			</include>
 		</control>
 	</include>

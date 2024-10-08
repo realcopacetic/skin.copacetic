@@ -40,6 +40,7 @@
 						<orientation>vertical</orientation>
 						<onleft>SetFocus(3000,0,absolute)</onleft>
 						<onright>60</onright>
+						<onfocus condition="Container.Content(favourites)">Skin.SetString(favourites_Viewmode,DetailedList)</onfocus>
 						<include content="Default_Scrolltime" condition="!Skin.HasSetting(Quick_Transitions)" />
 						<include content="Quick_Scrolltime" condition="Skin.HasSetting(Quick_Transitions)" />
 						<itemlayout width="1680" height="240">

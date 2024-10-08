@@ -141,7 +141,7 @@
 			<item id="2">
 				<description>Display (Programs_Folders) / Square</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31008] $VAR[Copacetic_Chevron_Right]</label>
-				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31007]</label2>
+				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31008]</label2>
 				<onclick>SetFocus(505)</onclick>
 				<property name="ActionLeft">Skin.SetString(GridView_Display_Programs_Folders,Posters)</property>
 				<property name="ActionRight">Skin.SetString(GridView_Display_Programs_Folders,Posters)</property>
@@ -169,11 +169,39 @@
 			<item id="2">
 				<description>Display (Programs_Files) / Square</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31008] $VAR[Copacetic_Chevron_Right]</label>
-				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31007]</label2>
+				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31008]</label2>
 				<onclick>SetFocus(505)</onclick>
 				<property name="ActionLeft">Skin.SetString(GridView_Display_Programs_Files,Fanart)</property>
 				<property name="ActionRight">Skin.SetString(GridView_Display_Programs_Files,Posters)</property>
 				<visible>$PARAM[visible] + $EXP[GridView_Display_IsSquare_Programs_Files]</visible>
+			</item>
+			<!-- Favourites -->
+			<item id="2">
+				<description>Display (Favourites) / Posters</description>
+				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31006] $VAR[Copacetic_Chevron_Right]</label>
+				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31006]</label2>
+				<onclick>SetFocus(505)</onclick>
+				<property name="ActionLeft">Skin.SetString(GridView_Display_Favourites,Square)</property>
+				<property name="ActionRight">Skin.SetString(GridView_Display_Favourites,Fanart)</property>
+				<visible>$PARAM[visible] + $EXP[GridView_Display_IsPosters_Favourites]</visible>
+			</item>
+			<item id="2">
+				<description>Display (Favourites) / Fanart</description>
+				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31007] $VAR[Copacetic_Chevron_Right]</label>
+				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31007]</label2>
+				<onclick>SetFocus(505)</onclick>
+				<property name="ActionLeft">Skin.SetString(GridView_Display_Favourites,Posters)</property>
+				<property name="ActionRight">Skin.SetString(GridView_Display_Favourites,Square)</property>
+				<visible>$PARAM[visible] + $EXP[GridView_Display_IsFanart_Favourites]</visible>
+			</item>
+			<item id="2">
+				<description>Display (Favourites) / Square</description>
+				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31008] $VAR[Copacetic_Chevron_Right]</label>
+				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31008]</label2>
+				<onclick>SetFocus(505)</onclick>
+				<property name="ActionLeft">Skin.SetString(GridView_Display_Favourites,Fanart)</property>
+				<property name="ActionRight">Skin.SetString(GridView_Display_Favourites,Posters)</property>
+				<visible>$PARAM[visible] + $EXP[GridView_Display_IsSquare_Favourites]</visible>
 			</item>
 			<!-- Details -->
 			<!-- Movies -->
@@ -620,6 +648,34 @@
 				<property name="ActionLeft">Skin.SetString(GridView_Details_Programs_Files,Title)</property>
 				<property name="ActionRight">Skin.SetString(GridView_Details_Programs_Files,Off)</property>
 				<visible>$PARAM[visible] + $EXP[GridView_Details_Info_Programs_Files]</visible>
+			</item>
+			<!-- Favourites -->
+			<item id="11">
+				<description>Details (Favourites) / Off</description>
+				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[591] $VAR[Copacetic_Chevron_Right]</label>
+				<label2>$LOCALIZE[31016] $VAR[Copacetic_Divider_Bold] $LOCALIZE[591]</label2>
+				<onclick>SetFocus(505)</onclick>
+				<property name="ActionLeft">Skin.SetString(GridView_Details_Favourites,Title)</property>
+				<property name="ActionRight">Skin.SetString(GridView_Details_Favourites,Breadcrumb)</property>
+				<visible>$PARAM[visible] + $EXP[GridView_Details_Off_Favourites]</visible>
+			</item>
+			<item id="12">
+				<description>Details (Favourites) / Breadcrumb</description>
+				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31030] $VAR[Copacetic_Chevron_Right]</label>
+				<label2>$LOCALIZE[31016] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31030]</label2>
+				<onclick>SetFocus(505)</onclick>
+				<property name="ActionLeft">Skin.SetString(GridView_Details_Favourites,Off)</property>
+				<property name="ActionRight">Skin.SetString(GridView_Details_Favourites,Title)</property>
+				<visible>$PARAM[visible] + $EXP[GridView_Details_Breadcrumb_Favourites]</visible>
+			</item>
+			<item id="11">
+				<description>Details (Favourites) / Title</description>
+				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31017] $VAR[Copacetic_Chevron_Right]</label>
+				<label2>$LOCALIZE[31016] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31017]</label2>
+				<onclick>SetFocus(505)</onclick>
+				<property name="ActionLeft">Skin.SetString(GridView_Details_Favourites,Breadcrumb)</property>
+				<property name="ActionRight">Skin.SetString(GridView_Details_Favourites,Off)</property>
+				<visible>$PARAM[visible] + $EXP[GridView_Details_Title_Favourites]</visible>
 			</item>
 		</definition>
 	</include>

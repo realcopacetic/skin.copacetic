@@ -11,6 +11,7 @@
 				<param name="viewtype_label" value="Showcase" />
 				<param name="viewtype" value="bigwrap" />
 				<param name="orientation" value="horizontal" />
+				<onfocus condition="Container.Content(favourites)">Skin.SetString(favourites_Viewmode,Showcase)</onfocus>
 			</include>
 		</control>
 	</include>

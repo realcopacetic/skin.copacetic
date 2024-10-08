@@ -1287,7 +1287,7 @@ msgstr ""
 
 #: NEW
 #/16x9/Content_Settings.xml
-msgctxt "#31496"
+msgctxt "#31734"
 msgid "Enable view for favourites browser"
 msgstr ""
 

@@ -20,14 +20,11 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
-**2.6.6**
-- Added second slideshow, configurable in Copacetic skin settings with option to set timers for both so you can switch between slideshows at different times of day. Useful e.g. for having kid-friendly slideshow in the daytime then switching to a different slideshow in the evening.
-- Added more slideshow interval lengths (60 seconds, 5 minutes, 10 minutes, 15 minutes)
-- Fixed bug that displayed empty player duration and player time when playing a network stream https://github.com/realcopacetic/skin.copacetic/issues/200
-- Fixed bug causing seek labels not to display properly during playback https://github.com/realcopacetic/skin.copacetic/issues/198
-- Fixed bug causing seekbar not to display properly during seek https://github.com/realcopacetic/skin.copacetic/issues/198
+**2.6.7**
+- All views enabled for favouritesbrowser in Omega https://github.com/realcopacetic/skin.copacetic/issues/202
 
 To do:
+- !string.isempty(listitem(0).art(album.fanart))]
 - pvr switching from windows to fullscreen there's a transition animation but it should be instant
 - detailed list
    - progress bar
@@ -46,7 +43,6 @@ To do:
 - does label need to fade out and in when home screen > music player controls?
 - Views break after coming out of a playlist (next episode)
 - disable grid on certain list only views
-- favourites all viewtype options (omega only)
 - infoscreen bug
 - infoscreen widget navigation for music widgets + music videos (songvideourl)
 - Evaluate Container.NumItems for scrollbars in each view / layout
@@ -57,6 +53,13 @@ To do:
 = <!-- temp fix to account for fact that DecreaseRating won't go lower than 1 for VideoPlayer.UserRating -->
 - https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Extended-Info#direct-call-auto
 
+**2.6.6**
+- Added second slideshow, configurable in Copacetic skin settings with option to set timers for both so you can switch between slideshows at different times of day. Useful e.g. for having kid-friendly slideshow in the daytime then switching to a different slideshow in the evening.
+- Added more slideshow interval lengths (60 seconds, 5 minutes, 10 minutes, 15 minutes)
+- Fixed bug that displayed empty player duration and player time when playing a network stream https://github.com/realcopacetic/skin.copacetic/issues/200
+- Fixed bug causing seek labels not to display properly during playback https://github.com/realcopacetic/skin.copacetic/issues/198
+- Fixed bug causing seekbar not to display properly during seek https://github.com/realcopacetic/skin.copacetic/issues/198
+- Fixed glitch when switching between Showcase view Details options in hidden view options menu
 
 **2.6.5**
 - Work in Progress (WIP) new view called Detailed List based on PVR view
