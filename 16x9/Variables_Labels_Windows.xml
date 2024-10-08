@@ -191,12 +191,12 @@
 		<value condition="Control.HasFocus(11120) | Control.HasFocus(11121)">$LOCALIZE[31544]</value>
 		<!-- Views -->
 		<value condition="Control.HasFocus(1305) | Control.HasFocus(1355)">$LOCALIZE[31541]</value>
-		<value condition="Control.HasFocus(1315) | Control.HasFocus(1325) | Control.HasFocus(1338) | Control.HasFocus(1356)">$LOCALIZE[31598]</value>
-		<value condition="Control.HasFocus(1326) | Control.HasFocus(1339)">$LOCALIZE[31599]</value>
-		<value condition="Control.HasFocus(13400) | control.HasFocus(13401)">$LOCALIZE[31815]</value>
+		<value condition="Control.HasFocus(1313) | Control.HasFocus(1323) | Control.HasFocus(1334) | Control.HasFocus(1356)">$LOCALIZE[31598]</value>
+		<value condition="Control.HasFocus(1324) | Control.HasFocus(1335)">$LOCALIZE[31599]</value>
+		<value condition="Control.HasFocus(13320) | Control.HasFocus(13321)">$LOCALIZE[31815]</value>
 		<value condition="Control.HasFocus(1351)">$LOCALIZE[31575]</value>
 		<value condition="Control.HasFocus(1352)">$LOCALIZE[31586]</value>
-		<value condition="Control.HasFocus(1302) | Control.HasFocus(1303) | Control.HasFocus(1304) | Control.HasFocus(1312) | Control.HasFocus(1313) | Control.HasFocus(1314) | Control.HasFocus(1315) | Control.HasFocus(1322) | Control.HasFocus(1323) | Control.HasFocus(1324) | Control.HasFocus(1325) | Control.HasFocus(1332) | Control.HasFocus(1336) | Control.HasFocus(1337) | Control.HasFocus(1338)">$LOCALIZE[31546]</value>
+		<value condition="Control.HasFocus(1302) | Control.HasFocus(1303) | Control.HasFocus(1304) | Control.HasFocus(1312) | Control.HasFocus(1314) | Control.HasFocus(1315) | Control.HasFocus(1316) | Control.HasFocus(1322) | Control.HasFocus(1325) | Control.HasFocus(1326) | Control.HasFocus(1327) | Control.HasFocus(1333) | Control.HasFocus(1339) | Control.HasFocus(1340) | Control.HasFocus(1341)">$LOCALIZE[31546]</value>
 		<!-- Customisations -->
 		<value condition="Control.HasFocus(1402)">$LOCALIZE[31551]</value>
 		<value condition="Control.HasFocus(1403)">$LOCALIZE[31552]</value>

@@ -140,7 +140,7 @@
 
 	<variable name="DetailedList(0)Content">
 		<value condition="!String.IsEmpty(ListItem(0).Art(thumb)) + String.IsEqual(ListItem(0).DBType,episode) | String.IsEqual(ListItem(0).DBType,album) | String.IsEqual(ListItem(0).DBType,song) | [Container.Content(songs) + !String.IsEmpty(Container.PluginName)] | Container.Content(addons) | Container.Content(videos)">$INFO[ListItem(0).Art(thumb)]</value>
-		<value condition="!String.IsEmpty(ListItem(0).Art(album.fanart))]">$INFO[ListItem(0).Art(album.fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem(0).Art(album.fanart))">$INFO[ListItem(0).Art(album.fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(landscape)) + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">$INFO[ListItem(0).Art(landscape)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(fanart))">$INFO[ListItem(0).Art(fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem(0).Art(tvshow.landscape)) + Skin.HasSetting(Experiment_ListView_Prefer_Landscape)">$INFO[ListItem(0).Art(tvshow.landscape)]</value>

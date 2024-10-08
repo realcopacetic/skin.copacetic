@@ -121,7 +121,7 @@
 			<item id="2">
 				<description>Display (Programs_Folders) / Square</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31008] $VAR[Copacetic_Chevron_Right]</label>
-				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31007]</label2>
+				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31008]</label2>
 				<onclick>SetFocus(504)</onclick>
 				<property name="ActionLeft">Skin.SetString(StripView_Display_Programs_Folders,Posters)</property>
 				<property name="ActionRight">Skin.SetString(StripView_Display_Programs_Folders,Posters)</property>
@@ -149,7 +149,7 @@
 			<item id="2">
 				<description>Display (Programs_Files) / Square</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31008] $VAR[Copacetic_Chevron_Right]</label>
-				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31007]</label2>
+				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31008]</label2>
 				<onclick>SetFocus(504)</onclick>
 				<property name="ActionLeft">Skin.SetString(StripView_Display_Programs_Files,Fanart)</property>
 				<property name="ActionRight">Skin.SetString(StripView_Display_Programs_Files,Posters)</property>

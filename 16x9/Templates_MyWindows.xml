@@ -413,12 +413,13 @@
 		<param name="target_id" />
 		<definition>
 			<control type="group">
-				<visible allowhiddenfocus="true">[Control.HasFocus(3000) | String.IsEqual(Window(home).Property(OptionsMenu),Active)] + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(okdialog)</visible>
+				<visible>!Window.IsVisible(shutdownmenu) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(selectdialog) + !Window.IsVisible(progressdialog) + !Window.IsVisible(okdialog)</visible>
 				<include content="VisibleHidden_Fade_Delayed_Animation" />
 				<control type="fixedlist" id="3000">
 					<description>Options menu</description>
 					<viewtype label="535">list</viewtype>
-					<visible allowhiddenfocus="true">true</visible>
+					<visible allowhiddenfocus="true">[Control.HasFocus(3000) | String.IsEqual(Window(home).Property(OptionsMenu),Active)]</visible>
+					<include content="VisibleHidden_Fade_Delayed_Animation" />
 					<include content="OptionsMenu_Slides" />
 					<left>120</left>
 					<width>1080</width>
@@ -428,6 +429,7 @@
 					<onfocus>ClearProperty(Scrollbars,home)</onfocus>
 					<onfocus>SetProperty(OptionsMenu,Active,home)</onfocus>
 					<onunfocus>ClearProperty(OptionsMenu,home)</onunfocus>
+					<onunfocus>ClearProperty(OptionsMenuTransition,home)</onunfocus>
 					<onleft condition="String.IsEmpty(Container(3000).ListItem.Property(ActionLeft))">4012</onleft>
 					<onright condition="String.IsEmpty(Container(3000).ListItem.Property(ActionRight))">4012</onright>
 					<onleft condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionLeft))">$INFO[Container(3000).ListItem.Property(ActionLeft)]</onleft>
@@ -504,6 +506,11 @@
 							<param name="label_left" value="0" />
 							<param name="label_maxwidth" value="1080" />
 						</include>
+						<control type="button">
+							<visible allowhiddenfocus="true">false</visible>
+							<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Hidden</animation>
+							<onfocus>SetProperty(OptionsMenuTransition,Complete,home)</onfocus>
+						</control>
 					</focusedlayout>
 					<content>
 						<include content="ListView_Menu_Options" condition="!Skin.HasSetting(Kiosk_Mode)" />

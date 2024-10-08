@@ -129,7 +129,7 @@
 			</item>
 			<!-- Details -->
 			<!-- Movies -->
-			<item id="2">
+			<item id="3">
 				<description>Details (Movies) / Off</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[591] $VAR[Copacetic_Chevron_Right]</label>
 				<label2>$LOCALIZE[31016] $VAR[Copacetic_Divider_Bold] $LOCALIZE[591]</label2>
@@ -138,7 +138,7 @@
 				<property name="ActionRight">Skin.SetString(ShowcaseView_Details_Movies,Title_Overlay)</property>
 				<visible>$PARAM[visible] + $EXP[ShowcaseView_Details_Off_Movies]</visible>
 			</item>
-			<item id="3">
+			<item>
 				<description>Details (Movies) / Title (Overlay)</description>
 				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31017] ($LOCALIZE[31029]) $VAR[Copacetic_Chevron_Right]</label>
 				<label2>$LOCALIZE[31016] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31017] ($LOCALIZE[31029])</label2>

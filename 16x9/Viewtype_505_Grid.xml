@@ -63,11 +63,11 @@
 					<include content="Default_Scrolltime" condition="!Skin.HasSetting(Quick_Transitions)" />
 					<include content="Quick_Scrolltime" condition="Skin.HasSetting(Quick_Transitions) + !Skin.HasSetting(Zero_Transitions)" />
 					<include content="Zero_Scrolltime" condition="Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)" />
-					<include content="GridView_Layout_Array" condition="Window.Is(videos) | Window.Is(music) | Window.Is(programs) | Window.Is(pictures)">
+					<include content="GridView_Layout_Array" condition="Window.Is(music) | Window.Is(pictures) | Window.Is(programs) | Window.Is(videos)">
 						<param name="displaytype_label" value="Fanart" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
 					</include>
-					<include content="GridView_Layout_Array" condition="Window.Is(videos) | Window.Is(music) | Window.Is(programs)">
+					<include content="GridView_Layout_Array" condition="Window.Is(music) | Window.Is(programs) | Window.Is(videos)">
 						<param name="displaytype_label" value="Posters" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
 					</include>
