@@ -44,8 +44,8 @@
 					<param name="color" value="$VAR[Light_Color]" />
 					<animation effect="slide" end="0,5" time="0" condition="Player.Paused">Conditional</animation>
 				</include>
-				<include name="Progress">
-					<param name="id" value="500	" />
+				<include content="Progress">
+					<param name="id" value="500" />
 					<param name="bottom" value="0" />
 				</include>
 			</control>
