@@ -44,8 +44,12 @@
 					<param name="color" value="$VAR[Light_Color]" />
 					<animation effect="slide" end="0,5" time="0" condition="Player.Paused">Conditional</animation>
 				</include>
-				<include content="Progress">
+				<include content="Progress_Grid">
 					<param name="id" value="500" />
+					<param name="visible" value="!$EXP[Container_Switching] + !$EXP[TransparentDialog_IsVisible] + !$EXP[Scrollbar_HasFocus] + !$EXP[Music_Player_HasFocus]" />
+					<param name="left" value="40" />
+					<param name="width" value="240" />
+					<param name="height" value="4" />
 					<param name="bottom" value="0" />
 				</include>
 			</control>
@@ -68,7 +72,7 @@
 					<top>45</top>
 					<height>30</height>
 					<width>100%</width>
-					<label>$VAR[Info_Label] - $INFO[ListItem.]</label>
+					<label>$VAR[Info_Label]</label>
 					<font>PVR_Info</font>
 					<textcolor>$VAR[Light_Color]</textcolor>
 					<selectedcolor>$VAR[Light_Color]</selectedcolor>

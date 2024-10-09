@@ -50,12 +50,15 @@
 							<include content="HiddenFocusButton" />
 							<include content="Multiart_Resetter" condition="Skin.HasSetting(Multiart_Slideshow)" />
 							<include content="Multiart_Setter" condition="Skin.HasSetting(Multiart_Slideshow)" />
-							<control type="image">
-								<texture border="10" colordiffuse="$VAR[PVR_DetailedListView_Focus_Color]">views/white_100_rounded10.png</texture>
+							<control type="group">
+								<animation effect="slide" start="0,0" end="-1920,0" time="Default_Transition_1x" tween="sine" easing="inout" reversible="true" condition="Control.HasFocus(3100)">Conditional</animation>
+								<control type="image">
+									<texture border="10" colordiffuse="$VAR[PVR_DetailedListView_Focus_Color]">views/white_100_rounded10.png</texture>
+								</control>
+								<include content="DetailedListView_Layout">
+									<param name="multiart" value="true" />
+								</include>
 							</control>
-							<include content="DetailedListView_Layout">
-								<param name="multiart" value="true" />
-							</include>
 						</focusedlayout>
 					</control>
 				</include>
