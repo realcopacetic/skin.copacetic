@@ -63,6 +63,7 @@
 
 	<include name="Progress_Grid">
 		<param name="id" />
+		<param name="visible" default="!$EXP[Container_Switching] + !$EXP[Content_Switching] + !$EXP[TransparentDialog_IsVisible] + !$EXP[Scrollbar_HasFocus] + !$EXP[Music_Player_HasFocus]" />
 		<param name="left" default="0" />
 		<param name="width" default="360" />
 		<param name="height" default="6" />
@@ -70,7 +71,7 @@
 		<param name="slides" default="240" />
 		<definition>
 			<control type="group">
-				<visible>!$EXP[Container_Switching] + !$EXP[Content_Switching] + !$EXP[TransparentDialog_IsVisible] + !$EXP[Scrollbar_HasFocus] + !$EXP[Music_Player_HasFocus]</visible>
+				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<left>$PARAM[left]</left>
 				<bottom>$PARAM[bottom]</bottom>

@@ -1556,7 +1556,7 @@
 				<param name="width" value="240" />
 				<param name="bottom" value="25" />
 				<param name="progress_indicator_background" value="$VAR[Accent_Color]" />
-				<param name="slides" value="360" />
+				<param name="slides" value="240" />
 			</include>
 		</definition>
 	</include>
