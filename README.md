@@ -20,6 +20,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**1.6.8**
+- Fix for secondary slideshow time slider
+
 **1.6.7**
 - Minor bug fixes and code reorganisation to stay in line with Omega code base
 
