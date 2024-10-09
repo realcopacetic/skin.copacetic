@@ -501,7 +501,7 @@
 		<animation effect="slide" end="14" time="0" condition="Skin.String(Background_Slideshow2_Timer,03)">Conditional</animation>
 		<animation effect="slide" end="19" time="0" condition="Skin.String(Background_Slideshow2_Timer,04)">Conditional</animation>
 		<animation effect="slide" end="24" time="0" condition="Skin.String(Background_Slideshow2_Timer,05)">Conditional</animation>
-		<animation effect="slide" end="28" time="0" condition="Skin.String(Background_Slideshow2_Timer,06) | !Skin.String(Background_Slideshow2_Timer)">Conditional</animation>
+		<animation effect="slide" end="28" time="0" condition="Skin.String(Background_Slideshow2_Timer,06)">Conditional</animation>
 		<animation effect="slide" end="33" time="0" condition="Skin.String(Background_Slideshow2_Timer,07)">Conditional</animation>
 		<animation effect="slide" end="38" time="0" condition="Skin.String(Background_Slideshow2_Timer,08)">Conditional</animation>
 		<animation effect="slide" end="43" time="0" condition="Skin.String(Background_Slideshow2_Timer,09)">Conditional</animation>
@@ -515,7 +515,7 @@
 		<animation effect="slide" end="82" time="0" condition="Skin.String(Background_Slideshow2_Timer,17)">Conditional</animation>
 		<animation effect="slide" end="86" time="0" condition="Skin.String(Background_Slideshow2_Timer,18)">Conditional</animation>
 		<animation effect="slide" end="91" time="0" condition="Skin.String(Background_Slideshow2_Timer,19)">Conditional</animation>
-		<animation effect="slide" end="96" time="0" condition="Skin.String(Background_Slideshow2_Timer,20)">Conditional</animation>
+		<animation effect="slide" end="96" time="0" condition="Skin.String(Background_Slideshow2_Timer,20) | !Skin.String(Background_Slideshow2_Timer)">Conditional</animation>
 		<animation effect="slide" end="101" time="0" condition="Skin.String(Background_Slideshow2_Timer,21)">Conditional</animation>
 		<animation effect="slide" end="106" time="0" condition="Skin.String(Background_Slideshow2_Timer,22)">Conditional</animation>
 		<animation effect="slide" end="110" time="0" condition="Skin.String(Background_Slideshow2_Timer,23)">Conditional</animation>

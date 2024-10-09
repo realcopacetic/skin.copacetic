@@ -20,6 +20,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
+**2.6.8**
+- Fix for secondary slideshow time slider
+
 **2.6.7**
 - All views enabled for favouritesbrowser in Omega https://github.com/realcopacetic/skin.copacetic/issues/202
 
