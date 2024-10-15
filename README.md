@@ -20,14 +20,12 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
-**2.6.8**
-- Fix for secondary slideshow time slider
-
-**2.6.7**
-- All views enabled for favouritesbrowser in Omega https://github.com/realcopacetic/skin.copacetic/issues/202
+**2.6.9**
 
 To do:
-- !string.isempty(listitem(0).art(album.fanart))]
+- Video player breadcrumb on OSD for episodes
+- grid spotlight artwork glitch 
+- cast / role showin /role  even when norole
 - pvr switching from windows to fullscreen there's a transition animation but it should be instant
 - detailed list
    - progress bar
@@ -55,6 +53,13 @@ To do:
 - remove window property hack for music ratings during playback in Omega
 = <!-- temp fix to account for fact that DecreaseRating won't go lower than 1 for VideoPlayer.UserRating -->
 - https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Extended-Info#direct-call-auto
+
+
+**2.6.8**
+- Fix for secondary slideshow time slider
+
+**2.6.7**
+- All views enabled for favouritesbrowser in Omega https://github.com/realcopacetic/skin.copacetic/issues/202
 
 **2.6.6**
 - Added second slideshow, configurable in Copacetic skin settings with option to set timers for both so you can switch between slideshows at different times of day. Useful e.g. for having kid-friendly slideshow in the daytime then switching to a different slideshow in the evening.

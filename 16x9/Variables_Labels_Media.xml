@@ -123,11 +123,11 @@
 	<variable name="Background_Label">
 		<value condition="Window.IsVisible(loginscreen) + !String.IsEmpty(Container(3300).ListItem.Art(fanart))">$INFO[Container(3300).ListItem.Label]</value>
 		<value condition="!String.Contains(Container.FolderPath,plugin://) + $EXP[Content_HasBackground] + !String.IsEmpty(Container(3300).ListItem.Art(fanart))">$INFO[Container(3300).ListItem.Label]</value>
-		<value condition="Window.IsVisible(videos) + !String.IsEmpty(Window(home).Property(background_videos_fanart))">$INFO[Window(home).Property(background_videos_title)]</value>
+		<value condition="Window.IsVisible(videos) + !String.IsEmpty(Window(home).Property(background_video_fanart))">$INFO[Window(home).Property(background_video_title)]</value>
 		<value condition="Window.IsVisible(music) + !String.IsEmpty(Window(home).Property(background_artists_fanart))">$INFO[Window(home).Property(background_artists_title)]</value>
 		<value condition="[Skin.HasSetting(Home_Background_Override_Enabled) | !Window.Is(home)] + Skin.String(Background_Slideshow,Custom) + Skin.String(Background_Slideshow_Custom_Path) + !String.IsEmpty(Window(home).Property(background_custom_title))">$INFO[Window(home).Property(background_custom_title)]</value>
 		<value condition="[Skin.HasSetting(Home_Background_Override_Enabled) | !Window.Is(home)] + Skin.String(Background_Slideshow,Global) + !String.IsEmpty(Window(home).Property(background_global_title))">$INFO[Window(home).Property(background_global_title)]</value>
-		<value condition="[Skin.HasSetting(Home_Background_Override_Enabled) | !Window.Is(home)] + Skin.String(Background_Slideshow,Videos) + !String.IsEmpty(Window(home).Property(background_videos_title))">$INFO[Window(home).Property(background_videos_title)]</value>
+		<value condition="[Skin.HasSetting(Home_Background_Override_Enabled) | !Window.Is(home)] + Skin.String(Background_Slideshow,Videos) + !String.IsEmpty(Window(home).Property(background_video_title))">$INFO[Window(home).Property(background_video_title)]</value>
 		<value condition="[Skin.HasSetting(Home_Background_Override_Enabled) | !Window.Is(home)] + Skin.String(Background_Slideshow,Movies) + !String.IsEmpty(Window(home).Property(background_movies_title))">$INFO[Window(home).Property(background_movies_title)]</value>
 		<value condition="[Skin.HasSetting(Home_Background_Override_Enabled) | !Window.Is(home)] + Skin.String(Background_Slideshow,TVShows) + !String.IsEmpty(Window(home).Property(background_tvshows_title))">$INFO[Window(home).Property(background_tvshows_title)]</value>
 		<value condition="[Skin.HasSetting(Home_Background_Override_Enabled) | !Window.Is(home)] + Skin.String(Background_Slideshow,Artists) + !String.IsEmpty(Window(home).Property(background_artists_title))">$INFO[Window(home).Property(background_artists_title)]</value>
@@ -932,6 +932,8 @@
 	<variable name="Title_Label">
 		<value condition="VideoPlayer.IsFullscreen + String.IsEmpty(VideoPlayer.DBID) + String.Contains(VideoPlayer.Title,.) + !String.IsEmpty(Window(home).Property(Return_Label))">$INFO[Window(home).Property(Return_Label)]</value>
 		<value condition="VideoPlayer.IsFullscreen + !String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.Title]</value>
+		<value condition="VideoPlayer.IsFullscreen + Window.Is(videoosd) + String.isEqual(VideoPlayer.DBID,episode) + Integer.IsGreater(VideoPlayer.Episode,9)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x]$INFO[VIdeoPlayer.Title,. ]</value>
+		<value condition="VideoPlayer.IsFullscreen + Window.Is(videoosd) + String.isEqual(VideoPlayer.DBID,episode) + Integer.IsGreater(VideoPlayer.Episode,0)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x0]$INFO[VIdeoPlayer.Title,. ]</value>
 		<value condition="[Window.Is(pvrguideinfo) | Window.Is(tvsearch)] + !String.IsEmpty(ListItem.EpisodeName)">$INFO[ListItem.EpisodeName]</value>
 		<value condition="Window.Is(addoninformation) + !String.IsEmpty(ListItem.AddonName)">$INFO[ListItem.AddonName]</value>
 		<value condition="$EXP[Infoscreen_Widget_HasFocus]">$VAR[Title_Label_Infoscreen_Widgets]</value>
