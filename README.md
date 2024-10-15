@@ -20,13 +20,13 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
-**1.6.8**
-- Fix for secondary slideshow time slider
+**1.6.9**
+- Updates to account for script.copacetic.helper code refactoring
+- Updated video breadcrumb label at start of playback for episodes
+- fixed bug in widget artwork preventing lanscape artwork from displaying at -2 position
+- fixed bug causing '/' to be shown after actor name in infoscreen cast widget even if there was no role to be displayed after the /
 
-**1.6.7**
-- Minor bug fixes and code reorganisation to stay in line with Omega code base
-
-To do:
+To do
 - pvr switching from windows to fullscreen there's a transition animation but it should be instant
 - detailed list
    - progress bar
@@ -54,6 +54,12 @@ To do:
 - remove window property hack for music ratings during playback in Omega
 = <!-- temp fix to account for fact that DecreaseRating won't go lower than 1 for VideoPlayer.UserRating -->
 - https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Extended-Info#direct-call-auto
+
+**1.6.8**
+- Fix for secondary slideshow time slider
+
+**1.6.7**
+- All views enabled for favouritesbrowser in Omega https://github.com/realcopacetic/skin.copacetic/issues/202
 
 **1.6.5**
 - Work in Progress (WIP) new view called Detailed List based on PVR view
