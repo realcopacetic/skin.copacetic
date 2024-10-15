@@ -63,6 +63,7 @@
 					<param name="viewtype_label" value="Strip" />
 					<param name="left" value="60" />
 					<param name="width" value="600" />
+					<param name="align" value="center" />
 					<param name="logo_width" value="100%" />
 					<param name="title_color" value="$VAR[Primary_Color]" />
 					<param name="title_maxheight" value="336" />

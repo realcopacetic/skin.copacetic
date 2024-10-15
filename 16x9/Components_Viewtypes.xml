@@ -542,6 +542,7 @@
 		<param name="width" default="1680" />
 		<param name="height" default="100%" />
 		<param name="itemgap" default="0" />
+		<param name="align" default="left" />
 		<param name="logo_width" default="640" />
 		<param name="title_label" default="$VAR[Title_Label]" />
 		<param name="title_color" default="$VAR[Light_Color]" />
@@ -587,7 +588,7 @@
 						<usecontrolcoords>true</usecontrolcoords>
 						<include content="Common_Details_Logo" condition="[Window.Is(home) + $PARAM[widget_clearlogos]] | Window.Is(videos) | Window.Is(music) | Window.Is(programs)">
 							<param name="visible" value="[!$EXP[BillboardView_IsVisible] + [$EXP[$PARAM[viewtype_label]View_Logo_IsVisible] | $EXP[Widget_HasLogo]] + !$EXP[$PARAM[viewtype_label]View_Details_Title]] | [$EXP[BillboardView_IsVisible] + $EXP[BillboardView_Logo_IsVisible]] | [Window.Is(home) + $EXP[Widget_HasLogo]]" />
-							<param name="align" value="left" />
+							<param name="align" value="$PARAM[align]" />
 							<param name="aligny" value="bottom" />
 							<param name="width" value="$PARAM[logo_width]" />
 							<animation effect="slide" start="0,0" end="0,-10" time="0" condition="true">Conditional</animation>
@@ -599,6 +600,7 @@
 							<param name="color" value="$PARAM[title_color]" />
 							<param name="maxheight" value="$PARAM[title_maxheight]" />
 							<param name="label" value="$PARAM[title_label]" />
+							<param name="align" value="$PARAM[align]" />
 						</include>
 						<include content="Common_Details_Textbox" condition="Window.Is(videos) | Window.Is(music) | Window.Is(programs)">
 							<param name="visible" value="![$EXP[$PARAM[viewtype_label]View_Logo_IsVisible] | $EXP[Widget_HasLogo]] + $EXP[ShowcaseView_IsVisible] + $EXP[ShowcaseView_Details_Overlay_IsVisible]" />
@@ -615,6 +617,7 @@
 							<param name="font" value="$PARAM[viewtype_label]_Info" />
 							<param name="color" value="$PARAM[title_color]" />
 							<param name="label" value="$PARAM[info_label]" />
+							<param name="align" value="$PARAM[align]" />
 						</include>
 						<include content="Common_Details_Textbox" condition="Window.Is(addonbrowser) | Window.Is(music) | Window.Is(programs) | Window.Is(videos)">
 							<param name="visible" value="$EXP[$PARAM[viewtype_label]View_Details_Plot_IsVisible] + !String.IsEmpty(Control.GetLabel(6003)) + ![Control.HasFocus(3100) + Container.Content(tvshows)]" />
@@ -624,6 +627,7 @@
 							<param name="color" value="$VAR[Plot_Color]" />
 							<param name="label" value="$PARAM[plot_label]" />
 							<param name="scroll" value="true" />
+							<param name="align" value="$PARAM[align]" />
 						</include>
 					</control>
 				</control>

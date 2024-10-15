@@ -5,9 +5,14 @@
 		<value />
 	</variable>
 	<variable name="Widget1_Thumbnail(-2)Content">
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(thumb)) + Skin.HasSetting(Widget1_Content_Custom) + [Skin.String(Widget1_Display,Fanart) | Skin.String(Widget1_Display,Spotlight)] + [String.IsEqual(Container.ListItemNoWrap(-2).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(-2).DBType,video)] + Skin.HasSetting(Widget1_Episode_Thumbs)">$INFO[ListItem(-2).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.square)) + Skin.String(Widget1_Display,Square)">$INFO[ListItem(-2).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(square)) + Skin.String(Widget1_Display,Square)">$INFO[ListItem(-2).Art(square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(thumb)) + Skin.String(Widget1_Display,Square)">$INFO[ListItem(-2).Art(thumb)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.landscape)) + !Skin.String(Widget1_View,Billboard) + !Skin.String(Widget1_Display,Posters) + Skin.HasSetting(Widget1_Prefer_Landscape)">$INFO[ListItem(-2).Art(tvshow.landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(landscape)) + !Skin.String(Widget1_View,Billboard) + !Skin.String(Widget1_Display,Posters) + !String.IsEqual(ListItem(-2).DBType,album) + !String.IsEqual(ListItem(-2).DBType,song) + Skin.HasSetting(Widget1_Prefer_Landscape)">$INFO[ListItem(-2).Art(landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.fanart)) + !Skin.String(Widget1_Display,Posters)">$INFO[ListItem(-2).Art(tvshow.fanart)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(fanart)) + !Skin.String(Widget1_Display,Posters) + !String.IsEqual(ListItem(-2).DBType,album) + !String.IsEqual(ListItem(-2).DBType,song)">$INFO[ListItem(-2).Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.keyart)) + Skin.String(Widget1_Display,Posters) + Skin.HasSetting(Widget1_Prefer_Keyart)">$INFO[ListItem(-2).Art(tvshow.keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(keyart)) + Skin.String(Widget1_Display,Posters) + Skin.HasSetting(Widget1_Prefer_Keyart)">$INFO[ListItem(-2).Art(keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.poster)) + Skin.String(Widget1_Display,Posters)">$INFO[ListItem(-2).Art(tvshow.poster)]</value>
@@ -140,9 +145,14 @@
 		<value />
 	</variable>
 	<variable name="Widget2_Thumbnail(-2)Content">
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(thumb)) + Skin.HasSetting(Widget2_Content_Custom) + [Skin.String(Widget2_Display,Fanart) | Skin.String(Widget2_Display,Spotlight)] + [String.IsEqual(Container.ListItemNoWrap(-2).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(-2).DBType,video)] + Skin.HasSetting(Widget2_Episode_Thumbs)">$INFO[ListItem(-2).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.square)) + Skin.String(Widget2_Display,Square)">$INFO[ListItem(-2).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(square)) + Skin.String(Widget2_Display,Square)">$INFO[ListItem(-2).Art(square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(thumb)) + Skin.String(Widget2_Display,Square)">$INFO[ListItem(-2).Art(thumb)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.landscape)) + !Skin.String(Widget2_View,Billboard) + !Skin.String(Widget2_Display,Posters) + Skin.HasSetting(Widget2_Prefer_Landscape)">$INFO[ListItem(-2).Art(tvshow.landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(landscape)) + !Skin.String(Widget2_View,Billboard) + !Skin.String(Widget2_Display,Posters) + !String.IsEqual(ListItem(-2).DBType,album) + !String.IsEqual(ListItem(-2).DBType,song) + Skin.HasSetting(Widget2_Prefer_Landscape)">$INFO[ListItem(-2).Art(landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.fanart)) + !Skin.String(Widget2_Display,Posters)">$INFO[ListItem(-2).Art(tvshow.fanart)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(fanart)) + !Skin.String(Widget2_Display,Posters) + !String.IsEqual(ListItem(-2).DBType,album) + !String.IsEqual(ListItem(-2).DBType,song)">$INFO[ListItem(-2).Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.keyart)) + Skin.String(Widget2_Display,Posters) + Skin.HasSetting(Widget2_Prefer_Keyart)">$INFO[ListItem(-2).Art(tvshow.keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(keyart)) + Skin.String(Widget2_Display,Posters) + Skin.HasSetting(Widget2_Prefer_Keyart)">$INFO[ListItem(-2).Art(keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.poster)) + Skin.String(Widget2_Display,Posters)">$INFO[ListItem(-2).Art(tvshow.poster)]</value>
@@ -275,9 +285,14 @@
 		<value />
 	</variable>
 	<variable name="Widget3_Thumbnail(-2)Content">
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(thumb)) + Skin.HasSetting(Widget3_Content_Custom) + [Skin.String(Widget3_Display,Fanart) | Skin.String(Widget3_Display,Spotlight)] + [String.IsEqual(Container.ListItemNoWrap(-2).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(-2).DBType,video)] + Skin.HasSetting(Widget3_Episode_Thumbs)">$INFO[ListItem(-2).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.square)) + Skin.String(Widget3_Display,Square)">$INFO[ListItem(-2).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(square)) + Skin.String(Widget3_Display,Square)">$INFO[ListItem(-2).Art(square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(thumb)) + Skin.String(Widget3_Display,Square)">$INFO[ListItem(-2).Art(thumb)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.landscape)) + !Skin.String(Widget3_View,Billboard) + !Skin.String(Widget3_View,Billboard) + !Skin.String(Widget3_Display,Posters) + Skin.HasSetting(Widget3_Prefer_Landscape)">$INFO[ListItem(-2).Art(tvshow.landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(landscape)) + !Skin.String(Widget3_View,Billboard) + !Skin.String(Widget3_Display,Posters) + !String.IsEqual(ListItem(-2).DBType,album) + !String.IsEqual(ListItem(-2).DBType,song) + Skin.HasSetting(Widget3_Prefer_Landscape)">$INFO[ListItem(-2).Art(landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.fanart)) + !Skin.String(Widget3_Display,Posters)">$INFO[ListItem(-2).Art(tvshow.fanart)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(fanart)) + !Skin.String(Widget3_Display,Posters) + !String.IsEqual(ListItem(-2).DBType,album) + !String.IsEqual(ListItem(-2).DBType,song)">$INFO[ListItem(-2).Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.keyart)) + Skin.String(Widget3_Display,Posters) + Skin.HasSetting(Widget3_Prefer_Keyart)">$INFO[ListItem(-2).Art(tvshow.keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(keyart)) + Skin.String(Widget3_Display,Posters) + Skin.HasSetting(Widget3_Prefer_Keyart)">$INFO[ListItem(-2).Art(keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.poster)) + Skin.String(Widget3_Display,Posters)">$INFO[ListItem(-2).Art(tvshow.poster)]</value>
@@ -410,9 +425,14 @@
 		<value />
 	</variable>
 	<variable name="Widget4_Thumbnail(-2)Content">
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(thumb)) + Skin.HasSetting(Widget4_Content_Custom) + [Skin.String(Widget4_Display,Fanart) | Skin.String(Widget4_Display,Spotlight)] + [String.IsEqual(Container.ListItemNoWrap(-2).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(-2).DBType,video)] + Skin.HasSetting(Widget4_Episode_Thumbs)">$INFO[ListItem(-2).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.square)) + Skin.String(Widget4_Display,Square)">$INFO[ListItem(-2).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(square)) + Skin.String(Widget4_Display,Square)">$INFO[ListItem(-2).Art(square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(thumb)) + Skin.String(Widget4_Display,Square)">$INFO[ListItem(-2).Art(thumb)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.landscape)) + !Skin.String(Widget4_View,Billboard) + !Skin.String(Widget4_Display,Posters) + Skin.HasSetting(Widget4_Prefer_Landscape)">$INFO[ListItem(-2).Art(tvshow.landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(landscape)) + !Skin.String(Widget4_View,Billboard) + !Skin.String(Widget4_Display,Posters) + !String.IsEqual(ListItem(-2).DBType,album) + !String.IsEqual(ListItem(-2).DBType,song) + Skin.HasSetting(Widget4_Prefer_Landscape)">$INFO[ListItem(-2).Art(landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.fanart)) + !Skin.String(Widget4_Display,Posters)">$INFO[ListItem(-2).Art(tvshow.fanart)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(fanart)) + !Skin.String(Widget4_Display,Posters) + !String.IsEqual(ListItem(-2).DBType,album) + !String.IsEqual(ListItem(-2).DBType,song)">$INFO[ListItem(-2).Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.keyart)) + Skin.String(Widget4_Display,Posters) + Skin.HasSetting(Widget4_Prefer_Keyart)">$INFO[ListItem(-2).Art(tvshow.keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(keyart)) + Skin.String(Widget4_Display,Posters) + Skin.HasSetting(Widget4_Prefer_Keyart)">$INFO[ListItem(-2).Art(keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.poster)) + Skin.String(Widget4_Display,Posters)">$INFO[ListItem(-2).Art(tvshow.poster)]</value>
@@ -548,6 +568,10 @@
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.square)) + Skin.String(Widget5_Display,Square)">$INFO[ListItem(-2).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(square)) + Skin.String(Widget5_Display,Square)">$INFO[ListItem(-2).Art(square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(thumb)) + Skin.String(Widget5_Display,Square)">$INFO[ListItem(-2).Art(thumb)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.landscape)) + !Skin.String(Widget5_View,Billboard) + !Skin.String(Widget5_Display,Posters) + Skin.HasSetting(Widget5_Prefer_Landscape)">$INFO[ListItem(-2).Art(tvshow.landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(landscape)) + !Skin.String(Widget5_View,Billboard) + !Skin.String(Widget5_Display,Posters) + !String.IsEqual(ListItem(-2).DBType,album) + !String.IsEqual(ListItem(-2).DBType,song) + Skin.HasSetting(Widget5_Prefer_Landscape)">$INFO[ListItem(-2).Art(landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.fanart)) + !Skin.String(Widget5_Display,Posters)">$INFO[ListItem(-2).Art(tvshow.fanart)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(fanart)) + !Skin.String(Widget5_Display,Posters) + !String.IsEqual(ListItem(-2).DBType,album) + !String.IsEqual(ListItem(-2).DBType,song)">$INFO[ListItem(-2).Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.keyart)) + Skin.String(Widget5_Display,Posters) + Skin.HasSetting(Widget5_Prefer_Keyart)">$INFO[ListItem(-2).Art(tvshow.keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(keyart)) + Skin.String(Widget5_Display,Posters) + Skin.HasSetting(Widget5_Prefer_Keyart)">$INFO[ListItem(-2).Art(keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.poster)) + Skin.String(Widget5_Display,Posters)">$INFO[ListItem(-2).Art(tvshow.poster)]</value>
@@ -680,9 +704,14 @@
 		<value />
 	</variable>
 	<variable name="Widget6_Thumbnail(-2)Content">
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(thumb)) + Skin.HasSetting(Widget6_Content_Custom) + [Skin.String(Widget6_Display,Fanart) | Skin.String(Widget6_Display,Spotlight)] + [String.IsEqual(Container.ListItemNoWrap(-2).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(-2).DBType,video)] + Skin.HasSetting(Widget6_Episode_Thumbs)">$INFO[ListItem(-2).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.square)) + Skin.String(Widget6_Display,Square)">$INFO[ListItem(-2).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(square)) + Skin.String(Widget6_Display,Square)">$INFO[ListItem(-2).Art(square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(thumb)) + Skin.String(Widget6_Display,Square)">$INFO[ListItem(-2).Art(thumb)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.landscape)) + !Skin.String(Widget6_View,Billboard) + !Skin.String(Widget6_View,Billboard) + !Skin.String(Widget6_Display,Posters) + Skin.HasSetting(Widget6_Prefer_Landscape)">$INFO[ListItem(-2).Art(tvshow.landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(landscape)) + !Skin.String(Widget6_View,Billboard) + !Skin.String(Widget6_Display,Posters) + !String.IsEqual(ListItem(-2).DBType,album) + !String.IsEqual(ListItem(-2).DBType,song) + Skin.HasSetting(Widget6_Prefer_Landscape)">$INFO[ListItem(-2).Art(landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.fanart)) + !Skin.String(Widget6_Display,Posters)">$INFO[ListItem(-2).Art(tvshow.fanart)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(fanart)) + !Skin.String(Widget6_Display,Posters) + !String.IsEqual(ListItem(-2).DBType,album) + !String.IsEqual(ListItem(-2).DBType,song)">$INFO[ListItem(-2).Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.keyart)) + Skin.String(Widget6_Display,Posters) + Skin.HasSetting(Widget6_Prefer_Keyart)">$INFO[ListItem(-2).Art(tvshow.keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(keyart)) + Skin.String(Widget6_Display,Posters) + Skin.HasSetting(Widget6_Prefer_Keyart)">$INFO[ListItem(-2).Art(keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.poster)) + Skin.String(Widget6_Display,Posters)">$INFO[ListItem(-2).Art(tvshow.poster)]</value>
@@ -751,7 +780,7 @@
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(2).Icon)">$INFO[ListItem(2).Icon]</value>
 	</variable>
 	<variable name="Widget6_Thumbnail(3)Content">
-		<value condition="!String.IsEmpty(Container.ListItemNoWrap(3).Art(thumb)) + Skin.HasSetting(Widget6_Content_Custom) + [Skin.String(Widget6_Display,Fanart) | Skin.String(Widget6_Display,Spotlight)] + [String.IsEqual(Container.ListItemNoWrap(3).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(3).DBType,episode)] + Skin.HasSetting(Widget6_Episode_Thumbs)">$INFO[ListItem(3).Art(thumb)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(3).Art(thumb)) + Skin.HasSetting(Widget6_Content_Custom) + [Skin.String(Widget6_Display,Fanart) | Skin.String(Widget6_Display,Spotlight)] + [String.IsEqual(Container.ListItemNoWrap(3).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(3).DBType,video)] + Skin.HasSetting(Widget6_Episode_Thumbs)">$INFO[ListItem(3).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(3).Art(tvshow.square)) + Skin.String(Widget6_Display,Square)">$INFO[ListItem(3).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(3).Art(square)) + Skin.String(Widget6_Display,Square)">$INFO[ListItem(3).Art(square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(3).Art(thumb)) + Skin.String(Widget6_Display,Square)">$INFO[ListItem(3).Art(thumb)]</value>
@@ -815,9 +844,14 @@
 		<value />
 	</variable>
 	<variable name="Widget7_Thumbnail(-2)Content">
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(thumb)) + Skin.HasSetting(Widget7_Content_Custom) + [Skin.String(Widget7_Display,Fanart) | Skin.String(Widget7_Display,Spotlight)] + [String.IsEqual(Container.ListItemNoWrap(-2).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(-2).DBType,video)] + Skin.HasSetting(Widget7_Episode_Thumbs)">$INFO[ListItem(-2).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.square)) + Skin.String(Widget7_Display,Square)">$INFO[ListItem(-2).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(square)) + Skin.String(Widget7_Display,Square)">$INFO[ListItem(-2).Art(square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(thumb)) + Skin.String(Widget7_Display,Square)">$INFO[ListItem(-2).Art(thumb)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.landscape)) + !Skin.String(Widget7_View,Billboard) + !Skin.String(Widget7_Display,Posters) + Skin.HasSetting(Widget7_Prefer_Landscape)">$INFO[ListItem(-2).Art(tvshow.landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(landscape)) + !Skin.String(Widget7_View,Billboard) + !Skin.String(Widget7_Display,Posters) + !String.IsEqual(ListItem(-2).DBType,album) + !String.IsEqual(ListItem(-2).DBType,song) + Skin.HasSetting(Widget7_Prefer_Landscape)">$INFO[ListItem(-2).Art(landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.fanart)) + !Skin.String(Widget7_Display,Posters)">$INFO[ListItem(-2).Art(tvshow.fanart)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(fanart)) + !Skin.String(Widget7_Display,Posters) + !String.IsEqual(ListItem(-2).DBType,album) + !String.IsEqual(ListItem(-2).DBType,song)">$INFO[ListItem(-2).Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.keyart)) + Skin.String(Widget7_Display,Posters) + Skin.HasSetting(Widget7_Prefer_Keyart)">$INFO[ListItem(-2).Art(tvshow.keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(keyart)) + Skin.String(Widget7_Display,Posters) + Skin.HasSetting(Widget7_Prefer_Keyart)">$INFO[ListItem(-2).Art(keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.poster)) + Skin.String(Widget7_Display,Posters)">$INFO[ListItem(-2).Art(tvshow.poster)]</value>
@@ -829,7 +863,7 @@
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Art(tvshow.square)) + Skin.String(Widget7_Display,Square)">$INFO[ListItem(-1).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Art(square)) + Skin.String(Widget7_Display,Square)">$INFO[ListItem(-1).Art(square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Art(thumb)) + Skin.String(Widget7_Display,Square)">$INFO[ListItem(-1).Art(thumb)]</value>
-		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Art(tvshow.landscape)) + !Skin.String(Widget7_View,Billboard) + !Skin.String(Widget7_View,Billboard) + !Skin.String(Widget7_Display,Posters) + Skin.HasSetting(Widget7_Prefer_Landscape)">$INFO[ListItem(-1).Art(tvshow.landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Art(tvshow.landscape)) + !Skin.String(Widget7_View,Billboard) + !Skin.String(Widget7_Display,Posters) + Skin.HasSetting(Widget7_Prefer_Landscape)">$INFO[ListItem(-1).Art(tvshow.landscape)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Art(landscape)) + !Skin.String(Widget7_View,Billboard) + !Skin.String(Widget7_Display,Posters) + !String.IsEqual(ListItem(-1).DBType,album) + !String.IsEqual(ListItem(-1).DBType,song) + Skin.HasSetting(Widget7_Prefer_Landscape)">$INFO[ListItem(-1).Art(landscape)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Art(tvshow.fanart)) + !Skin.String(Widget7_Display,Posters)">$INFO[ListItem(-1).Art(tvshow.fanart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Art(fanart)) + !Skin.String(Widget7_Display,Posters) + !String.IsEqual(ListItem(-1).DBType,album) + !String.IsEqual(ListItem(-1).DBType,song)">$INFO[ListItem(-1).Art(fanart)]</value>
@@ -950,9 +984,14 @@
 		<value />
 	</variable>
 	<variable name="Widget8_Thumbnail(-2)Content">
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(thumb)) + Skin.HasSetting(Widget8_Content_Custom) + [Skin.String(Widget8_Display,Fanart) | Skin.String(Widget8_Display,Spotlight)] + [String.IsEqual(Container.ListItemNoWrap(-2).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(-2).DBType,video)] + Skin.HasSetting(Widget8_Episode_Thumbs)">$INFO[ListItem(-2).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.square)) + Skin.String(Widget8_Display,Square)">$INFO[ListItem(-2).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(square)) + Skin.String(Widget8_Display,Square)">$INFO[ListItem(-2).Art(square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(thumb)) + Skin.String(Widget8_Display,Square)">$INFO[ListItem(-2).Art(thumb)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.landscape)) + !Skin.String(Widget8_View,Billboard) + !Skin.String(Widget8_View,Billboard) + !Skin.String(Widget8_Display,Posters) + Skin.HasSetting(Widget8_Prefer_Landscape)">$INFO[ListItem(-2).Art(tvshow.landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(landscape)) + !Skin.String(Widget8_View,Billboard) + !Skin.String(Widget8_Display,Posters) + !String.IsEqual(ListItem(-2).DBType,album) + !String.IsEqual(ListItem(-2).DBType,song) + Skin.HasSetting(Widget8_Prefer_Landscape)">$INFO[ListItem(-2).Art(landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.fanart)) + !Skin.String(Widget8_Display,Posters)">$INFO[ListItem(-2).Art(tvshow.fanart)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(fanart)) + !Skin.String(Widget8_Display,Posters) + !String.IsEqual(ListItem(-2).DBType,album) + !String.IsEqual(ListItem(-2).DBType,song)">$INFO[ListItem(-2).Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.keyart)) + Skin.String(Widget8_Display,Posters) + Skin.HasSetting(Widget8_Prefer_Keyart)">$INFO[ListItem(-2).Art(tvshow.keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(keyart)) + Skin.String(Widget8_Display,Posters) + Skin.HasSetting(Widget8_Prefer_Keyart)">$INFO[ListItem(-2).Art(keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.poster)) + Skin.String(Widget8_Display,Posters)">$INFO[ListItem(-2).Art(tvshow.poster)]</value>
@@ -1085,9 +1124,14 @@
 		<value />
 	</variable>
 	<variable name="Widget9_Thumbnail(-2)Content">
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(thumb)) + Skin.HasSetting(Widget9_Content_Custom) + [Skin.String(Widget9_Display,Fanart) | Skin.String(Widget9_Display,Spotlight)] + [String.IsEqual(Container.ListItemNoWrap(-2).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(-2).DBType,video)] + Skin.HasSetting(Widget9_Episode_Thumbs)">$INFO[ListItem(-2).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.square)) + Skin.String(Widget9_Display,Square)">$INFO[ListItem(-2).Art(tvshow.square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(square)) + Skin.String(Widget9_Display,Square)">$INFO[ListItem(-2).Art(square)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(thumb)) + Skin.String(Widget9_Display,Square)">$INFO[ListItem(-2).Art(thumb)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.landscape)) + !Skin.String(Widget9_View,Billboard) + !Skin.String(Widget9_Display,Posters) + Skin.HasSetting(Widget9_Prefer_Landscape)">$INFO[ListItem(-2).Art(tvshow.landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(landscape)) + !Skin.String(Widget9_View,Billboard) + !Skin.String(Widget9_Display,Posters) + !String.IsEqual(ListItem(-2).DBType,album) + !String.IsEqual(ListItem(-2).DBType,song) + Skin.HasSetting(Widget9_Prefer_Landscape)">$INFO[ListItem(-2).Art(landscape)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.fanart)) + !Skin.String(Widget9_Display,Posters)">$INFO[ListItem(-2).Art(tvshow.fanart)]</value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(fanart)) + !Skin.String(Widget9_Display,Posters) + !String.IsEqual(ListItem(-2).DBType,album) + !String.IsEqual(ListItem(-2).DBType,song)">$INFO[ListItem(-2).Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.keyart)) + Skin.String(Widget9_Display,Posters) + Skin.HasSetting(Widget9_Prefer_Keyart)">$INFO[ListItem(-2).Art(tvshow.keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(keyart)) + Skin.String(Widget9_Display,Posters) + Skin.HasSetting(Widget9_Prefer_Keyart)">$INFO[ListItem(-2).Art(keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-2).Art(tvshow.poster)) + Skin.String(Widget9_Display,Posters)">$INFO[ListItem(-2).Art(tvshow.poster)]</value>

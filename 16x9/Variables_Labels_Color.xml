@@ -401,7 +401,7 @@
 		<value condition="$EXP[Infoscreen_IsVisible] + Control.HasFocus(3206) + !String.IsEmpty(Container(3206).ListItem.Year)">$VAR[Copacetic_Divider_Bold]</value>
 		<value condition="$EXP[Infoscreen_IsVisible] + Control.HasFocus(3207) + String.IsEqual(Container(3207).ListItem.DBType,artist) + !String.IsEmpty(Container(3207).ListItem.Genre)">$VAR[Copacetic_Divider_Bold]</value>
 		<value condition="$EXP[Infoscreen_IsVisible] + Control.HasFocus(3207) + String.IsEqual(Container(3207).ListItem.DBType,album) + !String.IsEmpty(Container(3207).ListItem.Artist)">$VAR[Copacetic_Divider_Bold]</value>
-		<value condition="$EXP[Infoscreen_IsVisible] + !String.IsEmpty(Container(3207).ListItem.Year)">$VAR[Copacetic_Divider_Bold]</value>
+		<value condition="$EXP[Infoscreen_IsVisible] + Control.HasFocus(3207) + !String.IsEmpty(Container(3207).ListItem.Year)">$VAR[Copacetic_Divider_Bold]</value>
 		<value condition="Window.Is(home) + String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Episode)">$VAR[Copacetic_Divider_Bold]</value>
 		<value condition="Window.Is(home) + !String.IsEmpty(ListItem.Year)">$VAR[Copacetic_Divider_Bold]</value>
 	</variable>
