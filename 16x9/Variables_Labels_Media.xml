@@ -581,6 +581,7 @@
 	</variable>
 
 	<variable name="Player_Status_Label">
+		<value condition="!String.IsEmpty(Player.SeekNumeric)">[UPPERCASE]$LOCALIZE[31309] $VAR[Copacetic_Divider_Bold12Q3] $INFO[Player.SeekNumeric(hh:mm:ss)][/UPPERCASE]</value>
 		<value condition="!String.IsEmpty(Player.SeekStepSize)">$INFO[Player.SeekStepSize]</value>
 		<value condition="!String.IsEmpty(Player.SeekOffset) + Player.HasPerformedSeek(3)">$INFO[Player.SeekOffset]</value>
 		<value condition="VideoPlayer.Content(livetv) + Integer.IsGreater(PVR.TimeShiftOffset,5)">[UPPERCASE]$INFO[PVR.TimeShiftOffset, -, $LOCALIZE[31308]][/UPPERCASE]</value>
@@ -594,7 +595,8 @@
 		<value condition="Player.Rewinding8x">x8</value>
 		<value condition="Player.Rewinding16x">x16</value>
 		<value condition="Player.Rewinding32x">x32</value>
-
+		<value condition="Player.Seeking + VideoPlayer.HasEPG">$INFO[PVR.EpgEventSeekTime]$INFO[PVR.EpgEventDuration, / ]</value>
+		<value condition="Player.Seeking">$INFO[Player.SeekTime]$INFO[Player.Duration, / ]</value>
 	</variable>
 
 	<variable name="Plot_Label">
@@ -1044,7 +1046,7 @@
 	<variable name="Unwatched_Indicator_Label">
 		<value condition="ListItem.IsCollection + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !String.IsEmpty(Window(home).Property(collection_unwatched))">$INFO[Window(home).Property(collection_unwatched)]</value>
 		<value condition="Control.HasFocus(3100)">$INFO[Container(3100).ListItem.Property(UnwatchedEpisodes)]</value>
-		<value>$INFO[Container.ListItem.Property(UnwatchedEpisodes)]</value>
+		<value>$INFO[ListItem.Property(UnwatchedEpisodes)]</value>
 	</variable>
 
 	<variable name="Viewtype_Label">

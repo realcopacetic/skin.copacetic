@@ -104,6 +104,8 @@
 				<onunfocus condition="Skin.TimerIsRunning(trailer_autoplay_home)">Skin.TimerStop(trailer_autoplay_home)</onunfocus>
 				<onunfocus condition="String.IsEqual(Window(home).Property(Trailer_Autoplay),true) + Player.HasVideo">PlayerControl(Stop)</onunfocus>
 				<onunfocus condition="String.IsEqual(Window(home).Property(Trailer_Autoplay),true)">ClearProperty(Trailer_Autoplay,home)</onunfocus>
+				<!-- infoline_changer timer -->
+				<onfocus condition="Skin.TimerIsRunning(infoline_changer)">Skin.TimerStop(infoline_changer)</onfocus>
 				<!-- Settings transition from addonbrowser -->
 				<onfocus condition="Window.Is(addonbrowser) + $EXP[Container_Addons_NonRepo]">SetProperty(Container_Addons_NonRepo,true,home)</onfocus>
 				<onfocus condition="Window.Is(addonbrowser) + !$EXP[Container_Addons_NonRepo]">ClearProperty(Container_Addons_NonRepo,home)</onfocus>
@@ -524,7 +526,7 @@
 			<control type="textbox">
 				<visible>$PARAM[visible]</visible>
 				<top>$PARAM[gap]</top>
-				<height min = "35" max="$PARAM[maxheight]">auto</height>
+				<height min="35" max="$PARAM[maxheight]">auto</height>
 				<font>$PARAM[font]</font>
 				<textcolor>$PARAM[color]</textcolor>
 				<label>$PARAM[label]</label>
@@ -610,15 +612,37 @@
 							<param name="maxheight" value="$PARAM[title_maxheight]" />
 							<param name="align" value="center" />
 						</include>
-						<include content="Common_Details_Info">
-							<param name="visible" value="$EXP[$PARAM[viewtype_label]View_Details_Info_IsVisible] | Window.Is(home) | $EXP[Infoscreen_Widget_HasFocus]" />
-							<param name="gap" value="$PARAM[info_gap]" />
-							<param name="maxheight" value="$PARAM[info_maxheight]" />
-							<param name="font" value="$PARAM[viewtype_label]_Info" />
-							<param name="color" value="$PARAM[title_color]" />
-							<param name="label" value="$PARAM[info_label]" />
-							<param name="align" value="$PARAM[align]" />
-						</include>
+						<!-- info -->
+						<control type="group">
+							<height>$PARAM[info_maxheight]</height>
+							<control type="group">
+								<visible>Integer.IsLess(Skin.TimerElapsedSecs(infoline_changer),7) | String.IsEmpty(ListItem.Tagline)</visible>
+								<include content="Infoline_Fade_Animation" />
+								<include content="Common_Details_Info">
+									<param name="visible" value="$EXP[$PARAM[viewtype_label]View_Details_Info_IsVisible] | Window.Is(home) | $EXP[Infoscreen_Widget_HasFocus]" />
+									<param name="gap" value="$PARAM[info_gap]" />
+									<param name="maxheight" value="$PARAM[info_maxheight]" />
+									<param name="font" value="$PARAM[viewtype_label]_Info" />
+									<param name="color" value="$PARAM[title_color]" />
+									<param name="label" value="$PARAM[info_label]" />
+									<param name="align" value="$PARAM[align]" />
+								</include>
+							</control>
+							<control type="group">
+								<visible>Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(infoline_changer),7) + !String.IsEmpty(ListItem.Tagline)</visible>
+								<include content="Infoline_Fade_Animation" />
+								<include content="Common_Details_Info">
+									<param name="visible" value="$EXP[$PARAM[viewtype_label]View_Details_Info_IsVisible] | Window.Is(home) | $EXP[Infoscreen_Widget_HasFocus]" />
+									<param name="gap" value="$PARAM[info_gap]" />
+									<param name="maxheight" value="$PARAM[info_maxheight]" />
+									<param name="font" value="$PARAM[viewtype_label]_Info" />
+									<param name="color" value="$PARAM[title_color]" />
+									<param name="label" value="[UPPERCASE]$INFO[ListItem.Tagline][/UPPERCASE]" />
+									<param name="align" value="$PARAM[align]" />
+								</include>
+							</control>
+						</control>
+						<!-- plot -->
 						<include content="Common_Details_Textbox" condition="Window.Is(addonbrowser) | Window.Is(music) | Window.Is(programs) | Window.Is(videos)">
 							<param name="visible" value="$EXP[$PARAM[viewtype_label]View_Details_Plot_IsVisible] + !String.IsEmpty(Control.GetLabel(6003)) + ![Control.HasFocus(3100) + Container.Content(tvshows)]" />
 							<param name="gap" value="60" />

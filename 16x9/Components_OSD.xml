@@ -302,7 +302,7 @@
 	<include name="Player_Status_Icons_Label">
 		<definition>
 			<control type="label">
-				<visible>Player.Rewinding | Player.Forwarding | !String.IsEmpty(Player.SeekStepSize) | [!String.IsEmpty(Player.SeekOffset) + Player.HasPerformedSeek(3)] | [Window.Is(videoosd) + VideoPlayer.Content(livetv) + !String.IsEmpty(PVR.TimeShiftOffset)]</visible>
+				<visible>Player.Rewinding | Player.Forwarding | Player.Seeking | !String.IsEmpty(Player.SeekNumeric) | !String.IsEmpty(Player.SeekStepSize) | [!String.IsEmpty(Player.SeekOffset) + Player.HasPerformedSeek(3)] | [Window.Is(videoosd) + VideoPlayer.Content(livetv) + !String.IsEmpty(PVR.TimeShiftOffset)]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<width>360</width>
 				<centerleft>50%</centerleft>
@@ -400,7 +400,7 @@
 				<include content="Player_Status_Icons_Label" condition="$PARAM[large_label]">
 					<param name="color" value="$PARAM[color]" />
 					<param name="font" value="Player_Status" />
-					<animation effect="slide" end="0,90" condition="true">Conditional</animation>
+					<animation effect="slide" end="0,90" condition="Player.Rewinding | Player.Forwarding">Conditional</animation>
 				</include>
 				<include content="Player_Status_Icons_Label" condition="$PARAM[small_label]">
 					<param name="color" value="$PARAM[color]" />

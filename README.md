@@ -20,11 +20,9 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 
 ### Changelog
 ---
-**2.6.9**
-- Updates to account for script.copacetic.helper code refactoring
-- Updated video breadcrumb label at start of playback for episodes
-- fixed bug in widget artwork preventing lanscape artwork from displaying at -2 position
-- fixed bug causing '/' to be shown after actor name in infoscreen cast widget even if there was no role to be displayed after the /
+**2.7.0**
+- Info line will now fade in and out with the tagline if it is present, switching every 7 seconds https://github.com/realcopacetic/skin.copacetic/issues/212
+- Added Player.SeekNumeric label when user entering numeric seek time https://github.com/realcopacetic/skin.copacetic/issues/210
 
 To do
 - pvr switching from windows to fullscreen there's a transition animation but it should be instant
@@ -55,6 +53,11 @@ To do
 = <!-- temp fix to account for fact that DecreaseRating won't go lower than 1 for VideoPlayer.UserRating -->
 - https://github.com/jurialmunkey/plugin.video.themoviedb.helper/wiki/Replacing-Extended-Info#direct-call-auto
 
+**2.6.9**
+- Updates to account for script.copacetic.helper code refactoring
+- Updated video breadcrumb label at start of playback for episodes
+- fixed bug in widget artwork preventing lanscape artwork from displaying at -2 position
+- fixed bug causing '/' to be shown after actor name in infoscreen cast widget even if there was no role to be displayed after the /
 
 **2.6.8**
 - Fix for secondary slideshow time slider

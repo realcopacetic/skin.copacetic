@@ -278,6 +278,15 @@
 		</include>
 	</include>
 
+	<include name="Infoline_Fade_Animation">
+		<include content="fade_animation">
+			<param name="type" value="Visible" />
+			<param name="time" value="1x" />
+			<param name="delay" value="1x" />
+			<param name="condition" value="!Control.IsVisible(5007)" />
+		</include>
+	</include>
+
 	<include name="Ken_Burns_Effect_Animation">
 		<animation type="Conditional" pulse="true" condition="true" reversible="true">
 			<effect type="zoom" center="auto" end="108" time="21000" tween="sine" easing="inout" />

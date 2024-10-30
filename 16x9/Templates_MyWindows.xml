@@ -41,6 +41,11 @@
 			<visible>Control.HasFocus(4014)</visible>
 			<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Hidden</animation>
 		</control>
+		<!-- Break info_line animation in first period after a user scroll -->
+		<control type="group" id="5007">
+			<visible>Container.OnPrevious | Container(50).OnPrevious | Container(3201).OnPrevious | Container(3202).OnPrevious | Container(3203).OnPrevious | Container(3204).OnPrevious | Container(3205).OnPrevious | Container(3206).OnPrevious | Container(3207).OnPrevious | Container(3208).OnPrevious | Container(3209).OnPrevious | Container.OnNext | Container(50).OnNext | Container(3201).OnNext | Container(3202).OnNext | Container(3203).OnNext | Container(3204).OnNext | Container(3205).OnNext | Container(3206).OnNext | Container(3207).OnNext | Container(3208).OnNext | Container(3209).OnNext</visible>
+			<animation effect="slide" end="0,0" time="Default_Transition_5x" reversible="false">Hidden</animation>
+		</control>
 		<!-- Container Update Bounce Test For Info_Infoscreens_Label -->
 		<control type="button" id="6001">
 			<visible allowhiddenfocus="true">false</visible>
@@ -155,8 +160,8 @@
 			<!-- Layer 1 -->
 			<control type="group">
 				<include content="WindowOpenClose_Fade_Delayed_Animation" />
-				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" />
 				<visible>$PARAM[visible]</visible>
+				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" />
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="ListView_Display">
 					<param name="visible" value="!$EXP[TransparentDialog_IsVisible]" />

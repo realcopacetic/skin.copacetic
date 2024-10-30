@@ -570,6 +570,12 @@ msgctxt "#31308"
 msgid "Timeshift"
 msgstr ""
 
+#: NEW
+#/16x9/Variables_Labels_Media.xml
+msgctxt "#31309"
+msgid "Jump to"
+msgstr ""
+
 
 
 #########################################################################################################

@@ -63,6 +63,7 @@ ANIMATION DELAYS
 5004          Secondary list user scroll next delay
 5005          Options menu settings change
 5006          Container Switching delay (to hide multiart following container transition)
+5007          infoline_fade animation break window
 
 CHECKERS
 6001          Container update bounce test

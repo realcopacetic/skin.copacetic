@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <timers>
+    <timer>
+    <name>infoline_changer</name>
+    <start reset="true">Window.IsVisible(videos)</start>
+    <reset>Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(infoline_changer),14)</reset>
+    <stop>!Window.IsVisible(videos)</stop>
+  </timer>
   <timer>
     <name>home_visible</name>
     <start reset="true">Window.IsVisible(home)</start>
