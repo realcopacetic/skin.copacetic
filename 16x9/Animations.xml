@@ -292,6 +292,11 @@
 			<effect type="zoom" center="auto" end="108" time="21000" tween="sine" easing="inout" />
 		</animation>
 	</include>
+	<include name="Background_Ellipsis_Animation">
+		<animation type="Conditional" pulse="true" condition="true" reversible="true">
+			<effect type="zoom" center="auto" end="118" time="17000" tween="sine" easing="inout" />
+		</animation>
+	</include>
 
 	<include name="Light_Theme_Background_Fade_Animation">
 		<include content="fade_animation">

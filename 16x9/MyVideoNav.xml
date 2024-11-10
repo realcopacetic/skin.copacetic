@@ -16,5 +16,9 @@
 		<include content="MyViews_Multiart_Labels" condition="Skin.HasSetting(Multiart_Slideshow)" />
 		<include content="videos_Views" />
 		<include content="MyViews_Menu_and_Scrollbars" />
+		<control type="label">
+			<align>right</align>
+			<label>$INFO[window(home).property(bg_color)]</label>
+		</control>
 	</controls>
 </window>

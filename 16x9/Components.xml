@@ -150,6 +150,14 @@
 		<param name="fadein_animation_condition" default="true" />
 		<param name="fadeout_animation_condition" default="true" />
 		<definition>
+			<control type="image">
+				<include content="Background_Ellipsis_Animation" />
+				<texture colordiffuse="$VAR[Background_Ellipsis_Color]">views/ellipse.png</texture>
+				<width>100%</width>
+				<aspectratio>keep</aspectratio>
+				<right>-600</right>
+				<top>-500</top>
+			</control>
 			<control type="group">
 				<visible>!VideoPlayer.IsFullscreen + !$EXP[globalsearch_IsVisible] + $PARAM[visible]</visible>
 				<include content="VisibleHidden_Background_Fade_Delayed_Animation" />

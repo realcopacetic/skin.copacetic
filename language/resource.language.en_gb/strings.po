@@ -106,12 +106,6 @@ msgctxt "#31033"
 msgid "Detailed"
 msgstr ""
 
-#: NEW
-#Common
-msgctxt "#31034"
-msgid "Detailed list (WIP)"
-msgstr ""
-
 
 
 

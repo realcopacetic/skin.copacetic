@@ -23,20 +23,13 @@ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisc
 **2.7.0**
 - Info line will now fade in and out with the tagline if it is present, switching every 7 seconds https://github.com/realcopacetic/skin.copacetic/issues/212
 - Added Player.SeekNumeric label when user entering numeric seek time https://github.com/realcopacetic/skin.copacetic/issues/210
+- Fixed bug in multiart causing grid posters to sometimes show poster multiart when keyart is selected.
+- Removed wip detailed list view
 
 To do
+- refactor imageeditor to imagehandler. Make it artwork agnostic > open image, do operations, save or write etc. So it can be used to generate / save dominant colours from backgrounds as well. Then a skin setting to prefer fanart for background colour.
+- Put a threshold on luminosity so you don't get fffff0 and near=white colours etc. 
 - pvr switching from windows to fullscreen there's a transition animation but it should be instant
-- detailed list
-   - progress bar
-   - collection icon
-   - navigation
-   - secondary list
-   - view options (flags, details)
-   - variable length textbox depending on how big the plot is
-   - better differentiation between itemlayout and focuslayout
-   - now playing
-   - track number / heart icon
-   - musicplayer
 - PVR seek like estuary
 - pvr icons from studio flags folder?
 - make sure multiart control is disabled after autoscroll

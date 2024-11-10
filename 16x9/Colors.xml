@@ -271,6 +271,12 @@
 		<value condition="Control.HasFocus(3100)">$VAR[Light_Color]</value>
 		<value>$VAR[Blank_Color]</value>
 	</variable>
+	<variable name="Background_Ellipsis_Color">
+		<value condition="$EXP[Dominant_Color_View_Conditions] + Skin.String(Theme,Light) + !String.IsEmpty(Window(home).Property(clearlogo-alt_cropped-color)) + !String.IsEqual(Window(home).Property(clearlogo-alt_cropped-color),ff000000) + Integer.IsLessOrEqual(Window(home).Property(clearlogo-alt_cropped-luminosity),Skin.String(Background_High_Threshold))">$INFO[Window(home).Property(clearlogo-alt_cropped-color)]</value>
+		<value condition="$EXP[Dominant_Color_View_Conditions] + Skin.String(Theme,Light) + String.IsEmpty(Window(home).Property(clearlogo-alt_cropped-color)) + !String.IsEmpty(Window(home).Property(clearlogo_cropped-color)) + !String.IsEqual(Window(home).Property(clearlogo_cropped-color),ff000000) + Integer.IsLessOrEqual(Window(home).Property(clearlogo_cropped-luminosity),Skin.String(Background_High_Threshold))">$INFO[Window(home).Property(clearlogo_cropped-color)]</value>
+		<value condition="$EXP[Dominant_Color_View_Conditions] + !Skin.String(Theme,Light) + !String.IsEmpty(Window(home).Property(clearlogo_cropped-color)) + !String.IsEqual(Window(home).Property(clearlogo_cropped-color),ffffffff) + Integer.IsGreaterOrEqual(Window(home).Property(clearlogo_cropped-luminosity),Skin.String(Background_Low_Threshold))">$INFO[Window(home).Property(clearlogo_cropped-color)]</value>
+		<value>$VAR[Accent_Color]</value>
+	</variable>
 	<variable name="Flag_Color">
 		<value condition="$EXP[Dominant_Color_View_Conditions] + Skin.String(Theme,Light) + !String.IsEmpty(Window(home).Property(clearlogo-alt_cropped-color)) + !String.IsEqual(Window(home).Property(clearlogo-alt_cropped-color),ff000000) + Integer.IsLessOrEqual(Window(home).Property(clearlogo-alt_cropped-luminosity),Skin.String(Background_High_Threshold))">$INFO[Window(home).Property(clearlogo-alt_cropped-color)]</value>
 		<value condition="$EXP[Dominant_Color_View_Conditions] + Skin.String(Theme,Light) + String.IsEmpty(Window(home).Property(clearlogo-alt_cropped-color)) + !String.IsEmpty(Window(home).Property(clearlogo_cropped-color)) + !String.IsEqual(Window(home).Property(clearlogo_cropped-color),ff000000) + Integer.IsLessOrEqual(Window(home).Property(clearlogo_cropped-luminosity),Skin.String(Background_High_Threshold))">$INFO[Window(home).Property(clearlogo_cropped-color)]</value>
