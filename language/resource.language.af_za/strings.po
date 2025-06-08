@@ -763,16 +763,6 @@ msgid "Background slideshow speed"
 msgstr ""
 
 # /16x9/Content_Settings.xml
-msgctxt "#31728"
-msgid "Make persistent across entire home screen, including widgets"
-msgstr ""
-
-# /16x9/Content_Settings.xml
-msgctxt "#31728"
-msgid "Make persistent across entire home screen, including widgets"
-msgstr ""
-
-# /16x9/Content_Settings.xml
 msgctxt "#31527"
 msgid "Choose how quickly artwork in the slideshow should be refreshed. Default: 10 seconds"
 msgstr ""
