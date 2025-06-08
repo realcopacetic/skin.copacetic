@@ -76,6 +76,16 @@ msgctxt "#31031"
 msgid "Spotlight"
 msgstr "Locandina"
 
+# Common
+msgctxt "#31032"
+msgid "Simple"
+msgstr ""
+
+# Common
+msgctxt "#31033"
+msgid "Detailed"
+msgstr ""
+
 # /16x9/Templates_Dialogs.xml, /16x9/Notifications.xml
 msgctxt "#31009"
 msgid "Like song"
@@ -459,6 +469,21 @@ msgctxt "#31306"
 msgid "Fullscreen"
 msgstr "A schermo intero"
 
+# /16x9/Templates_MyPVR.xml
+msgctxt "#31307"
+msgid "Go to"
+msgstr ""
+
+# /16x9/Variables_Labels_Media.xml
+msgctxt "#31308"
+msgid "Timeshift"
+msgstr ""
+
+# /16x9/Variables_Labels_Media.xml
+msgctxt "#31309"
+msgid "Jump to"
+msgstr ""
+
 # ########################################################################################################
 # ########################################################################################################
 # /16x9/Content_Settings.xml
@@ -669,8 +694,8 @@ msgstr "Regola soglie di contrasto del colore"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31524"
-msgid "Adjust the amount of contrast required between the background and the flag colour. Raising the bottom threshold means only lighter colours will be accepted on dark backgrounds. Lowering the top threshold means only darker colours can be used on light backgrounds. Avoids dark flags on dark backgrounds or light flags on light backgrounds. Default range: 65 - 460."
-msgstr "Regola la quantità di contrasto richiesta tra lo sfondo e il colore dell'indicatore. Alzare la soglia inferiore significa che solo i colori più chiari saranno accettati su sfondi scuri. Abbassare la soglia superiore significa che solo i colori più scuri possono essere utilizzati su sfondi chiari. Evita gli indicatori scuri su sfondi scuri o gli indicatori chiari su sfondi chiari. Intervallo predefinito: 65 - 460."
+msgid "Adjust the amount of contrast required between the background and the flag colour. Raising the bottom threshold means only lighter colours will be accepted on dark backgrounds. Lowering the top threshold means only darker colours can be used on light backgrounds. Avoids dark flags on dark backgrounds or light flags on light backgrounds. Default range: 65 - 440."
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31428"
@@ -759,8 +784,18 @@ msgstr "Scegli il percorso o la playlist..."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31427"
-msgid "Background slideshow speed (seconds)"
-msgstr "Velocità della presentazione in background (secondi)"
+msgid "Background slideshow speed"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31732"
+msgid "seconds"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31733"
+msgid "minutes"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31527"
@@ -942,6 +977,21 @@ msgctxt "#31728"
 msgid "Make persistent across entire home screen, including widgets"
 msgstr "Rendi persistente l'intera schermata principale, inclusi i widget"
 
+# /16x9/Content_Settings.xml
+msgctxt "#31729"
+msgid "Enable second background slideshow"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31730"
+msgid "Limit second background slideshow to..."
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31731"
+msgid "Start times"
+msgstr ""
+
 # Widgets
 # /16x9/Content_Settings.xml
 msgctxt "#31445"
@@ -1066,9 +1116,9 @@ msgid "Enable view for add-on and program windows"
 msgstr "Abilita visualizzazione per le finestre degli add-on e dei programmi"
 
 # /16x9/Content_Settings.xml
-msgctxt "#31496"
+msgctxt "#31734"
 msgid "Enable view for favourites browser"
-msgstr "Abilita visualizzazione per il browser dei preferiti"
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31448"
@@ -1248,6 +1298,16 @@ msgid "Visualisation screen album cover"
 msgstr "Copertina album nella schermata di visualizzazione"
 
 # /16x9/Content_Settings.xml
+msgctxt "#31829"
+msgid "Large"
+msgstr ""
+
+# /16x9/Content_Settings.xml
+msgctxt "#31830"
+msgid "Small"
+msgstr ""
+
+# /16x9/Content_Settings.xml
 msgctxt "#31482"
 msgid "Vertical small"
 msgstr "Verticale piccolo"
@@ -1391,13 +1451,13 @@ msgstr "Riproduzione automatica dei trailer per i film nella libreria video"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31568"
-msgid "Autoplay autoplay can be quickly toggled on/off from the options menu within the video library."
-msgstr "La riproduzione automatica può essere attivata/disattivata rapidamente dal menu delle opzioni all'interno della libreria video."
+msgid "Autoplay can be quickly toggled on/off from the options menu within the video library."
+msgstr ""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31469"
-msgid "Play trailers for tv shows in video library"
-msgstr "Riproduci trailer di serie TV nella libreria video"
+msgid "Autoplay trailers for tv shows in video library"
+msgstr ""
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31472"
@@ -1526,11 +1586,10 @@ msgctxt "#31621"
 msgid "Player"
 msgstr "Lettore"
 
-# /16x9/FileManager.xml
-# /16x9/Variables_Labels_Windows.xml
-msgctxt "#31622"
-msgid "items"
-msgstr "elementi"
+# /16x9/DialogPlayerProcessInfo.xml
+msgctxt "#31637"
+msgid "channels in"
+msgstr ""
 
 # /16x9/MyPVRChannels.xml
 msgctxt "#31634"
@@ -1546,6 +1605,12 @@ msgstr "Ricerca globale"
 msgctxt "#31636"
 msgid "Sorry no results found!"
 msgstr "Spiacente, nessun risultato trovato!"
+
+# /16x9/FileManager.xml
+# /16x9/Variables_Labels_Windows.xml
+msgctxt "#31622"
+msgid "items"
+msgstr "elementi"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31623"
@@ -1734,6 +1799,31 @@ msgstr "Buona festa"
 msgctxt "#31914"
 msgid "Happy Earth Day"
 msgstr "Felice giorno della terra"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31524"
+#~ msgid "Adjust the amount of contrast required between the background and the flag colour. Raising the bottom threshold means only lighter colours will be accepted on dark backgrounds. Lowering the top threshold means only darker colours can be used on light backgrounds. Avoids dark flags on dark backgrounds or light flags on light backgrounds. Default range: 65 - 460."
+#~ msgstr "Regola la quantità di contrasto richiesta tra lo sfondo e il colore dell'indicatore. Alzare la soglia inferiore significa che solo i colori più chiari saranno accettati su sfondi scuri. Abbassare la soglia superiore significa che solo i colori più scuri possono essere utilizzati su sfondi chiari. Evita gli indicatori scuri su sfondi scuri o gli indicatori chiari su sfondi chiari. Intervallo predefinito: 65 - 460."
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31427"
+#~ msgid "Background slideshow speed (seconds)"
+#~ msgstr "Velocità della presentazione in background (secondi)"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31496"
+#~ msgid "Enable view for favourites browser"
+#~ msgstr "Abilita visualizzazione per il browser dei preferiti"
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31568"
+#~ msgid "Autoplay autoplay can be quickly toggled on/off from the options menu within the video library."
+#~ msgstr "La riproduzione automatica può essere attivata/disattivata rapidamente dal menu delle opzioni all'interno della libreria video."
+
+# /16x9/Content_Settings.xml
+#~ msgctxt "#31469"
+#~ msgid "Play trailers for tv shows in video library"
+#~ msgstr "Riproduci trailer di serie TV nella libreria video"
 
 # /16x9/Content_Settings.xml
 #~ msgctxt "#31487"
