@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2024-07-22 00:42+0000\n"
+"PO-Revision-Date: 2025-06-11 05:00+0000\n"
 "Last-Translator: Massimo Pissarello <mapi68@gmail.com>\n"
 "Language-Team: Italian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/it_it/>\n"
 "Language: it_it\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.11.4\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -79,12 +79,12 @@ msgstr "Locandina"
 # Common
 msgctxt "#31032"
 msgid "Simple"
-msgstr ""
+msgstr "Semplice"
 
 # Common
 msgctxt "#31033"
 msgid "Detailed"
-msgstr ""
+msgstr "Dettagliato"
 
 # /16x9/Templates_Dialogs.xml, /16x9/Notifications.xml
 msgctxt "#31009"
@@ -472,17 +472,17 @@ msgstr "A schermo intero"
 # /16x9/Templates_MyPVR.xml
 msgctxt "#31307"
 msgid "Go to"
-msgstr ""
+msgstr "Vai a"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31308"
 msgid "Timeshift"
-msgstr ""
+msgstr "Timeshift"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31309"
 msgid "Jump to"
-msgstr ""
+msgstr "Salta a"
 
 # ########################################################################################################
 # ########################################################################################################
@@ -685,7 +685,7 @@ msgstr "Colora indicatori multimediali"
 # /16x9/Content_Settings.xml
 msgctxt "#31523"
 msgid "Media flags are colourised using the dominant colour from the processed clearlogo. The dominant colour will be used as long as there is enough contrast with the current background colour. You can adjust the contrast thresholds for dark and light backgrounds below."
-msgstr "indicatori multimedialiGli indicatori multimediali sono colorati utilizzando il colore dominante del clearlogo elaborato. Verrà utilizzato il colore dominante purché vi sia sufficiente contrasto con il colore di sfondo corrente. Di seguito puoi regolare le soglie di contrasto per sfondi scuri e chiari."
+msgstr "Gli indicatori multimediali sono colorati utilizzando il colore dominante del clearlogo elaborato. Verrà utilizzato il colore dominante purché vi sia sufficiente contrasto con il colore di sfondo corrente. Di seguito puoi regolare le soglie di contrasto per sfondi scuri e chiari."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31424"
@@ -695,7 +695,7 @@ msgstr "Regola soglie di contrasto del colore"
 # /16x9/Content_Settings.xml
 msgctxt "#31524"
 msgid "Adjust the amount of contrast required between the background and the flag colour. Raising the bottom threshold means only lighter colours will be accepted on dark backgrounds. Lowering the top threshold means only darker colours can be used on light backgrounds. Avoids dark flags on dark backgrounds or light flags on light backgrounds. Default range: 65 - 440."
-msgstr ""
+msgstr "Regola la quantità di contrasto richiesta tra lo sfondo e il colore dell'indicatore. Aumentando la soglia inferiore, solo i colori più chiari saranno accettati su sfondi scuri. Abbassando la soglia superiore, solo i colori più scuri potranno essere usati su sfondi chiari. Evita indicatori scuri su sfondi scuri o indicatori chiari su sfondi chiari. Intervallo predefinito: 65 - 440."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31428"
@@ -785,17 +785,17 @@ msgstr "Scegli il percorso o la playlist..."
 # /16x9/Content_Settings.xml
 msgctxt "#31427"
 msgid "Background slideshow speed"
-msgstr ""
+msgstr "Velocità della presentazione in background"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31732"
 msgid "seconds"
-msgstr ""
+msgstr "secondi"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31733"
 msgid "minutes"
-msgstr ""
+msgstr "minuti"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31527"
@@ -865,7 +865,7 @@ msgstr "Usa la presentazione globale selezionata sulla schermata iniziale anzich
 # /16x9/Content_Settings.xml
 msgctxt "#31429"
 msgid "Enable widgets on the home screen"
-msgstr "Abilita i widget nella schermata principale"
+msgstr "Abilita widget nella schermata principale"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31529"
@@ -890,7 +890,7 @@ msgstr "Sei sicuro di voler ripristinare tutti i widget principali ai valori pre
 # /16x9/Content_Settings.xml
 msgctxt "#31704"
 msgid "Enable global search on the home screen"
-msgstr "Abilita la ricerca globale nella schermata principale"
+msgstr "Abilita ricerca globale nella schermata principale"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31705"
@@ -900,7 +900,7 @@ msgstr "Configura la ricerca globale"
 # /16x9/Content_Settings.xml
 msgctxt "#31706"
 msgid "Enable global search for this media type"
-msgstr "Abilita la ricerca globale per questo tipo di media"
+msgstr "Abilita ricerca globale per questo tipo di media"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31707"
@@ -980,17 +980,17 @@ msgstr "Rendi persistente l'intera schermata principale, inclusi i widget"
 # /16x9/Content_Settings.xml
 msgctxt "#31729"
 msgid "Enable second background slideshow"
-msgstr ""
+msgstr "Abilita seconda presentazione in background"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31730"
 msgid "Limit second background slideshow to..."
-msgstr ""
+msgstr "Limita la seconda presentazione in background a..."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31731"
 msgid "Start times"
-msgstr ""
+msgstr "Orari di inizio"
 
 # Widgets
 # /16x9/Content_Settings.xml
@@ -1108,7 +1108,7 @@ msgstr "Scegli quali finestre abilitare per ciascuna delle quattro viste Copacet
 # /16x9/Content_Settings.xml
 msgctxt "#31717"
 msgid "Enable scrolling on long titles instead of truncation (...)"
-msgstr "Abilita lo scorrimento sui titoli lunghi anziché il troncamento (...)"
+msgstr "Abilita scorrimento sui titoli lunghi anziché il troncamento (...)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31447"
@@ -1118,7 +1118,7 @@ msgstr "Abilita visualizzazione per le finestre degli add-on e dei programmi"
 # /16x9/Content_Settings.xml
 msgctxt "#31734"
 msgid "Enable view for favourites browser"
-msgstr ""
+msgstr "Abilita visualizzazione del browser dei preferiti"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31448"
@@ -1230,7 +1230,7 @@ msgstr "Inserisci il codice di tre lettere della tua lingua preferita, ad es. 'e
 # /16x9/Content_Settings.xml
 msgctxt "#31713"
 msgid "Disable video information being displayed at the start of playback"
-msgstr "Disabilita la visualizzazione delle informazioni sul video all'inizio della riproduzione"
+msgstr "Disabilita visualizzazione delle informazioni sul video all'inizio della riproduzione"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31718"
@@ -1240,12 +1240,12 @@ msgstr "Preferisci il tempo rimanente alla durata del video nella barra di ricer
 # /16x9/Content_Settings.xml
 msgctxt "#31813"
 msgid "This disables the label that appears upon video playback showing information about the video including end time, resolution and age rating."
-msgstr "Disabilita l'etichetta che appare durante la riproduzione del video mostrando informazioni sul video tra cui l'ora di fine, la risoluzione e la classificazione in base all'età."
+msgstr "Disabilita etichetta che appare durante la riproduzione del video mostrando informazioni sul video tra cui l'ora di fine, la risoluzione e la classificazione in base all'età."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31490"
 msgid "Enable Up Next widget during playback"
-msgstr "Abilita il widget Up Next durante la riproduzione"
+msgstr "Abilita widget Up Next durante la riproduzione"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31590"
@@ -1300,12 +1300,12 @@ msgstr "Copertina album nella schermata di visualizzazione"
 # /16x9/Content_Settings.xml
 msgctxt "#31829"
 msgid "Large"
-msgstr ""
+msgstr "Grande"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31830"
 msgid "Small"
-msgstr ""
+msgstr "Piccolo"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31482"
@@ -1336,17 +1336,17 @@ msgstr "Sostituisce \"A/B visto\" con \"X/Y non visto\" in tutte le righe inform
 # /16x9/Content_Settings.xml
 msgctxt "#31471"
 msgid "Enable 'Fanart' display layout for Grid view in Pictures window"
-msgstr "Abilita la disposizione visualizzazione \"Fanart\" per la Griglia nella finestra Immagini"
+msgstr "Abilita disposizione visualizzazione \"Fanart\" per la Griglia nella finestra Immagini"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31571"
 msgid "Enables Grid view fanart layout for the pictures window. Because pictures can take any aspect ratio, it is recommended to stick to square layouts for the optimal experience. Keep disabled to improve performance."
-msgstr "Abilita la disposizione fanart della vista Griglia per la finestra delle immagini. Poiché le immagini possono assumere qualsiasi formato, si consiglia di attenersi a disposizioni quadrate per un'esperienza ottimale. Mantieni disattivato per migliorare le prestazioni."
+msgstr "Abilita disposizione fanart della vista Griglia per la finestra delle immagini. Poiché le immagini possono assumere qualsiasi formato, si consiglia di attenersi a disposizioni quadrate per un'esperienza ottimale. Mantieni disattivato per migliorare le prestazioni."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31714"
 msgid "Enable landscape art for List and Billboard view backgrounds"
-msgstr "Abilita la visualizzazione orizzontale per gli sfondi delle viste Elenco e Tabellone"
+msgstr "Abilita visualizzazione orizzontale per gli sfondi delle viste Elenco e Tabellone"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31712"
@@ -1452,12 +1452,12 @@ msgstr "Riproduzione automatica dei trailer per i film nella libreria video"
 # /16x9/Content_Settings.xml
 msgctxt "#31568"
 msgid "Autoplay can be quickly toggled on/off from the options menu within the video library."
-msgstr ""
+msgstr "La riproduzione automatica può essere attivata o disattivata rapidamente dal menu delle opzioni nella libreria video."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31469"
 msgid "Autoplay trailers for tv shows in video library"
-msgstr ""
+msgstr "Riproduzione automatica dei trailer delle serie TV nella libreria video"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31472"
@@ -1589,7 +1589,7 @@ msgstr "Lettore"
 # /16x9/DialogPlayerProcessInfo.xml
 msgctxt "#31637"
 msgid "channels in"
-msgstr ""
+msgstr "canali in"
 
 # /16x9/MyPVRChannels.xml
 msgctxt "#31634"

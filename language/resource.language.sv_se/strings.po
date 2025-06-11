@@ -5,15 +5,15 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-11-16 15:18+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2025-06-11 05:00+0000\n"
+"Last-Translator: Daniel Nylander <daniel@danielnylander.se>\n"
 "Language-Team: Swedish <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/sv_se/>\n"
 "Language: sv_se\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.1\n"
+"X-Generator: Weblate 5.11.4\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -1589,22 +1589,22 @@ msgstr "Spelare"
 # /16x9/DialogPlayerProcessInfo.xml
 msgctxt "#31637"
 msgid "channels in"
-msgstr ""
+msgstr "kanaler i"
 
 # /16x9/MyPVRChannels.xml
 msgctxt "#31634"
 msgid "Now playing channel"
-msgstr ""
+msgstr "Nu spelas kanal"
 
 # /16x9/Navigation.xml
 msgctxt "#31635"
 msgid "Global search"
-msgstr ""
+msgstr "Global sökning"
 
 # /16x9/Navigation.xml
 msgctxt "#31636"
 msgid "Sorry no results found!"
-msgstr ""
+msgstr "Tyvärr, inga resultat hittades!"
 
 # /16x9/FileManager.xml
 # /16x9/Variables_Labels_Windows.xml
@@ -1615,32 +1615,32 @@ msgstr "objekt"
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31623"
 msgid "item"
-msgstr ""
+msgstr "objekt"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31624"
 msgid "Choose preferred classification ratings..."
-msgstr ""
+msgstr "Välj föredragen klassificering..."
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31625"
 msgid "No items"
-msgstr ""
+msgstr "Inga objekt"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31626"
 msgid "songs"
-msgstr ""
+msgstr "låtar"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31627"
 msgid "song"
-msgstr ""
+msgstr "låt"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31628"
 msgid "No songs added"
-msgstr ""
+msgstr "Inga låtar lades till"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31629"
@@ -1650,22 +1650,22 @@ msgstr "Tystad"
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31630"
 msgid "On first entry"
-msgstr ""
+msgstr "Vid första posten"
 
 # /16x9/VideoOSDBookmarks.xml
 msgctxt "#31631"
 msgid "Add"
-msgstr ""
+msgstr "Lägg till"
 
 # /16x9/VideoOSDBookmarks.xml
 msgctxt "#31632"
 msgid "Clear"
-msgstr ""
+msgstr "Töm"
 
 # /16x9/VideoOSDBookmarks.xml
 msgctxt "#31633"
 msgid "Use selected as episode thumb"
-msgstr ""
+msgstr "Använd vald som avsnittsminiatyr"
 
 # ########################################################################################################
 # ########################################################################################################
@@ -1673,132 +1673,132 @@ msgstr ""
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31951"
 msgid "BBFC (UK)"
-msgstr ""
+msgstr "BBFC (UK)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31952"
 msgid "MPAA / TV-PG (US / others)"
-msgstr ""
+msgstr "MPAA / TV-PG (US / övriga)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31953"
 msgid "ACB (Australia)"
-msgstr ""
+msgstr "ACB (Australien)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31954"
 msgid "CHVRS / CBSC (Canada)"
-msgstr ""
+msgstr "CHVRS / CBSC (Kanada)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31955"
 msgid "DJCTQ (Brazil)"
-msgstr ""
+msgstr "DJCTQ (Brasilien)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31956"
 msgid "EIRIN (Japan)"
-msgstr ""
+msgstr "EIRIN (Japan)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31957"
 msgid "FSK (Austria / Germany / Switzerland)"
-msgstr ""
+msgstr "FSK (Österrike/ Tyskland / Schweiz)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31958"
 msgid "IFCO (Ireland)"
-msgstr ""
+msgstr "IFCO (Irland)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31959"
 msgid "KIJKWIJZER (Luxembourg / Netherlands)"
-msgstr ""
+msgstr "KIJKWIJZER (Luxembourg / Nederländerna)"
 
 # ########################################################################################################
 # ########################################################################################################
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31900"
 msgid "Who's watching?"
-msgstr ""
+msgstr "Vem tittar?"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31901"
 msgid "Good evening"
-msgstr ""
+msgstr "God kväll"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31902"
 msgid "Good afternoon"
-msgstr ""
+msgstr "God eftermiddag"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31903"
 msgid "Good morning"
-msgstr ""
+msgstr "God morgon"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31904"
 msgid "Happy New Year"
-msgstr ""
+msgstr "Gott nytt år"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31905"
 msgid "Happy National Popcorn Day"
-msgstr ""
+msgstr "Glad nationell popcorn-dag"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31906"
 msgid "Happy Global Movie Day"
-msgstr ""
+msgstr "Glad globala filmdagen"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31907"
 msgid "Happy Baftas Day"
-msgstr ""
+msgstr "Glad Bafta-dag"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31908"
 msgid "Happy International Women's Day"
-msgstr ""
+msgstr "Glad internationella kvinnodagen"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31909"
 msgid "Happy Razzies Day"
-msgstr ""
+msgstr "Glad Razzies-dag"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31910"
 msgid "Happy Oscars Day"
-msgstr ""
+msgstr "Glad Oscars-dag"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31911"
 msgid "Happy Xmas"
-msgstr ""
+msgstr "God jul"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31912"
 msgid "Ramadan Mubarak"
-msgstr ""
+msgstr "Ramadan Mubarak"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31913"
 msgid "Eid Mubarak"
-msgstr ""
+msgstr "Eid Mubarak"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31914"
 msgid "Happy Earth Day"
-msgstr ""
+msgstr "Glad jorddag"
 
 # /16x9/Content_Settings.xml
 #~ msgctxt "#31482"

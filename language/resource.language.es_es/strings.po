@@ -5,15 +5,15 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2024-04-01 23:01+0000\n"
-"Last-Translator: José Antonio Alvarado <jalvarado0.eses@gmail.com>\n"
+"PO-Revision-Date: 2025-06-11 05:00+0000\n"
+"Last-Translator: Alfonso Cachero <alfonso.cachero@gmail.com>\n"
 "Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/es_es/>\n"
 "Language: es_es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4\n"
+"X-Generator: Weblate 5.11.4\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -74,17 +74,17 @@ msgstr "Cuadrado"
 # Common
 msgctxt "#31031"
 msgid "Spotlight"
-msgstr ""
+msgstr "Destacado"
 
 # Common
 msgctxt "#31032"
 msgid "Simple"
-msgstr ""
+msgstr "Simple"
 
 # Common
 msgctxt "#31033"
 msgid "Detailed"
-msgstr ""
+msgstr "Detallado"
 
 # /16x9/Templates_Dialogs.xml, /16x9/Notifications.xml
 msgctxt "#31009"
@@ -472,17 +472,17 @@ msgstr "Pantalla Completa"
 # /16x9/Templates_MyPVR.xml
 msgctxt "#31307"
 msgid "Go to"
-msgstr ""
+msgstr "Ir a"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31308"
 msgid "Timeshift"
-msgstr ""
+msgstr "Timeshift"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31309"
 msgid "Jump to"
-msgstr ""
+msgstr "Saltar a"
 
 # ########################################################################################################
 # ########################################################################################################
@@ -504,7 +504,7 @@ msgstr "Menúes"
 # /16x9/Content_Settings.xml
 msgctxt "#31516"
 msgid "Choose the shortcuts you wish to add to your home and shutdown menus"
-msgstr ""
+msgstr "Escoge los atajos a añadir a los menús de inicio y apagado"
 
 # /16x9/Content_Settings.xml
 # /16x9/Content.xml
@@ -620,22 +620,22 @@ msgstr "Restablecer color de acento"
 # /16x9/Content_Settings.xml
 msgctxt "#31720"
 msgid "Speed up animations and window transitions [BETA]"
-msgstr ""
+msgstr "Acelerar animaciones y transiciones de ventanas [BETA]"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31820"
 msgid "Reduces the default animation times for transitioning between windows and visibility fades. Removes delays on certain animations and disabled others entirely."
-msgstr ""
+msgstr "Reduce el tiempo por defecto de las animaciones y las transiciones entre ventanas. Elimina retardo en algunas animaciones y otras se desactivan completamente."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31721"
 msgid "Disable all viewtype scroll animations [BETA]"
-msgstr ""
+msgstr "Desactivar todas las animaciones de desplazamiento [BETA]"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31821"
 msgid "Further speeds up browsing by setting the scrolltime for views to 0, removing the transitionary animations when navigating between listitems."
-msgstr ""
+msgstr "Acelera la navegación ajustando el tiempo de desplazamiento para las vistas a 0, eliminando las animaciones de transicion cuando se cambia entre elementos de las listas."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31412"
@@ -1051,12 +1051,12 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31599"
 msgid "Remember 'landscape' is a custom art type. To ensure it is fetched locally or remotely by scrapers, make sure 'landscape' is included in your art type whitelists for movies and / or tv shows. You can do this by choosing 'Recommended Kodi Settings' under Copacetic > General, or by navigating to Settings > Media > Videos > Artwork."
-msgstr ""
+msgstr "Recuerda que 'apaisado' es un tipo de arte personalizado. Para asegurarse que se obtiene localmente o remotamente por los scrapers, asegúrate de que el tipo 'apaisado' está incluido en la lista de tipos admitidos para películas o series de tv. Pueds hacerlo escogiendo 'Ajustes Recomendados de Kodi' en Copacetic > General, o en Ajustes > Contenido > Vídeos > Arte."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31477"
 msgid "Prefer thumbnails for episodes instead of tv show fanart"
-msgstr ""
+msgstr "Preferir miniaturas para episodios en lugar de fanart de series de tv"
 
 # Views
 # /16x9/Content_Settings.xml
@@ -1108,7 +1108,7 @@ msgstr "Elegir qué ventanas habilitar para cada una de las cuatro vistas adicio
 # /16x9/Content_Settings.xml
 msgctxt "#31717"
 msgid "Enable scrolling on long titles instead of truncation (...)"
-msgstr ""
+msgstr "Activar desplazamiento en títulos largos en lugar de truncarlos (...)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31447"
@@ -1118,7 +1118,7 @@ msgstr "Activar la vista de ventanas de add-on y programas"
 # /16x9/Content_Settings.xml
 msgctxt "#31734"
 msgid "Enable view for favourites browser"
-msgstr ""
+msgstr "Activar vista para los favoritos del navegador"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31448"
@@ -1128,12 +1128,12 @@ msgstr "Activar la vista para la ventana de imágenes"
 # /16x9/Content_Settings.xml
 msgctxt "#31715"
 msgid "Item artwork size and orientation"
-msgstr ""
+msgstr "Tamaño y orientación de los elementos de arte"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31815"
 msgid "Choose how big you wish items to be presented in Grid panel views and whether you wish to scroll vertically or horizontally. For Fanart views, 'Horizontal large' displays 3 items per row and 'Horizontal small' displays 4. For Poster and Square views, 'Horizontal large' displays 5 items per row and 'Horizontal small' displays 7. 'Vertical' displays two rows at all times."
-msgstr ""
+msgstr "Escoge cuán grandes se presentarán los elementos en las vistas de Parrilla y si se desplazan horizontal o verticalmente. Para las vistas Fanart, 'Horizontal grande' muestra 3 elementos por fila y 'Horizontal pequeño' 4. Para las vistas Cartel y Cuadrado, 'Horizontal grande' muestra 5 elementos por fila y 'Horizontal pequeño' 7. 'Vertical' muestra 2 filas siempre."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31449"
@@ -1185,7 +1185,7 @@ msgstr "Umbral de valoración de la canción Me gusta"
 # /16x9/Content_Settings.xml
 msgctxt "#31716"
 msgid "Prefer white to grey text colour for plot in Showcase and Strip views"
-msgstr ""
+msgstr "Preferir gris claro para el color del texto del argumento en las vistas Escaparate y Banda"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31554"
@@ -1200,12 +1200,12 @@ msgstr "Pantallas informativas"
 # /16x9/Content_Settings.xml
 msgctxt "#31703"
 msgid "Use TMDbHelper for info screen widgets instead of library content"
-msgstr ""
+msgstr "Usar TMDbHelper para la información en lugar del contenido de la colección"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31803"
 msgid "As long as this plugin is enabled on your system, it will be used to populate info screen widgets including actor and director credits, similar movies/shows and more."
-msgstr ""
+msgstr "Al activar este plugin en el sistema, se usará para recoger la información de reparto, dirección, películas similares y demás."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31485"
@@ -1220,27 +1220,27 @@ msgstr "Reproductor de vídeo"
 # /16x9/Content_Settings.xml
 msgctxt "#31711"
 msgid "Limit quick subtitle switcher in video OSD to a preferred language"
-msgstr ""
+msgstr "Limitar el conmutador rápido de subtítulos al idioma preferido"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31811"
 msgid "Enter the three-letter code of your preferred language, e.g. 'eng' for English. If subtitles in this language are available for the currently playing video, the quick subtitle switcher will toggle on/off for the first subtitle stream in this language, ignoring other streams. If the language is not available, it will toggle between all streams as normal."
-msgstr ""
+msgstr "Define el código de tres letras del idioma preferido, p.ej. 'spa' for Español. Si hay subtítulos disponibles para el vídeo que se está reproduciendo, el conmutador rápido de subtítilos encenderá o apagará la primera pista de subtítulos de ese idioma, ignorando el resto. Si ese idioma no está disponible, conmutará entre todas las pistas disponibles."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31713"
 msgid "Disable video information being displayed at the start of playback"
-msgstr ""
+msgstr "Desactivar mostrar la información del vídeo al empezar la reproducción"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31718"
 msgid "Prefer time remaining to video duration in player seek bar"
-msgstr ""
+msgstr "Preferir tiempo restante de duración del vídeo en la barra de búsqueda"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31813"
 msgid "This disables the label that appears upon video playback showing information about the video including end time, resolution and age rating."
-msgstr ""
+msgstr "Esto desactiva la etiqueta que aparece al reproducir un vídeo mostrando la información como hora de finalización, resolución y clasificación por edad."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31490"
@@ -1589,22 +1589,22 @@ msgstr "Reproductor"
 # /16x9/DialogPlayerProcessInfo.xml
 msgctxt "#31637"
 msgid "channels in"
-msgstr ""
+msgstr "canales en"
 
 # /16x9/MyPVRChannels.xml
 msgctxt "#31634"
 msgid "Now playing channel"
-msgstr ""
+msgstr "Reproduciendo canal"
 
 # /16x9/Navigation.xml
 msgctxt "#31635"
 msgid "Global search"
-msgstr ""
+msgstr "Búsqueda global"
 
 # /16x9/Navigation.xml
 msgctxt "#31636"
 msgid "Sorry no results found!"
-msgstr ""
+msgstr "¡Lo siento, no se han encontrado resultados!"
 
 # /16x9/FileManager.xml
 # /16x9/Variables_Labels_Windows.xml
@@ -1673,55 +1673,55 @@ msgstr "Usar seleccionado como miniatura del episodio"
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31951"
 msgid "BBFC (UK)"
-msgstr ""
+msgstr "BBFC (Reino Unido)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31952"
 msgid "MPAA / TV-PG (US / others)"
-msgstr ""
+msgstr "MPAA / TV-PG (EEUU / otros)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31953"
 msgid "ACB (Australia)"
-msgstr ""
+msgstr "ACB (Australia)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31954"
 msgid "CHVRS / CBSC (Canada)"
-msgstr ""
+msgstr "CHVRS / CBSC (Canadá)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31955"
 msgid "DJCTQ (Brazil)"
-msgstr ""
+msgstr "DJCTQ (Brasil)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31956"
 msgid "EIRIN (Japan)"
-msgstr ""
+msgstr "EIRIN (Japón)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31957"
 msgid "FSK (Austria / Germany / Switzerland)"
-msgstr ""
+msgstr "FSK (Austria / Alemania / Suiza)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31958"
 msgid "IFCO (Ireland)"
-msgstr ""
+msgstr "IFCO (Irlanda)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31959"
 msgid "KIJKWIJZER (Luxembourg / Netherlands)"
-msgstr ""
+msgstr "KIJKWIJZER (Luxemburgo / Holanda)"
 
 # ########################################################################################################
 # ########################################################################################################
