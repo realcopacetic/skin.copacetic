@@ -5,15 +5,15 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2024-07-21 11:51+0000\n"
-"Last-Translator: \"Eric Z.\" <eric.zhu.ym@gmail.com>\n"
-"Language-Team: Chinese (China) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/zh_cn/>\n"
+"PO-Revision-Date: 2025-06-11 05:00+0000\n"
+"Last-Translator: wabisabi926 <liwenliang926@163.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/zh_Hans/>\n"
 "Language: zh_cn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.11.4\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -39,7 +39,7 @@ msgstr "广告牌"
 # Common
 msgctxt "#31002"
 msgid "Showcase"
-msgstr "展示柜"
+msgstr "陈列柜"
 
 # Common
 msgctxt "#31003"
@@ -64,7 +64,7 @@ msgstr "海报"
 # Common
 msgctxt "#31007"
 msgid "Fanart"
-msgstr "同人画"
+msgstr "背景图"
 
 # Common
 msgctxt "#31008"
@@ -74,17 +74,17 @@ msgstr "方块"
 # Common
 msgctxt "#31031"
 msgid "Spotlight"
-msgstr ""
+msgstr "推荐"
 
 # Common
 msgctxt "#31032"
 msgid "Simple"
-msgstr ""
+msgstr "简单"
 
 # Common
 msgctxt "#31033"
 msgid "Detailed"
-msgstr ""
+msgstr "详细"
 
 # /16x9/Templates_Dialogs.xml, /16x9/Notifications.xml
 msgctxt "#31009"
@@ -159,7 +159,7 @@ msgstr "标题和描述"
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31023"
 msgid "Clearlogos"
-msgstr "Clearlogos"
+msgstr "透明徽标"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31024"
@@ -472,17 +472,17 @@ msgstr "全屏"
 # /16x9/Templates_MyPVR.xml
 msgctxt "#31307"
 msgid "Go to"
-msgstr ""
+msgstr "转到"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31308"
 msgid "Timeshift"
-msgstr ""
+msgstr "时移"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31309"
 msgid "Jump to"
-msgstr ""
+msgstr "跳转到"
 
 # ########################################################################################################
 # ########################################################################################################
@@ -504,7 +504,7 @@ msgstr "菜单"
 # /16x9/Content_Settings.xml
 msgctxt "#31516"
 msgid "Choose the shortcuts you wish to add to your home and shutdown menus"
-msgstr ""
+msgstr "选择要添加到主菜单和关机菜单的快捷方式"
 
 # /16x9/Content_Settings.xml
 # /16x9/Content.xml
@@ -537,7 +537,7 @@ msgstr "小部件"
 # /16x9/Content_Settings.xml
 msgctxt "#31502"
 msgid "Build out your home screen with up to nine fully customisable widgets."
-msgstr "使用多达九个完全可定制的小部件构建您的主屏幕。"
+msgstr "使用多达九个完全可自定义的小部件构建您的主屏幕。"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31403"
@@ -620,22 +620,22 @@ msgstr "重置强调色"
 # /16x9/Content_Settings.xml
 msgctxt "#31720"
 msgid "Speed up animations and window transitions [BETA]"
-msgstr ""
+msgstr "加快动画和窗口过渡速度[测试]"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31820"
 msgid "Reduces the default animation times for transitioning between windows and visibility fades. Removes delays on certain animations and disabled others entirely."
-msgstr ""
+msgstr "缩短了窗口间过渡和可见性渐变的默认动画时间。取消某些动画的延迟，并完全禁用其他动画。"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31721"
 msgid "Disable all viewtype scroll animations [BETA]"
-msgstr ""
+msgstr "禁用所有视图类型的滚动动画 [测试]"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31821"
 msgid "Further speeds up browsing by setting the scrolltime for views to 0, removing the transitionary animations when navigating between listitems."
-msgstr ""
+msgstr "通过将视图的滚动时间设置为 0，在列表项之间导航时删除过渡动画，进一步加快浏览速度。"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31412"
@@ -660,7 +660,7 @@ msgstr "这些不会改变。"
 # /16x9/Content_Settings.xml
 msgctxt "#31421"
 msgid "Enable clearlogo cropper"
-msgstr "启用clearlogo裁剪器"
+msgstr "启用透明徽标裁剪器"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31521"
@@ -675,7 +675,7 @@ msgstr "清除缓存"
 # /16x9/Content_Settings.xml
 msgctxt "#31522"
 msgid "This will delete the cropped clearlogo cache. To prevent cropped clearlogos from being cached, make sure to disable the clearlogo cropping background service above."
-msgstr "这将清除裁剪后的clearlogo 缓存。为了防止缓存裁剪后的clearlogo，请确保禁用上面的clearlogo裁剪后台服务。"
+msgstr "这将清除裁剪后的透明徽标缓存。为了防止缓存裁剪后的透明徽标，请确保禁用上面的透明徽标裁剪后台服务。"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31423"
@@ -695,17 +695,17 @@ msgstr "调整颜色对比度阈值"
 # /16x9/Content_Settings.xml
 msgctxt "#31524"
 msgid "Adjust the amount of contrast required between the background and the flag colour. Raising the bottom threshold means only lighter colours will be accepted on dark backgrounds. Lowering the top threshold means only darker colours can be used on light backgrounds. Avoids dark flags on dark backgrounds or light flags on light backgrounds. Default range: 65 - 440."
-msgstr ""
+msgstr "调整背景与标志颜色之间所需的对比度。提高下限阈值意味着深色背景下仅接受更浅的颜色。降低上限阈值意味着浅色背景下仅允许使用更深的颜色。此功能可避免深色背景搭配深色标志或浅色背景搭配浅色标志的情况。默认范围：65 - 440。"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31428"
 msgid "Prefer keyart for poster views on info screens and dialogs"
-msgstr ""
+msgstr "首选主视觉海报用于信息屏幕和对话框上的海报视图"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31700"
 msgid "Prefer landscape art for fanart views on info screens and dialogs"
-msgstr ""
+msgstr "首选横版艺术作品作为信息屏幕和对话框中的背景图视图"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31417"
@@ -760,7 +760,7 @@ msgstr "将背景幻灯片艺术作品限制为..."
 # /16x9/Content_Settings.xml
 msgctxt "#31526"
 msgid "Choose to include only fanarts from the selected sections of your library in the background slideshow, or select a custom path, playlist or folder of images."
-msgstr ""
+msgstr "选择在背景幻灯片中仅包含来自库的选定部分的背景图，或选择自定义路径、播放列表或图像文件夹。"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31436"
@@ -785,57 +785,57 @@ msgstr "选择路径或播放列表..."
 # /16x9/Content_Settings.xml
 msgctxt "#31427"
 msgid "Background slideshow speed"
-msgstr ""
+msgstr "背景幻灯片放映速度"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31732"
 msgid "seconds"
-msgstr ""
+msgstr "秒钟"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31733"
 msgid "minutes"
-msgstr ""
+msgstr "分钟"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31527"
 msgid "Choose how quickly artwork in the slideshow should be refreshed. Default: 10 seconds"
-msgstr "选择幻灯片中图稿的刷新速度。默认值：10 秒"
+msgstr "选择幻灯片中艺术作品的刷新速度。默认值：10 秒"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31440"
 msgid "Background slideshow artwork brightness (%)"
-msgstr ""
+msgstr "背景幻灯片艺术作品亮度 (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31540"
 msgid "Choose the brightness of backgrounds displayed on the home screen and other windows such as Settings and Add-ons. Default: 33%"
-msgstr ""
+msgstr "选择主屏幕和其他窗口（如 \"设置 \"和 \"附加组件\"）上显示的背景亮度。默认值：33"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31487"
 msgid "Opacity of background panels (%)"
-msgstr ""
+msgstr "背景面板的不透明度 (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31587"
 msgid "Adjust the opacity of background panels that appear on top of artwork. Default: 75%"
-msgstr "调整出现在图稿顶部的背景面板的不透明度。默认：75%"
+msgstr "调整出现在艺术作品顶部的背景面板的不透明度。默认：75%"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31722"
 msgid "Info screen background artwork brightness (%)"
-msgstr ""
+msgstr "信息屏幕背景艺术作品亮度 (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31822"
 msgid "Choose the brightness of background artwork displayed when you bring up info for a list item. Default: 25%"
-msgstr ""
+msgstr "选择显示列表项信息时背景艺术作品的亮度。默认值：25"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31723"
 msgid "Library/Playback"
-msgstr ""
+msgstr "库/播放"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31719"
