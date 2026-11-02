@@ -5,15 +5,15 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2024-07-21 11:47+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2025-08-17 10:29+0000\n"
+"Last-Translator: guiral lacotte <beretta@betterave.net>\n"
 "Language-Team: French (France) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/fr_fr/>\n"
 "Language: fr_fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.12.2\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -74,17 +74,17 @@ msgstr "Carré"
 # Common
 msgctxt "#31031"
 msgid "Spotlight"
-msgstr ""
+msgstr "Recommandation"
 
 # Common
 msgctxt "#31032"
 msgid "Simple"
-msgstr ""
+msgstr "Simple"
 
 # Common
 msgctxt "#31033"
 msgid "Detailed"
-msgstr ""
+msgstr "Détaillé"
 
 # /16x9/Templates_Dialogs.xml, /16x9/Notifications.xml
 msgctxt "#31009"
@@ -472,17 +472,17 @@ msgstr "Plein écran"
 # /16x9/Templates_MyPVR.xml
 msgctxt "#31307"
 msgid "Go to"
-msgstr ""
+msgstr "Aller à"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31308"
 msgid "Timeshift"
-msgstr ""
+msgstr "Différé (timeshift)"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31309"
 msgid "Jump to"
-msgstr ""
+msgstr "Sauter à"
 
 # ########################################################################################################
 # ########################################################################################################
@@ -504,7 +504,7 @@ msgstr "Menus"
 # /16x9/Content_Settings.xml
 msgctxt "#31516"
 msgid "Choose the shortcuts you wish to add to your home and shutdown menus"
-msgstr ""
+msgstr "Choisissez les raccourcis que vous souhaitez ajouter à vos menus Accueil et Arrêt"
 
 # /16x9/Content_Settings.xml
 # /16x9/Content.xml
@@ -620,22 +620,22 @@ msgstr "Réinitialiser la couleur contraste"
 # /16x9/Content_Settings.xml
 msgctxt "#31720"
 msgid "Speed up animations and window transitions [BETA]"
-msgstr ""
+msgstr "Accélérer les animations et les transitions entre les fenêtres [BETA]"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31820"
 msgid "Reduces the default animation times for transitioning between windows and visibility fades. Removes delays on certain animations and disabled others entirely."
-msgstr ""
+msgstr "Réduit les durées d'animation par défaut pour les transitions entre les fenêtres et les fondus de visibilité. Supprime les délais sur certaines animations et en désactive d'autres complètement."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31721"
 msgid "Disable all viewtype scroll animations [BETA]"
-msgstr ""
+msgstr "Désactiver les animations de défilement pour tous les types d'affichage [BETA]"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31821"
 msgid "Further speeds up browsing by setting the scrolltime for views to 0, removing the transitionary animations when navigating between listitems."
-msgstr ""
+msgstr "Accélère encore la navigation en réglant le temps de défilement des vues sur 0, supprimant ainsi les animations de transition lors de la navigation entre les éléments de la liste."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31412"
@@ -700,12 +700,12 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31428"
 msgid "Prefer keyart for poster views on info screens and dialogs"
-msgstr ""
+msgstr "Favoriser l'illustration clé lors de l'affichage des écrans d'information et les boîtes de dialogue"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31700"
 msgid "Prefer landscape art for fanart views on info screens and dialogs"
-msgstr ""
+msgstr "Préférez les illustrations paysage pour les fanarts affichés dans les écrans d'informations et les boîtes de dialogue"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31417"
@@ -785,17 +785,17 @@ msgstr "Choisir un chemin ou une liste de lecture..."
 # /16x9/Content_Settings.xml
 msgctxt "#31427"
 msgid "Background slideshow speed"
-msgstr ""
+msgstr "Vitesse du défilement des arrière-plans"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31732"
 msgid "seconds"
-msgstr ""
+msgstr "secondes"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31733"
 msgid "minutes"
-msgstr ""
+msgstr "minutes"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31527"
@@ -805,7 +805,7 @@ msgstr "Choisissez la vitesse de rafraîchissement des illustrations du diaporam
 # /16x9/Content_Settings.xml
 msgctxt "#31440"
 msgid "Background slideshow artwork brightness (%)"
-msgstr ""
+msgstr "Luminosité des illustrations du diaporama d'arrière-plan (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31540"
