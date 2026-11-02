@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-11-15 18:12+0000\n"
+"PO-Revision-Date: 2026-06-11 03:16+0000\n"
 "Last-Translator: Oskari Lavinto <olavinto@protonmail.com>\n"
 "Language-Team: Finnish <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/fi_fi/>\n"
 "Language: fi_fi\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.1\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -64,7 +64,7 @@ msgstr "Julisteet"
 # Common
 msgctxt "#31007"
 msgid "Fanart"
-msgstr "Fanitaide"
+msgstr "Fanart"
 
 # Common
 msgctxt "#31008"
@@ -74,7 +74,7 @@ msgstr "Neliö"
 # Common
 msgctxt "#31031"
 msgid "Spotlight"
-msgstr ""
+msgstr "Näyteikkuna"
 
 # Common
 msgctxt "#31032"
@@ -286,7 +286,7 @@ msgstr ""
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31117"
 msgid "channels"
-msgstr ""
+msgstr "kanavaa"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31118"
@@ -477,7 +477,7 @@ msgstr ""
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31308"
 msgid "Timeshift"
-msgstr ""
+msgstr "Ajansiirto"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31309"
@@ -705,7 +705,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31700"
 msgid "Prefer landscape art for fanart views on info screens and dialogs"
-msgstr ""
+msgstr "Suosi landscape-kuvia info-näyttöjen ja dialogien fanart-nakymissä"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31417"
@@ -760,7 +760,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31526"
 msgid "Choose to include only fanarts from the selected sections of your library in the background slideshow, or select a custom path, playlist or folder of images."
-msgstr ""
+msgstr "Valitse sisällyttääksesi taustan kuvaesitykseen vain valittujen kirjasto-osioiden fanart-kuvat tai valitse oma sijainti, toistolista, tai kuvakansio."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31436"
@@ -790,12 +790,12 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31732"
 msgid "seconds"
-msgstr ""
+msgstr "sekuntia"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31733"
 msgid "minutes"
-msgstr ""
+msgstr "minuuttia"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31527"
@@ -955,12 +955,12 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31724"
 msgid "Clock"
-msgstr ""
+msgstr "Kello"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31725"
 msgid "None"
-msgstr ""
+msgstr "Ei mitään"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31726"
@@ -1046,7 +1046,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31499"
 msgid "Prefer landscape art for fanart views"
-msgstr ""
+msgstr "Suosi fanart-näkymissä landscape-kuvia"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31599"
@@ -1056,7 +1056,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31477"
 msgid "Prefer thumbnails for episodes instead of tv show fanart"
-msgstr ""
+msgstr "Suosi jaksojen pienoiskuvia sarjan fanart-kuvien sijaan"
 
 # Views
 # /16x9/Content_Settings.xml
@@ -1300,12 +1300,12 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31829"
 msgid "Large"
-msgstr ""
+msgstr "Suuri"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31830"
 msgid "Small"
-msgstr ""
+msgstr "Pieni"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31482"
@@ -1320,7 +1320,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31415"
 msgid "Horizontal"
-msgstr ""
+msgstr "Vaaka"
 
 # Experiments
 # /16x9/Content_Settings.xml

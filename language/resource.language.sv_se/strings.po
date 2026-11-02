@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2025-06-11 15:36+0000\n"
+"PO-Revision-Date: 2026-11-02 22:25+0000\n"
 "Last-Translator: Daniel Nylander <daniel@danielnylander.se>\n"
 "Language-Team: Swedish <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/sv_se/>\n"
 "Language: sv_se\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11.4\n"
+"X-Generator: Weblate 2026.11\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -37,13 +37,11 @@ msgid "Billboard"
 msgstr "Affischtavla"
 
 # Common
-#, fuzzy
 msgctxt "#31002"
 msgid "Showcase"
 msgstr "Visningsfönster"
 
 # Common
-#, fuzzy
 msgctxt "#31003"
 msgid "Strip"
 msgstr "Band"
@@ -74,10 +72,9 @@ msgid "Square"
 msgstr "Fyrkant"
 
 # Common
-#, fuzzy
 msgctxt "#31031"
 msgid "Spotlight"
-msgstr "Strålkastare"
+msgstr "Spotlight"
 
 # Common
 msgctxt "#31032"
@@ -195,7 +192,6 @@ msgid "Overlay"
 msgstr "Överlägg"
 
 # /16x9/Content_Viewtype_Options_Grid.xml
-#, fuzzy
 msgctxt "#31030"
 msgid "Breadcrumb"
 msgstr "Brödsmulor"
@@ -440,7 +436,7 @@ msgstr "Med"
 # /16x9/Components_OSD.xml
 msgctxt "#31300"
 msgid "Rated"
-msgstr "Betygsatt"
+msgstr "Klassning"
 
 # /16x9/Content_OSD.xml
 # /16x9/Notifications.xml
@@ -667,10 +663,9 @@ msgid "Enable clearlogo cropper"
 msgstr "Aktivera clearlogo-beskärare"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31521"
 msgid "Clearlogos cached in Kodi's texture library will be cropped as they are required. Cropped versions are saved to a separate cache. Once a cropped clearlogo is cached, performance impact should be minimal. No changes are made to the original artwork. This process is run by Copacetic as a background service. Disable to improve performance."
-msgstr "Clearlogos som sparats i Kodis texturbibliotek beskärs när de behövs. Beskurna versioner sparas i en separat cache. När en beskuren clearlogo har cachelagrats bör prestandapåverkan vara minimal. Inga ändringar görs i det ursprungliga konstverket. Denna process körs av Copacetic som en bakgrundstjänst. Inaktivera för att förbättra prestandan."
+msgstr "Clearlogotyper som sparats i Kodis texturbibliotek beskärs när de behövs. De beskurna versionerna sparas i en separat cache. När en beskuren clearlogotyp har cachats bör prestandapåverkan vara minimal. Inga ändringar görs i den ursprungliga bilden. Processen körs av Copacetic som en bakgrundstjänst. Inaktivera den för bättre prestanda."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31422"
@@ -678,10 +673,9 @@ msgid "Clear cache"
 msgstr "Rensa cache"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31522"
 msgid "This will delete the cropped clearlogo cache. To prevent cropped clearlogos from being cached, make sure to disable the clearlogo cropping background service above."
-msgstr "Detta kommer att radera den beskurna clearlogo-cachen. För att förhindra att beskurna clearlogos cachelagras, se till att inaktivera bakgrundstjänsten för beskärning av clearlogo ovan."
+msgstr "Detta tar bort cachen med beskurna clearlogotyper. För att förhindra att beskurna clearlogotyper cachas ska du inaktivera bakgrundstjänsten för beskärning av clearlogotyper ovan."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31423"
@@ -689,10 +683,9 @@ msgid "Colourise media flags"
 msgstr "Färglägg medieflaggor"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31523"
 msgid "Media flags are colourised using the dominant colour from the processed clearlogo. The dominant colour will be used as long as there is enough contrast with the current background colour. You can adjust the contrast thresholds for dark and light backgrounds below."
-msgstr "Mediaflaggorna färgläggs med hjälp av den dominerande färgen från den bearbetade clearlogon. Den dominerande färgen används så länge det finns tillräckligt med kontrast mot den aktuella bakgrundsfärgen. Du kan justera tröskelvärdena för kontrast för mörka och ljusa bakgrunder nedan."
+msgstr "Medieflaggor färgsätts med den dominerande färgen från den bearbetade clearlogotypen. Den dominerande färgen används så länge kontrasten mot den aktuella bakgrundsfärgen är tillräcklig. Du kan justera kontrasttrösklarna för mörka och ljusa bakgrunder nedan."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31424"
@@ -700,10 +693,9 @@ msgid "Adjust colour contrast thresholds"
 msgstr "Justera tröskelvärdena för färgkontrast"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31524"
 msgid "Adjust the amount of contrast required between the background and the flag colour. Raising the bottom threshold means only lighter colours will be accepted on dark backgrounds. Lowering the top threshold means only darker colours can be used on light backgrounds. Avoids dark flags on dark backgrounds or light flags on light backgrounds. Default range: 65 - 440."
-msgstr "Justera hur stor kontrast som krävs mellan bakgrunden och flaggans färg. Om du höjer den nedre tröskeln accepteras endast ljusare färger på mörka bakgrunder. Om du sänker den övre tröskeln kan endast mörkare färger användas på ljusa bakgrunder. Undviker mörka flaggor på mörka bakgrunder eller ljusa flaggor på ljusa bakgrunder. Standardintervall: 65 - 440."
+msgstr "Justera hur stor kontrast som krävs mellan bakgrunden och flaggans färg. Om du höjer den nedre tröskeln accepteras endast ljusare färger på mörka bakgrunder. Om du sänker den övre tröskeln kan endast mörkare färger användas på ljusa bakgrunder. Undviker mörka flaggor på mörka bakgrunder eller ljusa flaggor på ljusa bakgrunder. Standardintervall: 65–440."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31428"
@@ -818,7 +810,7 @@ msgstr "Ljusstyrka för bakgrundsbildspel (%)"
 # /16x9/Content_Settings.xml
 msgctxt "#31540"
 msgid "Choose the brightness of backgrounds displayed on the home screen and other windows such as Settings and Add-ons. Default: 33%"
-msgstr "Välj ljusstyrka för bakgrunder som visas på hemskärmen och i andra fönster, t.ex. Inställningar och Tillägg. Standard: 33%"
+msgstr "Välj ljusstyrka för bakgrunder som visas på hemskärmen och i andra fönster, t.ex. Inställningar och Tillägg. Standard: 33 %"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31487"
@@ -828,7 +820,7 @@ msgstr "Bakgrundspanelernas opacitet (%)"
 # /16x9/Content_Settings.xml
 msgctxt "#31587"
 msgid "Adjust the opacity of background panels that appear on top of artwork. Default: 75%"
-msgstr "Justera opaciteten för bakgrundspaneler som visas ovanpå bilder. Standard: 75%"
+msgstr "Justera opaciteten för bakgrundspaneler som visas ovanpå bilder. Standard: 75 %"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31722"
@@ -836,10 +828,9 @@ msgid "Info screen background artwork brightness (%)"
 msgstr "Ljusstyrka för bakgrundsbilder på infoskärmen (%)"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31822"
 msgid "Choose the brightness of background artwork displayed when you bring up info for a list item. Default: 25%"
-msgstr "Välj ljusstyrkan på bakgrundsbilderna som visas när du tar fram information om ett listobjekt. Standard: 25%"
+msgstr "Välj ljusstyrkan på bakgrundsbilderna som visas när du tar fram information om ett listobjekt. Standard: 25 %"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31723"
@@ -847,28 +838,24 @@ msgid "Library/Playback"
 msgstr "Bibliotek/uppspelning"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31719"
 msgid "OSD background brightness during video playback (%)"
 msgstr "Ljusstyrka för OSD-bakgrund under videouppspelning (%)"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31819"
 msgid "Adjust the brightness of videos when OSD controls or settings screens are visible on top. Default: 25%"
-msgstr "Justera ljusstyrkan på videoklipp när OSD-kontroller eller inställningsskärmar är synliga ovanpå. Standard: 25%"
+msgstr "Justera ljusstyrkan på videoklipp när OSD-kontroller eller inställningsskärmar är synliga ovanpå. Standard: 25 %"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31495"
 msgid "Show the name of the current displayed background"
 msgstr "Visa namnet på den bakgrund som visas för tillfället"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31433"
 msgid "Override home background with global slideshow"
-msgstr "Åsidosätt hemmabakgrund med globalt bildspel"
+msgstr "Åsidosätt hemmenyns bakgrund med globalt bildspel"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31533"
@@ -876,37 +863,31 @@ msgid "Use the selected global slideshow on the homescreen instead of local or s
 msgstr "Använd det valda globala bildspelet på hemskärmen i stället för lokala eller skin.shortcuts-bildspel"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31429"
 msgid "Enable widgets on the home screen"
 msgstr "Aktivera widgetar på hemskärmen"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31529"
 msgid "Add widgets to your homescreen. To configure, go to the Widgets tab in the left menu. Choose from preset widgets, such as 'Continue watching', 'Next up' and 'Liked songs', or configure your own using any plugin source. Then select the view and display type you want to use for each widget. For custom widgets, you can also set the name, sort method and limit."
-msgstr "Lägg till widgetar på din startskärm. För att konfigurera, gå till fliken Widgets i menyn till vänster. Välj bland förinställda widgetar, som \"Fortsätt titta\", \"Nästa\" och \"Gillade låtar\", eller konfigurera dina egna med hjälp av en plugin-källa. Välj sedan den vy och visningstyp som du vill använda för varje widget. För anpassade widgetar kan du också ange namn, sorteringsmetod och gräns."
+msgstr "Lägg till widgetar på din startskärm. För att konfigurera, gå till fliken Widgetar i menyn till vänster. Välj bland förinställda widgetar, som \"Fortsätt titta\", \"Nästa\" och \"Gillade låtar\", eller konfigurera dina egna med hjälp av en tilläggskälla. Välj sedan den vy och visningstyp som du vill använda för varje widget. För anpassade widgetar kan du också ange namn, sorteringsmetod och gräns."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31430"
 msgid "Reset home screen widgets"
-msgstr "Återställ widgetar på startskärmen"
+msgstr "Återställ widgetar på hemskärmen"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31530"
 msgid "Reset home widgets to Copacetic defaults: 1. Continue watching 2. Next up 3. Latest movies 4. Latest TV shows"
-msgstr "Återställ hemwidgets till Copacetic-standardvärden: 1. Fortsätt titta 2. Nästa 3. Senaste filmer 4. Senaste TV-programmen"
+msgstr "Återställ hemwidgetar till Copacetics standardvärden: 1. Fortsätt titta 2. Next up 3. Senaste filmer 4. Senaste TV-serier"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31431"
 msgid "Are you sure you want to reset all home widgets back to default?"
-msgstr "Är du säker på att du vill återställa alla hemwidgetar till standardinställningarna?"
+msgstr "Är du säker på att du vill återställa alla hemwidgetar till standardinställningar?"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31704"
 msgid "Enable global search on the home screen"
 msgstr "Aktivera global sökning på hemskärmen"
@@ -917,19 +898,16 @@ msgid "Configure global search"
 msgstr "Konfigurera global sökning"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31706"
 msgid "Enable global search for this media type"
 msgstr "Aktivera global sökning för denna medietyp"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31707"
 msgid "Include 'plot' field in this search"
-msgstr "Inkludera fältet \"plot\" i denna sökning"
+msgstr "Inkludera fältet \"handling\" i denna sökning"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31708"
 msgid "Include 'tag' field in this search"
 msgstr "Inkludera fältet \"tagg\" i denna sökning"
@@ -965,16 +943,14 @@ msgid "Clearlogos will be displayed as part of the screensaver when they are ava
 msgstr "Clearlogos kommer att visas som en del av skärmsläckaren när de är tillgängliga."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31444"
 msgid "Furniture to include"
-msgstr "Möblerna ska omfatta"
+msgstr "Inredning att inkludera"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31544"
 msgid "Choose the furniture you wish to show in the top-right corner of the home screen. Note that for weather information to be included, you must first install a weather add-on and ensure it is enabled under Settings > Services > Weather."
-msgstr "Välj den möbel som du vill visa i det övre högra hörnet på startskärmen. Observera att för att väderinformation ska inkluderas måste du först installera ett vädertillägg och se till att det är aktiverat under Inställningar > Tjänster > Väder."
+msgstr "Välj den inredning som ska visas i det övre högra hörnet av hemskärmen. För att inkludera väderinformation måste du först installera ett vädertillägg och kontrollera att det är aktiverat under Inställningar > Tjänster > Väder."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31724"
@@ -997,10 +973,9 @@ msgid "Clock, date and weather"
 msgstr "Klocka, datum och väder"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31728"
 msgid "Make persistent across entire home screen, including widgets"
-msgstr "Gör den beständig över hela startskärmen, inklusive widgetar"
+msgstr "Gör den beständig över hela hemskärmen, inklusive widgetar"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31729"
@@ -1034,64 +1009,54 @@ msgid "Movement"
 msgstr "Rörelse"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31496"
 msgid "Spotlight content with auto scroll"
-msgstr "Spotlight-innehåll med automatisk scrollning"
+msgstr "Spotlight-innehåll med automatisk rullning"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31596"
 msgid "Widget will move forward one place every 10 seconds while system is idle. When combined with trailer autoplay option below to allow for each item's trailer to be played automatically as soon as the previous trailer is finished while system is idle."
-msgstr "Widgeten flyttas framåt en plats var 10:e sekund när systemet är inaktivt. I kombination med alternativet för automatisk uppspelning av trailer nedan kan varje artikels trailer spelas upp automatiskt så snart den föregående trailern är klar medan systemet är inaktivt."
+msgstr "Widgeten flyttas ett steg framåt var tionde sekund när systemet är inaktivt. Tillsammans med alternativet för automatisk traileruppspelning nedan kan varje objekts trailer spelas upp automatiskt när föregående trailer har avslutats medan systemet är inaktivt."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31467"
 msgid "Automatically play trailers for movies or tv shows in this widget"
 msgstr "Spela automatiskt upp trailers för filmer eller tv-serier i denna widget"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31567"
 msgid "Trailers will be played back automatically from any widgets showing movies or tv shows. Enable 'Spotlight content with auto scroll' option above to create a dynamic playlist of trailers for all items in the widget. Set delay in seconds before trailer playback starts under Extras > Trailer autoplay"
-msgstr "Trailers kommer att spelas upp automatiskt från alla widgets som visar filmer eller tv-program. Aktivera alternativet \"Spotlight content with auto scroll\" ovan för att skapa en dynamisk spellista med trailers för alla objekt i widgeten. Ställ in fördröjning i sekunder innan trailern börjar spelas upp under Extras > Trailer autoplay"
+msgstr "Trailrar spelas upp automatiskt från widgetar som visar filmer eller tv-serier. Aktivera alternativet ”Spotlight-innehåll med automatisk rullning” ovan för att skapa en dynamisk trailerlista för alla objekt i widgeten. Ange fördröjningen i sekunder före traileruppspelning under Extrafunktioner > Automatisk traileruppspelning."
 
 # /16x9/Variables_Labels_Media.xml
-#, fuzzy
 msgctxt "#31476"
 msgid "Enable clearlogos"
 msgstr "Aktivera clearlogos"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31498"
 msgid "Prefer keyart for poster views"
-msgstr "Föredrar keyart för affischvisningar"
+msgstr "Föredra keyart för affischvisningar"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31598"
 msgid "Remember 'keyart' is a custom art type. To ensure it is fetched locally or remotely by scrapers, make sure 'keyart' is included in your art type whitelists for movies and / or tv shows. You can do this by choosing 'Recommended Kodi Settings' under Copacetic > General, or by navigating to Settings > Media > Videos > Artwork."
-msgstr "Kom ihåg att \"keyart\" är en anpassad konsttyp. För att säkerställa att den hämtas lokalt eller på distans av scrapers, se till att \"keyart\" ingår i dina vitlistor för konsttyper för filmer och / eller tv-program. Du kan göra detta genom att välja \"Rekommenderade Kodi-inställningar\" under Copacetic > Allmänt, eller genom att navigera till Inställningar > Media > Videor > Konstverk."
+msgstr "Kom ihåg att ”keyart” är en anpassad bildtyp. För att säkerställa att den hämtas lokalt eller från nätet av skrapor måste ”keyart” ingå i dina tillåtelselistor för bildtyper för filmer och/eller tv-serier. Du kan göra det genom att välja ”Rekommenderade Kodi-inställningar” under Copacetic > Allmänt eller gå till Inställningar > Media > Videor > Bilder."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31499"
 msgid "Prefer landscape art for fanart views"
-msgstr "Föredrar landskapskonst för fanart-vyer"
+msgstr "Föredra liggande bilder i fanartvyer"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31599"
 msgid "Remember 'landscape' is a custom art type. To ensure it is fetched locally or remotely by scrapers, make sure 'landscape' is included in your art type whitelists for movies and / or tv shows. You can do this by choosing 'Recommended Kodi Settings' under Copacetic > General, or by navigating to Settings > Media > Videos > Artwork."
-msgstr "Kom ihåg att \"landscape\" är en anpassad konsttyp. För att säkerställa att den hämtas lokalt eller på distans av scrapers, se till att \"landscape\" ingår i dina vitlistor för konsttyper för filmer och / eller tv-program. Du kan göra detta genom att välja \"Rekommenderade Kodi-inställningar\" under Copacetic > Allmänt, eller genom att navigera till Inställningar > Media > Videor > Konstverk."
+msgstr "Kom ihåg att ”landscape” är en anpassad bildtyp. För att säkerställa att den hämtas lokalt eller från nätet av skrapor måste ”landscape” ingå i dina tillåtelselistor för bildtyper för filmer och/eller tv-serier. Du kan göra det genom att välja ”Rekommenderade Kodi-inställningar” under Copacetic > Allmänt eller gå till Inställningar > Media > Videor > Bilder."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31477"
 msgid "Prefer thumbnails for episodes instead of tv show fanart"
-msgstr "Föredrar miniatyrbilder för avsnitt istället för tv-serie fanart"
+msgstr "Föredra miniatyrbilder för avsnitt istället för fanart för tv-serie"
 
 # Views
 # /16x9/Content_Settings.xml
@@ -1100,22 +1065,19 @@ msgid "Kiosk mode"
 msgstr "Kioskläge"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31575"
 msgid "When kiosk mode is enabled, all view customisation options in the hidden menu will be removed so no further changes can be made."
 msgstr "När kioskläget är aktiverat kommer alla alternativ för anpassning av vyn i den dolda menyn att tas bort så att inga ytterligare ändringar kan göras."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31486"
 msgid "Disable hidden options menu"
 msgstr "Inaktivera menyn för dolda alternativ"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31586"
 msgid "With koisk mode enabled, you have the option to completely disable the hidden options menu. Warning: This will limit your ability to switch between views, change sort method, filter or search."
-msgstr "När koisk-läget är aktiverat har du möjlighet att helt inaktivera menyn med dolda alternativ. Varning för detta: Detta begränsar dina möjligheter att växla mellan vyer, ändra sorteringsmetod, filtrera eller söka."
+msgstr "När kioskläget är aktiverat kan du helt inaktivera menyn med dolda alternativ. Varning: Då begränsas möjligheten att växla mellan vyer, ändra sorteringsmetod, filtrera eller söka."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31488"
@@ -1139,7 +1101,6 @@ msgid "Enable view for video and music windows"
 msgstr "Aktivera vy för video- och musikfönster"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31546"
 msgid "Choose which windows to enable for each of the four additional Copacetic views. Keep any views you don't use disabled to speed up loading when a new media window is opened in Kodi."
 msgstr "Välj vilka fönster som ska aktiveras för var och en av de fyra extra Copacetic-vyerna. Låt alla vyer som du inte använder vara inaktiverade för att påskynda laddningen när ett nytt mediefönster öppnas i Kodi."
@@ -1150,46 +1111,39 @@ msgid "Enable scrolling on long titles instead of truncation (...)"
 msgstr "Aktivera rullning för långa titlar istället för avkortning (...)"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31447"
 msgid "Enable view for add-on and program windows"
 msgstr "Aktivera vy för tilläggs- och programfönster"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31734"
 msgid "Enable view for favourites browser"
-msgstr "Aktivera visning för favoritwebbläsare"
+msgstr "Aktivera vy i favoritbläddraren"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31448"
 msgid "Enable view for pictures window"
 msgstr "Aktivera vy för bildfönster"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31715"
 msgid "Item artwork size and orientation"
-msgstr "Storlek och orientering på artikelns illustration"
+msgstr "Storlek och orientering för objektbilder"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31815"
 msgid "Choose how big you wish items to be presented in Grid panel views and whether you wish to scroll vertically or horizontally. For Fanart views, 'Horizontal large' displays 3 items per row and 'Horizontal small' displays 4. For Poster and Square views, 'Horizontal large' displays 5 items per row and 'Horizontal small' displays 7. 'Vertical' displays two rows at all times."
-msgstr "Välj hur stora du vill att objekten ska vara i Grid-panelen och om du vill skrolla vertikalt eller horisontellt. För Fanart-vyer visar \"Horisontell stor\" 3 objekt per rad och \"Horisontell liten\" 4. I vyerna Poster och Square visar \"Horizontal large\" 5 objekt per rad och \"Horizontal small\" 7. \"Vertical\" visar två rader hela tiden."
+msgstr "Välj hur stora objekt ska visas i rutnätsvyer och om du vill rulla vertikalt eller horisontellt. I fanartvyer visar ”Horisontell stor” tre objekt per rad och ”Horisontell liten” fyra. I affisch- och kvadratvyer visar ”Horisontell stor” fem objekt per rad och ”Horisontell liten” sju. ”Vertikal” visar alltid två rader."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31449"
 msgid "Dim artwork for watched items or disabled add-ons"
-msgstr "Dimma illustrationer för bevakade objekt eller inaktiverade tillägg"
+msgstr "Dimma bilder för sedda objekt eller inaktiverade tillägg"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31450"
 msgid "Checkmarks for watched items or enabled add-ons"
-msgstr "Bockar för bevakade objekt eller aktiverade tillägg"
+msgstr "Bockar för sedda objekt eller aktiverade tillägg"
 
 # Customisations
 # /16x9/Content_Settings.xml
@@ -1198,10 +1152,9 @@ msgid "Show unwatched episodes count"
 msgstr "Visa antalet osedda avsnitt"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31551"
 msgid "Display the total number of unwatched episodes for a tv show or season on top of the progress bar."
-msgstr "Visa det totala antalet otittade avsnitt för ett tv-program eller en säsong ovanpå förloppsindikatorn."
+msgstr "Visa det totala antalet otittade avsnitt för en tv-serie eller en säsong ovanpå förloppsindikatorn."
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
@@ -1220,49 +1173,41 @@ msgid "Scroll by sort letter"
 msgstr "Rulla efter sorteringsbokstav"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31553"
 msgid "When enabled, press down on horizontal scrollbars and right on vertical scrollbars to scroll by sort letter/number. This is dependent on the sort method currently selected. You can scroll by Name, File, Artist, Artist/Year, Album, Title, Original title, Rating, User rating, Play count, Number of discs, Duration, Appearances."
 msgstr "När funktionen är aktiverad kan du trycka nedåt på de horisontella rullningslisterna och höger på de vertikala rullningslisterna för att bläddra efter sorteringsbokstav/nummer. Detta beror på vilken sorteringsmetod som är vald för tillfället. Du kan bläddra efter Namn, Fil, Artist, Artist/år, Album, Titel, Originaltitel, Betyg, Användarbetyg, Spelningsantal, Antal skivor, Varaktighet, Förekomster."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31454"
 msgid "Liked song rating threshold"
-msgstr "Tröskelvärde för betyg för gillad låt"
+msgstr "Tröskelvärde för gillad låt"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31716"
 msgid "Prefer white to grey text colour for plot in Showcase and Strip views"
-msgstr "Föredrar vit till grå textfärg för tomt i Showcase- och Strip-vyer"
+msgstr "Föredra vit framför grå text för handling i Showcase- och Strip-vyer"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31554"
 msgid "Overlay a binary user rating system (liked or not) on top of standard song user ratings. User ratings equal to or above this threshold are 'liked'. You can 'like' (set a user rating equivalent to the threshold) or 'unlike' (clear user rating) a song via the context menu, or embedded music player if enabled under Extras. The threshold will also be used by the 'Liked songs' widget. Set to 'Off' to disable."
-msgstr "Lägg ett binärt användarbetygssystem (gillat eller inte) ovanpå standardanvändarbetyg för låtar. Användarbetyg som är lika med eller högre än detta tröskelvärde \"gillas\". Du kan \"gilla\" (ange ett användarbetyg som motsvarar tröskelvärdet) eller \"ogilla\" (ta bort användarbetyget) en låt via snabbmenyn eller den inbäddade musikspelaren om den är aktiverad under Extrafunktioner. Tröskelvärdet kommer också att användas av widgeten \"Gillade låtar\". Ställ in på \"Av\" för att inaktivera."
+msgstr "Lägg ett binärt användarbetygssystem (gillad eller inte) ovanpå vanliga användarbetyg för låtar. Användarbetyg som är lika med eller högre än detta tröskelvärde räknas som ”gillade”. Du kan ”gilla” en låt genom att ange ett användarbetyg som motsvarar tröskelvärdet eller ”ogilla” den genom att rensa användarbetyget, via snabbmenyn eller den inbäddade musikspelaren om den är aktiverad under Extrafunktioner. Tröskelvärdet används också av widgeten ”Gillade låtar”. Ställ in på ”Av” för att inaktivera."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31484"
 msgid "Info screens"
 msgstr "Infoskärmar"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31703"
 msgid "Use TMDbHelper for info screen widgets instead of library content"
-msgstr "Använd TMDbHelper för widgetar på infoskärmen istället för biblioteksinnehåll"
+msgstr "Använd TMDb Helper för widgetar på informationsskärmen i stället för biblioteksinnehåll"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31803"
 msgid "As long as this plugin is enabled on your system, it will be used to populate info screen widgets including actor and director credits, similar movies/shows and more."
-msgstr "Så länge detta plugin är aktiverat på ditt system kommer det att användas för att fylla i widgets för informationsskärmen, inklusive skådespelare och regissörskrediter, liknande filmer / serier och mer."
+msgstr "Så länge tillägget är aktiverat i systemet används det för att fylla widgetar på informationsskärmen, bland annat med uppgifter om skådespelare och regissörer, liknande filmer och serier samt annat."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31485"
 msgid "Disable star ratings"
 msgstr "Inaktivera stjärnbetyg"
@@ -1273,19 +1218,16 @@ msgid "Video player"
 msgstr "Videospelare"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31711"
 msgid "Limit quick subtitle switcher in video OSD to a preferred language"
-msgstr "Begränsa snabbväxlaren för undertexter i video OSD till ett önskat språk"
+msgstr "Begränsa snabbväxlaren för undertexter i video-OSD till ett önskat språk"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31811"
 msgid "Enter the three-letter code of your preferred language, e.g. 'eng' for English. If subtitles in this language are available for the currently playing video, the quick subtitle switcher will toggle on/off for the first subtitle stream in this language, ignoring other streams. If the language is not available, it will toggle between all streams as normal."
-msgstr "Ange koden med tre bokstäver för det språk du vill använda, t.ex. \"eng\" för engelska. Om undertexter på det här språket är tillgängliga för den video som spelas upp kommer snabbväxlaren för undertexter att växla mellan på/av för den första undertextströmmen på det här språket och ignorera andra strömmar. Om språket inte är tillgängligt växlar den mellan alla strömmar som vanligt."
+msgstr "Ange språkkoden med tre bokstäver för ditt föredragna språk, till exempel ”eng” för engelska. Om undertexter på språket är tillgängliga för videon som spelas upp växlar snabbväxlaren för undertexter på eller av den första undertextströmmen på språket och ignorerar andra strömmar. Om språket inte är tillgängligt växlar den mellan alla strömmar som vanligt."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31713"
 msgid "Disable video information being displayed at the start of playback"
 msgstr "Inaktivera visning av videoinformation i början av uppspelningen"
@@ -1301,49 +1243,41 @@ msgid "This disables the label that appears upon video playback showing informat
 msgstr "Detta inaktiverar etiketten som visas vid videouppspelning och som innehåller information om videon, inklusive sluttid, upplösning och åldersbedömning."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31490"
 msgid "Enable Up Next widget during playback"
 msgstr "Aktivera widgeten Up Next under uppspelning"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31590"
 msgid "Up Next is a third-party addon that enabled Netflix-style autoplay of the next episode with an 'Are you still watching' prompt. Selecting this option will install and enable the addon, which can be configured under Add-ons."
-msgstr "Up Next är ett tillägg från tredje part som aktiverade autoplay av nästa avsnitt i Netflix-stil med en \"Tittar du fortfarande\"-prompt. Om du väljer det här alternativet installeras och aktiveras tillägget, som kan konfigureras under Tillägg."
+msgstr "Up Next är ett tredjepartstillägg som aktiverar automatisk uppspelning av nästa avsnitt i Netflix-stil med frågan ”Tittar du fortfarande?”. När du väljer alternativet installeras och aktiveras tillägget. Det kan konfigureras under Tillägg."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31491"
 msgid "Choose artwork type to display in Up Next widget"
-msgstr "Välj typ av omslag som ska visas i widgeten Up Next"
+msgstr "Välj bildtyp som ska visas i widgeten Up Next"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31591"
 msgid "Choose between different layout options for the Up Next widget that will appear on the screen as an episode concludes."
 msgstr "Välj mellan olika layoutalternativ för widgeten Up Next som visas på skärmen när ett avsnitt avslutas."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31455"
 msgid "Instantly hide progress bar on pause screen"
 msgstr "Dölj omedelbart förloppsindikatorn på pausskärmen"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31555"
 msgid "Subtitles will not be obscured when video playback is paused."
 msgstr "Undertexter kommer inte att skymmas när videouppspelningen pausas."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31456"
 msgid "Show info on pause screen"
 msgstr "Visa information på pausskärmen"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31556"
 msgid "Video information, which can be displayed during fullscreen video playback by pressing <i>, will also be displayed automatically when the video is paused."
 msgstr "Videoinformation, som kan visas under videouppspelning i helskärm genom att trycka på <i>, visas också automatiskt när videon pausas."
@@ -1405,34 +1339,29 @@ msgid "Enable 'Fanart' display layout for Grid view in Pictures window"
 msgstr "Aktivera visningslayout för \"Fanart\" för rutnätsvy i Bilder-fönstret"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31571"
 msgid "Enables Grid view fanart layout for the pictures window. Because pictures can take any aspect ratio, it is recommended to stick to square layouts for the optimal experience. Keep disabled to improve performance."
-msgstr "Aktiverar rutnätsvy fanart layout för bildfönstret. Eftersom bilder kan ha vilket bildförhållande som helst rekommenderas det att hålla sig till kvadratiska layouter för optimal upplevelse. Håll inaktiverad för att förbättra prestandan."
+msgstr "Aktiverar fanartlayout i rutnätsvy för bildfönstret. Eftersom bilder kan ha vilket bildförhållande som helst rekommenderas kvadratiska layouter för bästa resultat. Låt vara inaktiverat för bättre prestanda."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31714"
 msgid "Enable landscape art for List and Billboard view backgrounds"
-msgstr "Aktivera landskapsbilder för bakgrunder i List- och Billboard-vyerna"
+msgstr "Aktivera liggande bilder för bakgrunder i list- och billboardvyer"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31712"
 msgid "Prefer landscape art to fanart for backgrounds in List and Billboard views"
-msgstr "Föredrar landskapskonst framför fanart för bakgrunder i List- och Billboard-vyer"
+msgstr "Föredra liggande bilder framför fanart för bakgrunder i list- och billboardvyer"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31812"
 msgid "Will allow landscape artwork to be displayed instead of fanarts if landscape art is preferred - even on these two views where logos on the landscape artwork may interfere with readability of the details presented in these views."
-msgstr "Kommer att tillåta att landskapsbilder visas istället för fanarts om landskapsbilder föredras - även på dessa två vyer där logotyper på landskapsbilderna kan störa läsbarheten av de detaljer som presenteras i dessa vyer."
+msgstr "Tillåter att liggande bilder visas i stället för fanart när liggande bilder föredras, även i dessa två vyer där logotyper i bilderna kan försämra läsbarheten hos informationen."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31702"
 msgid "Move to parent directory automatically if container is empty"
-msgstr "Flytta till överordnad katalog automatiskt om behållaren är tom"
+msgstr "Gå automatiskt till överordnad katalog om behållaren är tom"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31802"
@@ -1446,16 +1375,14 @@ msgid "Embedded lists"
 msgstr "Inbäddade listor"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31458"
 msgid "Enable embedded lists for sets, tv shows and artists"
-msgstr "Aktivera inbäddade listor för uppsättningar, tv-serier och artister"
+msgstr "Aktivera inbäddade listor för samlingar, tv-serier och artister"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31558"
 msgid "Enrich video and music views by enabling embedded secondary lists that allow you to scroll through the movies in a set, the seasons in a tv show and the albums by an artist without clicking into an item. Instead, just press down on a listitem in horizontal views or left in vertical views to navigate the secondary list."
-msgstr "Berika video- och musikvyer genom att aktivera inbäddade sekundära listor som gör att du kan bläddra igenom filmerna i en uppsättning, säsongerna i en tv-serie och albumen av en artist utan att klicka på ett objekt. Istället trycker du bara nedåt på ett listobjekt i horisontella vyer eller vänster i vertikala vyer för att navigera i den sekundära listan."
+msgstr "Berika video- och musikvyer genom att aktivera inbäddade sekundära listor som låter dig bläddra bland filmerna i en samling, säsongerna i en tv-serie och en artists album utan att öppna ett objekt. Tryck i stället nedåt på ett listobjekt i horisontella vyer eller åt vänster i vertikala vyer för att navigera i den sekundära listan."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31459"
@@ -1463,13 +1390,11 @@ msgid "Music player"
 msgstr "Musikspelare"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31460"
 msgid "Enable embedded music player"
 msgstr "Aktivera inbäddad musikspelare"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31560"
 msgid "View and control music playback from anywhere in Kodi with the music player widget, which is embedded into each unique Copacetic view. If you've set a 'Liked song rating threshold' under Customisations, you'll also be able to mark songs as 'Liked' straight from the widget or jump straight to a view of the currently playing artist."
 msgstr "Visa och kontrollera musikuppspelning från var som helst i Kodi med widgeten för musikspelare, som är inbäddad i varje unik Copacetic-vy. Om du har ställt in ett tröskelvärde för \"gillade låtar\" under Anpassningar kan du också markera låtar som \"gillade\" direkt från widgeten eller hoppa direkt till en vy över den artist som spelas för tillfället."
@@ -1490,10 +1415,9 @@ msgid "Enjoy more artwork with multiart slideshows, embedded directly into each 
 msgstr "Njut av fler bakgrundsbilder med bildspel med flera bilder, inbäddade direkt i varje vy. Copacetic spelar upp ett bildspel med alla tillgängliga multiart i ditt bibliotek för en given listpost och bildtyp. För att lägga till flera bilder lägger du helt enkelt till ytterligare bilder i samma mapp som dina huvudbilder med ett nummer i slutet och söker sedan igenom objektet, t.ex. keyart.jpg, keyart1.jpg, keyart2.jpg eller filnamn-poster.jpg, filnamn-poster1.jpg."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31563"
 msgid "Choose how long to display each artwork in the slideshow."
-msgstr "Välj hur länge varje konstverk ska visas i bildspelet."
+msgstr "Välj hur länge varje bild ska visas i bildspelet."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31464"
@@ -1506,10 +1430,9 @@ msgid "Enable trailers to autoplay"
 msgstr "Aktivera automatisk uppspelning av trailers"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31565"
 msgid "Automatically start fullscreen playback of trailers after a short delay, which you can set below. Stop playback by pressing any direction button. In horizontal views, up/down ends playback with no further action until you scroll. Left/right ends playback and scrolls to the previous/next item, meaning the next trailer will begin automatically after the set delay. Directions are switched in vertical views."
-msgstr "Starta automatiskt fullskärmsuppspelning av trailers efter en kort fördröjning, som du kan ställa in nedan. Stoppa uppspelningen genom att trycka på valfri riktningsknapp. I horisontella vyer avslutar upp/ner uppspelningen utan ytterligare åtgärder förrän du scrollar. Vänster/höger avslutar uppspelningen och scrollar till föregående/nästa objekt, vilket innebär att nästa trailer startar automatiskt efter den inställda fördröjningen. Riktningarna växlar i vertikala vyer."
+msgstr "Starta automatiskt uppspelning av trailrar i helskärm efter en kort fördröjning, som du kan ställa in nedan. Stoppa uppspelningen genom att trycka på valfri riktningsknapp. I horisontella vyer avslutar uppåt/nedåt uppspelningen utan ytterligare åtgärder tills du rullar vidare. Vänster/höger avslutar uppspelningen och går till föregående/nästa objekt, vilket innebär att nästa trailer startar automatiskt efter den inställda fördröjningen. Riktningarna är omvända i vertikala vyer."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31466"
@@ -1522,16 +1445,14 @@ msgid "Choose how long you must wait on a selected movie or tv show before playb
 msgstr "Välj hur länge du måste vänta på en vald film eller tv-serie innan uppspelningen av trailern startar."
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31468"
 msgid "Autoplay trailers for movies in video library"
-msgstr "Automatisk uppspelning av trailers för filmer i videobiblioteket"
+msgstr "Spela upp trailrar automatiskt för filmer i videobiblioteket"
 
 # /16x9/Content_Settings.xml
-#, fuzzy
 msgctxt "#31568"
 msgid "Autoplay can be quickly toggled on/off from the options menu within the video library."
-msgstr "Autoplay kan snabbt slås på/av från alternativmenyn i videobiblioteket."
+msgstr "Automatisk uppspelning kan snabbt växlas på eller av från alternativmenyn i videobiblioteket."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31469"
@@ -1556,10 +1477,9 @@ msgstr "Uppdatera automatiskt"
 # ########################################################################################################
 # ########################################################################################################
 # /16x9/Content.xml
-#, fuzzy
 msgctxt "#31600"
 msgid "Match"
-msgstr "Match"
+msgstr "Matchning"
 
 # /16x9/Content.xml
 msgctxt "#31601"
@@ -1599,7 +1519,7 @@ msgstr "Bildförhållande för video"
 # /16x9/Content.xml
 msgctxt "#31608"
 msgid "Audio codec"
-msgstr "Ljudcodec"
+msgstr "Ljudkodek"
 
 # /16x9/Content.xml
 msgctxt "#31609"
@@ -1629,7 +1549,7 @@ msgstr "Videoavkodare"
 # /16x9/Content.xml
 msgctxt "#31614"
 msgid "Pixel format"
-msgstr "Pixelformat"
+msgstr "Bildpunktsformat"
 
 # /16x9/Content.xml
 msgctxt "#31615"

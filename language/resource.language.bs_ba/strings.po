@@ -5,23 +5,23 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2024-01-18 09:47+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2025-08-29 18:06+0000\n"
+"Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
 "Language-Team: Bosnian (Bosnia and Herzegovina) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/bs_ba/>\n"
 "Language: bs_ba\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.3\n"
+"X-Generator: Weblate 5.13\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
-msgstr ""
+msgstr "Zaista lijepo provedeno vrijeme s vašim medijima."
 
 msgctxt "Addon Description"
 msgid "Clear away the clutter with a minimal skin designed to bring maximum impact to the artwork that you curate for your favourite movies, shows and music. Copacetic is a labour of love more than five years in the making. I hope you enjoy it."
-msgstr ""
+msgstr "Riješite se nereda uz minimalistički skin dizajniran da pruži maksimalan učinak umjetničkim djelima koja kreirate za svoje omiljene filmove, serije i muziku. Copacetic je djelo ljubavi nastajalo više od pet godina. Nadam se da ćete uživati."
 
 # ########################################################################################################
 # ########################################################################################################
@@ -34,32 +34,32 @@ msgstr "Spisak"
 # Common
 msgctxt "#31001"
 msgid "Billboard"
-msgstr ""
+msgstr "Bilbord"
 
 # Common
 msgctxt "#31002"
 msgid "Showcase"
-msgstr ""
+msgstr "Izložba"
 
 # Common
 msgctxt "#31003"
 msgid "Strip"
-msgstr ""
+msgstr "Svuci"
 
 # Common
 msgctxt "#31004"
 msgid "Grid"
-msgstr ""
+msgstr "Rešetka"
 
 # Common
 msgctxt "#31005"
 msgid "Layout"
-msgstr ""
+msgstr "Izgled"
 
 # Common
 msgctxt "#31006"
 msgid "Posters"
-msgstr ""
+msgstr "Posteri"
 
 # Common
 msgctxt "#31007"
@@ -69,52 +69,52 @@ msgstr "Zanimljiva slika"
 # Common
 msgctxt "#31008"
 msgid "Square"
-msgstr ""
+msgstr "Kvadrat"
 
 # Common
 msgctxt "#31031"
 msgid "Spotlight"
-msgstr ""
+msgstr "U fokusu"
 
 # Common
 msgctxt "#31032"
 msgid "Simple"
-msgstr ""
+msgstr "Jednostavno"
 
 # Common
 msgctxt "#31033"
 msgid "Detailed"
-msgstr ""
+msgstr "Detaljno"
 
 # /16x9/Templates_Dialogs.xml, /16x9/Notifications.xml
 msgctxt "#31009"
 msgid "Like song"
-msgstr ""
+msgstr "Sviđa mi se pjesma"
 
 # /16x9/Templates_Dialogs.xml, /16x9/Notifications.xml
 msgctxt "#31010"
 msgid "Unlike song"
-msgstr ""
+msgstr "Ne sviđa mi se pjesma"
 
 # /16x9/Templates_Dialogs.xml, /16x9/Content_Infoscreens.xml
 msgctxt "#31011"
 msgid "Create radio station"
-msgstr ""
+msgstr "Kreiraj radio stanicu"
 
 # /16x9/Content_Viewtype_Options.xml
 msgctxt "#31012"
 msgid "Sort"
-msgstr ""
+msgstr "Sortiraj"
 
 # /16x9/Content_Viewtype_Options.xml
 msgctxt "#31013"
 msgid "Order"
-msgstr ""
+msgstr "Redoslijed"
 
 # /16x9/Content_Viewtype_Options.xml
 msgctxt "#31014"
 msgid "Include"
-msgstr ""
+msgstr "Uključi"
 
 # /16x9/Content_Viewtype_Options.xml
 msgctxt "#31015"
@@ -129,169 +129,169 @@ msgstr "Detalji"
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31017"
 msgid "Title"
-msgstr ""
+msgstr "Naslov"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31018"
 msgid "Title and Info"
-msgstr ""
+msgstr "Naslov i informacije"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31019"
 msgid "Title and Plot"
-msgstr ""
+msgstr "Naslov i radnja"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31020"
 msgid "Title and Biography"
-msgstr ""
+msgstr "Naslov i biografija"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31021"
 msgid "Title and Review"
-msgstr ""
+msgstr "Naslov i recenzija"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31022"
 msgid "Title and Description"
-msgstr ""
+msgstr "Naslov i opis"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31023"
 msgid "Clearlogos"
-msgstr ""
+msgstr "Clearlogos"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31024"
 msgid "Flags"
-msgstr ""
+msgstr "Zastave"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31025"
 msgid "Studio"
-msgstr ""
+msgstr "Studio"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31026"
 msgid "Age rating"
-msgstr ""
+msgstr "Starosna ocjena"
 
 # /16x9/Content_Viewtype_Options_List.xml
 msgctxt "#31027"
 msgid "Thumbnails"
-msgstr ""
+msgstr "Sličice"
 
 # /16x9/Content_Viewtype_Options_Showcase.xml
 msgctxt "#31028"
 msgid "Side"
-msgstr ""
+msgstr "Strana"
 
 # /16x9/Content_Viewtype_Options_Showcase.xml
 msgctxt "#31029"
 msgid "Overlay"
-msgstr ""
+msgstr "Prekrivanje"
 
 # /16x9/Content_Viewtype_Options_Grid.xml
 msgctxt "#31030"
 msgid "Breadcrumb"
-msgstr ""
+msgstr "Navigacijska mrvica"
 
 # ########################################################################################################
 # ########################################################################################################
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31100"
 msgid "Ends"
-msgstr ""
+msgstr "Krajevi"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31101"
 msgid "Rating"
-msgstr ""
+msgstr "Ocjena"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31102"
 msgid "Credit"
-msgstr ""
+msgstr "Kredit"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31103"
 msgid "for"
-msgstr ""
+msgstr "za"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31104"
 msgid "including"
-msgstr ""
+msgstr "uključujući"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31105"
 msgid "8K"
-msgstr ""
+msgstr "8 hiljada"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31106"
 msgid "4K"
-msgstr ""
+msgstr "4K"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31107"
 msgid "Dolby Vision"
-msgstr ""
+msgstr "Dolby Vision"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31108"
 msgid "HDR"
-msgstr ""
+msgstr "HDR"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31109"
 msgid "Ultra HD"
-msgstr ""
+msgstr "Ultra HD"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31110"
 msgid "Full HD"
-msgstr ""
+msgstr "Puni HD"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31111"
 msgid "HD"
-msgstr ""
+msgstr "HD"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31112"
 msgid "SD"
-msgstr ""
+msgstr "SD"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31113"
 msgid "HLG"
-msgstr ""
+msgstr "HLG"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31114"
 msgid "mins"
-msgstr ""
+msgstr "minuta"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31115"
 msgid "pics"
-msgstr ""
+msgstr "slike"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31116"
 msgid "pic"
-msgstr ""
+msgstr "slika"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31117"
 msgid "channels"
-msgstr ""
+msgstr "kanali"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31118"
 msgid "channel"
-msgstr ""
+msgstr "kanal"
 
 # ########################################################################################################
 # ########################################################################################################
@@ -300,164 +300,164 @@ msgstr ""
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31200"
 msgid "Continue watching"
-msgstr ""
+msgstr "Nastavi gledati"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31201"
 msgid "Next up"
-msgstr ""
+msgstr "Siljedi"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31202"
 msgid "Latest movies"
-msgstr ""
+msgstr "Najnoviji filmovi"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31203"
 msgid "Latest TV shows"
-msgstr ""
+msgstr "Najnovije TV emisije"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31204"
 msgid "Random movies"
-msgstr ""
+msgstr "Nasumični filmovi"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31205"
 msgid "Random TV shows"
-msgstr ""
+msgstr "Slučajne TV emisije"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31206"
 msgid "Latest albums"
-msgstr ""
+msgstr "Najnoviji albumi"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31207"
 msgid "Recently played albums"
-msgstr ""
+msgstr "Nedavno slušani albumi"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31208"
 msgid "Random albums"
-msgstr ""
+msgstr "Nasumični albumi"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31209"
 msgid "Liked songs"
-msgstr ""
+msgstr "Sviđale su mi se pjesme"
 
 # /16x9/Components_Settings.xml, 16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31210"
 msgid "Custom"
-msgstr ""
+msgstr "Prilagođeno"
 
 # /16x9/Templates_Widgets.xml
 msgctxt "#31211"
 msgid "More"
-msgstr ""
+msgstr "Više"
 
 # /16x9/Templates_Widgets.xml
 msgctxt "#31212"
 msgid "Most played"
-msgstr ""
+msgstr "Najigranije"
 
 # /16x9/Templates_Widgets.xml
 msgctxt "#31213"
 msgid "Similar"
-msgstr ""
+msgstr "Slično"
 
 # /16x9/Templates_Widgets.xml
 msgctxt "#31214"
 msgid "Similar artists"
-msgstr ""
+msgstr "Slični izvođači"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31215"
 msgid "Similar songs"
-msgstr ""
+msgstr "Slične pjesme"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31216"
 msgid "More from Season"
-msgstr ""
+msgstr "Više iz sezone"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31217"
 msgid "Episodes from Season"
-msgstr ""
+msgstr "Epizode iz sezone"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31218"
 msgid "More"
-msgstr ""
+msgstr "Više"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31219"
 msgid "More from"
-msgstr ""
+msgstr "Više od"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31220"
 msgid "More soundtracks"
-msgstr ""
+msgstr "Više zvučnih zapisa"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31221"
 msgid "Similar albums"
-msgstr ""
+msgstr "Slični albumi"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31222"
 msgid "Featuring"
-msgstr ""
+msgstr "Predstavljamo"
 
 # ########################################################################################################
 # ########################################################################################################
 # /16x9/Components_OSD.xml
 msgctxt "#31300"
 msgid "Rated"
-msgstr ""
+msgstr "Ocijenjeno"
 
 # /16x9/Content_OSD.xml
 # /16x9/Notifications.xml
 msgctxt "#31301"
 msgid "Stop"
-msgstr ""
+msgstr "Zaustavi"
 
 # /16x9/Content_OSD.xml
 msgctxt "#31302"
 msgid "Rewind"
-msgstr ""
+msgstr "Premotavanje unazad"
 
 # /16x9/Content_OSD.xml
 msgctxt "#31303"
 msgid "Forward"
-msgstr ""
+msgstr "Naprijed"
 
 # /16x9/Content_OSD.xml
 msgctxt "#31304"
 msgid "Rating"
-msgstr ""
+msgstr "Ocjena"
 
 # /16x9/Content_OSD.xml
 msgctxt "#31305"
@@ -467,22 +467,22 @@ msgstr "Spisak za rep."
 # /16x9/Notifications.xml
 msgctxt "#31306"
 msgid "Fullscreen"
-msgstr ""
+msgstr "Cijeli Ekran"
 
 # /16x9/Templates_MyPVR.xml
 msgctxt "#31307"
 msgid "Go to"
-msgstr ""
+msgstr "Idi na"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31308"
 msgid "Timeshift"
-msgstr ""
+msgstr "Vremenski pomak"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31309"
 msgid "Jump to"
-msgstr ""
+msgstr "Skoči na"
 
 # ########################################################################################################
 # ########################################################################################################
@@ -494,17 +494,17 @@ msgstr "Opšte"
 # /16x9/Content_Settings.xml
 msgctxt "#31500"
 msgid "Configure your Copacetic theme, menus and background artwork service."
-msgstr ""
+msgstr "Konfigurišite svoju Copacetic temu, menije i uslugu pozadinskih grafika."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31416"
 msgid "Menus"
-msgstr ""
+msgstr "Izbornici"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31516"
 msgid "Choose the shortcuts you wish to add to your home and shutdown menus"
-msgstr ""
+msgstr "Odaberite prečice koje želite dodati u početni meni i meni za isključivanje"
 
 # /16x9/Content_Settings.xml
 # /16x9/Content.xml
@@ -516,985 +516,985 @@ msgstr "Pozadina"
 # /16x9/Content.xml
 msgctxt "#31532"
 msgid "Customise background slideshows, brightness and panel opacity"
-msgstr ""
+msgstr "Prilagodite pozadinske slajdove, svjetlinu i neprozirnost panela"
 
 # /16x9/Content_Settings.xml
 # /16x9/Content.xml
 msgctxt "#31401"
 msgid "Home"
-msgstr ""
+msgstr "Početna"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31501"
 msgid "Get your home screen looking just the way you want it."
-msgstr ""
+msgstr "Neka vaš početni ekran izgleda baš onako kako želite."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31402"
 msgid "Widgets"
-msgstr ""
+msgstr "Vidžeti"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31502"
 msgid "Build out your home screen with up to nine fully customisable widgets."
-msgstr ""
+msgstr "Izgradite svoj početni ekran sa do devet potpuno prilagodljivih widgeta."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31403"
 msgid "Views"
-msgstr ""
+msgstr "Pregledi"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31503"
 msgid "Choose which views to enable for different parts of Kodi. Views can be customised for each individual content type from the options menu when browsing your media."
-msgstr ""
+msgstr "Odaberite koje prikaze želite omogućiti za različite dijelove Kodija. Prikazi se mogu prilagoditi za svaku pojedinačnu vrstu sadržaja iz menija opcija prilikom pregledavanja medija."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31404"
 msgid "Customisations"
-msgstr ""
+msgstr "Prilagođavanja"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31504"
 msgid "Make Copacetic your own with tweaks that change the functionality of the skin."
-msgstr ""
+msgstr "Prilagodite Copacetic svojim potrebama pomoću podešavanja koja mijenjaju funkcionalnost skina."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31405"
 msgid "Extras"
-msgstr ""
+msgstr "Dodaci"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31505"
 msgid "Configure exclusive Copacetic features including embedded lists, the music player widget, in-view multiart slideshows and automatic trailer playback."
-msgstr ""
+msgstr "Konfigurišite ekskluzivne Copacetic funkcije, uključujući ugrađene liste, widget za muzički plejer, višestruke slajdove u prikazu i automatsku reprodukciju najava."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31406"
 msgid "Experiments"
-msgstr ""
+msgstr "Eksperimenti"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31506"
 msgid "New features being tested or those requested by users that don't necessarily meet the desisgn ethos of the rest of Copacetic. It's recommended to leave these off for optimal user experience."
-msgstr ""
+msgstr "Nove funkcije koje se testiraju ili one koje su korisnici zatražili, a koje ne moraju nužno odgovarati dizajnerskim principima ostatka Copacetica. Preporučuje se da ih isključite radi optimalnog korisničkog iskustva."
 
 # General
 # /16x9/Content.xml
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31407"
 msgid "Night"
-msgstr ""
+msgstr "Noć"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31507"
 msgid "Select 'Night' or 'Light' theme. Switch between themes on the fly via the shutdown menu."
-msgstr ""
+msgstr "Odaberite temu 'Noć' ili 'Svjetlo'. Prebacujte se između tema u hodu putem menija za isključivanje."
 
 # /16x9/Content.xml
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31408"
 msgid "Light"
-msgstr "slab(a)"
+msgstr "Svijetlo"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31409"
 msgid "Accent colour"
-msgstr ""
+msgstr "Akcentna boja"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31509"
 msgid "Personalise Copacetic with your own accent colour. Where info is displayed on top of this colour, such as the episodes count icon in Grid view, Copacetic will automatically select between white and black text to maximise contrast."
-msgstr ""
+msgstr "Personalizirajte Copacetic vlastitom akcentnom bojom. Tamo gdje se informacije prikazuju preko ove boje, poput ikone broja epizoda u prikazu mreže, Copacetic će automatski odabrati između bijelog i crnog teksta kako bi se maksimizirao kontrast."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31410"
 msgid "Choose accent colour"
-msgstr ""
+msgstr "Odaberite akcentnu boju"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31411"
 msgid "Reset accent colour"
-msgstr ""
+msgstr "Resetuj boju akcenta"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31720"
 msgid "Speed up animations and window transitions [BETA]"
-msgstr ""
+msgstr "Ubrzajte animacije i prijelaze između prozora [BETA]"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31820"
 msgid "Reduces the default animation times for transitioning between windows and visibility fades. Removes delays on certain animations and disabled others entirely."
-msgstr ""
+msgstr "Smanjuje zadano vrijeme animacije za prelazak između prozora i postepeno smanjivanje vidljivosti. Uklanja kašnjenja na određenim animacijama, a druge potpuno onemogućava."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31721"
 msgid "Disable all viewtype scroll animations [BETA]"
-msgstr ""
+msgstr "Onemogući sve animacije pomicanja za različite tipove prikaza [BETA]"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31821"
 msgid "Further speeds up browsing by setting the scrolltime for views to 0, removing the transitionary animations when navigating between listitems."
-msgstr ""
+msgstr "Dodatno ubrzava pregledavanje postavljanjem vremena pomicanja za prikaze na 0, uklanjajući prelazne animacije prilikom navigacije između stavki liste."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31412"
 msgid "Recommended Kodi settings for Copacetic"
-msgstr ""
+msgstr "Preporučene Kodi postavke za Copacetic"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31512"
 msgid "Highlights the Kodi settings recommended to change for optimal Copacetic user experience. Toggle each proposed change on/off to your liking, then accept the changes you wish to keep."
-msgstr ""
+msgstr "Ističe postavke Kodija koje se preporučuju za promjenu radi optimalnog korisničkog iskustva na Copacetiku. Uključite/isključite svaku predloženu promjenu po želji, a zatim prihvatite promjene koje želite zadržati."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31413"
 msgid "Copacetic recommends changing the following Kodi settings for optimal user experience. Disable settings if you wish to keep their current value. Faded settings are disabled and show the current value."
-msgstr ""
+msgstr "Copacetic preporučuje promjenu sljedećih Kodi postavki za optimalno korisničko iskustvo. Onemogućite postavke ako želite zadržati njihovu trenutnu vrijednost. Izblijedjele postavke su onemogućene i prikazuju trenutnu vrijednost."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31414"
 msgid "These will not be changed."
-msgstr ""
+msgstr "Ovo se neće mijenjati."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31421"
 msgid "Enable clearlogo cropper"
-msgstr ""
+msgstr "Omogući rezanje clearlogo-a"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31521"
 msgid "Clearlogos cached in Kodi's texture library will be cropped as they are required. Cropped versions are saved to a separate cache. Once a cropped clearlogo is cached, performance impact should be minimal. No changes are made to the original artwork. This process is run by Copacetic as a background service. Disable to improve performance."
-msgstr ""
+msgstr "Clearlogo keširani u Kodijevoj biblioteci tekstura bit će obrezani po potrebi. Obrezane verzije se spremaju u zasebnu keš memoriju. Nakon što se obrezani clearlogo kešira, utjecaj na performanse trebao bi biti minimalan. Na originalnoj ilustraciji se ne vrše nikakve promjene. Ovaj proces pokreće Copacetic kao pozadinsku uslugu. Onemogućite da biste poboljšali performanse."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31422"
 msgid "Clear cache"
-msgstr ""
+msgstr "Obriši keš memoriju"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31522"
 msgid "This will delete the cropped clearlogo cache. To prevent cropped clearlogos from being cached, make sure to disable the clearlogo cropping background service above."
-msgstr ""
+msgstr "Ovo će izbrisati keš memoriju izrezanih clearloga. Da biste spriječili keširanje izrezanih clearloga, obavezno onemogućite uslugu izrezivanja clearloga u pozadini iznad."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31423"
 msgid "Colourise media flags"
-msgstr ""
+msgstr "Oboji medijske zastave"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31523"
 msgid "Media flags are colourised using the dominant colour from the processed clearlogo. The dominant colour will be used as long as there is enough contrast with the current background colour. You can adjust the contrast thresholds for dark and light backgrounds below."
-msgstr ""
+msgstr "Medijske zastavice su obojene dominantnom bojom iz obrađenog clearloga. Dominantna boja će se koristiti sve dok postoji dovoljan kontrast u odnosu na trenutnu boju pozadine. Pragove kontrasta za tamne i svijetle pozadine možete podesiti ispod."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31424"
 msgid "Adjust colour contrast thresholds"
-msgstr ""
+msgstr "Podesite pragove kontrasta boja"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31524"
 msgid "Adjust the amount of contrast required between the background and the flag colour. Raising the bottom threshold means only lighter colours will be accepted on dark backgrounds. Lowering the top threshold means only darker colours can be used on light backgrounds. Avoids dark flags on dark backgrounds or light flags on light backgrounds. Default range: 65 - 440."
-msgstr ""
+msgstr "Podesite količinu potrebnog kontrasta između pozadine i boje zastavice. Povećanje donjeg praga znači da će na tamnim pozadinama biti prihvaćene samo svjetlije boje. Spuštanje gornjeg praga znači da će se na svijetlim pozadinama moći koristiti samo tamnije boje. Izbjegava tamne zastavice na tamnim pozadinama ili svijetle zastavice na svijetlim pozadinama. Zadani raspon: 65 - 440."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31428"
 msgid "Prefer keyart for poster views on info screens and dialogs"
-msgstr ""
+msgstr "Preferiraj keyart za prikaze postera na info ekranima i dijalozima"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31700"
 msgid "Prefer landscape art for fanart views on info screens and dialogs"
-msgstr ""
+msgstr "Preferiraj pejzažnu umjetnost za prikaze fanarta na info ekranima i dijalozima"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31417"
 msgid "Home menu"
-msgstr ""
+msgstr "Početna stranica"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31517"
 msgid "Configure your home menu shortcuts. For each shortcut, you can select an optional background to override the default slideshows."
-msgstr ""
+msgstr "Konfigurišite prečice početnog menija. Za svaku prečicu možete odabrati opcionalnu pozadinu kako biste poništili zadane slajdšouove."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31418"
 msgid "Shutdown menu"
-msgstr ""
+msgstr "Meni za isključivanje"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31518"
 msgid "Configure your shutdown menu shortcuts. Context-dependent 'Home', 'Theme' and 'Settings' shortcuts cannot be removed."
-msgstr ""
+msgstr "Konfigurišite prečice u meniju za isključivanje. Prečice 'Početna', 'Tema' i 'Postavke' koje zavise od konteksta ne mogu se ukloniti."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31492"
 msgid "Enable home shortcut in Shutdown menu"
-msgstr ""
+msgstr "Omogući prečicu za početni ekran u meniju za isključivanje"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31493"
 msgid "Enable theme switcher shortcut in Shutdown menu"
-msgstr ""
+msgstr "Omogući prečicu za prebacivanje tema u meniju za isključivanje"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31494"
 msgid "Enable LibreELEC menu shortcut in Shutdown menu"
-msgstr ""
+msgstr "Omogućite prečicu menija LibreELEC u meniju za isključivanje"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31419"
 msgid "Reset all menus"
-msgstr ""
+msgstr "Resetuj sve menije"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31425"
 msgid "Global"
-msgstr ""
+msgstr "Globalno"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31426"
 msgid "Limit background slideshow artwork to..."
-msgstr ""
+msgstr "Ograniči pozadinsku sliku slajdova na..."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31526"
 msgid "Choose to include only fanarts from the selected sections of your library in the background slideshow, or select a custom path, playlist or folder of images."
-msgstr ""
+msgstr "Odaberite da u pozadinsku prezentaciju uključite samo crteže fanova iz odabranih dijelova vaše biblioteke ili odaberite prilagođenu putanju, listu za reprodukciju ili mapu sa slikama."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31436"
 msgid "Movies / TV shows / Artists"
-msgstr ""
+msgstr "Filmovi / TV emisije / Umjetnici"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31437"
 msgid "Movies / TV shows"
-msgstr ""
+msgstr "Filmovi / TV emisije"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31438"
 msgid "Custom source"
-msgstr ""
+msgstr "Prilagođeni izvor"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31439"
 msgid "Choose path or playlist..."
-msgstr ""
+msgstr "Odaberite putanju ili listu pjesama..."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31427"
 msgid "Background slideshow speed"
-msgstr ""
+msgstr "Brzina slajdova u pozadini"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31732"
 msgid "seconds"
-msgstr ""
+msgstr "sekundi"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31733"
 msgid "minutes"
-msgstr ""
+msgstr "minuta"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31527"
 msgid "Choose how quickly artwork in the slideshow should be refreshed. Default: 10 seconds"
-msgstr ""
+msgstr "Odaberite koliko brzo treba osvježavati ilustracije u slajdšouu. Zadano: 10 sekundi"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31440"
 msgid "Background slideshow artwork brightness (%)"
-msgstr ""
+msgstr "Svjetlina pozadinske slike u slajd-šou (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31540"
 msgid "Choose the brightness of backgrounds displayed on the home screen and other windows such as Settings and Add-ons. Default: 33%"
-msgstr ""
+msgstr "Odaberite svjetlinu pozadina prikazanih na početnom ekranu i drugim prozorima kao što su Postavke i Dodaci. Zadano: 33%"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31487"
 msgid "Opacity of background panels (%)"
-msgstr ""
+msgstr "Neprozirnost pozadinskih panela (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31587"
 msgid "Adjust the opacity of background panels that appear on top of artwork. Default: 75%"
-msgstr ""
+msgstr "Podesite neprozirnost pozadinskih panela koji se pojavljuju preko umjetničkog djela. Zadano: 75%"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31722"
 msgid "Info screen background artwork brightness (%)"
-msgstr ""
+msgstr "Osvjetljenje pozadinske slike info ekrana (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31822"
 msgid "Choose the brightness of background artwork displayed when you bring up info for a list item. Default: 25%"
-msgstr ""
+msgstr "Odaberite svjetlinu pozadinske slike koja se prikazuje kada se prikažu informacije za stavku liste. Zadano: 25%"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31723"
 msgid "Library/Playback"
-msgstr ""
+msgstr "Biblioteka/Reprodukcija"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31719"
 msgid "OSD background brightness during video playback (%)"
-msgstr ""
+msgstr "Osvjetljenje pozadine OSD-a tokom reprodukcije videa (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31819"
 msgid "Adjust the brightness of videos when OSD controls or settings screens are visible on top. Default: 25%"
-msgstr ""
+msgstr "Podesite svjetlinu videa kada su OSD kontrole ili ekrani postavki vidljivi na vrhu. Zadano: 25%"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31495"
 msgid "Show the name of the current displayed background"
-msgstr ""
+msgstr "Prikaži naziv trenutno prikazane pozadine"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31433"
 msgid "Override home background with global slideshow"
-msgstr ""
+msgstr "Prekriži pozadinu početne stranice globalnom slajdšou"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31533"
 msgid "Use the selected global slideshow on the homescreen instead of local or skin.shortcuts slideshows"
-msgstr ""
+msgstr "Koristite odabranu globalnu slideshow prezentaciju na početnom ekranu umjesto lokalnih ili skin.shortcuts prezentacija"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31429"
 msgid "Enable widgets on the home screen"
-msgstr ""
+msgstr "Omogućite widgete na početnom ekranu"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31529"
 msgid "Add widgets to your homescreen. To configure, go to the Widgets tab in the left menu. Choose from preset widgets, such as 'Continue watching', 'Next up' and 'Liked songs', or configure your own using any plugin source. Then select the view and display type you want to use for each widget. For custom widgets, you can also set the name, sort method and limit."
-msgstr ""
+msgstr "Dodajte widgete na početni ekran. Za konfiguraciju, idite na karticu Widgeti u lijevom meniju. Odaberite između unaprijed postavljenih widgeta, kao što su 'Nastavi gledati', 'Sljedeće' i 'Sviđa mi se pjesme' ili konfigurirajte vlastiti koristeći bilo koji izvor dodatka. Zatim odaberite prikaz i vrstu prikaza koju želite koristiti za svaki widget. Za prilagođene widgete možete postaviti i naziv, način sortiranja i ograničenje."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31430"
 msgid "Reset home screen widgets"
-msgstr ""
+msgstr "Resetiraj vidžete početnog ekrana"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31530"
 msgid "Reset home widgets to Copacetic defaults: 1. Continue watching 2. Next up 3. Latest movies 4. Latest TV shows"
-msgstr ""
+msgstr "Resetujte početne widgete na zadane vrijednosti Copacetica: 1. Nastavi gledati 2. Sljedeće 3. Najnoviji filmovi 4. Najnovije TV emisije"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31431"
 msgid "Are you sure you want to reset all home widgets back to default?"
-msgstr ""
+msgstr "Jeste li sigurni da želite resetirati sve početne widgete na zadane postavke?"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31704"
 msgid "Enable global search on the home screen"
-msgstr ""
+msgstr "Omogućite globalno pretraživanje na početnom ekranu"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31705"
 msgid "Configure global search"
-msgstr ""
+msgstr "Konfiguriraj globalnu pretragu"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31706"
 msgid "Enable global search for this media type"
-msgstr ""
+msgstr "Omogući globalno pretraživanje za ovu vrstu medija"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31707"
 msgid "Include 'plot' field in this search"
-msgstr ""
+msgstr "Uključi polje 'plot' u ovu pretragu"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31708"
 msgid "Include 'tag' field in this search"
-msgstr ""
+msgstr "Uključi polje 'oznaka' u ovu pretragu"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31709"
 msgid "Include 'biography' field in this search"
-msgstr ""
+msgstr "Uključite polje 'biografija' u ovu pretragu"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31710"
 msgid "Include 'review' field in this search"
-msgstr ""
+msgstr "Uključi polje 'recenzija' u ovu pretragu"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31442"
 msgid "Enable screensaver"
-msgstr ""
+msgstr "Omogući čuvar ekrana"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31542"
 msgid "After 10 seconds of inactivity, the home menu will be hidden, allowing the background artwork slideshow to run as a screensaver."
-msgstr ""
+msgstr "Nakon 10 sekundi neaktivnosti, početni meni će biti skriven, što će omogućiti pozadinskoj grafiki da se slajdšou pokrene kao čuvar ekrana."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31443"
 msgid "Show clearlogos"
-msgstr ""
+msgstr "Prikaži jasne logotipe"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31543"
 msgid "Clearlogos will be displayed as part of the screensaver when they are available."
-msgstr ""
+msgstr "Jasni logotipi će se prikazivati kao dio čuvara ekrana kada budu dostupni."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31444"
 msgid "Furniture to include"
-msgstr ""
+msgstr "Namještaj koji treba uključiti"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31544"
 msgid "Choose the furniture you wish to show in the top-right corner of the home screen. Note that for weather information to be included, you must first install a weather add-on and ensure it is enabled under Settings > Services > Weather."
-msgstr ""
+msgstr "Odaberite namještaj koji želite prikazati u gornjem desnom uglu početnog ekrana. Imajte na umu da da biste uključili informacije o vremenu, prvo morate instalirati dodatak za vremensku prognozu i osigurati da je omogućen u Postavke > Usluge > Vrijeme."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31724"
 msgid "Clock"
-msgstr ""
+msgstr "Sat"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31725"
 msgid "None"
-msgstr ""
+msgstr "Nema"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31726"
 msgid "Clock and date"
-msgstr ""
+msgstr "Sat i datum"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31727"
 msgid "Clock, date and weather"
-msgstr ""
+msgstr "Sat, datum i vrijeme"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31728"
 msgid "Make persistent across entire home screen, including widgets"
-msgstr ""
+msgstr "Omogući trajno prikazivanje na cijelom početnom ekranu, uključujući widgete"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31729"
 msgid "Enable second background slideshow"
-msgstr ""
+msgstr "Omogući drugu pozadinsku prezentaciju"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31730"
 msgid "Limit second background slideshow to..."
-msgstr ""
+msgstr "Ograniči drugu pozadinsku slajd prezentaciju na..."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31731"
 msgid "Start times"
-msgstr ""
+msgstr "Vremena početka"
 
 # Widgets
 # /16x9/Content_Settings.xml
 msgctxt "#31445"
 msgid "Widget"
-msgstr ""
+msgstr "Vidžet"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31489"
 msgid "Configure widgets"
-msgstr ""
+msgstr "Konfiguriraj widgete"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31701"
 msgid "Movement"
-msgstr ""
+msgstr "Pokret"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31496"
 msgid "Spotlight content with auto scroll"
-msgstr ""
+msgstr "Istaknite sadržaj automatskim pomicanjem"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31596"
 msgid "Widget will move forward one place every 10 seconds while system is idle. When combined with trailer autoplay option below to allow for each item's trailer to be played automatically as soon as the previous trailer is finished while system is idle."
-msgstr ""
+msgstr "Widget će se pomicati naprijed za jedno mjesto svakih 10 sekundi dok je sistem u stanju mirovanja. U kombinaciji s opcijom automatskog reproduciranja najave ispod, omogućava se automatska reprodukcija najave svake stavke čim se prethodna najava završi dok je sistem u stanju mirovanja."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31467"
 msgid "Automatically play trailers for movies or tv shows in this widget"
-msgstr ""
+msgstr "Automatski reproduciraj najave za filmove ili TV emisije u ovom widgetu"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31567"
 msgid "Trailers will be played back automatically from any widgets showing movies or tv shows. Enable 'Spotlight content with auto scroll' option above to create a dynamic playlist of trailers for all items in the widget. Set delay in seconds before trailer playback starts under Extras > Trailer autoplay"
-msgstr ""
+msgstr "Najave će se automatski reproducirati sa svih widgeta koji prikazuju filmove ili TV emisije. Omogućite opciju 'Istakni sadržaj s automatskim pomicanjem' iznad da biste kreirali dinamičku listu za reprodukciju najava za sve stavke u widgetu. Postavite kašnjenje u sekundama prije početka reprodukcije najave pod Dodaci > Automatska reprodukcija najave"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31476"
 msgid "Enable clearlogos"
-msgstr ""
+msgstr "Omogući clearlogos"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31498"
 msgid "Prefer keyart for poster views"
-msgstr ""
+msgstr "Preferiraj keyart za prikaze postera"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31598"
 msgid "Remember 'keyart' is a custom art type. To ensure it is fetched locally or remotely by scrapers, make sure 'keyart' is included in your art type whitelists for movies and / or tv shows. You can do this by choosing 'Recommended Kodi Settings' under Copacetic > General, or by navigating to Settings > Media > Videos > Artwork."
-msgstr ""
+msgstr "Imajte na umu da je 'keyart' prilagođeni tip umjetničkog djela. Da biste osigurali da ga scraperi preuzimaju lokalno ili daljinski, provjerite je li 'keyart' uključen u vaše bijele liste tipova umjetničkog djela za filmove i/ili TV emisije. To možete učiniti odabirom 'Preporučene Kodi postavke' pod Copacetic > Općenito ili odabirom Postavke > Mediji > Videozapisi > Umjetničko djelo."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31499"
 msgid "Prefer landscape art for fanart views"
-msgstr ""
+msgstr "Preferiram pejzažnu umjetnost za prikaze fanarta"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31599"
 msgid "Remember 'landscape' is a custom art type. To ensure it is fetched locally or remotely by scrapers, make sure 'landscape' is included in your art type whitelists for movies and / or tv shows. You can do this by choosing 'Recommended Kodi Settings' under Copacetic > General, or by navigating to Settings > Media > Videos > Artwork."
-msgstr ""
+msgstr "Imajte na umu da je 'pejzaž' prilagođeni tip umjetničkog djela. Da biste osigurali da ga scraperi preuzimaju lokalno ili daljinski, provjerite je li 'pejzaž' uključen u vaše bijele liste tipova umjetničkog djela za filmove i/ili TV emisije. To možete učiniti odabirom 'Preporučene Kodi postavke' pod Copacetic > Općenito ili odabirom Postavke > Mediji > Videozapisi > Umjetničko djelo."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31477"
 msgid "Prefer thumbnails for episodes instead of tv show fanart"
-msgstr ""
+msgstr "Preferiraj sličice za epizode umjesto fanarta za TV serije"
 
 # Views
 # /16x9/Content_Settings.xml
 msgctxt "#31475"
 msgid "Kiosk mode"
-msgstr ""
+msgstr "Način rada kioska"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31575"
 msgid "When kiosk mode is enabled, all view customisation options in the hidden menu will be removed so no further changes can be made."
-msgstr ""
+msgstr "Kada je omogućen kiosk način rada, sve opcije prilagođavanja prikaza u skrivenom meniju bit će uklonjene tako da se daljnje promjene ne mogu izvršiti."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31486"
 msgid "Disable hidden options menu"
-msgstr ""
+msgstr "Onemogući meni skrivenih opcija"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31586"
 msgid "With koisk mode enabled, you have the option to completely disable the hidden options menu. Warning: This will limit your ability to switch between views, change sort method, filter or search."
-msgstr ""
+msgstr "Kada je omogućen koisk način rada, imate mogućnost potpunog onemogućavanja menija skrivenih opcija. Upozorenje: Ovo će ograničiti vašu mogućnost prebacivanja između prikaza, promjene načina sortiranja, filtriranja ili pretraživanja."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31488"
 msgid "Add shutdown menu shortcut to hidden views menu"
-msgstr ""
+msgstr "Dodajte prečicu iz menija za isključivanje u meni skrivenih prikaza"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31441"
 msgid "Add movement to fullscreen artwork"
-msgstr ""
+msgstr "Dodajte pokret ilustraciji preko cijelog ekrana"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31541"
 msgid "Adds a subtle 'Ken Burns effect'-style pan and zoom to the fullscreen background artwork."
-msgstr ""
+msgstr "Dodaje suptilno pomicanje i zumiranje u stilu 'Ken Burns efekta' na pozadinsku ilustraciju preko cijelog ekrana."
 
 # Views
 # /16x9/Content_Settings.xml
 msgctxt "#31446"
 msgid "Enable view for video and music windows"
-msgstr ""
+msgstr "Omogući prikaz za prozore za video i muziku"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31546"
 msgid "Choose which windows to enable for each of the four additional Copacetic views. Keep any views you don't use disabled to speed up loading when a new media window is opened in Kodi."
-msgstr ""
+msgstr "Odaberite koje prozore želite omogućiti za svaki od četiri dodatna Copacetic prikaza. Isključite prikaze koje ne koristite kako biste ubrzali učitavanje kada se u Kodiju otvori novi medijski prozor."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31717"
 msgid "Enable scrolling on long titles instead of truncation (...)"
-msgstr ""
+msgstr "Omogući skrolovanje kod dugih naslova umjesto skraćivanja (...)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31447"
 msgid "Enable view for add-on and program windows"
-msgstr ""
+msgstr "Omogući prikaz za prozore dodataka i programa"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31734"
 msgid "Enable view for favourites browser"
-msgstr ""
+msgstr "Omogući prikaz za preglednik favorita"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31448"
 msgid "Enable view for pictures window"
-msgstr ""
+msgstr "Omogući prikaz za prozor sa slikama"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31715"
 msgid "Item artwork size and orientation"
-msgstr ""
+msgstr "Veličina i orijentacija grafičkog elementa"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31815"
 msgid "Choose how big you wish items to be presented in Grid panel views and whether you wish to scroll vertically or horizontally. For Fanart views, 'Horizontal large' displays 3 items per row and 'Horizontal small' displays 4. For Poster and Square views, 'Horizontal large' displays 5 items per row and 'Horizontal small' displays 7. 'Vertical' displays two rows at all times."
-msgstr ""
+msgstr "Odaberite veličinu stavki koje želite da budu prikazane u prikazima panela Mreža i da li želite da se pomičete vertikalno ili horizontalno. Za prikaze Fanart, 'Veliki horizontalni' prikazuje 3 stavke po redu, a 'Mali horizontalni' prikazuje 4. Za prikaze Poster i Kvadrat, 'Veliki horizontalni' prikazuje 5 stavki po redu, a 'Mali horizontalni' prikazuje 7. 'Vertikalni' uvijek prikazuje dva reda."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31449"
 msgid "Dim artwork for watched items or disabled add-ons"
-msgstr ""
+msgstr "Zatamnjena grafika za nadzirane stavke ili onemogućene dodatke"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31450"
 msgid "Checkmarks for watched items or enabled add-ons"
-msgstr ""
+msgstr "Kvačica za nadzirane stavke ili omogućene dodatke"
 
 # Customisations
 # /16x9/Content_Settings.xml
 msgctxt "#31451"
 msgid "Show unwatched episodes count"
-msgstr ""
+msgstr "Prikaži broj nepogledanih epizoda"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31551"
 msgid "Display the total number of unwatched episodes for a tv show or season on top of the progress bar."
-msgstr ""
+msgstr "Prikažite ukupan broj nepogledanih epizoda TV emisije ili sezone na vrhu trake napretka."
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31452"
 msgid "Preferred classification ratings"
-msgstr ""
+msgstr "Preferirane ocjene klasifikacije"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31552"
 msgid "Choose the classification system to use when displaying age rating flags. If your preferred classication system is not present, please request it on the forum."
-msgstr ""
+msgstr "Odaberite sistem klasifikacije koji će se koristiti prilikom prikazivanja oznaka za dobnu granicu. Ako vaš željeni sistem klasifikacije nije prisutan, zatražite ga na forumu."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31453"
 msgid "Scroll by sort letter"
-msgstr ""
+msgstr "Pomicanje po slovu sortiranja"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31553"
 msgid "When enabled, press down on horizontal scrollbars and right on vertical scrollbars to scroll by sort letter/number. This is dependent on the sort method currently selected. You can scroll by Name, File, Artist, Artist/Year, Album, Title, Original title, Rating, User rating, Play count, Number of discs, Duration, Appearances."
-msgstr ""
+msgstr "Kada je omogućeno, pritisnite horizontalne trake za pomicanje prema dolje i vertikalne trake za pomicanje desno za pomicanje po slovu/broju sortiranja. Ovo zavisi od trenutno odabrane metode sortiranja. Možete se pomicati po imenu, datoteci, izvođaču, izvođaču/godini, albumu, naslovu, originalnom naslovu, ocjeni, korisničkoj ocjeni, broju reprodukcija, broju diskova, trajanju i pojavljivanjima."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31454"
 msgid "Liked song rating threshold"
-msgstr ""
+msgstr "Prag ocjene pjesme koju ste označili kao \"sviđa mi se\""
 
 # /16x9/Content_Settings.xml
 msgctxt "#31716"
 msgid "Prefer white to grey text colour for plot in Showcase and Strip views"
-msgstr ""
+msgstr "Preferiraj bijelu u odnosu na sivu boju teksta za grafikon u prikazima Showcase i Strip"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31554"
 msgid "Overlay a binary user rating system (liked or not) on top of standard song user ratings. User ratings equal to or above this threshold are 'liked'. You can 'like' (set a user rating equivalent to the threshold) or 'unlike' (clear user rating) a song via the context menu, or embedded music player if enabled under Extras. The threshold will also be used by the 'Liked songs' widget. Set to 'Off' to disable."
-msgstr ""
+msgstr "Prekrižite standardne korisničke ocjene pjesama binarnim sistemom ocjenjivanja (sviđa mi se ili ne). Korisničke ocjene jednake ili veće od ovog praga nazivaju se 'sviđa mi se'. Pjesmu možete označiti kao 'sviđa mi se' (postaviti korisničku ocjenu ekvivalentnu pragu) ili 'ne sviđa mi se' (obrisati korisničku ocjenu) putem kontekstnog menija ili ugrađenog muzičkog playera ako je omogućeno pod Dodaci. Prag će također koristiti widget 'Sviđa mi se pjesme'. Postavite na 'Isključeno' da biste onemogućili."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31484"
 msgid "Info screens"
-msgstr ""
+msgstr "Info ekrani"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31703"
 msgid "Use TMDbHelper for info screen widgets instead of library content"
-msgstr ""
+msgstr "Koristite TMDbHelper za widgete na info ekranu umjesto sadržaja biblioteke"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31803"
 msgid "As long as this plugin is enabled on your system, it will be used to populate info screen widgets including actor and director credits, similar movies/shows and more."
-msgstr ""
+msgstr "Sve dok je ovaj dodatak omogućen na vašem sistemu, koristit će se za popunjavanje widgeta na info ekranu, uključujući podatke o glumcima i režiserima, slične filmove/serije i još mnogo toga."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31485"
 msgid "Disable star ratings"
-msgstr ""
+msgstr "Onemogući ocjenjivanje zvjezdicama"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31478"
 msgid "Video player"
-msgstr ""
+msgstr "Video plejer"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31711"
 msgid "Limit quick subtitle switcher in video OSD to a preferred language"
-msgstr ""
+msgstr "Ograničite brzi prebacivač titlova u video OSD-u na željeni jezik"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31811"
 msgid "Enter the three-letter code of your preferred language, e.g. 'eng' for English. If subtitles in this language are available for the currently playing video, the quick subtitle switcher will toggle on/off for the first subtitle stream in this language, ignoring other streams. If the language is not available, it will toggle between all streams as normal."
-msgstr ""
+msgstr "Unesite troslovni kod željenog jezika, npr. 'eng' za engleski. Ako su titlovi na ovom jeziku dostupni za trenutno reprodukovani video, brzi prekidač za titlove će se uključiti/isključiti za prvi stream titlova na ovom jeziku, ignorišući ostale streamove. Ako jezik nije dostupan, prebacivat će se između svih streamova kao i obično."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31713"
 msgid "Disable video information being displayed at the start of playback"
-msgstr ""
+msgstr "Onemogući prikaz informacija o videu na početku reprodukcije"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31718"
 msgid "Prefer time remaining to video duration in player seek bar"
-msgstr ""
+msgstr "Preferiraj preostalo vrijeme u odnosu na trajanje videa u traci za premotavanje playera"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31813"
 msgid "This disables the label that appears upon video playback showing information about the video including end time, resolution and age rating."
-msgstr ""
+msgstr "Ovo onemogućava oznaku koja se pojavljuje prilikom reprodukcije videa, a koja prikazuje informacije o videu, uključujući vrijeme završetka, rezoluciju i dobnu granicu."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31490"
 msgid "Enable Up Next widget during playback"
-msgstr ""
+msgstr "Omogući widget Sljedeće tokom reprodukcije"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31590"
 msgid "Up Next is a third-party addon that enabled Netflix-style autoplay of the next episode with an 'Are you still watching' prompt. Selecting this option will install and enable the addon, which can be configured under Add-ons."
-msgstr ""
+msgstr "\"Up Next\" je dodatak treće strane koji omogućava automatsko reproduciranje sljedeće epizode u Netflixovom stilu s upitom \"Da li još uvijek gledate?\". Odabirom ove opcije instalirat ćete i omogućiti dodatak, koji se može konfigurirati u odjeljku \"Dodaci\"."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31491"
 msgid "Choose artwork type to display in Up Next widget"
-msgstr ""
+msgstr "Odaberite vrstu umjetničkog djela za prikaz u widgetu Sljedeće"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31591"
 msgid "Choose between different layout options for the Up Next widget that will appear on the screen as an episode concludes."
-msgstr ""
+msgstr "Odaberite između različitih opcija rasporeda za widget \"Sljedeće\" koji će se pojaviti na ekranu kada se epizoda završi."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31455"
 msgid "Instantly hide progress bar on pause screen"
-msgstr ""
+msgstr "Trenutno sakrijte traku napretka na ekranu za pauziranje"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31555"
 msgid "Subtitles will not be obscured when video playback is paused."
-msgstr ""
+msgstr "Titlovi neće biti zaklonjeni kada je reprodukcija videa pauzirana."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31456"
 msgid "Show info on pause screen"
-msgstr ""
+msgstr "Prikaži informacije na ekranu za pauzu"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31556"
 msgid "Video information, which can be displayed during fullscreen video playback by pressing <i>, will also be displayed automatically when the video is paused."
-msgstr ""
+msgstr "Informacije o videu, koje se mogu prikazati tokom reprodukcije videa preko cijelog ekrana pritiskom na <i>, također će se automatski prikazati kada se video pauzira."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31479"
 msgid "Music player"
-msgstr ""
+msgstr "Muzički plejer"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31480"
 msgid "Enable background fanart"
-msgstr ""
+msgstr "Omogući fanart u pozadini"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31481"
 msgid "Visualisation screen album cover"
-msgstr ""
+msgstr "Omot albuma za vizualizaciju ekrana"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31829"
 msgid "Large"
-msgstr ""
+msgstr "Veliko"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31830"
 msgid "Small"
-msgstr ""
+msgstr "Malo"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31482"
 msgid "Vertical small"
-msgstr ""
+msgstr "Vertikalno malo"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31483"
 msgid "Vertical large"
-msgstr ""
+msgstr "Vertikalno veliko"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31415"
 msgid "Horizontal"
-msgstr ""
+msgstr "Horizontalno"
 
 # Experiments
 # /16x9/Content_Settings.xml
 msgctxt "#31470"
 msgid "Use unwatched count in info details"
-msgstr ""
+msgstr "Koristite broj nepraćenih sadržaja u detaljima informacija"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31570"
 msgid "Replaced 'A/B watched' with 'X/Y unwatched' in all info lines. This information duplicates the unwatched episode count indicator, which can be enabled under Customisations and is integrated into the progress bar."
-msgstr ""
+msgstr "Zamijenjeno je 'A/B gledano' sa 'X/Y nepogledano' u svim info redovima. Ova informacija duplicira indikator broja nepogledanih epizoda, koji se može omogućiti u Prilagođavanjima i integriran je u traku napretka."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31471"
 msgid "Enable 'Fanart' display layout for Grid view in Pictures window"
-msgstr ""
+msgstr "Omogući raspored prikaza 'Fanart' za prikaz mreže u prozoru Slike"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31571"
 msgid "Enables Grid view fanart layout for the pictures window. Because pictures can take any aspect ratio, it is recommended to stick to square layouts for the optimal experience. Keep disabled to improve performance."
-msgstr ""
+msgstr "Omogućava raspored fanarta u obliku mreže za prozor sa slikama. Budući da slike mogu imati bilo koji omjer širine i visine, preporučuje se korištenje kvadratnog rasporeda za optimalno iskustvo. Ostavite isključeno radi poboljšanja performansi."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31714"
 msgid "Enable landscape art for List and Billboard view backgrounds"
-msgstr ""
+msgstr "Omogući pejzažnu umjetnost za pozadine prikaza lista i bilborda"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31712"
 msgid "Prefer landscape art to fanart for backgrounds in List and Billboard views"
-msgstr ""
+msgstr "Za pozadine u prikazima List i Billboard preferiram pejzažnu umjetnost u odnosu na fanart"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31812"
 msgid "Will allow landscape artwork to be displayed instead of fanarts if landscape art is preferred - even on these two views where logos on the landscape artwork may interfere with readability of the details presented in these views."
-msgstr ""
+msgstr "Omogućit će prikazivanje pejzažnih umjetničkih djela umjesto fanarta ako se preferira pejzažna umjetnost - čak i na ova dva prikaza gdje logotipi na pejzažnim umjetničkim djelima mogu ometati čitljivost detalja prikazanih u ovim prikazima."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31702"
 msgid "Move to parent directory automatically if container is empty"
-msgstr ""
+msgstr "Automatski premjesti u nadređeni direktorij ako je kontejner prazan"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31802"
 msgid "If the current focused container is empty--for example because your filter is set to unwatched episodes and you have no unwatched episodes to view--enabling this will cause Kodi to automatically move to the parent directory."
-msgstr ""
+msgstr "Ako je trenutno fokusirani kontejner prazan - na primjer, zato što je vaš filter postavljen na nepogledane epizode, a nemate nepogledanih epizoda za pregled - omogućavanje ove opcije će uzrokovati da se Kodi automatski premjesti u nadređeni direktorij."
 
 # Extras
 # /16x9/Content_Settings.xml
 msgctxt "#31457"
 msgid "Embedded lists"
-msgstr ""
+msgstr "Ugrađene liste"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31458"
 msgid "Enable embedded lists for sets, tv shows and artists"
-msgstr ""
+msgstr "Omogući ugrađene liste za setove, TV emisije i izvođače"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31558"
 msgid "Enrich video and music views by enabling embedded secondary lists that allow you to scroll through the movies in a set, the seasons in a tv show and the albums by an artist without clicking into an item. Instead, just press down on a listitem in horizontal views or left in vertical views to navigate the secondary list."
-msgstr ""
+msgstr "Obogatite prikaze videa i muzike omogućavanjem ugrađenih sekundarnih lista koje vam omogućavaju da se krećete kroz filmove u setu, sezone u TV emisiji i albume izvođača bez klika na stavku. Umjesto toga, samo pritisnite stavku liste u horizontalnim prikazima ili lijevo u vertikalnim prikazima da biste se kretali kroz sekundarnu listu."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31459"
 msgid "Music player"
-msgstr ""
+msgstr "Muzički plejer"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31460"
 msgid "Enable embedded music player"
-msgstr ""
+msgstr "Omogući ugrađeni muzički plejer"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31560"
 msgid "View and control music playback from anywhere in Kodi with the music player widget, which is embedded into each unique Copacetic view. If you've set a 'Liked song rating threshold' under Customisations, you'll also be able to mark songs as 'Liked' straight from the widget or jump straight to a view of the currently playing artist."
-msgstr ""
+msgstr "Pregledajte i kontrolišite reprodukciju muzike sa bilo kojeg mjesta u Kodiju pomoću widgeta za muzički plejer, koji je ugrađen u svaki jedinstveni Copacetic prikaz. Ako ste postavili 'Prag ocjene pjesme koja vam se sviđa' pod Prilagođavanjima, također ćete moći označiti pjesme kao 'Sviđa mi se' direktno iz widgeta ili direktno preći na prikaz izvođača koji se trenutno reprodukuje."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31461"
 msgid "Multiart"
-msgstr ""
+msgstr "Višestruka umjetnost"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31462"
 msgid "Enable multiart slideshows"
-msgstr ""
+msgstr "Omogući višestruke projekcije slajdova"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31562"
 msgid "Enjoy more artwork with multiart slideshows, embedded directly into each view. Copacetic will play a slideshow of all available multiart in your library for a given listitem and art type. To add multiart, simply add additional artwork to the same folder as your main artwork with a number appended to the end then rescan the item, e.g. keyart.jpg, keyart1.jpg, keyart2.jpg or filename-poster.jpg, filename-poster1.jpg."
-msgstr ""
+msgstr "Uživajte u više umjetničkih djela uz višestruke slajdove, ugrađene direktno u svaki prikaz. Copacetic će reproducirati slajdove svih dostupnih višestrukih umjetničkih djela u vašoj biblioteci za datu stavku liste i vrstu umjetničkog djela. Da biste dodali višestruka umjetnička djela, jednostavno dodajte dodatna umjetnička djela u istu mapu kao i vaša glavna umjetnička djela s brojem dodanim na kraj, a zatim ponovo skenirajte stavku, npr. keyart.jpg, keyart1.jpg, keyart2.jpg ili naziv datoteke-poster.jpg, naziv datoteke-poster1.jpg."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31563"
 msgid "Choose how long to display each artwork in the slideshow."
-msgstr ""
+msgstr "Odaberite koliko dugo će se prikazivati svaki umjetnički rad u slajdšouu."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31464"
 msgid "Trailer autoplay"
-msgstr ""
+msgstr "Automatska reprodukcija najave"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31465"
 msgid "Enable trailers to autoplay"
-msgstr ""
+msgstr "Omogući automatsko reproduciranje najava"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31565"
 msgid "Automatically start fullscreen playback of trailers after a short delay, which you can set below. Stop playback by pressing any direction button. In horizontal views, up/down ends playback with no further action until you scroll. Left/right ends playback and scrolls to the previous/next item, meaning the next trailer will begin automatically after the set delay. Directions are switched in vertical views."
-msgstr ""
+msgstr "Automatski pokreni reprodukciju trejlera preko cijelog ekrana nakon kratkog kašnjenja, koje možete postaviti ispod. Zaustavi reprodukciju pritiskom na bilo koju tipku za smjer. U horizontalnim prikazima, gore/dolje prekida reprodukciju bez daljnje akcije dok ne pomičete ekran. Lijevo/desno prekida reprodukciju i pomiče se na prethodnu/sljedeću stavku, što znači da će sljedeći trejler automatski početi nakon postavljenog kašnjenja. Smjerovi se mijenjaju u vertikalnim prikazima."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31466"
 msgid "Delay before playback starts (seconds)"
-msgstr ""
+msgstr "Kašnjenje prije početka reprodukcije (sekunde)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31566"
 msgid "Choose how long you must wait on a selected movie or tv show before playback of the trailer starts."
-msgstr ""
+msgstr "Odaberite koliko dugo morate čekati na odabrani film ili TV emisiju prije nego što počne reprodukcija najave."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31468"
 msgid "Autoplay trailers for movies in video library"
-msgstr ""
+msgstr "Automatsko reproduciranje trejlera za filmove u videoteci"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31568"
 msgid "Autoplay can be quickly toggled on/off from the options menu within the video library."
-msgstr ""
+msgstr "Automatska reprodukcija se može brzo uključiti/isključiti iz menija opcija unutar videoteke."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31469"
 msgid "Autoplay trailers for tv shows in video library"
-msgstr ""
+msgstr "Automatsko reproduciranje najava za TV emisije u videoteci"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31472"
 msgid "Copacetic"
-msgstr ""
+msgstr "Kopacetik"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31473"
 msgid "Pause"
-msgstr ""
+msgstr "Pauziraj"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31474"
 msgid "Auto-update"
-msgstr ""
+msgstr "Automatsko ažuriranje"
 
 # ########################################################################################################
 # ########################################################################################################
 # /16x9/Content.xml
 msgctxt "#31600"
 msgid "Match"
-msgstr ""
+msgstr "Podudaranje"
 
 # /16x9/Content.xml
 msgctxt "#31601"
 msgid "Limit"
-msgstr ""
+msgstr "Ograničenje"
 
 # /16x9/Content.xml
 msgctxt "#31602"
 msgid "Sort"
-msgstr ""
+msgstr "Sortiraj"
 
 # /16x9/Content.xml
 msgctxt "#31603"
 msgid "Direction"
-msgstr ""
+msgstr "Smjer"
 
 # /16x9/Content.xml
 msgctxt "#31604"
@@ -1504,168 +1504,168 @@ msgstr "Sistem"
 # /16x9/Content.xml
 msgctxt "#31605"
 msgid "Video codec"
-msgstr ""
+msgstr "Video kodek"
 
 # /16x9/Content.xml
 msgctxt "#31606"
 msgid "Video resolution"
-msgstr ""
+msgstr "Rezolucija videa"
 
 # /16x9/Content.xml
 msgctxt "#31607"
 msgid "Video aspect ratio"
-msgstr ""
+msgstr "Omjer slike videa"
 
 # /16x9/Content.xml
 msgctxt "#31608"
 msgid "Audio codec"
-msgstr ""
+msgstr "Audio kodek"
 
 # /16x9/Content.xml
 msgctxt "#31609"
 msgid "Audio channels"
-msgstr ""
+msgstr "Audio kanali"
 
 # /16x9/Content.xml
 msgctxt "#31610"
 msgid "Audio bitrate"
-msgstr ""
+msgstr "Brzina prijenosa zvuka"
 
 # /16x9/Content.xml
 msgctxt "#31611"
 msgid "Memory"
-msgstr ""
+msgstr "Memorija"
 
 # /16x9/Content.xml
 msgctxt "#31612"
 msgid "CPU"
-msgstr ""
+msgstr "Procesor"
 
 # /16x9/Content.xml
 msgctxt "#31613"
 msgid "Video decoder"
-msgstr ""
+msgstr "Video dekoder"
 
 # /16x9/Content.xml
 msgctxt "#31614"
 msgid "Pixel format"
-msgstr ""
+msgstr "Format piksela"
 
 # /16x9/Content.xml
 msgctxt "#31615"
 msgid "Screen resolution"
-msgstr ""
+msgstr "Rezolucija ekrana"
 
 # /16x9/Content.xml
 msgctxt "#31616"
 msgid "System rendering speed"
-msgstr ""
+msgstr "Brzina renderiranja sistema"
 
 # /16x9/Content.xml
 msgctxt "#31617"
 msgid "System memory usage"
-msgstr ""
+msgstr "Korištenje sistemske memorije"
 
 # /16x9/Content.xml
 msgctxt "#31618"
 msgid "System CPU usage"
-msgstr ""
+msgstr "Korištenje procesora sistema"
 
 # /16x9/DialogPlayerProcessInfo.xml
 msgctxt "#31619"
 msgid "PVR"
-msgstr ""
+msgstr "PVR"
 
 # /16x9/DialogPlayerProcessInfo.xml
 msgctxt "#31620"
 msgid "Media"
-msgstr ""
+msgstr "Mediji"
 
 # /16x9/DialogPlayerProcessInfo.xml
 msgctxt "#31621"
 msgid "Player"
-msgstr ""
+msgstr "Pokretač"
 
 # /16x9/DialogPlayerProcessInfo.xml
 msgctxt "#31637"
 msgid "channels in"
-msgstr ""
+msgstr "kanali u"
 
 # /16x9/MyPVRChannels.xml
 msgctxt "#31634"
 msgid "Now playing channel"
-msgstr ""
+msgstr "Kanal koji se trenutno reprodukuje"
 
 # /16x9/Navigation.xml
 msgctxt "#31635"
 msgid "Global search"
-msgstr ""
+msgstr "Globalna pretraga"
 
 # /16x9/Navigation.xml
 msgctxt "#31636"
 msgid "Sorry no results found!"
-msgstr ""
+msgstr "Žao nam je, nema pronađenih rezultata!"
 
 # /16x9/FileManager.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31622"
 msgid "items"
-msgstr ""
+msgstr "stavke"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31623"
 msgid "item"
-msgstr ""
+msgstr "stavka"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31624"
 msgid "Choose preferred classification ratings..."
-msgstr ""
+msgstr "Odaberite željene ocjene klasifikacije..."
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31625"
 msgid "No items"
-msgstr ""
+msgstr "Nema stavkih"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31626"
 msgid "songs"
-msgstr ""
+msgstr "pjesme"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31627"
 msgid "song"
-msgstr ""
+msgstr "pjesma"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31628"
 msgid "No songs added"
-msgstr ""
+msgstr "Nije dodana nijedna pjesma"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31629"
 msgid "Muted"
-msgstr ""
+msgstr "Utišano"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31630"
 msgid "On first entry"
-msgstr ""
+msgstr "Pri prvom ulasku"
 
 # /16x9/VideoOSDBookmarks.xml
 msgctxt "#31631"
 msgid "Add"
-msgstr ""
+msgstr "Dodajte"
 
 # /16x9/VideoOSDBookmarks.xml
 msgctxt "#31632"
 msgid "Clear"
-msgstr ""
+msgstr "Vedro"
 
 # /16x9/VideoOSDBookmarks.xml
 msgctxt "#31633"
 msgid "Use selected as episode thumb"
-msgstr ""
+msgstr "Koristi odabrano kao sličicu epizode"
 
 # ########################################################################################################
 # ########################################################################################################
@@ -1673,132 +1673,132 @@ msgstr ""
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31951"
 msgid "BBFC (UK)"
-msgstr ""
+msgstr "BBFC (UK)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31952"
 msgid "MPAA / TV-PG (US / others)"
-msgstr ""
+msgstr "MPAA / TV-PG (SAD / ostali)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31953"
 msgid "ACB (Australia)"
-msgstr ""
+msgstr "ACB (Australija)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31954"
 msgid "CHVRS / CBSC (Canada)"
-msgstr ""
+msgstr "CHVRS / CBSC (Kanada)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31955"
 msgid "DJCTQ (Brazil)"
-msgstr ""
+msgstr "DJCTQ (Brazil)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31956"
 msgid "EIRIN (Japan)"
-msgstr ""
+msgstr "EIRIN (Japan)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31957"
 msgid "FSK (Austria / Germany / Switzerland)"
-msgstr ""
+msgstr "FSK (Austrija / Njemačka / Švicarska)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31958"
 msgid "IFCO (Ireland)"
-msgstr ""
+msgstr "IFCO (Irska)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31959"
 msgid "KIJKWIJZER (Luxembourg / Netherlands)"
-msgstr ""
+msgstr "KIJKWIJZER (Luksemburg / Holandija)"
 
 # ########################################################################################################
 # ########################################################################################################
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31900"
 msgid "Who's watching?"
-msgstr ""
+msgstr "Ko gleda?"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31901"
 msgid "Good evening"
-msgstr ""
+msgstr "Dobro veče"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31902"
 msgid "Good afternoon"
-msgstr ""
+msgstr "Dobar dan"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31903"
 msgid "Good morning"
-msgstr ""
+msgstr "Dobro jutro"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31904"
 msgid "Happy New Year"
-msgstr ""
+msgstr "Sretna Nova godina"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31905"
 msgid "Happy National Popcorn Day"
-msgstr ""
+msgstr "Sretan Nacionalni dan kokica"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31906"
 msgid "Happy Global Movie Day"
-msgstr ""
+msgstr "Sretan Svjetski dan filma"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31907"
 msgid "Happy Baftas Day"
-msgstr ""
+msgstr "Sretan Dan BAFTA nagrada"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31908"
 msgid "Happy International Women's Day"
-msgstr ""
+msgstr "Sretan Međunarodni dan žena"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31909"
 msgid "Happy Razzies Day"
-msgstr ""
+msgstr "Sretan Dan malina"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31910"
 msgid "Happy Oscars Day"
-msgstr ""
+msgstr "Sretan Dan Oskara"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31911"
 msgid "Happy Xmas"
-msgstr ""
+msgstr "Sretan Božić"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31912"
 msgid "Ramadan Mubarak"
-msgstr ""
+msgstr "Ramazanski mubarek"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31913"
 msgid "Eid Mubarak"
-msgstr ""
+msgstr "Bajram Mubarak"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31914"
 msgid "Happy Earth Day"
-msgstr ""
+msgstr "Sretan Dan planete Zemlje"
 
 # /16x9/Content_Settings.xml
 #~ msgctxt "#31482"

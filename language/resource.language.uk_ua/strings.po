@@ -5,19 +5,19 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2023-10-28 15:33+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2026-01-12 08:13+0000\n"
+"Last-Translator: Pavlo Marianov <acid@jack.kyiv.ua>\n"
 "Language-Team: Ukrainian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/uk_ua/>\n"
 "Language: uk_ua\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.1\n"
+"X-Generator: Weblate 5.15.1\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
-msgstr ""
+msgstr "Гарний відпочинок зі своїми медіафайлами"
 
 msgctxt "Addon Description"
 msgid "Clear away the clutter with a minimal skin designed to bring maximum impact to the artwork that you curate for your favourite movies, shows and music. Copacetic is a labour of love more than five years in the making. I hope you enjoy it."
@@ -34,27 +34,27 @@ msgstr "Список"
 # Common
 msgctxt "#31001"
 msgid "Billboard"
-msgstr ""
+msgstr "Дошка"
 
 # Common
 msgctxt "#31002"
 msgid "Showcase"
-msgstr ""
+msgstr "Коробка"
 
 # Common
 msgctxt "#31003"
 msgid "Strip"
-msgstr ""
+msgstr "Стрічка"
 
 # Common
 msgctxt "#31004"
 msgid "Grid"
-msgstr ""
+msgstr "Сітка"
 
 # Common
 msgctxt "#31005"
 msgid "Layout"
-msgstr ""
+msgstr "Вигляд"
 
 # Common
 msgctxt "#31006"
@@ -69,42 +69,42 @@ msgstr "Фанарт"
 # Common
 msgctxt "#31008"
 msgid "Square"
-msgstr ""
+msgstr "Квадрат"
 
 # Common
 msgctxt "#31031"
 msgid "Spotlight"
-msgstr ""
+msgstr "В центрі уваги"
 
 # Common
 msgctxt "#31032"
 msgid "Simple"
-msgstr ""
+msgstr "Простий"
 
 # Common
 msgctxt "#31033"
 msgid "Detailed"
-msgstr ""
+msgstr "Розширений"
 
 # /16x9/Templates_Dialogs.xml, /16x9/Notifications.xml
 msgctxt "#31009"
 msgid "Like song"
-msgstr ""
+msgstr "Сподобалась"
 
 # /16x9/Templates_Dialogs.xml, /16x9/Notifications.xml
 msgctxt "#31010"
 msgid "Unlike song"
-msgstr ""
+msgstr "Не сподобалась"
 
 # /16x9/Templates_Dialogs.xml, /16x9/Content_Infoscreens.xml
 msgctxt "#31011"
 msgid "Create radio station"
-msgstr ""
+msgstr "Створити радіостанцію"
 
 # /16x9/Content_Viewtype_Options.xml
 msgctxt "#31012"
 msgid "Sort"
-msgstr ""
+msgstr "Сортувати"
 
 # /16x9/Content_Viewtype_Options.xml
 msgctxt "#31013"
@@ -114,7 +114,7 @@ msgstr "Порядок"
 # /16x9/Content_Viewtype_Options.xml
 msgctxt "#31014"
 msgid "Include"
-msgstr ""
+msgstr "Містить"
 
 # /16x9/Content_Viewtype_Options.xml
 msgctxt "#31015"
@@ -124,72 +124,72 @@ msgstr "Трейлери"
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31016"
 msgid "Details"
-msgstr "Відомості"
+msgstr "Подробиці"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31017"
 msgid "Title"
-msgstr ""
+msgstr "Назва"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31018"
 msgid "Title and Info"
-msgstr ""
+msgstr "Назва та інформація"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31019"
 msgid "Title and Plot"
-msgstr ""
+msgstr "Назва та сюжет"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31020"
 msgid "Title and Biography"
-msgstr ""
+msgstr "Назва та біографія"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31021"
 msgid "Title and Review"
-msgstr ""
+msgstr "Назва та огляд"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31022"
 msgid "Title and Description"
-msgstr ""
+msgstr "Назва та опис"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31023"
 msgid "Clearlogos"
-msgstr ""
+msgstr "Чистий логотип"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31024"
 msgid "Flags"
-msgstr ""
+msgstr "Позначки"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31025"
 msgid "Studio"
-msgstr ""
+msgstr "Студія"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31026"
 msgid "Age rating"
-msgstr ""
+msgstr "Обмеження за віком"
 
 # /16x9/Content_Viewtype_Options_List.xml
 msgctxt "#31027"
 msgid "Thumbnails"
-msgstr ""
+msgstr "Ескізи"
 
 # /16x9/Content_Viewtype_Options_Showcase.xml
 msgctxt "#31028"
 msgid "Side"
-msgstr ""
+msgstr "Сторона"
 
 # /16x9/Content_Viewtype_Options_Showcase.xml
 msgctxt "#31029"
 msgid "Overlay"
-msgstr ""
+msgstr "Накладання"
 
 # /16x9/Content_Viewtype_Options_Grid.xml
 msgctxt "#31030"
@@ -206,7 +206,7 @@ msgstr ""
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31101"
 msgid "Rating"
-msgstr ""
+msgstr "Рейтинг"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31102"
@@ -271,27 +271,27 @@ msgstr ""
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31114"
 msgid "mins"
-msgstr ""
+msgstr "хв"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31115"
 msgid "pics"
-msgstr ""
+msgstr "картинок"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31116"
 msgid "pic"
-msgstr ""
+msgstr "картинка"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31117"
 msgid "channels"
-msgstr ""
+msgstr "канали"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31118"
 msgid "channel"
-msgstr ""
+msgstr "канал"
 
 # ########################################################################################################
 # ########################################################################################################
@@ -300,28 +300,28 @@ msgstr ""
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31200"
 msgid "Continue watching"
-msgstr ""
+msgstr "Продовжити перегляд"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31201"
 msgid "Next up"
-msgstr ""
+msgstr "Наступна"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31202"
 msgid "Latest movies"
-msgstr ""
+msgstr "Останні фільми"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31203"
 msgid "Latest TV shows"
-msgstr ""
+msgstr "Останні серіали"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
@@ -335,21 +335,21 @@ msgstr "Випадкові фільми"
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31205"
 msgid "Random TV shows"
-msgstr ""
+msgstr "Випадкові серіали"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31206"
 msgid "Latest albums"
-msgstr ""
+msgstr "Останні альбоми"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31207"
 msgid "Recently played albums"
-msgstr ""
+msgstr "Нещодавно прослухані альбоми"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
@@ -363,28 +363,28 @@ msgstr "Випадкові альбоми"
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31209"
 msgid "Liked songs"
-msgstr ""
+msgstr "Пісні які сподобались"
 
 # /16x9/Components_Settings.xml, 16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31210"
 msgid "Custom"
-msgstr ""
+msgstr "Власний"
 
 # /16x9/Templates_Widgets.xml
 msgctxt "#31211"
 msgid "More"
-msgstr ""
+msgstr "Більше"
 
 # /16x9/Templates_Widgets.xml
 msgctxt "#31212"
 msgid "Most played"
-msgstr ""
+msgstr "Найчастіше програвалось"
 
 # /16x9/Templates_Widgets.xml
 msgctxt "#31213"
 msgid "Similar"
-msgstr ""
+msgstr "Подібно"
 
 # /16x9/Templates_Widgets.xml
 msgctxt "#31214"
@@ -394,37 +394,37 @@ msgstr "Подібні виконавці"
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31215"
 msgid "Similar songs"
-msgstr ""
+msgstr "Подібні пісні"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31216"
 msgid "More from Season"
-msgstr ""
+msgstr "Ще з сезону"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31217"
 msgid "Episodes from Season"
-msgstr ""
+msgstr "Серії з сезону"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31218"
 msgid "More"
-msgstr ""
+msgstr "Більше"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31219"
 msgid "More from"
-msgstr ""
+msgstr "Більше з"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31220"
 msgid "More soundtracks"
-msgstr ""
+msgstr "Більше саундтреків"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31221"
 msgid "Similar albums"
-msgstr ""
+msgstr "Подібні альбоми"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31222"
@@ -447,22 +447,22 @@ msgstr "Стоп"
 # /16x9/Content_OSD.xml
 msgctxt "#31302"
 msgid "Rewind"
-msgstr "Перемотка назад"
+msgstr "Назад"
 
 # /16x9/Content_OSD.xml
 msgctxt "#31303"
 msgid "Forward"
-msgstr ""
+msgstr "Вперед"
 
 # /16x9/Content_OSD.xml
 msgctxt "#31304"
 msgid "Rating"
-msgstr ""
+msgstr "Рейтинг"
 
 # /16x9/Content_OSD.xml
 msgctxt "#31305"
 msgid "Playlist"
-msgstr "Список відтворювання"
+msgstr "Список відтворення"
 
 # /16x9/Notifications.xml
 msgctxt "#31306"
@@ -472,17 +472,17 @@ msgstr "Повний екран"
 # /16x9/Templates_MyPVR.xml
 msgctxt "#31307"
 msgid "Go to"
-msgstr ""
+msgstr "Перейти до"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31308"
 msgid "Timeshift"
-msgstr ""
+msgstr "Зсув у часі"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31309"
 msgid "Jump to"
-msgstr ""
+msgstr "Перейти до"
 
 # ########################################################################################################
 # ########################################################################################################
@@ -532,7 +532,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31402"
 msgid "Widgets"
-msgstr ""
+msgstr "Віджети"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31502"
@@ -542,7 +542,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31403"
 msgid "Views"
-msgstr ""
+msgstr "Подання"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31503"
@@ -584,7 +584,7 @@ msgstr ""
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31407"
 msgid "Night"
-msgstr ""
+msgstr "Темна"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31507"
@@ -595,7 +595,7 @@ msgstr ""
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31408"
 msgid "Light"
-msgstr "невелик."
+msgstr "Світла"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31409"
@@ -750,7 +750,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31425"
 msgid "Global"
-msgstr ""
+msgstr "Загально"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31426"
@@ -790,12 +790,12 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31732"
 msgid "seconds"
-msgstr ""
+msgstr "секунди"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31733"
 msgid "minutes"
-msgstr ""
+msgstr "хвилин"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31527"
@@ -996,7 +996,7 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31445"
 msgid "Widget"
-msgstr ""
+msgstr "Віджет"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31489"
@@ -1300,12 +1300,12 @@ msgstr ""
 # /16x9/Content_Settings.xml
 msgctxt "#31829"
 msgid "Large"
-msgstr ""
+msgstr "Велика"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31830"
 msgid "Small"
-msgstr ""
+msgstr "Мала"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31482"
@@ -1534,12 +1534,12 @@ msgstr "Бітрейт аудіо"
 # /16x9/Content.xml
 msgctxt "#31611"
 msgid "Memory"
-msgstr ""
+msgstr "Пам'ять"
 
 # /16x9/Content.xml
 msgctxt "#31612"
 msgid "CPU"
-msgstr ""
+msgstr "ЦП"
 
 # /16x9/Content.xml
 msgctxt "#31613"
@@ -1645,7 +1645,7 @@ msgstr ""
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31629"
 msgid "Muted"
-msgstr ""
+msgstr "Без звуку"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31630"

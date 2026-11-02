@@ -5,23 +5,23 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2024-07-21 19:50+0000\n"
-"Last-Translator: Konon-cat <konon@spark-mail.ru>\n"
+"PO-Revision-Date: 2026-06-01 23:16+0000\n"
+"Last-Translator: Andrei Stepanov <adem4ik@gmail.com>\n"
 "Language-Team: Russian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/ru_ru/>\n"
 "Language: ru_ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
-msgstr ""
+msgstr "Отличное времяпрепровождение с вашей медиатекой."
 
 msgctxt "Addon Description"
 msgid "Clear away the clutter with a minimal skin designed to bring maximum impact to the artwork that you curate for your favourite movies, shows and music. Copacetic is a labour of love more than five years in the making. I hope you enjoy it."
-msgstr ""
+msgstr "Избавьтесь от беспорядка с помощью минималистичной обложки, созданной, чтобы максимально эффектно представить иллюстрации, которые вы собираете для своих любимых фильмов, шоу и музыки. Copacetic — это любимый проект, создававшийся более пяти лет. Надеюсь, он вам понравится."
 
 # ########################################################################################################
 # ########################################################################################################
@@ -34,22 +34,22 @@ msgstr "Список"
 # Common
 msgctxt "#31001"
 msgid "Billboard"
-msgstr ""
+msgstr "Афиша"
 
 # Common
 msgctxt "#31002"
 msgid "Showcase"
-msgstr ""
+msgstr "Витрина"
 
 # Common
 msgctxt "#31003"
 msgid "Strip"
-msgstr ""
+msgstr "Лента"
 
 # Common
 msgctxt "#31004"
 msgid "Grid"
-msgstr ""
+msgstr "Сетка"
 
 # Common
 msgctxt "#31005"
@@ -74,37 +74,37 @@ msgstr "Квадрат"
 # Common
 msgctxt "#31031"
 msgid "Spotlight"
-msgstr ""
+msgstr "Сцена"
 
 # Common
 msgctxt "#31032"
 msgid "Simple"
-msgstr ""
+msgstr "Простой"
 
 # Common
 msgctxt "#31033"
 msgid "Detailed"
-msgstr ""
+msgstr "Подробный"
 
 # /16x9/Templates_Dialogs.xml, /16x9/Notifications.xml
 msgctxt "#31009"
 msgid "Like song"
-msgstr ""
+msgstr "Нравится песня"
 
 # /16x9/Templates_Dialogs.xml, /16x9/Notifications.xml
 msgctxt "#31010"
 msgid "Unlike song"
-msgstr ""
+msgstr "Не нравится песня"
 
 # /16x9/Templates_Dialogs.xml, /16x9/Content_Infoscreens.xml
 msgctxt "#31011"
 msgid "Create radio station"
-msgstr ""
+msgstr "Создать радиостанцию"
 
 # /16x9/Content_Viewtype_Options.xml
 msgctxt "#31012"
 msgid "Sort"
-msgstr ""
+msgstr "Сортировка"
 
 # /16x9/Content_Viewtype_Options.xml
 msgctxt "#31013"
@@ -114,7 +114,7 @@ msgstr "Порядок"
 # /16x9/Content_Viewtype_Options.xml
 msgctxt "#31014"
 msgid "Include"
-msgstr ""
+msgstr "Включить"
 
 # /16x9/Content_Viewtype_Options.xml
 msgctxt "#31015"
@@ -129,42 +129,42 @@ msgstr "Сведения"
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31017"
 msgid "Title"
-msgstr ""
+msgstr "Заголовок"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31018"
 msgid "Title and Info"
-msgstr ""
+msgstr "Заголовок и информация"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31019"
 msgid "Title and Plot"
-msgstr ""
+msgstr "Заголовок и сюжет"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31020"
 msgid "Title and Biography"
-msgstr ""
+msgstr "Заголовок и биография"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31021"
 msgid "Title and Review"
-msgstr ""
+msgstr "Заголовок и рецензия"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31022"
 msgid "Title and Description"
-msgstr ""
+msgstr "Заголовок и описание"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31023"
 msgid "Clearlogos"
-msgstr ""
+msgstr "Чистый логотип"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31024"
 msgid "Flags"
-msgstr ""
+msgstr "Флаги"
 
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31025"
@@ -174,7 +174,7 @@ msgstr "Студия"
 # /16x9/Content_Viewtype_Options_XX.xml
 msgctxt "#31026"
 msgid "Age rating"
-msgstr ""
+msgstr "Возрастной рейтинг"
 
 # /16x9/Content_Viewtype_Options_List.xml
 msgctxt "#31027"
@@ -189,12 +189,12 @@ msgstr "Сбоку"
 # /16x9/Content_Viewtype_Options_Showcase.xml
 msgctxt "#31029"
 msgid "Overlay"
-msgstr ""
+msgstr "Наложение"
 
 # /16x9/Content_Viewtype_Options_Grid.xml
 msgctxt "#31030"
 msgid "Breadcrumb"
-msgstr ""
+msgstr "Навигационная цепочка"
 
 # ########################################################################################################
 # ########################################################################################################
@@ -206,12 +206,12 @@ msgstr "Заканчивается"
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31101"
 msgid "Rating"
-msgstr ""
+msgstr "Оценка"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31102"
 msgid "Credit"
-msgstr ""
+msgstr "Создатель"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31103"
@@ -221,22 +221,22 @@ msgstr "для"
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31104"
 msgid "including"
-msgstr ""
+msgstr "включая"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31105"
 msgid "8K"
-msgstr ""
+msgstr "8К"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31106"
 msgid "4K"
-msgstr ""
+msgstr "4К"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31107"
 msgid "Dolby Vision"
-msgstr ""
+msgstr "Dolby Vision"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31108"
@@ -246,52 +246,52 @@ msgstr "HDR"
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31109"
 msgid "Ultra HD"
-msgstr ""
+msgstr "Ultra HD (сверхвысокая чёткость)"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31110"
 msgid "Full HD"
-msgstr ""
+msgstr "Full HD"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31111"
 msgid "HD"
-msgstr ""
+msgstr "HD"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31112"
 msgid "SD"
-msgstr ""
+msgstr "SD"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31113"
 msgid "HLG"
-msgstr ""
+msgstr "HLG"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31114"
 msgid "mins"
-msgstr ""
+msgstr "мин"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31115"
 msgid "pics"
-msgstr ""
+msgstr "фото"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31116"
 msgid "pic"
-msgstr ""
+msgstr "фото"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31117"
 msgid "channels"
-msgstr ""
+msgstr "каналы"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31118"
 msgid "channel"
-msgstr ""
+msgstr "канал"
 
 # ########################################################################################################
 # ########################################################################################################
@@ -349,7 +349,7 @@ msgstr "Последние добавленные альбомы"
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31207"
 msgid "Recently played albums"
-msgstr ""
+msgstr "Недавно воспроизведённые альбомы"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
@@ -363,7 +363,7 @@ msgstr "Случайные альбомы"
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31209"
 msgid "Liked songs"
-msgstr ""
+msgstr "Понравившиеся песни"
 
 # /16x9/Components_Settings.xml, 16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Widgets.xml
@@ -379,7 +379,7 @@ msgstr "Ещё"
 # /16x9/Templates_Widgets.xml
 msgctxt "#31212"
 msgid "Most played"
-msgstr ""
+msgstr "Чаще всего воспроизводимые"
 
 # /16x9/Templates_Widgets.xml
 msgctxt "#31213"
@@ -394,17 +394,17 @@ msgstr "Похожие исполнители"
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31215"
 msgid "Similar songs"
-msgstr ""
+msgstr "Похожие песни"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31216"
 msgid "More from Season"
-msgstr ""
+msgstr "Больше из сезона"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31217"
 msgid "Episodes from Season"
-msgstr ""
+msgstr "Серии из сезона"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31218"
@@ -419,17 +419,17 @@ msgstr "Больше из"
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31220"
 msgid "More soundtracks"
-msgstr ""
+msgstr "Больше саундтреков"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31221"
 msgid "Similar albums"
-msgstr ""
+msgstr "Похожие альбомы"
 
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31222"
 msgid "Featuring"
-msgstr ""
+msgstr "При участии"
 
 # ########################################################################################################
 # ########################################################################################################
@@ -452,12 +452,12 @@ msgstr "Перемотка назад"
 # /16x9/Content_OSD.xml
 msgctxt "#31303"
 msgid "Forward"
-msgstr ""
+msgstr "Вперёд"
 
 # /16x9/Content_OSD.xml
 msgctxt "#31304"
 msgid "Rating"
-msgstr ""
+msgstr "Оценка"
 
 # /16x9/Content_OSD.xml
 msgctxt "#31305"
@@ -472,17 +472,17 @@ msgstr "Полный экран"
 # /16x9/Templates_MyPVR.xml
 msgctxt "#31307"
 msgid "Go to"
-msgstr ""
+msgstr "Перейти к"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31308"
 msgid "Timeshift"
-msgstr ""
+msgstr "Сдвиг по времени"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31309"
 msgid "Jump to"
-msgstr ""
+msgstr "Перейти к"
 
 # ########################################################################################################
 # ########################################################################################################
@@ -494,7 +494,7 @@ msgstr "Основное"
 # /16x9/Content_Settings.xml
 msgctxt "#31500"
 msgid "Configure your Copacetic theme, menus and background artwork service."
-msgstr ""
+msgstr "Настройте тему Copacetic, меню и службу фоновых иллюстраций."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31416"
@@ -504,7 +504,7 @@ msgstr "Меню"
 # /16x9/Content_Settings.xml
 msgctxt "#31516"
 msgid "Choose the shortcuts you wish to add to your home and shutdown menus"
-msgstr ""
+msgstr "Выберите ярлыки, которые хотите добавить в главное меню и меню выключения"
 
 # /16x9/Content_Settings.xml
 # /16x9/Content.xml
@@ -516,7 +516,7 @@ msgstr "Фон"
 # /16x9/Content.xml
 msgctxt "#31532"
 msgid "Customise background slideshows, brightness and panel opacity"
-msgstr ""
+msgstr "Настройте фоновые слайд-шоу, яркость и прозрачность панелей"
 
 # /16x9/Content_Settings.xml
 # /16x9/Content.xml
@@ -527,7 +527,7 @@ msgstr "Главное меню"
 # /16x9/Content_Settings.xml
 msgctxt "#31501"
 msgid "Get your home screen looking just the way you want it."
-msgstr ""
+msgstr "Сделайте домашний экран таким, каким вы хотите его видеть."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31402"
@@ -537,7 +537,7 @@ msgstr "Виджеты"
 # /16x9/Content_Settings.xml
 msgctxt "#31502"
 msgid "Build out your home screen with up to nine fully customisable widgets."
-msgstr ""
+msgstr "Соберите домашний экран из девяти полностью настраиваемых виджетов."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31403"
@@ -547,17 +547,17 @@ msgstr "Режимы просмотра"
 # /16x9/Content_Settings.xml
 msgctxt "#31503"
 msgid "Choose which views to enable for different parts of Kodi. Views can be customised for each individual content type from the options menu when browsing your media."
-msgstr ""
+msgstr "Выберите, какие виды включить для разных разделов Kodi. Виды можно настраивать для каждого типа контента из меню параметров при просмотре медиа."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31404"
 msgid "Customisations"
-msgstr ""
+msgstr "Настройки"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31504"
 msgid "Make Copacetic your own with tweaks that change the functionality of the skin."
-msgstr ""
+msgstr "Сделайте Copacetic своим с помощью настроек, изменяющих функциональность обложки."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31405"
@@ -567,29 +567,29 @@ msgstr "Дополнительно"
 # /16x9/Content_Settings.xml
 msgctxt "#31505"
 msgid "Configure exclusive Copacetic features including embedded lists, the music player widget, in-view multiart slideshows and automatic trailer playback."
-msgstr ""
+msgstr "Настройте эксклюзивные функции Copacetic, включая встроенные списки, виджет музыкального плеера, слайд-шоу в представлениях со множеством иллюстраций и автоматическое воспроизведение трейлеров."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31406"
 msgid "Experiments"
-msgstr ""
+msgstr "Эксперименты"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31506"
 msgid "New features being tested or those requested by users that don't necessarily meet the desisgn ethos of the rest of Copacetic. It's recommended to leave these off for optimal user experience."
-msgstr ""
+msgstr "Новые функции, находящиеся в стадии тестирования или запрошенные пользователями, которые не обязательно соответствуют дизайн-идеологии остальной части Copacetic. Для оптимального взаимодействия рекомендуется оставить их отключёнными."
 
 # General
 # /16x9/Content.xml
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31407"
 msgid "Night"
-msgstr ""
+msgstr "Ночная"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31507"
 msgid "Select 'Night' or 'Light' theme. Switch between themes on the fly via the shutdown menu."
-msgstr ""
+msgstr "Выберите тему «Ночная» или «Светлая». Переключайтесь между темами на лету через меню выключения."
 
 # /16x9/Content.xml
 # /16x9/Variables_Labels_Media.xml
@@ -600,112 +600,112 @@ msgstr "небольшие"
 # /16x9/Content_Settings.xml
 msgctxt "#31409"
 msgid "Accent colour"
-msgstr ""
+msgstr "Акцентный цвет"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31509"
 msgid "Personalise Copacetic with your own accent colour. Where info is displayed on top of this colour, such as the episodes count icon in Grid view, Copacetic will automatically select between white and black text to maximise contrast."
-msgstr ""
+msgstr "Настройте Copacetic под себя с помощью собственного акцентного цвета. Там, где информация отображается поверх этого цвета, например значок количества серий в виде «Сетка», Copacetic автоматически выберет белый или чёрный цвет текста для максимальной контрастности."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31410"
 msgid "Choose accent colour"
-msgstr ""
+msgstr "Выбрать акцентный цвет"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31411"
 msgid "Reset accent colour"
-msgstr ""
+msgstr "Сбросить акцентный цвет"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31720"
 msgid "Speed up animations and window transitions [BETA]"
-msgstr ""
+msgstr "Ускорить анимацию и переходы между окнами [БЕТА]"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31820"
 msgid "Reduces the default animation times for transitioning between windows and visibility fades. Removes delays on certain animations and disabled others entirely."
-msgstr ""
+msgstr "Уменьшает время анимации по умолчанию для переходов между окнами и затуханий видимости. Убирает задержки для определённых анимаций и полностью отключает другие."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31721"
 msgid "Disable all viewtype scroll animations [BETA]"
-msgstr ""
+msgstr "Отключить всю анимацию прокрутки представлений [БЕТА]"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31821"
 msgid "Further speeds up browsing by setting the scrolltime for views to 0, removing the transitionary animations when navigating between listitems."
-msgstr ""
+msgstr "Дополнительно ускоряет навигацию, устанавливая время прокрутки для представлений в 0, удаляя анимацию переходов при навигации между элементами списка."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31412"
 msgid "Recommended Kodi settings for Copacetic"
-msgstr ""
+msgstr "Рекомендуемые настройки Kodi для Copacetic"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31512"
 msgid "Highlights the Kodi settings recommended to change for optimal Copacetic user experience. Toggle each proposed change on/off to your liking, then accept the changes you wish to keep."
-msgstr ""
+msgstr "Выделяет настройки Kodi, которые рекомендуется изменить для оптимального взаимодействия с Copacetic. Включите/отключите каждое предлагаемое изменение по своему усмотрению, затем примите изменения, которые хотите сохранить."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31413"
 msgid "Copacetic recommends changing the following Kodi settings for optimal user experience. Disable settings if you wish to keep their current value. Faded settings are disabled and show the current value."
-msgstr ""
+msgstr "Copacetic рекомендует изменить следующие настройки Kodi для оптимального взаимодействия. Отключите параметры, если хотите сохранить их текущее значение. Затемнённые параметры отключены и показывают текущее значение."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31414"
 msgid "These will not be changed."
-msgstr ""
+msgstr "Они не будут изменены."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31421"
 msgid "Enable clearlogo cropper"
-msgstr ""
+msgstr "Включить обрезку логотипов"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31521"
 msgid "Clearlogos cached in Kodi's texture library will be cropped as they are required. Cropped versions are saved to a separate cache. Once a cropped clearlogo is cached, performance impact should be minimal. No changes are made to the original artwork. This process is run by Copacetic as a background service. Disable to improve performance."
-msgstr ""
+msgstr "Логотипы, кэшированные в библиотеке текстур Kodi, будут обрезаться по мере необходимости. Обрезанные версии сохраняются в отдельный кэш. После кэширования обрезанного логотипа влияние на производительность должно быть минимальным. Исходные иллюстрации не изменяются. Этот процесс выполняется Copacetic как фоновая служба. Отключите для повышения производительности."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31422"
 msgid "Clear cache"
-msgstr ""
+msgstr "Очистить кэш"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31522"
 msgid "This will delete the cropped clearlogo cache. To prevent cropped clearlogos from being cached, make sure to disable the clearlogo cropping background service above."
-msgstr ""
+msgstr "Это удалит кэш обрезанных логотипов. Чтобы предотвратить кэширование обрезанных логотипов, убедитесь, что вы отключили фоновую службу обрезки логотипов выше."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31423"
 msgid "Colourise media flags"
-msgstr ""
+msgstr "Раскрасить медиафлаги"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31523"
 msgid "Media flags are colourised using the dominant colour from the processed clearlogo. The dominant colour will be used as long as there is enough contrast with the current background colour. You can adjust the contrast thresholds for dark and light backgrounds below."
-msgstr ""
+msgstr "Медиафлаги раскрашиваются с использованием доминирующего цвета из обработанного логотипа. Доминирующий цвет будет использоваться при условии достаточной контрастности с текущим цветом фона. Ниже вы можете настроить пороги контрастности для тёмного и светлого фона."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31424"
 msgid "Adjust colour contrast thresholds"
-msgstr ""
+msgstr "Настроить пороги цветовой контрастности"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31524"
 msgid "Adjust the amount of contrast required between the background and the flag colour. Raising the bottom threshold means only lighter colours will be accepted on dark backgrounds. Lowering the top threshold means only darker colours can be used on light backgrounds. Avoids dark flags on dark backgrounds or light flags on light backgrounds. Default range: 65 - 440."
-msgstr ""
+msgstr "Настройте требуемый уровень контрастности между фоном и цветом флага. Повышение нижнего порога означает, что на тёмном фоне будут приниматься только более светлые цвета. Понижение верхнего порога означает, что на светлом фоне можно использовать только более тёмные цвета. Избегает тёмных флагов на тёмном фоне или светлых флагов на светлом фоне. Диапазон по умолчанию: 65–440."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31428"
 msgid "Prefer keyart for poster views on info screens and dialogs"
-msgstr ""
+msgstr "Предпочитать ключевые иллюстрации для представлений с постерами на инфо-экранах и в диалогах"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31700"
 msgid "Prefer landscape art for fanart views on info screens and dialogs"
-msgstr ""
+msgstr "Предпочитать горизонтальные иллюстрации для представлений с фан-артом на инфо-экранах и в диалогах"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31417"
@@ -715,37 +715,37 @@ msgstr "Главное меню"
 # /16x9/Content_Settings.xml
 msgctxt "#31517"
 msgid "Configure your home menu shortcuts. For each shortcut, you can select an optional background to override the default slideshows."
-msgstr ""
+msgstr "Настройте ярлыки главного меню. Для каждого ярлыка вы можете выбрать необязательный фон, чтобы переопределить слайд-шоу по умолчанию."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31418"
 msgid "Shutdown menu"
-msgstr ""
+msgstr "Меню выключения"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31518"
 msgid "Configure your shutdown menu shortcuts. Context-dependent 'Home', 'Theme' and 'Settings' shortcuts cannot be removed."
-msgstr ""
+msgstr "Настройте ярлыки меню выключения. Зависящие от контекста ярлыки «Главный экран», «Тема» и «Настройки» нельзя удалить."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31492"
 msgid "Enable home shortcut in Shutdown menu"
-msgstr ""
+msgstr "Включить ярлык «Главный экран» в меню выключения"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31493"
 msgid "Enable theme switcher shortcut in Shutdown menu"
-msgstr ""
+msgstr "Включить ярлык переключения темы в меню выключения"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31494"
 msgid "Enable LibreELEC menu shortcut in Shutdown menu"
-msgstr ""
+msgstr "Включить ярлык меню LibreELEC в меню выключения"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31419"
 msgid "Reset all menus"
-msgstr ""
+msgstr "Сбросить все меню"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31425"
@@ -755,242 +755,242 @@ msgstr "Общий"
 # /16x9/Content_Settings.xml
 msgctxt "#31426"
 msgid "Limit background slideshow artwork to..."
-msgstr ""
+msgstr "Ограничить иллюстрации фонового слайд-шоу…"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31526"
 msgid "Choose to include only fanarts from the selected sections of your library in the background slideshow, or select a custom path, playlist or folder of images."
-msgstr ""
+msgstr "Выберите, чтобы включить в фоновое слайд-шоу только фан-арт из выбранных разделов вашей медиатеки, или выберите собственный путь, плейлист или папку с изображениями."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31436"
 msgid "Movies / TV shows / Artists"
-msgstr ""
+msgstr "Фильмы / ТВ-передачи / Исполнители"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31437"
 msgid "Movies / TV shows"
-msgstr ""
+msgstr "Фильмы / ТВ-передачи"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31438"
 msgid "Custom source"
-msgstr ""
+msgstr "Пользовательский источник"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31439"
 msgid "Choose path or playlist..."
-msgstr ""
+msgstr "Выберите путь или плейлист…"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31427"
 msgid "Background slideshow speed"
-msgstr ""
+msgstr "Скорость фонового слайд-шоу"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31732"
 msgid "seconds"
-msgstr ""
+msgstr "с"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31733"
 msgid "minutes"
-msgstr ""
+msgstr "мин"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31527"
 msgid "Choose how quickly artwork in the slideshow should be refreshed. Default: 10 seconds"
-msgstr ""
+msgstr "Выберите, как часто должны обновляться иллюстрации в слайд-шоу. По умолчанию: 10 секунд"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31440"
 msgid "Background slideshow artwork brightness (%)"
-msgstr ""
+msgstr "Яркость иллюстраций фонового слайд-шоу (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31540"
 msgid "Choose the brightness of backgrounds displayed on the home screen and other windows such as Settings and Add-ons. Default: 33%"
-msgstr ""
+msgstr "Выберите яркость фона, отображаемого на домашнем экране и в других окнах, таких как «Настройки» и «Дополнения». По умолчанию: 33%"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31487"
 msgid "Opacity of background panels (%)"
-msgstr ""
+msgstr "Непрозрачность фоновых панелей (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31587"
 msgid "Adjust the opacity of background panels that appear on top of artwork. Default: 75%"
-msgstr ""
+msgstr "Настройте непрозрачность фоновых панелей, которые появляются поверх иллюстраций. По умолчанию: 75%"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31722"
 msgid "Info screen background artwork brightness (%)"
-msgstr ""
+msgstr "Яркость фоновых иллюстраций на информационном экране (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31822"
 msgid "Choose the brightness of background artwork displayed when you bring up info for a list item. Default: 25%"
-msgstr ""
+msgstr "Выберите яркость фоновых иллюстраций, отображаемых при вызове информации для элемента списка. По умолчанию: 25%"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31723"
 msgid "Library/Playback"
-msgstr ""
+msgstr "Медиатека/воспроизведение"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31719"
 msgid "OSD background brightness during video playback (%)"
-msgstr ""
+msgstr "Яркость фона OSD во время воспроизведения видео (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31819"
 msgid "Adjust the brightness of videos when OSD controls or settings screens are visible on top. Default: 25%"
-msgstr ""
+msgstr "Настройте яркость видео, когда поверх видны элементы управления OSD или экраны настроек. По умолчанию: 25%"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31495"
 msgid "Show the name of the current displayed background"
-msgstr ""
+msgstr "Показывать имя текущего отображаемого фона"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31433"
 msgid "Override home background with global slideshow"
-msgstr ""
+msgstr "Переопределить фон домашнего экрана глобальным слайд-шоу"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31533"
 msgid "Use the selected global slideshow on the homescreen instead of local or skin.shortcuts slideshows"
-msgstr ""
+msgstr "Использовать выбранное глобальное слайд-шоу на домашнем экране вместо локальных слайд-шоу или слайд-шоу skin.shortcuts"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31429"
 msgid "Enable widgets on the home screen"
-msgstr ""
+msgstr "Включить виджеты на домашнем экране"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31529"
 msgid "Add widgets to your homescreen. To configure, go to the Widgets tab in the left menu. Choose from preset widgets, such as 'Continue watching', 'Next up' and 'Liked songs', or configure your own using any plugin source. Then select the view and display type you want to use for each widget. For custom widgets, you can also set the name, sort method and limit."
-msgstr ""
+msgstr "Добавьте виджеты на домашний экран. Для настройки перейдите на вкладку «Виджеты» в левом меню. Выберите из предустановленных виджетов, таких как «Продолжить просмотр», «Следующее» и «Понравившиеся песни», или настройте свои, используя любой источник дополнений. Затем выберите представление и тип отображения, которые вы хотите использовать для каждого виджета. Для пользовательских виджетов вы также можете задать название, способ сортировки и предел."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31430"
 msgid "Reset home screen widgets"
-msgstr ""
+msgstr "Сбросить виджеты домашнего экрана"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31530"
 msgid "Reset home widgets to Copacetic defaults: 1. Continue watching 2. Next up 3. Latest movies 4. Latest TV shows"
-msgstr ""
+msgstr "Сбросить домашние виджеты к настройкам Copacetic по умолчанию: 1. Продолжить просмотр 2. Следующее 3. Последние фильмы 4. Последние ТВ-передачи"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31431"
 msgid "Are you sure you want to reset all home widgets back to default?"
-msgstr ""
+msgstr "Уверены, что хотите сбросить все домашние виджеты к значениям по умолчанию?"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31704"
 msgid "Enable global search on the home screen"
-msgstr ""
+msgstr "Включить глобальный поиск на домашнем экране"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31705"
 msgid "Configure global search"
-msgstr ""
+msgstr "Настроить глобальный поиск"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31706"
 msgid "Enable global search for this media type"
-msgstr ""
+msgstr "Включить глобальный поиск для этого типа медиа"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31707"
 msgid "Include 'plot' field in this search"
-msgstr ""
+msgstr "Включить поле «сюжет» в этот поиск"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31708"
 msgid "Include 'tag' field in this search"
-msgstr ""
+msgstr "Включить поле «метка» в этот поиск"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31709"
 msgid "Include 'biography' field in this search"
-msgstr ""
+msgstr "Включить поле «биография» в этот поиск"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31710"
 msgid "Include 'review' field in this search"
-msgstr ""
+msgstr "Включить поле «рецензия» в этот поиск"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31442"
 msgid "Enable screensaver"
-msgstr ""
+msgstr "Включить хранитель экрана"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31542"
 msgid "After 10 seconds of inactivity, the home menu will be hidden, allowing the background artwork slideshow to run as a screensaver."
-msgstr ""
+msgstr "После 10 секунд бездействия домашнее меню будет скрыто, что позволит фоновому слайд-шоу иллюстраций работать в качестве хранителя экрана."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31443"
 msgid "Show clearlogos"
-msgstr ""
+msgstr "Показывать логотипы"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31543"
 msgid "Clearlogos will be displayed as part of the screensaver when they are available."
-msgstr ""
+msgstr "Логотипы будут отображаться как часть хранителя экрана, когда они доступны."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31444"
 msgid "Furniture to include"
-msgstr ""
+msgstr "Элементы для включения"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31544"
 msgid "Choose the furniture you wish to show in the top-right corner of the home screen. Note that for weather information to be included, you must first install a weather add-on and ensure it is enabled under Settings > Services > Weather."
-msgstr ""
+msgstr "Выберите элементы, которые вы хотите показывать в правом верхнем углу домашнего экрана. Обратите внимание, что для включения информации о погоде необходимо сначала установить дополнение погоды и убедиться, что оно включено в разделе «Настройки» > «Службы» > «Погода»."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31724"
 msgid "Clock"
-msgstr ""
+msgstr "Часы"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31725"
 msgid "None"
-msgstr ""
+msgstr "Нет"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31726"
 msgid "Clock and date"
-msgstr ""
+msgstr "Часы и дата"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31727"
 msgid "Clock, date and weather"
-msgstr ""
+msgstr "Часы, дата и погода"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31728"
 msgid "Make persistent across entire home screen, including widgets"
-msgstr ""
+msgstr "Показывать постоянно на всём домашнем экране, включая виджеты"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31729"
 msgid "Enable second background slideshow"
-msgstr ""
+msgstr "Включить второе фоновое слайд-шоу"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31730"
 msgid "Limit second background slideshow to..."
-msgstr ""
+msgstr "Ограничить второе фоновое слайд-шоу…"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31731"
 msgid "Start times"
-msgstr ""
+msgstr "Время начала"
 
 # Widgets
 # /16x9/Content_Settings.xml
@@ -1001,62 +1001,62 @@ msgstr "Виджет"
 # /16x9/Content_Settings.xml
 msgctxt "#31489"
 msgid "Configure widgets"
-msgstr ""
+msgstr "Настроить виджеты"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31701"
 msgid "Movement"
-msgstr ""
+msgstr "Движение"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31496"
 msgid "Spotlight content with auto scroll"
-msgstr ""
+msgstr "Подсвечивать содержимое с авто-прокруткой"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31596"
 msgid "Widget will move forward one place every 10 seconds while system is idle. When combined with trailer autoplay option below to allow for each item's trailer to be played automatically as soon as the previous trailer is finished while system is idle."
-msgstr ""
+msgstr "Виджет будет перемещаться на одну позицию вперёд каждые 10 секунд, пока система бездействует. В сочетании с опцией автоматического воспроизведения трейлеров ниже позволяет автоматически воспроизводить трейлер каждого элемента, как только предыдущий трейлер закончится, пока система бездействует."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31467"
 msgid "Automatically play trailers for movies or tv shows in this widget"
-msgstr ""
+msgstr "Автоматически воспроизводить трейлеры для фильмов или ТВ-передач в этом виджете"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31567"
 msgid "Trailers will be played back automatically from any widgets showing movies or tv shows. Enable 'Spotlight content with auto scroll' option above to create a dynamic playlist of trailers for all items in the widget. Set delay in seconds before trailer playback starts under Extras > Trailer autoplay"
-msgstr ""
+msgstr "Трейлеры будут автоматически воспроизводиться из любых виджетов, показывающих фильмы или ТВ-передачи. Включите опцию «Подсвечивать содержимое с авто-прокруткой» выше, чтобы создать динамический плейлист трейлеров для всех элементов виджета. Установите задержку в секундах перед началом воспроизведения трейлера в разделе «Дополнительно» > «Автовоспроизведение трейлеров»"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31476"
 msgid "Enable clearlogos"
-msgstr ""
+msgstr "Включить логотипы"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31498"
 msgid "Prefer keyart for poster views"
-msgstr ""
+msgstr "Предпочитать ключевые иллюстрации для представлений с постерами"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31598"
 msgid "Remember 'keyart' is a custom art type. To ensure it is fetched locally or remotely by scrapers, make sure 'keyart' is included in your art type whitelists for movies and / or tv shows. You can do this by choosing 'Recommended Kodi Settings' under Copacetic > General, or by navigating to Settings > Media > Videos > Artwork."
-msgstr ""
+msgstr "Помните, что «keyart» — это пользовательский тип иллюстраций. Чтобы гарантировать его получение локально или удалённо скреперами, убедитесь, что «keyart» включён в ваши белые списки типов иллюстраций для фильмов и/или ТВ-передач. Вы можете сделать это, выбрав «Рекомендуемые настройки Kodi» в разделе Copacetic > Общие или перейдя в «Настройки» > «Медиа» > «Видео» > «Иллюстрации»."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31499"
 msgid "Prefer landscape art for fanart views"
-msgstr ""
+msgstr "Предпочитать горизонтальные иллюстрации для представлений с фан-артом"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31599"
 msgid "Remember 'landscape' is a custom art type. To ensure it is fetched locally or remotely by scrapers, make sure 'landscape' is included in your art type whitelists for movies and / or tv shows. You can do this by choosing 'Recommended Kodi Settings' under Copacetic > General, or by navigating to Settings > Media > Videos > Artwork."
-msgstr ""
+msgstr "Помните, что «landscape» — это пользовательский тип иллюстраций. Чтобы гарантировать его получение локально или удалённо скреперами, убедитесь, что «landscape» включён в ваши белые списки типов иллюстраций для фильмов и/или ТВ-передач. Вы можете сделать это, выбрав «Рекомендуемые настройки Kodi» в разделе Copacetic > Общие или перейдя в «Настройки» > «Медиа» > «Видео» > «Иллюстрации»."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31477"
 msgid "Prefer thumbnails for episodes instead of tv show fanart"
-msgstr ""
+msgstr "Предпочитать миниатюры для серий вместо фан-арта ТВ-передач"
 
 # Views
 # /16x9/Content_Settings.xml
@@ -1067,83 +1067,83 @@ msgstr "Режим киоска"
 # /16x9/Content_Settings.xml
 msgctxt "#31575"
 msgid "When kiosk mode is enabled, all view customisation options in the hidden menu will be removed so no further changes can be made."
-msgstr ""
+msgstr "Когда режим киоска включён, все параметры настройки представления в скрытом меню будут удалены, чтобы нельзя было вносить дальнейшие изменения."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31486"
 msgid "Disable hidden options menu"
-msgstr ""
+msgstr "Отключить скрытое меню параметров"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31586"
 msgid "With koisk mode enabled, you have the option to completely disable the hidden options menu. Warning: This will limit your ability to switch between views, change sort method, filter or search."
-msgstr ""
+msgstr "При включённом режиме киоска у вас есть возможность полностью отключить скрытое меню параметров. Предупреждение: Это ограничит вашу возможность переключаться между представлениями, изменять способ сортировки, фильтровать или искать."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31488"
 msgid "Add shutdown menu shortcut to hidden views menu"
-msgstr ""
+msgstr "Добавить ярлык меню выключения в скрытое меню представлений"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31441"
 msgid "Add movement to fullscreen artwork"
-msgstr ""
+msgstr "Добавить движение полноэкранным иллюстрациям"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31541"
 msgid "Adds a subtle 'Ken Burns effect'-style pan and zoom to the fullscreen background artwork."
-msgstr ""
+msgstr "Добавляет тонкое панорамирование и масштабирование в стиле «эффекта Кена Бёрнса» к полноэкранным фоновым иллюстрациям."
 
 # Views
 # /16x9/Content_Settings.xml
 msgctxt "#31446"
 msgid "Enable view for video and music windows"
-msgstr ""
+msgstr "Включить представление для окон видео и музыки"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31546"
 msgid "Choose which windows to enable for each of the four additional Copacetic views. Keep any views you don't use disabled to speed up loading when a new media window is opened in Kodi."
-msgstr ""
+msgstr "Выберите, для каких окон включать каждое из четырёх дополнительных представлений Copacetic. Держите неиспользуемые представления отключёнными, чтобы ускорить загрузку при открытии нового медиа-окна в Kodi."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31717"
 msgid "Enable scrolling on long titles instead of truncation (...)"
-msgstr ""
+msgstr "Включить прокрутку длинных названий вместо сокращения (…)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31447"
 msgid "Enable view for add-on and program windows"
-msgstr ""
+msgstr "Включить представление для окон дополнений и программ"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31734"
 msgid "Enable view for favourites browser"
-msgstr ""
+msgstr "Включить представление для браузера избранного"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31448"
 msgid "Enable view for pictures window"
-msgstr ""
+msgstr "Включить представление для окна изображений"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31715"
 msgid "Item artwork size and orientation"
-msgstr ""
+msgstr "Размер и ориентация иллюстраций элементов"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31815"
 msgid "Choose how big you wish items to be presented in Grid panel views and whether you wish to scroll vertically or horizontally. For Fanart views, 'Horizontal large' displays 3 items per row and 'Horizontal small' displays 4. For Poster and Square views, 'Horizontal large' displays 5 items per row and 'Horizontal small' displays 7. 'Vertical' displays two rows at all times."
-msgstr ""
+msgstr "Выберите, насколько крупными вы хотите видеть элементы в представлениях с панелью-сеткой и хотите ли вы прокручивать по вертикали или горизонтали. Для представлений Фан-арта: «Горизонтальный крупный» отображает 3 элемента в строке, «Горизонтальный мелкий» — 4. Для представлений «Постер» и «Квадрат»: «Горизонтальный крупный» отображает 5 элементов в строке, «Горизонтальный мелкий» — 7. «Вертикальный» всегда отображает две строки."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31449"
 msgid "Dim artwork for watched items or disabled add-ons"
-msgstr ""
+msgstr "Затемнять иллюстрации для просмотренных элементов или отключённых дополнений"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31450"
 msgid "Checkmarks for watched items or enabled add-ons"
-msgstr ""
+msgstr "Галочки для просмотренных элементов или включённых дополнений"
 
 # Customisations
 # /16x9/Content_Settings.xml
@@ -1154,315 +1154,315 @@ msgstr "Показать количество непросмотренных с�
 # /16x9/Content_Settings.xml
 msgctxt "#31551"
 msgid "Display the total number of unwatched episodes for a tv show or season on top of the progress bar."
-msgstr ""
+msgstr "Отображать общее количество непросмотренных серий для ТВ-передачи или сезона поверх индикатора прогресса."
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31452"
 msgid "Preferred classification ratings"
-msgstr ""
+msgstr "Предпочитаемая система классификации рейтингов"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31552"
 msgid "Choose the classification system to use when displaying age rating flags. If your preferred classication system is not present, please request it on the forum."
-msgstr ""
+msgstr "Выберите систему классификации для отображения флагов возрастного рейтинга. Если вашей предпочитаемой системы классификации нет, пожалуйста, запросите её на форуме."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31453"
 msgid "Scroll by sort letter"
-msgstr ""
+msgstr "Прокрутка по букве сортировки"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31553"
 msgid "When enabled, press down on horizontal scrollbars and right on vertical scrollbars to scroll by sort letter/number. This is dependent on the sort method currently selected. You can scroll by Name, File, Artist, Artist/Year, Album, Title, Original title, Rating, User rating, Play count, Number of discs, Duration, Appearances."
-msgstr ""
+msgstr "При включении нажмите вниз на горизонтальных полосах прокрутки и вправо на вертикальных полосах прокрутки для прокрутки по букве/номеру сортировки. Это зависит от выбранного в данный момент способа сортировки. Вы можете прокручивать по: Название, Файл, Исполнитель, Исполнитель/Год, Альбом, Название, Оригинальное название, Рейтинг, Рейтинг пользователя, Количество просмотров, Количество дисков, Длительность, Появления."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31454"
 msgid "Liked song rating threshold"
-msgstr ""
+msgstr "Порог оценки для «понравившихся» песен"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31716"
 msgid "Prefer white to grey text colour for plot in Showcase and Strip views"
-msgstr ""
+msgstr "Предпочитать белый цвет текста серому для сюжета в представлениях «Витрина» и «Лента»"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31554"
 msgid "Overlay a binary user rating system (liked or not) on top of standard song user ratings. User ratings equal to or above this threshold are 'liked'. You can 'like' (set a user rating equivalent to the threshold) or 'unlike' (clear user rating) a song via the context menu, or embedded music player if enabled under Extras. The threshold will also be used by the 'Liked songs' widget. Set to 'Off' to disable."
-msgstr ""
+msgstr "Наложить бинарную систему пользовательских оценок (нравится или нет) поверх стандартных пользовательских оценок треков. Пользовательские оценки, равные или превышающие этот порог, считаются «понравившимися». Вы можете «лайкнуть» (установить пользовательскую оценку, равную порогу) или «убрать лайк» (очистить пользовательскую оценку) трека через контекстное меню или встроенный музыкальный плеер, если он включён в разделе «Дополнительно». Порог также будет использоваться виджетом «Понравившиеся треки». Установите значение «Откл.», чтобы отключить."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31484"
 msgid "Info screens"
-msgstr ""
+msgstr "Информационные экраны"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31703"
 msgid "Use TMDbHelper for info screen widgets instead of library content"
-msgstr ""
+msgstr "Использовать TMDbHelper для виджетов информационного экрана вместо содержимого медиатеки"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31803"
 msgid "As long as this plugin is enabled on your system, it will be used to populate info screen widgets including actor and director credits, similar movies/shows and more."
-msgstr ""
+msgstr "Пока этот плагин включён в вашей системе, он будет использоваться для заполнения виджетов информационного экрана, включая участие актёров и режиссёров, похожие фильмы/передачи и многое другое."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31485"
 msgid "Disable star ratings"
-msgstr ""
+msgstr "Отключить оценки в виде звёзд"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31478"
 msgid "Video player"
-msgstr ""
+msgstr "Видеопроигрыватель"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31711"
 msgid "Limit quick subtitle switcher in video OSD to a preferred language"
-msgstr ""
+msgstr "Ограничить быстрый переключатель субтитров в видео OSD предпочитаемым языком"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31811"
 msgid "Enter the three-letter code of your preferred language, e.g. 'eng' for English. If subtitles in this language are available for the currently playing video, the quick subtitle switcher will toggle on/off for the first subtitle stream in this language, ignoring other streams. If the language is not available, it will toggle between all streams as normal."
-msgstr ""
+msgstr "Введите трёхбуквенный код предпочитаемого языка, например «eng» для английского. Если субтитры на этом языке доступны для текущего воспроизводимого видео, быстрый переключатель субтитров будет включать/отключать первый поток субтитров на этом языке, игнорируя другие потоки. Если язык недоступен, он будет переключаться между всеми потоками как обычно."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31713"
 msgid "Disable video information being displayed at the start of playback"
-msgstr ""
+msgstr "Отключить отображение информации о видео в начале воспроизведения"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31718"
 msgid "Prefer time remaining to video duration in player seek bar"
-msgstr ""
+msgstr "Предпочитать оставшееся время вместо общей длительности видео на шкале поиска плеера"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31813"
 msgid "This disables the label that appears upon video playback showing information about the video including end time, resolution and age rating."
-msgstr ""
+msgstr "Это отключает метку, которая появляется при воспроизведении видео, показывающую информацию о видео, включая время окончания, разрешение и возрастной рейтинг."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31490"
 msgid "Enable Up Next widget during playback"
-msgstr ""
+msgstr "Включить виджет «Следующее» во время воспроизведения"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31590"
 msgid "Up Next is a third-party addon that enabled Netflix-style autoplay of the next episode with an 'Are you still watching' prompt. Selecting this option will install and enable the addon, which can be configured under Add-ons."
-msgstr ""
+msgstr "Up Next — это стороннее дополнение, которое включает автоматическое воспроизведение следующей серии в стиле Netflix с запросом «Вы ещё смотрите?». Выбор этого параметра установит и включит дополнение, которое можно настроить в разделе «Дополнения»."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31491"
 msgid "Choose artwork type to display in Up Next widget"
-msgstr ""
+msgstr "Выберите тип иллюстраций для отображения в виджете «Следующее»"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31591"
 msgid "Choose between different layout options for the Up Next widget that will appear on the screen as an episode concludes."
-msgstr ""
+msgstr "Выберите между различными вариантами макета для виджета «Следующее», который будет появляться на экране по завершении серии."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31455"
 msgid "Instantly hide progress bar on pause screen"
-msgstr ""
+msgstr "Мгновенно скрывать индикатор прогресса на экране паузы"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31555"
 msgid "Subtitles will not be obscured when video playback is paused."
-msgstr ""
+msgstr "Субтитры не будут перекрываться при паузе воспроизведения видео."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31456"
 msgid "Show info on pause screen"
-msgstr ""
+msgstr "Показывать информацию на экране паузы"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31556"
 msgid "Video information, which can be displayed during fullscreen video playback by pressing <i>, will also be displayed automatically when the video is paused."
-msgstr ""
+msgstr "Информация о видео, которая может отображаться во время полноэкранного воспроизведения видео нажатием <i>, также будет отображаться автоматически при паузе видео."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31479"
 msgid "Music player"
-msgstr ""
+msgstr "Музыкальный проигрыватель"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31480"
 msgid "Enable background fanart"
-msgstr ""
+msgstr "Включить фоновый фан-арт"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31481"
 msgid "Visualisation screen album cover"
-msgstr ""
+msgstr "Обложка альбома на экране визуализации"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31829"
 msgid "Large"
-msgstr ""
+msgstr "Крупные"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31830"
 msgid "Small"
-msgstr ""
+msgstr "Мелкие"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31482"
 msgid "Vertical small"
-msgstr ""
+msgstr "Вертикальный мелкий"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31483"
 msgid "Vertical large"
-msgstr ""
+msgstr "Вертикальный крупный"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31415"
 msgid "Horizontal"
-msgstr ""
+msgstr "Горизонтальный"
 
 # Experiments
 # /16x9/Content_Settings.xml
 msgctxt "#31470"
 msgid "Use unwatched count in info details"
-msgstr ""
+msgstr "Использовать количество непросмотренных в подробной информации"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31570"
 msgid "Replaced 'A/B watched' with 'X/Y unwatched' in all info lines. This information duplicates the unwatched episode count indicator, which can be enabled under Customisations and is integrated into the progress bar."
-msgstr ""
+msgstr "Заменяет «A/B просмотрено» на «X/Y непросмотрено» во всех информационных строках. Эта информация дублирует индикатор количества непросмотренных серий, который можно включить в разделе «Настройки» и который интегрирован в индикатор прогресса."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31471"
 msgid "Enable 'Fanart' display layout for Grid view in Pictures window"
-msgstr ""
+msgstr "Включить макет отображения «Фан-арт» для вида «Сетка» в окне изображений"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31571"
 msgid "Enables Grid view fanart layout for the pictures window. Because pictures can take any aspect ratio, it is recommended to stick to square layouts for the optimal experience. Keep disabled to improve performance."
-msgstr ""
+msgstr "Включает макет Фан-арт для вида «Сетка» в окне изображений. Поскольку изображения могут иметь любое соотношение сторон, для оптимального использования рекомендуется придерживаться квадратных макетов. Держите отключённым для повышения производительности."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31714"
 msgid "Enable landscape art for List and Billboard view backgrounds"
-msgstr ""
+msgstr "Включить горизонтальные иллюстрации для фонов представлений «Список» и «Афиша»"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31712"
 msgid "Prefer landscape art to fanart for backgrounds in List and Billboard views"
-msgstr ""
+msgstr "Предпочитать горизонтальные иллюстрации вместо Фан-арта для фонов в представлениях «Список» и «Афиша»"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31812"
 msgid "Will allow landscape artwork to be displayed instead of fanarts if landscape art is preferred - even on these two views where logos on the landscape artwork may interfere with readability of the details presented in these views."
-msgstr ""
+msgstr "Позволит отображать горизонтальные иллюстрации вместо фан-арта, если выбраны горизонтальные иллюстрации — даже в этих двух представлениях, где логотипы на горизонтальных иллюстрациях могут мешать читаемости деталей, представленных в этих видах."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31702"
 msgid "Move to parent directory automatically if container is empty"
-msgstr ""
+msgstr "Автоматически переходить в родительский каталог, если контейнер пуст"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31802"
 msgid "If the current focused container is empty--for example because your filter is set to unwatched episodes and you have no unwatched episodes to view--enabling this will cause Kodi to automatically move to the parent directory."
-msgstr ""
+msgstr "Если текущий сфокусированный контейнер пуст — например, потому что ваш фильтр установлен на непросмотренные серии, а непросмотренных серий для просмотра нет — включение этого параметра приведёт к автоматическому переходу Kodi в родительский каталог."
 
 # Extras
 # /16x9/Content_Settings.xml
 msgctxt "#31457"
 msgid "Embedded lists"
-msgstr ""
+msgstr "Встроенные списки"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31458"
 msgid "Enable embedded lists for sets, tv shows and artists"
-msgstr ""
+msgstr "Включить встроенные списки для киноциклов, ТВ-передач и исполнителей"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31558"
 msgid "Enrich video and music views by enabling embedded secondary lists that allow you to scroll through the movies in a set, the seasons in a tv show and the albums by an artist without clicking into an item. Instead, just press down on a listitem in horizontal views or left in vertical views to navigate the secondary list."
-msgstr ""
+msgstr "Обогатите представления видео и музыки, включив встроенные вторичные списки, которые позволяют прокручивать фильмы в киноцикле, сезоны в ТВ-передаче и альбомы исполнителя, не заходя в элемент. Вместо этого просто нажмите вниз на элементе списка в горизонтальных представлениях или влево в вертикальных представлениях, чтобы перемещаться по вторичному списку."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31459"
 msgid "Music player"
-msgstr ""
+msgstr "Музыкальный проигрыватель"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31460"
 msgid "Enable embedded music player"
-msgstr ""
+msgstr "Включить встроенный музыкальный проигрыватель"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31560"
 msgid "View and control music playback from anywhere in Kodi with the music player widget, which is embedded into each unique Copacetic view. If you've set a 'Liked song rating threshold' under Customisations, you'll also be able to mark songs as 'Liked' straight from the widget or jump straight to a view of the currently playing artist."
-msgstr ""
+msgstr "Просматривайте и управляйте воспроизведением музыки из любого места в Kodi с помощью виджета музыкального плеера, который встроен в каждое уникальное представление Copacetic. Если вы установили «Порог рейтинга для \"понравившихся\" треков» в разделе «Настройки», вы также сможете отмечать треки как «Понравившиеся» прямо из виджета или сразу переходить к представлению текущего исполнителя."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31461"
 msgid "Multiart"
-msgstr ""
+msgstr "Мультиарт"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31462"
 msgid "Enable multiart slideshows"
-msgstr ""
+msgstr "Включить слайд-шоу со множеством иллюстраций"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31562"
 msgid "Enjoy more artwork with multiart slideshows, embedded directly into each view. Copacetic will play a slideshow of all available multiart in your library for a given listitem and art type. To add multiart, simply add additional artwork to the same folder as your main artwork with a number appended to the end then rescan the item, e.g. keyart.jpg, keyart1.jpg, keyart2.jpg or filename-poster.jpg, filename-poster1.jpg."
-msgstr ""
+msgstr "Наслаждайтесь большим количеством изображений с помощью слайд-шоу со множеством иллюстраций, встроенными непосредственно в каждое представление. Copacetic будет показывать слайд-шоу из всего доступного множество иллюстраций в вашей медиатеке для данного элемента списка и типа иллюстраций. Чтобы добавить множество иллюстраций, просто добавьте дополнительные изображения в ту же папку, что и основная иллюстрация, с добавленным в конце номером, затем повторно просканируйте элемент, например: keyart.jpg, keyart1.jpg, keyart2.jpg или filename-poster.jpg, filename-poster1.jpg."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31563"
 msgid "Choose how long to display each artwork in the slideshow."
-msgstr ""
+msgstr "Выберите, как долго отображать каждую иллюстрацию в слайд-шоу."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31464"
 msgid "Trailer autoplay"
-msgstr ""
+msgstr "Автовоспроизведение трейлеров"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31465"
 msgid "Enable trailers to autoplay"
-msgstr ""
+msgstr "Включить автовоспроизведение трейлеров"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31565"
 msgid "Automatically start fullscreen playback of trailers after a short delay, which you can set below. Stop playback by pressing any direction button. In horizontal views, up/down ends playback with no further action until you scroll. Left/right ends playback and scrolls to the previous/next item, meaning the next trailer will begin automatically after the set delay. Directions are switched in vertical views."
-msgstr ""
+msgstr "Автоматически запускать полноэкранное воспроизведение трейлеров после короткой задержки, которую вы можете установить ниже. Остановите воспроизведение, нажав любую кнопку направления. В горизонтальных представлениях вверх/вниз завершает воспроизведение без дальнейших действий, пока вы не прокрутите. Влево/вправо завершает воспроизведение и прокручивает к предыдущему/следующему элементу, что означает, что следующий трейлер начнётся автоматически после установленной задержки. В вертикальных представлениях направления меняются местами."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31466"
 msgid "Delay before playback starts (seconds)"
-msgstr ""
+msgstr "Задержка перед началом воспроизведения (секунды)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31566"
 msgid "Choose how long you must wait on a selected movie or tv show before playback of the trailer starts."
-msgstr ""
+msgstr "Выберите, как долго вы должны ждать на выбранном фильме или ТВ-передаче, прежде чем начнётся воспроизведение трейлера."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31468"
 msgid "Autoplay trailers for movies in video library"
-msgstr ""
+msgstr "Автовоспроизведение трейлеров для фильмов в видеотеке"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31568"
 msgid "Autoplay can be quickly toggled on/off from the options menu within the video library."
-msgstr ""
+msgstr "Автовоспроизведение можно быстро включить/отключить из меню параметров в видеотеке."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31469"
 msgid "Autoplay trailers for tv shows in video library"
-msgstr ""
+msgstr "Автовоспроизведение трейлеров для ТВ-передач в видеотеке"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31472"
 msgid "Copacetic"
-msgstr ""
+msgstr "Copacetic"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31473"
@@ -1472,14 +1472,14 @@ msgstr "Пауза"
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31474"
 msgid "Auto-update"
-msgstr ""
+msgstr "Автообновление"
 
 # ########################################################################################################
 # ########################################################################################################
 # /16x9/Content.xml
 msgctxt "#31600"
 msgid "Match"
-msgstr ""
+msgstr "Совпадение"
 
 # /16x9/Content.xml
 msgctxt "#31601"
@@ -1489,12 +1489,12 @@ msgstr "Ограничение"
 # /16x9/Content.xml
 msgctxt "#31602"
 msgid "Sort"
-msgstr ""
+msgstr "Сортировка"
 
 # /16x9/Content.xml
 msgctxt "#31603"
 msgid "Direction"
-msgstr ""
+msgstr "Направление"
 
 # /16x9/Content.xml
 msgctxt "#31604"
@@ -1514,7 +1514,7 @@ msgstr "Разрешение видео"
 # /16x9/Content.xml
 msgctxt "#31607"
 msgid "Video aspect ratio"
-msgstr ""
+msgstr "Соотношение сторон видео"
 
 # /16x9/Content.xml
 msgctxt "#31608"
@@ -1589,28 +1589,28 @@ msgstr "Проигрыватель"
 # /16x9/DialogPlayerProcessInfo.xml
 msgctxt "#31637"
 msgid "channels in"
-msgstr ""
+msgstr "каналов в"
 
 # /16x9/MyPVRChannels.xml
 msgctxt "#31634"
 msgid "Now playing channel"
-msgstr ""
+msgstr "Текущий канал"
 
 # /16x9/Navigation.xml
 msgctxt "#31635"
 msgid "Global search"
-msgstr ""
+msgstr "Глобальный поиск"
 
 # /16x9/Navigation.xml
 msgctxt "#31636"
 msgid "Sorry no results found!"
-msgstr ""
+msgstr "Извините, результаты не найдены!"
 
 # /16x9/FileManager.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31622"
 msgid "items"
-msgstr "Объекты"
+msgstr "объектов"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31623"
@@ -1620,27 +1620,27 @@ msgstr "пункт"
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31624"
 msgid "Choose preferred classification ratings..."
-msgstr ""
+msgstr "Выберите предпочитаемую систему классификации рейтингов…"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31625"
 msgid "No items"
-msgstr ""
+msgstr "Нет элементов"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31626"
 msgid "songs"
-msgstr ""
+msgstr "песни"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31627"
 msgid "song"
-msgstr ""
+msgstr "песня"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31628"
 msgid "No songs added"
-msgstr ""
+msgstr "Нет добавленных песен"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31629"
@@ -1650,12 +1650,12 @@ msgstr "Без звука"
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31630"
 msgid "On first entry"
-msgstr ""
+msgstr "При первом выборе"
 
 # /16x9/VideoOSDBookmarks.xml
 msgctxt "#31631"
 msgid "Add"
-msgstr ""
+msgstr "Добавить"
 
 # /16x9/VideoOSDBookmarks.xml
 msgctxt "#31632"
@@ -1665,7 +1665,7 @@ msgstr "Очистить"
 # /16x9/VideoOSDBookmarks.xml
 msgctxt "#31633"
 msgid "Use selected as episode thumb"
-msgstr ""
+msgstr "Использовать выбранное как миниатюру серии"
 
 # ########################################################################################################
 # ########################################################################################################
@@ -1673,132 +1673,132 @@ msgstr ""
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31951"
 msgid "BBFC (UK)"
-msgstr ""
+msgstr "BBFC (Великобритания)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31952"
 msgid "MPAA / TV-PG (US / others)"
-msgstr ""
+msgstr "MPAA / TV-PG (США / другие страны)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31953"
 msgid "ACB (Australia)"
-msgstr ""
+msgstr "ACB (Австралия)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31954"
 msgid "CHVRS / CBSC (Canada)"
-msgstr ""
+msgstr "CHVRS / CBSC (Канада)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31955"
 msgid "DJCTQ (Brazil)"
-msgstr ""
+msgstr "DJCTQ (Бразилия)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31956"
 msgid "EIRIN (Japan)"
-msgstr ""
+msgstr "EIRIN (Япония)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31957"
 msgid "FSK (Austria / Germany / Switzerland)"
-msgstr ""
+msgstr "FSK (Австрия / Германия / Швейцария)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31958"
 msgid "IFCO (Ireland)"
-msgstr ""
+msgstr "IFCO (Ирландия)"
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31959"
 msgid "KIJKWIJZER (Luxembourg / Netherlands)"
-msgstr ""
+msgstr "KIJKWIJZER (Люксембург / Нидерланды)"
 
 # ########################################################################################################
 # ########################################################################################################
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31900"
 msgid "Who's watching?"
-msgstr ""
+msgstr "Кто смотрит?"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31901"
 msgid "Good evening"
-msgstr ""
+msgstr "Добрый вечер"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31902"
 msgid "Good afternoon"
-msgstr ""
+msgstr "Добрый день"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31903"
 msgid "Good morning"
-msgstr ""
+msgstr "Доброе утро"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31904"
 msgid "Happy New Year"
-msgstr ""
+msgstr "С Новым годом"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31905"
 msgid "Happy National Popcorn Day"
-msgstr ""
+msgstr "С Днём национального попкорна"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31906"
 msgid "Happy Global Movie Day"
-msgstr ""
+msgstr "С Всемирным днём кино"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31907"
 msgid "Happy Baftas Day"
-msgstr ""
+msgstr "С Днём премии BAFTA"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31908"
 msgid "Happy International Women's Day"
-msgstr ""
+msgstr "С Международным женским днём"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31909"
 msgid "Happy Razzies Day"
-msgstr ""
+msgstr "С Днём премии «Золотая малина»"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31910"
 msgid "Happy Oscars Day"
-msgstr ""
+msgstr "С Днём премии «Оскар»"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31911"
 msgid "Happy Xmas"
-msgstr ""
+msgstr "Счастливого Рождества"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31912"
 msgid "Ramadan Mubarak"
-msgstr ""
+msgstr "Рамадан Мубарак"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31913"
 msgid "Eid Mubarak"
-msgstr ""
+msgstr "Ид Мубарак"
 
 # /16x9/Variables_Labels_Windows.xml
 msgctxt "#31914"
 msgid "Happy Earth Day"
-msgstr ""
+msgstr "С Днём Земли"
 
 # /16x9/Content_Settings.xml
 #~ msgctxt "#31482"

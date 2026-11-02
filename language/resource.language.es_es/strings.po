@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
-"PO-Revision-Date: 2025-06-11 05:00+0000\n"
+"PO-Revision-Date: 2026-04-04 09:13+0000\n"
 "Last-Translator: Alfonso Cachero <alfonso.cachero@gmail.com>\n"
 "Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-copacetic/es_es/>\n"
 "Language: es_es\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11.4\n"
+"X-Generator: Weblate 5.16.2\n"
 
 msgctxt "Addon Summary"
 msgid "A real good time with your media."
@@ -21,7 +21,7 @@ msgstr "Un buen rato con tu contenido multimedia."
 
 msgctxt "Addon Description"
 msgid "Clear away the clutter with a minimal skin designed to bring maximum impact to the artwork that you curate for your favourite movies, shows and music. Copacetic is a labour of love more than five years in the making. I hope you enjoy it."
-msgstr "Despeja el desorden con un skin minimalista diseñado para dar el máximo impacto a las ilustraciones que seleccionas para tus películas, series y música favoritas. Copacetic es un trabajo realizado con amor durante más de cinco años. Espero que lo disfrutes."
+msgstr "Despeja el desorden con un skin minimalista diseñado para dar el máximo impacto a las ilustraciones que seleccionas para tus películas, programas y música favoritas. Copacetic es un trabajo realizado con amor durante más de cinco años. Espero que lo disfrutes."
 
 # ########################################################################################################
 # ########################################################################################################
@@ -321,7 +321,7 @@ msgstr "Últimas películas"
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31203"
 msgid "Latest TV shows"
-msgstr "Últimas series"
+msgstr "Últimos programas de TV"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
@@ -335,7 +335,7 @@ msgstr "Películas aleatorias"
 # /16x9/Variables_Labels_Widgets.xml
 msgctxt "#31205"
 msgid "Random TV shows"
-msgstr "Series Al Azar"
+msgstr "Programas de TV aleatorios"
 
 # /16x9/Components_Settings.xml
 # /16x9/Templates_Widgets.xml
@@ -695,17 +695,17 @@ msgstr "Ajustar umbrales de contraste de color"
 # /16x9/Content_Settings.xml
 msgctxt "#31524"
 msgid "Adjust the amount of contrast required between the background and the flag colour. Raising the bottom threshold means only lighter colours will be accepted on dark backgrounds. Lowering the top threshold means only darker colours can be used on light backgrounds. Avoids dark flags on dark backgrounds or light flags on light backgrounds. Default range: 65 - 440."
-msgstr ""
+msgstr "Ajusta la cantidad de contraste requerida entre el fondo y el color de la bandera. Aumentar el umbral inferior quiere decir que solo los colores claros se aceptarán en fondos oscuros. Bajar el umbral superior significa que solo los colores oscuros se podrán usar con fondos claros. Hay que evitar banderas oscuras en fondos oscuros y claras con claros. El rango por defecto es 65 - 440."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31428"
 msgid "Prefer keyart for poster views on info screens and dialogs"
-msgstr ""
+msgstr "Preferir keyart para las vistas con carteles en las pantallas de información y en los mensajes"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31700"
 msgid "Prefer landscape art for fanart views on info screens and dialogs"
-msgstr ""
+msgstr "Preferir arte apaisado para las vistas de fanart en las pantallas de información y en los mensajes"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31417"
@@ -760,17 +760,17 @@ msgstr "Limitar el fondo de presentación de diapositivas a..."
 # /16x9/Content_Settings.xml
 msgctxt "#31526"
 msgid "Choose to include only fanarts from the selected sections of your library in the background slideshow, or select a custom path, playlist or folder of images."
-msgstr ""
+msgstr "Escoger si incluir fanarts solo de las opciones elegidas para la coneccion, o una ruta personalizada, lista o carpeta de imágenes para los fondos de pantalla"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31436"
 msgid "Movies / TV shows / Artists"
-msgstr "Películas / Series / Artistas"
+msgstr "Películas / Programas de TV / Intérpretes"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31437"
 msgid "Movies / TV shows"
-msgstr "Películas / Series"
+msgstr "Películas / Programas de TV"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31438"
@@ -785,17 +785,17 @@ msgstr "Elegir ruta o lista de reproducción..."
 # /16x9/Content_Settings.xml
 msgctxt "#31427"
 msgid "Background slideshow speed"
-msgstr ""
+msgstr "Velocidad de presentación de fondos"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31732"
 msgid "seconds"
-msgstr ""
+msgstr "segundos"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31733"
 msgid "minutes"
-msgstr ""
+msgstr "minutos"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31527"
@@ -805,17 +805,17 @@ msgstr "Elija la rapidez con la que deben actualizarse las ilustraciones de la p
 # /16x9/Content_Settings.xml
 msgctxt "#31440"
 msgid "Background slideshow artwork brightness (%)"
-msgstr ""
+msgstr "Brillo de presentación de fondos (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31540"
 msgid "Choose the brightness of backgrounds displayed on the home screen and other windows such as Settings and Add-ons. Default: 33%"
-msgstr ""
+msgstr "Establece el brillo de los fondos mostrados en la pantalla principal y otras ventanas como Ajustes y Add-ons. Por defecto: 33%"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31487"
 msgid "Opacity of background panels (%)"
-msgstr ""
+msgstr "Opacidad de los paneles del fondo (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31587"
@@ -825,27 +825,27 @@ msgstr "Ajuste de la opacidad de los paneles de fondo que aparecen encima de las
 # /16x9/Content_Settings.xml
 msgctxt "#31722"
 msgid "Info screen background artwork brightness (%)"
-msgstr ""
+msgstr "Brillo del fondo en pantalla de información (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31822"
 msgid "Choose the brightness of background artwork displayed when you bring up info for a list item. Default: 25%"
-msgstr ""
+msgstr "Establece el brillo del fondo cuando se consulta la información de un elemento de la lista. Por defecto: 25%"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31723"
 msgid "Library/Playback"
-msgstr ""
+msgstr "Colección/Reproducción"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31719"
 msgid "OSD background brightness during video playback (%)"
-msgstr ""
+msgstr "Brillo del fondo OSD mientras se reproduce vídeo (%)"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31819"
 msgid "Adjust the brightness of videos when OSD controls or settings screens are visible on top. Default: 25%"
-msgstr ""
+msgstr "Ajusta el brillo del vídeo cuando los controles OSD o la pantalla de ajuste se muestran por encima. Por defecto: 25%"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31495"
@@ -865,7 +865,7 @@ msgstr "Utilizar la presentación global seleccionada en la pantalla de inicio e
 # /16x9/Content_Settings.xml
 msgctxt "#31429"
 msgid "Enable widgets on the home screen"
-msgstr ""
+msgstr "Habilitar widgets en la pantalla de inicio"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31529"
@@ -880,7 +880,7 @@ msgstr "Restablecer los widgets de la pantalla de inicio"
 # /16x9/Content_Settings.xml
 msgctxt "#31530"
 msgid "Reset home widgets to Copacetic defaults: 1. Continue watching 2. Next up 3. Latest movies 4. Latest TV shows"
-msgstr "Restablecer los widgets de inicio a los valores predeterminados de Copacetic: 1. Seguir viendo 2. Siguiente 3. Últimas películas 4. Últimas series"
+msgstr "Restablecer los widgets de inicio a los valores predeterminados de Copacetic: 1. Seguir viendo 2. Siguiente 3. Últimas películas 4. Últimos programas de TV"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31431"
@@ -890,37 +890,37 @@ msgstr "¿Estás seguro de que quieres restablecer todos los widgets de inicio a
 # /16x9/Content_Settings.xml
 msgctxt "#31704"
 msgid "Enable global search on the home screen"
-msgstr ""
+msgstr "Activar búsqueda global en la pantalla de inicio"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31705"
 msgid "Configure global search"
-msgstr ""
+msgstr "Configurar búsqueda global"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31706"
 msgid "Enable global search for this media type"
-msgstr ""
+msgstr "Activar búsqueda global para este tipo de contenido"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31707"
 msgid "Include 'plot' field in this search"
-msgstr ""
+msgstr "Incluir campo 'argumento' en esta búsqueda"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31708"
 msgid "Include 'tag' field in this search"
-msgstr ""
+msgstr "Incluir campo 'etiqueta' en esta búsqueda"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31709"
 msgid "Include 'biography' field in this search"
-msgstr ""
+msgstr "Incluir campo 'biografía' en esta búsqueda"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31710"
 msgid "Include 'review' field in this search"
-msgstr ""
+msgstr "Incluir campo 'reseña' en esta búsqueda"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31442"
@@ -945,52 +945,52 @@ msgstr "Clearlogos se mostrará como parte del salvapantallas cuando esté dispo
 # /16x9/Content_Settings.xml
 msgctxt "#31444"
 msgid "Furniture to include"
-msgstr ""
+msgstr "Elementos a incluir"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31544"
 msgid "Choose the furniture you wish to show in the top-right corner of the home screen. Note that for weather information to be included, you must first install a weather add-on and ensure it is enabled under Settings > Services > Weather."
-msgstr ""
+msgstr "Elegir el mobiliario a mostrar en la esquina superior derecha de la pantalla inicial. Nota: Para incluir para la información del tiempo, primero se debe instralar un add-on de tiempo y asegurar de que está activo en Ajustes > Servicios > El Tiempo."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31724"
 msgid "Clock"
-msgstr ""
+msgstr "Reloj"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31725"
 msgid "None"
-msgstr ""
+msgstr "Ninguno"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31726"
 msgid "Clock and date"
-msgstr ""
+msgstr "Reloj y fecha"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31727"
 msgid "Clock, date and weather"
-msgstr ""
+msgstr "Reloj, fecha y clima"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31728"
 msgid "Make persistent across entire home screen, including widgets"
-msgstr ""
+msgstr "Hacer persistente en todas las pantallas, incluyendo los widgets"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31729"
 msgid "Enable second background slideshow"
-msgstr ""
+msgstr "Activar presentación secundaria de fondo"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31730"
 msgid "Limit second background slideshow to..."
-msgstr ""
+msgstr "Limitar segundos de presentación secundaria de fondo a..."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31731"
 msgid "Start times"
-msgstr ""
+msgstr "Tiempos de inicio"
 
 # Widgets
 # /16x9/Content_Settings.xml
@@ -1006,57 +1006,57 @@ msgstr "Configurar widgets"
 # /16x9/Content_Settings.xml
 msgctxt "#31701"
 msgid "Movement"
-msgstr ""
+msgstr "Movimiento"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31496"
 msgid "Spotlight content with auto scroll"
-msgstr ""
+msgstr "Resaltar contenido con desplazamiento automático"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31596"
 msgid "Widget will move forward one place every 10 seconds while system is idle. When combined with trailer autoplay option below to allow for each item's trailer to be played automatically as soon as the previous trailer is finished while system is idle."
-msgstr ""
+msgstr "El widget se moverá hacia adelante cada 10 segundos mientras el equipo esté en reposo. Cuando se combina con la opción de reproducción automática de tráilers de abajo se reproducirá el tráiler del siguiente elemento inmediatamente cuando el sistema esté en reposo."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31467"
 msgid "Automatically play trailers for movies or tv shows in this widget"
-msgstr ""
+msgstr "Reproducir tráilers automáticamente para películas y programas de tv en este widget"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31567"
 msgid "Trailers will be played back automatically from any widgets showing movies or tv shows. Enable 'Spotlight content with auto scroll' option above to create a dynamic playlist of trailers for all items in the widget. Set delay in seconds before trailer playback starts under Extras > Trailer autoplay"
-msgstr ""
+msgstr "Se reproducirán automáticamente los trailers en cualquier widget que muestre una película o programa de tv. Activar la opción 'Destacar contenido con desplazamiento automático' de arriba creará una lista dinámica de tráilers de todos los elementos de este widget. Se ajusta el retardo en segundos antes del tráiler en Extras > Autoreproducción de tráilers"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31476"
 msgid "Enable clearlogos"
-msgstr ""
+msgstr "Activar clearlogos"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31498"
 msgid "Prefer keyart for poster views"
-msgstr ""
+msgstr "Preferir keyart para las vistas de carteles"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31598"
 msgid "Remember 'keyart' is a custom art type. To ensure it is fetched locally or remotely by scrapers, make sure 'keyart' is included in your art type whitelists for movies and / or tv shows. You can do this by choosing 'Recommended Kodi Settings' under Copacetic > General, or by navigating to Settings > Media > Videos > Artwork."
-msgstr ""
+msgstr "Recuerda que 'keyart' es un tipo de arte personalizado. Hay que asegurarse de que 'keyart' esta incluido en las listas de tipos de arte permitidos para películas y/o programas de tv para que se obtenga localmente o por los scrapers. Se puede hacer eligiendo 'Ajustes Recomendados de Kodi' en Copacetic > General, o navegando a Ajustes > Contenido > Vídeos > Arte."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31499"
 msgid "Prefer landscape art for fanart views"
-msgstr ""
+msgstr "Preferir arte apaisado para las vistas de fanart"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31599"
 msgid "Remember 'landscape' is a custom art type. To ensure it is fetched locally or remotely by scrapers, make sure 'landscape' is included in your art type whitelists for movies and / or tv shows. You can do this by choosing 'Recommended Kodi Settings' under Copacetic > General, or by navigating to Settings > Media > Videos > Artwork."
-msgstr "Recuerda que 'apaisado' es un tipo de arte personalizado. Para asegurarse que se obtiene localmente o remotamente por los scrapers, asegúrate de que el tipo 'apaisado' está incluido en la lista de tipos admitidos para películas o series de tv. Pueds hacerlo escogiendo 'Ajustes Recomendados de Kodi' en Copacetic > General, o en Ajustes > Contenido > Vídeos > Arte."
+msgstr "Recuerda que 'apaisado' es un tipo de arte personalizado. Para asegurarse que se obtiene localmente o remotamente por los scrapers, asegúrate de que el tipo 'apaisado' está incluido en la lista de tipos admitidos para películas o programas de tv. Pueds hacerlo escogiendo 'Ajustes Recomendados de Kodi' en Copacetic > General, o en Ajustes > Contenido > Vídeos > Arte."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31477"
 msgid "Prefer thumbnails for episodes instead of tv show fanart"
-msgstr "Preferir miniaturas para episodios en lugar de fanart de series de tv"
+msgstr "Preferir miniaturas para episodios en lugar de fanart de programas de tv"
 
 # Views
 # /16x9/Content_Settings.xml
@@ -1154,7 +1154,7 @@ msgstr "Mostrar recuento de episodios no vistos"
 # /16x9/Content_Settings.xml
 msgctxt "#31551"
 msgid "Display the total number of unwatched episodes for a tv show or season on top of the progress bar."
-msgstr "Muestra el número total de episodios no vistos de una serie o temporada en la parte superior de la barra de progreso."
+msgstr "Muestra el número total de episodios no vistos de una programa de tv o temporada en la parte superior de la barra de progreso."
 
 # /16x9/Content_Settings.xml
 # /16x9/Variables_Labels_Windows.xml
@@ -1250,7 +1250,7 @@ msgstr "Activar el widget Up Next durante la reproducción"
 # /16x9/Content_Settings.xml
 msgctxt "#31590"
 msgid "Up Next is a third-party addon that enabled Netflix-style autoplay of the next episode with an 'Are you still watching' prompt. Selecting this option will install and enable the addon, which can be configured under Add-ons."
-msgstr ""
+msgstr "A Continuación es un add-on de terceros que habilita la reproducción automática a lo Netflix del siguiente episodio con una pregunta de '¿Sigues ahi?'. Elegir esta opción instalará y activará este add-on, que se puede configurar en Add-ons."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31491"
@@ -1260,7 +1260,7 @@ msgstr "Elige el tipo de obra que se mostrará en el widget Up Next"
 # /16x9/Content_Settings.xml
 msgctxt "#31591"
 msgid "Choose between different layout options for the Up Next widget that will appear on the screen as an episode concludes."
-msgstr ""
+msgstr "Escoger entre disposiciones diferentes de widget A Continuación que aparecerá cuando un episodio termine."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31455"
@@ -1300,27 +1300,27 @@ msgstr "Pantalla de visualización portada del álbum"
 # /16x9/Content_Settings.xml
 msgctxt "#31829"
 msgid "Large"
-msgstr ""
+msgstr "Grande"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31830"
 msgid "Small"
-msgstr ""
+msgstr "Pequeño"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31482"
 msgid "Vertical small"
-msgstr ""
+msgstr "Vertical pequeño"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31483"
 msgid "Vertical large"
-msgstr ""
+msgstr "Vertical grande"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31415"
 msgid "Horizontal"
-msgstr ""
+msgstr "Horizontal"
 
 # Experiments
 # /16x9/Content_Settings.xml
@@ -1336,7 +1336,7 @@ msgstr "Se ha sustituido \"A/B vistos\" por \"X/Y no vistos\" en todas las líne
 # /16x9/Content_Settings.xml
 msgctxt "#31471"
 msgid "Enable 'Fanart' display layout for Grid view in Pictures window"
-msgstr ""
+msgstr "Activar disposición 'Fanart' para la vista Parrilla la ventana de Imágenes"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31571"
@@ -1346,27 +1346,27 @@ msgstr "Activa la vista de cuadrícula para la ventana de imágenes. Debido a qu
 # /16x9/Content_Settings.xml
 msgctxt "#31714"
 msgid "Enable landscape art for List and Billboard view backgrounds"
-msgstr ""
+msgstr "Activar arte apaisado para los fondos de las vistas Lista y Cartelera"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31712"
 msgid "Prefer landscape art to fanart for backgrounds in List and Billboard views"
-msgstr ""
+msgstr "Preferir arte apaisado al fanart para los fondos de las vistas Lista y Cartelera"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31812"
 msgid "Will allow landscape artwork to be displayed instead of fanarts if landscape art is preferred - even on these two views where logos on the landscape artwork may interfere with readability of the details presented in these views."
-msgstr ""
+msgstr "Permitirá arte apaisado en lugar de mostrar fanarts incluso cuando en esas dos vistas los logos interfieran con la legibilidad de los detalles presentados en ellas."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31702"
 msgid "Move to parent directory automatically if container is empty"
-msgstr ""
+msgstr "Mover a la carpeta padre automaticámente si el contenedor está vacio"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31802"
 msgid "If the current focused container is empty--for example because your filter is set to unwatched episodes and you have no unwatched episodes to view--enabling this will cause Kodi to automatically move to the parent directory."
-msgstr ""
+msgstr "Si el contenedor elegido esta vacío -por ejemplo, porque esté filtrado por no vistos y no haya episodios no vistos- Kodi automáticamente se moverá a la carpeta padre si esto está activado."
 
 # Extras
 # /16x9/Content_Settings.xml
@@ -1377,12 +1377,12 @@ msgstr "Listas incrustadas"
 # /16x9/Content_Settings.xml
 msgctxt "#31458"
 msgid "Enable embedded lists for sets, tv shows and artists"
-msgstr "Activar listas incrustadas para sagas, series y artistas"
+msgstr "Activar listas incrustadas para sagas, programas de tv e intérpretes"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31558"
 msgid "Enrich video and music views by enabling embedded secondary lists that allow you to scroll through the movies in a set, the seasons in a tv show and the albums by an artist without clicking into an item. Instead, just press down on a listitem in horizontal views or left in vertical views to navigate the secondary list."
-msgstr "Enriquece las vistas de vídeo y música habilitando listas secundarias incrustadas que te permitan desplazarte por las películas de una saga, las temporadas de una serie de televisión y los álbumes de un artista sin hacer clic en un elemento. En su lugar, basta con pulsar hacia abajo en un elemento de la lista en las vistas horizontales o hacia la izquierda en las verticales para navegar por la lista secundaria."
+msgstr "Enriquece las vistas de vídeo y música habilitando listas secundarias incrustadas que te permitan desplazarte por las películas de una saga, las temporadas de una serie de televisión y los álbumes de un intérprete sin hacer clic en un elemento. En su lugar, basta con pulsar hacia abajo en un elemento de la lista en las vistas horizontales o hacia la izquierda en las verticales para navegar por la lista secundaria."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31459"
@@ -1442,22 +1442,22 @@ msgstr "Retardo antes de que comience la reproducción (segundos)"
 # /16x9/Content_Settings.xml
 msgctxt "#31566"
 msgid "Choose how long you must wait on a selected movie or tv show before playback of the trailer starts."
-msgstr "Elige cuánto tiempo debes esperar en una película o serie de televisión seleccionada antes de que comience la reproducción del tráiler."
+msgstr "Elige cuánto tiempo debes esperar en una película o programa de tv seleccionado antes de que comience la reproducción del tráiler."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31468"
 msgid "Autoplay trailers for movies in video library"
-msgstr ""
+msgstr "Autorreproducir tráilers para las películas en la colección de vídeo"
 
 # /16x9/Content_Settings.xml
 msgctxt "#31568"
 msgid "Autoplay can be quickly toggled on/off from the options menu within the video library."
-msgstr ""
+msgstr "La reproducción automática puede encenderse y apagarse rápidamente en el menú de opciones de la colección de vídeo."
 
 # /16x9/Content_Settings.xml
 msgctxt "#31469"
 msgid "Autoplay trailers for tv shows in video library"
-msgstr ""
+msgstr "Reproducir automáticamente los tráilers de los programas de tv de la colección de vídeo"
 
 # /16x9/Variables_Labels_Media.xml
 msgctxt "#31472"
