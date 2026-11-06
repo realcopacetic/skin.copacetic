@@ -137,9 +137,6 @@
 	<variable name="Unfocused_Grey_Color">
 		<value>$VAR[Alpha_100]$VAR[Unfocused_Grey_Hex]</value>
 	</variable>
-	<variable name="Unfocused_Grey_Color">
-		<value>$VAR[Alpha_100]$VAR[Unfocused_Grey_Hex]</value>
-	</variable>
 	<variable name="User_Rating_Color">
 		<value>$VAR[Alpha_100]$VAR[User_Rating_Hex]</value>
 	</variable>
@@ -447,14 +444,6 @@
 
 	<variable name="skinsettings_Music_Rating_Like_Threshold_Button_Textcolor">
 		<value condition="Control.HasFocus(14050) | Control.HasFocus(14051)">$VAR[Light_Color]</value>
-		<value>$VAR[Unfocused_Color]</value>
-	</variable>
-	<variable name="skinsettings_Multiart_Interval_Button_Textcolor">
-		<value condition="Control.HasFocus(15220) | Control.HasFocus(15221)">$VAR[Light_Color]</value>
-		<value>$VAR[Unfocused_Color]</value>
-	</variable>
-	<variable name="skinsettings_Trailer_Autoplay_Interval_Button_Textcolor">
-		<value condition="Control.HasFocus(15320) | Control.HasFocus(15321)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 
