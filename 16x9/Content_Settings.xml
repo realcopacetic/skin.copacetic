@@ -786,15 +786,8 @@
 			<param name="label2" value="$VAR[skinsettings_script-upnext_Artwork_Label2]" />
 			<param name="previous" value="1409" />
 			<param name="id" value="1410" />
-			<param name="next" value="1411" />
+			<param name="next" value="1412" />
 		</include>
-		<control type="radiobutton" id="1411">
-			<description>Instantly hide progress bar on pause screen</description>
-			<label>$LOCALIZE[31455]</label>
-			<onclick>Skin.ToggleSetting(Player_Progress_Disabled)</onclick>
-			<selected>Skin.HasSetting(Player_Progress_Disabled)</selected>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
-		</control>
 		<control type="radiobutton" id="1412">
 			<description>Show info on pause screen</description>
 			<label>$LOCALIZE[31456]</label>

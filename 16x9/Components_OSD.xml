@@ -96,7 +96,6 @@
 				<right>$PARAM[right]</right>
 				<bottom>$PARAM[bottom]</bottom>
 				<height>$PARAM[height]</height>
-				<visible>![VideoPlayer.IsFullscreen + Player.Paused + Skin.HasSetting(Player_Progress_Disabled)]</visible>
 				<visible>!$EXP[TransparentDialog_IsVisible]</visible>
 				<nested />
 				<include content="Player_Progress_Bars" condition="!VideoPlayer.Content(livetv)">
