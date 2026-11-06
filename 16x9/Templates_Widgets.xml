@@ -25,9 +25,10 @@
 		<param name="content_path" default="Widget_Container_Content" />
 		<param name="use_custom_click" default="false" />
 		<param name="click_action" default="Blank" />
+		<param name="hidden_focus" default="false" /> <!-- true: an empty, hidden rail still reads its URL, for a path that waits on 9000; empty, it still can't take focus -->
 		<definition>
 			<control type="fixedlist" id="$PARAM[id]">
-				<visible>Integer.IsGreaterOrEqual(Container($PARAM[id]).NumItems,$PARAM[min_items]) | Container($PARAM[id]).IsUpdating | $PARAM[bypass_min_items]</visible>
+				<visible allowhiddenfocus="$PARAM[hidden_focus]">Integer.IsGreaterOrEqual(Container($PARAM[id]).NumItems,$PARAM[min_items]) | Container($PARAM[id]).IsUpdating | $PARAM[bypass_min_items]</visible>
 				<onfocus condition="Window.Is(home)">SetProperty(Home_Widget,$PARAM[id],home)</onfocus>
 				<onfocus condition="Window.Is(movieinformation) | Window.Is(musicinformation) | Window.Is(songinformation) | Window.Is(addoninformation) | Window.Is(1180)">SetProperty(Infoscreen_Widget,$PARAM[id],home)</onfocus>
 				<onfocus>ClearProperty(Focused_Button,movieinformation)</onfocus>
@@ -468,6 +469,7 @@
 		<param name="include_progress" default="true" />
 		<param name="global_search" default="false" />
 		<param name="widget_info_visible" default="true" />
+		<param name="hidden_focus" default="false" />
 		<definition>
 			<include content="Hidden_Components">
 				<control type="label" id="620$PARAM[widget_position]1">
@@ -490,6 +492,7 @@
 				<param name="limit" value="$PARAM[limit]" />
 				<param name="use_custom_click" value="$PARAM[use_custom_click]" />
 				<param name="click_action" value="$PARAM[click_action]" />
+				<param name="hidden_focus" value="$PARAM[hidden_focus]" />
 			</include>
 			<!-- Art -->
 			<control type="group">
@@ -622,6 +625,7 @@
 			<param name="sortby" value="year" />
 			<param name="sortorder" value="descending" />
 			<param name="content" value="$VAR[Path_Discography]" />
+			<param name="hidden_focus" value="true" />
 			<param name="click_action" value="Open_Album" />
 			<param name="widget_header" value="$VAR[Infoscreen_Widget_Discography_Label]" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold,, ]$INFO[Container(3202).CurrentItem]$INFO[Container(3202).NumItems,/]" />
@@ -698,6 +702,7 @@
 			<param name="sortby" value="votes" />
 			<param name="sortorder" value="descending" />
 			<param name="content" value="$VAR[Path_DirectorCredits]" />
+			<param name="hidden_focus" value="true" />
 			<param name="click_action" value="Open_More_From_Director" />
 			<param name="limit" value="50" />
 			<param name="widget_header" value="$INFO[Container(9000).ListItem.Director]" />
@@ -732,6 +737,7 @@
 			<param name="sortby" value="random" />
 			<param name="sortorder" value="ascending" />
 			<param name="content" value="$VAR[Path_StudioCredits]" />
+			<param name="hidden_focus" value="true" />
 			<param name="click_action" value="Open_More_From_Studio" />
 			<param name="limit" value="50" />
 			<param name="widget_header" value="$INFO[Container(9000).ListItem.Studio]" />
@@ -749,6 +755,7 @@
 			<param name="sortby" value="random" />
 			<param name="sortorder" value="ascending" />
 			<param name="content" value="$VAR[Path_Similar]" />
+			<param name="hidden_focus" value="true" />
 			<param name="click_action" value="Open_Similar" />
 			<param name="widget_header" value="$INFO[Container(9000).ListItem.Genre]" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold,, ]$LOCALIZE[31211]" />
@@ -781,6 +788,7 @@
 			<param name="sortby" value="random" />
 			<param name="sortorder" value="ascending" />
 			<param name="content" value="$VAR[Path_SimilarAlbums]" />
+			<param name="hidden_focus" value="true" />
 			<param name="click_action" value="Open_Similar_Albums" />
 			<param name="widget_header" value="$VAR[Infoscreen_Widget_SimilarAlbums_Label]" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold,, ]$LOCALIZE[31211]" />
