@@ -58,8 +58,9 @@
 			<onfocus>SetProperty(MusicOSD_Controls,$LOCALIZE[209],musicosd)</onfocus>
 			<onclick condition="MusicPlayer.HasNext">PlayerControl(Next)</onclick>
 			<onup>60</onup>
-			<ondown condition="!Skin.String(Music_Rating_Like_Threshold) | !Integer.IsGreater(MusicPlayer.DBID,0)">10</ondown>
+			<ondown condition="!Skin.String(Music_Rating_Like_Threshold)">10</ondown>
 			<ondown condition="Skin.String(Music_Rating_Like_Threshold) + Integer.IsGreater(MusicPlayer.DBID,0)">11</ondown>
+			<ondown condition="Skin.String(Music_Rating_Like_Threshold) + !Integer.IsGreater(MusicPlayer.DBID,0)">5</ondown>
 		</control>
 	</include>
 
