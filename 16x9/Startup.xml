@@ -210,8 +210,6 @@
 	<onload condition="!Skin.String(GridView_Display_TVShows)">Skin.SetString(GridView_Display_TVShows,Fanart)</onload>
 	<onload condition="!Skin.String(GridView_Display_Seasons)">Skin.SetString(GridView_Display_Seasons,Fanart)</onload>
 	<onload condition="!Skin.String(GridView_Display_Artists)">Skin.SetString(GridView_Display_Artists,Fanart)</onload>
-	<onload condition="!Skin.String(GridView_Display_Albums)">Skin.SetString(GridView_Display_Artists,Fanart)</onload>
-	<onload condition="!Skin.String(GridView_Display_Images)">Skin.SetString(GridView_Display_Artists,Square)</onload>
 	<onload condition="!Skin.String(GridView_Display_Programs_Folders)">Skin.SetString(GridView_Display_Programs_Folders,Posters)</onload>
 	<onload condition="!Skin.String(GridView_Display_Programs_Files)">Skin.SetString(GridView_Display_Programs_Files,Fanart)</onload>
 	<onload condition="!Skin.String(GridView_Display_Favourites)">Skin.SetString(GridView_Display_Favourites,Square)</onload>
