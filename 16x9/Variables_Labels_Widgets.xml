@@ -295,7 +295,7 @@
 		<value condition="Skin.String(Widget7_View,Grid)">$LOCALIZE[31004]</value>
 	</variable>
 	<variable name="Widget7_Display">
-		<value condition="Skin.StrHasSettinging(Widget7_Content_Disabled)" />
+		<value condition="Skin.HasSetting(Widget7_Content_Disabled)" />
 		<value condition="Skin.String(Widget7_Display,Square)">$LOCALIZE[31008]</value>
 		<value condition="Skin.String(Widget7_Display,Fanart)">$LOCALIZE[31007]</value>
 		<value condition="Skin.String(Widget7_Display,Spotlight)">$LOCALIZE[31031]</value>
