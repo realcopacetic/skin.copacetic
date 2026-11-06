@@ -522,7 +522,7 @@
 		<value>$VAR[Dark_Color]</value>
 	</variable>
 	<variable name="Progress_Grid_Text_Color">
-		<value condition="Skin.String(Accent_Color_Contrast,dark) + !Skin.String(User_Defined_Accent_Color,copacetic_accent_color)">$VAR[Dark_Color]</value>
+		<value condition="Skin.String(User_Defined_Accent_Color) + !Skin.String(User_Defined_Accent_Color,copacetic_accent_color) + !$EXP[Accent_Color_IsDark]">$VAR[Dark_Color]</value>
 		<value>$VAR[Light_Color]</value>
 	</variable>
 
