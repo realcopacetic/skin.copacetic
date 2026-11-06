@@ -2,7 +2,10 @@
 <!-- widgetsettings -->
 <window type="dialog" id="1140">
 	<defaultcontrol always="true">3200</defaultcontrol>
+	<!-- Back in the same frame as a move: 4010's SetFocus then finds no id and does nothing -->
+	<onunload>ClearProperty(Widget_Move,home)</onunload>
 	<controls>
+		<include content="widgetsettings_Hidden" />
 		<include content="Default_Dialog_Panel_Layout">
 			<param name="visible" value="!Window.IsVisible(shutdownmenu) + !Window.IsVisible(selectdialog) + !String.Contains(Window(home).Property(SelectDialog),Active) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(progressdialog)" />
 			<param name="left_list_id" value="3200" />

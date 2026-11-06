@@ -164,6 +164,7 @@
 	<!-- Widget move: swaps every setting of two Home widget slots -->
 	<include name="Widget_Move">
 		<param name="condition" />
+		<param name="focus" />
 		<param name="posa" />
 		<param name="posb" />
 		<definition>
@@ -347,7 +348,9 @@
 				<param name="posb" value="$PARAM[posb]" />
 				<param name="setting" value="Custom_Limit" />
 			</include>
-			<onclick condition="$PARAM[condition]">ClearProperty(Widget_Move,home)</onclick>
+			<!-- Focus reaches the moved widget through 4010 a frame later, once conditions are read afresh; a press before then finds nothing to click -->
+			<onclick condition="$PARAM[condition]">SetProperty(Widget_Move,$PARAM[focus],home)</onclick>
+			<onclick condition="$PARAM[condition]">SetFocus(4010)</onclick>
 		</definition>
 	</include>
 
