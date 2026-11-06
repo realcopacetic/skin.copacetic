@@ -597,4 +597,18 @@
 			</include>
 		</definition>
 	</include>
+
+	<include name="PVR_Stub">
+		<!-- Every PVR window's only content: Kodi must find each PVR file (#28). No id, as Kodi casts some PVR ids to radio buttons -->
+		<control type="label">
+			<left>360</left>
+			<width>1200</width>
+			<height>1080</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[10005]</label>
+			<font>Title_Breadcrumb_Label</font>
+			<textcolor>$VAR[Unfocused_Color]</textcolor>
+		</control>
+	</include>
 </includes>

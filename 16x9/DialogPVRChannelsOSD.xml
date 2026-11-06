@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!-- pvrosdchannels -->
-	<defaultcontrol always="true">11</defaultcontrol>
+	<!-- pvrosdchannels: stub, PVR isn't skinned (PVR_Stub) -->
 	<controls>
-		<control type="grouplist">
-			<control type="list" id="11" />
-		</control>
+		<include content="PVR_Stub" />
 	</controls>
 </window>

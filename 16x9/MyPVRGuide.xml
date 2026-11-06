@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!-- tvguide -->
-	<onunload>ClearProperty(OptionsMenu,home)</onunload>
-	<defaultcontrol always="true">10</defaultcontrol>
+	<!-- tvguide / radioguide: stub, PVR isn't skinned (PVR_Stub) -->
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
-	<menucontrol>3700</menucontrol>
-	<views>10</views>
 	<controls>
-		<include content="Common_Controls" />
-		<include content="tvguide_Controls" />
-		<include content="tvguide_Views" />
-		<include content="Hidden_PVR_Menu">
-			<param name="target_id" value="10" />
-		</include>
+		<include content="PVR_Stub" />
 	</controls>
 </window>
