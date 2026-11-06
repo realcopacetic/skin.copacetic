@@ -70,7 +70,7 @@
 				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" />
 			</include>
 			<include content="Like_focused" condition="Skin.String(Music_Rating_Like_Threshold)">
-				<param name="visible" value="!Integer.IsLess(Window(home).Property(MusicPlayer_UserRating),Skin.String(Music_Rating_Like_Threshold)) + !Window.IsVisible(musicosd)" />
+				<param name="visible" value="!Integer.IsLess(MusicPlayer.UserRating,Skin.String(Music_Rating_Like_Threshold)) + !Window.IsVisible(musicosd)" />
 				<param name="color" value="$VAR[Accent_Color]" />
 				<animation effect="slide" end="315,-315" time="0" condition="true">Conditional</animation>
 			</include>
@@ -88,7 +88,7 @@
 				<param name="info" value="[UPPERCASE]$INFO[MusicPlayer.Artist]$VAR[MusicPlayer_Year_Divider, ]$INFO[MusicPlayer.Year, ]$VAR[MusicPlayer_Album_Divider, , ]$INFO[MusicPlayer.Album][/UPPERCASE]" />
 				<param name="info_font" value="Visualisation_Info" />
 				<include content="Like_focused" condition="Skin.String(Music_Rating_Like_Threshold)">
-					<param name="visible" value="!Integer.IsLess(Window(home).Property(MusicPlayer_UserRating),Skin.String(Music_Rating_Like_Threshold)) + !Window.IsVisible(musicosd)" />
+					<param name="visible" value="!Integer.IsLess(MusicPlayer.UserRating,Skin.String(Music_Rating_Like_Threshold)) + !Window.IsVisible(musicosd)" />
 					<param name="color" value="$VAR[Accent_Color]" />
 					<include content="Visible_Fade_Delayed_Animation" />
 					<animation effect="slide" end="-490,30" time="0" condition="true">Conditional</animation>

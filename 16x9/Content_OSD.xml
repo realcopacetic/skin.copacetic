@@ -133,7 +133,7 @@
 			<height>60</height>
 			<texturefocus colordiffuse="$VAR[Light_Color]">icons/icon_heart_unfilled_focused_60.png</texturefocus>
 			<texturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_heart_unfilled_unfocused_60.png</texturenofocus>
-			<usealttexture>!Integer.IsLess(Window(home).Property(MusicPlayer_UserRating),Skin.String(Music_Rating_Like_Threshold))</usealttexture>
+			<usealttexture>!Integer.IsLess(MusicPlayer.UserRating,Skin.String(Music_Rating_Like_Threshold))</usealttexture>
 			<alttexturefocus colordiffuse="$VAR[Accent_Color]">icons/icon_heart_filled_focused_60.png</alttexturefocus>
 			<alttexturenofocus colordiffuse="$VAR[Accent_Color]">icons/icon_heart_filled_unfocused_60.png</alttexturenofocus>
 			<onfocus>SetProperty(MusicOSD_Controls,$VAR[Like_Button_Label],musicosd)</onfocus>
