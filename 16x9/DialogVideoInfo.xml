@@ -4,6 +4,7 @@
 	<include content="movieinformation_OnLoadUnload" />
 	<defaultcontrol always="true">8</defaultcontrol>
 	<onload>ClearProperty(Infoscreen_Transition,home)</onload>
+	<include content="Infoscreen_Metadata_Unload" />
 	<controls>
 		<include content="Infoscreen_Metadata_List" />
 		<include content="Infoscreen_Flag_Checkers">

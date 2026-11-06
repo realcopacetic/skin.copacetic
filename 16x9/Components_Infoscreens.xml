@@ -47,11 +47,18 @@
 		<!-- The dialog item's first studio and writer, a random director and genre, an album's or song's album artist.
 		     It keeps the last item's until the new one lands, so readers wait on Infoscreen_Metadata_Ready -->
 		<control type="list" id="9000">
-			<content>plugin://script.copacetic.helper/?info=metadata&amp;target=item&amp;type=$INFO[ListItem.DBType]&amp;id=$INFO[ListItem.DBID]&amp;random_pick=true&amp;genre_aliases=Hip-Hop:Hip%20Hop</content>
+			<content>plugin://script.copacetic.helper/?info=metadata&amp;target=item&amp;type=$INFO[ListItem.DBType]&amp;id=$INFO[ListItem.DBID]&amp;random_pick=true&amp;genre_aliases=Hip-Hop:Hip%20Hop&amp;pass=$INFO[Window(home).Property(Infoscreen_Metadata_Pass)]&amp;label=$INFO[ListItem.Label]</content> <!-- label: two items outside the library share type and id. Last, so a label holding &x= cuts nothing else -->
 			<itemlayout />
 			<focusedlayout />
 			<include content="Hidden_Control" />
 		</control>
+	</include>
+
+	<include name="Infoscreen_Metadata_Unload">
+		<!-- A kept dialog reopens with 9000's last URL and items, and a fetch its close cut short came back empty:
+		     each close flips pass, so the next open always refetches. Both conditions are read before either runs -->
+		<onunload condition="String.IsEmpty(Window(home).Property(Infoscreen_Metadata_Pass))">SetProperty(Infoscreen_Metadata_Pass,1,home)</onunload>
+		<onunload condition="!String.IsEmpty(Window(home).Property(Infoscreen_Metadata_Pass))">ClearProperty(Infoscreen_Metadata_Pass,home)</onunload>
 	</include>
 
 	<include name="Infoscreen_Flags_Layout">

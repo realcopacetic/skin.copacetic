@@ -3,6 +3,7 @@
 	<!-- musicinformation -->
 	<onload>ClearProperty(Infoscreen_Transition,home)</onload>
 	<include content="musicinformation_OnLoadUnload" />
+	<include content="Infoscreen_Metadata_Unload" />
 	<defaultcontrol always="true">97</defaultcontrol>
 	<controls>
 		<include content="Infoscreen_Metadata_List" />
