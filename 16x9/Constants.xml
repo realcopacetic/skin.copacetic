@@ -2,6 +2,7 @@
 <includes>
 
 	<!-- Default Transitions -->
+	<constant name="Default_Transition_0x">0</constant>
 	<constant name="Default_Transition_0.25x">63</constant>
 	<constant name="Default_Transition_0.5x">126</constant>
 	<constant name="Default_Transition_0.75x">189</constant>

@@ -371,20 +371,6 @@
 		</definition>
 	</include>
 
-	<include name="seekbar_Fade_Animation">
-		<include name="VisibleHidden_Fade_Animation">
-			<include content="fade_animation">
-				<param name="type" value="Visible" />
-				<param name="time" value="1x" />
-			</include>
-			<include content="fade_animation">
-				<param name="type" value="Hidden" />
-				<param name="time" value="1x" />
-				<param name="delay" value="1x" />
-			</include>
-		</include>
-	</include>
-
 	<include name="Trailer_Autoplay_Fade_Animation">
 		<animation effect="fade" start="100" end="0" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="$EXP[Trailer_Autoplay_IsVisible]">Conditional</animation>
 		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="Default_Transition_3x" tween="sine" easing="inout" reversible="false" condition="!$EXP[Trailer_Autoplay_IsVisible]">Conditional</animation>

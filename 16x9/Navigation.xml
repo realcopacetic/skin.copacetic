@@ -95,7 +95,6 @@
 			<onleft condition="Integer.IsGreater(Container.NumItems,10)">502</onleft>
 			<onleft condition="Integer.IsLessOrEqual(Container.NumItems,10) + Integer.IsGreater(Container.NumItems,1)">0</onleft>
 			<onleft condition="Integer.IsEqual(Container.NumItems,1)">SetFocus(3000,0,absolute)</onleft>
-			<onleft condition="Integer.IsEqual(Container.NumItems,1)">502</onleft>
 			<onright condition="Integer.IsGreater(Container.NumItems,10)">502</onright>
 			<onright condition="Integer.IsLessOrEqual(Container.NumItems,10) + Integer.IsGreater(Container.NumItems,1)">0</onright>
 			<onright condition="Integer.IsEqual(Container.NumItems,1)">SetFocus(3000,0,absolute)</onright>

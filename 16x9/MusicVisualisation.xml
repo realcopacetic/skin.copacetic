@@ -26,7 +26,7 @@
 			<param name="fadetime" value="360" />
 			<param name="colordiffuse" value="ff808080" />
 			<param name="fade_diffuse_override" value="true" />
-			<include content="VisibleHidden_Fade_Animation" condtion="!Visualisation.Enabled" />
+			<include content="VisibleHidden_Fade_Animation" condition="!Visualisation.Enabled" />
 			<include content="Ken_Burns_Effect_Animation" />
 		</include>
 		<include content="Visualisation" condition="Visualisation.Enabled" />
