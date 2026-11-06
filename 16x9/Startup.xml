@@ -225,7 +225,7 @@
 	<onload condition="!Skin.String(GridView_Details_Images)">Skin.SetString(GridView_Details_Images,Off)</onload>
 	<onload condition="!Skin.String(GridView_Details_Programs_Folders)">Skin.SetString(GridView_Details_Programs_Folders,TitleAndInfo)</onload>
 	<onload condition="!Skin.String(GridView_Details_Programs_Files)">Skin.SetString(GridView_Details_Programs_Files,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(GridView_Details_Favourites)">Skin.SetString(GridView_Details_Programs_Files,Title)</onload>
+	<onload condition="!Skin.String(GridView_Details_Favourites)">Skin.SetString(GridView_Details_Favourites,Title)</onload>
 	<!-- Startup -->
 	<onload>SetProperty(SkinInitStarted,1,Home)</onload>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
