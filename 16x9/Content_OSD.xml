@@ -144,52 +144,6 @@
 		</control>
 	</include>
 
-	<include name="pvrosd_Content">
-		<include content="PVR_Button_Template">
-			<param name="description" value="channels" />
-			<param name="id" value="100" />
-			<param name="icon" value="library" />
-			<param name="label" value="$LOCALIZE[14301]" />
-			<visible>!Window.Is(tvchannels) + !Window.Is(radiochannels)</visible>
-		</include>
-		<include content="PVR_Button_Template">
-			<param name="description" value="guide" />
-			<param name="id" value="101" />
-			<param name="icon" value="list" />
-			<param name="label" value="$LOCALIZE[19069]" />
-			<visible>!Window.Is(tvguide) + !Window.Is(radioguide)</visible>
-		</include>
-		<include content="PVR_Button_Template">
-			<param name="description" value="recordings" />
-			<param name="id" value="102" />
-			<param name="icon" value="record" />
-			<param name="radio_label" value="$LOCALIZE[10706]" />
-			<param name="label" value="$LOCALIZE[19017]" />
-			<visible>!Window.Is(tvrecordings) + !Window.Is(radiorecordings)</visible>
-		</include>
-		<include content="PVR_Button_Template">
-			<param name="description" value="timerrules" />
-			<param name="id" value="103" />
-			<param name="icon" value="settings_cog" />
-			<param name="label" value="$LOCALIZE[19138]" />
-			<visible>!Window.Is(tvtimerrules) + !Window.Is(radiotimerrules)</visible>
-		</include>
-		<include content="PVR_Button_Template">
-			<param name="description" value="timers" />
-			<param name="id" value="104" />
-			<param name="icon" value="timer" />
-			<param name="label" value="$LOCALIZE[19040]" />
-			<visible>!Window.Is(tvtimers) + !Window.Is(tvtimers)</visible>
-		</include>
-		<include content="PVR_Button_Template">
-			<param name="description" value="search" />
-			<param name="id" value="105" />
-			<param name="icon" value="browse" />
-			<param name="label" value="$LOCALIZE[10605]" />
-			<visible>!Window.Is(tvsearch) + !Window.Is(radiosearch)</visible>
-		</include>
-	</include>
-
 	<include name="pvrosd_Top_Row_Content">
 		<animation effect="slide" end="30,0" time="0" condition="!Control.IsVisible(1) + Control.IsVisible(7)">Conditional</animation>
 		<animation effect="slide" end="-30,0" time="0" condition="Control.IsVisible(1) + !Control.IsVisible(7)">Conditional</animation>

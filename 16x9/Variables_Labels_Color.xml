@@ -189,12 +189,6 @@
 	<variable name="ListItem_AudioLanguage_Divider_Bold">
 		<value condition="!String.IsEmpty(ListItem.AudioLanguage)">$VAR[Copacetic_Divider_Bold_Dominant]</value>
 	</variable>
-	<variable name="ListItem_Comment_Divider_Bold">
-		<value condition="!String.IsEmpty(ListItem.Comment)">$VAR[Copacetic_Divider_Bold_Dominant]</value>
-	</variable>
-	<variable name="ListItem_Date_Divider">
-		<value condition="!String.IsEmpty(ListItem.Date)">$VAR[Copacetic_Divider_Dominant]</value>
-	</variable>
 	<variable name="ListItem_Date_Divider_Bold">
 		<value condition="!String.IsEmpty(ListItem.Date)">$VAR[Copacetic_Divider_Bold_Dominant]</value>
 	</variable>
@@ -308,9 +302,6 @@
 	</variable>
 
 	<!-- PVR -->
-	<variable name="ListItem_ChannelName_Divider_Bold">
-		<value condition="!String.IsEmpty(ListItem.ChannelName)">$VAR[Copacetic_Divider_Bold_Dominant]</value>
-	</variable>
 	<variable name="PVR_EPGEventDuration_Divider_Bold">
 		<value condition="!String.IsEmpty(PVR.EPGEventDuration)">$VAR[Copacetic_Divider_Bold_Dominant]</value>
 	</variable>
@@ -387,7 +378,6 @@
 		<value condition="String.IsEqual(ListItem.DBType,musicvideo) + !String.IsEmpty(ListItem.Year)">$VAR[Copacetic_Divider]</value>
 		<value condition="Container.Content(addons) + !String.IsEmpty(ListItem.AddonType)">$VAR[Copacetic_Divider]</value>
 		<value condition="Window.IsVisible(programs) + !String.IsEmpty(ListItem.Year)">$VAR[Copacetic_Divider]</value>
-		<value condition="Window.IsVisible(tvsearch) + ListItem.HasEPG + !String.IsEmpty(ListItem.ChannelName)">$VAR[Copacetic_Divider]</value>
 		<value condition="Container.Content(actors) + !String.IsEmpty(ListItem.Appearances)">$VAR[Copacetic_Divider]</value>
 		<value condition="Container.Content(files) + !String.IsEmpty(ListItem.Duration)">$VAR[Copacetic_Divider]</value>
 	</variable>

@@ -26,8 +26,7 @@
 					<include content="ListView_Layout_videos" condition="Window.Is(videos)" />
 					<include content="ListView_Layout_music" condition="Window.Is(music) | Window.Is(musicplaylist)" />
 					<include content="ListView_Layout_videoplaylist" condition="Window.Is(videoplaylist)" />
-					<include content="ListView_Layout_tvsearch" condition="Window.Is(tvsearch)" />
-					<include content="ListView_Layout_pictures" condition="!Window.Is(videos) + !Window.Is(music) + !Window.Is(videoplaylist) + !Window.Is(musicplaylist) + !Window.Is(tvsearch) + !Window.Is(addonbrowser) + !Window.Is(programs)" />
+					<include content="ListView_Layout_pictures" condition="!Window.Is(videos) + !Window.Is(music) + !Window.Is(videoplaylist) + !Window.Is(musicplaylist) + !Window.Is(addonbrowser) + !Window.Is(programs)" />
 				</control>
 			</control>
 		</include>
@@ -97,7 +96,7 @@
 					<animation effect="slide" end="-600,0" time="0" condition="$EXP[ListView_Display_IsThumbnails]">Conditional</animation>
 				</include>
 				<include content="Common_List_Info_Label">
-					<param name="visible" value="$EXP[ListView_Display_IsBackground] | Window.Is(tvsearch) | Window.Is(videoplaylist)" />
+					<param name="visible" value="$EXP[ListView_Display_IsBackground] | Window.Is(videoplaylist)" />
 					<param name="left" value="120" />
 					<param name="width" value="1680" />
 					<param name="hiddenlabelmaxwidth" value="1200" />

@@ -293,26 +293,6 @@
 		</font>
 		<!-- PVR -->
 		<font>
-			<name>PVR_Guide</name>
-			<filename>Inter/Inter-ExtraLight.ttf</filename>
-			<size>27</size>
-		</font>
-		<font>
-			<name>PVR_Channel</name>
-			<filename>Inter/Inter-ExtraLight.ttf</filename>
-			<size>30</size>
-		</font>
-		<font>
-			<name>PVR_Description</name>
-			<filename>Inter/Inter-Light.ttf</filename>	
-			<size>22</size>
-		</font>
-		<font>
-			<name>PVR_Info</name>
-			<filename>Inter/Inter-SemiBold.ttf</filename>
-			<size>20</size>
-		</font>
-		<font>
 			<name>PVR_Time</name>
 			<filename>Inter/Inter-Regular.ttf</filename>
 			<size>22</size>
@@ -604,26 +584,6 @@
 			<size>13</size>
 		</font>
 		<!-- PVR -->
-		<font>
-			<name>PVR_Guide</name>
-			<filename>resource://resource.fonts.copacetic/Inter-NotoSansKR-ExtraLight.ttf</filename>
-			<size>27</size>
-		</font>
-		<font>
-			<name>PVR_Channel</name>
-			<filename>resource://resource.fonts.copacetic/Inter-NotoSansKR-ExtraLight.ttf</filename>
-			<size>30</size>
-		</font>
-		<font>
-			<name>PVR_Description</name>
-			<filename>resource://resource.fonts.copacetic/Inter-NotoSansKR-Light.ttf</filename>
-			<size>22</size>
-		</font>
-		<font>
-			<name>PVR_Info</name>
-			<filename>resource://resource.fonts.copacetic/Inter-NotoSansKR-SemiBold.ttf</filename>
-			<size>20</size>
-		</font>
 		<font>
 			<name>PVR_Time</name>
 			<filename>resource://resource.fonts.copacetic/Inter-NotoSansKR-Regular.ttf</filename>
@@ -922,26 +882,6 @@
 			<size>13</size>
 		</font>
 		<!-- PVR -->
-		<font>
-			<name>PVR_Guide</name>
-			<filename>resource://resource.fonts.copacetic/Inter-NotoSansSC-ExtraLight.ttf</filename>
-			<size>27</size>
-		</font>
-		<font>
-			<name>PVR_Channel</name>
-			<filename>resource://resource.fonts.copacetic/Inter-NotoSansSC-ExtraLight.ttf</filename>
-			<size>30</size>
-		</font>
-		<font>
-			<name>PVR_Description</name>
-			<filename>resource://resource.fonts.copacetic/Inter-NotoSansSC-Light.ttf</filename>
-			<size>22</size>
-		</font>
-		<font>
-			<name>PVR_Info</name>
-			<filename>resource://resource.fonts.copacetic/Inter-NotoSansSC-SemiBold.ttf</filename>
-			<size>20</size>
-		</font>
 		<font>
 			<name>PVR_Time</name>
 			<filename>resource://resource.fonts.copacetic/Inter-NotoSansSC-Regular.ttf</filename>

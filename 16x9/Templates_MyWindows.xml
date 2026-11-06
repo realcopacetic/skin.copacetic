@@ -19,8 +19,7 @@
 		<control type="button" id="4012">
 			<visible allowhiddenfocus="true">false</visible>
 			<onfocus>ClearProperty(Scrollbars,home)</onfocus>
-			<onfocus condition="!Window.Is(tvguide)">SetFocus(50)</onfocus>
-			<onfocus condition="Window.Is(tvguide)">SetFocus(10)</onfocus>
+			<onfocus>SetFocus(50)</onfocus>
 		</control>
 		<!-- Set focus to scrollbars -->
 		<control type="button" id="4013">

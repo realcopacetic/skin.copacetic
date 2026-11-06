@@ -27,16 +27,6 @@
 		<value>$LOCALIZE[31628]</value>
 	</variable>
 
-	<variable name="pvrchannelmanager_Info_Label">
-		<value condition="!String.IsEmpty(Window.Property(IsRadio))">$VAR[Copacetic_Divider_Bold]$INFO[Container(20).NumItems, , $LOCALIZE[19024]]</value>
-		<value>$VAR[Copacetic_Divider_Bold]$INFO[Container(20).NumItems, , $LOCALIZE[19023]]</value>
-	</variable>
-
-	<variable name="pvrgroupmanager_Info_Label">
-		<value condition="!String.IsEmpty(Window.Property(IsRadio))">$VAR[Copacetic_Divider_Bold]$INFO[Container(13).NumItems, , $LOCALIZE[19174]]</value>
-		<value>$VAR[Copacetic_Divider_Bold]$INFO[Container(13).NumItems, , $LOCALIZE[19173]]</value>
-	</variable>
-
 	<variable name="script-upnext_Label">
 		<value condition="!Integer.IsGreater(Window.Property(Episode),9)">$VAR[Window_Property_Season_Divider_Bold]$INFO[Window.Property(season), ]$INFO[Window.Property(episode),x0]</value>
 		<value>$VAR[Window_Property_Season_Divider_Bold]$INFO[Window.Property(season), ]$INFO[Window.Property(episode),x]</value>
@@ -268,39 +258,6 @@
 		<value condition="ListItem.Property(hearingimp)">$INFO[ListItem.Label,, CC]$VAR[ListItem_Label2_Divider_Bold, , ]$INFO[ListItem.Label2]</value>
 		<value condition="ListItem.Property(sync)">$INFO[ListItem.Label,, SYNC]$VAR[ListItem_Label2_Divider_Bold, , ]$INFO[ListItem.Label2]</value>
 		<value>$INFO[ListItem.Label]$VAR[ListItem_Label2_Divider_Bold, , ]$INFO[ListItem.Label2]</value>
-	</variable>
-
-	<variable name="tvguide_Group_Label">
-		<value condition="Control.HasFocus(11)">$VAR[Copacetic_Chevron_Left] $INFO[Container(11).ListItem.Label] $VAR[Copacetic_Chevron_Right]</value>
-		<value>$INFO[Container(11).ListItem.Label]</value>
-	</variable>
-
-	<variable name="tvrecordings_Breadcrumb_Info_Label">
-		<value condition="Window.Is(tvrecordings)">$LOCALIZE[19020]</value>
-		<value condition="Window.Is(radiorecordings)">$LOCALIZE[19021]</value>
-	</variable>
-
-	<variable name="tvrecordings_top_label">
-		<value condition="ListItem.IsFolder + Integer.IsGreater(Container(5000).NumItems,1)">[UPPERCASE]$LOCALIZE[19076]$VAR[Copacetic_Divider_Bold, ]$INFO[Container(5000).NumItems, , $LOCALIZE[31622]][/UPPERCASE]</value>
-		<value condition="ListItem.IsFolder + Integer.IsGreater(Container(5000).NumItems,0)">[UPPERCASE]$LOCALIZE[19076]$VAR[Copacetic_Divider_Bold, ]$INFO[Container(5000).NumItems, , $LOCALIZE[31623]][/UPPERCASE]</value>
-		<value>[UPPERCASE]$INFO[ListItem.ChannelName]$VAR[ListItem_Genre_Divider_Bold, ]$INFO[ListItem.Genre, ][/UPPERCASE]</value>
-	</variable>
-
-	<variable name="tvrecordings_dateandsize_label">
-		<value condition="!String.IsEmpty(ListItem.Size) + !String.IsEqual(ListItem.Size,0.00 B)">[UPPERCASE]$INFO[ListItem.Date]$VAR[ListItem_Size_Divider_Bold, ]$INFO[ListItem.Size, ][/UPPERCASE]</value>
-		<value>[UPPERCASE]$INFO[ListItem.Date][/UPPERCASE]</value>
-	</variable>
-
-	<variable name="tvtimers_Breadcrumb_Label">
-		<value condition="Window.Is(tvtimers) | Window.Is(radiotimers)">$LOCALIZE[19040]</value>
-		<value>$LOCALIZE[19138]</value>
-	</variable>
-
-	<variable name="tvtimers_Breadcrumb_Info_Label">
-		<value condition="Window.Is(tvtimers)">$LOCALIZE[19020]</value>
-		<value condition="Window.Is(radiotimers)">$LOCALIZE[19021]</value>
-		<value condition="Window.Is(tvtimerrules)">$LOCALIZE[19020]$INFO[Control.GetLabel(29), / ]</value>
-		<value>$LOCALIZE[19021]$INFO[Control.GetLabel(29), / ]</value>
 	</variable>
 
 	<variable name="videoosd_Subtitle_Toggle_Label">

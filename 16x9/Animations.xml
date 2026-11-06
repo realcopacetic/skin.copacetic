@@ -312,8 +312,8 @@
 	</include>
 
 	<include name="VideoPlayer_Mask_Fade_Animation">
-		<param name="fadein_condition" default="[Window.Previous(VideoFullScreen.xml) + !Player.Paused + !$EXP[TransparentDialog_IsVisible]] | Window.Previous(MyPVRChannels.xml) | Window.Previous(MyPVRGuide.xml) | Window.Previous(MyPVRRecordings.xml) | Window.Previous(MyPVRSearch.xml) | Window.Previous(MyPVRTimers.xml)" />
-		<param name="fadeout_condition" default="[Window.Next(VideoFullScreen.xml) + !Player.Paused + !$EXP[TransparentDialog_IsVisible]] | Window.Next(MyPVRChannels.xml) | Window.Next(MyPVRGuide.xml) | Window.Next(MyPVRRecordings.xml) | Window.Next(MyPVRSearch.xml) | Window.Next(MyPVRTimers.xml)" />
+		<param name="fadein_condition" default="[Window.Previous(VideoFullScreen.xml) + !Player.Paused + !$EXP[TransparentDialog_IsVisible]]" />
+		<param name="fadeout_condition" default="[Window.Next(VideoFullScreen.xml) + !Player.Paused + !$EXP[TransparentDialog_IsVisible]]" />
 		<definition>
 			<include content="fade_animation">
 				<param name="type" value="WindowOpen" />

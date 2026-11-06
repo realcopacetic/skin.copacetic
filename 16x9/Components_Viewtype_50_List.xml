@@ -156,12 +156,6 @@
 		</focusedlayout>
 	</include>
 
-	<include name="ListView_Layout_tvsearch">
-		<include content="ListView_Layout_Background">
-			<param name="condition" value="true" />
-		</include>
-	</include>
-
 	<include name="ListView_Layout_videoplaylist">
 		<include content="ListView_Layout_Background">
 			<param name="condition" value="true" />

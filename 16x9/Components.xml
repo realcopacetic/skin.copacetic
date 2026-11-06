@@ -319,7 +319,7 @@
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Animation" />
 				<control type="videowindow" />
-				<include content="VideoPlayer_Mask" condition="Window.Is(home) | $EXP[Settings_Window_IsVisible] | $EXP[PVR_IsVisible]">
+				<include content="VideoPlayer_Mask" condition="Window.Is(home) | $EXP[Settings_Window_IsVisible]">
 					<param name="visible" value="$PARAM[mask_visible]" />
 				</include>
 			</control>

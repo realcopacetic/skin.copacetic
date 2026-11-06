@@ -140,7 +140,6 @@
 		<param name="label2_visible" default="true" />
 		<param name="label2" default="$INFO[ListItem.Label2]" />
 		<param name="label2_scroll" default="false" />
-		<param name="icon_right" default="30" />
 		<param name="focus_border_enabled" default="false" />
 		<param name="color" default="$VAR[Unfocused_Color]" />
 		<definition>
@@ -167,14 +166,6 @@
 					<scroll>$PARAM[label2_scroll]</scroll>
 				</control>
 			</control>
-			<include content="PVR_logo" condition="Window.Is(pvrchannelmanager) | Window.Is(pvrgroupmanager)">
-				<param name="texture" value="$INFO[ListItem.Art(thumb)]" />
-				<param name="right" value="$PARAM[icon_right]" />
-				<param name="top" value="15" />
-				<param name="width" value="90" />
-				<param name="align" value="center" />
-				<param name="aligny" value="center" />
-			</include>
 			<include content="Settings_List_Underline" condition="$PARAM[focus_border_enabled]">
 				<param name="focus_border_visible" value="$PARAM[focus_border_visible]" />
 				<param name="focus_border_margin_left" value="$PARAM[focus_border_margin_left]" />
@@ -226,7 +217,6 @@
 						<param name="label" value="$PARAM[label]" />
 						<param name="label2_visible" value="$PARAM[label2_visible]" />
 						<param name="label2" value="$PARAM[label2]" />
-						<param name="icon_right" value="$PARAM[icon_right]" />
 					</include>
 				</itemlayout>
 				<focusedlayout height="$PARAM[item_height]" width="$PARAM[width]">
@@ -238,7 +228,6 @@
 						<param name="label2_visible" value="$PARAM[label2_visible]" />
 						<param name="label2" value="$PARAM[label2]" />
 						<param name="label2_scroll" value="$PARAM[label2_scroll]" />
-						<param name="icon_right" value="$PARAM[icon_right]" />
 						<param name="color" value="$PARAM[focus_color]" />
 						<param name="focus_border_enabled" value="true" />
 						<param name="focus_border_visible" value="$PARAM[focus_border_visible]" />
@@ -276,7 +265,6 @@
 						<param name="width" value="90" />
 						<param name="texture" value="Cross" />
 					</include>
-					<include content="pvrgroupmanager_List_Content" condition="$PARAM[embedded_buttons] + Window.Is(pvrgroupmanager)" />
 					<include content="skinshortcuts_Left_List_Content" condition="$PARAM[embedded_buttons] + String.Contains(Window.Property(xmlfile),script-skinshortcuts.xml)" />
 				</focusedlayout>
 			</control>
@@ -327,7 +315,6 @@
 					<param name="label_scroll" value="$PARAM[label_scroll]" />
 					<param name="label2" value="$PARAM[label2]" />
 					<param name="label2_visible" value="$PARAM[label2_visible]" />
-					<param name="icon_right" value="$PARAM[icon_right]" />
 					<onleft>$PARAM[onleft]</onleft>
 					<onright condition="$PARAM[onright_condition]">$PARAM[onright]</onright>
 					<onright condition="$PARAM[onright2_condition]">$PARAM[onright2]</onright>
@@ -387,7 +374,6 @@
 					<param name="label_scroll" value="$PARAM[label_scroll]" />
 					<param name="label2" value="$PARAM[label2]" />
 					<param name="label2_visible" value="$PARAM[label2_visible]" />
-					<param name="icon_right" value="$PARAM[icon_right]" />
 					<onleft condition="$PARAM[onleft_condition]">$PARAM[onleft]</onleft>
 					<onleft condition="$PARAM[onleft2_condition]">$PARAM[onleft2]</onleft>
 					<onright>$PARAM[onright]</onright>
