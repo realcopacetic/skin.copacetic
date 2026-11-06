@@ -2,7 +2,20 @@
 <window>
 	<!-- tvguide / radioguide: stub, PVR isn't skinned (PVR_Stub) -->
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<views>10</views>
 	<controls>
 		<include content="PVR_Stub" />
+		<!-- Kodi drives the guide's grid unchecked (digits, waking from sleep), so it needs one. Empty layouts draw nothing; disabled, it can't take focus -->
+		<!-- Sizes keep every division non-zero: 1px channel and ruler rows, a 36px grid split into Kodi's default 36 blocks, one channel row per page -->
+		<control type="epggrid" id="10">
+			<width>37</width>
+			<height>2</height>
+			<enable>false</enable>
+			<channellayout height="1" width="1" />
+			<focusedchannellayout height="1" width="1" />
+			<itemlayout height="1" width="1" />
+			<focusedlayout height="1" width="1" />
+			<rulerlayout height="1" width="1" />
+		</control>
 	</controls>
 </window>
