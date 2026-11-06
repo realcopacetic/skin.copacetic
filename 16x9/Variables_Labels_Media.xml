@@ -411,8 +411,8 @@
 		<value condition="String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.Property(WatchedEpisodes))">[UPPERCASE]$INFO[ListItem.Property(WatchedEpisodes),,/]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[16102]][/UPPERCASE]</value>
 		<!-- Episodes -->
 		<!-- 1x01 / WATCHMEN / DAMON LINDELOFF / 1080 / ENG / 42 mins / (ENDS 12:04) -->
-		<value condition="String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.TVShowTitle) + Integer.IsGreater(ListItem.Episode,9)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x][UPPERCASE]$VAR[ListItem_TVShowTitle_Divider_Bold, , ]$INFO[ListItem.TVShowTitle]$VAR[ListItem_Premiered_Divider_Bold, , ]$INFO[ListItem.Premiered]$VAR[Resolution_Label_Divider_Bold, , ]$VAR[Resolution_Label]$VAR[ListItem_AudioLanguage_Divider_Bold, , ]$INFO[ListItem.AudioLanguage] $VAR[ListItem_Duration_Divider_Bold, , ]$INFO[ListItem.Duration(mins),, $LOCALIZE[31114]][CR]$INFO[Window(Home).Property(WriterSplit.0)][/UPPERCASE]</value>
-		<value condition="String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.TVShowTitle) + Integer.IsGreater(ListItem.Episode,0)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x0][UPPERCASE]$VAR[ListItem_TVShowTitle_Divider_Bold, , ]$INFO[ListItem.TVShowTitle]$VAR[ListItem_Premiered_Divider_Bold, , ]$INFO[ListItem.Premiered]$VAR[Resolution_Label_Divider_Bold, , ]$VAR[Resolution_Label]$VAR[ListItem_AudioLanguage_Divider_Bold, , ]$INFO[ListItem.AudioLanguage] $VAR[ListItem_Duration_Divider_Bold, , ]$INFO[ListItem.Duration(mins),, $LOCALIZE[31114]][CR]$INFO[Window(Home).Property(WriterSplit.0)][/UPPERCASE]</value>
+		<value condition="String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.TVShowTitle) + Integer.IsGreater(ListItem.Episode,9)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x][UPPERCASE]$VAR[ListItem_TVShowTitle_Divider_Bold, , ]$INFO[ListItem.TVShowTitle]$VAR[ListItem_Premiered_Divider_Bold, , ]$INFO[ListItem.Premiered]$VAR[Resolution_Label_Divider_Bold, , ]$VAR[Resolution_Label]$VAR[ListItem_AudioLanguage_Divider_Bold, , ]$INFO[ListItem.AudioLanguage] $VAR[ListItem_Duration_Divider_Bold, , ]$INFO[ListItem.Duration(mins),, $LOCALIZE[31114]][CR]$VAR[Infoscreen_Writer_Label][/UPPERCASE]</value>
+		<value condition="String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.TVShowTitle) + Integer.IsGreater(ListItem.Episode,0)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x0][UPPERCASE]$VAR[ListItem_TVShowTitle_Divider_Bold, , ]$INFO[ListItem.TVShowTitle]$VAR[ListItem_Premiered_Divider_Bold, , ]$INFO[ListItem.Premiered]$VAR[Resolution_Label_Divider_Bold, , ]$VAR[Resolution_Label]$VAR[ListItem_AudioLanguage_Divider_Bold, , ]$INFO[ListItem.AudioLanguage] $VAR[ListItem_Duration_Divider_Bold, , ]$INFO[ListItem.Duration(mins),, $LOCALIZE[31114]][CR]$VAR[Infoscreen_Writer_Label][/UPPERCASE]</value>
 		<!-- Artists (All Views): Jazz / 1980-90s / 4 albums -->
 		<value condition="String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Property(Artist_Genre))">[UPPERCASE]$INFO[ListItem.Property(Artist_Genre)][/UPPERCASE]$VAR[ListItem_Artist_YearsActive_Divider_Bold, , ]$INFO[ListItem.Property(Artist_YearsActive)][UPPERCASE]$VAR[3202_NumItems_Divider_Bold, , ]$INFO[Container(3202).NumItems]$VAR[Albums_Label, ][/UPPERCASE]</value>
 		<value condition="String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Property(Artist_YearsActive))">$INFO[ListItem.Property(Artist_YearsActive)][UPPERCASE]$VAR[3202_NumItems_Divider_Bold, , ]$INFO[Container(3202).NumItems]$VAR[Albums_Label, ][/UPPERCASE]</value>
@@ -446,6 +446,10 @@
 		<!-- Videos -->
 		<value condition="String.IsEqual(ListItem.DBType,video)">[UPPERCASE]$INFO[ListItem.Artist]$VAR[ListItem_Artist_Divider_Bold, ]$INFO[ListItem.Premiered, ]$VAR[ListItem_Premiered_Divider_Bold, ]$INFO[ListItem.Duration(mm:ss), ][/UPPERCASE]</value>
 		<value />
+	</variable>
+	<variable name="Infoscreen_Writer_Label">
+		<!-- the first writer, once 9000 holds this item's -->
+		<value condition="$EXP[Infoscreen_Metadata_Ready]">$INFO[Container(9000).ListItem.Writer]</value>
 	</variable>
 
 	<variable name="MPAA_Description_Label">
@@ -882,11 +886,10 @@
 
 	<variable name="Studio_Label">
 		<!-- Fix for strings breaking in xsp filtered paths when + included in filename - this is for Same Studio widget -->
-		<value condition="String.Contains(Window(home).Property(StudioSplit.0),Apple TV)">"Apple TV"</value>
-		<value condition="String.Contains(Window(home).Property(StudioSplit.0),Paramount)">"Paramount"</value>
-		<value condition="String.Contains(Window(home).Property(StudioSplit.0),Disney)">"Disney"</value>
-		<value condition="!String.IsEmpty(Window(home).Property(StudioSplit.0))">$ESCINFO[Window(home).Property(StudioSplit.0)]</value>
-		<value condition="!String.IsEmpty(ListItem.Studio)">$ESCINFO[ListItem.Studio]</value>
+		<value condition="String.Contains(Container(9000).ListItem.Studio,Apple TV)">"Apple TV"</value>
+		<value condition="String.Contains(Container(9000).ListItem.Studio,Paramount)">"Paramount"</value>
+		<value condition="String.Contains(Container(9000).ListItem.Studio,Disney)">"Disney"</value>
+		<value>$ESCINFO[Container(9000).ListItem.Studio]</value>
 	</variable>
 
 	<variable name="Theme_Label">

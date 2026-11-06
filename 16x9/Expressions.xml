@@ -11,6 +11,7 @@
 		<expression name="Background_IsVisible">[$EXP[Home_HasBackground] | $EXP[Settings_Window_IsVisible] | $EXP[Window_HasBackground] | $EXP[Container_HasBackground] | $EXP[Content_HasBackground] | $EXP[Infoscreen_HasBackground] | [Container.Content() + $EXP[ListView_Display_IsBackground] + [Window.IsVisible(videos) | Window.IsVisible(music)]]] + !$EXP[globalsearch_IsVisible]</expression>
 	
 	<expression name="Infoscreen_IsVisible">Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(songinformation) | Window.IsVisible(addoninformation) | $EXP[Infoscreen_Widget_Transition]</expression>
+	<expression name="Infoscreen_Metadata_Ready">String.IsEqual(Container(9000).ListItem.Label,ListItem.Label) + String.IsEqual(Container(9000).ListItem.Property(dbid),ListItem.DBID)</expression> <!-- 9000 holds this item's metadata, not the last item's -->
 	<expression name="Infoscreen_Widget_HasFocus">$EXP[Infoscreen_IsVisible] + [String.IsEmpty(Window(movieinformation).Property(Focused_Button)) + String.IsEmpty(Window(musicinformation).Property(Focused_Button)) + String.IsEmpty(Window(addoninformation).Property(Focused_Button))]</expression>
 	<expression name="Infoscreen_Widget_Transition">Control.HasFocus(6001) | Control.HasFocus(6002) | String.IsEqual(Window(home).Property(Infoscreen_Transition),true)</expression>
 	<expression name="globalsearch_IsVisible">Window.IsVisible(1180)</expression>
@@ -41,7 +42,7 @@
 
 	<!-- Misc -->
 	<expression name="Library_Has_Content">Library.HasContent(Video) | Library.HasContent(Music)</expression>
-	<expression name="Actor_Has_Credits">[Integer.IsGreater(Container(3203).NumItems,0) | Container(3203).IsUpdating] + [Integer.IsGreater(Container(3203).NumItems,1) | [String.IsEqual(ListItem.DBType,episode) + !String.IsEqual(Container(3203).ListItem.Label,ListItem.TVShowTitle)] | [!String.IsEqual(ListItem.DBType,episode) + !String.IsEqual(Container(3203).ListItem.Label,ListItem.Label)]]</expression>
+	<expression name="Actor_Has_Credits">Integer.IsGreater(Container(3203).NumItems,0) | Container(3203).IsUpdating</expression>
 	<expression name="Hidden_Focus_Setter">Control.HasFocus(4010)</expression>
 	<expression name="Scrollbar_HasFocus">Control.HasFocus(60) | Control.HasFocus(61) | Control.HasFocus(62) | Control.HasFocus(4012) | Control.HasFocus(4013)</expression>
 	<expression name="Notification_Widget_IsVisible">$EXP[Music_Player_IsVisible] | Window.IsVisible(volumebar) | Window.IsVisible(notification) | Window.IsVisible(extendedprogressdialog)</expression>

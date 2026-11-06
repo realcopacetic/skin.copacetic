@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="musicvideos">
+    <name>Empty</name>
+    <match>all</match>
+    <rule field="playcount" operator="is">
+        <value>-1</value>
+    </rule>
+</smartplaylist>

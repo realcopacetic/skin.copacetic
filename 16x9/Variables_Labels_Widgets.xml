@@ -24,8 +24,8 @@
 	</variable>
 
 	<variable name="Infoscreen_Widget_SimilarAlbums_Label">
-		<value condition="String.IsEqual(Window(home).Property(RandomGenre),Soundtrack)">$LOCALIZE[31220]</value>
-		<value condition="!String.IsEmpty(Window(home).Property(RandomGenre))">$INFO[Window(home).Property(RandomGenre)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Genre,Soundtrack)">$LOCALIZE[31220]</value>
+		<value condition="!String.IsEmpty(Container(9000).ListItem.Genre)">$INFO[Container(9000).ListItem.Genre]</value>
 		<value>$LOCALIZE[31221]</value>
 	</variable>
 

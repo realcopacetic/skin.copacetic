@@ -43,6 +43,17 @@
 		</include>
 	</include>
 
+	<include name="Infoscreen_Metadata_List">
+		<!-- The dialog item's first studio and writer, a random director and genre, an album's or song's album artist.
+		     It keeps the last item's until the new one lands, so readers wait on Infoscreen_Metadata_Ready -->
+		<control type="list" id="9000">
+			<content>plugin://script.copacetic.helper/?info=metadata&amp;target=item&amp;type=$INFO[ListItem.DBType]&amp;id=$INFO[ListItem.DBID]&amp;random_pick=true&amp;genre_aliases=Hip-Hop:Hip%20Hop</content>
+			<itemlayout />
+			<focusedlayout />
+			<include content="Hidden_Control" />
+		</control>
+	</include>
+
 	<include name="Infoscreen_Flags_Layout">
 		<control type="grouplist">
 			<visible>![String.IsEqual(Control.GetLabel(6303),flags/blank.png) + String.IsEqual(Control.GetLabel(6304),flags/blank.png) + String.IsEqual(Control.GetLabel(6305),flags/blank.png) + String.IsEqual(Control.GetLabel(6306),flags/blank.png) + String.IsEqual(Control.GetLabel(6307),flags/blank.png)]</visible>

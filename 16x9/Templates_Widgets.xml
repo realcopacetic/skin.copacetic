@@ -700,7 +700,7 @@
 			<param name="content" value="$VAR[Path_DirectorCredits]" />
 			<param name="click_action" value="Open_More_From_Director" />
 			<param name="limit" value="50" />
-			<param name="widget_header" value="$INFO[Window(home).Property(RandomDirector)]" />
+			<param name="widget_header" value="$INFO[Container(9000).ListItem.Director]" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold,, ]$LOCALIZE[31211]" />
 		</include>
 	</include>
@@ -734,7 +734,7 @@
 			<param name="content" value="$VAR[Path_StudioCredits]" />
 			<param name="click_action" value="Open_More_From_Studio" />
 			<param name="limit" value="50" />
-			<param name="widget_header" value="$INFO[Window(home).Property(StudioSplit.0)]" />
+			<param name="widget_header" value="$INFO[Container(9000).ListItem.Studio]" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold,, ]$LOCALIZE[31211]" />
 		</include>
 	</include>
@@ -750,7 +750,7 @@
 			<param name="sortorder" value="ascending" />
 			<param name="content" value="$VAR[Path_Similar]" />
 			<param name="click_action" value="Open_Similar" />
-			<param name="widget_header" value="$INFO[Window(home).Property(RandomGenre)]" />
+			<param name="widget_header" value="$INFO[Container(9000).ListItem.Genre]" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold,, ]$LOCALIZE[31211]" />
 		</include>
 	</include>
