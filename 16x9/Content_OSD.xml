@@ -192,7 +192,6 @@
 			<param name="description" value="recordings" />
 			<param name="id" value="5" />
 			<param name="icon" value="record" />
-			<param name="radio_label" value="$LOCALIZE[10706]" />
 			<param name="label" value="$LOCALIZE[19017]" />
 			<onup>60</onup>
 			<ondown>11</ondown>
