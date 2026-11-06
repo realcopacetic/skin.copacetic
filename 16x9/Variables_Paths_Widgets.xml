@@ -139,6 +139,10 @@
 	<variable name="globalsearch_Open">
 		<value condition="!String.IsEmpty(Skin.String(globalsearch))">ActivateWindow(1180)</value>
 	</variable>
+	<!-- Run after the results close (1180 is modal); skipped if they led to another window -->
+	<variable name="globalsearch_Focus">
+		<value condition="Window.IsActive(home) + !System.HasActiveModalDialog">SetFocus(3000)</value>
+	</variable>
 
 	<variable name="Path_globalsearch_Movies">
 		<!-- title*, plot, genre*, set*, director*, actor*, studio*, tag -->
