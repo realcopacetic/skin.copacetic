@@ -446,13 +446,6 @@
 			<onclick>Skin.ToggleSetting(List_Prefer_Keyart)</onclick>
 			<selected>Skin.HasSetting(List_Prefer_Keyart)</selected>
 		</control>
-		<control type="radiobutton" id="1357">
-			<description>Enable scrolling on long titles instead of truncation (...)</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31717]</label>
-			<onclick>Skin.ToggleSetting(List_Prefer_Scrolling)</onclick>
-			<selected>Skin.HasSetting(List_Prefer_Scrolling)</selected>
-		</control>
 		<control type="label" id="1300">
 			<description>Billboard</description>
 			<visible>ControlGroup(9).HasFocus(13)</visible>

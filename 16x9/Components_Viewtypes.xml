@@ -253,16 +253,7 @@
 				<include content="Music_Rating" condition="Window.Is(music) | Window.Is(musicinformation)">
 					<param name="slide" value="$PARAM[music_rating_slide]" />
 				</include>
-				<include content="Simple_List_Layout" condition="!Skin.HasSetting(List_Prefer_Scrolling)">
-					<param name="label_left" value="$PARAM[label_left]" />
-					<param name="label_maxwidth" value="$PARAM[label_maxwidth]" />
-					<param name="font" value="$PARAM[font]" />
-					<param name="textcolor" value="$VAR[Light_Color]" />
-					<param name="selectedcolor" value="$PARAM[selectedcolor]" />
-					<param name="label" value="$PARAM[label]" />
-					<param name="scroll" value="false" />
-				</include>
-				<include content="Simple_List_Layout" condition="Skin.HasSetting(List_Prefer_Scrolling)">
+				<include content="Simple_List_Layout">
 					<param name="label_left" value="$PARAM[label_left]" />
 					<param name="label_maxwidth" value="$PARAM[label_maxwidth]" />
 					<param name="font" value="$PARAM[font]" />
