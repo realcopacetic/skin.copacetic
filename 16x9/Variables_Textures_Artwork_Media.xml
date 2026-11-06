@@ -60,9 +60,7 @@
 
 	<variable name="Cropped_Clearlogo">
 		<!-- VideoPlayer -->
-		<value condition="VideoPlayer.IsFullscreen + Skin.HasSetting(Crop_Clearlogos) + !String.IsEmpty(Window(home).Property(clearlogo-billboard_cropped)) + String.IsEqual(Window(home).Property(clearlogo-billboard_cropped),VideoPlayer.DBID)">$INFO[Window(home).Property(clearlogo-billboard_cropped)]</value>
 		<value condition="VideoPlayer.IsFullscreen + !String.IsEmpty(VideoPlayer.Art(clearlogo-billboard))">$INFO[VideoPlayer.Art(clearlogo-billboard)]</value>
-		<value condition="VideoPlayer.IsFullscreen + Skin.HasSetting(Crop_Clearlogos) + !String.IsEmpty(Window(home).Property(clearlogo_cropped)) + String.IsEqual(Window(home).Property(clearlogo_cropped),VideoPlayer.DBID)">$INFO[Window(home).Property(clearlogo_cropped)]</value>
 		<value condition="VideoPlayer.IsFullscreen + !String.IsEmpty(VideoPlayer.Art(clearlogo))">$INFO[VideoPlayer.Art(clearlogo)]</value>
 		<!-- Secondary list -->
 		<value condition="Control.HasFocus(3100) + $EXP[BillboardView_IsVisible] + Skin.HasSetting(Crop_Clearlogos) + !String.IsEmpty(Window(home).Property(clearlogo-billboard_cropped)) + String.IsEqual(Window(home).Property(clearlogo_cropped-id),Container(3100).ListItem.DBID)">$INFO[Window(home).Property(clearlogo-billboard_cropped)]</value>
