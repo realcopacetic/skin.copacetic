@@ -38,24 +38,8 @@
 		</definition>
 	</include>
 
-	<include name="TMDb_Helper_Transition">
-		<definition>
-			<!-- If dbid/tmdb_id not same as current infoscreen item, load info using TMDb Helper script  -->
-			<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + !String.IsEqual(Container($PARAM[id]).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[Container($PARAM[id]).ListItem.FolderPath],call_auto=1190)</onclick>
-			<!-- If tmdb_id is same as current infoscreen item, play item using TMDb Helper script-->
-			<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container($PARAM[id]).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">RunScript(plugin.video.themoviedb.helper,close_dialog=1190)</onclick>
-			<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container($PARAM[id]).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">Dialog.Close(all,true)</onclick>
-			<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container($PARAM[id]).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem))">ClearProperty(Infoscreen_Transition,home)</onclick>
-			<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container($PARAM[id]).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem)) + String.IsEqual(Container($PARAM[id]).ListItem.DBType,movie)">Runscript(plugin.video.themoviedb.helper,play=movie,tmdb_id=$INFO[Container($PARAM[id]).ListItem.UniqueID(tmdb)],imdb_id=$INFO[Container($PARAM[id]).ListItem.UniqueID(imdb)])</onclick>
-			<onclick condition="!Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(Container($PARAM[id]).ListItem.Property(tmdb_id),window(movieinformation).property(SelectedItem)) + String.IsEqual(Container($PARAM[id]).ListItem.DBType,movie)">Runscript(plugin.video.themoviedb.helper,play=tv,query=$INFO[Container($PARAM[id]).ListItem.TVShowTitle],ep_year=$INFO[Container($PARAM[id]).ListItem.Year],season=$INFO[Container($PARAM[id]).ListItem.Season],episode=$INFO[Container($PARAM[id]).ListItem.Episode])</onclick>
-		</definition>
-	</include>
-
 	<include name="Default_Infoscreen_Widget_Open">
 		<include content="Default_Transition_1x">
-			<param name="id" value="$PARAM[id]" />
-		</include>
-		<include content="TMDb_Helper_Transition">
 			<param name="id" value="$PARAM[id]" />
 		</include>
 	</include>
