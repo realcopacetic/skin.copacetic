@@ -246,6 +246,9 @@
 	<variable name="ListItem_Season_Divider_Bold">
 		<value condition="!String.IsEmpty(ListItem.Season)">$VAR[Copacetic_Divider_Bold]</value>
 	</variable>
+	<variable name="ListItem_SeasonYear_Divider_Bold">
+		<value condition="!String.IsEmpty(ListItem.Year)">$VAR[Copacetic_Divider_Bold]</value>
+	</variable>
 	<variable name="ListItem_Size_Divider">
 		<value condition="!String.IsEmpty(ListItem.Size)">$VAR[Copacetic_Divider]</value>
 	</variable>
@@ -352,9 +355,6 @@
 	<!-- Window Properties -->
 	<variable name="Window_Property_Season_Divider_Bold">
 		<value condition="!String.IsEmpty(Window.Property(season))">$VAR[Copacetic_Divider_Bold]</value>
-	</variable>
-	<variable name="Window_Property_Season_Year_Divider_Bold">
-		<value condition="!String.IsEmpty(Window(home).Property(Season_Year))">$VAR[Copacetic_Divider_Bold]</value>
 	</variable>
 	<variable name="Window_Property_Title_Divider_Bold">
 		<value condition="!String.IsEmpty(Window.Property(title))">$VAR[Copacetic_Divider_Bold]</value>

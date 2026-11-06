@@ -13,7 +13,7 @@
 	</variable>
 
 	<variable name="Infoscreen_Widget_Episodes_Label">
-		<value condition="String.IsEqual(Container.FolderName,ListItem.TVShowTitle)">$INFO[Window(home).Property(Season_Number),$LOCALIZE[31217] ]</value>
+		<value condition="String.IsEqual(Container.FolderName,ListItem.TVShowTitle)">$INFO[ListItem.Season,$LOCALIZE[31217] ]</value>
 		<value>$INFO[ListItem.Season,$LOCALIZE[31216] ]</value>
 	</variable>
 
