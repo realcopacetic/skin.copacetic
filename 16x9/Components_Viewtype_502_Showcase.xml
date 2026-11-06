@@ -305,7 +305,7 @@
 						<param name="border_size" value="$PARAM[focus_border_size]" />
 						<param name="border_color" value="$PARAM[focus_border_color]" />
 						<param name="border_texture" value="$PARAM[focus_border_texture]" />
-					</include> -->
+					</include>
 				</control>
 				<!-- On Next -->
 				<control type="group">

@@ -66,7 +66,7 @@
 				<visible>$PARAM[visible]</visible>
 				<nested />
 				<control type="group">
-					<visible>!String.IsEqual(Window(home).Property(Infoscreen_Transition),true)</visible>s
+					<visible>!String.IsEqual(Window(home).Property(Infoscreen_Transition),true)</visible>
 					<include content="VisibleHidden_Fade_Animation" />
 					<control type="image">
 						<texture colordiffuse="$VAR[Light_Background_Color]">views/white_100.png</texture>

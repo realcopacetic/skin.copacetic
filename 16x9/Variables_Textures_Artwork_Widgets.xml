@@ -902,7 +902,7 @@
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(1).Art(keyart)) + Skin.String(Widget7_Display,Posters) + Skin.HasSetting(Widget7_Prefer_Keyart)">$INFO[ListItem(1).Art(keyart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(1).Art(tvshow.poster)) + Skin.String(Widget7_Display,Posters)">$INFO[ListItem(1).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(1).Art(poster)) + Skin.String(Widget7_Display,Posters)">$INFO[ListItem(1).Art(poster)]</value>
-		<value condition="!String.IsEmpty(Container.ListItemNoWrap(1).Icon)">$INFO[ListItem(1).Icon]</value>x§<value></value>
+		<value condition="!String.IsEmpty(Container.ListItemNoWrap(1).Icon)">$INFO[ListItem(1).Icon]</value>
 	</variable>
 	<variable name="Widget7_Thumbnail(2)Content">
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(2).Art(thumb)) + Skin.HasSetting(Widget7_Content_Custom) + [Skin.String(Widget7_Display,Fanart) | Skin.String(Widget7_Display,Spotlight)] + [String.IsEqual(Container.ListItemNoWrap(2).DBType,episode) | String.IsEqual(Container.ListItemNoWrap(2).DBType,video)] + Skin.HasSetting(Widget7_Episode_Thumbs)">$INFO[ListItem(2).Art(thumb)]</value>

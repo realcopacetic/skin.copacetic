@@ -251,7 +251,7 @@
 						<texture colordiffuse="$VAR[Accent_Color]">views/white_100.png</texture>
 					</control>
 					<control type="image"><!-- left -->
-						<animation effect="slide" end="-$PARAM[border_width],-$PARAM[border_width]" time="0" condition="true" reversible="false">Conditional</animation> -->
+						<animation effect="slide" end="-$PARAM[border_width],-$PARAM[border_width]" time="0" condition="true" reversible="false">Conditional</animation>
 						<animation effect="zoom" start="0,0,$PARAM[border_width],$PARAM[height]" end="0,0,$PARAM[border_width],353" time="0" condition="$EXP[GridView_Display_IsFanart] + !Skin.String(GridView_Size,Small) + !Skin.String(GridView_Size,Horizontal)" reversible="false">Conditional</animation>
 						<animation effect="zoom" start="0,0,$PARAM[border_width],$PARAM[height]" end="0,0,$PARAM[border_width],268" time="0" condition="$EXP[GridView_Display_IsFanart] + Skin.String(GridView_Size,Small)" reversible="false">Conditional</animation>
 						<animation effect="zoom" start="0,0,$PARAM[border_width],$PARAM[height]" end="0,0,$PARAM[border_width],295" time="0" condition="$EXP[GridView_Display_IsFanart] + Skin.String(GridView_Size,Horizontal)" reversible="false">Conditional</animation>
