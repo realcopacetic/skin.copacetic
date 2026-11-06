@@ -75,6 +75,8 @@
 	<variable name="Path_Seasons">
 		<value condition="Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(ListItem.DBType,tvshow)">videodb://tvshows/titles/$INFO[ListItem.DBID]/</value>
 		<value condition="Integer.IsGreater(ListItem.TVShowDBID,0)">videodb://tvshows/titles/$INFO[ListItem.TVShowDBID]/</value>
+		<!-- The helper's episodes carry the show id as a property: a plugin can't set TVShowDBID -->
+		<value condition="Integer.IsGreater(ListItem.Property(tvshowid),0)">videodb://tvshows/titles/$INFO[ListItem.Property(tvshowid)]/</value>
 	</variable>
 
 	<variable name="Path_ActorCredits">
