@@ -306,10 +306,10 @@
 
 	<!-- PVR -->
 	<variable name="PVR_EPGEventDuration_Divider_Bold">
-		<value condition="!String.IsEmpty(PVR.EPGEventDuration)">$VAR[Copacetic_Divider_Bold_Dominant]</value>
+		<value condition="VideoPlayer.HasEPG">$VAR[Copacetic_Divider_Bold_Dominant]</value>
 	</variable>
 	<variable name="PVR_EPGEventFinishTime_Divider_Bold">
-		<value condition="!String.IsEmpty(PVR.EPGEventFinishTime)">$VAR[Copacetic_Divider_Bold_Dominant]</value>
+		<value condition="VideoPlayer.HasEPG">$VAR[Copacetic_Divider_Bold_Dominant]</value>
 	</variable>
 	<variable name="VideoPlayer_ChannelName_Divider_Bold">
 		<value condition="!String.IsEmpty(VideoPlayer.ChannelName)">$VAR[Copacetic_Divider_Bold_Dominant]</value>
