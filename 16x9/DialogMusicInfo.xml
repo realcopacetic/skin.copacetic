@@ -49,7 +49,6 @@
 				<param name="width" value="1080" />
 				<param name="label_left" value="120" />
 				<param name="label_maxwidth" value="960" />
-				<param name="now_playing" value="true" />
 				<param name="icon_slide" value="-480" />
 				<param name="music_rating_slide" value="540" />
 				<param name="label" value="$INFO[ListItem.Label]" />

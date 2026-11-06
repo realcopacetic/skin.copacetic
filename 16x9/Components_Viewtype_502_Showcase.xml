@@ -13,7 +13,6 @@
 				<param name="height" value="$PARAM[height]" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
 				<param name="art_diffuse" value="$PARAM[art_diffuse]" />
-				<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 				<param name="fallback" value="$PARAM[fallback]" />
 				<!-- Progress overlay -->
 				<include content="Icon_Component_Progress_Overlay" condition="Window.Is(home) | Window.Is(videos) | Window.Is(movieinformation)" />
@@ -36,12 +35,10 @@
 				<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
 				<param name="art_diffuse_fadeout_1" value="$PARAM[art_diffuse_fadeout_1]" />
 				<param name="art_diffuse_fadeout_2" value="$PARAM[art_diffuse_fadeout_2]" />
-				<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 				<param name="fallback" value="$PARAM[fallback]" />
 				<!-- Multiart -->
 				<include content="Icon_Component_Multiart_Static" condition="Skin.HasSetting(Multiart_Slideshow) + !Window.Is(movieinformation) + !Window.Is(musicinformation) + !Window.Is(songinformation)">
 					<param name="art_diffuse" value="$PARAM[art_diffuse]" />
-					<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 				</include>
 				<!-- Progress overlay -->
 				<include content="Icon_Component_Progress_Overlay" condition="Window.Is(home) | Window.Is(videos) | Window.Is(movieinformation)">
@@ -77,7 +74,6 @@
 				<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
 				<param name="art_diffuse_fadeout_1" value="$PARAM[art_diffuse_fadeout_1]" />
 				<param name="art_diffuse_fadeout_2" value="$PARAM[art_diffuse_fadeout_2]" />
-				<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 				<param name="fallback" value="$PARAM[fallback]" />
 				<param name="animationtype" value="$PARAM[animationtype]" />
 				<param name="animationeffect" value="$PARAM[animationeffect]" />
@@ -119,7 +115,6 @@
 				<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
 				<param name="art_diffuse_fadeout_1" value="$PARAM[art_diffuse_fadeout_1]" />
 				<param name="art_diffuse_fadeout_2" value="$PARAM[art_diffuse_fadeout_2]" />
-				<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 				<param name="animationtype" value="$PARAM[animationtype]" />
 				<param name="animationeffect" value="$PARAM[animationeffect]" />
 				<param name="animationend" value="$PARAM[animationend]" />
@@ -131,7 +126,6 @@
 					<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
 					<param name="art_diffuse_fadeout_1" value="$PARAM[art_diffuse_fadeout_1]" />
 					<param name="art_diffuse_fadeout_2" value="$PARAM[art_diffuse_fadeout_2]" />
-					<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 					<param name="animationtype" value="$PARAM[multiartanimationtype]" />
 					<param name="animationeffect" value="$PARAM[multiartanimationeffect]" />
 					<param name="animationend" value="$PARAM[multiartanimationend]" />
@@ -471,7 +465,7 @@
 				<control type="grouplist">
 					<left>30</left>
 					<right>30</right>
-					<visible>$EXP[ShowcaseView_Details_Overlay_IsVisible] + [[!Control.HasFocus(3100) + !$EXP[ListItem(0)_NowPlaying]] | $EXP[3100_ListItem(0)_NowPlaying]]</visible>
+					<visible>$EXP[ShowcaseView_Details_Overlay_IsVisible] + [!Control.HasFocus(3100) | $EXP[3100_ListItem(0)_NowPlaying]]</visible>
 					<orientation>vertical</orientation>
 					<align>center</align>
 					<itemgap>0</itemgap>

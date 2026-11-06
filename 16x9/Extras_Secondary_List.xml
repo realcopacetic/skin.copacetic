@@ -75,12 +75,10 @@
 		<definition>
 			<control type="group">
 				<control type="image">
-					<animation effect="fadediffuse" end="ff808080" time="0" condition="$EXP[ListView_Display_IsBackground] | $EXP[BillboardView_IsVisible] | [$EXP[ShowcaseView_IsVisible] + $EXP[ShowcaseView_Details_Overlay_IsVisible] + !$EXP[3100_ListItem(0)_NowPlaying]]">Conditional</animation>
-					<animation effect="fadediffuse" end="ff555555" time="0" condition="$EXP[3100_ListItem(0)_NowPlaying] + [$EXP[ShowcaseView_IsVisible] | $EXP[StripView_IsVisible]]">Conditional</animation>
+					<animation effect="fadediffuse" end="ff808080" time="0" condition="$EXP[ListView_Display_IsBackground] | $EXP[BillboardView_IsVisible] | [$EXP[ShowcaseView_IsVisible] + $EXP[ShowcaseView_Details_Overlay_IsVisible]]">Conditional</animation>
 					<texture background="true">$VAR[$PARAM[artwork](0)Content]</texture>
 					<aspectratio>scale</aspectratio>
 				</control>
-				<include content="Secondary_List_Now_Playing" />
 			</control>
 		</definition>
 	</include>
@@ -107,16 +105,6 @@
 				</control>
 			</focusedlayout>
 		</definition>
-	</include>
-
-	<include name="Secondary_List_Now_Playing">
-		<control type="group">
-			<visible>$EXP[3100_ListItem(0)_NowPlaying] + [$EXP[ShowcaseView_IsVisible] | $EXP[StripView_IsVisible]]</visible>
-			<include content="Now_Playing_Icon">
-				<param name="size" value="Large" />
-				<param name="color" value="$VAR[Light_Color]" />
-			</include>
-		</control>
 	</include>
 
 	<include name="Hidden_Layout">
@@ -249,12 +237,7 @@
 			<height>120</height>
 			<left>$PARAM[left]</left>
 			<centertop>50%</centertop>
-			<include content="Now_Playing_Icon">
-				<param name="visible" value="$EXP[ListItem(0)_NowPlaying]" />
-				<param name="color" default="$VAR[Light_Color]" />
-			</include>
 			<control type="group">
-				<visible>!$EXP[ListItem(0)_NowPlaying]</visible>
 				<visible>String.IsEqual(Container(3100).ListItem.Overlay,OverlayWatched.png)</visible>
 				<include content="Check_focused">
 					<param name="color" value="$VAR[Light_Color]" />

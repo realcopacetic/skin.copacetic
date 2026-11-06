@@ -37,7 +37,6 @@
 			<param name="fallback" value="views/dark_grey_100.png" />
 			<param name="indicator" value="false" />
 			<param name="watched_diffuse" value="[Skin.HasSetting(GridView_WatchedStatus_Enabled) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(addons) + ListItem.Property(Addon.IsInstalled) + !ListItem.Property(Addon.IsEnabled)]" />
-			<param name="now_playing" value="$EXP[ListItem(0)_NowPlaying]" />
 			<include content="Visible_Fade_Animation" />
 			<animation effect="slide" end="4,0" time="0" condition="Skin.String(GridView_Size,Small)" reversible="false">Conditional</animation>
 			<animation effect="slide" end="12,0" time="0" condition="$EXP[GridView_Display_IsFanart] + Skin.String(GridView_Size,Large)" reversible="false">Conditional</animation>
@@ -213,12 +212,10 @@
 					<include content="ListIcon_Static_Focused">
 						<param name="art_icon" value="$PARAM[art_icon]" />
 						<param name="indicator" value="false" />
-						<param name="now_playing" value="$EXP[ListItem(0)_NowPlaying]" />
 						<param name="fallback" value="views/dark_grey_100.png" />
 						<!-- Multiart -->
 						<include content="Icon_Component_Multiart_Static" condition="Skin.HasSetting(Multiart_Slideshow) + [Window.Is(videos) | Window.Is(music)]">
 							<param name="fadetime" value="Default_Transition_1x" />
-							<param name="now_playing" value="$EXP[ListItem(0)_NowPlaying]" />
 						</include>
 						<!-- Progress overlay -->
 						<include content="Icon_Component_Progress_Overlay" condition="Window.Is(home) | Window.Is(videos) | Window.Is(movieinformation)">
@@ -226,7 +223,7 @@
 						</include>
 						<!-- Artwork Mask -->
 						<control type="image">
-							<visible>![$EXP[GridView_Details_Off] | $EXP[GridView_Details_Breadcrumb] | $EXP[ListItem(0)_NowPlaying]] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo)</visible>
+							<visible>![$EXP[GridView_Details_Off] | $EXP[GridView_Details_Breadcrumb]] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo)</visible>
 							<include content="Visible_Fade_Delayed_Animation" />
 							<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="Default_Transition_1x" tween="sine" easing="inout" reversible="false">Focus</animation>
 							<texture colordiffuse="$VAR[Grid_Mask]">views/white_100.png</texture>
@@ -670,7 +667,7 @@
 				<top>$PARAM[top]</top>
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
-				<visible>$EXP[GridView_Display_Is$PARAM[displaytype_label]] + [[$EXP[GridView_Details_On] + !$EXP[ListItem(0)_NowPlaying]] | $EXP[GridView_Widget_IsVisible]] + !Window.IsVisible(pictureinfo)</visible>
+				<visible>$EXP[GridView_Display_Is$PARAM[displaytype_label]] + [$EXP[GridView_Details_On] | $EXP[GridView_Widget_IsVisible]] + !Window.IsVisible(pictureinfo)</visible>
 				<control type="grouplist">
 					<left>$PARAM[edge]</left>
 					<right>$PARAM[edge]</right>
@@ -744,7 +741,6 @@
 			<param name="height" value="$PARAM[height]" />
 			<param name="art_icon" value="$PARAM[art_icon]" />
 			<param name="art_diffuse" value="false" />
-			<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 			<param name="fallback" value="$PARAM[fallback]" />
 			<!-- Progress overlay -->
 			<include content="Icon_Component_Progress_Overlay" condition="Window.Is(home) | Window.Is(videos) | Window.Is(movieinformation)">
@@ -765,12 +761,10 @@
 				<param name="height" value="$PARAM[height]" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
 				<param name="art_diffuse" value="$PARAM[art_diffuse]" />
-				<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 				<param name="fallback" value="$PARAM[fallback]" />
 				<!-- Multiart -->
 				<include content="Icon_Component_Multiart_Static" condition="Skin.HasSetting(Multiart_Slideshow) + !Window.Is(movieinformation) + !Window.Is(musicinformation) + !Window.Is(songinformation)">
 					<param name="art_diffuse" value="$PARAM[art_diffuse]" />
-					<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 				</include>
 				<!-- Progress overlay -->
 				<include content="Icon_Component_Progress_Overlay" condition="Window.Is(home) | Window.Is(videos) | Window.Is(movieinformation)">
@@ -801,7 +795,6 @@
 				<param name="art_icon" value="$PARAM[art_icon]" />
 				<param name="art_diffuse" value="false" />
 				<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
-				<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 				<param name="fallback" value="$PARAM[fallback]" />
 				<param name="animationtype" value="$PARAM[animationtype]" />
 				<param name="animationeffect" value="$PARAM[animationeffect]" />
@@ -838,7 +831,6 @@
 				<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
 				<param name="art_diffuse_fadeout_1" value="$PARAM[art_diffuse_fadeout_1]" />
 				<param name="art_diffuse_fadeout_2" value="$PARAM[art_diffuse_fadeout_2]" />
-				<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 				<param name="fallback" value="$PARAM[fallback]" />
 				<param name="animationtype" value="$PARAM[animationtype]" />
 				<param name="animationeffect" value="$PARAM[animationeffect]" />
@@ -851,7 +843,6 @@
 					<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
 					<param name="art_diffuse_fadeout_1" value="$PARAM[art_diffuse_fadeout_1]" />
 					<param name="art_diffuse_fadeout_2" value="$PARAM[art_diffuse_fadeout_2]" />
-					<param name="now_playing" value="$EXP[ListItem($PARAM[position])_NowPlaying]" />
 					<param name="animationtype" value="$PARAM[multiartanimationtype]" />
 					<param name="animationeffect" value="$PARAM[multiartanimationeffect]" />
 					<param name="animationend" value="$PARAM[multiartanimationend]" />

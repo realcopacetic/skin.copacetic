@@ -166,8 +166,6 @@
 	<include name="Track_Number_Label">
 		<control type="label">
 			<height>100%</height>
-			<visible>!ListItem.IsPlaying</visible>
-			<include content="Visible_Fade_Animation" />
 			<width>$PARAM[width]</width>
 			<align>center</align>
 			<aligny>center</aligny>
@@ -221,8 +219,7 @@
 	<include name="Common_List_Layout">
 		<param name="visible" default="true" />
 		<param name="icon_color" default="$VAR[Light_Color]" />
-		<param name="now_playing_icon" default="true" />
-		<param name="list_icon" default="String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !$EXP[ListItem(0)_NowPlaying]" />
+		<param name="list_icon" default="String.IsEqual(ListItem.Overlay,OverlayWatched.png)" />
 		<param name="list_icon_texture" default="Check_unfocused" />
 		<param name="font" default="List_Unfocused" />
 		<param name="textcolor" default="$VAR[Light_Color]" />
@@ -233,12 +230,6 @@
 			<control type="group">
 				<visible>$PARAM[visible]</visible>
 				<width>100%</width>
-				<include content="Now_Playing_Icon" condition="Window.Is(videos) | Window.Is(music) | Window.Is(musicplaylist) | Window.Is(videoplaylist) | Window.Is(musicinformation)">
-					<param name="visible" value="$PARAM[now_playing_icon] + $EXP[ListItem(0)_NowPlaying]" />
-					<param name="color" value="$PARAM[icon_color]" />
-					<animation effect="slide" end="$PARAM[icon_slide],0" time="0" condition="true">Conditional</animation>
-					<animation effect="slide" end="0,5" time="0" condition="Player.Paused">Conditional</animation>
-				</include>
 				<include content="$PARAM[list_icon_texture]" condition="Window.Is(videos) | Window.Is(videoplaylist) | Window.Is(addonbrowser) | Window.Is(programs)">
 					<param name="visible" value="$PARAM[list_icon]" />
 					<param name="color" value="$PARAM[icon_color]" />
@@ -268,7 +259,7 @@
 
 	<include name="Common_List_Unfocused">
 		<param name="icon_slide" default="-525" />
-		<param name="list_icon" default="String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !$EXP[ListItem(0)_NowPlaying]" />
+		<param name="list_icon" default="String.IsEqual(ListItem.Overlay,OverlayWatched.png)" />
 		<param name="list_icon_texture" default="Check_unfocused" />
 		<param name="music_rating_slide" default="525" />
 		<param name="label_left" default="90" />
@@ -291,7 +282,7 @@
 
 	<include name="Common_List_Focused">
 		<param name="icon_slide" default="-525" />
-		<param name="list_icon" default="String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !$EXP[ListItem(0)_NowPlaying]" />
+		<param name="list_icon" default="String.IsEqual(ListItem.Overlay,OverlayWatched.png)" />
 		<param name="list_icon_texture" default="Check_focused" />
 		<param name="music_rating_slide" default="525" />
 		<param name="label_left" default="90" />
@@ -405,7 +396,6 @@
 					<include content="$PARAM[layout]_List_Layout">
 						<param name="icon_slide" value="$PARAM[icon_slide]" />
 						<param name="music_rating_slide" value="$PARAM[music_rating_slide]" />
-						<param name="now_playing_icon" value="$PARAM[now_playing_icon]" />
 						<param name="list_icon" value="false" />
 						<param name="label" value="$PARAM[label]" />
 						<param name="label_left" value="$PARAM[label_left]" />
@@ -416,7 +406,6 @@
 				<focusedlayout height="60" width="$PARAM[width]" condition="Control.HasFocus($PARAM[id]) | String.IsEqual(Window.Property(xmlfile),DialogVideoManager.xml)">
 					<include content="$PARAM[layout]_List_Layout">
 						<param name="icon_slide" value="$PARAM[icon_slide]" />
-						<param name="now_playing_icon" value="$PARAM[now_playing_icon]" />
 						<param name="music_rating_slide" value="$PARAM[music_rating_slide]" />
 						<param name="music_rating_like_texture" value="Like_focused" />
 						<param name="list_icon" value="false" />

@@ -241,22 +241,10 @@
 		</include>
 	</include>
 
-	<include name="Now_Playing_Icon_Large">
-		<include content="Now_Playing_Icon_Template">
-			<param name="visible" value="$PARAM[visible]" />
-			<param name="width" value="96" />
-			<param name="barwidth" value="24" />
-			<param name="baredge" value="4" />
-			<param name="pauseedge" value="18" />
-			<param name="color" value="$PARAM[color]" />
-		</include>
-	</include>
-
 	<include name="Now_Playing_Icon">
 		<param name="visible" default="true" />
 		<param name="fadein" default="true" />
 		<param name="width" default="120" />
-		<param name="size" default="Medium" />
 		<param name="color" default="$VAR[Light_Color]" />
 		<definition>
 			<control type="group">
@@ -267,7 +255,7 @@
 				<height>$PARAM[width]</height>
 				<centerleft>50%</centerleft>
 				<centertop>50%</centertop>
-				<include content="Now_Playing_Icon_$PARAM[size]">
+				<include content="Now_Playing_Icon_Medium">
 					<param name="visible" value="$PARAM[visible]" />
 					<param name="width" value="$PARAM[width]" />
 					<param name="color" value="$PARAM[color]" />
