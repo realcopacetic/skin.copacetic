@@ -561,7 +561,7 @@
 							<animation effect="slide" start="0,0" end="-60,366" time="0" condition="$EXP[BillboardView_IsVisible] + $EXP[BillboardView_Logo_IsVisible] + $EXP[BillboardView_Details_Title]">Conditional</animation>
 						</include>
 						<!-- 9300's crop: its serve sets this logo's height to the logo's own, so the grouplist centres the details on it -->
-						<include content="Common_Details_Logo" condition="Window.Is(videos) | Window.Is(music)">
+						<include content="Common_Details_Logo" condition="[Window.Is(home) + $PARAM[widget_clearlogos]] | Window.Is(videos) | Window.Is(music)">
 							<param name="visible" value="[[!$EXP[BillboardView_IsVisible] + [$EXP[$PARAM[viewtype_label]View_Logo_IsVisible] | $EXP[Widget_HasLogo]] + !$EXP[$PARAM[viewtype_label]View_Details_Title]] | [$EXP[BillboardView_IsVisible] + $EXP[BillboardView_Logo_IsVisible]] | [Window.Is(home) + $EXP[Widget_HasLogo]]] + $EXP[Clearlogo_Fit_IsVisible]" />
 							<param name="id" value="$PARAM[logo_id]" />
 							<param name="align" value="$PARAM[align]" />
