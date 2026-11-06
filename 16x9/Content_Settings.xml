@@ -851,13 +851,6 @@
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[31406]</label>
 		</control>
-		<control type="radiobutton" id="1417">
-			<description>Use unwatched count in info details</description>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
-			<label>$LOCALIZE[31470]</label>
-			<onclick>Skin.ToggleSetting(Experiment_Unwatched_Info)</onclick>
-			<selected>Skin.HasSetting(Experiment_Unwatched_Info)</selected>
-		</control>
 		<control type="radiobutton" id="1418">
 			<description>Enable 'Fanart' display layout for Grid view in Pictures window</description>
 			<visible>ControlGroup(9).HasFocus(14)</visible>

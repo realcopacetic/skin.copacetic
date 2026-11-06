@@ -371,7 +371,7 @@
 
 	<!-- Viewtypes -->
 	<variable name="ListView_Info_Label_Divider">
-		<value condition="Control.HasFocus(3100) + [Skin.HasSetting(Experiment_Unwatched_Info) | String.IsEmpty(Container(3100).ListItem.Property(WatchedEpisodes))] + String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(Container(3100).ListItem.Property(UnWatchedEpisodes))">$VAR[Copacetic_Divider]</value>
+		<value condition="Control.HasFocus(3100) + String.IsEmpty(Container(3100).ListItem.Property(WatchedEpisodes)) + String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(Container(3100).ListItem.Property(UnWatchedEpisodes))">$VAR[Copacetic_Divider]</value>
 		<value condition="Control.HasFocus(3100) + String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(Container(3100).ListItem.Property(WatchedEpisodes))">$VAR[Copacetic_Divider]</value>
 		<value condition="Control.HasFocus(3100) + String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(Container(3100).ListItem.Duration)">$VAR[Copacetic_Divider]</value>
 		<value condition="Control.HasFocus(3100) + String.IsEqual(ListItem.DBType,set) + !String.IsEmpty(Container(3100).ListItem.Duration)">$VAR[Copacetic_Divider]</value>
