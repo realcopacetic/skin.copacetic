@@ -295,7 +295,6 @@
 	<variable name="Plot_Color">
 		<value condition="$EXP[Container_HasBackground]">$VAR[Light_Color]</value>
 		<value condition="Skin.String(Theme,Light)">$VAR[Dark_Grey_Color]</value>
-		<value condition="Skin.HasSetting(Prefer_White_Plot_Color)">$VAR[Light_Color]</value>
 		<value>$VAR[Light_Grey_Color]</value>
 	</variable>
 	<variable name="Privacy_Policy_Color">

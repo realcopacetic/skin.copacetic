@@ -714,15 +714,8 @@
 			<param name="label2" value="$VAR[skinsettings_Music_Rating_Like_Threshold_Label]" />
 			<param name="previous" value="1404" />
 			<param name="id" value="1405" />
-			<param name="next" value="1425" />
+			<param name="next" value="1407" />
 		</include>
-		<control type="radiobutton" id="1425">
-			<description>Prefer white to grey text colour for plot in Showcase and Strip views</description>
-			<label>$LOCALIZE[31716]</label>
-			<onclick>Skin.ToggleSetting(Prefer_White_Plot_Color)</onclick>
-			<selected>Skin.HasSetting(Prefer_White_Plot_Color)</selected>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
-		</control>
 		<control type="label" id="1406">
 			<description>Info screens</description>
 			<include content="skinsettings_Default_Label" />
