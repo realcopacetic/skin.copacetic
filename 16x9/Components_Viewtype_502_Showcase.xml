@@ -465,7 +465,7 @@
 				<control type="grouplist">
 					<left>30</left>
 					<right>30</right>
-					<visible>$EXP[ShowcaseView_Details_Overlay_IsVisible] + [!Control.HasFocus(3100) | $EXP[3100_ListItem(0)_NowPlaying]]</visible>
+					<visible>$EXP[ShowcaseView_Details_Overlay_IsVisible] + !Control.HasFocus(3100)</visible>
 					<orientation>vertical</orientation>
 					<align>center</align>
 					<itemgap>0</itemgap>
