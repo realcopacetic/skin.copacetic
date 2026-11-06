@@ -593,7 +593,7 @@
 		<param name="type" default="Options" />
 		<definition>
 			<include content="Scrollbars" />
-			<include content="Hidden_$PARAM[type]_Menu" condition="!$EXP[Hidden_Options_Menu_Disabled]">
+			<include content="Hidden_$PARAM[type]_Menu">
 				<param name="target_id" value="$PARAM[target_id]" />
 			</include>
 		</definition>
