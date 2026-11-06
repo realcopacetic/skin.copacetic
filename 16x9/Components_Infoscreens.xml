@@ -55,10 +55,10 @@
 	</include>
 
 	<include name="Infoscreen_Metadata_Unload">
-		<!-- A kept dialog reopens with 9000's last URL and items, and a fetch its close cut short came back empty:
-		     each close flips pass, so the next open always refetches. Both conditions are read before either runs -->
-		<onunload condition="String.IsEmpty(Window(home).Property(Infoscreen_Metadata_Pass))">SetProperty(Infoscreen_Metadata_Pass,1,home)</onunload>
-		<onunload condition="!String.IsEmpty(Window(home).Property(Infoscreen_Metadata_Pass))">ClearProperty(Infoscreen_Metadata_Pass,home)</onunload>
+		<!-- A kept dialog reopens with 9000's last URL and items, and a fetch its close cut short came back empty: each close
+		     stamps pass with the time and a flipped letter (two closes in one second differ), so a reopen never finds the URL it closed on -->
+		<onunload condition="String.EndsWith(Window(home).Property(Infoscreen_Metadata_Pass),a)">SetProperty(Infoscreen_Metadata_Pass,$INFO[System.Time(hh:mm:ss)]b,home)</onunload>
+		<onunload condition="!String.EndsWith(Window(home).Property(Infoscreen_Metadata_Pass),a)">SetProperty(Infoscreen_Metadata_Pass,$INFO[System.Time(hh:mm:ss)]a,home)</onunload>
 	</include>
 
 	<include name="Infoscreen_Flags_Layout">
