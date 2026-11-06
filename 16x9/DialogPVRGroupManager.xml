@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- pvrgroupmanager: stub, PVR isn't skinned (PVR_Stub) -->
+	<zorder>2</zorder>
 	<controls>
 		<include content="PVR_Stub" />
 		<!-- Kodi reads the selected group from list 13 on open and crashes without it. No layouts, so it draws nothing; disabled, so Up/Down can't change the group -->

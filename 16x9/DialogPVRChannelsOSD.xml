@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- pvrosdchannels: stub, PVR isn't skinned (PVR_Stub) -->
+	<zorder>2</zorder>
 	<controls>
 		<include content="PVR_Stub" />
 	</controls>
