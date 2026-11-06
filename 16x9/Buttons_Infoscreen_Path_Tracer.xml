@@ -39,16 +39,16 @@
 			<control type="button" id="4020">
 				<visible allowhiddenfocus="true">false</visible>
 				<!-- update container with previous path -->
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),01) + String.Contains(Window.Property(ContainerPath_00),db://) + !$EXP[Infoscreen_Widget_Prefer_TMDbHelper]">Container.Update($INFO[Window.Property(ContainerPath_00)],replace)</onfocus>
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),02) + String.Contains(Window.Property(ContainerPath_01),db://) + !$EXP[Infoscreen_Widget_Prefer_TMDbHelper]">Container.Update($INFO[Window.Property(ContainerPath_01)],replace)</onfocus>
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),03) + String.Contains(Window.Property(ContainerPath_02),db://) + !$EXP[Infoscreen_Widget_Prefer_TMDbHelper]">Container.Update($INFO[Window.Property(ContainerPath_02)],replace)</onfocus>
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),04) + String.Contains(Window.Property(ContainerPath_03),db://) + !$EXP[Infoscreen_Widget_Prefer_TMDbHelper]">Container.Update($INFO[Window.Property(ContainerPath_03)],replace)</onfocus>
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),05) + String.Contains(Window.Property(ContainerPath_04),db://) + !$EXP[Infoscreen_Widget_Prefer_TMDbHelper]">Container.Update($INFO[Window.Property(ContainerPath_04)],replace)</onfocus>
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),06) + String.Contains(Window.Property(ContainerPath_05),db://) + !$EXP[Infoscreen_Widget_Prefer_TMDbHelper]">Container.Update($INFO[Window.Property(ContainerPath_05)],replace)</onfocus>
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),07) + String.Contains(Window.Property(ContainerPath_06),db://) + !$EXP[Infoscreen_Widget_Prefer_TMDbHelper]">Container.Update($INFO[Window.Property(ContainerPath_06)],replace)</onfocus>
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),08) + String.Contains(Window.Property(ContainerPath_07),db://) + !$EXP[Infoscreen_Widget_Prefer_TMDbHelper]">Container.Update($INFO[Window.Property(ContainerPath_07)],replace)</onfocus>
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),09) + String.Contains(Window.Property(ContainerPath_08),db://) + !$EXP[Infoscreen_Widget_Prefer_TMDbHelper]">Container.Update($INFO[Window.Property(ContainerPath_08)],replace)</onfocus>
-				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),10) + String.Contains(Window.Property(ContainerPath_09),db://) + !$EXP[Infoscreen_Widget_Prefer_TMDbHelper]">Container.Update($INFO[Window.Property(ContainerPath_09)],replace)</onfocus>
+				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),01) + String.Contains(Window.Property(ContainerPath_00),db://)">Container.Update($INFO[Window.Property(ContainerPath_00)],replace)</onfocus>
+				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),02) + String.Contains(Window.Property(ContainerPath_01),db://)">Container.Update($INFO[Window.Property(ContainerPath_01)],replace)</onfocus>
+				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),03) + String.Contains(Window.Property(ContainerPath_02),db://)">Container.Update($INFO[Window.Property(ContainerPath_02)],replace)</onfocus>
+				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),04) + String.Contains(Window.Property(ContainerPath_03),db://)">Container.Update($INFO[Window.Property(ContainerPath_03)],replace)</onfocus>
+				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),05) + String.Contains(Window.Property(ContainerPath_04),db://)">Container.Update($INFO[Window.Property(ContainerPath_04)],replace)</onfocus>
+				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),06) + String.Contains(Window.Property(ContainerPath_05),db://)">Container.Update($INFO[Window.Property(ContainerPath_05)],replace)</onfocus>
+				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),07) + String.Contains(Window.Property(ContainerPath_06),db://)">Container.Update($INFO[Window.Property(ContainerPath_06)],replace)</onfocus>
+				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),08) + String.Contains(Window.Property(ContainerPath_07),db://)">Container.Update($INFO[Window.Property(ContainerPath_07)],replace)</onfocus>
+				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),09) + String.Contains(Window.Property(ContainerPath_08),db://)">Container.Update($INFO[Window.Property(ContainerPath_08)],replace)</onfocus>
+				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),10) + String.Contains(Window.Property(ContainerPath_09),db://)">Container.Update($INFO[Window.Property(ContainerPath_09)],replace)</onfocus>
 				<!-- clear previous path following update -->
 				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),01)">ClearProperty(ContainerPath_01,$PARAM[window])</onfocus>
 				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),02)">ClearProperty(ContainerPath_02,$PARAM[window])</onfocus>
@@ -69,7 +69,7 @@
 				<!-- set exit routes -->
 				<onfocus>Dialog.Close(all,true)</onfocus>
 				<onfocus condition="String.IsEqual(Window.Property(Breadcrumb_Level),01) + !String.IsEmpty(Window(home).Property(Origin))">ActivateWindow(home)</onfocus>
-				<onfocus condition="!$EXP[Infoscreen_Widget_Prefer_TMDbHelper] + String.Contains(Window($PARAM[window]).Property(ContainerPath_01),db://)">SetFocus(6001)</onfocus>
+				<onfocus condition="String.Contains(Window($PARAM[window]).Property(ContainerPath_01),db://)">SetFocus(6001)</onfocus>
 			</control>
 		</definition>
 	</include>
