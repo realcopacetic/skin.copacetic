@@ -62,17 +62,15 @@
 		<!-- VideoPlayer -->
 		<value condition="VideoPlayer.IsFullscreen + !String.IsEmpty(VideoPlayer.Art(clearlogo-billboard))">$INFO[VideoPlayer.Art(clearlogo-billboard)]</value>
 		<value condition="VideoPlayer.IsFullscreen + !String.IsEmpty(VideoPlayer.Art(clearlogo))">$INFO[VideoPlayer.Art(clearlogo)]</value>
-		<!-- Secondary list. The plain clearlogo is 9300's crop (Clearlogo_Crop_Path), blank while 9300 updates; the uncropped logo only where 9300 crops nothing -->
+		<!-- Secondary list. The plain clearlogo is 9300's crop once 9300 holds the item's (Clearlogo_Crop_Path), until then the item's own -->
 		<value condition="Control.HasFocus(3100) + $EXP[BillboardView_IsVisible] + !String.IsEmpty(Container(3100).ListItem.Art(clearlogo-billboard))">$INFO[Container(3100).ListItem.Art(clearlogo-billboard)]</value>
 		<value condition="Control.HasFocus(3100) + !$EXP[BillboardView_IsVisible] + Skin.String(Theme,Light) + !String.IsEmpty(Container(3100).ListItem.Art(clearlogo-alt))">$INFO[Container(3100).ListItem.Art(clearlogo-alt)]</value>
-		<value condition="Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.Art(clearlogo)) + $EXP[Clearlogo_Served]">$INFO[Container(9300).ListItem.Art(clearlogo)]</value>
-		<value condition="Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.Art(clearlogo)) + Container(9300).IsUpdating" />
+		<value condition="Control.HasFocus(3100) + $EXP[Clearlogo_Served_Secondary]">$INFO[Container(9300).ListItem.Art(clearlogo)]</value>
 		<value condition="Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.Art(clearlogo))">$INFO[Container(3100).ListItem.Art(clearlogo)]</value>
 		<!-- Primary list -->
 		<value condition="$EXP[BillboardView_IsVisible] + !String.IsEmpty(ListItem.Art(clearlogo-billboard))">$INFO[ListItem.Art(clearlogo-billboard)]</value>
 		<value condition="!$EXP[BillboardView_IsVisible] + Skin.String(Theme,Light) + !String.IsEmpty(ListItem.Art(clearlogo-alt))">$INFO[ListItem.Art(clearlogo-alt)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(clearlogo)) + $EXP[Clearlogo_Served]">$INFO[Container(9300).ListItem.Art(clearlogo)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(clearlogo)) + Container(9300).IsUpdating" />
+		<value condition="$EXP[Clearlogo_Served_Primary]">$INFO[Container(9300).ListItem.Art(clearlogo)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
 	</variable>
 
