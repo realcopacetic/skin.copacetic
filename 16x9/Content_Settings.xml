@@ -426,13 +426,6 @@
 			<onclick>Skin.ToggleSetting(Kiosk_Mode)</onclick>
 			<selected>Skin.HasSetting(Kiosk_Mode)</selected>
 		</control>
-		<control type="radiobutton" id="1353">
-			<description>Add shutdown menu shortcut to hidden menu</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31488]</label>
-			<onclick>Skin.ToggleSetting(shutdownmenu_Shortcut)</onclick>
-			<selected>Skin.HasSetting(shutdownmenu_Shortcut)</selected>
-		</control>
 		<control type="label" id="1354">
 			<description>List</description>
 			<visible>ControlGroup(9).HasFocus(13)</visible>

@@ -581,7 +581,6 @@
 						<include content="AddonBrowser_Menu_Options" condition="Window.Is(addonbrowser)" />
 						<include content="Pictures_Menu_Options" condition="Window.Is(pictures)" />
 						<include content="Playlist_Menu_Options" condition="Window.Is(musicplaylist) | Window.Is(videoplaylist)" />
-						<include content="shutdownmenu_Shortcut" condition="Skin.HasSetting(shutdownmenu_Shortcut)" />
 					</content>
 				</control>
 			</control>

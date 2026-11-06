@@ -276,15 +276,6 @@
 		</item>
 	</include>
 
-	<include name="shutdownmenu_Shortcut">
-		<item>
-			<description>Shutdown menu shortcut</description>
-			<onclick>ActivateWindow(shutdownmenu)</onclick>
-			<label>$LOCALIZE[10111]</label>
-			<label2>$LOCALIZE[10111]</label2>
-		</item>
-	</include>
-
 	<include name="tvcommon_Menu_Options">
 		<item id="1">
 			<description>Change view</description>
