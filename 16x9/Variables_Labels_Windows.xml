@@ -166,9 +166,6 @@
 		<value condition="Control.HasFocus(15320) | Control.HasFocus(15321)">$LOCALIZE[31566]</value>
 		<value condition="Control.HasFocus(1533)">$LOCALIZE[31567]</value>
 		<value condition="Control.HasFocus(1534) | Control.HasFocus(1535)">$LOCALIZE[31568]</value>
-		<!-- Experiments -->
-		<value condition="Control.HasFocus(1700)">$LOCALIZE[31570]</value>
-		<value condition="Control.HasFocus(1701)">$LOCALIZE[31571]</value>
 	</variable>
 	<variable name="skinsettings_Background_Interval_Label">
 		<!-- Multiart Interval / Off -->

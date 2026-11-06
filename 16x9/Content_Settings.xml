@@ -843,14 +843,8 @@
 			<param name="label2" value="$VAR[skinsettings_visualisation_Layout_Label2]" />
 			<param name="previous" value="1414" />
 			<param name="id" value="1415" />
-			<param name="next" value="1416" />
+			<param name="next" value="1402" />
 		</include>
-		<control type="label" id="1416">
-			<description>Experiments</description>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
-			<include content="skinsettings_Default_Label" />
-			<label>$LOCALIZE[31406]</label>
-		</control>
 
 		<!-- Extras -->
 		<control type="label" id="1500">
