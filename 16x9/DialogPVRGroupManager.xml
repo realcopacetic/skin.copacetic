@@ -3,5 +3,9 @@
 	<!-- pvrgroupmanager: stub, PVR isn't skinned (PVR_Stub) -->
 	<controls>
 		<include content="PVR_Stub" />
+		<!-- Kodi reads the selected group from list 13 on open and crashes without it. No layouts, so it draws nothing; disabled, so Up/Down can't change the group -->
+		<control type="list" id="13">
+			<enable>false</enable>
+		</control>
 	</controls>
 </window>
