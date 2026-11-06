@@ -536,7 +536,7 @@
 						<centerleft>50%</centerleft>
 					</include>
 					<control type="grouplist">
-						<include content="Common_Details_Slides" condition="Skin.HasSetting(Crop_Clearlogos) + ![Window.Is(home) + !$PARAM[widget_clearlogos]]">
+						<include content="Common_Details_Slides" condition="![Window.Is(home) + !$PARAM[widget_clearlogos]]">
 							<param name="viewtype_label" value="$PARAM[viewtype_label]" />
 						</include>
 						<orientation>vertical</orientation>

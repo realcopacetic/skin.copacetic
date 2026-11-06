@@ -123,28 +123,21 @@
 			<include content="skinsettings_Detfault_Image" />
 			<texture>$VAR[skinsettings_Clearlogo_Cropper_Screenshots]</texture>
 		</control>
-		<control type="radiobutton" id="1019">
-			<description>Enabled clearlogo cropper</description>
-			<visible>ControlGroup(9).HasFocus(10)</visible>
-			<label>$LOCALIZE[31421]</label>
-			<onclick>Skin.ToggleSetting(Crop_Clearlogos)</onclick>
-			<selected>Skin.HasSetting(Crop_Clearlogos)</selected>
-		</control>
 		<control type="button" id="1020">
 			<description>Clear cache</description>
 			<visible>ControlGroup(9).HasFocus(10)</visible>
-			<label>- $LOCALIZE[31422]</label>
+			<label>$LOCALIZE[31422]</label>
 			<onclick>RunScript(script.copacetic.helper,action=clear_cache)</onclick>
 		</control>
 		<control type="radiobutton" id="1021">
 			<description>Colorise media flags</description>
-			<visible>ControlGroup(9).HasFocus(10) + Skin.HasSetting(Crop_Clearlogos)</visible>
-			<label>- $LOCALIZE[31423]</label>
+			<visible>ControlGroup(9).HasFocus(10)</visible>
+			<label>$LOCALIZE[31423]</label>
 			<onclick>Skin.ToggleSetting(Colorise_Flags)</onclick>
 			<selected>Skin.HasSetting(Colorise_Flags)</selected>
 		</control>
 		<include content="skinsettings_Double_Slider_Button">
-			<param name="visible" value="Skin.HasSetting(Crop_Clearlogos) + Skin.HasSetting(Colorise_Flags)" />
+			<param name="visible" value="Skin.HasSetting(Colorise_Flags)" />
 			<param name="info" value="Background_Low_Threshold" />
 			<param name="info2" value="Background_High_Threshold" />
 			<param name="label" value="- $LOCALIZE[31424]" />
