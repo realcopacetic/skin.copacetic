@@ -132,6 +132,11 @@
 
 
 	<!-- globalsearch -->
+	<!-- An action run after Skin.SetString(globalsearch)'s keyboard closes: opens the results for a query -->
+	<variable name="globalsearch_Open">
+		<value condition="!String.IsEmpty(Skin.String(globalsearch))">ActivateWindow(1180)</value>
+	</variable>
+
 	<variable name="Path_globalsearch_Movies">
 		<!-- title*, plot, genre*, set*, director*, actor*, studio*, tag -->
 		<value condition="Skin.HasSetting(GlobalSearch_TVShows_Tag_Disabled) + Skin.HasSetting(GlobalSearch_Movies_Tag_Disabled)">videodb://movies/titles/?xsp=%7B%22rules%22%3A%7B%22or%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22set%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22director%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%2C%7B%22field%22%3A%22studio%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(globalsearch)]%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</value>
