@@ -11,7 +11,7 @@
 			<param name="panel_edge_top" value="120" />
 			<param name="panel_edge_bottom" value="120" />
 			<control type="label">
-				<label>$VAR[loginscreen_Welcome_Label] $LOCALIZE[31900]</label>
+				<label>$LOCALIZE[31900]</label>
 				<top>180</top>
 				<height>60</height>
 				<centerleft>50%</centerleft>

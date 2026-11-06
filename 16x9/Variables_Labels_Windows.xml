@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-	<variable name="loginscreen_Welcome_Label">
-		<!-- Good morning / afternoon, / evening / Seasonal messages... Who's watching? -->
-		<value condition="System.Date(12-25,12-26)">$LOCALIZE[31911]</value>
-		<value condition="System.Date(04-22,04-23)">$LOCALIZE[31914]</value>
-		<value condition="System.Date(04-21,04-22) | System.Date(06-28,06-29)">$LOCALIZE[31913]</value>
-		<value condition="System.Date(03-12,03-13)">$LOCALIZE[31910]</value>
-		<value condition="System.Date(03-11,03-12)">$LOCALIZE[31909]</value>
-		<value condition="System.Date(03-22,03-23)">$LOCALIZE[31912]</value>
-		<value condition="System.Date(03-08,03-09)">$LOCALIZE[31908][CR]</value>
-		<value condition="System.Date(02-19,02-20)">$LOCALIZE[31907]</value>
-		<value condition="System.Date(02-11,02-12)">$LOCALIZE[31906]</value>
-		<value condition="System.Date(01-19,01-20)">$LOCALIZE[31905][CR]</value>
-		<value condition="System.Date(01-01,01-02)">$LOCALIZE[31904]</value>
-		<value condition="System.Time(17:00,00:00) + Integer.IsGreaterOrEqual(System.Time(hh),5)">$LOCALIZE[31901]</value>
-		<value condition="System.Time(12:00,17:00)">$LOCALIZE[31902]</value>
-		<value>$LOCALIZE[31903]</value>
-	</variable>
-
 	<variable name="musicplaylisteditor_Override_LeftLabel">
 		<value condition="String.IsEqual(ListItem.DBType,song)">$VAR[TrackNumber_Label,,.]$INFO[ListItem.Title, ]</value>
 		<value>$INFO[ListItem.Label]</value>
