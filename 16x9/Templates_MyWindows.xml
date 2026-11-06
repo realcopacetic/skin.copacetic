@@ -229,6 +229,7 @@
 			<param name="sortby" value="year" />
 			<param name="sortorder" value="ascending" />
 		</include>
+		<include content="Set_Progress_List" />
 	</include>
 
 	<include name="videos_Views">

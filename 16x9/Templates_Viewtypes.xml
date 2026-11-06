@@ -46,7 +46,7 @@
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
 				<control type="group">
-					<visible>![Container($PARAM[id]).ListItem.IsCollection + String.IsEqual(Window(home).Property(collection_watched_calculating),true)]</visible>
+					<visible>![Container($PARAM[id]).ListItem.IsCollection + String.IsEqual(Container($PARAM[id]).ListItem.Overlay,OverlayUnwatched.png) + Container(9500).IsUpdating]</visible>
 					<include content="Visible_Fade_Animation" />
 					<include content="Progress_Bar">
 						<param name="id" value="$PARAM[id]" />
@@ -78,7 +78,7 @@
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
 				<control type="group">
-					<visible>![Container($PARAM[id]).ListItem.IsCollection + String.IsEqual(Window(home).Property(collection_watched_calculating),true)]</visible>
+					<visible>![Container($PARAM[id]).ListItem.IsCollection + String.IsEqual(Container($PARAM[id]).ListItem.Overlay,OverlayUnwatched.png) + Container(9500).IsUpdating]</visible>
 					<include content="Visible_Fade_Animation" />
 					<include content="Progress_Bar">
 						<param name="id" value="$PARAM[id]" />

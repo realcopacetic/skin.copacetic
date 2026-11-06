@@ -84,4 +84,10 @@
 		<value>videos</value>
 	</variable>
 
+	<!-- Keyed on the item, not its position (bare Container.CurrentItem is empty on Home); 9501 is no control, so nothing moves.
+	     No modal dialog: the helper would read the dialog's container instead. -->
+	<variable name="Set_Progress_Path">
+		<value condition="Container.ListItem.IsCollection + String.IsEqual(Container.ListItem.Overlay,OverlayUnwatched.png) + !System.HasVisibleModalDialog">plugin://script.copacetic.helper/?info=progressbar&amp;focus_guard=$INFO[Container.ListItem.DBType],$INFO[Container.ListItem.DBID]&amp;identity_labels=Container.ListItem.DBType,Container.ListItem.DBID&amp;target_id=9501</value>
+	</variable>
+
 </includes>

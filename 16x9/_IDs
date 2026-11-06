@@ -38,6 +38,8 @@ LISTS
 3500          Music player controls
 3600          PVR Navigation Menu
 3700          PVR Options menu
+9500          Set progress (hidden helper list, Home and Videos)
+9501          Set progress helper target_id (no control)
 
 BUTTONS
 4000          Button group default

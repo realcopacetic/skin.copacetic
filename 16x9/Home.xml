@@ -15,6 +15,7 @@
 		</include>
 		<include content="Home_Container_Update_Bounce_Test" />
 		<include content="User_Scroll_Delay" />
+		<include content="Set_Progress_List" />
 		<include content="Music_Player_Controls" condition="Skin.HasSetting(Music_Player_Enabled)" />
 		<include content="MyViews_Multiart_Labels" condition="Skin.HasSetting(Multiart_Slideshow)" />
 		<control type="list" id="3000">
