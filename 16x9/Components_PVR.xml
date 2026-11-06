@@ -196,7 +196,7 @@
 		<definition>
 			<control type="image">
 				<visible>$PARAM[visible]</visible>
-				<animation effect="fade" start="100" end="33" time="1500" delay="750" tween="sine" easing="inout" pulse="true" condition="ListItem.IsRecording">Conditional</animation>
+				<animation effect="fade" start="100" end="33" time="1050" delay="525" tween="sine" easing="inout" pulse="true" condition="ListItem.IsRecording">Conditional</animation>
 				<nested />
 				<width>30</width>
 				<height>30</height>

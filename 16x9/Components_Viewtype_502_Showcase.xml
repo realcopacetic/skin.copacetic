@@ -382,8 +382,8 @@
 							<param name="animation2effect" value="fade" />
 							<param name="animation2start" value="0" />
 							<param name="animation2end" value="100" />
-							<param name="animation2delay" value="95" />
-							<param name="animation2time" value="285" />
+							<param name="animation2delay" value="66" />
+							<param name="animation2time" value="199" />
 						</include>
 						<include content="DropShadow" condition="Window.IsMedia">
 							<param name="visible" value="Container($PARAM[target_id]).OnNext + ![String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(1).Label) + String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(1).Art(thumb))] + $EXP[ShowcaseView_Details_Off]" />
@@ -399,8 +399,8 @@
 							<param name="animation2effect" value="fade" />
 							<param name="animation2start" value="0" />
 							<param name="animation2end" value="100" />
-							<param name="animation2delay" value="95" />
-							<param name="animation2time" value="285" />
+							<param name="animation2delay" value="66" />
+							<param name="animation2time" value="199" />
 						</include>
 					</control>
 					<!-- Focused -->

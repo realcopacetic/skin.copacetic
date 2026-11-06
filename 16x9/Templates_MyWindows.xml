@@ -49,7 +49,7 @@
 		<!-- Container Update Bounce Test For Info_Infoscreens_Label -->
 		<control type="button" id="6001">
 			<visible allowhiddenfocus="true">false</visible>
-			<animation effect="slide" end="0,0" time="100">Focus</animation>
+			<animation effect="slide" end="0,0" time="70">Focus</animation>
 			<onfocus condition="Container.IsUpdating">SetFocus(6002)</onfocus>
 			<onfocus condition="!Container.IsUpdating">ClearProperty(Infoscreen_Transition,home)</onfocus>
 			<onfocus condition="!Container.IsUpdating">SetFocus(50)</onfocus>
@@ -57,7 +57,7 @@
 		</control>
 		<control type="button" id="6002">
 			<visible allowhiddenfocus="true">false</visible>
-			<animation effect="slide" end="0,0" time="500">Focus</animation>
+			<animation effect="slide" end="0,0" time="350">Focus</animation>
 			<onfocus>SetFocus(6001)</onfocus>
 		</control>
 		<include content="Embedded_VideoPlayer">

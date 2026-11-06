@@ -4,7 +4,7 @@
 	<include name="Home_Container_Update_Bounce_Test">
 		<control type="button" id="6001">
 			<visible allowhiddenfocus="true">false</visible>
-			<animation effect="slide" end="0,0" time="50">Focus</animation>
+			<animation effect="slide" end="0,0" time="35">Focus</animation>
 			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3201) + Container(3201).IsUpdating">SetFocus(6002)</onfocus>
 			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3202) + Container(3202).IsUpdating">SetFocus(6002)</onfocus>
 			<onfocus condition="String.IsEqual(Window(home).Property(Origin),3203) + Container(3203).IsUpdating">SetFocus(6002)</onfocus>
@@ -28,7 +28,7 @@
 		</control>
 		<control type="button" id="6002">
 			<visible allowhiddenfocus="true">false</visible>
-			<animation effect="slide" end="0,0" time="50">Focus</animation>
+			<animation effect="slide" end="0,0" time="35">Focus</animation>
 			<onfocus>SetFocus(6001)</onfocus>
 		</control>
 	</include>

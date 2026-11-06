@@ -215,7 +215,7 @@
 						<param name="fallback" value="views/dark_grey_100.png" />
 						<!-- Multiart -->
 						<include content="Icon_Component_Multiart_Static" condition="Skin.HasSetting(Multiart_Slideshow) + [Window.Is(videos) | Window.Is(music)]">
-							<param name="fadetime" value="Default_Transition_1x" />
+							<param name="fadetime" value="360" />
 						</include>
 						<!-- Progress overlay -->
 						<include content="Icon_Component_Progress_Overlay" condition="Window.Is(home) | Window.Is(videos) | Window.Is(movieinformation)">

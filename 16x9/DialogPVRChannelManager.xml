@@ -5,7 +5,7 @@
 	<controls>
 		<include content="Focus_Setter">
 			<param name="target_id" value="SetFocus(20)" />
-			<animation effect="slide" end="0,0" time="500" reversible="false">Focus</animation>
+			<animation effect="slide" end="0,0" time="350" reversible="false">Focus</animation>
 		</include>
 		<include content="Default_Dialog_Panel_Layout">
 			<param name="visible" value="![Window.IsVisible(pvrgroupmanager) | Window.IsVisible(shutdownmenu) | Window.IsVisible(selectdialog) | Window.IsVisible(filebrowser) | Window.IsVisible(okdialog) | Window.IsVisible(yesnodialog) | Window.IsVisible(progressdialog) | Window.IsVisible(virtualkeyboard) | Window.IsVisible(numericinput)]" />

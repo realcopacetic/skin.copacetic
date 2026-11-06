@@ -173,7 +173,7 @@
 				<include content="Background_Multiart">
 					<param name="colordiffuse" value="$PARAM[colordiffuse]" />
 					<param name="texture_path" value="$PARAM[texture_path]" />
-					<param name="fadetime" value="Default_Transition_1x" />
+					<param name="fadetime" value="360" />
 					<param name="fadein_animation_condition" value="$PARAM[fadein_animation_condition]" />
 					<param name="fadeout_animation_condition" value="$PARAM[fadeout_animation_condition]" />
 				</include>
@@ -202,7 +202,7 @@
 			<param name="fadeout_animation_condition" value="!$EXP[Background_FadeOut_Exceptions_home]" />
 			<param name="colordiffuse" value="$VAR[Home_Artwork_Diffuse]" />
 			<param name="texture_path" value="$VAR[Background_Home_Texture]" />
-			<param name="fadetime" value="Default_Transition_1x" />
+			<param name="fadetime" value="360" />
 			<param name="time" value="$PARAM[time]" />
 		</include>
 	</include>
@@ -211,7 +211,7 @@
 		<include content="Background_Multiart">
 			<param name="content_source" value="Background_Login_Content" />
 			<param name="colordiffuse" value="$VAR[Home_Artwork_Diffuse]" />
-			<param name="fadetime" value="Default_Transition_1x" />
+			<param name="fadetime" value="360" />
 		</include>
 	</include>
 
@@ -285,7 +285,7 @@
 			<include content="Visible_Fade_Delayed_Animation" />
 			<left>60</left>
 			<bottom>60</bottom>
-			<fadetime>Default_Transition_1x</fadetime>
+			<fadetime>360</fadetime>
 		</include>
 	</include>
 

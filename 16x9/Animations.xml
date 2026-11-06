@@ -247,7 +247,7 @@
 		<animation effect="zoom" center="auto" start="103" end="100" time="Default_Transition_0.75x" tween="back" easing="in" condition="$EXP[GridView_IsVisible]" reversible="false">Focus</animation>
 	</include>
 	<include name="Multiart_Focus_Fade_Animation">
-		<animation effect="fade" start="0" end="100" time="Default_Transition_0.75x" delay="3000" tween="sine" easing="inout" reversible="false">Focus</animation>
+		<animation effect="fade" start="0" end="100" time="Default_Transition_0.75x" delay="2100" tween="sine" easing="inout" reversible="false">Focus</animation>
 	</include>
 
 	<include name="Grid_Details_Overlay_Fade_Animation">
@@ -269,12 +269,12 @@
 
 	<include name="Ken_Burns_Effect_Animation">
 		<animation type="Conditional" pulse="true" condition="true" reversible="true">
-			<effect type="zoom" center="auto" end="108" time="21000" tween="sine" easing="inout" />
+			<effect type="zoom" center="auto" end="108" time="14700" tween="sine" easing="inout" />
 		</animation>
 	</include>
 	<include name="Background_Ellipsis_Animation">
 		<animation type="Conditional" pulse="true" condition="true" reversible="true">
-			<effect type="zoom" center="auto" end="118" time="17000" tween="sine" easing="inout" />
+			<effect type="zoom" center="auto" end="118" time="11900" tween="sine" easing="inout" />
 		</animation>
 	</include>
 
@@ -341,8 +341,8 @@
 	</include>
 
 	<include name="Multiart_Fade_Animation">
-		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="4000" tween="sine" easing="inout" reversible="false">WindowOpen</animation>
-		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="1500" tween="sine" easing="inout" reversible="false">Visible</animation>
+		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="2800" tween="sine" easing="inout" reversible="false">WindowOpen</animation>
+		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="1050" tween="sine" easing="inout" reversible="false">Visible</animation>
 	</include>
 
 	<include name="MusicPlayer_Fade_Animation">
@@ -391,8 +391,8 @@
 	</include>
 
 	<include name="Trailer_Autoplay_Fade_Delayed_Animation">
-		<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="1500" tween="sine" easing="inout" reversible="false" condition="$EXP[Trailer_Autoplay_IsVisible]">Conditional</animation>
-		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="1500" tween="sine" easing="inout" reversible="false" condition="!$EXP[Trailer_Autoplay_IsVisible]">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="1050" tween="sine" easing="inout" reversible="false" condition="$EXP[Trailer_Autoplay_IsVisible]">Conditional</animation>
+		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="1050" tween="sine" easing="inout" reversible="false" condition="!$EXP[Trailer_Autoplay_IsVisible]">Conditional</animation>
 	</include>
 
 	<include name="Video_Breadcrumb_Fade_Animation">
