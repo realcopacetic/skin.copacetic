@@ -100,11 +100,11 @@
 	</variable>
 
 	<variable name="Path_StudioCredits">
-		<!-- the first studio; a title with & would break the xsp, so it isn't left out -->
+		<!-- the first studio. Shows: networks grouped with contains in an xsp, which a title with & would break, so it isn't left out -->
 		<value condition="$EXP[Infoscreen_Metadata_Ready] + Integer.IsGreater(ListItem.DBID,0) + !String.IsEmpty(Container(9000).ListItem.Studio) + !String.IsEmpty(ListItem.TVShowTitle) + !String.Contains(ListItem.Title,&amp;)">videodb://tvshows/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22studio%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B$VAR[Studio_Label]%5D%7D%2C%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Title]%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</value>
 		<value condition="$EXP[Infoscreen_Metadata_Ready] + Integer.IsGreater(ListItem.DBID,0) + !String.IsEmpty(Container(9000).ListItem.Studio) + !String.IsEmpty(ListItem.TVShowTitle)">videodb://tvshows/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22studio%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B$VAR[Studio_Label]%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</value>
-		<value condition="$EXP[Infoscreen_Metadata_Ready] + Integer.IsGreater(ListItem.DBID,0) + !String.IsEmpty(Container(9000).ListItem.Studio) + !String.Contains(ListItem.Title,&amp;)">videodb://movies/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22studio%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B$ESCINFO[Container(9000).ListItem.Studio]%5D%7D%2C%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Title]%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</value>
-		<value condition="$EXP[Infoscreen_Metadata_Ready] + Integer.IsGreater(ListItem.DBID,0) + !String.IsEmpty(Container(9000).ListItem.Studio)">videodb://movies/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22studio%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B$ESCINFO[Container(9000).ListItem.Studio]%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</value>
+		<!-- films: the exact studio, as the xsp's is matched, through the helper, which keeps & and + -->
+		<value condition="$EXP[Infoscreen_Metadata_Ready] + Integer.IsGreater(ListItem.DBID,0) + !String.IsEmpty(Container(9000).ListItem.Studio)">plugin://script.copacetic.helper/?info=studio_credits&amp;label=$INFO[Container(9000).ListItem.Studio]&amp;exclude_value=$INFO[ListItem.Title]&amp;type=movie&amp;sort=random&amp;limit=50</value>
 		<value>special://skin/extras/playlists/empty.xsp</value>
 	</variable>
 
