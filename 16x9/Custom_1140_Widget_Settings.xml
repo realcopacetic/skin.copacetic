@@ -2,7 +2,7 @@
 <!-- widgetsettings -->
 <window type="dialog" id="1140">
 	<defaultcontrol always="true">3200</defaultcontrol>
-	<!-- Back in the same frame as a move: 4010's SetFocus then finds no id and does nothing -->
+	<!-- Clears the target that Widget_Move leaves for the 4010 relay -->
 	<onunload>ClearProperty(Widget_Move,home)</onunload>
 	<controls>
 		<include content="widgetsettings_Hidden" />
