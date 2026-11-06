@@ -21,8 +21,7 @@
 					<include content="List_Navigation" />
 					<onfocus>ClearProperty(Widget_DBID,home)</onfocus>
 					<onfocus condition="Container.Content(favourites)">Skin.SetString(favourites_Viewmode,List)</onfocus>
-					<include content="Default_Scrolltime" condition="!Skin.HasSetting(Quick_Transitions)" />
-					<include content="Quick_Scrolltime" condition="Skin.HasSetting(Quick_Transitions)" />
+					<include content="Default_Scrolltime" />
 					<include content="ListView_Layout_addonbrowser" condition="Window.Is(addonbrowser) | Window.Is(programs)" />
 					<include content="ListView_Layout_videos" condition="Window.Is(videos)" />
 					<include content="ListView_Layout_music" condition="Window.Is(music) | Window.Is(musicplaylist)" />

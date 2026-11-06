@@ -24,7 +24,7 @@
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
 				<orientation>vertical</orientation>
-				<include content="Default_Scrolltime" condition="!Skin.HasSetting(Quick_Transitions)" />
+				<include content="Default_Scrolltime" />
 				<include content="$PARAM[layout]_Layout" />
 				<content target="$VAR[Secondary_List_Target]" sortby="$VAR[Secondary_List_Sort]" sortorder="$VAR[Secondary_List_Sort_Order]" browse="never">$VAR[Secondary_List_Path]</content>
 			</control>

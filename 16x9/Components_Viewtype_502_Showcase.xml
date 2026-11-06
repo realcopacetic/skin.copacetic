@@ -607,7 +607,7 @@
 		<param name="focus_border_color" default="$VAR[Light_Color]" />
 		<param name="focus_border_texture" default="views/border_10px.png" />
 		<definition>
-			<include content="ShowcaseView_Animated" condition="![Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)]">
+			<include content="ShowcaseView_Animated">
 				<param name="target_id" value="$PARAM[target_id]" />
 				<param name="displaytype_label" value="$PARAM[displaytype_label]" />
 				<param name="displaytype_issquare" value="$PARAM[displaytype_issquare]" />

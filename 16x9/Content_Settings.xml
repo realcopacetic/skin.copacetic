@@ -111,20 +111,6 @@
 			<onclick>Skin.SetString(User_Defined_Accent_Color,copacetic_accent_color)</onclick>
 			<onclick>SetFocus(1004)</onclick>
 		</control>
-		<control type="radiobutton" id="1025">
-			<description>Speed up animations and window transitions</description>
-			<visible>ControlGroup(9).HasFocus(10)</visible>
-			<label>$LOCALIZE[31720]</label>
-			<onclick>Skin.ToggleSetting(Quick_Transitions)</onclick>
-			<selected>Skin.HasSetting(Quick_Transitions)</selected>
-		</control>
-		<control type="radiobutton" id="1026">
-			<description>- Disable all viewtype scroll animations</description>
-			<visible>ControlGroup(9).HasFocus(10) + Skin.HasSetting(Quick_Transitions)</visible>
-			<label>- $LOCALIZE[31721]</label>
-			<onclick>Skin.ToggleSetting(Zero_Transitions)</onclick>
-			<selected>Skin.HasSetting(Zero_Transitions)</selected>
-		</control>
 		<control type="label" id="1015">
 			<description>Artwork</description>
 			<visible>ControlGroup(9).HasFocus(10)</visible>

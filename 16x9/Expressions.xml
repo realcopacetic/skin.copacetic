@@ -101,12 +101,9 @@
 	<expression name="Container_Switching">[$EXP[Container_Level_0] | $EXP[Container_Level_1] | $EXP[Container_Level_2] | $EXP[Container_Level_3] | $EXP[Container_Level_4] | $EXP[Container_Level_5]] + !Window.IsVisible(home) + !$EXP[Infoscreen_IsVisible]</expression>
 	<expression name="Content_Next">Control.IsVisible(5002)</expression>
 	<expression name="Content_Previous">Control.IsVisible(5001)</expression>
-	<expression name="Content_Switching">$EXP[Content_Switching_Base] + !$EXP[Content_Switching_Exclusions_BillboardView] + !$EXP[Content_Switching_Exclusions_ShowcaseView] + !$EXP[Content_Switching_Exclusions_StripView] + !$EXP[Content_Switching_Exclusions_GridView]</expression>
+	<expression name="Content_Switching">$EXP[Content_Switching_Base] + !$EXP[Content_Switching_Exclusions_StripView]</expression>
 	<expression name="Content_Switching_Base">[Control.IsVisible(5001) | Control.IsVisible(5002)] + [!String.IsEqual(Container.NumItems,1) | Window.Is(movieinformation) | Window.Is(musicinformation) | Window.Is(songinformation) | Window.Is(addoninformation)] + !Window.IsVisible(managevideoversions) + !Window.IsVisible(managevideoextras)</expression>
-	<expression name="Content_Switching_Exclusions_BillboardView">$EXP[BillboardView_IsVisible] + Skin.HasSetting(Quick_Transitions)</expression>
-	<expression name="Content_Switching_Exclusions_ShowcaseView">$EXP[ShowcaseView_Media_IsVisible] + Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)</expression>
-	<expression name="Content_Switching_Exclusions_StripView">[$EXP[StripView_Media_IsVisible] + $EXP[StripView_Details_Off]] | [Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)] | $EXP[StripView_Widget_Infoscreen_IsVisible]</expression>
-	<expression name="Content_Switching_Exclusions_GridView">$EXP[GridView_Media_IsVisible] + Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)</expression>
+	<expression name="Content_Switching_Exclusions_StripView">[$EXP[StripView_Media_IsVisible] + $EXP[StripView_Details_Off]] | $EXP[StripView_Widget_Infoscreen_IsVisible]</expression>
 
 	<!-- Container Transitions -->
 	<expression name="Container_Level_0">Window.IsVisible(1110) + $EXP[all_Level_0]</expression>

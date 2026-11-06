@@ -21,20 +21,12 @@
 	<include name="fade_animation">
 		<param name="time" default="0x" />
 		<param name="delay" default="0x" />
-		<param name="quick_delay" default="0x" />
 		<param name="condition" default="true" />
 		<param name="reversible" default="false" />
-		<param name="disable_delay_on_quick" default="false" />
 		<definition>
-			<include content="fade_$PARAM[type]" condition="!Skin.HasSetting(Quick_Transitions)">
+			<include content="fade_$PARAM[type]">
 				<param name="time" value="Default_Transition_$PARAM[time]" />
 				<param name="delay" value="Default_Transition_$PARAM[delay]" />
-				<param name="condition" value="$PARAM[condition]" />
-				<param name="reversible" value="$PARAM[reversible]" />
-			</include>
-			<include content="fade_$PARAM[type]" condition="Skin.HasSetting(Quick_Transitions)">
-				<param name="time" value="Quick_Transition_$PARAM[time]" />
-				<param name="delay" value="Quick_Transition_$PARAM[quick_delay]" />
 				<param name="condition" value="$PARAM[condition]" />
 				<param name="reversible" value="$PARAM[reversible]" />
 			</include>
@@ -46,25 +38,15 @@
 		<param name="end" default="ffffffff" />
 		<param name="time" default="0x" />
 		<param name="delay" default="0x" />
-		<param name="quick_delay" default="0x" />
 		<param name="condition" default="true" />
 		<param name="reversible" default="true" />
 		<definition>
-			<include content="fadediffuse_template" condition="!Skin.HasSetting(Quick_Transitions)">
+			<include content="fadediffuse_template">
 				<param name="type" value="$PARAM[type]" />
 				<param name="start" value="$PARAM[start]" />
 				<param name="end" value="$PARAM[end]" />
 				<param name="time" value="Default_Transition_$PARAM[time]" />
 				<param name="delay" value="Default_Transition_$PARAM[delay]" />
-				<param name="condition" value="$PARAM[condition]" />
-				<param name="reversible" value="$PARAM[reversible]" />
-			</include>
-			<include content="fadediffuse_template" condition="Skin.HasSetting(Quick_Transitions)">
-				<param name="type" value="$PARAM[type]" />
-				<param name="start" value="$PARAM[start]" />
-				<param name="end" value="$PARAM[end]" />
-				<param name="time" value="Quick_Transition_$PARAM[time]" />
-				<param name="delay" value="Quick_Transition_$PARAM[quick_delay]" />
 				<param name="condition" value="$PARAM[condition]" />
 				<param name="reversible" value="$PARAM[reversible]" />
 			</include>
@@ -94,7 +76,6 @@
 				<param name="type" value="WindowOpen" />
 				<param name="time" value="1x" />
 				<param name="delay" value="1.5x" />
-				<param name="quick_delay" value="0.25x" />
 				<param name="condition" value="$PARAM[fadein_condition]" />
 			</include>
 			<include content="fade_animation">
@@ -274,7 +255,6 @@
 			<param name="type" value="Visible" />
 			<param name="time" value="1x" />
 			<param name="delay" value="1x" />
-			<param name="quick_delay" value="1x" />
 		</include>
 	</include>
 
@@ -426,7 +406,7 @@
 	</include>
 
 	<include name="Widget_Breadcrumb_Animation">
-		<include content="fade_Visible" condition="!Skin.HasSetting(Quick_Transitions)">
+		<include content="fade_Visible">
 			<param name="time" value="Default_Transition_1x" />
 			<param name="delay" value="Default_Transition_1x" />
 			<param name="reversible" value="false" />

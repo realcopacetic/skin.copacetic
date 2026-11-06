@@ -49,10 +49,9 @@
 				<visible>$PARAM[visible]</visible>
 				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" condition="[Window.Is(home) | Window.IsVisible(1180) | Window.Is(movieinformation) | Window.Is(musicinformation) | Window.Is(songinformation) | Window.Is(addoninformation)] + $PARAM[fade_on_dialog]" />
 				<animation effect="fadediffuse" end="ff808080" time="0" condition="$PARAM[art_diffuse]">Conditional</animation><!-- 50% -->
-				<animation effect="fadediffuse" end="ff808080" time="Default_Transition_1x" tween="sine" easing="inout" condition="$PARAM[art_diffuse_fadein] + !Skin.HasSetting(Quick_Transitions)" reversible="false">Conditional</animation><!-- 50% -->
-				<animation effect="fadediffuse" end="ff808080" time="0" condition="$PARAM[art_diffuse_fadein] + Skin.HasSetting(Quick_Transitions)" reversible="false">Conditional</animation><!-- 50% -->
+				<animation effect="fadediffuse" end="ff808080" time="Default_Transition_1x" tween="sine" easing="inout" condition="$PARAM[art_diffuse_fadein]" reversible="false">Conditional</animation><!-- 50% -->
 				<animation effect="fadediffuse" end="ff808080" time="0" condition="$PARAM[art_diffuse_fadeout_1]" reversible="false">Conditional</animation><!-- 50% -->
-				<animation effect="fadediffuse" start="ff808080" end="ffffffff" time="Default_Transition_1x" tween="sine" easing="inout" condition="$PARAM[art_diffuse_fadeout_2] + !Skin.HasSetting(Quick_Transitions)" reversible="false">Conditional</animation><!-- 50% -->
+				<animation effect="fadediffuse" start="ff808080" end="ffffffff" time="Default_Transition_1x" tween="sine" easing="inout" condition="$PARAM[art_diffuse_fadeout_2]" reversible="false">Conditional</animation><!-- 50% -->
 				<animation effect="fadediffuse" end="ff262626" time="0" condition="$PARAM[now_playing]">Conditional</animation><!-- 15% -->
 				<nested />
 				<texture fallback="$PARAM[fallback]" background="true">$PARAM[texture]</texture>
@@ -92,7 +91,7 @@
 				<param name="art_diffuse_fadeout_2" value="$PARAM[art_diffuse_fadeout_2]" />
 				<param name="now_playing" value="$PARAM[now_playing] + !Window.IsVisible(1107)" />
 				<!-- Fade to 33% if current focused item is now playing -->
-				<animation effect="fadediffuse" end="ff555555" time="Default_Transition_1x" delay="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="$PARAM[now_playing] + Window.IsVisible(1107) + !Skin.HasSetting(Quick_Transitions)">Conditional</animation>
+				<animation effect="fadediffuse" end="ff555555" time="Default_Transition_1x" delay="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="$PARAM[now_playing] + Window.IsVisible(1107)">Conditional</animation>
 				<!-- Fade to 0% when multiart visible on top -->
 				<animation effect="fadediffuse" end="80000000" time="Default_Transition_0.25x" delay="3500" condition="[Window.Is(videos) | Window.Is(home) | Window.Is(music)] + Skin.HasSetting(Multiart_Slideshow) + !String.IsEqual(Container.FolderName,ListItem.Title) + String.IsEqual(Window(home).Property(Multiart_Fadeout),true) + !String.IsEqual(Control.GetLabel(6400),flags/blank.png) + !$EXP[Content_Switching] + [!String.IsEmpty(Window(home).Property(Multiart_Fadeout)) | Control.HasFocus(3100)] + !$EXP[Multiart_Container_Switching] + ![$EXP[GridView_IsVisible] + $EXP[Scrollbar_HasFocus]]" reversible="false">Conditional</animation>
 				<include content="Secondary_List_Scroll_Animation" />
@@ -144,7 +143,7 @@
 				<param name="fadetime" value="$PARAM[fadetime]" />
 				<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 				<param name="now_playing" value="$PARAM[now_playing] + !Window.IsVisible(1107)" />
-				<animation effect="fadediffuse" end="ff555555" time="Default_Transition_1x" delay="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="$PARAM[now_playing] + Window.IsVisible(1107) + !Skin.HasSetting(Quick_Transitions)">Conditional</animation>
+				<animation effect="fadediffuse" end="ff555555" time="Default_Transition_1x" delay="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="$PARAM[now_playing] + Window.IsVisible(1107)">Conditional</animation>
 				<include content="Multiart_Fade_Animation" />
 				<include content="Secondary_List_Scroll_Animation" />
 			</include>
@@ -170,7 +169,7 @@
 				<param name="art_diffuse_fadeout_1" value="$PARAM[art_diffuse_fadeout_1]" />
 				<param name="art_diffuse_fadeout_2" value="$PARAM[art_diffuse_fadeout_2]" />
 				<param name="now_playing" value="$PARAM[now_playing]" />
-				<animation effect="$PARAM[animationeffect]" end="$PARAM[animationend]" time="Default_Transition_1x" delay="$PARAM[animationdelay]" tween="sine" easing="inout" reversible="false" condition="$PARAM[animationcondition] + !Skin.HasSetting(Quick_Transitions)">$PARAM[animationtype]</animation>
+				<animation effect="$PARAM[animationeffect]" end="$PARAM[animationend]" time="Default_Transition_1x" delay="$PARAM[animationdelay]" tween="sine" easing="inout" reversible="false" condition="$PARAM[animationcondition]">$PARAM[animationtype]</animation>
 			</include>
 		</definition>
 	</include>

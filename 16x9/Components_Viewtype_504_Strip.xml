@@ -660,7 +660,7 @@
 		<definition>
 			<control type="group">
 				<nested />
-				<include content="StripView_Animated" condition="![Skin.HasSetting(Quick_Transitions) + Skin.HasSetting(Zero_Transitions)]">
+				<include content="StripView_Animated">
 					<param name="target_id" value="$PARAM[target_id]" />
 					<param name="displaytype_label" value="$PARAM[displaytype_label]" />
 					<param name="displaytype_isfanart" value="$PARAM[displaytype_isfanart]" />
