@@ -600,7 +600,11 @@
 					<param name="unfocused_color" value="$VAR[Unfocused_Color]" />
 					<visible allowhiddenfocus="true">Integer.IsEqual(Container(3200).CurrentItem,$PARAM[widget_position])</visible>
 					<top>15</top>
-					<onclick condition="!Control.HasFocus(91)">RunScript(script.copacetic.helper,action=widget_move,posa=$PARAM[widget_position],posb=$PARAM[next_widget_position])</onclick>
+					<include content="Widget_Move">
+						<param name="condition" value="!Control.HasFocus(91)" />
+						<param name="posa" value="$PARAM[widget_position]" />
+						<param name="posb" value="$PARAM[next_widget_position]" />
+					</include>
 					<onclick condition="!Control.HasFocus(91)">SetFocus($PARAM[next_widget_position]1)</onclick>
 					<ondown>$PARAM[next_widget_position]1</ondown>
 					<onup>$PARAM[previous_widget_position]1</onup>
@@ -613,7 +617,11 @@
 					<visible allowhiddenfocus="true">Integer.IsEqual(Container(3200).CurrentItem,$PARAM[widget_position])</visible>
 					<top>15</top>
 					<left>15</left>
-					<onclick condition="!Control.HasFocus(12)">RunScript(script.copacetic.helper,action=widget_move,posa=$PARAM[widget_position],posb=$PARAM[previous_widget_position])</onclick>
+					<include content="Widget_Move">
+						<param name="condition" value="!Control.HasFocus(12)" />
+						<param name="posa" value="$PARAM[widget_position]" />
+						<param name="posb" value="$PARAM[previous_widget_position]" />
+					</include>
 					<onclick condition="!Control.HasFocus(12)">SetFocus($PARAM[previous_widget_position]2)</onclick>
 					<ondown>$PARAM[next_widget_position]2</ondown>
 					<onup>$PARAM[previous_widget_position]2</onup>

@@ -161,4 +161,219 @@
 		<include content="Default_Play_Items" />
 	</include>
 
+	<!-- Widget move: swaps every setting of two Home widget slots -->
+	<include name="Widget_Move">
+		<param name="condition" />
+		<param name="posa" />
+		<param name="posb" />
+		<definition>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Content_Disabled" />
+			</include>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Content_InProgress" />
+			</include>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Content_NextUp" />
+			</include>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Content_LatestMovies" />
+			</include>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Content_RandomMovies" />
+			</include>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Content_LatestTVShows" />
+			</include>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Content_RandomTVShows" />
+			</include>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Content_LatestAlbums" />
+			</include>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Content_RecentAlbums" />
+			</include>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Content_RandomAlbums" />
+			</include>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Content_LikedSongs" />
+			</include>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Content_Favourites" />
+			</include>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Content_Custom" />
+			</include>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="AutoScroll" />
+			</include>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Trailer_Autoplay" />
+			</include>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Clearlogos_Enabled" />
+			</include>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Prefer_Keyart" />
+			</include>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Prefer_Landscape" />
+			</include>
+			<include content="Widget_Move_Bool">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Episode_Thumbs" />
+			</include>
+			<include content="Widget_Move_String">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="View" />
+			</include>
+			<include content="Widget_Move_String">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Display" />
+			</include>
+			<include content="Widget_Move_String">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Custom_Name" />
+			</include>
+			<include content="Widget_Move_String">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Custom_Path" />
+			</include>
+			<include content="Widget_Move_String">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Custom_Target" />
+			</include>
+			<include content="Widget_Move_String">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Custom_Widget" />
+			</include>
+			<include content="Widget_Move_String">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Custom_Type" />
+			</include>
+			<include content="Widget_Move_String">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Custom_SortMethod" />
+			</include>
+			<include content="Widget_Move_String">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Custom_SortMethod_Label" />
+			</include>
+			<include content="Widget_Move_String">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Custom_SortOrder" />
+			</include>
+			<include content="Widget_Move_String">
+				<param name="condition" value="$PARAM[condition]" />
+				<param name="posa" value="$PARAM[posa]" />
+				<param name="posb" value="$PARAM[posb]" />
+				<param name="setting" value="Custom_Limit" />
+			</include>
+			<onclick condition="$PARAM[condition]">ClearProperty(Widget_Move,home)</onclick>
+		</definition>
+	</include>
+
+	<!-- A click's conditions are all read before its first action runs, so the two toggles need no temp -->
+	<include name="Widget_Move_Bool">
+		<param name="condition" />
+		<param name="posa" />
+		<param name="posb" />
+		<param name="setting" />
+		<definition>
+			<onclick condition="$PARAM[condition] + [Skin.HasSetting(Widget$PARAM[posa]_$PARAM[setting]) + !Skin.HasSetting(Widget$PARAM[posb]_$PARAM[setting]) | !Skin.HasSetting(Widget$PARAM[posa]_$PARAM[setting]) + Skin.HasSetting(Widget$PARAM[posb]_$PARAM[setting])]">Skin.ToggleSetting(Widget$PARAM[posa]_$PARAM[setting])</onclick>
+			<onclick condition="$PARAM[condition] + [Skin.HasSetting(Widget$PARAM[posa]_$PARAM[setting]) + !Skin.HasSetting(Widget$PARAM[posb]_$PARAM[setting]) | !Skin.HasSetting(Widget$PARAM[posa]_$PARAM[setting]) + Skin.HasSetting(Widget$PARAM[posb]_$PARAM[setting])]">Skin.ToggleSetting(Widget$PARAM[posb]_$PARAM[setting])</onclick>
+		</definition>
+	</include>
+
+	<!-- $ESCINFO is read as each action runs, so slot a's value waits in a property; its quotes keep commas and spaces -->
+	<include name="Widget_Move_String">
+		<param name="condition" />
+		<param name="posa" />
+		<param name="posb" />
+		<param name="setting" />
+		<definition>
+			<onclick condition="$PARAM[condition]">SetProperty(Widget_Move,$ESCINFO[Skin.String(Widget$PARAM[posa]_$PARAM[setting])],home)</onclick>
+			<onclick condition="$PARAM[condition]">Skin.SetString(Widget$PARAM[posa]_$PARAM[setting],$ESCINFO[Skin.String(Widget$PARAM[posb]_$PARAM[setting])])</onclick>
+			<onclick condition="$PARAM[condition]">Skin.SetString(Widget$PARAM[posb]_$PARAM[setting],$ESCINFO[Window(home).Property(Widget_Move)])</onclick>
+		</definition>
+	</include>
+
 </includes>
