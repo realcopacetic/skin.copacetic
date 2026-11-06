@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-	<variable name="defaultsettings_videolibrary.flattentvshows_Label2">
-		<value condition="Skin.HasSetting(videolibrary.flattentvshows)">$LOCALIZE[20421]</value>
-		<value condition="String.IsEqual(Window(home).Property(videolibrary.flattentvshows),2)">$LOCALIZE[20422]</value>
-		<value>$LOCALIZE[20420]</value>
-	</variable>
-	<variable name="defaultsettings_videolibrary.tvshowsselectfirstunwatcheditem_Label2">
-		<value condition="Skin.HasSetting(videolibrary.tvshowsselectfirstunwatcheditem)">$LOCALIZE[20422]</value>
-		<value condition="String.IsEqual(Window(home).Property(videolibrary.tvshowsselectfirstunwatcheditem),1)">$LOCALIZE[21471]</value>
-		<value>$LOCALIZE[31630]</value>
-	</variable>
-	<variable name="defaultsettings_videolibrary.tvshowsincludeallseasonsandspecials_Label2">
-		<value condition="Skin.HasSetting(videolibrary.tvshowsincludeallseasonsandspecials)">$LOCALIZE[21477]</value>
-		<value condition="String.IsEqual(Window(home).Property(videolibrary.tvshowsincludeallseasonsandspecials),2)">$LOCALIZE[21476]</value>
-		<value condition="String.IsEqual(Window(home).Property(videolibrary.tvshowsincludeallseasonsandspecials),1)">$LOCALIZE[21475]</value>
-		<value>$LOCALIZE[21474]</value>
-	</variable>
-	<variable name="defaultsettings_videolibrary.artworklevel_Label2">
-		<value condition="Skin.HasSetting(videolibrary.artworklevel)">$LOCALIZE[39142]</value>
-		<value condition="String.IsEqual(Window(home).Property(videolibrary.artworklevel),3)">$LOCALIZE[231]</value>
-		<value condition="String.IsEqual(Window(home).Property(videolibrary.artworklevel),1)">$LOCALIZE[39141]</value>
-		<value>$LOCALIZE[39140]</value>
-	</variable>
-	<variable name="defaultsettings_videolibrary.movieartwhitelist_Label2">
-		<value condition="Skin.HasSetting(videolibrary.movieartwhitelist)">keyart, landscape, square, clearlogo, clearlogo-alt, clearlogo-billboard</value>
-		<value condition="!String.IsEmpty(Window(home).Property(videolibrary.movieartwhitelist))">$INFO[Window(home).Property(videolibrary.movieartwhitelist)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="defaultsettings_videolibrary.tvshowartwhitelist_Label2">
-		<value condition="Skin.HasSetting(videolibrary.tvshowartwhitelist)">keyart, landscape, square, clearlogo, clearlogo-alt, clearlogo-billboard</value>
-		<value condition="!String.IsEmpty(Window(home).Property(videolibrary.tvshowartwhitelist))">$INFO[Window(home).Property(videolibrary.tvshowartwhitelist)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-
 	<variable name="loginscreen_Welcome_Label">
 		<!-- Good morning / afternoon, / evening / Seasonal messages... Who's watching? -->
 		<value condition="System.Date(12-25,12-26)">$LOCALIZE[31911]</value>
@@ -165,7 +132,6 @@
 		<value condition="Control.HasFocus(1002)">$LOCALIZE[31507]</value>
 		<value condition="Control.HasFocus(1003)">$LOCALIZE[31509]</value>
 		<value condition="Control.HasFocus(10240) | Control.HasFocus(10241) | Control.HasFocus(10242)">$LOCALIZE[31587]</value>
-		<value condition="Control.HasFocus(1005)">$LOCALIZE[31512]</value>
 		<value condition="Control.HasFocus(1019)">$LOCALIZE[31521]</value>
 		<value condition="Control.HasFocus(1020)">$LOCALIZE[31522]</value>
 		<value condition="Control.HasFocus(1021)">$LOCALIZE[31523]</value>
