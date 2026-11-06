@@ -264,8 +264,8 @@
 				<visible>[String.IsEqual(ListItem.DBType,song) + !String.IsEmpty(ListItem.Genre)] | [String.IsEqual(Window(home).Property(Widget_DBType),song) + !String.IsEmpty(Window(home).Property(Widget_Genre))]</visible>
 				<texturefocus />
 				<label>$LOCALIZE[31011]</label>
-				<onclick condition="!String.IsEmpty(Window(home).Property(Widget_DBID))">RunScript(script.copacetic.helper,action=play_radio,id=$INFO[Window(home).Property(Widget_DBID)])</onclick>
-				<onclick condition="String.IsEmpty(Window(home).Property(Widget_DBID))">RunScript(script.copacetic.helper,action=play_radio)</onclick>
+				<onclick condition="!String.IsEmpty(Window(home).Property(Widget_DBID))">RunScript(script.copacetic.helper,action=start_mix,id=$INFO[Window(home).Property(Widget_DBID)])</onclick>
+				<onclick condition="String.IsEmpty(Window(home).Property(Widget_DBID))">RunScript(script.copacetic.helper,action=start_mix)</onclick>
 			</control>
 			<!-- Like/Unlike song -->
 			<control type="button" id="4017">
