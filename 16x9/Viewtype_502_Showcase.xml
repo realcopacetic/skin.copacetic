@@ -63,6 +63,7 @@
 					<param name="left" value="990" />
 					<param name="width" value="660" />
 					<param name="align" value="center" />
+					<param name="logo_id" value="63$PARAM[id]" />
 					<param name="logo_width" value="100%" />
 					<param name="title_color" value="$VAR[Primary_Color]" />
 					<param name="title_maxheight" value="280" />

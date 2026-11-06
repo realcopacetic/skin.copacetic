@@ -54,6 +54,7 @@
 					<param name="id" value="$PARAM[id]" />
 				</include>
 				<include content="Common_Details">
+					<param name="logo_id" value="63$PARAM[id]" />
 					<param name="widget_clearlogos" value="$PARAM[widget_clearlogos]" />
 				</include>
 			</include>

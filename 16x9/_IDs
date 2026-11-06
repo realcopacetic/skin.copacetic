@@ -39,6 +39,7 @@ LISTS
 3600          PVR Navigation Menu
 3700          PVR Options menu
 9000          Metadata (info screens, script.copacetic.helper)
+9300          Clearlogo crop (hidden helper list, Home, Videos and Music)
 9500          Set progress (hidden helper list, Home and Videos)
 9501          Set progress helper target_id (no control)
 
@@ -86,6 +87,7 @@ CHECKERS
 6308          Breadcrumb title empty
 6309          Breadcrumb info empty
 6310          Clearlogo empty
+63XXX(X)      Details clearlogo sized by 9300 (63 + view id 501, 502, 504, or widget id 3201-3209)
 635X          GridView shadow checkers
 6400          Multiart Type
 650X          Music player / Notification checkers
