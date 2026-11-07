@@ -3,9 +3,7 @@
 	<!-- Look and feel -->
 	<onload condition="!Skin.String(Theme)">Skin.SetString(Theme,Dark)</onload>
 	<onload condition="!Skin.String(Background_Brightness)">Skin.SetString(Background_Brightness,33)</onload>
-	<onload condition="!Skin.String(Background_High_Threshold)">Skin.SetString(Background_High_Threshold,440)</onload>
 	<onload condition="!Skin.String(slideshow_interval)">Skin.SetString(slideshow_interval,10)</onload>
-	<onload condition="!Skin.String(Background_Low_Threshold)">Skin.SetString(Background_Low_Threshold,65)</onload>
 	<onload condition="!Skin.String(Background_Opacity)">Skin.SetString(Background_Opacity,75)</onload>
 	<onload condition="!Skin.String(slideshow_source) + $EXP[Library_Has_Content]">Skin.SetString(slideshow_source,global)</onload>
 	<onload condition="!Skin.String(Infoscreen_Brightness)">Skin.SetString(Infoscreen_Brightness,50)</onload>

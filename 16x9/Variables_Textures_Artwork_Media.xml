@@ -558,9 +558,8 @@
 		<value>special://skin/extras/skinsettings/theme_night.jpg</value>
 	</variable>
 	<variable name="skinsettings_Clearlogo_Cropper_Screenshots">
-		<value condition="Skin.HasSetting(Colorise_Flags) + Skin.String(Theme,Light)">special://skin/extras/skinsettings/clearlogo-colourised_light.jpg</value>
-		<value condition="Skin.HasSetting(Colorise_Flags)">special://skin/extras/skinsettings/clearlogo-colourised_night.jpg</value>
 		<value condition="Skin.String(Theme,Light)">special://skin/extras/skinsettings/clearlogo-cropped_light.jpg</value>
+		<value condition="Skin.HasSetting(Colorise_Flags)">special://skin/extras/skinsettings/clearlogo-colourised_night.jpg</value>
 		<value>special://skin/extras/skinsettings/clearlogo-cropped_night.jpg</value>
 	</variable>
 	<variable name="skinsettings_Prefer_Keyart_Screenshots">

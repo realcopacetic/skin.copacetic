@@ -136,17 +136,6 @@
 			<onclick>Skin.ToggleSetting(Colorise_Flags)</onclick>
 			<selected>Skin.HasSetting(Colorise_Flags)</selected>
 		</control>
-		<include content="skinsettings_Double_Slider_Button">
-			<param name="visible" value="Skin.HasSetting(Colorise_Flags)" />
-			<param name="info" value="Background_Low_Threshold" />
-			<param name="info2" value="Background_High_Threshold" />
-			<param name="label" value="- $LOCALIZE[31424]" />
-			<param name="label2" value="$INFO[Skin.String(Background_Low_Threshold)]$INFO[Skin.String(Background_High_Threshold), - ]" />
-			<param name="category" value="10" />
-			<param name="previous" value="1021" />
-			<param name="id" value="1022" />
-			<param name="next" value="1023" />
-		</include>
 		<control type="radiobutton" id="1023">
 			<description>Prefer keyart to posters on infoscreens</description>
 			<visible>ControlGroup(9).HasFocus(10)</visible>
