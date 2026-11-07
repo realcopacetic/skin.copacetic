@@ -35,8 +35,7 @@
 	</include>
 
 	<include name="Clearlogo_Crop_List">
-		<!-- The focused item's cropped clearlogo (Clearlogo_Crop_Path). Ahead of the views, so a URL change marks it updating
-		     before they read it in the same frame. -->
+		<!-- The focused item's cropped clearlogo (Clearlogo_Crop_Path); readers match the logo its serve echoes (Clearlogo_Served_*) -->
 		<include content="Hidden_List">
 			<param name="content" value="$VAR[Clearlogo_Crop_Path]" />
 			<param name="id" value="9300" />
