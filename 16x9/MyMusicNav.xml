@@ -3,7 +3,6 @@
 	<!-- music -->
 	<include content="Multiart_Reset_OnLoad" />
 	<onunload>ClearProperty(OptionsMenu,home)</onunload>
-	<onunload>ClearProperty(Scrollbars,home)</onunload>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>3000</menucontrol>
 	<views>50,500,501,502,504,505</views>
