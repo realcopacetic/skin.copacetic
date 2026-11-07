@@ -123,14 +123,16 @@ SETTINGS
 3011          File manager
 
 STRINGS
-310XX         Viewtypes
+310XX         Viewtypes and view menu options; context menu song actions (31009-31011)
 311XX         Media
 312XX         Widgets
 313XX         OSD
 314XX         Settings
-315XX         Windows/Dialogs
-316XX         MPAA messages
-319XX         Welcome messages
+315XX         Settings descriptions (setting id + 100)
+316XX         Other labels: system info, search, counts (31600-31637)
+317XX         Settings, continued
+318XX         Settings descriptions (setting id + 100)
+319XX         Welcome messages (31900-31914), age rating systems (31951-31959)
 
 
 TEMPFIXES
