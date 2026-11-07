@@ -2,7 +2,7 @@
 <window>
 	<!-- visualisation -->
 	<onload>Skin.TimerStart(music_visualisation)</onload>
-	<onload condition="System.AddonIsEnabled(script.artistslideshow) + !Skin.HasSetting(hide_background_fanart)">RunScript(script.artistslideshow)</onload>
+	<onload condition="System.AddonIsEnabled(script.artistslideshow) + !Skin.HasSetting(visualisation_Disable_Background)">RunScript(script.artistslideshow)</onload>
 	<onunload>Skin.TimerStop(music_visualisation)</onunload>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
 	<include content="WindowOpenClose_Fade_Delayed_Animation" />
