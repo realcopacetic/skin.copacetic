@@ -68,6 +68,7 @@
 		<param name="use_custom_click" default="false" />
 		<param name="click_action" default="Blank" />
 		<param name="widget_position" default="0" />
+		<param name="hidden_focus" default="false" />
 		<definition>
 			<include content="Widget_List">
 				<param name="min_items" value="1" />
@@ -84,6 +85,7 @@
 				<param name="sortorder" value="$PARAM[sortorder]" />
 				<param name="content" value="$PARAM[content]" />
 				<param name="limit" value="$PARAM[limit]" />
+				<param name="hidden_focus" value="$PARAM[hidden_focus]" />
 			</include>
 			<control type="group">
 				<visible>Control.HasFocus(320$PARAM[widget_position])</visible>
@@ -283,8 +285,10 @@
 			<param name="target" value="music" />
 			<param name="sortby" value="lastplayed" />
 			<param name="sortorder" value="descending" />
-			<!-- The helper bumps liked_songs_version on each Like/Unlike: the new URL reloads the row, even an empty one -->
+			<!-- The helper bumps liked_songs_version on each Like/Unlike: the new URL reloads the row.
+			     hidden_focus: an empty, hidden row still reads its URL, so the first Like shows it -->
 			<param name="content" value="musicdb://songs/?xsp=%7B%22group%22%3A%7B%22mixed%22%3Afalse%2C%22type%22%3A%22none%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22userrating%22%2C%22operator%22%3A%22greaterthan%22%2C%22value%22%3A%5B%22$VAR[Path_LikedSongs_Value]%22%5D%7D%5D%7D%2C%22type%22%3A%22songs%22%2C%22version%22%3A%22$INFO[Window(home).Property(liked_songs_version)]%22%7D" />
+			<param name="hidden_focus" value="true" />
 			<param name="limit" value="50" />
 			<param name="use_custom_click" value="true" />
 			<param name="click_action" value="Play_All_Songs" />
