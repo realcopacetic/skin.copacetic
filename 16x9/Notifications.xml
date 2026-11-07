@@ -45,19 +45,19 @@
 					</item>
 					<item>
 						<description>Go to music visualisation</description>
-						<visible>!Skin.String(Music_Rating_Like_Threshold) | !Integer.IsGreater(MusicPlayer.DBID,0)</visible>
+						<visible>!Skin.String(like_threshold) | !Integer.IsGreater(MusicPlayer.DBID,0)</visible>
 						<label>$LOCALIZE[31306]</label>
 						<onclick>ActivateWindow(visualisation)</onclick>
 					</item>
 					<item>
 						<description>Like song</description>
-						<visible>Skin.String(Music_Rating_Like_Threshold) + Integer.IsGreater(MusicPlayer.DBID,0) + Integer.IsLess(MusicPlayer.UserRating,Skin.String(Music_Rating_Like_Threshold))</visible>
+						<visible>Skin.String(like_threshold) + Integer.IsGreater(MusicPlayer.DBID,0) + Integer.IsLess(MusicPlayer.UserRating,Skin.String(like_threshold))</visible>
 						<label>$LOCALIZE[31009]</label>
-						<onclick>RunScript(script.copacetic.helper,action=rate_song,id=$INFO[MusicPlayer.DBID],rating=$INFO[Skin.String(Music_Rating_Like_Threshold)])</onclick>
+						<onclick>RunScript(script.copacetic.helper,action=rate_song,id=$INFO[MusicPlayer.DBID],rating=$INFO[Skin.String(like_threshold)])</onclick>
 					</item>
 					<item>
 						<description>Unlike song</description>
-						<visible>Skin.String(Music_Rating_Like_Threshold) + Integer.IsGreater(MusicPlayer.DBID,0) + !Integer.IsLess(MusicPlayer.UserRating,Skin.String(Music_Rating_Like_Threshold))</visible>
+						<visible>Skin.String(like_threshold) + Integer.IsGreater(MusicPlayer.DBID,0) + !Integer.IsLess(MusicPlayer.UserRating,Skin.String(like_threshold))</visible>
 						<label>$LOCALIZE[31010]</label>
 						<onclick>RunScript(script.copacetic.helper,action=rate_song,id=$INFO[MusicPlayer.DBID],rating=0)</onclick>
 					</item>
@@ -126,21 +126,21 @@
 				</include>
 				<include content="Music_Player_Button_Template">
 					<param name="focused" value="String.IsEqual(Container($PARAM[id]).Position,5)" />
-					<param name="visible" value="!Skin.String(Music_Rating_Like_Threshold) | !Integer.IsGreater(MusicPlayer.DBID,0)" />
+					<param name="visible" value="!Skin.String(like_threshold) | !Integer.IsGreater(MusicPlayer.DBID,0)" />
 					<param name="icon" value="fullscreen" />
 					<param name="left" value="120" />
 					<param name="top" value="60" />
 				</include>
 				<include content="Music_Player_Button_Template">
 					<param name="focused" value="String.IsEqual(Container($PARAM[id]).Position,5)" />
-					<param name="visible" value="Skin.String(Music_Rating_Like_Threshold) + Integer.IsGreater(MusicPlayer.DBID,0) + Integer.IsLess(MusicPlayer.UserRating,Skin.String(Music_Rating_Like_Threshold))" />
+					<param name="visible" value="Skin.String(like_threshold) + Integer.IsGreater(MusicPlayer.DBID,0) + Integer.IsLess(MusicPlayer.UserRating,Skin.String(like_threshold))" />
 					<param name="icon" value="heart_unfilled" />
 					<param name="left" value="120" />
 					<param name="top" value="60" />
 				</include>
 				<include content="Music_Player_Button_Template">
 					<param name="focused" value="String.IsEqual(Container($PARAM[id]).Position,5)" />
-					<param name="visible" value="Skin.String(Music_Rating_Like_Threshold) + Integer.IsGreater(MusicPlayer.DBID,0) + !Integer.IsLess(MusicPlayer.UserRating,Skin.String(Music_Rating_Like_Threshold))" />
+					<param name="visible" value="Skin.String(like_threshold) + Integer.IsGreater(MusicPlayer.DBID,0) + !Integer.IsLess(MusicPlayer.UserRating,Skin.String(like_threshold))" />
 					<param name="icon" value="heart_filled" />
 					<param name="color" value="$VAR[Accent_Color]" />
 					<param name="left" value="120" />

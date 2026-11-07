@@ -188,12 +188,6 @@
 				<itemgap>0</itemgap>
 				<align>center</align>
 				<include content="Default_ContextMenu_Label">
-					<param name="id" value="4017" />
-				</include>
-				<include content="Default_ContextMenu_Label">
-					<param name="id" value="4018" />
-				</include>
-				<include content="Default_ContextMenu_Label">
 					<param name="id" value="1001" />
 				</include>
 				<include content="Default_ContextMenu_Label">
@@ -244,21 +238,6 @@
 			<visible allowhiddenfocus="true">false</visible>
 			<onleft>Close</onleft>
 			<onright>Close</onright>
-			<!-- Like/Unlike song -->
-			<control type="button" id="4017">
-				<visible>Skin.String(Music_Rating_Like_Threshold) + !Window.IsVisible(musicplaylist)</visible>
-				<visible>String.IsEqual(ListItem.DBType,song) + Integer.IsLess(ListItem.UserRating,Skin.String(Music_Rating_Like_Threshold))</visible>
-				<texturefocus />
-				<label>$LOCALIZE[31009]</label>
-				<onclick>RunScript(script.copacetic.helper,action=rate_song,id=$INFO[ListItem.DBID],rating=$INFO[Skin.String(Music_Rating_Like_Threshold)])</onclick>
-			</control>
-			<control type="button" id="4018">
-				<visible>Skin.String(Music_Rating_Like_Threshold) + !Window.IsVisible(musicplaylist)</visible>
-				<visible>String.IsEqual(ListItem.DBType,song) + !Integer.IsLess(ListItem.UserRating,Skin.String(Music_Rating_Like_Threshold))</visible>
-				<texturefocus />
-				<label>$LOCALIZE[31010]</label>
-				<onclick>RunScript(script.copacetic.helper,action=rate_song,id=$INFO[ListItem.DBID],rating=0)</onclick>
-			</control>
 			<!-- Default button -->
 			<control type="button" id="1000">
 				<texturefocus />

@@ -58,9 +58,9 @@
 			<onfocus>SetProperty(MusicOSD_Controls,$LOCALIZE[209],musicosd)</onfocus>
 			<onclick condition="MusicPlayer.HasNext">PlayerControl(Next)</onclick>
 			<onup>60</onup>
-			<ondown condition="!Skin.String(Music_Rating_Like_Threshold)">10</ondown>
-			<ondown condition="Skin.String(Music_Rating_Like_Threshold) + Integer.IsGreater(MusicPlayer.DBID,0)">11</ondown>
-			<ondown condition="Skin.String(Music_Rating_Like_Threshold) + !Integer.IsGreater(MusicPlayer.DBID,0)">5</ondown>
+			<ondown condition="!Skin.String(like_threshold)">10</ondown>
+			<ondown condition="Skin.String(like_threshold) + Integer.IsGreater(MusicPlayer.DBID,0)">11</ondown>
+			<ondown condition="Skin.String(like_threshold) + !Integer.IsGreater(MusicPlayer.DBID,0)">5</ondown>
 		</control>
 	</include>
 
@@ -117,7 +117,7 @@
 			<onup>7</onup>
 			<ondown>60</ondown>
 		</include>
-		<include content="Simple_Button_Template" condition="!Skin.String(Music_Rating_Like_Threshold)">
+		<include content="Simple_Button_Template" condition="!Skin.String(like_threshold)">
 			<param name="id" value="10" />
 			<param name="description" value="Rating" />
 			<param name="icon" value="star" />
@@ -128,17 +128,17 @@
 			<ondown>60</ondown>
 		</include>
 		<control type="togglebutton" id="11">
-			<visible>Skin.String(Music_Rating_Like_Threshold) + Integer.IsGreater(MusicPlayer.DBID,0)</visible>
+			<visible>Skin.String(like_threshold) + Integer.IsGreater(MusicPlayer.DBID,0)</visible>
 			<description>Like/Unlike</description>
 			<width>60</width>
 			<height>60</height>
 			<texturefocus colordiffuse="$VAR[Light_Color]">icons/icon_heart_unfilled_focused_60.png</texturefocus>
 			<texturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_heart_unfilled_unfocused_60.png</texturenofocus>
-			<usealttexture>!Integer.IsLess(MusicPlayer.UserRating,Skin.String(Music_Rating_Like_Threshold))</usealttexture>
+			<usealttexture>!Integer.IsLess(MusicPlayer.UserRating,Skin.String(like_threshold))</usealttexture>
 			<alttexturefocus colordiffuse="$VAR[Accent_Color]">icons/icon_heart_filled_focused_60.png</alttexturefocus>
 			<alttexturenofocus colordiffuse="$VAR[Accent_Color]">icons/icon_heart_filled_unfocused_60.png</alttexturenofocus>
 			<onfocus>SetProperty(MusicOSD_Controls,$VAR[Like_Button_Label],musicosd)</onfocus>
-			<onclick>RunScript(script.copacetic.helper,action=rate_song,id=$INFO[MusicPlayer.DBID],rating=$INFO[Skin.String(Music_Rating_Like_Threshold)])</onclick>
+			<onclick>RunScript(script.copacetic.helper,action=rate_song,id=$INFO[MusicPlayer.DBID],rating=$INFO[Skin.String(like_threshold)])</onclick>
 			<altclick>RunScript(script.copacetic.helper,action=rate_song,id=$INFO[MusicPlayer.DBID],rating=0)</altclick>
 			<onup>4</onup>
 			<ondown>60</ondown>

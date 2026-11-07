@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+	<!-- Renamed settings: copy the old value once, then clear the old name -->
+	<onload condition="Skin.String(Music_Rating_Like_Threshold)">Skin.SetString(like_threshold,$INFO[Skin.String(Music_Rating_Like_Threshold)])</onload>
+	<onload condition="Skin.String(Music_Rating_Like_Threshold)">Skin.Reset(Music_Rating_Like_Threshold)</onload>
 	<!-- Look and feel -->
 	<onload condition="!Skin.String(Theme)">Skin.SetString(Theme,Dark)</onload>
 	<onload condition="!Skin.String(Background_Brightness)">Skin.SetString(Background_Brightness,33)</onload>

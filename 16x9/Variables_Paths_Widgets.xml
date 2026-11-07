@@ -33,16 +33,16 @@
 	<!-- Home -->
 	<variable name="Path_LikedSongs_Value">
 		<!-- user rating must be greater than value -->
-		<value condition="Skin.String(Music_Rating_Like_Threshold,10)">9</value>
-		<value condition="Skin.String(Music_Rating_Like_Threshold,9)">8</value>
-		<value condition="Skin.String(Music_Rating_Like_Threshold,8)">7</value>
-		<value condition="Skin.String(Music_Rating_Like_Threshold,7)">6</value>
-		<value condition="Skin.String(Music_Rating_Like_Threshold,6)">5</value>
-		<value condition="Skin.String(Music_Rating_Like_Threshold,5)">4</value>
-		<value condition="Skin.String(Music_Rating_Like_Threshold,4)">3</value>
-		<value condition="Skin.String(Music_Rating_Like_Threshold,3)">2</value>
-		<value condition="Skin.String(Music_Rating_Like_Threshold,2)">1</value>
-		<value condition="Skin.String(Music_Rating_Like_Threshold,1)">0</value>
+		<value condition="Skin.String(like_threshold,10)">9</value>
+		<value condition="Skin.String(like_threshold,9)">8</value>
+		<value condition="Skin.String(like_threshold,8)">7</value>
+		<value condition="Skin.String(like_threshold,7)">6</value>
+		<value condition="Skin.String(like_threshold,6)">5</value>
+		<value condition="Skin.String(like_threshold,5)">4</value>
+		<value condition="Skin.String(like_threshold,4)">3</value>
+		<value condition="Skin.String(like_threshold,3)">2</value>
+		<value condition="Skin.String(like_threshold,2)">1</value>
+		<value condition="Skin.String(like_threshold,1)">0</value>
 		<value>7</value>
 	</variable>
 

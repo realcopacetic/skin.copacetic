@@ -210,9 +210,9 @@
 		<value condition="Skin.String(Multiart_Interval)">$INFO[Skin.String(Multiart_Interval)]</value>
 		<value>4</value>
 	</variable>
-	<variable name="skinsettings_Music_Rating_Like_Threshold_Label">
-		<!-- Music_Rating_Liked_Threshold / Off -->
-		<value condition="Integer.IsGreater(Skin.String(Music_Rating_Like_Threshold),0)">$INFO[Skin.String(Music_Rating_Like_Threshold)]</value>
+	<variable name="skinsettings_like_threshold_Label">
+		<!-- like_threshold / Off -->
+		<value condition="Integer.IsGreater(Skin.String(like_threshold),0)">$INFO[Skin.String(like_threshold)]</value>
 		<value>$LOCALIZE[351]</value>
 	</variable>
 	<variable name="skinsettings_Preferred_MPAA_Label">

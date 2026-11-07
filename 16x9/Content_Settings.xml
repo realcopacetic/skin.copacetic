@@ -701,9 +701,9 @@
 		</control>
 		<include content="skinsettings_Slider_Button">
 			<param name="visible" value="ControlGroup(9).HasFocus(14)" />
-			<param name="info" value="Music_Rating_Like_Threshold" />
+			<param name="info" value="like_threshold" />
 			<param name="label" value="$LOCALIZE[31454]" />
-			<param name="label2" value="$VAR[skinsettings_Music_Rating_Like_Threshold_Label]" />
+			<param name="label2" value="$VAR[skinsettings_like_threshold_Label]" />
 			<param name="previous" value="1404" />
 			<param name="id" value="1405" />
 			<param name="next" value="1407" />

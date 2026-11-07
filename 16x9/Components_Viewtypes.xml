@@ -187,10 +187,10 @@
 	</include>
 
 	<include name="Music_Rating">
-		<param name="visible" default="!String.IsEmpty(ListItem.UserRating) + Integer.IsGreaterOrEqual(ListItem.UserRating,Skin.Numeric(Music_Rating_Like_Threshold))" />
+		<param name="visible" default="!String.IsEmpty(ListItem.UserRating) + Integer.IsGreaterOrEqual(ListItem.UserRating,Skin.Numeric(like_threshold))" />
 		<param name="slide" />
 		<definition>
-			<include content="Like_focused" condition="Skin.String(Music_Rating_Like_Threshold)">
+			<include content="Like_focused" condition="Skin.String(like_threshold)">
 				<param name="visible" value="String.IsEqual(ListItem.DBType,song) + $PARAM[visible]" />
 				<param name="color" value="$VAR[Accent_Color]" />
 				<animation effect="slide" end="$PARAM[slide]" time="0" condition="true">Conditional</animation>
@@ -332,7 +332,7 @@
 				<param name="left" value="$PARAM[left]" />
 			</include>
 			<include content="Music_Rating" condition="Window.Is(music) + Skin.HasSetting(Secondary_List_Enabled)">
-				<param name="visible" value="Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.UserRating) + Integer.IsGreaterOrEqual(Container(3100).ListItem.UserRating,Skin.Numeric(Music_Rating_Like_Threshold))" />
+				<param name="visible" value="Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.UserRating) + Integer.IsGreaterOrEqual(Container(3100).ListItem.UserRating,Skin.Numeric(like_threshold))" />
 				<param name="like_texture" value="Like_focused" />
 				<param name="color" value="$VAR[Accent_Color]" />
 				<param name="slide" value="840" />

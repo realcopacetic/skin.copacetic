@@ -527,7 +527,7 @@
 	
 	<variable name="Like_Button_Label">
 		<!-- Like / Unlike -->
-		<value condition="!Integer.IsLess(MusicPlayer.UserRating,Skin.String(Music_Rating_Like_Threshold))"> $LOCALIZE[31010]</value>
+		<value condition="!Integer.IsLess(MusicPlayer.UserRating,Skin.String(like_threshold))"> $LOCALIZE[31010]</value>
 		<value> $LOCALIZE[31009]</value>
 	</variable>
 

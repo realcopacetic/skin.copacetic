@@ -442,7 +442,7 @@
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 
-	<variable name="skinsettings_Music_Rating_Like_Threshold_Button_Textcolor">
+	<variable name="skinsettings_like_threshold_Button_Textcolor">
 		<value condition="Control.HasFocus(14050) | Control.HasFocus(14051)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
