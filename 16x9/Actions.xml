@@ -148,13 +148,6 @@
 		<onclick condition="!Window.IsVisible(videos)">ActivateWindow(videos,videodb://movies/sets/$INFO[ListItem.DBID]/,return)</onclick>
 	</include>
 
-	<include name="ClickAction_Play_MusicVideos">
-		<onclick condition="!String.IsEqual(Container.FolderPath,Window(movieinformation).Property(ContainerPath_01) + Window.IsVisible(videos)">Container.Update($INFO[Window(movieinformation).Property(ContainerPath_01)])</onclick>
-		<onclick condition="!String.IsEqual(Container.FolderPath,Window(movieinformation).Property(ContainerPath_01) + !Window.IsVisible(videos)">ActivateWindow(videos,$INFO[Window(movieinformation).Property(ContainerPath_01)],replace)</onclick>
-		<onclick>Dialog.Close(all)</onclick>
-		<include content="Default_Play_Items" />
-	</include>
-
 	<!-- Widget move: swaps every setting of two Home widget slots -->
 	<include name="Widget_Move">
 		<param name="condition" />

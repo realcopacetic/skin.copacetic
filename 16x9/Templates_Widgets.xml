@@ -718,7 +718,7 @@
 			<param name="sortby" value="year" />
 			<param name="sortorder" value="descending" />
 			<param name="content" value="$VAR[Path_MusicVideos]" />
-			<param name="click_action" value="Play_MusicVideos" />
+			<param name="click_action" value="Play_All_Videos" />
 			<param name="limit" value="50" />
 			<param name="widget_header" value="$LOCALIZE[20389]" />
 			<param name="widget_info" value="$VAR[Copacetic_Divider_Bold,, ]$VAR[Infoscreen_Widget_MusicVideos_Label]" />
