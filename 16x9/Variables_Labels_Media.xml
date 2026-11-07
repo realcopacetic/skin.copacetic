@@ -880,14 +880,14 @@
 	</variable>
 
 	<variable name="Title_Label">
-		<value condition="VideoPlayer.IsFullscreen + Window.Is(videoosd) + VideoPlayer.Content(episodes) + Integer.IsGreater(VideoPlayer.Episode,9)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x]$INFO[VideoPlayer.Title,. ]</value>
-		<value condition="VideoPlayer.IsFullscreen + Window.Is(videoosd) + VideoPlayer.Content(episodes) + Integer.IsGreater(VideoPlayer.Episode,0)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x0]$INFO[VideoPlayer.Title,. ]</value>
+		<value condition="VideoPlayer.IsFullscreen + Window.Is(videoosd) + VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Season) + Integer.IsGreater(VideoPlayer.Episode,9)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x]$INFO[VideoPlayer.Title,. ]</value>
+		<value condition="VideoPlayer.IsFullscreen + Window.Is(videoosd) + VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Season) + Integer.IsGreater(VideoPlayer.Episode,0)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x0]$INFO[VideoPlayer.Title,. ]</value>
 		<value condition="VideoPlayer.IsFullscreen + !String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.Title]</value>
 		<value condition="Window.Is(addoninformation) + !String.IsEmpty(ListItem.AddonName)">$INFO[ListItem.AddonName]</value>
 		<value condition="$EXP[Infoscreen_Widget_HasFocus]">$VAR[Title_Label_Infoscreen_Widgets]</value>
 		<value condition="Window.Is(home) + String.IsEqual(ListItem.DBType,episode) + $EXP[GridView_Widget_IsVisible] + !String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle]</value>
-		<value condition="Window.Is(home) + String.IsEqual(ListItem.DBType,episode) + Integer.IsGreater(ListItem.Episode,9)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x,.]$INFO[ListItem.Title, ]</value>
-		<value condition="Window.Is(home) + String.IsEqual(ListItem.DBType,episode) + Integer.IsGreater(ListItem.Episode,0)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x0,.]$INFO[ListItem.Title, ]</value>
+		<value condition="Window.Is(home) + String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Season) + Integer.IsGreater(ListItem.Episode,9)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x,.]$INFO[ListItem.Title, ]</value>
+		<value condition="Window.Is(home) + String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Season) + Integer.IsGreater(ListItem.Episode,0)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x0,.]$INFO[ListItem.Title, ]</value>
 		<value condition="Window.Is(home) + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
 		<value condition="Control.HasFocus(3100) + ListItem.HasVideoVersions + !String.IsEmpty(Container(3100).ListItem.VideoVersionName)">$INFO[Container(3100).ListItem.VideoVersionName]</value>
 		<value condition="Control.HasFocus(3100) + String.IsEqual(Container(3100).ListItem.DBType,season) + !String.IsEmpty(Container(3100).ListItem.Season)">$INFO[Container(3100).ListItem.Season,$LOCALIZE[20373] ]</value>
@@ -895,8 +895,8 @@
 		<value condition="Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.Label)">$INFO[Container(3100).ListItem.Label]</value>
 		<value condition="ListItem.HasVideoVersions + String.IsEqual(Container.FolderName,ListItem.Title) + !String.IsEmpty(ListItem.VideoVersionName)">$INFO[ListItem.VideoVersionName]</value>
 		<value condition="String.IsEqual(ListItem.DBType,episode) + [$EXP[GridView_IsVisible] | [$EXP[ListView_Display_IsBackground] + $EXP[ListView_Details_Info]] | [$EXP[BillboardView_IsVisible] + $EXP[BillboardView_Details_Info_IsVisible]] | [$EXP[ShowcaseView_IsVisible] + $EXP[ShowcaseView_Details_Info_IsVisible]] | [$EXP[StripView_IsVisible] + $EXP[StripView_Details_Info_IsVisible]] | $EXP[Infoscreen_IsVisible]] + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
-		<value condition="String.IsEqual(ListItem.DBType,episode) + Integer.IsGreater(ListItem.Episode,9)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x,.]$INFO[ListItem.Title, ]</value>
-		<value condition="String.IsEqual(ListItem.DBType,episode) + Integer.IsGreater(ListItem.Episode,0)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x0,.]$INFO[ListItem.Title, ]</value>
+		<value condition="String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Season) + Integer.IsGreater(ListItem.Episode,9)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x,.]$INFO[ListItem.Title, ]</value>
+		<value condition="String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Season) + Integer.IsGreater(ListItem.Episode,0)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x0,.]$INFO[ListItem.Title, ]</value>
 		<value condition="String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(ListItem.Album)">$INFO[ListItem.Album]</value>
 		<value condition="String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
 		<value condition="String.IsEqual(ListItem.DBType,song) + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
