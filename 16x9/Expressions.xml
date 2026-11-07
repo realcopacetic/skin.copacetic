@@ -198,11 +198,9 @@
 	<expression name="Widget_Clearlogos_Enabled_3207">String.IsEqual(Window(home).Property(Home_Widget),3207) + Skin.HasSetting(Widget7_Clearlogos_Enabled)</expression>
 	<expression name="Widget_Clearlogos_Enabled_3208">String.IsEqual(Window(home).Property(Home_Widget),3208) + Skin.HasSetting(Widget8_Clearlogos_Enabled)</expression>
 	<expression name="Widget_Clearlogos_Enabled_3209">String.IsEqual(Window(home).Property(Home_Widget),3209) + Skin.HasSetting(Widget9_Clearlogos_Enabled)</expression>
-	<!-- Clearlogo crops (9300). The focused item draws its plain clearlogo, not a billboard or Light theme one (the view by its name, or on Home
-	     by its widget's setting) -->
-	<expression name="Clearlogo_Billboard">String.IsEqual(Container.ViewMode,Billboard) | $EXP[BillboardView_Display_IsFanart_Widget_Home]</expression>
-	<expression name="Clearlogo_Crop_Secondary">Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.Art(clearlogo)) + ![$EXP[Clearlogo_Billboard] + !String.IsEmpty(Container(3100).ListItem.Art(clearlogo-billboard))] + ![!$EXP[Clearlogo_Billboard] + Skin.String(Theme,Light) + !String.IsEmpty(Container(3100).ListItem.Art(clearlogo-alt))]</expression>
-	<expression name="Clearlogo_Crop_Primary">!Control.HasFocus(3100) + !String.IsEmpty(Container.ListItem.Art(clearlogo)) + ![$EXP[Clearlogo_Billboard] + !String.IsEmpty(Container.ListItem.Art(clearlogo-billboard))] + ![!$EXP[Clearlogo_Billboard] + Skin.String(Theme,Light) + !String.IsEmpty(Container.ListItem.Art(clearlogo-alt))]</expression>
+	<!-- Clearlogo crops (9300): the focused item has a clearlogo -->
+	<expression name="Clearlogo_Crop_Secondary">Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.Art(clearlogo))</expression>
+	<expression name="Clearlogo_Crop_Primary">!Control.HasFocus(3100) + !String.IsEmpty(Container.ListItem.Art(clearlogo))</expression>
 	<!-- 9300 holds the focused item's crop: its serve echoes the logo it read (clean_label), so an earlier item's or a failed run's never matches -->
 	<expression name="Clearlogo_Served_Secondary">String.IsEqual(Container(9300).ListItem.Property(clean_label),Container(3100).ListItem.Art(clearlogo)) + !String.IsEmpty(Container(9300).ListItem.Art(clearlogo))</expression>
 	<expression name="Clearlogo_Served_Primary">String.IsEqual(Container(9300).ListItem.Property(clean_label),Container.ListItem.Art(clearlogo)) + !String.IsEmpty(Container(9300).ListItem.Art(clearlogo)) + [!Window.Is(home) | $EXP[Clearlogo_Served_Home]]</expression>
