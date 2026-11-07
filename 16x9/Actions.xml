@@ -101,8 +101,8 @@
 	</include>
 
 	<include name="ClickAction_Play_Episodes">
-		<onclick condition="Integer.IsGreater(ListItem.DBID,0) + !String.IsEqual(Container(3201).ListItem.DBID,window(movieinformation).property(SelectedItem)) + !String.IsEqual(Container.FolderPath,Window(movieinformation).Property(ContainerPath_01)">SetProperty(SentFromInfo,true,movieinformation)</onclick>
-		<onclick condition="Integer.IsGreater(ListItem.DBID,0) + !String.IsEqual(Container(3201).ListItem.DBID,window(movieinformation).property(SelectedItem)) + !String.IsEqual(Container.FolderPath,Window(movieinformation).Property(ContainerPath_01)">Container.Update($INFO[Container(3201).ListItem.FolderPath],replace)</onclick>
+		<onclick condition="Integer.IsGreater(ListItem.DBID,0) + !String.IsEqual(Container(3201).ListItem.DBID,window(movieinformation).property(SelectedItem)) + !String.IsEqual(Container.FolderPath,Window(movieinformation).Property(ContainerPath_01))">SetProperty(SentFromInfo,true,movieinformation)</onclick>
+		<onclick condition="Integer.IsGreater(ListItem.DBID,0) + !String.IsEqual(Container(3201).ListItem.DBID,window(movieinformation).property(SelectedItem)) + !String.IsEqual(Container.FolderPath,Window(movieinformation).Property(ContainerPath_01))">Container.Update($INFO[Container(3201).ListItem.FolderPath],replace)</onclick>
 		<onclick condition="Integer.IsGreater(ListItem.DBID,0) + !String.IsEqual(Container(3201).ListItem.DBID,window(movieinformation).property(SelectedItem))">Dialog.Close(all)</onclick>
 		<onclick condition="Integer.IsGreater(ListItem.DBID,0) + !String.IsEqual(Container(3201).ListItem.DBID,window(movieinformation).property(SelectedItem))">PlayMedia($ESCINFO[ListItem.Filenameandpath])</onclick>
 	</include>
