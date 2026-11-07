@@ -62,12 +62,6 @@
 			<onfocus>SetFocus(3100,0,absolute)</onfocus>
 			<onfocus>SetFocus(3000,0)</onfocus>
 		</control>
-		<include content="User_Scroll_Delay_Template">
-			<param name="onnext_id" value="5004" />
-			<param name="onnext_trigger" value="Container(3100).OnNext" />
-			<param name="onprevious_id" value="5003" />
-			<param name="onprevious_trigger" value="Container(3100).OnPrevious" />
-		</include>
 	</include>
 
 	<include name="Secondary_List_Icon">
@@ -166,6 +160,13 @@
 	</include>
 
 	<include name="Secondary_List_Array">
+		<!-- Outside the group below: a hidden group stops updating its children, so 5003/5004 would keep their last state -->
+		<include content="User_Scroll_Delay_Template">
+			<param name="onnext_id" value="5004" />
+			<param name="onnext_trigger" value="Container(3100).OnNext" />
+			<param name="onprevious_id" value="5003" />
+			<param name="onprevious_trigger" value="Container(3100).OnPrevious" />
+		</include>
 		<control type="group">
 			<visible>!$EXP[Options_Switching] + !$EXP[Container_Switching] + !$EXP[Music_Player_HasFocus]</visible>
 			<include content="Visible_Fade_Animation" />
