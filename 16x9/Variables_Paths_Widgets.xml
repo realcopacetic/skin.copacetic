@@ -76,29 +76,29 @@
 		<value condition="Integer.IsGreater(ListItem.Property(tvshowid),0)">videodb://tvshows/titles/$INFO[ListItem.Property(tvshowid)]/</value>
 	</variable>
 
+	<!-- The helper's rails below put names, titles and genres last: a | in a plugin URL ends its options, so it can only cut those -->
 	<variable name="Path_ActorCredits">
 		<!-- the focused cast member's other titles: an episode leaves out its show -->
-		<value condition="!String.IsEmpty(Container(50).ListItem.Label) + Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(ListItem.DBType,episode)">plugin://script.copacetic.helper/?info=actor_credits&amp;label=$INFO[Container(50).ListItem.Label]&amp;exclude_value=$INFO[ListItem.TVShowTitle]&amp;limit=50</value>
-		<value condition="!String.IsEmpty(Container(50).ListItem.Label) + Integer.IsGreater(ListItem.DBID,0)">plugin://script.copacetic.helper/?info=actor_credits&amp;label=$INFO[Container(50).ListItem.Label]&amp;exclude_value=$INFO[ListItem.Title]&amp;limit=50</value>
+		<value condition="!String.IsEmpty(Container(50).ListItem.Label) + Integer.IsGreater(ListItem.DBID,0) + String.IsEqual(ListItem.DBType,episode)">plugin://script.copacetic.helper/?info=actor_credits&amp;limit=50&amp;label=$INFO[Container(50).ListItem.Label]&amp;exclude_value=$INFO[ListItem.TVShowTitle]</value>
+		<value condition="!String.IsEmpty(Container(50).ListItem.Label) + Integer.IsGreater(ListItem.DBID,0)">plugin://script.copacetic.helper/?info=actor_credits&amp;limit=50&amp;label=$INFO[Container(50).ListItem.Label]&amp;exclude_value=$INFO[ListItem.Title]</value>
 		<value>special://skin/extras/playlists/empty.xsp</value> <!-- an empty URL would keep the last item's credits -->
 	</variable>
 
 	<variable name="Path_DirectorCredits">
-		<value condition="$EXP[Infoscreen_Metadata_Ready] + Integer.IsGreater(ListItem.DBID,0) + !String.IsEmpty(Container(9000).ListItem.Director)">plugin://script.copacetic.helper/?info=director_credits&amp;label=$INFO[Container(9000).ListItem.Director]&amp;exclude_value=$INFO[ListItem.Title]&amp;sort=votes&amp;limit=50</value>
+		<value condition="$EXP[Infoscreen_Metadata_Ready] + Integer.IsGreater(ListItem.DBID,0) + !String.IsEmpty(Container(9000).ListItem.Director)">plugin://script.copacetic.helper/?info=director_credits&amp;sort=votes&amp;limit=50&amp;label=$INFO[Container(9000).ListItem.Director]&amp;exclude_value=$INFO[ListItem.Title]</value>
 		<value>special://skin/extras/playlists/empty.xsp</value> <!-- also while 9000 still holds the last item's -->
 	</variable>
 
 	<variable name="Path_MusicVideos">
 		<!-- an artist's through the helper, which keeps & and +; an album's or song's by name in an xsp, which a name with & or + leaves empty -->
-		<value condition="!String.IsEmpty(ListItem.Artist) + String.IsEqual(ListItem.DBType,artist)">plugin://script.copacetic.helper/?info=artist_credits&amp;label=$INFO[ListItem.Artist]&amp;limit=50</value>
+		<value condition="!String.IsEmpty(ListItem.Artist) + String.IsEqual(ListItem.DBType,artist)">plugin://script.copacetic.helper/?info=artist_credits&amp;limit=50&amp;label=$INFO[ListItem.Artist]</value>
 		<value condition="!String.IsEmpty(ListItem.Artist) + !String.IsEmpty(ListItem.Album) + String.IsEqual(ListItem.DBType,album)">videodb://musicvideos/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22artist%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Artist]%5D%7D%2C%7B%22field%22%3A%22album%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Album]%5D%7D%5D%7D%2C%22type%22%3A%22musicvideos%22%7D</value>
 		<value condition="!String.IsEmpty(ListItem.Artist) + !String.IsEmpty(ListItem.Album) + !String.IsEmpty(ListItem.Title) + String.IsEqual(ListItem.DBType,song)">videodb://musicvideos/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22artist%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Artist]%5D%7D%2C%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Title]%5D%7D%5D%7D%2C%22type%22%3A%22musicvideos%22%7D</value>
 		<value>special://skin/extras/playlists/empty.xsp</value> <!-- an empty URL would keep the last item's videos -->
 	</variable>
 
 	<variable name="Path_StudioCredits">
-		<!-- the film's or show's other titles from its first studio or network, matched exactly, through the helper, which keeps & and +.
-		     Names go last: a | in a plugin URL ends its options -->
+		<!-- the film's or show's other titles from its first studio or network, matched exactly, through the helper, which keeps & and + -->
 		<value condition="$EXP[Infoscreen_Metadata_Ready] + Integer.IsGreater(ListItem.DBID,0) + !String.IsEmpty(Container(9000).ListItem.Studio)">plugin://script.copacetic.helper/?info=studio_credits&amp;type=$INFO[ListItem.DBType]&amp;sort=random&amp;limit=50&amp;label=$INFO[Container(9000).ListItem.Studio]&amp;exclude_value=$INFO[ListItem.Title]</value>
 		<value>special://skin/extras/playlists/empty.xsp</value>
 	</variable>
@@ -116,25 +116,25 @@
 
 	<variable name="Path_Similar">
 		<!-- the random genre's titles: a season or episode lists shows, leaving out its own -->
-		<value condition="$EXP[Infoscreen_Metadata_Ready] + Integer.IsGreater(ListItem.DBID,0) + !String.IsEmpty(Container(9000).ListItem.Property(genre_query)) + [String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]">plugin://script.copacetic.helper/?info=genre_credits&amp;label=$INFO[Container(9000).ListItem.Property(genre_query)]&amp;exclude_value=$INFO[ListItem.TVShowTitle]&amp;type=tvshow&amp;sort=random&amp;limit=20</value>
-		<value condition="$EXP[Infoscreen_Metadata_Ready] + Integer.IsGreater(ListItem.DBID,0) + !String.IsEmpty(Container(9000).ListItem.Property(genre_query))">plugin://script.copacetic.helper/?info=genre_credits&amp;label=$INFO[Container(9000).ListItem.Property(genre_query)]&amp;exclude_value=$INFO[ListItem.Title]&amp;type=$INFO[ListItem.DBType]&amp;sort=random&amp;limit=20</value>
+		<value condition="$EXP[Infoscreen_Metadata_Ready] + Integer.IsGreater(ListItem.DBID,0) + !String.IsEmpty(Container(9000).ListItem.Property(genre_query)) + [String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]">plugin://script.copacetic.helper/?info=genre_credits&amp;type=tvshow&amp;sort=random&amp;limit=20&amp;label=$INFO[Container(9000).ListItem.Property(genre_query)]&amp;exclude_value=$INFO[ListItem.TVShowTitle]</value>
+		<value condition="$EXP[Infoscreen_Metadata_Ready] + Integer.IsGreater(ListItem.DBID,0) + !String.IsEmpty(Container(9000).ListItem.Property(genre_query))">plugin://script.copacetic.helper/?info=genre_credits&amp;type=$INFO[ListItem.DBType]&amp;sort=random&amp;limit=20&amp;label=$INFO[Container(9000).ListItem.Property(genre_query)]&amp;exclude_value=$INFO[ListItem.Title]</value>
 		<value>special://skin/extras/playlists/empty.xsp</value>
 	</variable>
 
 	<variable name="Path_SimilarArtists">
 		<!-- artists in any of the artist's genres, its albums' too -->
-		<value condition="Integer.IsGreater(ListItem.DBID,0)">plugin://script.copacetic.helper/?info=genre_music&amp;type=artist&amp;id=$INFO[ListItem.DBID]&amp;label=$INFO[ListItem.Genre]&amp;exclude_value=$INFO[ListItem.Artist]&amp;limit=20</value>
+		<value condition="Integer.IsGreater(ListItem.DBID,0)">plugin://script.copacetic.helper/?info=genre_music&amp;type=artist&amp;id=$INFO[ListItem.DBID]&amp;limit=20&amp;label=$INFO[ListItem.Genre]&amp;exclude_value=$INFO[ListItem.Artist]</value>
 		<value>special://skin/extras/playlists/empty.xsp</value>
 	</variable>
 
 	<variable name="Path_SimilarAlbums">
 		<!-- the random genre's albums, as the header names it -->
-		<value condition="$EXP[Infoscreen_Metadata_Ready] + !String.IsEmpty(Container(9000).ListItem.Property(genre_query))">plugin://script.copacetic.helper/?info=genre_music&amp;type=album&amp;label=$INFO[Container(9000).ListItem.Property(genre_query)]&amp;exclude_value=$INFO[ListItem.Album]&amp;limit=20</value>
+		<value condition="$EXP[Infoscreen_Metadata_Ready] + !String.IsEmpty(Container(9000).ListItem.Property(genre_query))">plugin://script.copacetic.helper/?info=genre_music&amp;type=album&amp;limit=20&amp;label=$INFO[Container(9000).ListItem.Property(genre_query)]&amp;exclude_value=$INFO[ListItem.Album]</value>
 		<value>special://skin/extras/playlists/empty.xsp</value>
 	</variable>
 
 	<variable name="Path_SimilarSongs">
-		<value condition="!String.IsEmpty(ListItem.Genre)">plugin://script.copacetic.helper/?info=genre_music&amp;type=song&amp;label=$INFO[ListItem.Genre]&amp;exclude_value=$INFO[ListItem.Title]&amp;limit=20</value>
+		<value condition="!String.IsEmpty(ListItem.Genre)">plugin://script.copacetic.helper/?info=genre_music&amp;type=song&amp;limit=20&amp;label=$INFO[ListItem.Genre]&amp;exclude_value=$INFO[ListItem.Title]</value>
 		<value>special://skin/extras/playlists/empty.xsp</value>
 	</variable>
 
