@@ -324,11 +324,11 @@
 		<param name="id" />
 		<definition>
 			<control type="group">
-				<include content="Widget_InProgress" condition="Skin.HasSetting(Widget$PARAM[widget_position]_Content_InProgress) + System.AddonIsEnabled(script.copacetic.helper)">
+				<include content="Widget_InProgress" condition="Skin.HasSetting(Widget$PARAM[widget_position]_Content_InProgress)">
 					<param name="widget_position" value="$PARAM[widget_position]" />
 					<param name="id" value="$PARAM[id]" />
 				</include>
-				<include content="Widget_NextUp" condition="Skin.HasSetting(Widget$PARAM[widget_position]_Content_NextUp) + System.AddonIsEnabled(script.copacetic.helper)">
+				<include content="Widget_NextUp" condition="Skin.HasSetting(Widget$PARAM[widget_position]_Content_NextUp)">
 					<param name="widget_position" value="$PARAM[widget_position]" />
 					<param name="id" value="$PARAM[id]" />
 				</include>

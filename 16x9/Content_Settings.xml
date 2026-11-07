@@ -345,7 +345,7 @@
 		</control>
 		<control type="button" id="1103">
 			<description>- Reset widgets</description>
-			<visible>ControlGroup(9).HasFocus(11) + Skin.HasSetting(Widgets_Enabled) + System.AddonIsEnabled(script.copacetic.helper)</visible>
+			<visible>ControlGroup(9).HasFocus(11) + Skin.HasSetting(Widgets_Enabled)</visible>
 			<label>- $LOCALIZE[31430]</label>
 			<onclick>RunScript(script.copacetic.helper,action=dialog_yesno,heading=$LOCALIZE[31430],message=$LOCALIZE[31431],yes_actions=SetFocus(4200))</onclick>
 		</control>

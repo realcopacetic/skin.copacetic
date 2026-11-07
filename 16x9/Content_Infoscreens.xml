@@ -153,8 +153,8 @@
 			<onfocus condition="!String.IsEqual(ListItem.DBtype,artist)">SetProperty(Focused_Button,$LOCALIZE[208],musicinformation)</onfocus>
 			<onfocus condition="String.IsEqual(ListItem.DBtype,artist)">SetProperty(Focused_Button,$LOCALIZE[191],musicinformation)</onfocus>
 			<onfocus>SetProperty(ResetScroll," ")</onfocus>
-			<onclick condition="System.AddonIsEnabled(script.copacetic.helper) + String.IsEqual(ListItem.DBType,artist)">RunScript(script.copacetic.helper,action=shuffle_artist,id=$INFO[ListItem.DBID])</onclick>
-			<onclick condition="System.AddonIsEnabled(script.copacetic.helper) + String.IsEqual(ListItem.DBType,album)">RunScript(script.copacetic.helper,action=play_album,id=$INFO[ListItem.DBID])</onclick>
+			<onclick condition="String.IsEqual(ListItem.DBType,artist)">RunScript(script.copacetic.helper,action=shuffle_artist,id=$INFO[ListItem.DBID])</onclick>
+			<onclick condition="String.IsEqual(ListItem.DBType,album)">RunScript(script.copacetic.helper,action=play_album,id=$INFO[ListItem.DBID])</onclick>
 			<onclick condition="String.IsEqual(ListItem.DBType,song)">RunScript(script.copacetic.helper,action=play_album_from_track,id=$INFO[ListItem.DBID])</onclick>
 			<onclick condition="String.IsEmpty(ListItem.DBID)">PlayMedia($INFO[ListItem.FilenameAndPath])</onclick>
 			<include content="MusicInfo_Dialog_Menu_Navigation" />
