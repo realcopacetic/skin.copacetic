@@ -112,6 +112,18 @@
 		</include>
 	</include>
 
+	<!-- The helper sets the labels and shows each path as label2 (controls_copacetic1.json) -->
+	<include name="pathsettings_Right_List_Content">
+		<control type="button" id="201">
+			<description>Slideshow 1 custom path</description>
+			<label>$LOCALIZE[108] 1</label>
+		</control>
+		<control type="button" id="202">
+			<description>Slideshow 2 custom path</description>
+			<label>$LOCALIZE[108] 2</label>
+		</control>
+	</include>
+
 	<include name="playerprocessinfo_PVR_List_Content">
 		<control type="button">
 			<description>PVR backend</description>

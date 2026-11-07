@@ -347,6 +347,12 @@
 		</include>
 	</include>
 
+	<include name="pathsettings_Hidden">
+		<include content="Hidden_Components">
+			<control type="textbox" id="6" /> <!-- the editor's description, which C1 doesn't show -->
+		</include>
+	</include>
+
 	<include name="seekbar_Hidden">
 		<control type="slider" id="401">
 			<visible allowhiddenfocus="true">false</visible>

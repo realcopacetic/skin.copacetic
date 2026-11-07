@@ -1,0 +1,32 @@
+{
+  "mapping": "copacetic1",
+  "controls": {
+    "category_item": {
+      "control_type": "listitem",
+      "label": "{label}"
+    },
+    "slideshow_path": {
+      "field": "slideshow_path",
+      "id": 201,
+      "control_type": "button",
+      "label": "$LOCALIZE[108] 1",
+      "onclick": {
+        "type": "browse_content",
+        "heading": "$LOCALIZE[31439]",
+        "mode": "widget"
+      }
+    },
+    "slideshow2_path": {
+      "field": "slideshow2_path",
+      "id": 202,
+      "control_type": "button",
+      "visible": "xml(Skin.HasSetting(slideshow2))",
+      "label": "$LOCALIZE[108] 2",
+      "onclick": {
+        "type": "browse_content",
+        "heading": "$LOCALIZE[31439]",
+        "mode": "widget"
+      }
+    }
+  }
+}

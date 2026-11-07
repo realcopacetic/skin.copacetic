@@ -211,7 +211,7 @@
 		<control type="button" id="1602">
 			<description>- Choose a custom path</description>
 			<label>$VAR[skinsettings_slideshow_path_Label,- ]</label>
-			<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;custom=True&amp;showNone=False&amp;skinList=slideshow_path)</onclick>
+			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,host_focus=201,mapping=copacetic1,name=pathsettings)</onclick>
 			<visible>ControlGroup(9).HasFocus(16) + [Skin.String(slideshow_source,custom) | !$EXP[Library_Has_Content]]</visible>
 		</control>
 		<control type="radiobutton" id="1609">
@@ -233,7 +233,7 @@
 		<control type="button" id="1611">
 			<description>- Choose a custom path</description>
 			<label>$VAR[skinsettings_slideshow2_path_Label,   - ]</label>
-			<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;custom=True&amp;showNone=False&amp;skinList=slideshow2_path)</onclick>
+			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,host_focus=202,mapping=copacetic1,name=pathsettings)</onclick>
 			<visible>ControlGroup(9).HasFocus(16) + Skin.HasSetting(slideshow2) + [Skin.String(slideshow2_source,custom) | !$EXP[Library_Has_Content]]</visible>
 		</control>
 		<include content="skinsettings_Double_Slider_Button">
