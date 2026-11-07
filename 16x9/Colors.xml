@@ -311,7 +311,7 @@
 		<value condition="Control.HasFocus(16050) | Control.HasFocus(16051)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
-	<variable name="skinsettings_Background_Interval_Button_Textcolor">
+	<variable name="skinsettings_slideshow_interval_Button_Textcolor">
 		<value condition="Control.HasFocus(16030) | Control.HasFocus(16031)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
@@ -323,15 +323,15 @@
 		<value condition="Control.HasFocus(16060) | Control.HasFocus(16061)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
-	<variable name="skinsettings_Background_Slideshow_Button_Textcolor">
+	<variable name="skinsettings_slideshow_source_Button_Textcolor">
 		<value condition="Control.HasFocus(16010) | Control.HasFocus(16011)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
-	<variable name="skinsettings_Background_Slideshow2_Button_Textcolor">
+	<variable name="skinsettings_slideshow2_source_Button_Textcolor">
 		<value condition="Control.HasFocus(16100) | Control.HasFocus(16101)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
-	<variable name="skinsettings_Background_Slideshow_Timer_Button_Textcolor">
+	<variable name="skinsettings_slideshow_start_Button_Textcolor">
 		<value condition="Control.HasFocus(16130) | Control.HasFocus(16131) | Control.HasFocus(16132)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>

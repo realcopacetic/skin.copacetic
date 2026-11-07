@@ -222,47 +222,47 @@
 				<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="Default_Transition_5x" tween="sine" easing="inout" reversible="true">Visible</animation>
 				<texture colordiffuse="$VAR[Dark_Color]">views/white_100.png</texture>
 			</control>
-			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,5)">
+			<include content="Background_Multiart_Home" condition="Skin.String(slideshow_interval,5)">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="time" value="5000" />
 			</include>
-			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,10) | !Skin.String(Background_Interval)">
+			<include content="Background_Multiart_Home" condition="Skin.String(slideshow_interval,10) | !Skin.String(slideshow_interval)">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="time" value="10000" />
 			</include>
-			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,15)">
+			<include content="Background_Multiart_Home" condition="Skin.String(slideshow_interval,15)">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="time" value="15000" />
 			</include>
-			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,20)">
+			<include content="Background_Multiart_Home" condition="Skin.String(slideshow_interval,20)">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="time" value="20000" />
 			</include>
-			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,25)">
+			<include content="Background_Multiart_Home" condition="Skin.String(slideshow_interval,25)">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="time" value="25000" />
 			</include>
-			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,30)">
+			<include content="Background_Multiart_Home" condition="Skin.String(slideshow_interval,30)">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="time" value="30000" />
 			</include>
-			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,60)">
+			<include content="Background_Multiart_Home" condition="Skin.String(slideshow_interval,60)">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="time" value="60000" />
 			</include>
-			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,300)">
+			<include content="Background_Multiart_Home" condition="Skin.String(slideshow_interval,300)">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="time" value="300000" />
 			</include>
-			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,600)">
+			<include content="Background_Multiart_Home" condition="Skin.String(slideshow_interval,600)">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="time" value="600000" />
 			</include>
-			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,900)">
+			<include content="Background_Multiart_Home" condition="Skin.String(slideshow_interval,900)">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="time" value="900000" />
 			</include>
-			<include content="Background_Multiart_Home" condition="Skin.String(Background_Interval,1800)">
+			<include content="Background_Multiart_Home" condition="Skin.String(slideshow_interval,1800)">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="time" value="1800000" />
 			</include>

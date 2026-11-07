@@ -212,47 +212,47 @@
 		<!-- Background -->
 		<include content="skinsettings_Slider_Button">
 			<param name="visible" value="ControlGroup(9).HasFocus(16)" />
-			<param name="info" value="Background_Slideshow" />
+			<param name="info" value="slideshow_source" />
 			<param name="label" value="$LOCALIZE[31426]" />
-			<param name="label2" value="$VAR[skinsettings_Background_Slideshow_Label]" />
+			<param name="label2" value="$VAR[skinsettings_slideshow_source_Label]" />
 			<param name="previous" value="1608" />
 			<param name="id" value="1601" />
 			<param name="next" value="1602" />
 		</include>
 		<control type="button" id="1602">
 			<description>- Choose a custom path</description>
-			<label>$VAR[skinsettings_Background_Slideshow_Custom_Path_Label,- ]</label>
-			<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;custom=True&amp;showNone=False&amp;skinList=Background_Slideshow_Custom_Path)</onclick>
-			<visible>ControlGroup(9).HasFocus(16) + [Skin.String(Background_Slideshow,Custom) | !$EXP[Library_Has_Content]]</visible>
+			<label>$VAR[skinsettings_slideshow_path_Label,- ]</label>
+			<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;custom=True&amp;showNone=False&amp;skinList=slideshow_path)</onclick>
+			<visible>ControlGroup(9).HasFocus(16) + [Skin.String(slideshow_source,custom) | !$EXP[Library_Has_Content]]</visible>
 		</control>
 		<control type="radiobutton" id="1609">
 			<description>Enable second background slideshow</description>
 			<visible>ControlGroup(9).HasFocus(16)</visible>
 			<label>$LOCALIZE[31729]</label>
-			<onclick>Skin.ToggleSetting(Background_Slideshow2)</onclick>
-			<selected>Skin.HasSetting(Background_Slideshow2)</selected>
+			<onclick>Skin.ToggleSetting(slideshow2)</onclick>
+			<selected>Skin.HasSetting(slideshow2)</selected>
 		</control>
 		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(16) + Skin.HasSetting(Background_Slideshow2)" />
-			<param name="info" value="Background_Slideshow2" />
+			<param name="visible" value="ControlGroup(9).HasFocus(16) + Skin.HasSetting(slideshow2)" />
+			<param name="info" value="slideshow2_source" />
 			<param name="label" value="- $LOCALIZE[31730]" />
-			<param name="label2" value="$VAR[skinsettings_Background_Slideshow2_Label]" />
+			<param name="label2" value="$VAR[skinsettings_slideshow2_source_Label]" />
 			<param name="previous" value="1609" />
 			<param name="id" value="1610" />
 			<param name="next" value="1611" />
 		</include>
 		<control type="button" id="1611">
 			<description>- Choose a custom path</description>
-			<label>$VAR[skinsettings_Background_Slideshow2_Custom_Path_Label,   - ]</label>
-			<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;custom=True&amp;showNone=False&amp;skinList=Background_Slideshow2_Custom_Path)</onclick>
-			<visible>ControlGroup(9).HasFocus(16) + Skin.HasSetting(Background_Slideshow2) + [Skin.String(Background_Slideshow2,Custom) | !$EXP[Library_Has_Content]]</visible>
+			<label>$VAR[skinsettings_slideshow2_path_Label,   - ]</label>
+			<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;custom=True&amp;showNone=False&amp;skinList=slideshow2_path)</onclick>
+			<visible>ControlGroup(9).HasFocus(16) + Skin.HasSetting(slideshow2) + [Skin.String(slideshow2_source,custom) | !$EXP[Library_Has_Content]]</visible>
 		</control>
 		<include content="skinsettings_Double_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(16) + Skin.HasSetting(Background_Slideshow2)" />
-			<param name="info" value="Background_Slideshow_Timer" />
-			<param name="info2" value="Background_Slideshow2_Timer" />
+			<param name="visible" value="ControlGroup(9).HasFocus(16) + Skin.HasSetting(slideshow2)" />
+			<param name="info" value="slideshow_start" />
+			<param name="info2" value="slideshow2_start" />
 			<param name="label" value="   - $LOCALIZE[31731]" />
-			<param name="label2" value="Slideshow 1 ($VAR[skinsettings_Background_Slideshow_Timer_Label]) / Slideshow 2 ($VAR[skinsettings_Background_Slideshow2_Timer_Label])" />
+			<param name="label2" value="Slideshow 1 ($VAR[skinsettings_slideshow_start_Label]) / Slideshow 2 ($VAR[skinsettings_slideshow2_start_Label])" />
 			<param name="category" value="16" />
 			<param name="previous" value="1611" />
 			<param name="id" value="1613" />
@@ -260,9 +260,9 @@
 		</include>
 		<include content="skinsettings_Slider_Button">
 			<param name="visible" value="ControlGroup(9).HasFocus(16)" />
-			<param name="info" value="Background_Interval" />
+			<param name="info" value="slideshow_interval" />
 			<param name="label" value="$LOCALIZE[31427]" />
-			<param name="label2" value="$VAR[skinsettings_Background_Interval_Label]" />
+			<param name="label2" value="$VAR[skinsettings_slideshow_interval_Label]" />
 			<param name="previous" value="1613" />
 			<param name="id" value="1603" />
 			<param name="next" value="1605" />

@@ -153,50 +153,50 @@
 		<value condition="Control.HasFocus(1533)">$LOCALIZE[31567]</value>
 		<value condition="Control.HasFocus(1534) | Control.HasFocus(1535)">$LOCALIZE[31568]</value>
 	</variable>
-	<variable name="skinsettings_Background_Interval_Label">
+	<variable name="skinsettings_slideshow_interval_Label">
 		<!-- Multiart Interval / Off -->
-	 	<value condition="Skin.String(Background_Interval) + Integer.IsEqual(Skin.String(Background_Interval),1800)">30 $LOCALIZE[31733]</value>
-		<value condition="Skin.String(Background_Interval) + Integer.IsEqual(Skin.String(Background_Interval),900)">15 $LOCALIZE[31733]</value>
-		<value condition="Skin.String(Background_Interval) + Integer.IsEqual(Skin.String(Background_Interval),600)">10 $LOCALIZE[31733]</value>
-		<value condition="Skin.String(Background_Interval) + Integer.IsEqual(Skin.String(Background_Interval),300)">5 $LOCALIZE[31733]</value>
-		<value condition="Skin.String(Background_Interval)">$INFO[Skin.String(Background_Interval),, $LOCALIZE[31732]]</value>
+	 	<value condition="Skin.String(slideshow_interval) + Integer.IsEqual(Skin.String(slideshow_interval),1800)">30 $LOCALIZE[31733]</value>
+		<value condition="Skin.String(slideshow_interval) + Integer.IsEqual(Skin.String(slideshow_interval),900)">15 $LOCALIZE[31733]</value>
+		<value condition="Skin.String(slideshow_interval) + Integer.IsEqual(Skin.String(slideshow_interval),600)">10 $LOCALIZE[31733]</value>
+		<value condition="Skin.String(slideshow_interval) + Integer.IsEqual(Skin.String(slideshow_interval),300)">5 $LOCALIZE[31733]</value>
+		<value condition="Skin.String(slideshow_interval)">$INFO[Skin.String(slideshow_interval),, $LOCALIZE[31732]]</value>
 		<value>10 $LOCALIZE[31732]</value>
 	</variable>
 	<variable name="skinsettings_Background_Opacity_Label">
 		<value condition="Skin.String(Background_Opacity)">$INFO[Skin.String(Background_Opacity)]</value>
 	</variable>
-	<variable name="skinsettings_Background_Slideshow_Label">
-		<value condition="Skin.String(Background_Slideshow,Global) | !Skin.String(Background_Slideshow)">$LOCALIZE[31436]</value>
-		<value condition="Skin.String(Background_Slideshow,Movies)">$LOCALIZE[342]</value>
-		<value condition="Skin.String(Background_Slideshow,TVShows)">$LOCALIZE[20343]</value>
-		<value condition="Skin.String(Background_Slideshow,Videos)">$LOCALIZE[31437]</value>
-		<value condition="Skin.String(Background_Slideshow,Artists)">$LOCALIZE[133]</value>
-		<value condition="Skin.String(Background_Slideshow,Custom)">$LOCALIZE[31438]</value>
+	<variable name="skinsettings_slideshow_source_Label">
+		<value condition="Skin.String(slideshow_source,global) | !Skin.String(slideshow_source)">$LOCALIZE[31436]</value>
+		<value condition="Skin.String(slideshow_source,movies)">$LOCALIZE[342]</value>
+		<value condition="Skin.String(slideshow_source,tvshows)">$LOCALIZE[20343]</value>
+		<value condition="Skin.String(slideshow_source,videos)">$LOCALIZE[31437]</value>
+		<value condition="Skin.String(slideshow_source,artists)">$LOCALIZE[133]</value>
+		<value condition="Skin.String(slideshow_source,custom)">$LOCALIZE[31438]</value>
 	</variable>
-	<variable name="skinsettings_Background_Slideshow2_Label">
-		<value condition="Skin.String(Background_Slideshow2,Global) | !Skin.String(Background_Slideshow2)">$LOCALIZE[31436]</value>
-		<value condition="Skin.String(Background_Slideshow2,Movies)">$LOCALIZE[342]</value>
-		<value condition="Skin.String(Background_Slideshow2,TVShows)">$LOCALIZE[20343]</value>
-		<value condition="Skin.String(Background_Slideshow2,Videos)">$LOCALIZE[31437]</value>
-		<value condition="Skin.String(Background_Slideshow2,Artists)">$LOCALIZE[133]</value>
-		<value condition="Skin.String(Background_Slideshow2,Custom)">$LOCALIZE[31438]</value>
+	<variable name="skinsettings_slideshow2_source_Label">
+		<value condition="Skin.String(slideshow2_source,global) | !Skin.String(slideshow2_source)">$LOCALIZE[31436]</value>
+		<value condition="Skin.String(slideshow2_source,movies)">$LOCALIZE[342]</value>
+		<value condition="Skin.String(slideshow2_source,tvshows)">$LOCALIZE[20343]</value>
+		<value condition="Skin.String(slideshow2_source,videos)">$LOCALIZE[31437]</value>
+		<value condition="Skin.String(slideshow2_source,artists)">$LOCALIZE[133]</value>
+		<value condition="Skin.String(slideshow2_source,custom)">$LOCALIZE[31438]</value>
 	</variable>
-	<variable name="skinsettings_Background_Slideshow_Custom_Path_Label">
+	<variable name="skinsettings_slideshow_path_Label">
 		<!-- Choose new path... / [shows path] -->
-		<value condition="Skin.String(Background_Slideshow_Custom_Path)">$INFO[Skin.String(Background_Slideshow_Custom_Path)]</value>
+		<value condition="Skin.String(slideshow_path)">$INFO[Skin.String(slideshow_path)]</value>
 		<value>$LOCALIZE[31439]</value>
 	</variable>
-	<variable name="skinsettings_Background_Slideshow_Timer_Label">
-		<value condition="Skin.String(Background_Slideshow_Timer)">$INFO[Skin.String(Background_Slideshow_Timer),,:00]</value>
+	<variable name="skinsettings_slideshow_start_Label">
+		<value condition="Skin.String(slideshow_start)">$INFO[Skin.String(slideshow_start),,:00]</value>
 		<value>06:00</value>
 	</variable>
-	<variable name="skinsettings_Background_Slideshow2_Custom_Path_Label">
+	<variable name="skinsettings_slideshow2_path_Label">
 		<!-- Choose new path... / [shows path] -->
-		<value condition="Skin.String(Background_Slideshow2_Custom_Path)">$INFO[Skin.String(Background_Slideshow2_Custom_Path)]</value>
+		<value condition="Skin.String(slideshow2_path)">$INFO[Skin.String(slideshow2_path)]</value>
 		<value>$LOCALIZE[31439]</value>
 	</variable>
-	<variable name="skinsettings_Background_Slideshow2_Timer_Label">
-		<value condition="Skin.String(Background_Slideshow2_Timer)">$INFO[Skin.String(Background_Slideshow2_Timer),,:00]</value>
+	<variable name="skinsettings_slideshow2_start_Label">
+		<value condition="Skin.String(slideshow2_start)">$INFO[Skin.String(slideshow2_start),,:00]</value>
 		<value>20:00</value>
 	</variable>
 	<!-- Large / Small / Medium-->
