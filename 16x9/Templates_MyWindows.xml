@@ -486,7 +486,6 @@
 					<onfocus>SetProperty(OptionsMenu,Active,home)</onfocus>
 					<onunfocus>ClearProperty(OptionsMenu,home)</onunfocus>
 					<onunfocus>ClearProperty(OptionsMenuTransition,home)</onunfocus>
-					<include content="Clearlogo_Crop_Pass" condition="Window.Is(videos) | Window.Is(music)" />
 					<onleft condition="String.IsEmpty(Container(3000).ListItem.Property(ActionLeft))">4012</onleft>
 					<onright condition="String.IsEmpty(Container(3000).ListItem.Property(ActionRight))">4012</onright>
 					<onleft condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionLeft))">$INFO[Container(3000).ListItem.Property(ActionLeft)]</onleft>

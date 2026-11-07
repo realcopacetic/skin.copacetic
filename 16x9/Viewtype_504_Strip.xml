@@ -12,6 +12,7 @@
 				<param name="viewtype" value="wrap" />
 				<param name="orientation" value="horizontal" />
 				<onfocus condition="Container.Content(favourites)">Skin.SetString(favourites_Viewmode,Strip)</onfocus>
+				<include content="Clearlogo_Crop_Pass" condition="Window.Is(videos) | Window.Is(music)" />
 			</include>
 		</control>
 	</include>

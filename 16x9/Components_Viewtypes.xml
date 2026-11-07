@@ -44,10 +44,10 @@
 	</include>
 
 	<include name="Clearlogo_Crop_Pass">
-		<!-- On the options menu: a serve still running as focus moves in or out lands unsized, and the view's URL stays the same. Each exit
-		     stamps pass with the time and a flipped letter (two exits in one second differ), so the view's serve reruns and sizes the logo -->
-		<onunfocus condition="String.EndsWith(Window(home).Property(Clearlogo_Crop_Pass),a)">SetProperty(Clearlogo_Crop_Pass,$INFO[System.Time(hh:mm:ss)]b,home)</onunfocus>
-		<onunfocus condition="!String.EndsWith(Window(home).Property(Clearlogo_Crop_Pass),a)">SetProperty(Clearlogo_Crop_Pass,$INFO[System.Time(hh:mm:ss)]a,home)</onunfocus>
+		<!-- On the view: a serve still running as focus leaves or returns (options menu, scrollbars, music player) lands unsized, and the URL stays
+		     the same. Each return stamps pass with the time and a flipped letter (two in one second differ), so the serve reruns and sizes the logo -->
+		<onfocus condition="String.EndsWith(Window(home).Property(Clearlogo_Crop_Pass),a)">SetProperty(Clearlogo_Crop_Pass,$INFO[System.Time(hh:mm:ss)]b,home)</onfocus>
+		<onfocus condition="!String.EndsWith(Window(home).Property(Clearlogo_Crop_Pass),a)">SetProperty(Clearlogo_Crop_Pass,$INFO[System.Time(hh:mm:ss)]a,home)</onfocus>
 	</include>
 
 	<include name="User_Scroll_Delay_Template">
