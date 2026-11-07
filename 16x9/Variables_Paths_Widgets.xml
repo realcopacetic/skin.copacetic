@@ -92,9 +92,11 @@
 	</variable>
 
 	<variable name="Path_MusicVideos">
-		<value condition="!String.IsEmpty(ListItem.Artist) + String.IsEqual(ListItem.DBType,artist)">videodb://musicvideos/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22artist%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Artist]%5D%7D%5D%7D%2C%22type%22%3A%22musicvideos%22%7D</value>
+		<!-- an artist's through the helper, which keeps & and +; an album's or song's by name in an xsp, which a name with & or + leaves empty -->
+		<value condition="!String.IsEmpty(ListItem.Artist) + String.IsEqual(ListItem.DBType,artist)">plugin://script.copacetic.helper/?info=artist_credits&amp;label=$INFO[ListItem.Artist]&amp;limit=50</value>
 		<value condition="!String.IsEmpty(ListItem.Artist) + !String.IsEmpty(ListItem.Album) + String.IsEqual(ListItem.DBType,album)">videodb://musicvideos/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22artist%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Artist]%5D%7D%2C%7B%22field%22%3A%22album%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Album]%5D%7D%5D%7D%2C%22type%22%3A%22musicvideos%22%7D</value>
 		<value condition="!String.IsEmpty(ListItem.Artist) + !String.IsEmpty(ListItem.Album) + !String.IsEmpty(ListItem.Title) + String.IsEqual(ListItem.DBType,song)">videodb://musicvideos/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22artist%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Artist]%5D%7D%2C%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B$ESCINFO[ListItem.Title]%5D%7D%5D%7D%2C%22type%22%3A%22musicvideos%22%7D</value>
+		<value>special://skin/extras/playlists/empty.xsp</value> <!-- an empty URL would keep the last item's videos -->
 	</variable>
 
 	<variable name="Path_StudioCredits">
