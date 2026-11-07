@@ -18,7 +18,7 @@
 		</definition>
 	</include>
 
-	<include name="Default_Transition_1x">
+	<include name="Default_Infoscreen_Widget_Open">
 		<definition>
 			<onclick condition="Integer.IsGreater(Container($PARAM[id]).ListItem.DBID,0) + !String.IsEqual(Container($PARAM[id]).ListItem.DBID,Window.Property(SelectedItem))">SetProperty(Breadcrumb_GoToNext,true)</onclick>
 			<onclick condition="Integer.IsGreater(Container($PARAM[id]).ListItem.DBID,0) + !String.IsEqual(Container($PARAM[id]).ListItem.DBID,Window.Property(SelectedItem))">SetProperty(Infoscreen_Transition,true,home)</onclick>
@@ -36,12 +36,6 @@
 			<onclick condition="Integer.IsGreater(Container($PARAM[id]).ListItem.DBID,0) + !String.IsEqual(Container($PARAM[id]).ListItem.DBID,Window.Property(SelectedItem))">SetFocus(6001)</onclick>
 			<onclick condition="Integer.IsGreater(Container($PARAM[id]).ListItem.DBID,0) + String.IsEqual(Container($PARAM[id]).ListItem.DBID,Window.Property(SelectedItem))">SetFocus(3000)</onclick>
 		</definition>
-	</include>
-
-	<include name="Default_Infoscreen_Widget_Open">
-		<include content="Default_Transition_1x">
-			<param name="id" value="$PARAM[id]" />
-		</include>
 	</include>
 
 	<!-- Click actions -->
@@ -80,13 +74,13 @@
 	</include>
 
 	<include name="ClickAction_Open_Similar_Artists">
-		<include content="Default_Transition_1x">
+		<include content="Default_Infoscreen_Widget_Open">
 			<param name="id" value="3207" />
 		</include>
 	</include>
 
 	<include name="ClickAction_Open_Similar_Albums">
-		<include content="Default_Transition_1x">
+		<include content="Default_Infoscreen_Widget_Open">
 			<param name="id" value="3207" />
 		</include>
 	</include>

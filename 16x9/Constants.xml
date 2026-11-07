@@ -12,7 +12,6 @@
 	<constant name="Default_Transition_3x">756</constant>
 	<constant name="Default_Transition_4x">1008</constant>
 	<constant name="Default_Transition_5x">1260</constant>
-	<constant name="Default_Transition_6x">1512</constant>
 	<constant name="Default_Transition_7x">1764</constant>
 	<constant name="Default_Transition_10x">2520</constant>
 
@@ -27,7 +26,4 @@
 	<constant name="NowPlaying_Bar_2">168</constant>
 	<constant name="NowPlaying_Bar_3">133</constant>
 
-	<!-- DO NOT CHANGE -->
-	<constant name="Forced_Delay">1000</constant>
-	
 </includes>

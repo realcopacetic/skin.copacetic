@@ -243,7 +243,6 @@
 
 	<include name="Now_Playing_Icon">
 		<param name="visible" default="true" />
-		<param name="fadein" default="true" />
 		<param name="width" default="120" />
 		<param name="color" default="$VAR[Light_Color]" />
 		<definition>
