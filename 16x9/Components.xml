@@ -99,7 +99,6 @@
 		<param name="visible" default="true" />
 		<param name="time" default="10000" />
 		<param name="include_list" default="true" />
-		<param name="content_source" default="Background_Global_Content" />
 		<param name="fadein_animation_condition" default="true" />
 		<param name="fadeout_animation_condition" default="true" />
 		<param name="include_label" default="true" />
@@ -171,6 +170,7 @@
 					<param name="fadeout_animation_condition" value="$PARAM[fadeout_animation_condition]" />
 				</include>
 				<include content="Background_Multiart">
+					<param name="include_list" value="false" />
 					<param name="colordiffuse" value="$PARAM[colordiffuse]" />
 					<param name="texture_path" value="$PARAM[texture_path]" />
 					<param name="fadetime" value="360" />

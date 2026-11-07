@@ -13,18 +13,7 @@
 		<content sortby="random" limit="40" browse="never">$VAR[Background_Login_Path]</content>
 	</include>
 
-	<include name="Background_Global_Content">
-		<content sortby="random" browse="never">$VAR[Background_Global_Path]</content>
-	</include>
-
-	<include name="Background_Media_Content">
-		<content sortby="random" browse="never">$VAR[Background_Media_Path]</content>
-	</include>
-
 	<variable name="Background_Home_Path">
-		<!-- Global override - script.copacetic.helper -->
-		<value condition="Skin.HasSetting(Background_Slideshow2) + String.Contains(Window(home).Property(CurrentSlideshow),2) + Skin.String(Background_Slideshow2,Custom) + Skin.String(Background_Slideshow2_Custom_Path)">$INFO[Skin.String(Background_Slideshow2_Custom_Path)]</value>
-		<value condition="Skin.HasSetting(Home_Background_Override_Enabled) + Skin.String(Background_Slideshow_Custom_Path)">$INFO[Skin.String(Background_Slideshow_Custom_Path)]</value>
 		<!-- Item override -->
 		<value condition="!String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist))">$INFO[Container(3000).ListItem.Property(backgroundPlaylist)]</value>
 		<!-- playlists, xml library paths e.g. inprogress or sets, video and music db:// -->
@@ -53,15 +42,6 @@
 		<value condition="Library.HasContent(Movies)">videodb://movies/titles/</value>
 		<value condition="Library.HasContent(TVShows)">videodb://tvshows/titles/</value>
 		<value condition="Library.HasContent(Music)">musicdb://artists/?albumartistsonly=true</value>
-	</variable>
-
-	<variable name="Background_Global_Path">
-		<value condition="Skin.HasSetting(Background_Slideshow2) + String.Contains(Window(home).Property(CurrentSlideshow),2) + Skin.String(Background_Slideshow2,Custom) + Skin.String(Background_Slideshow2_Custom_Path)">$INFO[Skin.String(Background_Slideshow2_Custom_Path)]</value>
-		<value condition="Skin.String(Background_Slideshow,Custom) + Skin.String(Background_Slideshow_Custom_Path)">$INFO[Skin.String(Background_Slideshow_Custom_Path)]</value>
-	</variable>
-
-	<variable name="Background_Media_Path">
-		<value condition="!String.Contains(Container.FolderPath,plugin://)">$INFO[ListItem.FolderPath]</value>
 	</variable>
 
 	<variable name="Secondary_List_Path">
