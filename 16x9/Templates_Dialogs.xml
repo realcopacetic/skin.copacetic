@@ -183,7 +183,7 @@
 			<control type="grouplist">
 				<left>960</left>
 				<width>900</width>
-				<height>960</height>
+				<height>1080</height> <!-- 18 rows: the most the screen holds; a shorter menu centres as before -->
 				<centertop>50%</centertop>
 				<itemgap>0</itemgap>
 				<align>center</align>
@@ -231,6 +231,15 @@
 				</include>
 				<include content="Default_ContextMenu_Label">
 					<param name="id" value="1015" />
+				</include>
+				<include content="Default_ContextMenu_Label">
+					<param name="id" value="1016" />
+				</include>
+				<include content="Default_ContextMenu_Label">
+					<param name="id" value="1017" />
+				</include>
+				<include content="Default_ContextMenu_Label">
+					<param name="id" value="1018" />
 				</include>
 			</control>
 		</control>
