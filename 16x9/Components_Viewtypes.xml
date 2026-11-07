@@ -157,7 +157,6 @@
 				<visible>$PARAM[visible]</visible>
 				<focusposition>0</focusposition>
 				<include content="$PARAM[viewtype_label]_Navigation" />
-				<onfocus>ClearProperty(Widget_DBID,home)</onfocus>
 				<pagecontrol>60</pagecontrol>
 				<preloaditems>2</preloaditems>
 				<orientation>$PARAM[orientation]</orientation>

@@ -34,9 +34,6 @@
 				<onfocus>ClearProperty(Focused_Button,movieinformation)</onfocus>
 				<onfocus>ClearProperty(Focused_Button,musicinformation)</onfocus>
 				<onfocus>ClearProperty(Focused_Button,addoninformation)</onfocus>
-				<onunfocus>ClearProperty(Widget_DBID,home)</onunfocus>
-				<onunfocus>ClearProperty(Widget_DBType,home)</onunfocus>
-				<onunfocus>ClearProperty(Widget_Genre,home)</onunfocus>
 				<onunfocus>ClearProperty(Trailer_Autoscroll,home)</onunfocus>
 				<viewtype label="widgetlist">list</viewtype>
 				<preloaditems>2</preloaditems>
@@ -47,9 +44,6 @@
 				<focusedlayout>
 					<control type="button">
 						<visible allowhiddenfocus="true">false</visible>
-						<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.DBID)">SetProperty(Widget_DBID,$INFO[Container($PARAM[id]).ListItem.DBID],home)</onfocus>
-						<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.DBType)">SetProperty(Widget_DBType,$INFO[Container($PARAM[id]).ListItem.DBType],home)</onfocus>
-						<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Genre)">SetProperty(Widget_Genre,$INFO[Container($PARAM[id]).ListItem.Genre],home)</onfocus>
 						<onfocus condition="Window.Is(home) + Skin.HasSetting(Widget$PARAM[widget_position]_AutoScroll) + Skin.HasSetting(Widget$PARAM[widget_position]_Trailer_Autoplay)">SetProperty(Trailer_Autoscroll,true,home)</onfocus>
 					</control>
 					<include content="HiddenFocusButton" />

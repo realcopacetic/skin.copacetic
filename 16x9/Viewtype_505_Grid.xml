@@ -55,7 +55,6 @@
 					<top>180</top>
 					<include content="GridView_Vertical_Scrolling" condition="!Skin.String(GridView_Size,Horizontal)" />
 					<include content="GridView_Horizontal_Scrolling" condition="Skin.String(GridView_Size,Horizontal)" />
-					<onfocus>ClearProperty(Widget_DBID,home)</onfocus>
 					<onfocus condition="Container.Content(favourites)">Skin.SetString(favourites_Viewmode,Grid)</onfocus>
 					<include content="Grid_Vertical_Navigation" condition="!Skin.String(GridView_Size,Horizontal)" />
 					<include content="Grid_Horizontal_Navigation" condition="Skin.String(GridView_Size,Horizontal)" />

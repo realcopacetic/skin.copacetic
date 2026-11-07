@@ -188,12 +188,6 @@
 				<itemgap>0</itemgap>
 				<align>center</align>
 				<include content="Default_ContextMenu_Label">
-					<param name="id" value="4015" />
-				</include>
-				<include content="Default_ContextMenu_Label">
-					<param name="id" value="4016" />
-				</include>
-				<include content="Default_ContextMenu_Label">
 					<param name="id" value="4017" />
 				</include>
 				<include content="Default_ContextMenu_Label">
@@ -250,22 +244,6 @@
 			<visible allowhiddenfocus="true">false</visible>
 			<onleft>Close</onleft>
 			<onright>Close</onright>
-			<!-- Shuffle artist -->
-			<control type="button" id="4015">
-				<visible>String.IsEqual(ListItem.DBType,artist)</visible>
-				<texturefocus />
-				<label>$LOCALIZE[191]</label>
-				<onclick condition="!String.IsEmpty(Window(home).Property(Widget_DBID))">RunScript(script.copacetic.helper,action=shuffle_artist,id=$INFO[Window(home).Property(Widget_DBID)])</onclick>
-				<onclick condition="String.IsEmpty(Window(home).Property(Widget_DBID))">RunScript(script.copacetic.helper,action=shuffle_artist,id=$INFO[ListItem.DBID])</onclick>
-			</control>
-			<!-- Create radiostation -->
-			<control type="button" id="4016">
-				<visible>[String.IsEqual(ListItem.DBType,song) + !String.IsEmpty(ListItem.Genre)] | [String.IsEqual(Window(home).Property(Widget_DBType),song) + !String.IsEmpty(Window(home).Property(Widget_Genre))]</visible>
-				<texturefocus />
-				<label>$LOCALIZE[31011]</label>
-				<onclick condition="!String.IsEmpty(Window(home).Property(Widget_DBID))">RunScript(script.copacetic.helper,action=start_mix,id=$INFO[Window(home).Property(Widget_DBID)])</onclick>
-				<onclick condition="String.IsEmpty(Window(home).Property(Widget_DBID))">RunScript(script.copacetic.helper,action=start_mix)</onclick>
-			</control>
 			<!-- Like/Unlike song -->
 			<control type="button" id="4017">
 				<visible>Skin.String(Music_Rating_Like_Threshold) + !Window.IsVisible(musicplaylist)</visible>

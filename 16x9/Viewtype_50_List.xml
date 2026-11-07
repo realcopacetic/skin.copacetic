@@ -19,7 +19,6 @@
 					<pagecontrol>60</pagecontrol>
 					<orientation>vertical</orientation>
 					<include content="List_Navigation" />
-					<onfocus>ClearProperty(Widget_DBID,home)</onfocus>
 					<onfocus condition="Container.Content(favourites)">Skin.SetString(favourites_Viewmode,List)</onfocus>
 					<include content="Default_Scrolltime" />
 					<include content="ListView_Layout_addonbrowser" condition="Window.Is(addonbrowser) | Window.Is(programs)" />
