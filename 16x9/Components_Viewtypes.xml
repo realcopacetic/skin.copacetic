@@ -55,15 +55,14 @@
 		<param name="onprevious_trigger" default="Container.OnPrevious | Container(50).OnPrevious | Container(3201).OnPrevious | Container(3202).OnPrevious | Container(3203).OnPrevious | Container(3204).OnPrevious | Container(3205).OnPrevious | Container(3206).OnPrevious | Container(3207).OnPrevious | Container(3208).OnPrevious | Container(3209).OnPrevious | Container(11).OnPrevious | Container(52).OnPrevious" />
 		<param name="onnext_id" default="5002" />
 		<param name="onnext_trigger" default="Container.OnNext | Container(50).OnNext | Container(3201).OnNext | Container(3202).OnNext | Container(3203).OnNext | Container(3204).OnNext | Container(3205).OnNext | Container(3206).OnNext | Container(3207).OnNext | Container(3208).OnNext | Container(3209).OnNext | Container(11).OnNext | Container(52).OnNext" />
-		<param name="content_delay" default="Default_Transition_1x" />
 		<definition>
 			<control type="group" id="$PARAM[onprevious_id]">
 				<visible>$PARAM[onprevious_trigger]</visible>
-				<animation effect="slide" end="0,0" time="$PARAM[content_delay]" reversible="false">Hidden</animation>
+				<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Hidden</animation>
 			</control>
 			<control type="group" id="$PARAM[onnext_id]">
 				<visible>$PARAM[onnext_trigger]</visible>
-				<animation effect="slide" end="0,0" time="$PARAM[content_delay]" reversible="false">Hidden</animation>
+				<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Hidden</animation>
 			</control>
 		</definition>
 	</include>
