@@ -94,4 +94,27 @@
 		</include>
 	</include>
 
+	<!-- Renamed settings: copy each old value once, unless the new name has one, then clear the old name.
+	     From Startup (after its defaults) and Home's onload, which a skin update in place reaches without Startup -->
+	<include name="Startup_Migrate_Settings">
+		<onload condition="Skin.String(Music_Rating_Like_Threshold) + !Skin.String(like_threshold)">Skin.SetString(like_threshold,$INFO[Skin.String(Music_Rating_Like_Threshold)])</onload>
+		<onload condition="Skin.String(Background_Interval) + !Skin.String(slideshow_interval)">Skin.SetString(slideshow_interval,$INFO[Skin.String(Background_Interval)])</onload>
+		<onload condition="Skin.String(Background_Slideshow) + !Skin.String(slideshow_source)">Skin.SetString(slideshow_source,$INFO[Skin.String(Background_Slideshow)])</onload>
+		<onload condition="Skin.String(Background_Slideshow_Custom_Path) + !Skin.String(slideshow_path)">Skin.SetString(slideshow_path,$ESCINFO[Skin.String(Background_Slideshow_Custom_Path)])</onload>
+		<onload condition="Skin.String(Background_Slideshow_Timer) + !Skin.String(slideshow_start)">Skin.SetString(slideshow_start,$INFO[Skin.String(Background_Slideshow_Timer)])</onload>
+		<onload condition="Skin.HasSetting(Background_Slideshow2)">Skin.SetBool(slideshow2)</onload>
+		<onload condition="Skin.String(Background_Slideshow2) + !Skin.String(slideshow2_source)">Skin.SetString(slideshow2_source,$INFO[Skin.String(Background_Slideshow2)])</onload>
+		<onload condition="Skin.String(Background_Slideshow2_Custom_Path) + !Skin.String(slideshow2_path)">Skin.SetString(slideshow2_path,$ESCINFO[Skin.String(Background_Slideshow2_Custom_Path)])</onload>
+		<onload condition="Skin.String(Background_Slideshow2_Timer) + !Skin.String(slideshow2_start)">Skin.SetString(slideshow2_start,$INFO[Skin.String(Background_Slideshow2_Timer)])</onload>
+		<onload condition="Skin.String(Music_Rating_Like_Threshold)">Skin.Reset(Music_Rating_Like_Threshold)</onload>
+		<onload condition="Skin.String(Background_Interval)">Skin.Reset(Background_Interval)</onload>
+		<onload condition="Skin.String(Background_Slideshow)">Skin.Reset(Background_Slideshow)</onload>
+		<onload condition="Skin.String(Background_Slideshow_Custom_Path)">Skin.Reset(Background_Slideshow_Custom_Path)</onload>
+		<onload condition="Skin.String(Background_Slideshow_Timer)">Skin.Reset(Background_Slideshow_Timer)</onload>
+		<onload condition="Skin.HasSetting(Background_Slideshow2)">Skin.SetBool(Background_Slideshow2,false)</onload>
+		<onload condition="Skin.String(Background_Slideshow2)">Skin.Reset(Background_Slideshow2)</onload>
+		<onload condition="Skin.String(Background_Slideshow2_Custom_Path)">Skin.Reset(Background_Slideshow2_Custom_Path)</onload>
+		<onload condition="Skin.String(Background_Slideshow2_Timer)">Skin.Reset(Background_Slideshow2_Timer)</onload>
+	</include>
+
 </includes>

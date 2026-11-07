@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!-- Renamed settings: copy the old value once, then clear the old name -->
-	<onload condition="Skin.String(Music_Rating_Like_Threshold)">Skin.SetString(like_threshold,$INFO[Skin.String(Music_Rating_Like_Threshold)])</onload>
-	<onload condition="Skin.String(Music_Rating_Like_Threshold)">Skin.Reset(Music_Rating_Like_Threshold)</onload>
 	<!-- Look and feel -->
 	<onload condition="!Skin.String(Theme)">Skin.SetString(Theme,Dark)</onload>
 	<onload condition="!Skin.String(Background_Brightness)">Skin.SetString(Background_Brightness,33)</onload>
@@ -21,24 +18,8 @@
 	<onload condition="!Skin.String(visualisation_Layout)">Skin.SetString(visualisation_Layout,Small)</onload>
 	<onload condition="![Skin.HasSetting(Preferred_Rating_BBFC) | Skin.HasSetting(Preferred_Rating_MPAA) | Skin.HasSetting(Preferred_Rating_CHVRS) | Skin.HasSetting(Preferred_Rating_ACB) | Skin.HasSetting(Preferred_Rating_IFCO) | Skin.HasSetting(Preferred_Rating_FSK) | Skin.HasSetting(Preferred_Rating_DJCTQ) | Skin.HasSetting(Preferred_Rating_KIJKWIJZER) | Skin.HasSetting(Preferred_Rating_EIRIN)]">Skin.SetBool(Preferred_Rating_BBFC)</onload>
 
-	<!-- Slideshow: one-time copy of the old setting names to the helper's, then the old ones are cleared -->
-	<!-- After the defaults above, so the copy wins: every condition is tested before the first action runs -->
-	<onload condition="Skin.String(Background_Interval)">Skin.SetString(slideshow_interval,$INFO[Skin.String(Background_Interval)])</onload>
-	<onload condition="Skin.String(Background_Slideshow)">Skin.SetString(slideshow_source,$INFO[Skin.String(Background_Slideshow)])</onload>
-	<onload condition="Skin.String(Background_Slideshow_Custom_Path)">Skin.SetString(slideshow_path,$ESCINFO[Skin.String(Background_Slideshow_Custom_Path)])</onload>
-	<onload condition="Skin.String(Background_Slideshow_Timer)">Skin.SetString(slideshow_start,$INFO[Skin.String(Background_Slideshow_Timer)])</onload>
-	<onload condition="Skin.HasSetting(Background_Slideshow2)">Skin.SetBool(slideshow2)</onload>
-	<onload condition="Skin.String(Background_Slideshow2)">Skin.SetString(slideshow2_source,$INFO[Skin.String(Background_Slideshow2)])</onload>
-	<onload condition="Skin.String(Background_Slideshow2_Custom_Path)">Skin.SetString(slideshow2_path,$ESCINFO[Skin.String(Background_Slideshow2_Custom_Path)])</onload>
-	<onload condition="Skin.String(Background_Slideshow2_Timer)">Skin.SetString(slideshow2_start,$INFO[Skin.String(Background_Slideshow2_Timer)])</onload>
-	<onload condition="Skin.String(Background_Interval)">Skin.Reset(Background_Interval)</onload>
-	<onload condition="Skin.String(Background_Slideshow)">Skin.Reset(Background_Slideshow)</onload>
-	<onload condition="Skin.String(Background_Slideshow_Custom_Path)">Skin.Reset(Background_Slideshow_Custom_Path)</onload>
-	<onload condition="Skin.String(Background_Slideshow_Timer)">Skin.Reset(Background_Slideshow_Timer)</onload>
-	<onload condition="Skin.HasSetting(Background_Slideshow2)">Skin.SetBool(Background_Slideshow2,false)</onload>
-	<onload condition="Skin.String(Background_Slideshow2)">Skin.Reset(Background_Slideshow2)</onload>
-	<onload condition="Skin.String(Background_Slideshow2_Custom_Path)">Skin.Reset(Background_Slideshow2_Custom_Path)</onload>
-	<onload condition="Skin.String(Background_Slideshow2_Timer)">Skin.Reset(Background_Slideshow2_Timer)</onload>
+	<!-- Renamed settings. After the defaults above, so a copy wins: every condition is tested before the first action runs -->
+	<include content="Startup_Migrate_Settings" />
 
 	<!-- Widget defaults -->
 	<onload condition="!Skin.HasSetting(Widget1_Content_Disabled) + !Skin.HasSetting(Widget1_Content_InProgress) + !Skin.HasSetting(Widget1_Content_NextUp) + !Skin.HasSetting(Widget1_Content_LatestMovies) + !Skin.HasSetting(Widget1_Content_LatestTVShows) + !Skin.HasSetting(Widget1_Content_RandomMovies) + !Skin.HasSetting(Widget1_Content_RandomTVShows) + !Skin.HasSetting(Widget1_Content_LatestAlbums) + !Skin.HasSetting(Widget1_Content_RecentAlbums) + !Skin.HasSetting(Widget1_Content_RandomAlbums) + !Skin.HasSetting(Widget1_Content_LikedSongs) + !Skin.HasSetting(Widget1_Content_Favourites) + !Skin.HasSetting(Widget1_Content_Custom)">Skin.SetBool(Widget1_Content_InProgress)</onload>
