@@ -97,24 +97,6 @@
 		<value>$LOCALIZE[31117]</value>
 	</variable>
 
-	<variable name="AudioCodec_Label">
-		<value condition="VideoPlayer.IsFullscreen + String.IsEqual(VideoPlayer.AudioCodec,AC3)">Dolby Digital</value>
-		<value condition="VideoPlayer.IsFullscreen + String.IsEqual(VideoPlayer.AudioCodec,EAC3)">Dolby Digital Plus</value>
-		<value condition="VideoPlayer.IsFullscreen + String.IsEqual(VideoPlayer.AudioCodec,truehd)">Dolby TrueHD</value>
-		<value condition="VideoPlayer.IsFullscreen + String.IsEqual(VideoPlayer.AudioCodec,atmos)">Dolby Atmos</value>
-		<value condition="VideoPlayer.IsFullscreen + String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma)">DTS-HD Master Audio</value>
-		<value condition="VideoPlayer.IsFullscreen + String.IsEqual(VideoPlayer.AudioCodec,dtshd)">DTS-HD</value>
-		<value condition="VideoPlayer.IsFullscreen + [String.IsEqual(VideoPlayer.AudioCodec,dts) | String.IsEqual(VideoPlayer.AudioCodec,dca)]">DTS</value>
-		<value condition="VideoPlayer.IsFullscreen + !String.IsEmpty(VideoPlayer.AudioCodec)">[UPPERCASE]$INFO[VideoPlayer.AudioCodec][/UPPERCASE]</value>
-		<value condition="VideoPlayer.IsFullscreen + String.Contains(Player.FilenameAndPath,.DTS-HD.MA)">DTS-HD.MA</value>
-		<value condition="VideoPlayer.IsFullscreen + String.Contains(Player.FilenameAndPath,.EAC3)">EAC3</value>
-		<value condition="VideoPlayer.IsFullscreen + [String.Contains(Player.FilenameAndPath,.DD) | String.Contains(Player.FilenameAndPath,.AC3)]">AC3</value>
-		<value condition="!String.IsEmpty(ListItem.AudioCodec)">[UPPERCASE]$INFO[ListItem.AudioCodec][/UPPERCASE]</value>
-		<value condition="String.Contains(ListItem.FilenameAndPath,.DTS-HD.MA)">DTS-HD.MA</value>
-		<value condition="String.Contains(ListItem.FilenameAndPath,.EAC3)">EAC3</value>
-		<value condition="String.Contains(ListItem.FilenameAndPath,.DD) | String.Contains(ListItem.FilenameAndPath,.AC3)">AC3</value>
-	</variable>
-
 	<variable name="Auto_Update_Label">
 		<value condition="String.Contains(Skin.String(AutoUpdate),off)">$LOCALIZE[31474] $VAR[Copacetic_Divider] $LOCALIZE[351]</value>
 		<value>$LOCALIZE[31474] $VAR[Copacetic_Divider] $LOCALIZE[34222]</value>
