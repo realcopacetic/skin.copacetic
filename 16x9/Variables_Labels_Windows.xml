@@ -154,8 +154,8 @@
 		<value condition="Control.HasFocus(1534) | Control.HasFocus(1535)">$LOCALIZE[31568]</value>
 	</variable>
 	<variable name="skinsettings_slideshow_interval_Label">
-		<!-- Multiart Interval / Off -->
-	 	<value condition="Skin.String(slideshow_interval) + Integer.IsEqual(Skin.String(slideshow_interval),1800)">30 $LOCALIZE[31733]</value>
+		<!-- Slideshow interval: the 5 to 30 minute presets in minutes, any other in seconds, 10 seconds when unset -->
+		<value condition="Skin.String(slideshow_interval) + Integer.IsEqual(Skin.String(slideshow_interval),1800)">30 $LOCALIZE[31733]</value>
 		<value condition="Skin.String(slideshow_interval) + Integer.IsEqual(Skin.String(slideshow_interval),900)">15 $LOCALIZE[31733]</value>
 		<value condition="Skin.String(slideshow_interval) + Integer.IsEqual(Skin.String(slideshow_interval),600)">10 $LOCALIZE[31733]</value>
 		<value condition="Skin.String(slideshow_interval) + Integer.IsEqual(Skin.String(slideshow_interval),300)">5 $LOCALIZE[31733]</value>
