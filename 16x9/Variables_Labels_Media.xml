@@ -881,9 +881,9 @@
 
 	<variable name="Title_Label">
 		<value condition="VideoPlayer.IsFullscreen + String.IsEmpty(VideoPlayer.DBID) + String.Contains(VideoPlayer.Title,.) + !String.IsEmpty(Window(home).Property(Return_Label))">$INFO[Window(home).Property(Return_Label)]</value>
+		<value condition="VideoPlayer.IsFullscreen + Window.Is(videoosd) + VideoPlayer.Content(episodes) + Integer.IsGreater(VideoPlayer.Episode,9)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x]$INFO[VideoPlayer.Title,. ]</value>
+		<value condition="VideoPlayer.IsFullscreen + Window.Is(videoosd) + VideoPlayer.Content(episodes) + Integer.IsGreater(VideoPlayer.Episode,0)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x0]$INFO[VideoPlayer.Title,. ]</value>
 		<value condition="VideoPlayer.IsFullscreen + !String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.Title]</value>
-		<value condition="VideoPlayer.IsFullscreen + Window.Is(videoosd) + String.isEqual(VideoPlayer.DBID,episode) + Integer.IsGreater(VideoPlayer.Episode,9)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x]$INFO[VIdeoPlayer.Title,. ]</value>
-		<value condition="VideoPlayer.IsFullscreen + Window.Is(videoosd) + String.isEqual(VideoPlayer.DBID,episode) + Integer.IsGreater(VideoPlayer.Episode,0)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x0]$INFO[VIdeoPlayer.Title,. ]</value>
 		<value condition="Window.Is(addoninformation) + !String.IsEmpty(ListItem.AddonName)">$INFO[ListItem.AddonName]</value>
 		<value condition="$EXP[Infoscreen_Widget_HasFocus]">$VAR[Title_Label_Infoscreen_Widgets]</value>
 		<value condition="Window.Is(home) + String.IsEqual(ListItem.DBType,episode) + $EXP[GridView_Widget_IsVisible] + !String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle]</value>
