@@ -43,6 +43,13 @@
 		</include>
 	</include>
 
+	<include name="Clearlogo_Crop_Pass">
+		<!-- On the options menu: a serve still running as focus moves in or out lands unsized, and the view's URL stays the same. Each exit
+		     stamps pass with the time and a flipped letter (two exits in one second differ), so the view's serve reruns and sizes the logo -->
+		<onunfocus condition="String.EndsWith(Window(home).Property(Clearlogo_Crop_Pass),a)">SetProperty(Clearlogo_Crop_Pass,$INFO[System.Time(hh:mm:ss)]b,home)</onunfocus>
+		<onunfocus condition="!String.EndsWith(Window(home).Property(Clearlogo_Crop_Pass),a)">SetProperty(Clearlogo_Crop_Pass,$INFO[System.Time(hh:mm:ss)]a,home)</onunfocus>
+	</include>
+
 	<include name="User_Scroll_Delay_Template">
 		<param name="onprevious_id" default="5001" />
 		<param name="onprevious_trigger" default="Container.OnPrevious | Container(50).OnPrevious | Container(3201).OnPrevious | Container(3202).OnPrevious | Container(3203).OnPrevious | Container(3204).OnPrevious | Container(3205).OnPrevious | Container(3206).OnPrevious | Container(3207).OnPrevious | Container(3208).OnPrevious | Container(3209).OnPrevious | Container(11).OnPrevious | Container(52).OnPrevious" />
