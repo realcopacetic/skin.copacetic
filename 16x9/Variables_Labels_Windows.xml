@@ -205,7 +205,7 @@
 		<value>$LOCALIZE[31483]</value>
 	</variable>
 	<variable name="skinsettings_Multiart_Interval_Label">
-		<!-- Multiart Interval / Off -->
+		<!-- Multiart interval: the seconds each picture shows (3, 4, 5, 7 or 10), 4 when unset -->
 		<value condition="Skin.String(Multiart_Interval)">$INFO[Skin.String(Multiart_Interval)]</value>
 		<value>4</value>
 	</variable>
