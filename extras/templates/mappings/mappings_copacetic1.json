@@ -2,7 +2,6 @@
   "copacetic1": {
     "mode": "dynamic",
     "items": [ "background" ],
-    "placeholders": { "key": "settings_category" },
     "skin_mirrors": {
       "slideshow_path": "slideshow_path",
       "slideshow2_path": "slideshow2_path"
