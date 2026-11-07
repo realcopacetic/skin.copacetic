@@ -108,16 +108,6 @@
 				<property name="ActionRight">Skin.SetString(GridView_Display_Artists,Fanart)</property>
 				<visible>$PARAM[visible] + $EXP[GridView_Display_IsSquare_Artists]</visible>
 			</item>
-			<!-- Images -->
-			<item id="2">
-				<description>Display (Images) / Square</description>
-				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31008] $VAR[Copacetic_Chevron_Right]</label>
-				<label2>$LOCALIZE[131] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31008]</label2>
-				<onclick>SetFocus(505)</onclick>
-				<property name="ActionLeft">Skin.SetString(GridView_Display_Images,Fanart)</property>
-				<property name="ActionRight">Skin.SetString(GridView_Display_Images,Fanart)</property>
-				<visible>$PARAM[visible] + $EXP[GridView_Display_IsSquare_Images]</visible>
-			</item>
 			<!-- Programs -->
 			<!--Folders -->
 			<item id="2">

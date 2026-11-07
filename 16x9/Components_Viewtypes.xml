@@ -850,7 +850,7 @@
 
 	<include name="Progress_Bar_0">
 		<control type="image">
-			<visible>[!String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedEpisodePercent)) + Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedEpisodePercent),0)] | [!String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)] | [Container($PARAM[id]).ListItem.IsCollection + String.IsEqual(ListItem.Overlay,OverlayUnwatched.png)]</visible>
+			<visible>[!String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedEpisodePercent)) + Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedEpisodePercent),0)] | [!String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)] | [Container($PARAM[id]).ListItem.IsCollection + String.IsEqual(Container($PARAM[id]).ListItem.Overlay,OverlayUnwatched.png)]</visible>
 			<width>100%</width>
 			<height>100%</height>
 			<texture colordiffuse="$PARAM[background_color]">views/white_100.png</texture>
@@ -885,7 +885,7 @@
 
 	<include name="Progress_Bar_Resumable">
 		<control type="progress">
-			<visible>Container($PARAM[id]).ListItem.IsResumable + !Container($PARAM[id]).ListItem.IsCollection + Integer.IsGreater(ListItem.PercentPlayed,0)</visible>
+			<visible>Container($PARAM[id]).ListItem.IsResumable + !Container($PARAM[id]).ListItem.IsCollection + Integer.IsGreater(Container($PARAM[id]).ListItem.PercentPlayed,0)</visible>
 			<width>100%</width>
 			<height>100%</height>
 			<texturebg colordiffuse="$PARAM[background_color]">views/white_100.png</texturebg>
@@ -937,7 +937,7 @@
 
 	<include name="Unwatched_Indicator">
 		<control type="group">
-			<visible>Integer.IsGreater(Container($PARAM[id]).ListItem.Property(UnwatchedEpisodes),0) | [Container($PARAM[id]).ListItem.IsCollection + String.IsEqual(ListItem.Overlay,OverlayUnwatched.png)]</visible>
+			<visible>Integer.IsGreater(Container($PARAM[id]).ListItem.Property(UnwatchedEpisodes),0) | [Container($PARAM[id]).ListItem.IsCollection + String.IsEqual(Container($PARAM[id]).ListItem.Overlay,OverlayUnwatched.png)]</visible>
 			<include content="Progress_Slides_$PARAM[slides]">
 				<param name="id" value="$PARAM[id]" />
 			</include>
