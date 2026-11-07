@@ -122,7 +122,7 @@ SETTINGS
 3011          File manager
 
 STRINGS
-310XX         Viewtypes and view menu options; context menu song actions (31009-31011)
+310XX         Viewtypes and view menu options; Like/Unlike song in the music OSD and the music player controls (31009-31010)
 311XX         Media
 312XX         Widgets
 313XX         OSD
