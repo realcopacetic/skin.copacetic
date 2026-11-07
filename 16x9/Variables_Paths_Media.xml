@@ -70,7 +70,7 @@
 		<value condition="Container.ListItem.IsCollection + String.IsEqual(Container.ListItem.Overlay,OverlayUnwatched.png) + !System.HasVisibleModalDialog">plugin://script.copacetic.helper/?info=progressbar&amp;focus_guard=$INFO[Container.ListItem.DBType],$INFO[Container.ListItem.DBID]&amp;identity_labels=Container.ListItem.DBType,Container.ListItem.DBID&amp;target_id=9501</value>
 	</variable>
 
-	<!-- The focused item's plain clearlogo cropped, and the details' logo (63 + view or widget id) set to its height in its logo_width x 240 box.
+	<!-- The focused item's clearlogo cropped, and the details' logo (63 + view or widget id) set to its height in its logo_width x 240 box.
 	     Any other item leaves the URL empty, which keeps the last crop, so readers match 9300's clean_label with the focused item's logo. -->
 	<variable name="Clearlogo_Crop_Path">
 		<!-- No serve under a modal dialog (the helper would size its controls there) or while the user scrolls (5001-5004, or this frame's move);

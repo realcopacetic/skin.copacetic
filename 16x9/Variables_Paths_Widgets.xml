@@ -97,8 +97,9 @@
 	</variable>
 
 	<variable name="Path_StudioCredits">
-		<!-- the film's or show's other titles from its first studio or network, matched exactly, through the helper, which keeps & and + -->
-		<value condition="$EXP[Infoscreen_Metadata_Ready] + Integer.IsGreater(ListItem.DBID,0) + !String.IsEmpty(Container(9000).ListItem.Studio)">plugin://script.copacetic.helper/?info=studio_credits&amp;label=$INFO[Container(9000).ListItem.Studio]&amp;exclude_value=$INFO[ListItem.Title]&amp;type=$INFO[ListItem.DBType]&amp;sort=random&amp;limit=50</value>
+		<!-- the film's or show's other titles from its first studio or network, matched exactly, through the helper, which keeps & and +.
+		     Names go last: a | in a plugin URL ends its options -->
+		<value condition="$EXP[Infoscreen_Metadata_Ready] + Integer.IsGreater(ListItem.DBID,0) + !String.IsEmpty(Container(9000).ListItem.Studio)">plugin://script.copacetic.helper/?info=studio_credits&amp;type=$INFO[ListItem.DBType]&amp;sort=random&amp;limit=50&amp;label=$INFO[Container(9000).ListItem.Studio]&amp;exclude_value=$INFO[ListItem.Title]</value>
 		<value>special://skin/extras/playlists/empty.xsp</value>
 	</variable>
 
