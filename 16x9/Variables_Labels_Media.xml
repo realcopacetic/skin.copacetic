@@ -880,7 +880,6 @@
 	</variable>
 
 	<variable name="Title_Label">
-		<value condition="VideoPlayer.IsFullscreen + String.IsEmpty(VideoPlayer.DBID) + String.Contains(VideoPlayer.Title,.) + !String.IsEmpty(Window(home).Property(Return_Label))">$INFO[Window(home).Property(Return_Label)]</value>
 		<value condition="VideoPlayer.IsFullscreen + Window.Is(videoosd) + VideoPlayer.Content(episodes) + Integer.IsGreater(VideoPlayer.Episode,9)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x]$INFO[VideoPlayer.Title,. ]</value>
 		<value condition="VideoPlayer.IsFullscreen + Window.Is(videoosd) + VideoPlayer.Content(episodes) + Integer.IsGreater(VideoPlayer.Episode,0)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x0]$INFO[VideoPlayer.Title,. ]</value>
 		<value condition="VideoPlayer.IsFullscreen + !String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.Title]</value>
@@ -902,8 +901,6 @@
 		<value condition="String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
 		<value condition="String.IsEqual(ListItem.DBType,song) + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
 		<value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
-		<value condition="$EXP[GridView_IsVisible] + Container.Content()">$INFO[ListItem.Label]</value> 
-		<value condition="$EXP[GridView_IsVisible] + String.IsEmpty(ListItem.DBID) + String.Contains(ListItem.Label,.) + !String.IsEmpty(Window(home).Property(Return_Label))">$INFO[Window(home).Property(Return_Label)]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
@@ -923,7 +920,6 @@
 	</variable>
 
 	<variable name="Title_Breadcrumb_Label">
-		<value condition="VideoPlayer.IsFullscreen + Window.Is(seekbar) + String.IsEmpty(VideoPlayer.DBID) + String.Contains(VideoPlayer.Title,.) + !String.IsEmpty(Window(home).Property(Return_Label))">$INFO[Window(home).Property(Return_Label)]</value>
 		<value condition="VideoPlayer.IsFullscreen + Window.Is(seekbar) + !String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.Title]</value>
 		<value condition="Window.Is(videoplaylist)">$LOCALIZE[13350]</value>
 		<value condition="Window.Is(musicplaylist)">$INFO[ListItem.Artist]</value>
