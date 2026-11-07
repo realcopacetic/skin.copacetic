@@ -109,8 +109,9 @@
 		<value condition="!String.IsEmpty(ListItem.Artist) + String.IsEqual(ListItem.DBType,artist)">musicdb://albums/?artistid=$INFO[ListItem.DBID]</value>
 		<!-- a song by its album artist: by id, which a name with & or + can't break -->
 		<value condition="$EXP[Infoscreen_Metadata_Ready] + !String.IsEmpty(Container(9000).ListItem.Property(albumartist_id)) + String.IsEqual(ListItem.Artist,Container(9000).ListItem.Property(albumartist))">musicdb://albums/?artistid=$INFO[Container(9000).ListItem.Property(albumartist_id)]</value>
-		<!-- a song: its artist's albums by name, as the header names it (& would break the xsp); else the first album artist's -->
-		<value condition="!String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(ListItem.Artist) + !String.Contains(ListItem.Artist,&amp;)">musicdb://albums/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22artist%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b$ESCINFO[ListItem.Artist]%5d%7d%5d%7d%2c%22type%22%3a%22albums%22%7d</value>
+		<!-- a song: its artist's albums by name, as the header names it (& would break the xsp); else the first album artist's.
+		     It waits on 9000 too, so a song whose artist is its album artist loads once, by id -->
+		<value condition="$EXP[Infoscreen_Metadata_Ready] + !String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(ListItem.Artist) + !String.Contains(ListItem.Artist,&amp;)">musicdb://albums/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22artist%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b$ESCINFO[ListItem.Artist]%5d%7d%5d%7d%2c%22type%22%3a%22albums%22%7d</value>
 		<value condition="$EXP[Infoscreen_Metadata_Ready] + !String.IsEmpty(Container(9000).ListItem.Property(albumartist_id))">musicdb://albums/?artistid=$INFO[Container(9000).ListItem.Property(albumartist_id)]</value>
 		<value>special://skin/extras/playlists/empty.xsp</value>
 	</variable>
