@@ -966,7 +966,8 @@
 				<aligny>center</aligny>
 				<font>Unwatched_Indicator</font>
 				<textcolor>$PARAM[textcolor]</textcolor>
-				<label>$VAR[Unwatched_Indicator_Label]</label>
+				<!-- A set has no UnwatchedEpisodes of its own: its count comes from 9500 -->
+				<label>$INFO[Container($PARAM[id]).ListItem.Property(UnwatchedEpisodes)]$VAR[Unwatched_Indicator_Set_Label]</label>
 			</control>
 		</control>
 	</include>

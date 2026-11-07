@@ -988,10 +988,8 @@
 		<value>$INFO[ListItem.TrackNumber]</value>
 	</variable>
 
-	<variable name="Unwatched_Indicator_Label">
-		<value condition="ListItem.IsCollection + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !String.IsEmpty(Container(9500).ListItem.Property(unwatchedepisodes))">$INFO[Container(9500).ListItem.Property(unwatchedepisodes)]</value>
-		<value condition="Control.HasFocus(3100)">$INFO[Container(3100).ListItem.Property(UnwatchedEpisodes)]</value>
-		<value>$INFO[ListItem.Property(UnwatchedEpisodes)]</value>
+	<variable name="Unwatched_Indicator_Set_Label">
+		<value condition="ListItem.IsCollection + !String.IsEqual(ListItem.Overlay,OverlayWatched.png)">$INFO[Container(9500).ListItem.Property(unwatchedepisodes)]</value>
 	</variable>
 
 	<variable name="Viewtype_Label">
