@@ -255,9 +255,8 @@
 				<centerleft>50%</centerleft>
 				<centertop>50%</centertop>
 				<include content="Now_Playing_Icon_Medium">
-					<param name="visible" value="$PARAM[visible]" />
-					<param name="width" value="$PARAM[width]" />
 					<param name="color" value="$PARAM[color]" />
+					<param name="visible" value="$PARAM[visible]" />
 				</include>
 			</control>
 		</definition>
