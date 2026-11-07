@@ -2,7 +2,8 @@
 <includes>
 
 	<variable name="AutoComplete_Path">
-		<value condition="System.AddonIsEnabled(plugin.program.autocompletion) + !System.HasHiddenInput">plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</value>
+		<!-- the typed text goes last: a | in a plugin URL ends its options -->
+		<value condition="System.AddonIsEnabled(plugin.program.autocompletion) + !System.HasHiddenInput">plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;limit=9&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]</value>
 	</variable>
 
 	<include name="Background_Home_Content">
