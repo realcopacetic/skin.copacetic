@@ -28,7 +28,6 @@
 		<param name="art_icon" default="Thumbnail" />
 		<param name="media_view" default="true" />
 		<param name="widget_view" default="false" />
-		<param name="widget_position" />
 		<definition>
 			<include content="Viewtype_Display_Template">
 				<param name="viewtype_label" value="Billboard" />

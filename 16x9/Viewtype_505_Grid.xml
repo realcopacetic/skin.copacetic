@@ -179,8 +179,6 @@
 		<param name="art_icon" />
 		<param name="art_landscape" default="false" />
 		<param name="display" /> <!-- a Home row's display, a literal: picks the art include -->
-		<param name="gridview_details_fade" />
-		<param name="widget_position" />
 		<definition>
 			<include content="Viewtype_Display_Template">
 				<param name="viewtype_label" value="Grid" />
@@ -196,7 +194,6 @@
 	<include name="GridView_Details">
 		<param name="id" />
 		<param name="media_view" default="false" />
-		<param name="widget_position" />
 		<param name="widget_display" />
 		<param name="include_progress" default="true" />
 		<definition>
