@@ -12,7 +12,7 @@
       "filter_mode": "exclude",
       "rules": [
         {
-          "condition": "In({content_type}, [videos, albums, songs, addons, program_addons, program_folders, images])",
+          "condition": "In({content_type}, [videos, albums, songs, addons, program_folders, images])",
           "value": [ "billboard" ]
         },
         {
