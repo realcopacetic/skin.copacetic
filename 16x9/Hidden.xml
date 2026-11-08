@@ -402,14 +402,6 @@
 		</control>
 	</include>
 
-	<include name="widgetsettings_Hidden">
-		<!-- Widget_Move's focus relay: <onfocus> runs at the start of the next frame -->
-		<control type="button" id="4010">
-			<visible allowhiddenfocus="true">false</visible>
-			<onfocus>SetFocus($INFO[Window(home).Property(Widget_Move)])</onfocus>
-		</control>
-	</include>
-
 	<include name="selectdialog_Hidden">
 		<control type="button" id="4010">
 			<visible allowhiddenfocus="true">false</visible>

@@ -68,42 +68,6 @@
 		<value>$INFO[Container(6).ListItem.Label2]</value>
 	</variable>
 
-	<variable name="skinsettings_Choose_Widget1_Path_Label">
-		<value condition="Skin.String(Widget1_Custom_Path)">$INFO[Skin.String(Widget1_Custom_Path),- ]</value>
-		<value>- $LOCALIZE[573]</value>
-	</variable>
-	<variable name="skinsettings_Choose_Widget2_Path_Label">
-		<value condition="Skin.String(Widget2_Custom_Path)">$INFO[Skin.String(Widget2_Custom_Path),- ]</value>
-		<value>- $LOCALIZE[573]</value>
-	</variable>
-	<variable name="skinsettings_Choose_Widget3_Path_Label">
-		<value condition="Skin.String(Widget3_Custom_Path)">$INFO[Skin.String(Widget3_Custom_Path),- ]</value>
-		<value>- $LOCALIZE[573]</value>
-	</variable>
-	<variable name="skinsettings_Choose_Widget4_Path_Label">
-		<value condition="Skin.String(Widget4_Custom_Path)">$INFO[Skin.String(Widget4_Custom_Path),- ]</value>
-		<value>- $LOCALIZE[573]</value>
-	</variable>
-	<variable name="skinsettings_Choose_Widget5_Path_Label">
-		<value condition="Skin.String(Widget5_Custom_Path)">$INFO[Skin.String(Widget5_Custom_Path),- ]</value>
-		<value>- $LOCALIZE[573]</value>
-	</variable>
-	<variable name="skinsettings_Choose_Widget6_Path_Label">
-		<value condition="Skin.String(Widget6_Custom_Path)">$INFO[Skin.String(Widget6_Custom_Path),- ]</value>
-		<value>- $LOCALIZE[573]</value>
-	</variable>
-	<variable name="skinsettings_Choose_Widget7_Path_Label">
-		<value condition="Skin.String(Widget7_Custom_Path)">$INFO[Skin.String(Widget7_Custom_Path),- ]</value>
-		<value>- $LOCALIZE[573]</value>
-	</variable>
-	<variable name="skinsettings_Choose_Widget8_Path_Label">
-		<value condition="Skin.String(Widget8_Custom_Path)">$INFO[Skin.String(Widget8_Custom_Path),- ]</value>
-		<value>- $LOCALIZE[573]</value>
-	</variable>
-	<variable name="skinsettings_Choose_Widget9_Path_Label">
-		<value condition="Skin.String(Widget9_Custom_Path)">$INFO[Skin.String(Widget9_Custom_Path),- ]</value>
-		<value>- $LOCALIZE[573]</value>
-	</variable>
 	<variable name="skinsettings_Hint_Label">
 		<!-- Main menu -->
 		<value condition="Control.HasFocus(10)">$LOCALIZE[31500]</value>
@@ -133,7 +97,6 @@
 		<value condition="Control.HasFocus(16080) | Control.HasFocus(16081)">$LOCALIZE[31819]</value>
 		<!-- Home -->
 		<value condition="Control.HasFocus(1101)">$LOCALIZE[31529]</value>
-		<value condition="Control.HasFocus(1103)">$LOCALIZE[31530]</value>
 		<value condition="Control.HasFocus(1110)">$LOCALIZE[31542]</value>
 		<value condition="Control.HasFocus(1111)">$LOCALIZE[31543]</value>
 		<value condition="Control.HasFocus(1118)">$LOCALIZE[31533]</value>
@@ -273,22 +236,6 @@
 		<value condition="Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="Player.Muted">$LOCALIZE[31629]</value>
 		<value>$INFO[Control.GetLabel(63),,%]</value>
-	</variable>
-
-	<variable name="widgetsettings_Hint_Label">
-		<value condition="Control.HasFocus(10) | Control.HasFocus(11) | Control.HasFocus(12) | Control.HasFocus(13)">$LOCALIZE[31502]</value>
-		<value condition="Control.HasFocus(20) | Control.HasFocus(21) | Control.HasFocus(22) | Control.HasFocus(23)">$LOCALIZE[31502]</value>
-		<value condition="Control.HasFocus(30) | Control.HasFocus(31) | Control.HasFocus(32) | Control.HasFocus(33)">$LOCALIZE[31502]</value>
-		<value condition="Control.HasFocus(40) | Control.HasFocus(41) | Control.HasFocus(42) | Control.HasFocus(43)">$LOCALIZE[31502]</value>
-		<value condition="Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(53)">$LOCALIZE[31502]</value>
-		<value condition="Control.HasFocus(60) | Control.HasFocus(61) | Control.HasFocus(62) | Control.HasFocus(63)">$LOCALIZE[31502]</value>
-		<value condition="Control.HasFocus(70) | Control.HasFocus(71) | Control.HasFocus(72) | Control.HasFocus(73)">$LOCALIZE[31502]</value>
-		<value condition="Control.HasFocus(80) | Control.HasFocus(81) | Control.HasFocus(82) | Control.HasFocus(83)">$LOCALIZE[31502]</value>
-		<value condition="Control.HasFocus(90) | Control.HasFocus(91) | Control.HasFocus(92) | Control.HasFocus(93)">$LOCALIZE[31502]</value>
-		<value condition="Control.HasFocus(110) | Control.HasFocus(210) | Control.HasFocus(310) | Control.HasFocus(410) | Control.HasFocus(510) | Control.HasFocus(610) | Control.HasFocus(710) | Control.HasFocus(810) | Control.HasFocus(910)">$LOCALIZE[31596]</value>
-		<value condition="Control.HasFocus(111) | Control.HasFocus(211) | Control.HasFocus(311) | Control.HasFocus(411) | Control.HasFocus(511) | Control.HasFocus(611) | Control.HasFocus(711) | Control.HasFocus(811) | Control.HasFocus(911)">$LOCALIZE[31567]</value>
-		<value condition="Control.HasFocus(114) | Control.HasFocus(214) | Control.HasFocus(314) | Control.HasFocus(414) | Control.HasFocus(514) | Control.HasFocus(614) | Control.HasFocus(714) | Control.HasFocus(814) | Control.HasFocus(914)">$LOCALIZE[31598]</value>
-		<value condition="Control.HasFocus(115) | Control.HasFocus(215) | Control.HasFocus(315) | Control.HasFocus(415) | Control.HasFocus(515) | Control.HasFocus(615) | Control.HasFocus(715) | Control.HasFocus(815) | Control.HasFocus(915)">$LOCALIZE[31599]</value>
 	</variable>
 
 </includes>

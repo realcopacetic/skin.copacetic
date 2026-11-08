@@ -3,7 +3,6 @@
 	<include file="Actions.xml" />
 	<include file="Animations.xml" />
 	<include file="Buttons_Infoscreen_Path_Tracer.xml" />
-	<include file="Buttons_Widget_Reset.xml" />
 	<include file="Colors.xml" />
 	<include file="Components_Buttons.xml" />
 	<include file="Components_DialogKeyboard.xml" />

@@ -299,12 +299,6 @@
 			<label>- $LOCALIZE[31489]</label>
 			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,name=widgetsettings,mapping=widgets)</onclick>
 		</control>
-		<control type="button" id="1103">
-			<description>- Reset widgets</description>
-			<visible>false</visible> <!-- the editor's Reset (414) replaces it; goes with the old slots in P5-3 -->
-			<label>- $LOCALIZE[31430]</label>
-			<onclick>RunScript(script.copacetic.helper,action=dialog_yesno,heading=$LOCALIZE[31430],message=$LOCALIZE[31431],yes_actions=SetFocus(4200))</onclick>
-		</control>
 		<control type="label" id="1114">
 			<description>Global search</description>
 			<visible>ControlGroup(9).HasFocus(11)</visible>
@@ -769,66 +763,6 @@
 			<label>$INFO[Control.GetLabel(11)]</label>
 			<visible>!String.IsEmpty(Control.GetLabel(11))</visible>
 		</control>
-	</include>
-
-	<include name="widgetsettings_Content_Template">
-		<include content="widgetsettings_$PARAM[side]_Content">
-			<param name="previous_widget_position" value="9" />
-			<param name="widget_position" value="1" />
-			<param name="next_widget_position" value="2" />
-		</include>
-		<include content="widgetsettings_$PARAM[side]_Content">
-			<param name="previous_widget_position" value="1" />
-			<param name="widget_position" value="2" />
-			<param name="next_widget_position" value="3" />
-		</include>
-		<include content="widgetsettings_$PARAM[side]_Content">
-			<param name="previous_widget_position" value="2" />
-			<param name="widget_position" value="3" />
-			<param name="next_widget_position" value="4" />
-		</include>
-		<include content="widgetsettings_$PARAM[side]_Content">
-			<param name="previous_widget_position" value="3" />
-			<param name="widget_position" value="4" />
-			<param name="next_widget_position" value="5" />
-		</include>
-		<include content="widgetsettings_$PARAM[side]_Content">
-			<param name="previous_widget_position" value="4" />
-			<param name="widget_position" value="5" />
-			<param name="next_widget_position" value="6" />
-		</include>
-		<include content="widgetsettings_$PARAM[side]_Content">
-			<param name="previous_widget_position" value="5" />
-			<param name="widget_position" value="6" />
-			<param name="next_widget_position" value="7" />
-		</include>
-		<include content="widgetsettings_$PARAM[side]_Content">
-			<param name="previous_widget_position" value="6" />
-			<param name="widget_position" value="7" />
-			<param name="next_widget_position" value="8" />
-		</include>
-		<include content="widgetsettings_$PARAM[side]_Content">
-			<param name="previous_widget_position" value="7" />
-			<param name="widget_position" value="8" />
-			<param name="next_widget_position" value="9" />
-		</include>
-		<include content="widgetsettings_$PARAM[side]_Content">
-			<param name="previous_widget_position" value="8" />
-			<param name="widget_position" value="9" />
-			<param name="next_widget_position" value="1" />
-		</include>
-	</include>
-
-	<include name="widgetsettings_Left_List_Content">
-		<include content="widgetsettings_Content_Template">
-			<param name="side" value="Left" />
-		</include>
-	</include>
-
-	<include name="widgetsettings_Right_List_Content">
-		<include content="widgetsettings_Content_Template">
-			<param name="side" value="Right" />
-		</include>
 	</include>
 
 	<include name="globalsearchsettings_Left_List_Content">

@@ -30,8 +30,8 @@ LISTS
 3100          Secondary
 3100          Secondary (on infoscreen - album tracklist)
 3100          Hidden list (for set/picture info when secondary lists disabled)
-320X          Widget settings grouplists
-32XX          Widgets
+3200          Home rows grouplist (Templates_Widgets.xml, Home_Widgets)
+32XX          Widgets (Home rows from 3201, generated; info screen and global search rails)
 3300          Background slideshow container
 3400          Multiart fadelabel
 3500          Music player controls
@@ -54,7 +54,6 @@ BUTTONS
 4021          Infoscreen star rating up button
 4022          Infoscreen star rating down button
 410X          Set focus away from secondary list
-4200          Reset widgets
 4201          Global search button
 4300          Set focus to screensaver
 
@@ -66,6 +65,8 @@ ANIMATION DELAYS
 5005          Options menu settings change
 5006          Container Switching delay (to hide multiart following container transition)
 5007          infoline_fade animation break window
+5200          A Home row was reached just now (Timers.xml reads it; generated widgets_container_switching)
+5203+         Home row latches, row id + 2002 (generated, widgets_latches)
 
 CHECKERS
 6001          Container update bounce test
