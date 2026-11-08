@@ -92,35 +92,6 @@
 	<onload condition="!Skin.String(GlobalSearch_Albums_Limit)">Skin.SetString(GlobalSearch_Albums_Limit,30)</onload>
 	<onload condition="!Skin.String(GlobalSearch_Songs_Limit)">Skin.SetString(GlobalSearch_Songs_Limit,30)</onload>
 	<!-- Layout configuration -->
-	<!-- Showcase -->
-	<onload condition="!Skin.String(ShowcaseView_Display_Movies)">Skin.SetString(ShowcaseView_Display_Movies,Posters)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Display_Sets)">Skin.SetString(ShowcaseView_Display_Sets,Posters)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Display_TVShows)">Skin.SetString(ShowcaseView_Display_TVShows,Posters)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Display_Seasons)">Skin.SetString(ShowcaseView_Display_Seasons,Posters)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Display_Programs_Folders)">Skin.SetString(ShowcaseView_Display_Programs_Folders,Posters)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Display_Programs_Files)">Skin.SetString(ShowcaseView_Display_Programs_Files,Posters)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Display_Favourites)">Skin.SetString(ShowcaseView_Display_Favourites,Square)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Details_Movies)">Skin.SetString(ShowcaseView_Details_Movies,All_Side)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Details_Sets)">Skin.SetString(ShowcaseView_Details_Sets,All_Side)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Details_TVShows)">Skin.SetString(ShowcaseView_Details_TVShows,All_Side)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Details_Seasons)">Skin.SetString(ShowcaseView_Details_Seasons,TitleAndInfo_Side)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Details_Episodes)">Skin.SetString(ShowcaseView_Details_Episodes,All_Side)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Details_Artists)">Skin.SetString(ShowcaseView_Details_Artists,TitleAndInfo_Overlay)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Details_Albums)">Skin.SetString(ShowcaseView_Details_Albums,TitleAndInfo_Overlay)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Details_Addons)">Skin.SetString(ShowcaseView_Details_Addons,TitleAndInfo_Overlay)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Details_Images)">Skin.SetString(ShowcaseView_Details_Images,TitleAndInfo_Overlay)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Details_Programs_Folders)">Skin.SetString(ShowcaseView_Details_Programs_Folders,All_Side)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Details_Programs_Files)">Skin.SetString(ShowcaseView_Details_Programs_Files,All_Side)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Details_Favourites)">Skin.SetString(ShowcaseView_Details_Favourites,Title_Overlay)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Logo_Movies)">Skin.SetString(ShowcaseView_Logo_Movies,Off)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Logo_Sets)">Skin.SetString(ShowcaseView_Logo_Sets,Off)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Logo_TVShows)">Skin.SetString(ShowcaseView_Logo_TVShows,Off)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Logo_Artists)">Skin.SetString(ShowcaseView_Logo_Artists,Off)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Flags_Movies)">Skin.SetString(ShowcaseView_Flags_Movies,All)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Flags_Sets)">Skin.SetString(ShowcaseView_Flags_Sets,All)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Flags_TVShows)">Skin.SetString(ShowcaseView_Flags_TVShows,All)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Flags_Seasons)">Skin.SetString(ShowcaseView_Flags_Seasons,All)</onload>
-	<onload condition="!Skin.String(ShowcaseView_Flags_Episodes)">Skin.SetString(ShowcaseView_Flags_Episodes,All)</onload>
 	<!-- Strip -->
 	<onload condition="!Skin.String(StripView_Display_Movies)">Skin.SetString(StripView_Display_Movies,Posters)</onload>
 	<onload condition="!Skin.String(StripView_Display_Sets)">Skin.SetString(StripView_Display_Sets,Posters)</onload>

@@ -549,18 +549,6 @@
 					<onleft condition="Container(3000).HasFocus(3)">SetFocus(4014)</onleft>
 					<!-- Transition on right only -->
 					<onright condition="Container(3000).HasFocus(4)">SetFocus(4014)</onright>
-					<!-- Showcase: Turn off Logos & transition on left only -->
-					<onleft condition="Container(3000).HasFocus(5) + Container.Content(movies)">Skin.SetString(ShowcaseView_Logo_Movies,Off)</onleft>
-					<onleft condition="Container(3000).HasFocus(5) + Container.Content(sets)">Skin.SetString(ShowcaseView_Logo_Sets,Off)</onleft>
-					<onleft condition="Container(3000).HasFocus(5) + Container.Content(tvshows)">Skin.SetString(ShowcaseView_Logo_TVShows,Off)</onleft>
-					<onleft condition="Container(3000).HasFocus(5) + Container.Content(artists)">Skin.SetString(ShowcaseView_Logo_Artists,Off)</onleft>
-					<onleft condition="Container(3000).HasFocus(5)">SetFocus(4014)</onleft>
-					<!-- Showcase: Turn off Logos & transition on right only -->
-					<onright condition="Container(3000).HasFocus(6) + Container.Content(movies)">Skin.SetString(ShowcaseView_Logo_Movies,Off)</onright>
-					<onright condition="Container(3000).HasFocus(6) + Container.Content(sets)">Skin.SetString(ShowcaseView_Logo_Sets,Off)</onright>
-					<onright condition="Container(3000).HasFocus(6) + Container.Content(tvshows)">Skin.SetString(ShowcaseView_Logo_TVShows,Off)</onright>
-					<onright condition="Container(3000).HasFocus(6) + Container.Content(artists)">Skin.SetString(ShowcaseView_Logo_Artists,Off)</onright>
-					<onright condition="Container(3000).HasFocus(6)">SetFocus(4014)</onright>
 					<!-- Strip: Turn off Logos & transition on right only -->
 					<onright condition="Container(3000).HasFocus(7) + Container.Content(movies)">Skin.SetString(StripView_Logo_Movies,Off)</onright>
 					<onright condition="Container(3000).HasFocus(7) + Container.Content(sets)">Skin.SetString(StripView_Logo_Sets,Off)</onright>
@@ -608,7 +596,6 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<include content="ShowcaseView_Menu_Options" condition="$EXP[layout_showcase_include_media] + !Skin.HasSetting(Kiosk_Mode)" />
 						<include content="StripView_Menu_Options" condition="$EXP[layout_strip_include_media] + !Skin.HasSetting(Kiosk_Mode)" />
 						<include content="View_Menu_Options" condition="!Skin.HasSetting(Kiosk_Mode) + !Window.Is(musicplaylist) + !Window.Is(videoplaylist)" />
 						<include content="Common_Menu_Options">

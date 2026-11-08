@@ -66,7 +66,7 @@
       ]
     },
     "details_{item}_visible": {
-      "items": [ "off", "breadcrumb", "title", "info", "plot", "all" ],
+      "items": [ "off", "breadcrumb", "title", "info", "plot", "all", "title_overlay", "info_overlay" ],
       "rules": [
         {
           "condition": "equals({details}, {item})",
@@ -74,7 +74,7 @@
           "value": "{condition}"
         },
         {
-          "condition": "equals({details}, bio) + equals({item}, plot)",
+          "condition": "In({details}, [bio, review, description]) + equals({item}, plot)",
           "type": "append",
           "value": "{condition}"
         }

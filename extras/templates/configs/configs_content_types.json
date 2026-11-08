@@ -168,6 +168,69 @@
         "*": "info"
       }
     },
+    "showcase_display": {
+      "items": {
+        "posters": "$LOCALIZE[31006]",
+        "square": "$LOCALIZE[31008]"
+      },
+      "filter_mode": "exclude",
+      "rules": [
+        {
+          "condition": "In({content_type}, [episodes, videos, musicvideos, artists, albums, songs, addons, program_addons, images])",
+          "value": [ "posters" ]
+        }
+      ],
+      "defaults": {
+        "favourites": "square",
+        "*": "posters"
+      }
+    },
+    "showcase_details": {
+      "items": {
+        "off": "$LOCALIZE[591]",
+        "title_overlay": "$LOCALIZE[31017] ($LOCALIZE[31029])",
+        "info_overlay": "$LOCALIZE[31018] ($LOCALIZE[31029])",
+        "title": "$LOCALIZE[31017] ($LOCALIZE[31028])",
+        "info": "$LOCALIZE[31018] ($LOCALIZE[31028])",
+        "plot": "$LOCALIZE[31019] ($LOCALIZE[31028])",
+        "bio": "$LOCALIZE[31020] ($LOCALIZE[31028])",
+        "review": "$LOCALIZE[31021] ($LOCALIZE[31028])",
+        "all": "$LOCALIZE[593] ($LOCALIZE[31028])"
+      },
+      "filter_mode": "exclude",
+      "rules": [
+        {
+          "condition": "not In({content_type}, [movies, sets, tvshows, seasons, episodes, program_folders, program_files])",
+          "value": [ "plot" ]
+        },
+        {
+          "condition": "not In({content_type}, [artists])",
+          "value": [ "bio" ]
+        },
+        {
+          "condition": "not In({content_type}, [albums, addons, program_addons])",
+          "value": [ "review" ]
+        },
+        {
+          "condition": "In({content_type}, [images])",
+          "value": [ "title", "info", "all" ]
+        },
+        {
+          "condition": "In({content_type}, [favourites])",
+          "value": [ "info_overlay", "info", "all" ]
+        }
+      ],
+      "defaults": {
+        "seasons": "info",
+        "artists": "info_overlay",
+        "albums": "info_overlay",
+        "addons": "info_overlay",
+        "program_addons": "info_overlay",
+        "images": "info_overlay",
+        "favourites": "title_overlay",
+        "*": "all"
+      }
+    },
     "{content_type}_flags": {
       "items": {
         "off": "$LOCALIZE[591]",
