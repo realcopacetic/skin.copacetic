@@ -1,0 +1,29 @@
+{
+  "mapping": "search",
+  "expressions": {
+    "StripView_Display_IsPosters_Widget_Search": {
+      "index": { "start": 3201 },
+      "filter": "In({search_type}, [movies, tvshows, episodes, musicvideos, artists, albums, songs])",
+      "rules": [ { "condition": "equals({art}, Posters)", "type": "append", "value": "{hasfocus}" } ]
+    },
+    "StripView_Display_IsFanart_Widget_Search": {
+      "index": { "start": 3201 },
+      "filter": "In({search_type}, [movies, tvshows, episodes, musicvideos, artists, albums, songs])",
+      "rules": [ { "condition": "equals({art}, Fanart)", "type": "append", "value": "{hasfocus}" } ]
+    },
+    "StripView_Display_IsSquare_Widget_Search": {
+      "index": { "start": 3201 },
+      "filter": "In({search_type}, [movies, tvshows, episodes, musicvideos, artists, albums, songs])",
+      "rules": [ { "condition": "equals({art}, Square)", "type": "append", "value": "{hasfocus}" } ]
+    },
+    "StripView_Widget_Search_IsVisible": {
+      "index": { "start": 3201 },
+      "rules": [ { "type": "append", "value": "{hasfocus}" } ]
+    },
+    "search_container_switching": {
+      "note": "The focused rail was reached less than 0.5x ago (its latch, search_latches).",
+      "index": { "start": 3201 },
+      "rules": [ { "type": "append", "value": "[Control.HasFocus({index}) + Control.IsVisible({index+2002})]" } ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "mapping": "search",
+  "variables": {
+    "search_path_{index}": {
+      "note": "An empty field asks for nothing (empty.xsp), so no rail loads the library until there is a query.",
+      "index": { "start": 3201 },
+      "filter": "In({search_type}, [movies, tvshows, episodes, musicvideos, artists, albums, songs])",
+      "values": [
+        {
+          "condition": "String.IsEmpty(Window(home).Property(search_query))",
+          "value": "special://skin/extras/playlists/empty.xsp"
+        },
+        {
+          "value": "{content}{xsp}"
+        }
+      ]
+    },
+    "search_info_{index}": {
+      "note": "The rail's name beside the query; episodes add the focused episode's show.",
+      "index": { "start": 3201 },
+      "filter": "In({search_type}, [movies, tvshows, episodes, musicvideos, artists, albums, songs])",
+      "values": [
+        {
+          "filter": "equals({search_type}, episodes)",
+          "value": "{label}$VAR[Copacetic_Divider_Bold, ]$INFO[Container({index}).ListItem.TVShowTitle, ]"
+        },
+        {
+          "value": "{label}"
+        }
+      ]
+    },
+    "_search_scroll_nib_cluster": {
+      "note": "Light nibs on a Strip's art with a focused rail, otherwise as the theme.",
+      "index": { "start": 3201 },
+      "filter": "In({search_type}, [movies, tvshows, episodes, musicvideos, artists, albums, songs])",
+      "outputs": {
+        "background": "search_Scroll_Widget_Background_Color",
+        "focused": "search_Scroll_Widget_Focused_Color"
+      },
+      "rows": [
+        {
+          "filter": "In({art}, [Posters, Square])",
+          "condition": "Control.HasFocus({index}) + Skin.String(Theme,Light) + !String.IsEmpty(Container({index}).ListItemNoWrap(2).Label)",
+          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
+          "focused": "$VAR[Light_Color]"
+        },
+        {
+          "filter": "equals({art}, Fanart)",
+          "condition": "Control.HasFocus({index}) + Skin.String(Theme,Light) + !String.IsEmpty(Container({index}).ListItemNoWrap(1).Label)",
+          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
+          "focused": "$VAR[Light_Color]"
+        },
+        {
+          "condition": "Skin.String(Theme,Light)",
+          "background": "$VAR[Alpha_15]$VAR[Dark_Hex]",
+          "focused": "$VAR[Dark_Grey_Color]"
+        },
+        {
+          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
+          "focused": "$VAR[Light_Color]"
+        }
+      ]
+    }
+  }
+}

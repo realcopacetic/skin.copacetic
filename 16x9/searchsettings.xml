@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- searchsettings: the helper's search rails editor, opened from skin settings 1116 -->
+	<defaultcontrol always="true">100</defaultcontrol>
+	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<controls>
+		<include content="editor_Hidden" />
+		<include content="Default_Dialog_Panel_Layout">
+			<param name="visible" value="!$EXP[TransparentDialog_IsVisible]" />
+			<include content="Breadcrumb_Label">
+				<param name="title_label" value="$LOCALIZE[31705]" />
+			</include>
+			<include content="Settings_List_Template">
+				<param name="embedded_buttons" value="true" />
+				<param name="focus_border_margin_left" value="60" />
+				<param name="height" value="630" />
+				<param name="id" value="100" />
+				<param name="label2_visible" value="false" />
+				<param name="left" value="90" />
+				<param name="top" value="225" />
+				<param name="width" value="870" />
+				<onleft>415</onleft>
+				<onright>412</onright>
+			</include>
+			<include content="Dialog_Divider_With_Scrollbar">
+				<param name="scrollbarvisible" value="Control.HasFocus(100) | Control.HasFocus(410) | Control.HasFocus(411) | Control.HasFocus(412) | Control.HasFocus(413)" />
+			</include>
+			<include content="Settings_Grouplist_Template">
+				<param name="id" value="9001" />
+				<param name="include_scrollbar" value="false" />
+				<param name="left" value="960" />
+				<param name="onleft" value="413" />
+				<param name="onright" value="414" />
+				<param name="pagecontrol" value="61" />
+				<param name="width" value="870" />
+				<include content="search_editor_Right_List_Content" />
+			</include>
+			<include content="Description_Label">
+				<param name="bottom" value="40" />
+				<param name="height" value="100" />
+				<param name="id" value="6" />
+				<param name="right" value="150" />
+				<param name="textcolor" value="$VAR[Light_Color]" />
+				<param name="type" value="textbox" />
+			</include>
+			<include content="Button_Group_Template">
+				<param name="button1" value="true" />
+				<param name="button1_id" value="414" />
+				<param name="button1_texture" value="Reset" />
+				<param name="button2" value="true" />
+				<param name="button2_id" value="415" />
+				<param name="button2_texture" value="Check" />
+				<param name="ondown" value="211" />
+				<param name="onleft" value="9001" />
+				<param name="onright" value="100" />
+				<param name="onup" value="225" />
+			</include>
+		</include>
+	</controls>
+</window>

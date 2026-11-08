@@ -116,10 +116,7 @@
 	</include>
 
 	<include name="ClickAction_Open_Artist">
-		<onclick>Dialog.Close(all)</onclick>
-		<onclick>SetProperty(SentFromInfo,true,musicinformation)</onclick>
-		<onclick condition="Control.HasFocus(3204) + Window.IsVisible(music)">Container.Update(musicdb://artists/$INFO[Container(3202).ListItem.DBID]/)</onclick>
-		<onclick condition="Control.HasFocus(3204) + !Window.IsVisible(music)">ActivateWindow(music,musicdb://artists/$INFO[Container(3202).ListItem.DBID]/,return)</onclick>
+		<onclick>ActivateWindow(music,musicdb://artists/$INFO[Container($PARAM[id]).ListItem.DBID]/,return)</onclick>
 	</include>
 
 	<include name="ClickAction_Open_Album">

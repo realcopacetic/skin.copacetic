@@ -11,6 +11,13 @@
 			<param name="panel_edge_top" value="435" />
 			<include content="Breadcrumb_Label">
 				<param name="title_label_id" value="311" />
+				<param name="visible" value="!Window.IsVisible(1180)" />
+			</include>
+			<!-- Over search: an edit's keyboard heading is always "Enter value" (GUIEditControl.cpp:83) -->
+			<include content="Breadcrumb_Label">
+				<param name="title_label" value="$LOCALIZE[137]" />
+				<param name="title_label_id" value="6309" />
+				<param name="visible" value="Window.IsVisible(1180)" />
 			</include>
 			<control type="grouplist">
 				<top>495</top>

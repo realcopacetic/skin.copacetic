@@ -633,6 +633,22 @@
 		</control>
 	</include>
 
+	<!-- Search's rail nibs, one per rail with results -->
+	<include name="search_Scrollbar">
+		<control type="grouplist">
+			<visible>!$EXP[TransparentDialog_IsVisible]</visible>
+			<include content="Visible_Fade_Delayed_Animation" />
+			<include content="search_nib_fades" />
+			<right>30</right>
+			<width>6</width>
+			<height>100%</height>
+			<align>center</align>
+			<orientation>vertical</orientation>
+			<itemgap>0</itemgap>
+			<include content="search_nibs" />
+		</control>
+	</include>
+
 	<include name="globalsearch_Scrollbar">
 		<include content="Widget_Scrollbar_Template">
 			<param name="visible" value="!$EXP[TransparentDialog_IsVisible]" />

@@ -1,0 +1,51 @@
+{
+  "mapping": "search",
+  "controls": {
+    "search_{index}": {
+      "control_type": "listitem",
+      "label": "{label}"
+    },
+    "search_type": {
+      "role": "item_picker",
+      "id": 200,
+      "control_type": "button",
+      "visible": "false",
+      "label": "$LOCALIZE[467]",
+      "onclick": { "type": "select", "heading": "$LOCALIZE[40004]" }
+    },
+    "search_limit": {
+      "field": "limit",
+      "id": 211,
+      "control_type": "cycle",
+      "label": "$LOCALIZE[21427]"
+    },
+    "search_query_plot": {
+      "field": "query_plot",
+      "id": 222,
+      "control_type": "radiobutton",
+      "visible": "In({search_type}, [movies, tvshows, episodes, musicvideos])",
+      "label": "$LOCALIZE[31707]"
+    },
+    "search_query_tag": {
+      "field": "query_tag",
+      "id": 223,
+      "control_type": "radiobutton",
+      "visible": "In({search_type}, [movies, tvshows, musicvideos])",
+      "label": "$LOCALIZE[31708]"
+    },
+    "search_query_biography": {
+      "field": "query_biography",
+      "id": 224,
+      "control_type": "radiobutton",
+      "visible": "In({search_type}, [artists])",
+      "label": "$LOCALIZE[31709]"
+    },
+    "search_query_review": {
+      "field": "query_review",
+      "id": 225,
+      "control_type": "radiobutton",
+      "visible": "In({search_type}, [albums])",
+      "label": "$LOCALIZE[31710]"
+    }
+  }
+}

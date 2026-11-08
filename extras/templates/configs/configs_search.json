@@ -1,0 +1,25 @@
+{
+  "mapping": "search",
+  "configs": {
+    "limit": {
+      "items": [ "10", "15", "20", "25", "30" ],
+      "defaults": { "*": "30" }
+    },
+    "query_biography": {
+      "items": { "true": "$LOCALIZE[186]", "false": "$LOCALIZE[106]" },
+      "defaults": { "*": "true" }
+    },
+    "query_plot": {
+      "items": { "true": "$LOCALIZE[186]", "false": "$LOCALIZE[106]" },
+      "defaults": { "*": "false" }
+    },
+    "query_review": {
+      "items": { "true": "$LOCALIZE[186]", "false": "$LOCALIZE[106]" },
+      "defaults": { "*": "true" }
+    },
+    "query_tag": {
+      "items": { "true": "$LOCALIZE[186]", "false": "$LOCALIZE[106]" },
+      "defaults": { "*": "true" }
+    }
+  }
+}

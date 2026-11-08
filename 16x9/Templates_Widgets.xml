@@ -130,6 +130,74 @@
 		</control>
 	</include>
 
+	<!-- One search rail's art, breadcrumb and spinner, each on the rail's focus and outside grouplist 3200; search_layouts calls it once per rail -->
+	<include name="Search_Row_Layout">
+		<control type="group">
+			<visible>Control.HasFocus($PARAM[id]) + !Container($PARAM[id]).IsUpdating</visible>
+			<animation effect="slide" start="0" end="0,660" time="0" condition="Control.HasFocus($PARAM[id])">Conditional</animation>
+			<animation effect="slide" start="0" end="0,-660" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus($PARAM[id])">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus($PARAM[id])">Conditional</animation>
+			<include content="$PARAM[view]View_Display">
+				<param name="art_icon" value="Widget_$PARAM[display]_Thumbnail" />
+				<param name="display" value="$PARAM[display]" />
+				<param name="id" value="$PARAM[id]" />
+				<param name="media_view" value="false" />
+				<param name="widget_view" value="true" />
+			</include>
+		</control>
+		<include content="Breadcrumb_Label">
+			<param name="animation" value="Widget_Breadcrumb_Animation" />
+			<param name="info_label" value="$VAR[Copacetic_Divider_Bold] $PARAM[info]" />
+			<param name="info_label_visible" value="true" />
+			<param name="textcolor" value="$VAR[Breadcrumb_Label_Color]" />
+			<param name="title_label" value="'$INFO[Control.GetLabel(4200).index(1)]'" />
+			<param name="title_label_id" value="6$PARAM[id]" />
+			<param name="visible" value="Control.HasFocus($PARAM[id]) + !$EXP[TransparentDialog_IsVisible]" />
+		</include>
+		<include content="Busy_Spinner">
+			<param name="color" value="$VAR[Volume_Focused_Color]" />
+			<param name="visible" value="Control.HasFocus($PARAM[id]) + Container($PARAM[id]).IsUpdating + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(busydialog)" />
+		</include>
+	</include>
+
+	<!-- Search's field, in the breadcrumb's place. Hidden while a rail has focus (allowhiddenfocus lets Up and Back reach it) -->
+	<include name="Search_Field">
+		<control type="group">
+			<left>60</left>
+			<right>60</right>
+			<top>60</top>
+			<height>60</height>
+			<control type="image">
+				<visible>Control.HasFocus(4200)</visible>
+				<top>6</top>
+				<height>48</height>
+				<width>6</width>
+				<texture colordiffuse="$VAR[Accent_Color]">views/white_100.png</texture>
+			</control>
+			<control type="label">
+				<description>An edit draws its hint text only when it hasn't focus (GUIEditControl.cpp:522)</description>
+				<visible>Control.HasFocus(4200) + String.IsEmpty(Control.GetLabel(4200).index(1))</visible>
+				<left>18</left>
+				<height>60</height>
+				<label>$LOCALIZE[137]</label>
+				<font>Title_Breadcrumb_Label</font>
+				<textcolor>$VAR[Breadcrumb_Label_Color]</textcolor>
+			</control>
+			<control type="edit" id="4200">
+				<visible allowhiddenfocus="true">Control.HasFocus(4200)</visible>
+				<height>60</height>
+				<font>Title_Breadcrumb_Label</font>
+				<textoffsetx>18</textoffsetx>
+				<textcolor>$VAR[Breadcrumb_Label_Color]</textcolor>
+				<focusedcolor>$VAR[Breadcrumb_Label_Color]</focusedcolor>
+				<texturefocus />
+				<ondown>3200</ondown>
+				<onright>3200</onright>
+				<ontextchange>RunScript(script.copacetic.helper,action=set_search_query,id=4200,min_length=1)</ontextchange>
+			</control>
+		</control>
+	</include>
+
 	<include name="Infoscreen_Widget_Template">
 		<param name="id" />
 		<param name="widget_type" default="Infoscreen_Widget" />

@@ -297,10 +297,7 @@
 			<top>30</top>
 			<texturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_browse_unfocused_120.png</texturenofocus>
 			<texturefocus colordiffuse="$VAR[Light_Color]">icons/icon_browse_focused_120.png</texturefocus>
-			<onclick>SetProperty(globalsearch_focusing,true,home)</onclick>
-			<onclick>Skin.SetString(globalsearch)</onclick>
-			<onclick>$VAR[globalsearch_Open]</onclick>
-			<onclick>$VAR[globalsearch_Focus]</onclick>
+			<onclick>ActivateWindow(1180)</onclick>
 			<include content="globalsearch_home_Navigation" />
 		</control>
 	</include>

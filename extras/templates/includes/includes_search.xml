@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<mapping>search</mapping>
+	<includes>
+		<!-- A rail of a type C1 doesn't define (a state file edited by hand) builds nothing here: its fields are missing -->
+		<!-- The rails' containers, flat in grouplist 3200 (Custom_1180): the grouplist chains them and skips the empty ones -->
+		<template>
+			<index start="3201" />
+			<filter>In({search_type}, [movies, tvshows, episodes, musicvideos, artists, albums, songs])</filter>
+			<include name="search_rows">
+				<include content="Widget_List">
+					<param name="bypass_min_items" value="true" />
+					<param name="click_action" value="{click_action}" />
+					<param name="content" value="$VAR[search_path_{index}]" />
+					<param name="id" value="{index}" />
+					<param name="limit" value="{limit}" />
+					<param name="min_items" value="1" />
+					<param name="sortby" value="{sortby}" />
+					<param name="sortorder" value="{sortorder}" />
+					<param name="target" value="{target}" />
+					<param name="use_custom_click" value="{use_custom_click}" />
+					<param name="widget_type" value="Home_Row" />
+				</include>
+			</include>
+		</template>
+		<!-- Each rail's art and breadcrumb, outside the grouplist and shown on the rail's own focus -->
+		<template>
+			<index start="3201" />
+			<filter>In({search_type}, [movies, tvshows, episodes, musicvideos, artists, albums, songs])</filter>
+			<include name="search_layouts">
+				<include content="Search_Row_Layout">
+					<param name="display" value="{art}" />
+					<param name="id" value="{index}" />
+					<param name="info" value="$VAR[search_info_{index}]" />
+					<param name="view" value="{layout}" />
+				</include>
+			</include>
+		</template>
+		<!-- Latches for a rail reached just now: visible while it hasn't focus, and for 0.5x after -->
+		<template>
+			<index start="3201" />
+			<include name="search_latches">
+				<control type="group" id="{index+2002}">
+					<visible>!Control.HasFocus({index})</visible>
+					<animation effect="slide" end="0,0" time="Default_Transition_0.5x" reversible="false">Hidden</animation>
+				</control>
+			</include>
+		</template>
+		<template>
+			<index start="3201" />
+			<include name="search_nibs">
+				<include content="Widget_Scrollbar_Nib">
+					<param name="active" value="Control.HasFocus({index})" />
+					<param name="background_color" value="$VAR[search_Scroll_Widget_Background_Color]" />
+					<param name="focused_color" value="$VAR[search_Scroll_Widget_Focused_Color]" />
+					<param name="visible" value="Integer.IsGreater(Container({index}).NumItems,0)" />
+				</include>
+			</include>
+		</template>
+		<!-- One conditional fade per rail, so the nibs come back on each rail change -->
+		<template>
+			<index start="3201" />
+			<include name="search_nib_fades">
+				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus({index})">Conditional</animation>
+			</include>
+		</template>
+		<!-- Each rail goes back to its first item as the window closes, so a new query never opens part way along a rail -->
+		<template>
+			<index start="3201" />
+			<include name="search_cursor_resets">
+				<onunload condition="!String.IsEqual(Container({index}).CurrentItem,1)">Control.Move({index},$INFO[Container({index}).CurrentItem,-])</onunload>
+				<onunload condition="!String.IsEqual(Container({index}).CurrentItem,1)">Control.Move({index},1)</onunload>
+			</include>
+		</template>
+	</includes>
+</xml>

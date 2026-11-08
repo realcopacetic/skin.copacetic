@@ -432,6 +432,28 @@
 		</control>
 	</include>
 
+	<!-- The helper sets the labels and shows each control's value as label2 (controls_search.json); 200 is its Add picker, kept hidden -->
+	<include name="search_editor_Right_List_Content">
+		<control type="button" id="200">
+			<description>Type</description>
+		</control>
+		<control type="button" id="211">
+			<description>Limit</description>
+		</control>
+		<control type="radiobutton" id="222">
+			<description>Search plots</description>
+		</control>
+		<control type="radiobutton" id="223">
+			<description>Search tags</description>
+		</control>
+		<control type="radiobutton" id="224">
+			<description>Search biographies</description>
+		</control>
+		<control type="radiobutton" id="225">
+			<description>Search reviews and labels</description>
+		</control>
+	</include>
+
 	<include name="smartplaylisteditor_Left_List_Content">
 		<control type="button" id="22">
 			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>

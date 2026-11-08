@@ -1,0 +1,217 @@
+{
+  "search": {
+    "mode": "dynamic",
+    "items": [
+      "movies",
+      "tvshows",
+      "episodes",
+      "musicvideos",
+      "artists",
+      "albums",
+      "songs"
+    ],
+    "placeholders": {
+      "key": "search_type"
+    },
+    "default_order": [ "movies", "tvshows", "episodes", "artists", "albums", "songs" ],
+    "tokens": {
+      "hasfocus": "Control.HasFocus({index})"
+    },
+    "config_fields": {
+      "global": {
+        "limit": "limit"
+      },
+      "movies": {
+        "query_plot": "query_plot",
+        "query_tag": "query_tag"
+      },
+      "tvshows": {
+        "query_plot": "query_plot",
+        "query_tag": "query_tag"
+      },
+      "episodes": {
+        "query_plot": "query_plot"
+      },
+      "musicvideos": {
+        "query_plot": "query_plot",
+        "query_tag": "query_tag"
+      },
+      "artists": {
+        "query_biography": "query_biography"
+      },
+      "albums": {
+        "query_review": "query_review"
+      }
+    },
+    "metadata": {
+      "movies": {
+        "label": "$LOCALIZE[342]",
+        "target": "videos",
+        "content": "videodb://movies/titles/",
+        "sortby": "votes",
+        "sortorder": "descending",
+        "layout": "Strip",
+        "art": "Posters",
+        "use_custom_click": "true",
+        "click_action": "Play_File",
+        "xsp": {
+          "rules": {
+            "or": [
+              { "field": "title", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "originaltitle", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "set", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "genre", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "director", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "actor", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "studio", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "plot", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ], "gate": "query_plot" },
+              { "field": "tag", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ], "gate": "query_tag" }
+            ]
+          },
+          "type": "movies"
+        }
+      },
+      "tvshows": {
+        "label": "$LOCALIZE[20343]",
+        "target": "videos",
+        "content": "videodb://tvshows/titles/",
+        "sortby": "votes",
+        "sortorder": "descending",
+        "layout": "Strip",
+        "art": "Posters",
+        "use_custom_click": "true",
+        "click_action": "Open_TVShow",
+        "xsp": {
+          "rules": {
+            "or": [
+              { "field": "title", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "originaltitle", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "genre", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "director", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "actor", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "studio", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "plot", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ], "gate": "query_plot" },
+              { "field": "tag", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ], "gate": "query_tag" }
+            ]
+          },
+          "type": "tvshows"
+        }
+      },
+      "episodes": {
+        "label": "$LOCALIZE[20360]",
+        "target": "videos",
+        "content": "videodb://recentlyaddedepisodes/",
+        "sortby": "votes",
+        "sortorder": "descending",
+        "layout": "Strip",
+        "art": "Fanart",
+        "use_custom_click": "true",
+        "click_action": "Play_File",
+        "xsp": {
+          "rules": {
+            "or": [
+              { "field": "title", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "tvshow", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "director", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "actor", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "plot", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ], "gate": "query_plot" }
+            ]
+          },
+          "type": "episodes"
+        }
+      },
+      "musicvideos": {
+        "label": "$LOCALIZE[20389]",
+        "target": "videos",
+        "content": "videodb://musicvideos/titles/",
+        "sortby": "year",
+        "sortorder": "descending",
+        "layout": "Strip",
+        "art": "Fanart",
+        "use_custom_click": "true",
+        "click_action": "Play_File",
+        "xsp": {
+          "rules": {
+            "or": [
+              { "field": "title", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "artist", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "album", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "genre", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "director", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "studio", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "plot", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ], "gate": "query_plot" },
+              { "field": "tag", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ], "gate": "query_tag" }
+            ]
+          },
+          "type": "musicvideos"
+        }
+      },
+      "artists": {
+        "label": "$LOCALIZE[133]",
+        "target": "music",
+        "content": "musicdb://artists/",
+        "sortby": "artist",
+        "sortorder": "ascending",
+        "layout": "Strip",
+        "art": "Fanart",
+        "use_custom_click": "true",
+        "click_action": "Open_Artist",
+        "xsp": {
+          "rules": {
+            "or": [
+              { "field": "artist", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "genre", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "biography", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ], "gate": "query_biography" }
+            ]
+          },
+          "type": "artists"
+        }
+      },
+      "albums": {
+        "label": "$LOCALIZE[132]",
+        "target": "music",
+        "content": "musicdb://albums/",
+        "sortby": "album",
+        "sortorder": "ascending",
+        "layout": "Strip",
+        "art": "Square",
+        "use_custom_click": "true",
+        "click_action": "Home_Open_Album",
+        "xsp": {
+          "rules": {
+            "or": [
+              { "field": "album", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "artist", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "genre", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "label", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ], "gate": "query_review" },
+              { "field": "review", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ], "gate": "query_review" }
+            ]
+          },
+          "type": "albums"
+        }
+      },
+      "songs": {
+        "label": "$LOCALIZE[134]",
+        "target": "music",
+        "content": "musicdb://songs/",
+        "sortby": "title",
+        "sortorder": "ascending",
+        "layout": "Strip",
+        "art": "Square",
+        "use_custom_click": "true",
+        "click_action": "Play_All_Songs",
+        "xsp": {
+          "rules": {
+            "or": [
+              { "field": "title", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "album", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "artist", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] },
+              { "field": "genre", "operator": "contains", "value": [ "$ESCINFO[Window(home).Property(search_query)]" ] }
+            ]
+          },
+          "type": "songs"
+        }
+      }
+    }
+  }
+}

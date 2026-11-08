@@ -1,46 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window type="dialog" id="1180">
-  <!-- globalsearch -->
-  <include content="Widget_Position_Reset_OnLoad" />
-  <defaultcontrol always="true">3000</defaultcontrol>
-  <controls>
-
-    <!-- Button bouncer until containers are populated -->
-    <control type="button" id="3000">
-      <visible allowhiddenfocus="true">false</visible>
-      <animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Focus</animation>
-      <include content="globalsearch_Focus_Setter">
-        <param name="bounce_id" value="3001" />
-      </include>
-    </control>
-    <control type="button" id="3001">
-      <visible allowhiddenfocus="true">false</visible>
-      <animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Focus</animation>
-      <include content="globalsearch_Focus_Setter">
-        <param name="bounce_id" value="3000" />
-      </include>
-    </control>
-
-    <control type="group">
-      <visible>!$EXP[Infoscreen_IsVisible]</visible>
-      <include content="Visible_Fade_Delayed_Animation" />
-      <include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
-      <include content="User_Scroll_Delay" />
-      <include content="globalsearch_Widget_3201_Movies" condition="!Skin.HasSetting(GlobalSearch_Movies_Disabled)" />
-      <include content="globalsearch_Widget_3202_TVShows" condition="!Skin.HasSetting(GlobalSearch_TVShows_Disabled)" />
-      <include content="globalsearch_Widget_3203_Episodes" condition="!Skin.HasSetting(GlobalSearch_Episodes_Disabled)" />
-      <include content="globalsearch_Widget_3204_Artists" condition="!Skin.HasSetting(GlobalSearch_Artists_Disabled)" />
-      <include content="globalsearch_Widget_3205_Albums" condition="!Skin.HasSetting(GlobalSearch_Albums_Disabled)" />
-      <include content="globalsearch_Widget_3206_Songs" condition="!Skin.HasSetting(GlobalSearch_Songs_Disabled)" />
-      <include content="globalsearch_Scrollbar" />
-      <include content="Variable_Title_Label">
-        <param name="visible" value="!$EXP[globalsearch_Container_Switching] + !$EXP[TransparentDialog_IsVisible]" />
-        <param name="label" value="$VAR[Title_Label]" />
-        <param name="textcolor" value="$VAR[Primary_Color]" />
-        <include content="Visible_Fade_Delayed_Animation" />
-        <animation effect="slide" end="0,-15" time="0" condition="$EXP[StripView_Display_IsSquare] | $EXP[StripView_Display_IsFanart]">Conditional</animation>
-      </include>
-    </control>
-
-  </controls>
+<window type="window" id="1180">
+	<!-- Search: a window, so Back returns to whatever opened it -->
+	<defaultcontrol always="true">4200</defaultcontrol>
+	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<!-- A skin reload empties the field but keeps the Home property -->
+	<onload condition="String.IsEmpty(Control.GetLabel(4200).index(1)) + !String.IsEmpty(Window(home).Property(search_query))">ClearProperty(search_query,home)</onload>
+	<include content="search_cursor_resets" />
+	<controls>
+		<include content="Light_Theme_Background" />
+		<control type="group">
+			<visible>!$EXP[Infoscreen_IsVisible]</visible>
+			<include content="Visible_Fade_Delayed_Animation" />
+			<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
+			<include content="User_Scroll_Delay" />
+			<include content="search_latches" />
+			<control type="grouplist" id="3200">
+				<description>The rails are flat here, so the grouplist chains Up and Down itself and skips rails that can't take focus (no size: they draw nothing)</description>
+				<orientation>vertical</orientation>
+				<itemgap>0</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<scrolltime>0</scrolltime>
+				<onup>4200</onup>
+				<ondown>4200</ondown>
+				<onback>4200</onback>
+				<defaultcontrol always="true">3201</defaultcontrol>
+				<include content="search_rows" />
+			</control>
+			<include content="search_layouts" />
+			<include content="search_Scrollbar" />
+			<include content="Variable_Title_Label">
+				<param name="label" value="$VAR[Title_Label]" />
+				<param name="textcolor" value="$VAR[Primary_Color]" />
+				<param name="visible" value="!$EXP[search_container_switching] + !$EXP[TransparentDialog_IsVisible]" />
+				<include content="Visible_Fade_Delayed_Animation" />
+				<animation effect="slide" end="0,-15" time="0" condition="$EXP[StripView_Display_IsSquare] | $EXP[StripView_Display_IsFanart]">Conditional</animation>
+			</include>
+			<include content="Search_Field" />
+		</control>
+	</controls>
 </window>

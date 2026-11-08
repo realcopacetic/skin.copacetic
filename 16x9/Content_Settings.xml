@@ -316,7 +316,7 @@
 			<description>Configure global search</description>
 			<visible>ControlGroup(9).HasFocus(11) + !Skin.HasSetting(GlobalSearch_Disabled)</visible>
 			<label>- $LOCALIZE[31705]</label>
-			<onclick>ActivateWindow(1181)</onclick>
+			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,name=searchsettings,mapping=search)</onclick>
 		</control>
 		<control type="label" id="1104">
 			<description>General</description>

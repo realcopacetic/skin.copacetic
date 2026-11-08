@@ -46,8 +46,7 @@
 			<!-- globalsearch -->
 			<item>
 				<onclick>SetFocus(50)</onclick>
-				<onclick>Skin.SetString(globalsearch)</onclick>
-				<onclick>$VAR[globalsearch_Open]</onclick>
+				<onclick>ActivateWindow(1180)</onclick>
 				<label>$LOCALIZE[137]</label>
 				<label2>$LOCALIZE[137]</label2>
 				<visible>Control.IsEnabled(8) + [Window.Is(videos) | Window.Is(music)]</visible>
