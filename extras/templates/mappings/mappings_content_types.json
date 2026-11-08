@@ -44,7 +44,7 @@
       "artists": { "window": "music", "condition": "Container.Content(artists)", "label": "$LOCALIZE[133]" },
       "albums": { "window": "music", "condition": "Container.Content(albums)", "label": "$LOCALIZE[132]" },
       "songs": { "window": "music", "condition": "Container.Content(songs)", "label": "$LOCALIZE[134]" },
-      "addons": { "window": "addonbrowser", "condition": "$EXP[Container_Addons_NonRepo]", "label": "$LOCALIZE[24001]" },
+      "addons": { "window": "addonbrowser", "condition": "!Window.IsVisible(programs) + $EXP[Container_Addons_NonRepo]", "label": "$LOCALIZE[24001]" },
       "program_addons": { "window": "programs", "condition": "Window.IsVisible(programs) + Container.Content(addons)", "label": "$LOCALIZE[1043]" },
       "program_folders": { "window": "programs", "condition": "$EXP[Container_Programs_IsFolders]", "label": "$LOCALIZE[0] / $LOCALIZE[20334]" },
       "program_files": { "window": "programs", "condition": "$EXP[Container_Programs_IsFiles]", "label": "$LOCALIZE[0] / $LOCALIZE[744]" },

@@ -80,6 +80,20 @@
         }
       ]
     },
+    "details_list_info_visible": {
+      "rules": [
+        {
+          "condition": "equals({details}, info)",
+          "type": "append",
+          "value": "{condition}"
+        },
+        {
+          "condition": "not equals({layout}, list) + In({content_type}, [addons, musicvideos])",
+          "type": "append",
+          "value": "{condition}"
+        }
+      ]
+    },
     "flags_{item}_visible": {
       "items": [ "studio", "rating", "all" ],
       "rules": [
