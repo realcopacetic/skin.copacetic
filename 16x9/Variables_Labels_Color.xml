@@ -349,9 +349,6 @@
 	</variable>
 
 	<!-- Window Properties -->
-	<variable name="Window_Property_Season_Divider_Bold">
-		<value condition="!String.IsEmpty(Window.Property(season))">$VAR[Copacetic_Divider_Bold]</value>
-	</variable>
 	<variable name="Window_Property_Title_Divider_Bold">
 		<value condition="!String.IsEmpty(Window.Property(title))">$VAR[Copacetic_Divider_Bold]</value>
 	</variable>

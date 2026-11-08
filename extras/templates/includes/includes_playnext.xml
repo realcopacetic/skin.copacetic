@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<mapping>none</mapping>
+	<includes>
+		<!-- The play next card's countdown bar (Templates_script-upnext.xml), one step per second of Player.TimeRemaining, as C2's.
+			The card opens at L-1 s left, so the open leg takes the bar from full to (L-1)/L over its first second; not reversible,
+			as a close would run it back while the closing dialog drops every key. Then only the chosen lead's steps load -->
+		<template>
+			<items>20,30,45,60</items>
+			<include name="playnext_countdown">
+				<animation type="WindowOpen" reversible="false" condition="String.IsEqual(Skin.String(playnext_lead),{item})">
+					<effect type="zoom" start="100,100" end="{(item-1)*100/item},100" center="0,3" time="1000" />
+				</animation>
+				<include content="playnext_countdown_{item}" condition="String.IsEqual(Skin.String(playnext_lead),{item})" />
+			</include>
+		</template>
+		<!-- Step n holds from n s left: zoom n/(n+1), so the open leg and the steps that hold multiply to n/L.
+			A seek back reverses steps; a seek forward runs them together over 1 s -->
+		<template>
+			<items>20,30,45,60</items>
+			<range start="1" end="58" />
+			<filter>lessthan({range}, {item-1})</filter>
+			<include name="playnext_countdown_{item}">
+				<animation effect="zoom" end="{range*100/(range+1)},100" center="0,3" time="1000" condition="Integer.IsLess(Player.TimeRemaining(secs),{range+1})">Conditional</animation>
+			</include>
+		</template>
+	</includes>
+</xml>

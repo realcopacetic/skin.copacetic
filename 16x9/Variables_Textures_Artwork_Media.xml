@@ -545,7 +545,7 @@
 		<value condition="Skin.String(script-upnext_Artwork,Posters) + !String.IsEmpty(VideoPlayer.Offset(1).Art(tvshow.keyart))">$INFO[VideoPlayer.Offset(1).Art(tvshow.keyart)]</value>
 		<value condition="Skin.String(script-upnext_Artwork,Posters) + !String.IsEmpty(VideoPlayer.Offset(1).Art(tvshow.poster))">$INFO[VideoPlayer.Offset(1).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(VideoPlayer.Offset(1).Art(tvshow.fanart))">$INFO[VideoPlayer.Offset(1).Art(tvshow.fanart)]</value>
-		<value condition="!String.IsEmpty(Window.Property(fanart))">$INFO[Window.Property(fanart)]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.Offset(1).Art(thumb))">$INFO[VideoPlayer.Offset(1).Art(thumb)]</value>
 	</variable>
 
 	<variable name="skinsettings_Themes_Screenshots">

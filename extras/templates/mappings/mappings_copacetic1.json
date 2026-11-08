@@ -1,13 +1,25 @@
 {
   "copacetic1": {
     "mode": "dynamic",
-    "items": [ "background" ],
+    "items": [ "background", "player" ],
+    "placeholders": { "key": "settings_category" },
     "skin_mirrors": {
       "slideshow_path": "slideshow_path",
-      "slideshow2_path": "slideshow2_path"
+      "slideshow2_path": "slideshow2_path",
+      "playnext_enabled": "playnext_enabled",
+      "playnext_lead": "playnext_lead"
+    },
+    "config_fields": {
+      "player": {
+        "playnext_enabled": "playnext_enabled",
+        "playnext_lead": "playnext_lead",
+        "still_watching": "still_watching",
+        "playnext_idle": "playnext_idle"
+      }
     },
     "metadata": {
-      "background": { "label": "$LOCALIZE[31438]" }
+      "background": { "label": "$LOCALIZE[31438]" },
+      "player": { "label": "$LOCALIZE[14200]" }
     }
   }
 }

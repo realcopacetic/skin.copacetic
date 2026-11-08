@@ -33,9 +33,16 @@
 		<value>$LOCALIZE[31628]</value>
 	</variable>
 
-	<variable name="script-upnext_Label">
-		<value condition="!Integer.IsGreater(Window.Property(Episode),9)">$VAR[Window_Property_Season_Divider_Bold]$INFO[Window.Property(season), ]$INFO[Window.Property(episode),x0]</value>
-		<value>$VAR[Window_Property_Season_Divider_Bold]$INFO[Window.Property(season), ]$INFO[Window.Property(episode),x]</value>
+	<variable name="script-upnext_Title_Label">
+		<value condition="$EXP[playnext_held]">Still there?</value>
+		<value>$LOCALIZE[209]</value>
+	</variable>
+	<variable name="script-upnext_Label"> <!-- the queued episode -->
+		<value condition="!Integer.IsGreater(VideoPlayer.Offset(1).Episode,9)">$VAR[script-upnext_Season_Divider_Bold]$INFO[VideoPlayer.Offset(1).Season, ]$INFO[VideoPlayer.Offset(1).Episode,x0]</value>
+		<value>$VAR[script-upnext_Season_Divider_Bold]$INFO[VideoPlayer.Offset(1).Season, ]$INFO[VideoPlayer.Offset(1).Episode,x]</value>
+	</variable>
+	<variable name="script-upnext_Season_Divider_Bold">
+		<value condition="!String.IsEmpty(VideoPlayer.Offset(1).Season)">$VAR[Copacetic_Divider_Bold]</value>
 	</variable>
 
 	<variable name="seekbar_Left_Label">
@@ -142,7 +149,6 @@
 		<value condition="Control.HasFocus(1403)">$LOCALIZE[31552]</value>
 		<value condition="Control.HasFocus(1404)">$LOCALIZE[31553]</value>
 		<value condition="Control.HasFocus(14050) | Control.HasFocus(14051)">$LOCALIZE[31554]</value>
-		<value condition="Control.HasFocus(1409)">$LOCALIZE[31590]</value>
 		<value condition="Control.HasFocus(14100) | Control.HasFocus(14101)">$LOCALIZE[31591]</value>
 		<value condition="Control.HasFocus(1408)">$LOCALIZE[31556]</value>
 		<value condition="Control.HasFocus(1421)">$LOCALIZE[31811]</value>

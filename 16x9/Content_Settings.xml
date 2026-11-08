@@ -581,18 +581,15 @@
 			<selected>Skin.HasSetting(Prefer_TimeRemaining)</selected>
 			<visible>ControlGroup(9).HasFocus(14)</visible>
 		</control>
-		<control type="radiobutton" id="1409">
-			<description>Enable Up Next widget during playback</description>
-			<label>$LOCALIZE[31490]</label>
-			<onclick condition="System.HasAddon(service.upnext)">RunScript(script.copacetic.helper,action=toggle_addon,id=service.upnext)</onclick>
-			<onclick condition="!System.HasAddon(service.upnext)">InstallAddon(service.upnext)</onclick>
-			<selected>System.AddonIsEnabled(service.upnext)</selected>
+		<control type="button" id="1409">
+			<description>Play next: the card's time before the end and "Still there?"</description>
+			<label>$LOCALIZE[10008]</label>
+			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,focus_item=player,host_focus=203,mapping=copacetic1,name=pathsettings)</onclick>
 			<visible>ControlGroup(9).HasFocus(14)</visible>
 		</control>
 		<include content="skinsettings_Slider_Button">
 			<param name="visible" value="ControlGroup(9).HasFocus(14)" />
 			<param name="info" value="script-upnext_Artwork" />
-			<param name="visible" value="ControlGroup(9).HasFocus(14) + System.AddonIsEnabled(service.upnext)" />
 			<param name="label" value="$LOCALIZE[31491]" />
 			<param name="label2" value="$VAR[skinsettings_script-upnext_Artwork_Label2]" />
 			<param name="previous" value="1409" />

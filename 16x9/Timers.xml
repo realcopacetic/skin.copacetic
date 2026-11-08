@@ -42,6 +42,14 @@
     <stop>!Player.HasVideo</stop>
   </timer>
   <timer>
+    <name>playnext</name>
+    <description>opens the play next card (1190) in the last playnext_lead seconds of a library episode with the next one queued, and closes it outside them</description>
+    <start reset="true">Skin.HasSetting(playnext_enabled) + Window.IsVisible(fullscreenvideo) + VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Offset(1).Title) + Integer.IsGreater(Player.TimeRemaining(secs),0) + Integer.IsLess(Player.TimeRemaining(secs),Skin.String(playnext_lead))</start>
+    <stop>![Skin.HasSetting(playnext_enabled) + Window.IsVisible(fullscreenvideo) + VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Offset(1).Title) + Integer.IsGreater(Player.TimeRemaining(secs),0) + Integer.IsLess(Player.TimeRemaining(secs),Skin.String(playnext_lead))]</stop>
+    <onstart>ActivateWindow(1190)</onstart>
+    <onstop>Dialog.Close(1190)</onstop>
+  </timer>
+  <timer>
     <name>music_playback</name>
     <description>timer that starts whenever music is playing</description>
     <start reset="true">Player.HasAudio + Player.Playing</start>

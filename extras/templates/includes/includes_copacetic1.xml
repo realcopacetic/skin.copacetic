@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<mapping>copacetic1</mapping>
+	<includes>
+		<!-- The play next card's "Still there?" hold (Custom_1190_Playnext.xml): it pauses playback after playnext_idle seconds
+			without input. Generated, as System.IdleTime takes its number when the condition is parsed; off is 999999999 -->
+		<template>
+			<filter>equals({settings_category}, player)</filter>
+			<include name="playnext_hold">
+				<onload condition="Player.Playing + System.IdleTime({playnext_idle})">SetProperty(playnext_hold,true,1190)</onload><!-- stamps the hold: a user pause is not one -->
+				<onload condition="Player.Playing + System.IdleTime({playnext_idle})">PlayerControl(Play)</onload>
+			</include>
+		</template>
+	</includes>
+</xml>

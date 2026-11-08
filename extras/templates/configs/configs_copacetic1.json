@@ -1,0 +1,40 @@
+{
+  "mapping": "copacetic1",
+  "configs": {
+    "playnext_enabled": {
+      "items": [ "true", "false" ],
+      "defaults": { "*": "true" }
+    },
+    "playnext_lead": {
+      "items": {
+        "20": "20 $LOCALIZE[31732]",
+        "30": "30 $LOCALIZE[31732]",
+        "45": "45 $LOCALIZE[31732]",
+        "60": "60 $LOCALIZE[31732]"
+      },
+      "defaults": { "*": "30" }
+    },
+    "still_watching": {
+      "items": {
+        "off": "$LOCALIZE[351]",
+        "1hour": "60 $LOCALIZE[31733]",
+        "90mins": "90 $LOCALIZE[31733]",
+        "2hours": "120 $LOCALIZE[31733]",
+        "3hours": "180 $LOCALIZE[31733]"
+      },
+      "defaults": { "*": "off" }
+    },
+    "playnext_idle": {
+      "dependent_fields": [ "still_watching" ],
+      "items": [ "3600", "5400", "7200", "10800", "999999999" ],
+      "filter_mode": "include",
+      "rules": [
+        { "condition": "equals({still_watching}, 1hour)", "value": [ "3600" ] },
+        { "condition": "equals({still_watching}, 90mins)", "value": [ "5400" ] },
+        { "condition": "equals({still_watching}, 2hours)", "value": [ "7200" ] },
+        { "condition": "equals({still_watching}, 3hours)", "value": [ "10800" ] },
+        { "condition": "true", "value": [ "999999999" ] }
+      ]
+    }
+  }
+}

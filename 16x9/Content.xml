@@ -124,6 +124,15 @@
 			<visible>Skin.HasSetting(slideshow2)</visible>
 			<label>$LOCALIZE[108] 2</label>
 		</control>
+		<!-- Player row: cycles; the helper shows each value as label2 -->
+		<control type="button" id="203">
+			<description>Play next card's time before the end</description>
+			<label>Show the card before the end</label>
+		</control>
+		<control type="button" id="204">
+			<description>Still there?</description>
+			<label>Still there?</label>
+		</control>
 	</include>
 
 	<include name="playerprocessinfo_PVR_List_Content">

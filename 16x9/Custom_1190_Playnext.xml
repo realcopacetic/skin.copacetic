@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- play next -->
+<window type="dialog" id="1190">
+	<!-- The play next card, opened and closed by the playnext timer (Timers.xml). No window-level visible:
+		a custom dialog with one is modeless and gets no input -->
+	<defaultcontrol always="true">3012</defaultcontrol>
+	<onload>Dialog.Close(fullscreeninfo,true)</onload>
+	<onload>Dialog.Close(videoosd,true)</onload>
+	<onunload>ClearProperty(playnext_hold,1190)</onunload>
+	<include content="playnext_hold" /> <!-- generated: "Still there?" (includes_copacetic1.xml) -->
+	<include content="WindowOpenClose_Fade_Delayed_Animation" />
+	<controls>
+		<include content="script-upnext_template" />
+	</controls>
+</window>
