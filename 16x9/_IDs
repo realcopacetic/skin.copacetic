@@ -122,7 +122,7 @@ VIEW EDITOR (viewsettings.xml, ids set by the helper's dynamic_settings_window)
 9001          Controls grouplist
 
 WIDGET EDITOR (widgetsettings.xml, ids set by the helper's dynamic_settings_window)
-6             Description textbox (hidden)
+6             Description textbox
 100           Rows
 201-216       Row settings (controls_widgets.json)
 410-413       Add, move up, move down, delete (hidden buttons drawn in the focused row)
