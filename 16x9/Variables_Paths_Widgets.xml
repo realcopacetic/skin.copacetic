@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+	<!-- Home -->
+	<!-- Liked songs: an empty bound drops the rule, so with Like off the row would list every song -->
+	<variable name="Path_LikedSongs_From">
+		<value condition="Integer.IsGreater(Skin.String(like_threshold),0)">$INFO[Skin.String(like_threshold)]</value>
+		<value>8</value>
+	</variable>
+
 	<!-- Info -->
 	<variable name="ContainerPath_0">
 		<value condition="!String.IsEmpty(Container.FolderPath)">$INFO[Container.FolderPath]</value>

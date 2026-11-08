@@ -213,7 +213,7 @@
               {
                 "field": "userrating",
                 "operator": "between",
-                "value": [ "$INFO[Skin.String(like_threshold)]", "10" ]
+                "value": [ "$VAR[Path_LikedSongs_From]", "10" ]
               }
             ]
           },
