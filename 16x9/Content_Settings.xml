@@ -297,11 +297,11 @@
 			<description>Configure widgets</description>
 			<visible>ControlGroup(9).HasFocus(11) + Skin.HasSetting(Widgets_Enabled)</visible>
 			<label>- $LOCALIZE[31489]</label>
-			<onclick>ActivateWindow(1140)</onclick>
+			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,name=widgetsettings,mapping=widgets)</onclick>
 		</control>
 		<control type="button" id="1103">
 			<description>- Reset widgets</description>
-			<visible>ControlGroup(9).HasFocus(11) + Skin.HasSetting(Widgets_Enabled)</visible>
+			<visible>false</visible> <!-- the editor's Reset (414) replaces it; goes with the old slots in P5-3 -->
 			<label>- $LOCALIZE[31430]</label>
 			<onclick>RunScript(script.copacetic.helper,action=dialog_yesno,heading=$LOCALIZE[31430],message=$LOCALIZE[31431],yes_actions=SetFocus(4200))</onclick>
 		</control>

@@ -610,42 +610,27 @@
 		</definition>
 	</include>
 
+	<!-- Home's row nibs: the template's fixed pos0-pos9 can't hold a free number of rows, so its grouplist is spelled out -->
 	<include name="Home_Scrollbar">
-		<include content="Widget_Scrollbar_Template">
-			<param name="visible" value="!Control.HasFocus(4300) + !$EXP[TransparentDialog_IsVisible]" />
-			<param name="background_color" value="$VAR[Home_Scroll_Widget_Background_Color]" />
-			<param name="focused_color" value="$VAR[Home_Scroll_Widget_Focused_Color]" />
-			<param name="pos0_enabled" value="true" />
-			<param name="pos0_visible" value="true" />
-			<param name="pos0_active" value="Control.HasFocus(3000) | Control.HasFocus(4300) | $EXP[Music_Player_HasFocus] | Control.HasFocus(4201)" />
-			<param name="pos1_enabled" value="!Skin.HasSetting(Widget1_Content_Disabled)" />
-			<param name="pos1_visible" value="Control.IsVisible(3201)" />
-			<param name="pos1_active" value="Control.HasFocus(3201)" />
-			<param name="pos2_enabled" value="!Skin.HasSetting(Widget2_Content_Disabled)" />
-			<param name="pos2_visible" value="Control.IsVisible(3202)" />
-			<param name="pos2_active" value="Control.HasFocus(3202)" />
-			<param name="pos3_enabled" value="!Skin.HasSetting(Widget3_Content_Disabled)" />
-			<param name="pos3_visible" value="Control.IsVisible(3203)" />
-			<param name="pos3_active" value="Control.HasFocus(3203)" />
-			<param name="pos4_enabled" value="!Skin.HasSetting(Widget4_Content_Disabled)" />
-			<param name="pos4_visible" value="Control.IsVisible(3204)" />
-			<param name="pos4_active" value="Control.HasFocus(3204)" />
-			<param name="pos5_enabled" value="!Skin.HasSetting(Widget5_Content_Disabled)" />
-			<param name="pos5_visible" value="Control.IsVisible(3205)" />
-			<param name="pos5_active" value="Control.HasFocus(3205)" />
-			<param name="pos6_enabled" value="!Skin.HasSetting(Widget6_Content_Disabled)" />
-			<param name="pos6_visible" value="Control.IsVisible(3206)" />
-			<param name="pos6_active" value="Control.HasFocus(3206)" />
-			<param name="pos7_enabled" value="!Skin.HasSetting(Widget7_Content_Disabled)" />
-			<param name="pos7_visible" value="Control.IsVisible(3207)" />
-			<param name="pos7_active" value="Control.HasFocus(3207)" />
-			<param name="pos8_enabled" value="!Skin.HasSetting(Widget8_Content_Disabled)" />
-			<param name="pos8_visible" value="Control.IsVisible(3208)" />
-			<param name="pos8_active" value="Control.HasFocus(3208)" />
-			<param name="pos9_enabled" value="!Skin.HasSetting(Widget9_Content_Disabled)" />
-			<param name="pos9_visible" value="Control.IsVisible(3209)" />
-			<param name="pos9_active" value="Control.HasFocus(3209)" />
-		</include>
+		<control type="grouplist">
+			<visible>!Control.HasFocus(4300) + !$EXP[TransparentDialog_IsVisible]</visible>
+			<include content="Visible_Fade_Delayed_Animation" />
+			<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus(3000) | Control.HasFocus(4300) | $EXP[Music_Player_HasFocus] | Control.HasFocus(4201)">Conditional</animation>
+			<include content="widgets_nib_fades" />
+			<right>30</right>
+			<width>6</width>
+			<height>100%</height>
+			<align>center</align>
+			<orientation>vertical</orientation>
+			<itemgap>0</itemgap>
+			<include content="Widget_Scrollbar_Nib">
+				<param name="active" value="Control.HasFocus(3000) | Control.HasFocus(4300) | $EXP[Music_Player_HasFocus] | Control.HasFocus(4201)" />
+				<param name="background_color" value="$VAR[Home_Scroll_Widget_Background_Color]" />
+				<param name="focused_color" value="$VAR[Home_Scroll_Widget_Focused_Color]" />
+				<param name="visible" value="true" />
+			</include>
+			<include content="widgets_nibs" />
+		</control>
 	</include>
 
 	<include name="globalsearch_Scrollbar">

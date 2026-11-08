@@ -1,0 +1,108 @@
+{
+  "mapping": "widgets",
+  "expressions": {
+    "BillboardView_Display_IsFanart_Widget_Home": {
+      "index": { "start": 3201 },
+      "rules": [ { "condition": "equals({layout}, Billboard)", "type": "append", "value": "{home_row}" } ]
+    },
+    "ShowcaseView_Display_IsPosters_Widget_Home": {
+      "index": { "start": 3201 },
+      "rules": [ { "condition": "equals({layout}, Showcase) + equals({art}, Posters)", "type": "append", "value": "{home_row}" } ]
+    },
+    "ShowcaseView_Display_IsSquare_Widget_Home": {
+      "index": { "start": 3201 },
+      "rules": [ { "condition": "equals({layout}, Showcase) + equals({art}, Square)", "type": "append", "value": "{home_row}" } ]
+    },
+    "StripView_Display_IsPosters_Widget_Home": {
+      "index": { "start": 3201 },
+      "rules": [ { "condition": "equals({layout}, Strip) + equals({art}, Posters)", "type": "append", "value": "{home_row}" } ]
+    },
+    "StripView_Display_IsFanart_Widget_Home": {
+      "index": { "start": 3201 },
+      "rules": [ { "condition": "equals({layout}, Strip) + equals({art}, Fanart)", "type": "append", "value": "{home_row}" } ]
+    },
+    "StripView_Display_IsSquare_Widget_Home": {
+      "index": { "start": 3201 },
+      "rules": [ { "condition": "equals({layout}, Strip) + equals({art}, Square)", "type": "append", "value": "{home_row}" } ]
+    },
+    "GridView_Display_IsPosters_Widget_Home": {
+      "index": { "start": 3201 },
+      "rules": [ { "condition": "equals({layout}, Grid) + equals({art}, Posters)", "type": "append", "value": "{home_row}" } ]
+    },
+    "GridView_Display_IsFanart_Widget_Home": {
+      "index": { "start": 3201 },
+      "rules": [ { "condition": "equals({layout}, Grid) + equals({art}, Fanart)", "type": "append", "value": "{home_row}" } ]
+    },
+    "GridView_Display_IsSquare_Widget_Home": {
+      "index": { "start": 3201 },
+      "rules": [ { "condition": "equals({layout}, Grid) + equals({art}, Square)", "type": "append", "value": "{home_row}" } ]
+    },
+    "GridView_Display_IsSpotlight_Widget": {
+      "index": { "start": 3201 },
+      "rules": [ { "condition": "equals({layout}, Grid) + equals({art}, Spotlight)", "type": "append", "value": "{home_row}" } ]
+    },
+    "widget_grid_spotlight_{index}": {
+      "note": "Include conditions (Home_Row_Layout, Grid details): true when this row is Grid in Spotlight display.",
+      "index": { "start": 3201 },
+      "rules": [ { "condition": "equals({layout}, Grid) + equals({art}, Spotlight)", "type": "assign", "value": "true" } ]
+    },
+    "widget_landscape_{index}": {
+      "note": "Include conditions (Grid's Spotlight overlay): this row prefers landscape art.",
+      "index": { "start": 3201 },
+      "rules": [ { "condition": "equals({art_landscape}, true)", "type": "assign", "value": "true" } ]
+    },
+    "art_clearlogo_visible_{window}": {
+      "index": { "start": 3201 },
+      "rules": [ { "condition": "equals({art_clearlogo}, true)", "type": "append", "value": "{focused}" } ]
+    },
+    "art_keyart_visible_{window}": {
+      "index": { "start": 3201 },
+      "rules": [ { "condition": "equals({art_keyart}, true)", "type": "append", "value": "{focused}" } ]
+    },
+    "art_landscape_visible_{window}": {
+      "index": { "start": 3201 },
+      "rules": [ { "condition": "equals({art_landscape}, true)", "type": "append", "value": "{focused}" } ]
+    },
+    "Widget_HasLogo_{window}": {
+      "index": { "start": 3201 },
+      "rules": [ { "type": "append", "value": "$EXP[Widget_HasLogo_{window}_{index}]" } ]
+    },
+    "Widget_HasLogo_{window}_{index}": {
+      "index": { "start": 3201 },
+      "rules": [
+        {
+          "type": "assign",
+          "value": "Control.HasFocus({index}) + [String.IsEqual(Container({index}).ListItem.DBType,movie) | String.IsEqual(Container({index}).ListItem.DBType,set) | String.IsEqual(Container({index}).ListItem.DBType,tvshow) | String.IsEqual(Container({index}).ListItem.DBType,artist)] + !String.IsEmpty(Container({index}).ListItem.Art(clearlogo))"
+        }
+      ]
+    },
+    "Clearlogo_Served_Home": {
+      "index": { "start": 3201 },
+      "rules": [
+        { "type": "append", "value": "[Control.HasFocus({index}) + String.StartsWith(Container(9300).ListItem.Property(current),{index}/)]" }
+      ]
+    },
+    "Multiart_Container_Switching": {
+      "note": "The focused row was reached less than 2.5 s ago (its latch, widgets_latches).",
+      "index": { "start": 3201 },
+      "rules": [ { "type": "append", "value": "[{focused} + Control.IsVisible({index+2002})]" } ]
+    },
+    "widgets_container_switching": {
+      "note": "The probe 5200 reads this, so Timers.xml can (Timers.xml takes no $EXP): SkinTimerManager.cpp:73 registers the raw text.",
+      "index": { "start": 3201 },
+      "rules": [ { "type": "append", "value": "[Control.HasFocus({index}) + Control.IsVisible({index+2002})]" } ]
+    },
+    "widgets_home_hasfocus": {
+      "index": { "start": 3201 },
+      "rules": [ { "type": "append", "value": "Control.HasFocus({index})" } ]
+    },
+    "widgets_home_onprevious": {
+      "index": { "start": 3201 },
+      "rules": [ { "type": "append", "value": "Container({index}).OnPrevious" } ]
+    },
+    "widgets_home_onnext": {
+      "index": { "start": 3201 },
+      "rules": [ { "type": "append", "value": "Container({index}).OnNext" } ]
+    }
+  }
+}

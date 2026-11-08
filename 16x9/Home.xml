@@ -4,6 +4,8 @@
 	<include content="Startup_Migrate_Settings" /> <!-- a skin update in place reloads the current window, not Startup -->
 	<onunload condition="String.IsEqual(Window(home).Property(Trailer_Autoplay),true) + Player.HasVideo">PlayerControl(Stop)</onunload>
 	<onunload condition="String.IsEqual(Window(home).Property(Trailer_Autoplay),true)">ClearProperty(Trailer_Autoplay,home)</onunload>
+	<onunload>ClearProperty(autoplay_id,home)</onunload>
+	<onunload>ClearProperty(autoscroll_id,home)</onunload> <!-- a window exit sends no lost focus to the row -->
 	<defaultcontrol always="true">4010</defaultcontrol>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
 	<controls>

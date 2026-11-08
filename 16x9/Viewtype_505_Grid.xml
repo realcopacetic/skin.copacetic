@@ -177,27 +177,17 @@
 	<include name="GridView_Display">
 		<param name="id" />
 		<param name="art_icon" />
-		<param name="widget_position" />
+		<param name="art_landscape" default="false" />
+		<param name="display" /> <!-- a Home row's display, a literal: picks the art include -->
 		<param name="gridview_details_fade" />
+		<param name="widget_position" />
 		<definition>
 			<include content="Viewtype_Display_Template">
 				<param name="viewtype_label" value="Grid" />
-				<include content="GridView_Art_Posters" condition="!Skin.String(Widget$PARAM[widget_position]_Display,Fanart) + !Skin.String(Widget$PARAM[widget_position]_Display,Spotlight) + !Skin.String(Widget$PARAM[widget_position]_Display,Square)">
-					<param name="target_id" value="$PARAM[id]" />
+				<include content="GridView_Art_$PARAM[display]">
+					<param name="art_diffuse" value="!$PARAM[art_landscape]" />
 					<param name="art_icon" value="$PARAM[art_icon]" />
-				</include>
-				<include content="GridView_Art_Fanart" condition="Skin.String(Widget$PARAM[widget_position]_Display,Fanart)">
 					<param name="target_id" value="$PARAM[id]" />
-					<param name="art_icon" value="$PARAM[art_icon]" />
-				</include>
-				<include content="GridView_Art_Spotlight" condition="Skin.String(Widget$PARAM[widget_position]_Display,Spotlight)">
-					<param name="target_id" value="$PARAM[id]" />
-					<param name="art_icon" value="$PARAM[art_icon]" />
-					<param name="art_diffuse" value="!Skin.HasSetting(Widget$PARAM[widget_position]_Prefer_Landscape)" />
-				</include>
-				<include content="GridView_Art_Square" condition="Skin.String(Widget$PARAM[widget_position]_Display,Square)">
-					<param name="target_id" value="$PARAM[id]" />
-					<param name="art_icon" value="$PARAM[art_icon]" />
 				</include>
 			</include>
 		</definition>
@@ -205,6 +195,7 @@
 
 	<include name="GridView_Details">
 		<param name="id" />
+		<param name="media_view" default="false" />
 		<param name="widget_position" />
 		<param name="widget_display" />
 		<param name="include_progress" default="true" />
@@ -212,38 +203,56 @@
 			<include content="Viewtype_Details_Including_Content_Switching_Template">
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="viewtype_label" value="Grid" />
-				<include content="Progress_Grid_$PARAM[widget_display]" condition="Window.Is(movieinformation) + $PARAM[include_progress]">
+				<include content="Progress_Grid_$PARAM[widget_display]" condition="[Window.Is(movieinformation) | Window.Is(home)] + $PARAM[include_progress]">
 					<param name="id" value="$PARAM[id]" />
 				</include>
-				<include content="Progress_Grid_Posters" condition="Window.Is(home) + !Skin.String(Widget$PARAM[widget_position]_Display,Fanart) + !Skin.String(Widget$PARAM[widget_position]_Display,Spotlight) + !Skin.String(Widget$PARAM[widget_position]_Display,Square) + $PARAM[include_progress]">
+				<include content="GridView_Details_Breadcrumb_$PARAM[widget_display]">
 					<param name="id" value="$PARAM[id]" />
 				</include>
-				<include content="Progress_Grid_Fanart" condition="Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Fanart) + $PARAM[include_progress]">
-					<param name="id" value="$PARAM[id]" />
-				</include>
-				<include content="Progress_Grid_Spotlight" condition="Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Spotlight) + $PARAM[include_progress]">
-					<param name="id" value="$PARAM[id]" />
-				</include>
-				<include content="Progress_Grid_Square" condition="Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Square) + $PARAM[include_progress]">
-					<param name="id" value="$PARAM[id]" />
-				</include>
-				<include content="Breadcrumb_Label" condition="![Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Spotlight)]">
-					<param name="bar" value="false" />
-					<param name="title_label" value="$VAR[Title_Label]" />
-					<param name="title_label_id" value="$PARAM[id]4" />
-					<param name="info_label_visible" value="true" />
-					<param name="info_label" value="$VAR[GridView_Info_Label_Divider_Bold,, ]$VAR[Info_Label]" />
-					<param name="textcolor" value="$VAR[Primary_Color]" />
-					<animation effect="slide" start="0" end="0,780" time="0" condition="String.IsEqual(Control.GetLabel(620$PARAM[widget_position]2),Posters)">Conditional</animation>
-					<animation effect="slide" start="0" end="0,780" time="0" condition="Window.Is(home) + !Skin.String(Widget$PARAM[widget_position]_Display,Fanart) + !Skin.String(Widget$PARAM[widget_position]_Display,Square)">Conditional</animation>
-					<animation effect="slide" start="0" end="0,677" time="0" condition="String.IsEqual(Control.GetLabel(620$PARAM[widget_position]2),Fanart)">Conditional</animation>
-					<animation effect="slide" start="0" end="0,677" time="0" condition="Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Fanart)">Conditional</animation>
-					<animation effect="slide" start="0" end="0,690" time="0" condition="String.IsEqual(Control.GetLabel(620$PARAM[widget_position]2),Square)">Conditional</animation>
-					<animation effect="slide" start="0" end="0,690" time="0" condition="Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Square)">Conditional</animation>
-				</include>
-				<include content="GridView_Widget_Overlay" condition="Window.Is(home) + Skin.String(Widget$PARAM[widget_position]_Display,Spotlight) + !Skin.HasSetting(Widget$PARAM[widget_position]_Prefer_Landscape)" />
 			</include>
 		</definition>
+	</include>
+
+	<!-- The title breadcrumb, placed for the row's art; on a Home Spotlight row the overlay instead -->
+	<include name="GridView_Details_Breadcrumb">
+		<param name="id" />
+		<param name="offset" />
+		<definition>
+			<include content="Breadcrumb_Label">
+				<param name="bar" value="false" />
+				<param name="title_label" value="$VAR[Title_Label]" />
+				<param name="title_label_id" value="$PARAM[id]4" />
+				<param name="info_label_visible" value="true" />
+				<param name="info_label" value="$VAR[GridView_Info_Label_Divider_Bold,, ]$VAR[Info_Label]" />
+				<param name="textcolor" value="$VAR[Primary_Color]" />
+				<animation effect="slide" start="0" end="0,$PARAM[offset]" time="0" condition="true">Conditional</animation>
+			</include>
+		</definition>
+	</include>
+
+	<include name="GridView_Details_Breadcrumb_Posters">
+		<include content="GridView_Details_Breadcrumb">
+			<param name="id" value="$PARAM[id]" />
+			<param name="offset" value="780" />
+		</include>
+	</include>
+
+	<include name="GridView_Details_Breadcrumb_Fanart">
+		<include content="GridView_Details_Breadcrumb">
+			<param name="id" value="$PARAM[id]" />
+			<param name="offset" value="677" />
+		</include>
+	</include>
+
+	<include name="GridView_Details_Breadcrumb_Square">
+		<include content="GridView_Details_Breadcrumb">
+			<param name="id" value="$PARAM[id]" />
+			<param name="offset" value="690" />
+		</include>
+	</include>
+
+	<include name="GridView_Details_Breadcrumb_Spotlight">
+		<include content="GridView_Widget_Overlay" condition="!$EXP[widget_landscape_$PARAM[id]]" />
 	</include>
 
 </includes>

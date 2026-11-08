@@ -1,0 +1,226 @@
+{
+  "mapping": "widgets",
+  "variables": {
+    "widgets_{index}_Thumbnail(-3)Content": {
+      "note": "Slot -3 is never shown: its texture sits off the row's left edge.",
+      "index": {
+        "start": 3201
+      },
+      "values": [
+        {
+          "value": ""
+        }
+      ]
+    },
+    "widgets_{index}_Thumbnail({range})Content": {
+      "index": {
+        "start": 3201
+      },
+      "filter": "In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom])",
+      "range": {
+        "start": -2,
+        "end": 6
+      },
+      "values": [
+        {
+          "filter": "equals({range}, 0) + equals({layout}, Billboard)",
+          "condition": "Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Window(home).Property(Multiart_Fadeout))",
+          "value": "$INFO[Control.GetLabel(3400)]"
+        },
+        {
+          "filter": "equals({episode_thumbs}, true) + In({art}, [Fanart, Spotlight])",
+          "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(thumb)) + [String.IsEqual(Container.ListItemNoWrap({range}).DBType,episode) | String.IsEqual(Container.ListItemNoWrap({range}).DBType,video)]",
+          "value": "$INFO[ListItem({range}).Art(thumb)]"
+        },
+        {
+          "filter": "equals({art}, Square)",
+          "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(tvshow.square))",
+          "value": "$INFO[ListItem({range}).Art(tvshow.square)]"
+        },
+        {
+          "filter": "equals({art}, Square)",
+          "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(square))",
+          "value": "$INFO[ListItem({range}).Art(square)]"
+        },
+        {
+          "filter": "equals({art}, Square)",
+          "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(thumb))",
+          "value": "$INFO[ListItem({range}).Art(thumb)]"
+        },
+        {
+          "filter": "equals({art_landscape}, true) + not equals({layout}, Billboard) + not equals({art}, Posters)",
+          "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(tvshow.landscape))",
+          "value": "$INFO[ListItem({range}).Art(tvshow.landscape)]"
+        },
+        {
+          "filter": "equals({art_landscape}, true) + not equals({layout}, Billboard) + not equals({art}, Posters)",
+          "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(landscape)) + !String.IsEqual(ListItem({range}).DBType,album) + !String.IsEqual(ListItem({range}).DBType,song)",
+          "value": "$INFO[ListItem({range}).Art(landscape)]"
+        },
+        {
+          "filter": "not equals({art}, Posters)",
+          "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(tvshow.fanart))",
+          "value": "$INFO[ListItem({range}).Art(tvshow.fanart)]"
+        },
+        {
+          "filter": "not equals({art}, Posters)",
+          "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(fanart)) + !String.IsEqual(ListItem({range}).DBType,album) + !String.IsEqual(ListItem({range}).DBType,song)",
+          "value": "$INFO[ListItem({range}).Art(fanart)]"
+        },
+        {
+          "filter": "equals({art}, Posters) + equals({art_keyart}, true)",
+          "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(tvshow.keyart))",
+          "value": "$INFO[ListItem({range}).Art(tvshow.keyart)]"
+        },
+        {
+          "filter": "equals({art}, Posters) + equals({art_keyart}, true)",
+          "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(keyart))",
+          "value": "$INFO[ListItem({range}).Art(keyart)]"
+        },
+        {
+          "filter": "equals({art}, Posters)",
+          "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(tvshow.poster))",
+          "value": "$INFO[ListItem({range}).Art(tvshow.poster)]"
+        },
+        {
+          "filter": "equals({art}, Posters)",
+          "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(poster))",
+          "value": "$INFO[ListItem({range}).Art(poster)]"
+        },
+        {
+          "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Icon)",
+          "value": "$INFO[ListItem({range}).Icon]"
+        }
+      ]
+    },
+    "Multiart_Type": {
+      "note": "The art family a row's multiart cycles; not a row's own art: every other case is Multiart_Type_Media.",
+      "index": {
+        "start": 3201
+      },
+      "filter": "In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom])",
+      "values": [
+        {
+          "filter": "equals({art}, Posters) + equals({art_keyart}, true)",
+          "condition": "Control.HasFocus({index}) + String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Art(tvshow.keyart1))",
+          "value": "tvshow.keyart"
+        },
+        {
+          "filter": "equals({art}, Posters) + equals({art_keyart}, true)",
+          "condition": "Control.HasFocus({index}) + String.IsEqual(ListItem.DBType,episode) + String.IsEmpty(ListItem.Art(tvshow.keyart)) + !String.IsEmpty(ListItem.Art(tvshow.poster1))",
+          "value": "tvshow.poster"
+        },
+        {
+          "filter": "equals({art}, Posters) + not equals({art_keyart}, true)",
+          "condition": "Control.HasFocus({index}) + String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Art(tvshow.poster1))",
+          "value": "tvshow.poster"
+        },
+        {
+          "filter": "In({art}, [Fanart, Spotlight]) + equals({episode_thumbs}, true)",
+          "condition": "Control.HasFocus({index}) + String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Art(thumb1))",
+          "value": "thumb"
+        },
+        {
+          "filter": "In({art}, [Fanart, Spotlight]) + not equals({episode_thumbs}, true) + equals({art_landscape}, true)",
+          "condition": "Control.HasFocus({index}) + String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Art(tvshow.landscape1))",
+          "value": "tvshow.landscape"
+        },
+        {
+          "filter": "In({art}, [Fanart, Spotlight]) + not equals({episode_thumbs}, true)",
+          "condition": "Control.HasFocus({index}) + String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Art(tvshow.fanart1))",
+          "value": "tvshow.fanart"
+        },
+        {
+          "filter": "equals({art}, Square)",
+          "condition": "Control.HasFocus({index}) + String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Art(tvshow.square1))",
+          "value": "tvshow.square"
+        },
+        {
+          "value": "$VAR[Multiart_Type_Media]"
+        }
+      ]
+    },
+    "Clearlogo_Crop_Home_Serve": {
+      "note": "9300's URL on Home (the first rows are the Videos/Music views'): one row per entry with clearlogos on, in the layouts with a logo slot.",
+      "index": {
+        "start": 3201
+      },
+      "filter": "In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom])",
+      "values": [
+        {
+          "filter": "equals({art_clearlogo}, true) + In({layout}, [Billboard, Showcase, Strip])",
+          "condition": "$EXP[Widget_HasLogo_{window}_{index}] + {focused} + $EXP[Clearlogo_Crop_Primary]",
+          "value": "plugin://script.copacetic.helper/?info=artwork&clean_label=Container({index}).ListItem.Art(clearlogo)&clearlogo_crop=true&clearlogo_fit=$VAR[Clearlogo_Fit_Home]&clearlogo_fit_ids=63{index}&clearlogo_fit_key=$INFO[Container({index}).ListItem.DBType]:$INFO[Container({index}).ListItem.DBID]&focus_guard=$INFO[Container({index}).CurrentItem]&focus_ids={index}&prop_key=9300&target={index}&clearlogo_url=$INFO[Container({index}).ListItem.Art(clearlogo)]"
+        }
+      ]
+    },
+    "_scroll_nib_cluster": {
+      "note": "The nib colours follow the focused row's layout and art: dark nibs only over a light Showcase, light nibs on art.",
+      "index": {
+        "start": 3201
+      },
+      "filter": "In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom])",
+      "outputs": {
+        "background": "Home_Scroll_Widget_Background_Color",
+        "focused": "Home_Scroll_Widget_Focused_Color"
+      },
+      "rows": [
+        {
+          "condition": "Control.HasFocus(3000) | $EXP[Music_Player_HasFocus] | $EXP[Container_HasBackground] | Control.HasFocus(4201)",
+          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
+          "focused": "$VAR[Light_Color]"
+        },
+        {
+          "filter": "equals({layout}, Showcase)",
+          "condition": "Control.HasFocus({index}) + Skin.String(Theme,Light)",
+          "background": "$VAR[Alpha_15]$VAR[Dark_Hex]",
+          "focused": "$VAR[Dark_Grey_Color]"
+        },
+        {
+          "filter": "equals({layout}, Strip) + equals({art}, Posters)",
+          "condition": "Control.HasFocus({index}) + !String.IsEmpty(Container({index}).ListItemNoWrap(2).Label)",
+          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
+          "focused": "$VAR[Light_Color]"
+        },
+        {
+          "filter": "equals({layout}, Strip) + equals({art}, Square)",
+          "condition": "Control.HasFocus({index}) + !String.IsEmpty(Container({index}).ListItemNoWrap(1).Label)",
+          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
+          "focused": "$VAR[Light_Color]"
+        },
+        {
+          "filter": "equals({layout}, Strip) + equals({art}, Fanart)",
+          "condition": "Control.HasFocus({index}) + !String.IsEmpty(Container({index}).ListItemNoWrap(1).Label)",
+          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
+          "focused": "$VAR[Light_Color]"
+        },
+        {
+          "filter": "equals({layout}, Grid) + equals({art}, Posters)",
+          "condition": "Control.HasFocus({index}) + !String.IsEmpty(Container({index}).ListItemNoWrap(5).Label)",
+          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
+          "focused": "$VAR[Light_Color]"
+        },
+        {
+          "filter": "equals({layout}, Grid) + equals({art}, Square)",
+          "condition": "Control.HasFocus({index}) + !String.IsEmpty(Container({index}).ListItemNoWrap(5).Label)",
+          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
+          "focused": "$VAR[Light_Color]"
+        },
+        {
+          "filter": "equals({layout}, Grid) + equals({art}, Fanart)",
+          "condition": "Control.HasFocus({index}) + !String.IsEmpty(Container({index}).ListItemNoWrap(3).Label)",
+          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
+          "focused": "$VAR[Light_Color]"
+        },
+        {
+          "condition": "Skin.String(Theme,Light)",
+          "background": "$VAR[Alpha_15]$VAR[Dark_Hex]"
+        },
+        {
+          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
+          "focused": "$VAR[Primary_Color]"
+        }
+      ]
+    }
+  }
+}

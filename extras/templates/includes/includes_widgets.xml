@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<mapping>widgets</mapping>
+	<includes>
+		<!-- A row of a preset C1 doesn't define (a state file edited by hand) builds nothing here: its fields are missing -->
+		<!-- The rows' containers, flat in grouplist 3200 (Home_Widgets): they draw nothing, so the grouplist moving them moves nothing visible -->
+		<template>
+			<index start="3201" />
+			<filter>In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom])</filter>
+			<include name="widgets_rows">
+				<include content="Widget_List">
+					<param name="bypass_min_items" value="{bypass_min_items}" />
+					<param name="click_action" value="{click_action}" />
+					<param name="content" value="{content}{xsp}" />
+					<param name="hidden_focus" value="{hidden_focus}" />
+					<param name="id" value="{index}" />
+					<param name="limit" value="{limit}" />
+					<param name="min_items" value="1" />
+					<param name="row_autoplay" value="{autoplay}" />
+					<param name="row_autoscroll" value="{autoscroll}" />
+					<param name="row_stop_trailer" value="true" />
+					<param name="sortby" value="{sortby}" />
+					<param name="sortorder" value="{sortorder}" />
+					<param name="target" value="{target}" />
+					<param name="use_custom_click" value="{use_custom_click}" />
+					<param name="widget_type" value="Home_Row" />
+				</include>
+			</include>
+		</template>
+		<!-- Each row's art and details, outside the grouplist and shown on the row's own focus -->
+		<template>
+			<index start="3201" />
+			<filter>In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom])</filter>
+			<include name="widgets_layouts">
+				<include content="Home_Row_Layout">
+					<param name="art_landscape" value="{art_landscape}" />
+					<param name="autoplay" value="{autoplay}" />
+					<param name="clearlogos" value="{art_clearlogo}" />
+					<param name="display" value="{art}" />
+					<param name="header" value="{label}" />
+					<param name="id" value="{index}" />
+					<param name="view" value="{layout}" />
+				</include>
+			</include>
+		</template>
+		<!-- Latches for a row reached recently: visible while it hasn't focus, and for 2.5 s after -->
+		<template>
+			<index start="3201" />
+			<include name="widgets_latches">
+				<control type="group" id="{index+2002}">
+					<visible>!Control.HasFocus({index})</visible>
+					<animation effect="slide" end="0,0" time="Default_Transition_10x" reversible="false">Hidden</animation>
+				</control>
+			</include>
+		</template>
+		<template>
+			<index start="3201" />
+			<include name="widgets_nibs">
+				<include content="Widget_Scrollbar_Nib">
+					<param name="active" value="Control.HasFocus({index})" />
+					<param name="background_color" value="$VAR[Home_Scroll_Widget_Background_Color]" />
+					<param name="focused_color" value="$VAR[Home_Scroll_Widget_Focused_Color]" />
+					<param name="visible" value="Control.IsVisible({index})" />
+				</include>
+			</include>
+		</template>
+		<!-- One conditional fade per row, so the nibs come back on each row change, as the old pos1-pos9 params did -->
+		<template>
+			<index start="3201" />
+			<include name="widgets_nib_fades">
+				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus({index})">Conditional</animation>
+			</include>
+		</template>
+		<template>
+			<index start="3201" />
+			<include name="widgets_cursor_resets">
+				<onfocus condition="!String.IsEqual(Container({index}).CurrentItem,1)">Control.Move({index},$INFO[Container({index}).CurrentItem,-])</onfocus>
+				<onfocus condition="!String.IsEqual(Container({index}).CurrentItem,1)">Control.Move({index},1)</onfocus>
+			</include>
+		</template>
+		<!-- Up into the rows from below: OnMove walks back from the last row through the empty ones (GUIWindow.cpp:962-980) -->
+		<template>
+			<index start="3201" />
+			<filter>In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom])</filter>
+			<include name="widgets_onup">
+				<onup condition="{is_last} + [$PARAM[condition]]">{index}</onup>
+			</include>
+		</template>
+		<!-- On return to Home from a movie's info, refocus its row once the row has loaded (6001, 6002: Buttons_Infoscreen_Path_Tracer.xml) -->
+		<template>
+			<index start="3201" />
+			<include name="widgets_origin_refocus">
+				<onfocus condition="String.IsEqual(Window(home).Property(Origin),{index}) + Container({index}).IsUpdating">SetFocus(6002)</onfocus>
+				<onfocus condition="String.IsEqual(Window(home).Property(Origin),{index}) + !Container({index}).IsUpdating">SetFocus({index})</onfocus>
+			</include>
+		</template>
+	</includes>
+</xml>

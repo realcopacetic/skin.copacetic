@@ -1,0 +1,246 @@
+{
+  "widgets": {
+    "mode": "dynamic",
+    "items": [
+      "in_progress",
+      "next_up",
+      "latest_movies",
+      "random_movies",
+      "latest_tvshows",
+      "random_tvshows",
+      "latest_albums",
+      "recent_albums",
+      "random_albums",
+      "liked_songs",
+      "favourites",
+      "custom"
+    ],
+    "placeholders": {
+      "key": "widget_preset"
+    },
+    "default_order": [ "in_progress", "next_up", "latest_movies", "latest_tvshows" ],
+    "tokens": {
+      "focused": "String.IsEqual(Window(home).Property(Home_Widget),{index})",
+      "home_row": "Window.Is(home) + String.IsEqual(Window(home).Property(Home_Widget),{index})",
+      "window": "home"
+    },
+    "config_fields": {
+      "global": {
+        "art": "{widget_preset}_art",
+        "art_clearlogo": "{widget_preset}_art_clearlogo",
+        "art_keyart": "{widget_preset}_art_keyart",
+        "art_landscape": "{widget_preset}_art_landscape",
+        "autoplay": "{widget_preset}_autoplay",
+        "autoscroll": "{widget_preset}_autoscroll",
+        "layout": "{widget_preset}_layout"
+      },
+      "custom": {
+        "episode_thumbs": "episode_thumbs",
+        "limit": "limit",
+        "sortby": "sortby",
+        "sortorder": "sortorder"
+      }
+    },
+    "metadata": {
+      "in_progress": {
+        "label": "$LOCALIZE[31200]",
+        "content": "plugin://script.copacetic.helper/?info=in_progress",
+        "target": "videos",
+        "sortby": "lastplayed",
+        "sortorder": "descending",
+        "limit": "20",
+        "episode_thumbs": "false",
+        "bypass_min_items": "false",
+        "hidden_focus": "false",
+        "use_custom_click": "false",
+        "click_action": "Blank"
+      },
+      "next_up": {
+        "label": "$LOCALIZE[31201]",
+        "content": "plugin://script.copacetic.helper/?info=next_up",
+        "target": "videos",
+        "sortby": "",
+        "sortorder": "",
+        "limit": "20",
+        "episode_thumbs": "false",
+        "bypass_min_items": "false",
+        "hidden_focus": "false",
+        "use_custom_click": "false",
+        "click_action": "Blank"
+      },
+      "latest_movies": {
+        "label": "$LOCALIZE[31202]",
+        "content": "videodb://movies/titles/",
+        "target": "videos",
+        "sortby": "dateadded",
+        "sortorder": "descending",
+        "limit": "20",
+        "episode_thumbs": "false",
+        "bypass_min_items": "false",
+        "hidden_focus": "false",
+        "use_custom_click": "false",
+        "click_action": "Blank",
+        "xsp": {
+          "group": {
+            "mixed": "false",
+            "type": "none"
+          },
+          "rules": {
+            "and": [
+              {
+                "field": "playcount",
+                "operator": "lessthan",
+                "value": [ "1" ]
+              }
+            ]
+          },
+          "type": "movies"
+        }
+      },
+      "random_movies": {
+        "label": "$LOCALIZE[31204]",
+        "content": "videodb://movies/titles/",
+        "target": "videos",
+        "sortby": "random",
+        "sortorder": "ascending",
+        "limit": "20",
+        "episode_thumbs": "false",
+        "bypass_min_items": "false",
+        "hidden_focus": "false",
+        "use_custom_click": "false",
+        "click_action": "Blank"
+      },
+      "latest_tvshows": {
+        "label": "$LOCALIZE[31203]",
+        "content": "videodb://tvshows/titles/",
+        "target": "videos",
+        "sortby": "dateadded",
+        "sortorder": "descending",
+        "limit": "20",
+        "episode_thumbs": "false",
+        "bypass_min_items": "false",
+        "hidden_focus": "false",
+        "use_custom_click": "false",
+        "click_action": "Blank",
+        "xsp": {
+          "group": {
+            "mixed": "false",
+            "type": "none"
+          },
+          "rules": {
+            "and": [
+              {
+                "field": "playcount",
+                "operator": "lessthan",
+                "value": [ "1" ]
+              }
+            ]
+          },
+          "type": "tvshows"
+        }
+      },
+      "random_tvshows": {
+        "label": "$LOCALIZE[31205]",
+        "content": "videodb://tvshows/titles/",
+        "target": "videos",
+        "sortby": "random",
+        "sortorder": "ascending",
+        "limit": "20",
+        "episode_thumbs": "false",
+        "bypass_min_items": "false",
+        "hidden_focus": "false",
+        "use_custom_click": "false",
+        "click_action": "Blank"
+      },
+      "latest_albums": {
+        "label": "$LOCALIZE[31206]",
+        "content": "musicdb://recentlyaddedalbums/",
+        "target": "music",
+        "sortby": "dateadded",
+        "sortorder": "descending",
+        "limit": "20",
+        "episode_thumbs": "false",
+        "bypass_min_items": "false",
+        "hidden_focus": "false",
+        "use_custom_click": "true",
+        "click_action": "Home_Open_Album"
+      },
+      "recent_albums": {
+        "label": "$LOCALIZE[31207]",
+        "content": "musicdb://recentlyplayedalbums/",
+        "target": "music",
+        "sortby": "lastplayed",
+        "sortorder": "descending",
+        "limit": "20",
+        "episode_thumbs": "false",
+        "bypass_min_items": "false",
+        "hidden_focus": "false",
+        "use_custom_click": "true",
+        "click_action": "Home_Open_Album"
+      },
+      "random_albums": {
+        "label": "$LOCALIZE[31208]",
+        "content": "musicdb://albums/",
+        "target": "music",
+        "sortby": "random",
+        "sortorder": "ascending",
+        "limit": "20",
+        "episode_thumbs": "false",
+        "bypass_min_items": "false",
+        "hidden_focus": "false",
+        "use_custom_click": "false",
+        "click_action": "Blank"
+      },
+      "liked_songs": {
+        "label": "$LOCALIZE[31209]",
+        "content": "musicdb://songs/",
+        "target": "music",
+        "sortby": "lastplayed",
+        "sortorder": "descending",
+        "limit": "50",
+        "episode_thumbs": "false",
+        "bypass_min_items": "false",
+        "hidden_focus": "true",
+        "use_custom_click": "true",
+        "click_action": "Play_All_Songs",
+        "xsp": {
+          "group": {
+            "mixed": "false",
+            "type": "none"
+          },
+          "rules": {
+            "and": [
+              {
+                "field": "userrating",
+                "operator": "between",
+                "value": [ "$INFO[Skin.String(like_threshold)]", "10" ]
+              }
+            ]
+          },
+          "type": "songs",
+          "version": "$INFO[Window(home).Property(liked_songs_version)]"
+        }
+      },
+      "favourites": {
+        "label": "$LOCALIZE[1036]",
+        "content": "favourites://",
+        "target": "",
+        "sortby": "",
+        "sortorder": "",
+        "limit": "20",
+        "episode_thumbs": "false",
+        "bypass_min_items": "false",
+        "hidden_focus": "false",
+        "use_custom_click": "false",
+        "click_action": "Blank"
+      },
+      "custom": {
+        "label": "$LOCALIZE[31210]",
+        "bypass_min_items": "true",
+        "hidden_focus": "false",
+        "use_custom_click": "false",
+        "click_action": "Blank"
+      }
+    }
+  }
+}

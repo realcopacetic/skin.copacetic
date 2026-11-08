@@ -44,6 +44,7 @@
 
 	<include name="BillboardView_Details">
 		<param name="id" default="501" />
+		<param name="media_view" default="false" />
 		<param name="widget_clearlogos" default="false" />
 		<param name="include_progress" default="true" />
 		<definition>

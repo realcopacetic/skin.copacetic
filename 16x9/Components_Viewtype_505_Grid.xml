@@ -1425,6 +1425,7 @@
 	<include name="GridView_Art_Posters">
 		<param name="target_id" />
 		<param name="art_icon" />
+		<param name="art_diffuse" default="false" />
 		<definition>
 			<include content="GridView_Art">
 				<param name="target_id" value="$PARAM[target_id]" />

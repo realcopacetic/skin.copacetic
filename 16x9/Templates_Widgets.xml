@@ -26,6 +26,10 @@
 		<param name="use_custom_click" default="false" />
 		<param name="click_action" default="Blank" />
 		<param name="hidden_focus" default="false" /> <!-- true: an empty, hidden rail still reads its URL, for a path that waits on 9000; empty, it still can't take focus -->
+		<param name="row_autoplay" default="false" /> <!-- Home rows: autoplay_id and autoscroll_id for Timers.xml, and a playing trailer stops when the row loses focus -->
+		<param name="row_autoscroll" default="false" />
+		<param name="row_stop_trailer" default="false" />
+		<param name="widget_position" default="0" />
 		<definition>
 			<control type="fixedlist" id="$PARAM[id]">
 				<visible allowhiddenfocus="$PARAM[hidden_focus]">Integer.IsGreaterOrEqual(Container($PARAM[id]).NumItems,$PARAM[min_items]) | Container($PARAM[id]).IsUpdating | $PARAM[bypass_min_items]</visible>
@@ -34,18 +38,20 @@
 				<onfocus>ClearProperty(Focused_Button,movieinformation)</onfocus>
 				<onfocus>ClearProperty(Focused_Button,musicinformation)</onfocus>
 				<onfocus>ClearProperty(Focused_Button,addoninformation)</onfocus>
-				<onunfocus>ClearProperty(Trailer_Autoscroll,home)</onunfocus>
+				<onfocus condition="$PARAM[row_autoplay]">SetProperty(autoplay_id,$PARAM[id],home)</onfocus>
+				<onfocus condition="$PARAM[row_autoscroll]">SetProperty(autoscroll_id,$PARAM[id],home)</onfocus>
+				<onunfocus condition="$PARAM[row_autoplay]">ClearProperty(autoplay_id,home)</onunfocus>
+				<onunfocus condition="$PARAM[row_autoscroll]">ClearProperty(autoscroll_id,home)</onunfocus>
+				<onunfocus condition="$PARAM[row_stop_trailer] + $EXP[Trailer_Autoplay_IsVisible]">PlayerControl(Stop)</onunfocus>
 				<viewtype label="widgetlist">list</viewtype>
 				<preloaditems>2</preloaditems>
 				<orientation>horizontal</orientation>
 				<scrolltime tween="sine" easing="inout">360</scrolltime>
-				<include content="ClickAction_$PARAM[click_action]" condition="$PARAM[use_custom_click]" />
+				<include content="ClickAction_$PARAM[click_action]" condition="$PARAM[use_custom_click]">
+					<param name="id" value="$PARAM[id]" />
+				</include>
 				<include content="$PARAM[widget_type]_Navigation" />
 				<focusedlayout>
-					<control type="button">
-						<visible allowhiddenfocus="true">false</visible>
-						<onfocus condition="Window.Is(home) + Skin.HasSetting(Widget$PARAM[widget_position]_AutoScroll) + Skin.HasSetting(Widget$PARAM[widget_position]_Trailer_Autoplay)">SetProperty(Trailer_Autoscroll,true,home)</onfocus>
-					</control>
 					<include content="HiddenFocusButton" />
 					<include content="Multiart_Resetter" condition="Skin.HasSetting(Multiart_Slideshow)" />
 					<include content="Multiart_Setter" condition="Skin.HasSetting(Multiart_Slideshow)" />
@@ -439,19 +445,73 @@
 	</include>
 
 	<include name="Home_Widgets">
+		<include content="widgets_latches" />
+		<control type="group" id="5200"> <!-- Timers.xml reads this (no $EXP there): a row was reached just now -->
+			<visible>$EXP[widgets_container_switching]</visible>
+		</control>
 		<control type="group">
 			<visible>!$EXP[Infoscreen_IsVisible] + !Control.HasFocus(4010) + !$EXP[globalsearch_IsVisible]</visible>
 			<include content="Visible_Fade_Delayed_Animation" />
-			<include content="Widget_1" condition="!Skin.HasSetting(Widget1_Content_Disabled)" />
-			<include content="Widget_2" condition="!Skin.HasSetting(Widget2_Content_Disabled)" />
-			<include content="Widget_3" condition="!Skin.HasSetting(Widget3_Content_Disabled)" />
-			<include content="Widget_4" condition="!Skin.HasSetting(Widget4_Content_Disabled)" />
-			<include content="Widget_5" condition="!Skin.HasSetting(Widget5_Content_Disabled)" />
-			<include content="Widget_6" condition="!Skin.HasSetting(Widget6_Content_Disabled)" />
-			<include content="Widget_7" condition="!Skin.HasSetting(Widget7_Content_Disabled)" />
-			<include content="Widget_8" condition="!Skin.HasSetting(Widget8_Content_Disabled)" />
-			<include content="Widget_9" condition="!Skin.HasSetting(Widget9_Content_Disabled)" />
+			<control type="grouplist" id="3200">
+				<description>The rows are flat here, so the grouplist chains Up and Down itself and skips rows that can't take focus (no size: they draw nothing)</description>
+				<orientation>vertical</orientation>
+				<itemgap>0</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<scrolltime>0</scrolltime>
+				<onup>3000</onup>
+				<ondown>3000</ondown>
+				<onback>3000</onback>
+				<defaultcontrol always="true">3201</defaultcontrol>
+				<include content="widgets_rows" />
+			</control>
+			<include content="widgets_layouts" />
 			<include content="Home_Scrollbar" />
+		</control>
+	</include>
+
+	<!-- One Home row's art and details, each on the row's focus and outside grouplist 3200 so its scrolling can't move them; widgets_layouts calls it once per row -->
+	<include name="Home_Row_Layout">
+		<control type="group">
+			<visible>Control.HasFocus($PARAM[id])</visible>
+			<animation effect="slide" start="0" end="0,660" time="0" condition="Control.HasFocus($PARAM[id])">Conditional</animation>
+			<animation effect="slide" start="0" end="0,-660" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus($PARAM[id])">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus($PARAM[id])">Conditional</animation>
+			<include content="$PARAM[view]View_Display">
+				<param name="art_icon" value="widgets_$PARAM[id]_Thumbnail" />
+				<param name="art_landscape" value="$PARAM[art_landscape]" />
+				<param name="display" value="$PARAM[display]" />
+				<param name="id" value="$PARAM[id]" />
+				<param name="media_view" value="false" />
+				<param name="widget_view" value="true" />
+			</include>
+		</control>
+		<!-- Details -->
+		<control type="group">
+			<visible>!$EXP[TransparentDialog_IsVisible]</visible>
+			<include content="Visible_Fade_Delayed_Animation" />
+			<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay) + !$EXP[widget_grid_spotlight_$PARAM[id]]" />
+			<include content="$PARAM[view]View_Details">
+				<param name="id" value="$PARAM[id]" />
+				<param name="media_view" value="false" />
+				<param name="visible" value="Control.HasFocus($PARAM[id])" />
+				<param name="widget_clearlogos" value="$PARAM[clearlogos]" />
+				<param name="widget_display" value="$PARAM[display]" />
+			</include>
+			<include content="Breadcrumb_Label">
+				<param name="animation" value="Widget_Breadcrumb_Animation" />
+				<param name="info_label" value="$VAR[Copacetic_Divider_Bold,, ]$INFO[Container($PARAM[id]).CurrentItem]$INFO[Container($PARAM[id]).NumItems,/]" />
+				<param name="info_label_visible" value="true" />
+				<param name="textcolor" value="$VAR[Breadcrumb_Label_Color]" />
+				<param name="title_label" value="$PARAM[header]" />
+				<param name="visible" value="Control.HasFocus($PARAM[id])" />
+				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay) + $EXP[widget_grid_spotlight_$PARAM[id]]" />
+			</include>
+			<!-- Busy spinner -->
+			<include content="Busy_Spinner">
+				<param name="color" value="$VAR[Volume_Focused_Color]" />
+				<param name="visible" value="Control.HasFocus($PARAM[id]) + Container($PARAM[id]).IsUpdating + !Window.IsVisible(busydialog) + !$PARAM[autoplay]" />
+				<include content="Trailer_Autoplay_Fade_Delayed_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
+			</include>
 		</control>
 	</include>
 

@@ -1,0 +1,131 @@
+{
+  "mapping": "widgets",
+  "configs": {
+    "{widget_preset}_layout": {
+      "items": {
+        "Billboard": "$LOCALIZE[31001]",
+        "Showcase": "$LOCALIZE[31002]",
+        "Strip": "$LOCALIZE[31003]",
+        "Grid": "$LOCALIZE[31004]"
+      },
+      "filter_mode": "exclude",
+      "rules": [
+        {
+          "condition": "In({widget_preset}, [latest_albums, recent_albums, random_albums, liked_songs])",
+          "value": [ "Billboard" ]
+        }
+      ],
+      "defaults": {
+        "in_progress": "Strip",
+        "next_up": "Strip",
+        "latest_movies": "Billboard",
+        "latest_tvshows": "Grid",
+        "*": "Strip"
+      }
+    },
+    "{widget_preset}_art": {
+      "items": {
+        "Posters": "$LOCALIZE[31006]",
+        "Fanart": "$LOCALIZE[31007]",
+        "Square": "$LOCALIZE[31008]",
+        "Spotlight": "$LOCALIZE[31031]"
+      },
+      "dependent_fields": [ "layout" ],
+      "filter_mode": "include",
+      "rules": [
+        {
+          "condition": "In({widget_preset}, [latest_albums, recent_albums, random_albums, liked_songs])",
+          "value": [ "Square" ]
+        },
+        {
+          "condition": "not In({widget_preset}, [latest_albums, recent_albums, random_albums, liked_songs]) + equals({layout}, Billboard)",
+          "value": [ "Fanart" ]
+        },
+        {
+          "condition": "not In({widget_preset}, [latest_albums, recent_albums, random_albums, liked_songs]) + equals({layout}, Showcase)",
+          "value": [ "Posters", "Square" ]
+        },
+        {
+          "condition": "not In({widget_preset}, [latest_albums, recent_albums, random_albums, liked_songs]) + equals({layout}, Strip)",
+          "value": [ "Posters", "Fanart", "Square" ]
+        },
+        {
+          "condition": "not In({widget_preset}, [latest_albums, recent_albums, random_albums, liked_songs]) + equals({layout}, Grid)",
+          "value": [ "Posters", "Fanart", "Square", "Spotlight" ]
+        }
+      ],
+      "defaults": {
+        "in_progress": "Fanart",
+        "latest_movies": "Fanart",
+        "latest_albums": "Square",
+        "recent_albums": "Square",
+        "random_albums": "Square",
+        "liked_songs": "Square",
+        "*": "Posters"
+      }
+    },
+    "{widget_preset}_autoscroll": {
+      "items": { "true": "$LOCALIZE[186]", "false": "$LOCALIZE[106]" },
+      "defaults": { "*": "false" }
+    },
+    "{widget_preset}_autoplay": {
+      "items": { "true": "$LOCALIZE[186]", "false": "$LOCALIZE[106]" },
+      "defaults": { "*": "false" }
+    },
+    "{widget_preset}_art_clearlogo": {
+      "items": { "true": "$LOCALIZE[186]", "false": "$LOCALIZE[106]" },
+      "defaults": { "*": "false" }
+    },
+    "{widget_preset}_art_keyart": {
+      "items": { "true": "$LOCALIZE[186]", "false": "$LOCALIZE[106]" },
+      "defaults": { "*": "false" }
+    },
+    "{widget_preset}_art_landscape": {
+      "items": { "true": "$LOCALIZE[186]", "false": "$LOCALIZE[106]" },
+      "defaults": { "*": "false" }
+    },
+    "episode_thumbs": {
+      "items": { "true": "$LOCALIZE[186]", "false": "$LOCALIZE[106]" },
+      "defaults": { "*": "false" }
+    },
+    "sortby": {
+      "items": {
+        "label": "$LOCALIZE[551]",
+        "title": "$LOCALIZE[556]",
+        "random": "$LOCALIZE[590]",
+        "dateadded": "$LOCALIZE[570]",
+        "lastplayed": "$LOCALIZE[568]",
+        "playcount": "$LOCALIZE[567]",
+        "year": "$LOCALIZE[562]",
+        "rating": "$LOCALIZE[563]",
+        "userrating": "$LOCALIZE[38018]",
+        "votes": "$LOCALIZE[205]",
+        "genre": "$LOCALIZE[515]",
+        "country": "$LOCALIZE[574]",
+        "studio": "$LOCALIZE[572]",
+        "playlist": "$LOCALIZE[559]",
+        "episode": "$LOCALIZE[20359]",
+        "season": "$LOCALIZE[20373]",
+        "tvshowtitle": "$LOCALIZE[20364]",
+        "file": "$LOCALIZE[561]",
+        "track": "$LOCALIZE[554]",
+        "time": "$LOCALIZE[555]",
+        "artist": "$LOCALIZE[557]",
+        "album": "$LOCALIZE[558]",
+        "lastupdated": "$LOCALIZE[12014]",
+        "lastused": "$LOCALIZE[12012]",
+        "date": "$LOCALIZE[552]",
+        "userpreference": "$LOCALIZE[19349]"
+      },
+      "defaults": { "*": "title" }
+    },
+    "sortorder": {
+      "items": { "ascending": "$LOCALIZE[584]", "descending": "$LOCALIZE[585]" },
+      "defaults": { "*": "ascending" }
+    },
+    "limit": {
+      "items": [ "10", "15", "20", "25", "30", "40", "50" ],
+      "defaults": { "*": "20" }
+    }
+  }
+}

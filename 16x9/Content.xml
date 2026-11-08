@@ -308,7 +308,7 @@
 		</control>
 	</include>
 
-	<include name="menusettings_Left_List_Content">
+	<include name="editor_Left_List_Content">
 		<include content="Button_Template">
 			<param name="target_id" value="412" />
 			<param name="visible" value="Control.HasFocus(100) | Control.HasFocus(410) | Control.HasFocus(411) | Control.HasFocus(412) | Control.HasFocus(413)" />
@@ -361,6 +361,74 @@
 			<description>Fanart slideshow</description>
 			<visible>String.IsEqual(Window(home).Property(current_mapping),mainmenu)</visible>
 			<label>$LOCALIZE[20425]</label>
+		</control>
+	</include>
+
+	<!-- The helper sets the labels and shows each control's value as label2 (controls_widgets.json) -->
+	<include name="widgets_editor_Right_List_Content">
+		<control type="button" id="201">
+			<description>Type</description>
+			<label>$LOCALIZE[31445]</label>
+		</control>
+		<control type="button" id="202">
+			<description>Custom path</description>
+			<label>$LOCALIZE[573]</label>
+		</control>
+		<control type="edit" id="203">
+			<description>Custom name</description>
+			<label>$LOCALIZE[551]</label>
+		</control>
+		<control type="button" id="204">
+			<description>Layout</description>
+			<label>$LOCALIZE[31005]</label>
+		</control>
+		<control type="button" id="205">
+			<description>Display</description>
+			<label>$LOCALIZE[131]</label>
+		</control>
+		<control type="button" id="206">
+			<description>Sort method</description>
+			<label>$LOCALIZE[581]</label>
+		</control>
+		<control type="button" id="207">
+			<description>Sort order</description>
+			<label>$LOCALIZE[31013]</label>
+		</control>
+		<control type="button" id="208">
+			<description>Limit</description>
+			<label>$LOCALIZE[21427]</label>
+		</control>
+		<control type="label" id="209">
+			<include content="widgetsettings_Default_Label" />
+			<label>$LOCALIZE[31701]</label>
+		</control>
+		<control type="radiobutton" id="210">
+			<description>Spotlight</description>
+			<label>$LOCALIZE[31496]</label>
+		</control>
+		<control type="radiobutton" id="211">
+			<description>Trailers</description>
+			<label>$LOCALIZE[31467]</label>
+		</control>
+		<control type="label" id="212">
+			<include content="widgetsettings_Default_Label" />
+			<label>$LOCALIZE[39123]</label>
+		</control>
+		<control type="radiobutton" id="213">
+			<description>Clearlogos</description>
+			<label>$LOCALIZE[31476]</label>
+		</control>
+		<control type="radiobutton" id="214">
+			<description>Keyart</description>
+			<label>$LOCALIZE[31498]</label>
+		</control>
+		<control type="radiobutton" id="215">
+			<description>Landscape</description>
+			<label>$LOCALIZE[31499]</label>
+		</control>
+		<control type="radiobutton" id="216">
+			<description>Episode thumbnails</description>
+			<label>$LOCALIZE[31477]</label>
 		</control>
 	</include>
 

@@ -339,8 +339,12 @@
 
 	<include name="menusettings_Hidden">
 		<include content="Hidden_Components">
-			<control type="textbox" id="6" /> <!-- the editor's description, which C1 doesn't show -->
+			<control type="textbox" id="6" /> <!-- the editor's description, which the menu editor doesn't show -->
 		</include>
+		<include content="editor_Hidden" />
+	</include>
+
+	<include name="editor_Hidden">
 		<!-- Move down, Move up, Add and Delete, drawn in the list's focused row; Up and Down on them move the list (the helper's onAction) -->
 		<control type="button" id="412">
 			<include content="Hidden_Button_Template" />

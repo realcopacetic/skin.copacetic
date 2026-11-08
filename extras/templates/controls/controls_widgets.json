@@ -1,0 +1,138 @@
+{
+  "mapping": "widgets",
+  "controls": {
+    "widget_{index}": {
+      "control_type": "listitem",
+      "label": "{label}",
+      "description": "$LOCALIZE[31502]"
+    },
+    "widget_preset": {
+      "role": "item_picker",
+      "id": 201,
+      "control_type": "button",
+      "label": "$LOCALIZE[31445]",
+      "onclick": {
+        "type": "select",
+        "heading": "$LOCALIZE[31445]",
+        "then": {
+          "custom": "widget_content"
+        }
+      }
+    },
+    "widget_content": {
+      "field": "content",
+      "id": 202,
+      "control_type": "button",
+      "label": "$LOCALIZE[573]",
+      "visible": "In({widget_preset}, [custom])",
+      "onclick": {
+        "type": "browse_content",
+        "heading": "$LOCALIZE[573]",
+        "mode": "widget",
+        "sibling_fields": {
+          "label": "widget_label",
+          "target": "target"
+        }
+      }
+    },
+    "widget_label": {
+      "field": "label",
+      "id": 203,
+      "control_type": "edit",
+      "label": "$LOCALIZE[551]",
+      "visible": "In({widget_preset}, [custom])"
+    },
+    "widget_layout": {
+      "field": "layout",
+      "id": 204,
+      "control_type": "cycle",
+      "label": "$LOCALIZE[31005]"
+    },
+    "widget_art": {
+      "field": "art",
+      "id": 205,
+      "control_type": "cycle",
+      "label": "$LOCALIZE[131]"
+    },
+    "widget_sortby": {
+      "field": "sortby",
+      "id": 206,
+      "control_type": "button",
+      "label": "$LOCALIZE[581]",
+      "visible": "In({widget_preset}, [custom])",
+      "onclick": {
+        "type": "select",
+        "heading": "$LOCALIZE[581]"
+      }
+    },
+    "widget_sortorder": {
+      "field": "sortorder",
+      "id": 207,
+      "control_type": "cycle",
+      "label": "$LOCALIZE[31013]",
+      "visible": "In({widget_preset}, [custom])"
+    },
+    "widget_limit": {
+      "field": "limit",
+      "id": 208,
+      "control_type": "cycle",
+      "label": "$LOCALIZE[21427]",
+      "visible": "In({widget_preset}, [custom])"
+    },
+    "widget_movement": {
+      "id": 209,
+      "control_type": "label",
+      "label": "$LOCALIZE[31701]"
+    },
+    "widget_autoscroll": {
+      "field": "autoscroll",
+      "id": 210,
+      "control_type": "radiobutton",
+      "label": "$LOCALIZE[31496]",
+      "description": "$LOCALIZE[31596]"
+    },
+    "widget_autoplay": {
+      "field": "autoplay",
+      "id": 211,
+      "control_type": "radiobutton",
+      "label": "$LOCALIZE[31467]",
+      "description": "$LOCALIZE[31567]",
+      "visible": "xml(Skin.HasSetting(Trailer_Autoplay))"
+    },
+    "widget_artwork": {
+      "id": 212,
+      "control_type": "label",
+      "label": "$LOCALIZE[39123]"
+    },
+    "widget_art_clearlogo": {
+      "field": "art_clearlogo",
+      "id": 213,
+      "control_type": "radiobutton",
+      "label": "$LOCALIZE[31476]",
+      "visible": "not equals({layout}, Grid)"
+    },
+    "widget_art_keyart": {
+      "field": "art_keyart",
+      "id": 214,
+      "control_type": "radiobutton",
+      "label": "$LOCALIZE[31498]",
+      "description": "$LOCALIZE[31598]",
+      "visible": "equals({art}, Posters)"
+    },
+    "widget_art_landscape": {
+      "field": "art_landscape",
+      "id": 215,
+      "control_type": "radiobutton",
+      "label": "$LOCALIZE[31499]",
+      "description": "$LOCALIZE[31599]",
+      "visible": "In({art}, [Fanart, Spotlight]) + not equals({layout}, Billboard)"
+    },
+    "widget_episode_thumbs": {
+      "field": "episode_thumbs",
+      "id": 216,
+      "control_type": "radiobutton",
+      "label": "$LOCALIZE[31477]",
+      "visible": "In({widget_preset}, [custom]) + In({art}, [Fanart, Spotlight])"
+    }
+  }
+}
