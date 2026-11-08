@@ -2,9 +2,8 @@
 <xml>
 	<mapping>none</mapping>
 	<includes>
-		<!-- The play next card's countdown bar (Templates_script-upnext.xml), one step per second of Player.TimeRemaining, as C2's.
-			The card opens at L-1 s left, so the open leg takes the bar from full to (L-1)/L over its first second; not reversible,
-			as a close would run it back while the closing dialog drops every key. Then only the chosen lead's steps load -->
+		<!-- The play next bar, as C2's: a 1 s open leg (not reversible: a close would run it back), then one step per second of
+			Player.TimeRemaining for the chosen lead only -->
 		<template>
 			<items>20,30,45,60</items>
 			<include name="playnext_countdown">
