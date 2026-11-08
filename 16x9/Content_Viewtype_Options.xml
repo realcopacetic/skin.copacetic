@@ -43,7 +43,7 @@
 	<include name="Common_Menu_Options">
 		<param name="target_id" default="50" /> 
 		<definition>
-			<!-- globalsearch -->
+			<!-- Search -->
 			<item>
 				<onclick>SetFocus(50)</onclick>
 				<onclick>ActivateWindow(1180)</onclick>

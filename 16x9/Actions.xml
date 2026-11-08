@@ -124,8 +124,6 @@
 		<onclick>SetProperty(SentFromInfo,true,musicinformation)</onclick>
 		<onclick condition="Control.HasFocus(3202) + Window.IsVisible(music)">Container.Update(musicdb://albums/$INFO[Container(3202).ListItem.DBID]/-2/)</onclick>
 		<onclick condition="Control.HasFocus(3202) + !Window.IsVisible(music)">ActivateWindow(music,musicdb://albums/$INFO[Container(3202).ListItem.DBID]/-2/,return)</onclick>
-		<onclick condition="Control.HasFocus(3205) + Window.IsVisible(music)">Container.Update(musicdb://albums/$INFO[Container(3205).ListItem.DBID]/-2/)</onclick>
-		<onclick condition="Control.HasFocus(3205) + !Window.IsVisible(music)">ActivateWindow(music,musicdb://albums/$INFO[Container(3205).ListItem.DBID]/-2/,return)</onclick>
 	</include>
 
 	<include name="ClickAction_Open_TVShow">

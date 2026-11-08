@@ -19,13 +19,6 @@
 	<!-- Renamed settings. After the defaults above, so a copy wins: every condition is tested before the first action runs -->
 	<include content="Startup_Migrate_Settings" />
 
-	<!-- Global search -->
-	<onload condition="!Skin.String(GlobalSearch_Movies_Limit)">Skin.SetString(GlobalSearch_Movies_Limit,30)</onload>
-	<onload condition="!Skin.String(GlobalSearch_TVShows_Limit)">Skin.SetString(GlobalSearch_TVShows_Limit,30)</onload>
-	<onload condition="!Skin.String(GlobalSearch_Episodes_Limit)">Skin.SetString(GlobalSearch_Episodes_Limit,30)</onload>
-	<onload condition="!Skin.String(GlobalSearch_Artists_Limit)">Skin.SetString(GlobalSearch_Artists_Limit,30)</onload>
-	<onload condition="!Skin.String(GlobalSearch_Albums_Limit)">Skin.SetString(GlobalSearch_Albums_Limit,30)</onload>
-	<onload condition="!Skin.String(GlobalSearch_Songs_Limit)">Skin.SetString(GlobalSearch_Songs_Limit,30)</onload>
 	<!-- Layout configuration -->
 	<!-- Grid -->
 	<onload condition="!Skin.String(GridView_Size)">Skin.SetString(GridView_Size,Large)</onload>

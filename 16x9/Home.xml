@@ -40,14 +40,14 @@
 			<include content="Trailer_Autoplay_Fade_Delayed_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 		</include>
 		<control type="group">
-			<visible>[Control.HasFocus(4010) | Control.HasFocus(4201) | Control.HasFocus(3000) | Control.HasFocus(4300) | $EXP[Music_Player_HasFocus]] + !$EXP[Infoscreen_IsVisible] + !$EXP[globalsearch_IsVisible]</visible>
+			<visible>[Control.HasFocus(4010) | Control.HasFocus(4201) | Control.HasFocus(3000) | Control.HasFocus(4300) | $EXP[Music_Player_HasFocus]] + !$EXP[Infoscreen_IsVisible]</visible>
 			<include content="VisibleHidden_Fade_Animation" />
 			<include content="Background_Home" />
 			<include content="Home_Clearlogo" condition="Skin.HasSetting(Home_Screensaver_Enabled)" />
 		</control>
 		<!-- Video player -->
 		<include content="Embedded_VideoPlayer">
-			<param name="visible" value="[VideoPlayer.Content(livetv) + [Control.HasFocus(3000) | Control.HasFocus(4010) | Control.HasFocus(4201) | Control.HasFocus(4300) | $EXP[Music_Player_HasFocus]] + !$EXP[Infoscreen_IsVisible] + !$EXP[globalsearch_IsVisible]] | String.IsEqual(Window(home).Property(Trailer_Autoplay),true)" />
+			<param name="visible" value="[VideoPlayer.Content(livetv) + [Control.HasFocus(3000) | Control.HasFocus(4010) | Control.HasFocus(4201) | Control.HasFocus(4300) | $EXP[Music_Player_HasFocus]] + !$EXP[Infoscreen_IsVisible]] | String.IsEqual(Window(home).Property(Trailer_Autoplay),true)" />
 			<param name="mask_visible" value="VideoPlayer.Content(livetv)" />
 		</include>
 		<include content="Trailer_Autoplay_Mask" condition="Skin.HasSetting(Trailer_Autoplay)">
@@ -58,17 +58,16 @@
 			<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
 			<control type="group">
 				<visible>Control.HasFocus(3000) | $EXP[Music_Player_HasFocus] | Control.HasFocus(4201)</visible>
-				<visible>!$EXP[TransparentDialog_IsVisible] + !$EXP[Infoscreen_IsVisible] + !$EXP[globalsearch_IsVisible]</visible>
+				<visible>!$EXP[TransparentDialog_IsVisible] + !$EXP[Infoscreen_IsVisible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 				<include content="Horizontal_List">
 					<param name="hidden_id" value="3000" />
-					<param name="visible" value="!String.IsEqual(Window(home).Property(globalsearch_focusing),true)" />
 					<param name="focused_color" value="$VAR[Light_Color]" />
 					<param name="unfocused_color" value="$VAR[Light_Color]" />
 				</include>
 				<include content="Home_Time_Widget" condition="!Skin.String(Time_Widget,None) + !Skin.HasSetting(Time_Widget_Persistent)" />
-				<include content="globalsearch_Button" condition="!Skin.HasSetting(GlobalSearch_Disabled)" />
+				<include content="Search_Button" condition="!Skin.HasSetting(GlobalSearch_Disabled)" />
 			</control>
 			<include content="Home_Widgets" condition="Skin.HasSetting(Widgets_Enabled)" />
 			<include content="Home_Time_Widget" condition="!Skin.String(Time_Widget,None) + Skin.HasSetting(Time_Widget_Persistent)" />
