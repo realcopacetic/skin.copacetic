@@ -24,8 +24,7 @@
 			<itemlayout width="100" />
 			<focusedlayout width="100" />
 			<content>
-				<include content="shutdownmenu_Content" />
-				<include content="skinshortcuts-group-shutdownmenu" />
+				<include content="shutdownmenu_items" />
 			</content>
 		</control>
 	</controls>

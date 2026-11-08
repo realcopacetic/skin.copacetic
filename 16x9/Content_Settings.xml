@@ -156,46 +156,13 @@
 			<description>Home menu</description>
 			<visible>ControlGroup(9).HasFocus(12)</visible>
 			<label>$LOCALIZE[31417]</label>
-			<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
+			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,name=menusettings,mapping=mainmenu)</onclick>
 		</control>
 		<control type="button" id="1202">
 			<description>Shutdown menu</description>
 			<visible>ControlGroup(9).HasFocus(12)</visible>
 			<label>$LOCALIZE[31418]</label>
-			<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=shutdownmenu)</onclick>
-		</control>
-		<control type="button" id="1203">
-			<description>LibreELEC</description>
-			<visible>ControlGroup(9).HasFocus(12) + System.AddonIsEnabled(service.libreelec.settings)</visible>
-			<label>LibreELEC</label>
-			<onclick>RunAddon(service.libreelec.settings)</onclick>
-		</control>
-		<control type="radiobutton" id="1204">
-			<description>- Enable home shortcut in Shutdown menu</description>
-			<visible>ControlGroup(9).HasFocus(12)</visible>
-			<label>- $LOCALIZE[31492]</label>
-			<onclick>Skin.ToggleSetting(Quick_Home_Disabled)</onclick>
-			<selected>!Skin.HasSetting(Quick_Home_Disabled)</selected>
-		</control>
-		<control type="radiobutton" id="1205">
-			<description>- Enable theme switcher shortcut in Shutdown menu</description>
-			<visible>ControlGroup(9).HasFocus(12)</visible>
-			<label>- $LOCALIZE[31493]</label>
-			<onclick>Skin.ToggleSetting(Quick_Theme_Switcher_Disabled)</onclick>
-			<selected>!Skin.HasSetting(Quick_Theme_Switcher_Disabled)</selected>
-		</control>
-		<control type="radiobutton" id="1206">
-			<description>- Enable LibreELEC menu shortcut in Shutdown menu</description>
-			<visible>ControlGroup(9).HasFocus(12) + System.AddonIsEnabled(service.libreelec.settings)</visible>
-			<label>- $LOCALIZE[31494]</label>
-			<onclick>Skin.ToggleSetting(Quick_LibreELEC_Menu_Disabled)</onclick>
-			<selected>!Skin.HasSetting(Quick_LibreELEC_Menu_Disabled)</selected>
-		</control>
-		<control type="button" id="1207">
-			<description>Reset menus</description>
-			<visible>ControlGroup(9).HasFocus(12)</visible>
-			<label>$LOCALIZE[31419]</label>
-			<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
+			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,name=menusettings,mapping=shutdownmenu,controls_from=mainmenu)</onclick>
 		</control>
 
 		<!-- Background -->

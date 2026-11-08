@@ -1,0 +1,44 @@
+{
+  "mainmenu": {
+    "mode": "dynamic",
+    "items": [ "movies", "sets", "tvshows", "artists", "albums", "favourites", "settings" ],
+    "placeholders": {
+      "key": "mainmenu_item"
+    },
+    "metadata": {
+      "movies": {
+        "label": "$LOCALIZE[342]",
+        "action": "ActivateWindow(Videos,videodb://movies/titles/,return)",
+        "path": "videodb://movies/titles/"
+      },
+      "sets": {
+        "label": "$LOCALIZE[20434]",
+        "action": "ActivateWindow(Videos,videodb://movies/sets/,return)",
+        "path": "videodb://movies/sets/"
+      },
+      "tvshows": {
+        "label": "$LOCALIZE[20343]",
+        "action": "ActivateWindow(Videos,videodb://tvshows/titles/,return)",
+        "path": "videodb://tvshows/titles/"
+      },
+      "artists": {
+        "label": "$LOCALIZE[133]",
+        "action": "ActivateWindow(Music,musicdb://artists/,return)",
+        "path": "musicdb://artists/"
+      },
+      "albums": {
+        "label": "$LOCALIZE[132]",
+        "action": "ActivateWindow(Music,musicdb://albums/,return)",
+        "path": "musicdb://albums/"
+      },
+      "favourites": {
+        "label": "$LOCALIZE[1036]",
+        "action": "ActivateWindow(favouritesbrowser)"
+      },
+      "settings": {
+        "label": "$LOCALIZE[10004]",
+        "action": "ActivateWindow(settings)"
+      }
+    }
+  }
+}

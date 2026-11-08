@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<mapping>shutdownmenu</mapping>
+	<includes>
+		<!-- Shutdown list 3001. An entry closes the menu first unless it sets close_condition (the theme entry stays open);
+			an empty condition is dropped, so entries the user adds always close -->
+		<template>
+			<index start="1" />
+			<include name="shutdownmenu_items">
+				<item id="{index}">
+					<visible>{visible}</visible>
+					<label>{label}</label>
+					<onclick condition="{close_condition}">Dialog.Close(all)</onclick>
+					<onclick>{action}</onclick>
+				</item>
+			</include>
+		</template>
+	</includes>
+</xml>

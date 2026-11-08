@@ -17,16 +17,17 @@
 	<variable name="Background_Home_Path">
 		<!-- Item override -->
 		<value condition="!String.IsEmpty(Container(3000).ListItem.Property(backgroundPlaylist))">$INFO[Container(3000).ListItem.Property(backgroundPlaylist)]</value>
-		<!-- playlists, xml library paths e.g. inprogress or sets, video and music db:// -->
-		<value condition="String.Contains(Container(3000).ListItem.Property(list),.xsp)">$INFO[Container(3000).ListItem.Property(list)]</value>
-		<value condition="String.Contains(Container(3000).ListItem.Property(list),.xml)">$INFO[Container(3000).ListItem.Property(list)]</value>
-		<value condition="String.Contains(Container(3000).ListItem.Property(list),db://)">$INFO[Container(3000).ListItem.Property(list)]</value>
+		<!-- playlists, xml library paths e.g. inprogress or sets, video and music db://, tested from the start: a shortcut
+			from the helper's common list or favourites keeps its whole action as list, which falls through to the rows below -->
+		<value condition="[String.Contains(Container(3000).ListItem.Property(list),.xsp) | String.Contains(Container(3000).ListItem.Property(list),.xml)] + [String.StartsWith(Container(3000).ListItem.Property(list),special://) | String.StartsWith(Container(3000).ListItem.Property(list),library://)]">$INFO[Container(3000).ListItem.Property(list)]</value>
+		<value condition="String.StartsWith(Container(3000).ListItem.Property(list),videodb://) | String.StartsWith(Container(3000).ListItem.Property(list),musicdb://)">$INFO[Container(3000).ListItem.Property(list)]</value>
 		<!-- music paths -->
 		<value condition="String.Contains(Container(3000).ListItem.Property(list),recentlyaddedalbums)">musicdb://recentlyaddedalbums/</value>
 		<value condition="String.Contains(Container(3000).ListItem.Property(list),recentlyplayedalbums)">musicdb://recentlyplayedalbums/</value>
 		<value condition="String.Contains(Container(3000).ListItem.Property(list),musicplaylists)">musicdb://artists/?albumartistsonly=true</value>
 		<value condition="String.Contains(Container(3000).ListItem.Property(list),musicdb)">musicdb://artists/?albumartistsonly=true</value>
 		<!-- video paths -->
+		<value condition="String.Contains(Container(3000).ListItem.Property(list),musicvideos)">videodb://musicvideos/titles/</value>
 		<value condition="String.Contains(Container(3000).ListItem.Property(list),recentlyaddedepisodes)">videodb://recentlyaddedepisodes/</value>
 		<value condition="String.Contains(Container(3000).ListItem.Property(list),inprogresstvshows)">videodb://inprogresstvshows</value>
 		<value condition="String.Contains(Container(3000).ListItem.Property(list),tvshows)">videodb://tvshows/titles/</value>

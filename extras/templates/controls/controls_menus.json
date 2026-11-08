@@ -1,0 +1,54 @@
+{
+  "mapping": "mainmenu",
+  "controls": {
+    "menu_{index}": {
+      "control_type": "listitem",
+      "label": "{label}"
+    },
+    "menu_action": {
+      "field": "action",
+      "role": "add_action",
+      "id": 201,
+      "control_type": "button",
+      "label": "$LOCALIZE[15217]",
+      "onclick": {
+        "type": "browse_content",
+        "mode": "menu",
+        "result_field": "action",
+        "sibling_fields": {
+          "label": "menu_label",
+          "path": "path"
+        }
+      }
+    },
+    "menu_label": {
+      "field": "label",
+      "id": 202,
+      "control_type": "edit",
+      "label": "$LOCALIZE[21899]"
+    },
+    "menu_background": {
+      "field": "background",
+      "id": 203,
+      "control_type": "button",
+      "label": "$LOCALIZE[33068]",
+      "visible": "xml(String.IsEqual(Window(home).Property(current_mapping),mainmenu))",
+      "onclick": {
+        "type": "browse_single",
+        "browseType": "images",
+        "heading": "$LOCALIZE[33068]"
+      }
+    },
+    "menu_background_playlist": {
+      "field": "background_playlist",
+      "id": 204,
+      "control_type": "button",
+      "label": "$LOCALIZE[20425]",
+      "visible": "xml(String.IsEqual(Window(home).Property(current_mapping),mainmenu))",
+      "onclick": {
+        "type": "browse_content",
+        "heading": "$LOCALIZE[20425]"
+      }
+    }
+  }
+}

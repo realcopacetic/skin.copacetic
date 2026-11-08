@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<mapping>mainmenu</mapping>
+	<includes>
+		<!-- Home list 3000. Variables_Paths_Media and the background variables read list, background and backgroundPlaylist -->
+		<template>
+			<index start="1" />
+			<include name="mainmenu_items">
+				<item id="{index}">
+					<label>{label}</label>
+					<onclick>{action}</onclick>
+					<property name="list">{path}</property>
+					<property name="background">{background}</property>
+					<property name="backgroundPlaylist">{background_playlist}</property>
+				</item>
+			</include>
+		</template>
+	</includes>
+</xml>

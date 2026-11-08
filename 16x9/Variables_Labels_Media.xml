@@ -865,6 +865,12 @@
 		<value>$LOCALIZE[31407]</value>
 	</variable>
 
+	<!-- The other theme, for the shutdown menu's theme entry: Skin.SetString(Theme,$VAR[Theme_Switch]) resolves it on click -->
+	<variable name="Theme_Switch">
+		<value condition="Skin.String(Theme,Light)">Dark</value>
+		<value>Light</value>
+	</variable>
+
 	<variable name="Title_Label">
 		<value condition="VideoPlayer.IsFullscreen + Window.Is(videoosd) + VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Season) + Integer.IsGreater(VideoPlayer.Episode,9)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x]$INFO[VideoPlayer.Title,. ]</value>
 		<value condition="VideoPlayer.IsFullscreen + Window.Is(videoosd) + VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Season) + Integer.IsGreater(VideoPlayer.Episode,0)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x0]$INFO[VideoPlayer.Title,. ]</value>

@@ -297,97 +297,59 @@
 		</control>
 	</include>
 
-	<include name="shutdownmenu_Content">
-		<item>
-			<description>Home</description>
-			<label>$LOCALIZE[31401]</label>
-			<onclick>Dialog.Close(all)</onclick>
-			<onclick>ActivateWindow(home)</onclick>
-			<visible>!Skin.HasSetting(Quick_Home_Disabled) + !Window.IsVisible(home) + !Window.IsVisible(loginscreen)</visible>
-		</item>
-		<item>
-			<description>Night Mode</description>
-			<label>$LOCALIZE[31408]</label>
-			<onclick>Skin.SetString(Theme,Dark)</onclick>
-			<visible>!Skin.HasSetting(Quick_Theme_Switcher_Disabled) + Skin.String(Theme,Light) + !Window.IsVisible(loginscreen)</visible>
-		</item>
-		<item>
-			<description>Light Mode</description>
-			<label>$LOCALIZE[31407]</label>
-			<onclick>Skin.SetString(Theme,Light)</onclick>
-			<visible>!Skin.HasSetting(Quick_Theme_Switcher_Disabled) + !Skin.String(Theme,Light) + !Window.IsVisible(loginscreen)</visible>
-		</item>
-		<item>
-			<description>Settings</description>
-			<label>$LOCALIZE[5]</label>
-			<onclick>Dialog.Close(all)</onclick>
-			<onclick>ActivateWindow(Settings)</onclick>
-			<visible>!Window.IsVisible(loginscreen) + !$EXP[Settings_Window_IsVisible]</visible>
-		</item>
-		<item>
-			<label>LibreELEC</label>
-			<onclick>Dialog.Close(all)</onclick>
-			<onclick>RunAddon(service.libreelec.settings)</onclick>
-			<visible>!Skin.HasSetting(Quick_LibreELEC_Menu_Disabled) + System.AddonIsEnabled(service.libreelec.settings) + !Window.IsVisible(loginscreen)</visible>
-		</item>
-	</include>
-	
-	<include name="skinshortcuts_Left_List_Content">
+	<include name="menusettings_Left_List_Content">
 		<include content="Button_Template">
-			<param name="target_id" value="304" />
-			<param name="visible" value="Control.HasFocus(211) | Control.HasFocus(301) | Control.HasFocus(302) | Control.HasFocus(303) | Control.HasFocus(304)" />
+			<param name="target_id" value="412" />
+			<param name="visible" value="Control.HasFocus(100) | Control.HasFocus(410) | Control.HasFocus(411) | Control.HasFocus(412) | Control.HasFocus(413)" />
 			<param name="right" value="300" />
 			<param name="width" value="120" />
 			<param name="texture" value="Down_Arrow" />
 			<bottom>-15</bottom>
 		</include>
 		<include content="Button_Template">
-			<param name="target_id" value="303" />
-			<param name="visible" value="Control.HasFocus(211) | Control.HasFocus(301) | Control.HasFocus(302) | Control.HasFocus(303) | Control.HasFocus(304)" />
+			<param name="target_id" value="411" />
+			<param name="visible" value="Control.HasFocus(100) | Control.HasFocus(410) | Control.HasFocus(411) | Control.HasFocus(412) | Control.HasFocus(413)" />
 			<param name="right" value="210" />
 			<param name="width" value="120" />
 			<param name="texture" value="Up_Arrow" />
 			<bottom>-15</bottom>
 		</include>
 		<include content="Button_Template">
-			<param name="target_id" value="301" />
-			<param name="visible" value="Control.HasFocus(211) | Control.HasFocus(301) | Control.HasFocus(302) | Control.HasFocus(303) | Control.HasFocus(304)" />
+			<param name="target_id" value="410" />
+			<param name="visible" value="Control.HasFocus(100) | Control.HasFocus(410) | Control.HasFocus(411) | Control.HasFocus(412) | Control.HasFocus(413)" />
 			<param name="right" value="135" />
 			<param name="width" value="90" />
-			<param name="rotated" value="false" />
 			<param name="texture" value="Plus" />
 		</include>
 		<include content="Button_Template">
-			<param name="target_id" value="302" />
-			<param name="visible" value="Control.HasFocus(211) | Control.HasFocus(301) | Control.HasFocus(302) | Control.HasFocus(303) | Control.HasFocus(304)" />
+			<param name="target_id" value="413" />
+			<param name="visible" value="Control.HasFocus(100) | Control.HasFocus(410) | Control.HasFocus(411) | Control.HasFocus(412) | Control.HasFocus(413)" />
 			<param name="right" value="45" />
 			<param name="width" value="90" />
-			<param name="rotated" value="false" />
 			<param name="texture" value="Cross" />
 		</include>
 	</include>
 
-	<include name="skinshortcuts_Right_List_Content">
-		<control type="button" id="401">
-			<description>Change shortcut</description>
-			<label>$ADDON[script.skinshortcuts 32048]</label>
+	<!-- The helper sets the labels and shows each control's value as label2 (controls_menus.json) -->
+	<include name="menusettings_Right_List_Content">
+		<control type="button" id="201">
+			<description>Action</description>
+			<label>$LOCALIZE[15217]</label>
 		</control>
-		<control type="button" id="305">
-			<description>Change label</description>
-			<label>$ADDON[script.skinshortcuts 32025]</label>
-			<label2>$INFO[Container(211).ListItem.Label]</label2>
+		<control type="edit" id="202">
+			<description>Label</description>
+			<label>$LOCALIZE[21899]</label>
 		</control>
-		<control type="button" id="307">
-			<description>Change action</description>
-			<label>$ADDON[script.skinshortcuts 32027]</label>
-			<label2>$INFO[Container(211).ListItem.Property(displaypath)]</label2>
+		<!-- Home menu only. The helper hides them too, but only once the window has opened -->
+		<control type="button" id="203">
+			<description>Background</description>
+			<visible>String.IsEqual(Window(home).Property(current_mapping),mainmenu)</visible>
+			<label>$LOCALIZE[33068]</label>
 		</control>
-		<control type="button" id="310">
-			<visible>String.IsEqual(Window.Property(groupname), mainmenu)</visible>
-			<description>Change background path</description>
-			<label>$ADDON[script.skinshortcuts 32045]</label>
-			<label2>$VAR[skinshortcuts_Background_Override_Label2]</label2>
-			<label2></label2>
+		<control type="button" id="204">
+			<description>Fanart slideshow</description>
+			<visible>String.IsEqual(Window(home).Property(current_mapping),mainmenu)</visible>
+			<label>$LOCALIZE[20425]</label>
 		</control>
 	</include>
 

@@ -292,8 +292,6 @@
 				<nested />
 				<visible>$PARAM[visible]</visible>
 				<control type="grouplist" id="$PARAM[id]">
-					<onup condition="String.Contains(Window.Property(xmlfile),skinshortcuts.xml) + ControlGroup(4005).HasFocus">Control.Move(211,-1)</onup>
-					<ondown condition="String.Contains(Window.Property(xmlfile),skinshortcuts.xml) + ControlGroup(4005).HasFocus">Control.Move(211,1)</ondown>
 					<onleft>$PARAM[onleft]</onleft>
 					<onright>$PARAM[onright]</onright>
 					<onup>$PARAM[onup]</onup>

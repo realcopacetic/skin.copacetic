@@ -1,0 +1,40 @@
+{
+  "shutdownmenu": {
+    "mode": "dynamic",
+    "items": [ "home", "theme", "settings", "libreelec", "addons", "quit" ],
+    "placeholders": {
+      "key": "shutdownmenu_item"
+    },
+    "metadata": {
+      "home": {
+        "label": "$LOCALIZE[31401]",
+        "action": "ActivateWindow(home)",
+        "visible": "!Window.IsVisible(home) + !Window.IsVisible(loginscreen)"
+      },
+      "theme": {
+        "label": "$VAR[Theme_Label]",
+        "action": "Skin.SetString(Theme,$VAR[Theme_Switch])",
+        "close_condition": "false",
+        "visible": "!Window.IsVisible(loginscreen)"
+      },
+      "settings": {
+        "label": "$LOCALIZE[5]",
+        "action": "ActivateWindow(Settings)",
+        "visible": "!Window.IsVisible(loginscreen) + !$EXP[Settings_Window_IsVisible]"
+      },
+      "libreelec": {
+        "label": "LibreELEC",
+        "action": "RunAddon(service.libreelec.settings)",
+        "visible": "System.AddonIsEnabled(service.libreelec.settings) + !Window.IsVisible(loginscreen)"
+      },
+      "addons": {
+        "label": "$LOCALIZE[24001]",
+        "action": "ActivateWindow(addonbrowser)"
+      },
+      "quit": {
+        "label": "$LOCALIZE[13012]",
+        "action": "Quit()"
+      }
+    }
+  }
+}

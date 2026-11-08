@@ -337,6 +337,35 @@
 		</control>
 	</include>
 
+	<include name="menusettings_Hidden">
+		<include content="Hidden_Components">
+			<control type="textbox" id="6" /> <!-- the editor's description, which C1 doesn't show -->
+		</include>
+		<!-- Move down, Move up, Add and Delete, drawn in the list's focused row; Up and Down on them move the list (the helper's onAction) -->
+		<control type="button" id="412">
+			<include content="Hidden_Button_Template" />
+			<onleft>100</onleft>
+			<onright>411</onright>
+		</control>
+		<control type="button" id="411">
+			<include content="Hidden_Button_Template" />
+			<onleft>412</onleft>
+			<onright>410</onright>
+		</control>
+		<control type="button" id="410">
+			<include content="Hidden_Button_Template" />
+			<onleft>411</onleft>
+			<onright>413</onright>
+		</control>
+		<!-- Delete needs a second entry. The helper disables it only once the list scrolls or changes, so the skin does it from the start -->
+		<control type="button" id="413">
+			<include content="Hidden_Button_Template" />
+			<enable>Integer.IsGreater(Container(100).NumItems,1)</enable>
+			<onleft>410</onleft>
+			<onright>9001</onright>
+		</control>
+	</include>
+
 	<include name="musicplaylisteditor_Hidden">
 		<include content="Hidden_Components">
 			<control type="label" id="12" />
@@ -382,44 +411,6 @@
 			<visible allowhiddenfocus="true">false</visible>
 			<onfocus condition="Control.IsVisible(3)">SetFocus(3)</onfocus>
 			<onfocus condition="Control.IsVisible(6)">SetFocus(6)</onfocus>
-		</control>
-	</include>
-
-	<include name="skinshortcuts_Hidden">
-		<include content="Hidden_Components">
-			<control type="label" id="101" />
-			<control type="list" id="111" />
-			<control type="button" id="306" />
-			<control type="button" id="309" />
-			<control type="button" id="312" />
-		</include>
-		<control type="button" id="304">
-			<include content="Hidden_Button_Template" />
-			<onleft>10</onleft>
-			<onright>303</onright>
-			<onup>Control.Move(211,-1)</onup>
-			<ondown>Control.Move(211,1)</ondown>
-		</control>
-		<control type="button" id="303">
-			<include content="Hidden_Button_Template" />
-			<onleft>304</onleft>
-			<onright>301</onright>
-			<onup>Control.Move(211,-1)</onup>
-			<ondown>Control.Move(211,1)</ondown>
-		</control>
-		<control type="button" id="301">
-			<include content="Hidden_Button_Template" />
-			<onleft>303</onleft>
-			<onright>302</onright>
-			<onup>Control.Move(211,-1)</onup>
-			<ondown>Control.Move(211,1)</ondown>
-		</control>
-		<control type="button" id="302">
-			<include content="Hidden_Button_Template" />
-			<onleft>301</onleft>
-			<onright>9001</onright>
-			<onup>Control.Move(211,-1)</onup>
-			<ondown>Control.Move(211,1)</ondown>
 		</control>
 	</include>
 

@@ -265,7 +265,7 @@
 						<param name="width" value="90" />
 						<param name="texture" value="Cross" />
 					</include>
-					<include content="skinshortcuts_Left_List_Content" condition="$PARAM[embedded_buttons] + String.Contains(Window.Property(xmlfile),script-skinshortcuts.xml)" />
+					<include content="menusettings_Left_List_Content" condition="$PARAM[embedded_buttons] + String.Contains(Window.Property(xmlfile),menusettings.xml)" />
 				</focusedlayout>
 			</control>
 		</definition>

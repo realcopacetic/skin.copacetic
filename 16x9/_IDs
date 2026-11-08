@@ -30,7 +30,6 @@ LISTS
 3100          Secondary
 3100          Secondary (on infoscreen - album tracklist)
 3100          Hidden list (for set/picture info when secondary lists disabled)
-3100          Secondary list on skin-shortcuts
 320X          Widget settings grouplists
 32XX          Widgets
 3300          Background slideshow container
@@ -98,6 +97,14 @@ OTHER
 61            Scrollbar (secondary)
 62            Scrollbar jump
 63            Volume progress
+
+MENU EDITOR (menusettings.xml, ids set by the helper's dynamic_settings_window)
+6             Description textbox (hidden)
+100           Menu entries
+201-204       Action, label, background, fanart slideshow (controls_menus.json)
+410-413       Add, move up, move down, delete (hidden buttons drawn in the focused entry)
+414-415       Reset, close
+9001          Controls grouplist
 
 PATH EDITOR (pathsettings.xml, ids set by the helper's dynamic_settings_window)
 6             Description textbox (hidden)

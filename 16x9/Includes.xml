@@ -43,7 +43,19 @@
 	<!-- Built by the helper from extras/templates/includes; until the first build Kodi only logs it as missing -->
 	<!-- The helper's _variables and _expressions files join here with the first lane that brings templates of those kinds -->
 	<include file="script-copacetic-helper_includes.xml" />
-	<include file="script-skinshortcuts-includes.xml" />
+	<!-- Kodi keeps the first include of a name, so this one is used only while the build above is missing: the shutdown menu keeps Settings and Exit -->
+	<include name="shutdownmenu_items">
+		<item>
+			<visible>!Window.IsVisible(loginscreen) + !$EXP[Settings_Window_IsVisible]</visible>
+			<label>$LOCALIZE[5]</label>
+			<onclick>Dialog.Close(all)</onclick>
+			<onclick>ActivateWindow(Settings)</onclick>
+		</item>
+		<item>
+			<label>$LOCALIZE[13012]</label>
+			<onclick>Quit()</onclick>
+		</item>
+	</include>
 	<include file="Templates_Artwork.xml" />
 	<include file="Templates_Buttons.xml" />
 	<include file="Templates_Dialogs.xml" />
