@@ -6,6 +6,7 @@
 	<controls>
 		<include content="editor_Hidden" />
 		<include content="Default_Dialog_Panel_Layout">
+			<param name="visible" value="!$EXP[TransparentDialog_IsVisible]" />
 			<include content="Breadcrumb_Label">
 				<param name="title_label" value="$LOCALIZE[31489]" />
 			</include>
