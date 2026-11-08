@@ -1,0 +1,10 @@
+{
+  "mapping": "content_types",
+  "variables": {
+    "label_viewmenu_focus_item": {
+      "values": [
+        { "condition": "{@windows:{window}.window_visible} + {condition}", "value": "{content_type}" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "content_types": {
+    "mode": "dynamic",
+    "items": [
+      "movies",
+      "sets",
+      "tvshows",
+      "seasons",
+      "episodes",
+      "videos",
+      "musicvideos",
+      "artists",
+      "albums",
+      "songs",
+      "addons",
+      "program_addons",
+      "program_folders",
+      "program_files",
+      "images",
+      "favourites"
+    ],
+    "placeholders": {
+      "key": "content_type"
+    },
+    "config_fields": {
+      "global": {
+        "layout": "{content_type}_layout"
+      }
+    },
+    "metadata": {
+      "movies": { "window": "videos", "condition": "Container.Content(movies)", "label": "$LOCALIZE[20342]" },
+      "sets": { "window": "videos", "condition": "Container.Content(sets)", "label": "$LOCALIZE[20434]" },
+      "tvshows": { "window": "videos", "condition": "Container.Content(tvshows)", "label": "$LOCALIZE[20343]" },
+      "seasons": { "window": "videos", "condition": "Container.Content(seasons)", "label": "$LOCALIZE[33054]" },
+      "episodes": { "window": "videos", "condition": "Container.Content(episodes)", "label": "$LOCALIZE[20360]" },
+      "videos": { "window": "videos", "condition": "Container.Content(videos)", "label": "$LOCALIZE[3]" },
+      "musicvideos": { "window": "videos", "condition": "Container.Content(musicvideos)", "label": "$LOCALIZE[20389]" },
+      "artists": { "window": "music", "condition": "Container.Content(artists)", "label": "$LOCALIZE[133]" },
+      "albums": { "window": "music", "condition": "Container.Content(albums)", "label": "$LOCALIZE[132]" },
+      "songs": { "window": "music", "condition": "Container.Content(songs)", "label": "$LOCALIZE[134]" },
+      "addons": { "window": "addonbrowser", "condition": "$EXP[Container_Addons_NonRepo]", "label": "$LOCALIZE[24001]" },
+      "program_addons": { "window": "programs", "condition": "Container.Content(addons)", "label": "$LOCALIZE[1043]" },
+      "program_folders": { "window": "programs", "condition": "$EXP[Container_Programs_IsFolders]", "label": "$LOCALIZE[0] / $LOCALIZE[20334]" },
+      "program_files": { "window": "programs", "condition": "$EXP[Container_Programs_IsFiles]", "label": "$LOCALIZE[0] / $LOCALIZE[744]" },
+      "images": { "window": "pictures", "condition": "Container.Content(images)", "label": "$LOCALIZE[1]" },
+      "favourites": { "window": "favourites", "condition": "Container.Content(favourites)", "label": "$LOCALIZE[1036]" }
+    }
+  }
+}

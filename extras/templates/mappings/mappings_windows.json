@@ -1,0 +1,15 @@
+{
+  "windows": {
+    "mode": "static",
+    "items": [ "videos", "music", "addonbrowser", "favourites", "pictures", "programs" ],
+    "placeholders": { "key": "window" },
+    "metadata": {
+      "videos": { "mode": "media", "window_visible": "Window.IsVisible(videos)" },
+      "music": { "mode": "media", "window_visible": "Window.IsVisible(music)" },
+      "addonbrowser": { "mode": "media", "window_visible": "Window.IsVisible(addonbrowser)" },
+      "favourites": { "mode": "media", "window_visible": "Window.IsVisible(favouritesbrowser)" },
+      "pictures": { "mode": "media", "window_visible": "Window.IsVisible(pictures)" },
+      "programs": { "mode": "media", "window_visible": "Window.IsVisible(programs)" }
+    }
+  }
+}

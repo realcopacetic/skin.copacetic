@@ -1,0 +1,42 @@
+{
+  "mapping": "content_types",
+  "expressions": {
+    "layout_{item}_include_{window}": {
+      "items": [ "list", "billboard", "showcase", "strip", "grid" ],
+      "rules": [
+        {
+          "condition": "equals({layout}, {item})",
+          "type": "assign",
+          "value": "true"
+        }
+      ]
+    },
+    "layout_{item}_include_media": {
+      "items": [ "billboard", "showcase", "strip", "grid" ],
+      "rules": [
+        {
+          "condition": "equals({layout}, {item})",
+          "type": "append",
+          "value": "{@windows:{window}.window_visible}"
+        }
+      ]
+    },
+    "layout_{item}_visible_{window}": {
+      "items": [ "list", "billboard", "showcase", "strip", "grid" ],
+      "rules": [
+        {
+          "condition": "equals({layout}, {item})",
+          "type": "append",
+          "value": "{condition}"
+        }
+      ],
+      "fallback_key": "window",
+      "fallbacks": {
+        "*": {
+          "target_item": "list",
+          "value": "invert()"
+        }
+      }
+    }
+  }
+}

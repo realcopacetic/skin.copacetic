@@ -40,9 +40,10 @@
 	<include file="Notifications.xml" />
 	<include file="OnLoadUnload.xml" />
 	<include file="Scrollbars.xml" />
-	<!-- Built by the helper from extras/templates/includes; until the first build Kodi only logs it as missing -->
-	<!-- The helper's _variables and _expressions files join here with the first lane that brings templates of those kinds -->
+	<!-- Built by the helper from extras/templates; until the first build Kodi only logs them as missing -->
+	<include file="script-copacetic-helper_expressions.xml" />
 	<include file="script-copacetic-helper_includes.xml" />
+	<include file="script-copacetic-helper_variables.xml" />
 	<!-- Kodi keeps the first include of a name, so this one is used only while the build above is missing: the shutdown menu keeps Settings and Exit -->
 	<include name="shutdownmenu_items">
 		<item>

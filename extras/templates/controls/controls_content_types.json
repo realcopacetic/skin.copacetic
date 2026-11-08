@@ -1,0 +1,15 @@
+{
+  "mapping": "content_types",
+  "controls": {
+    "content_type_item": {
+      "control_type": "listitem",
+      "label": "{label}"
+    },
+    "layout": {
+      "field": "layout",
+      "id": 200,
+      "control_type": "sliderex",
+      "label": "$LOCALIZE[31005]"
+    }
+  }
+}

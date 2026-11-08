@@ -1,0 +1,32 @@
+{
+  "mapping": "content_types",
+  "configs": {
+    "{content_type}_layout": {
+      "items": {
+        "list": "$LOCALIZE[31000]",
+        "billboard": "$LOCALIZE[31001]",
+        "showcase": "$LOCALIZE[31002]",
+        "strip": "$LOCALIZE[31003]",
+        "grid": "$LOCALIZE[31004]"
+      },
+      "filter_mode": "exclude",
+      "rules": [
+        {
+          "condition": "In({content_type}, [videos, albums, songs, addons, program_addons, program_folders, images])",
+          "value": [ "billboard" ]
+        },
+        {
+          "condition": "In({content_type}, [episodes, videos, musicvideos, songs])",
+          "value": [ "showcase" ]
+        },
+        {
+          "condition": "In({content_type}, [songs])",
+          "value": [ "strip", "grid" ]
+        }
+      ],
+      "defaults": {
+        "*": "list"
+      }
+    }
+  }
+}
