@@ -591,7 +591,6 @@
 					<orientation>vertical</orientation>
 					<focusposition>0</focusposition>
 					<movement>12</movement>
-					<defaultcontrol>1</defaultcontrol>
 					<scrolltime tween="sine" easing="inout">380</scrolltime>
 					<itemlayout height="60" width="1080">
 						<include content="Simple_List_Layout">
