@@ -53,6 +53,7 @@
 			<onclick>ActivateWindow(Settings)</onclick>
 		</item>
 		<item>
+			<visible>System.ShowExitButton</visible>
 			<label>$LOCALIZE[13012]</label>
 			<onclick>Quit()</onclick>
 		</item>
