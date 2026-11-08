@@ -40,6 +40,9 @@
 	<include file="Notifications.xml" />
 	<include file="OnLoadUnload.xml" />
 	<include file="Scrollbars.xml" />
+	<!-- Built by the helper from extras/templates/includes; until the first build Kodi only logs it as missing -->
+	<!-- The helper's _variables and _expressions files join here with the first lane that brings templates of those kinds -->
+	<include file="script-copacetic-helper_includes.xml" />
 	<include file="script-skinshortcuts-includes.xml" />
 	<include file="Templates_Artwork.xml" />
 	<include file="Templates_Buttons.xml" />
