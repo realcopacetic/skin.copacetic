@@ -83,7 +83,7 @@
 			</item>
 			<!-- Party mode -->
 			<item>
-				<onclick>SetFocus($PARAM[target_id]))</onclick>
+				<onclick>SetFocus($PARAM[target_id])</onclick>
 				<onclick>SendClick(16)</onclick>
 				<label>$LOCALIZE[589]</label>
 				<label2>$LOCALIZE[589]</label2>
