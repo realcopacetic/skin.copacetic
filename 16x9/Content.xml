@@ -118,8 +118,10 @@
 			<description>Slideshow 1 custom path</description>
 			<label>$LOCALIZE[108] 1</label>
 		</control>
+		<!-- The helper hides it too, but only once the window has opened -->
 		<control type="button" id="202">
 			<description>Slideshow 2 custom path</description>
+			<visible>Skin.HasSetting(slideshow2)</visible>
 			<label>$LOCALIZE[108] 2</label>
 		</control>
 	</include>
