@@ -115,6 +115,10 @@
 		<onload condition="Skin.String(Background_Slideshow2)">Skin.Reset(Background_Slideshow2)</onload>
 		<onload condition="Skin.String(Background_Slideshow2_Custom_Path)">Skin.Reset(Background_Slideshow2_Custom_Path)</onload>
 		<onload condition="Skin.String(Background_Slideshow2_Timer)">Skin.Reset(Background_Slideshow2_Timer)</onload>
+		<!-- Up Next is replaced by the play next card: turn it off once (the helper notifies), after the first build's reload,
+			which would close the notification (builder_ready is generated). Both conditions are read before either row runs -->
+		<onload condition="System.AddonIsEnabled(service.upnext) + !Skin.HasSetting(upnext_turned_off) + $EXP[builder_ready]">RunScript(script.copacetic.helper,action=toggle_addon,id=service.upnext)</onload>
+		<onload condition="!Skin.HasSetting(upnext_turned_off) + $EXP[builder_ready]">Skin.SetBool(upnext_turned_off)</onload>
 	</include>
 
 </includes>

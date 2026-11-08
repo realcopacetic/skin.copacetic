@@ -1,0 +1,8 @@
+{
+  "mapping": "none",
+  "expressions": {
+    "builder_ready": {
+      "rules": [ { "type": "assign", "value": "true" } ]
+    }
+  }
+}
