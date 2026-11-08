@@ -45,6 +45,16 @@
         }
       }
     },
+    "display_{item}_visible": {
+      "items": [ "background", "thumbnails" ],
+      "rules": [
+        {
+          "condition": "equals({display}, {item})",
+          "type": "append",
+          "value": "{condition}"
+        }
+      ]
+    },
     "details_{item}_visible": {
       "items": [ "title", "info", "plot", "all" ],
       "rules": [

@@ -28,8 +28,44 @@
         "*": "list"
       }
     },
+    "{layout}_display": {
+      "items": {
+        "background": "$LOCALIZE[31432]",
+        "thumbnails": "$LOCALIZE[31027]"
+      },
+      "filter_mode": "exclude",
+      "rules": [
+        {
+          "condition": "not In({content_type}, [movies, sets, tvshows, seasons, episodes, artists, albums, songs, musicvideos, program_files])",
+          "value": [ "background" ]
+        }
+      ],
+      "defaults": {
+        "albums": "thumbnails",
+        "songs": "thumbnails",
+        "program_files": "thumbnails",
+        "*": "background"
+      }
+    },
     "{layout}_details": {
-      "items": { "off": "" }
+      "items": {
+        "title": "$LOCALIZE[31017]",
+        "info": "$LOCALIZE[31018]"
+      },
+      "filter_mode": "exclude",
+      "rules": [
+        {
+          "condition": "In({content_type}, [videos, favourites])",
+          "value": [ "info" ]
+        },
+        {
+          "condition": "In({content_type}, [addons, images, program_addons, program_folders])",
+          "value": [ "title" ]
+        }
+      ],
+      "defaults": {
+        "*": "info"
+      }
     },
     "billboard_details": {
       "items": {

@@ -25,6 +25,7 @@
     "config_fields": {
       "global": {
         "layout": "{content_type}_layout",
+        "display": "{layout}_display",
         "details": "{layout}_details",
         "flags": "{content_type}_flags",
         "logo": "{content_type}_logo"
@@ -42,7 +43,7 @@
       "albums": { "window": "music", "condition": "Container.Content(albums)", "label": "$LOCALIZE[132]" },
       "songs": { "window": "music", "condition": "Container.Content(songs)", "label": "$LOCALIZE[134]" },
       "addons": { "window": "addonbrowser", "condition": "$EXP[Container_Addons_NonRepo]", "label": "$LOCALIZE[24001]" },
-      "program_addons": { "window": "programs", "condition": "Container.Content(addons)", "label": "$LOCALIZE[1043]" },
+      "program_addons": { "window": "programs", "condition": "Window.IsVisible(programs) + Container.Content(addons)", "label": "$LOCALIZE[1043]" },
       "program_folders": { "window": "programs", "condition": "$EXP[Container_Programs_IsFolders]", "label": "$LOCALIZE[0] / $LOCALIZE[20334]" },
       "program_files": { "window": "programs", "condition": "$EXP[Container_Programs_IsFiles]", "label": "$LOCALIZE[0] / $LOCALIZE[744]" },
       "images": { "window": "pictures", "condition": "Container.Content(images)", "label": "$LOCALIZE[1]" },

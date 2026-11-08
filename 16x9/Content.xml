@@ -467,13 +467,18 @@
 		</control>
 		<include content="viewsettings_Slider_Row">
 			<param name="id" value="200" />
-			<param name="ondown" value="2020" />
+			<param name="ondown" value="2010" />
 			<param name="onup" value="2040" />
+		</include>
+		<include content="viewsettings_Slider_Row">
+			<param name="id" value="201" />
+			<param name="ondown" value="2020" />
+			<param name="onup" value="2000" />
 		</include>
 		<include content="viewsettings_Slider_Row">
 			<param name="id" value="202" />
 			<param name="ondown" value="2030" />
-			<param name="onup" value="2000" />
+			<param name="onup" value="2010" />
 		</include>
 		<include content="viewsettings_Slider_Row">
 			<param name="id" value="203" />

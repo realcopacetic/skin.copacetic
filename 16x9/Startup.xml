@@ -92,36 +92,6 @@
 	<onload condition="!Skin.String(GlobalSearch_Albums_Limit)">Skin.SetString(GlobalSearch_Albums_Limit,30)</onload>
 	<onload condition="!Skin.String(GlobalSearch_Songs_Limit)">Skin.SetString(GlobalSearch_Songs_Limit,30)</onload>
 	<!-- Layout configuration -->
-	<!-- List -->
-	<onload condition="!Skin.String(ListView_Display_Movies)">Skin.SetString(ListView_Display_Movies,Background)</onload>
-	<onload condition="!Skin.String(ListView_Display_Sets)">Skin.SetString(ListView_Display_Sets,Background)</onload>
-	<onload condition="!Skin.String(ListView_Display_TVShows)">Skin.SetString(ListView_Display_TVShows,Background)</onload>
-	<onload condition="!Skin.String(ListView_Display_Seasons)">Skin.SetString(ListView_Display_Seasons,Background)</onload>
-	<onload condition="!Skin.String(ListView_Display_Episodes)">Skin.SetString(ListView_Display_Episodes,Background)</onload>
-	<onload condition="!Skin.String(ListView_Display_Artists)">Skin.SetString(ListView_Display_Artists,Background)</onload>
-	<onload condition="!Skin.String(ListView_Display_Albums)">Skin.SetString(ListView_Display_Albums,Thumbnails)</onload>
-	<onload condition="!Skin.String(ListView_Display_MusicVideos)">Skin.SetString(ListView_Display_MusicVideos,Background)</onload>
-	<onload condition="!Skin.String(ListView_Display_Songs)">Skin.SetString(ListView_Display_Songs,Thumbnails)</onload>
-	<onload condition="!Skin.String(ListView_Display_Programs_Files)">Skin.SetString(ListView_Display_Programs_Files,Thumbnails)</onload>
-	<onload condition="!Skin.String(ListView_Display_Favourites)">Skin.SetString(ListView_Display_Favourites,Thumbnails)</onload>
-	<onload condition="!Skin.String(ListView_Details_Movies)">Skin.SetString(ListView_Details_Movies,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(ListView_Details_Sets)">Skin.SetString(ListView_Details_Sets,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(ListView_Details_TVShows)">Skin.SetString(ListView_Details_TVShows,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(ListView_Details_Seasons)">Skin.SetString(ListView_Details_Seasons,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(ListView_Details_Episodes)">Skin.SetString(ListView_Details_Episodes,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(ListView_Details_Artists)">Skin.SetString(ListView_Details_Artists,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(ListView_Details_Albums)">Skin.SetString(ListView_Details_Albums,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(ListView_Details_MusicVideos)">Skin.SetString(ListView_Details_MusicVideos,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(ListView_Details_Songs)">Skin.SetString(ListView_Details_Songs,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(ListView_Details_Addons)">Skin.SetString(ListView_Details_Addons,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(ListView_Details_Images)">Skin.SetString(ListView_Details_Images,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(ListView_Details_Programs_Files)">Skin.SetString(ListView_Details_Programs_Files,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(ListView_Flags_Movies)">Skin.SetString(ListView_Flags_Movies,All)</onload>
-	<onload condition="!Skin.String(ListView_Flags_Sets)">Skin.SetString(ListView_Flags_Sets,All)</onload>
-	<onload condition="!Skin.String(ListView_Flags_TVShows)">Skin.SetString(ListView_Flags_TVShows,All)</onload>
-	<onload condition="!Skin.String(ListView_Flags_Seasons)">Skin.SetString(ListView_Flags_Seasons,All)</onload>
-	<onload condition="!Skin.String(ListView_Flags_Episodes)">Skin.SetString(ListView_Flags_Episodes,All)</onload>
-	<onload condition="!Skin.String(ListView_Flags_Programs_Files)">Skin.SetString(ListView_Flags_Programs_Files,All)</onload>
 	<!-- Showcase -->
 	<onload condition="!Skin.String(ShowcaseView_Display_Movies)">Skin.SetString(ShowcaseView_Display_Movies,Posters)</onload>
 	<onload condition="!Skin.String(ShowcaseView_Display_Sets)">Skin.SetString(ShowcaseView_Display_Sets,Posters)</onload>

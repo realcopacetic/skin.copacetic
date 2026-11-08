@@ -24,7 +24,6 @@
 	<include file="Content_OSD.xml" />
 	<include file="Content_Settings.xml" />
 	<include file="Content_Settings_Sliders.xml" />
-	<include file="Content_Viewtype_50_List.xml" />
 	<include file="Content_Viewtype_502_Showcase.xml" />
 	<include file="Content_Viewtype_504_Strip.xml" />
 	<include file="Content_Viewtype_505_Grid.xml" />
