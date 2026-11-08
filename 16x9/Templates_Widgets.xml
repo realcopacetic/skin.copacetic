@@ -194,6 +194,7 @@
 				<ondown>3200</ondown>
 				<onright>3200</onright>
 				<ontextchange>RunScript(script.copacetic.helper,action=set_search_query,id=4200,min_length=1)</ontextchange>
+				<include content="search_field_cursor_resets" />
 			</control>
 		</control>
 	</include>

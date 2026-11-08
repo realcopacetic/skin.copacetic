@@ -64,12 +64,19 @@
 				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus({index})">Conditional</animation>
 			</include>
 		</template>
-		<!-- Each rail goes back to its first item as the window closes, so a new query never opens part way along a rail -->
+		<!-- Each rail goes back to its first item as the window closes and as the query changes, so a new query never opens part way along a rail -->
 		<template>
 			<index start="3201" />
 			<include name="search_cursor_resets">
 				<onunload condition="!String.IsEqual(Container({index}).CurrentItem,1)">Control.Move({index},$INFO[Container({index}).CurrentItem,-])</onunload>
 				<onunload condition="!String.IsEqual(Container({index}).CurrentItem,1)">Control.Move({index},1)</onunload>
+			</include>
+		</template>
+		<template>
+			<index start="3201" />
+			<include name="search_field_cursor_resets">
+				<ontextchange condition="!String.IsEqual(Container({index}).CurrentItem,1)">Control.Move({index},$INFO[Container({index}).CurrentItem,-])</ontextchange>
+				<ontextchange condition="!String.IsEqual(Container({index}).CurrentItem,1)">Control.Move({index},1)</ontextchange>
 			</include>
 		</template>
 	</includes>

@@ -24,6 +24,12 @@
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Icon)">$INFO[ListItem(-1).Icon]</value>
 	</variable>
 	<variable name="Widget_Posters_Thumbnail(0)Content">
+		<!-- Search rails can sit at any id once the editor moves them, so they read the focused rail, not a fixed one -->
+		<value condition="Window.Is(1180) + !String.IsEmpty(Container.ListItemNoWrap(0).Art(keyart)) + Skin.HasSetting(Infoscreens_Prefer_Keyart)">$INFO[ListItem(0).Art(keyart)]</value>
+		<value condition="Window.Is(1180) + !String.IsEmpty(Container.ListItemNoWrap(0).Art(poster))">$INFO[ListItem(0).Art(poster)]</value>
+		<value condition="Window.Is(1180) + !String.IsEmpty(Container.ListItemNoWrap(0).Art(tvshow.keyart)) + Skin.HasSetting(Infoscreens_Prefer_Keyart)">$INFO[ListItem(0).Art(tvshow.keyart)]</value>
+		<value condition="Window.Is(1180) + !String.IsEmpty(Container.ListItemNoWrap(0).Art(tvshow.poster))">$INFO[ListItem(0).Art(tvshow.poster)]</value>
+		<value condition="Window.Is(1180) + !String.IsEmpty(Container.ListItemNoWrap(0).Icon)">$INFO[ListItem(0).Icon]</value>
 		<value condition="Control.HasFocus(3201) + !String.IsEmpty(Container(3201).ListItemNoWrap(0).Art(keyart)) + Skin.HasSetting(Infoscreens_Prefer_Keyart)">$INFO[Container(3201).ListItem(0).Art(keyart)]</value>
 		<value condition="Control.HasFocus(3201) + !String.IsEmpty(Container(3201).ListItemNoWrap(0).Art(poster))">$INFO[Container(3201).ListItem(0).Art(poster)]</value>
 		<value condition="Control.HasFocus(3201) + !String.IsEmpty(Container(3201).ListItemNoWrap(0).Icon)">$INFO[Container(3201).ListItem(0).Icon]</value>
@@ -99,6 +105,12 @@
 		<value condition="!String.IsEmpty(Container.ListItemNoWrap(-1).Icon)">$INFO[ListItem(-1).Icon]</value>
 	</variable>
 	<variable name="Widget_Fanart_Thumbnail(0)Content">
+		<!-- Search rails can sit at any id once the editor moves them; the type picks the art: episodes their thumb, the rest their fanart -->
+		<value condition="Window.Is(1180) + String.IsEqual(ListItem(0).DBType,episode) + !String.IsEmpty(Container.ListItemNoWrap(0).Icon)">$INFO[ListItem(0).Icon]</value>
+		<value condition="Window.Is(1180) + !String.IsEqual(ListItem(0).DBType,episode) + Skin.HasSetting(Infoscreens_Prefer_Landscape) + !String.IsEmpty(Container.ListItemNoWrap(0).Art(landscape))">$INFO[ListItem(0).Art(landscape)]</value>
+		<value condition="Window.Is(1180) + !String.IsEqual(ListItem(0).DBType,episode) + !String.IsEmpty(Container.ListItemNoWrap(0).Art(fanart))">$INFO[ListItem(0).Art(fanart)]</value>
+		<value condition="Window.Is(1180) + !String.IsEqual(ListItem(0).DBType,episode) + !String.IsEmpty(Container.ListItemNoWrap(0).Art(thumb))">$INFO[ListItem(0).Art(thumb)]</value>
+		<value condition="Window.Is(1180) + !String.IsEmpty(Container.ListItemNoWrap(0).Icon)">$INFO[ListItem(0).Icon]</value>
 		<value condition="Control.HasFocus(3201) + !String.IsEqual(Container(3201).ListItem(1).DBType,episode) + Skin.HasSetting(Infoscreens_Prefer_Landscape) + !String.IsEmpty(Container(3201).ListItem(0).Art(landscape))">$INFO[Container(3201).ListItem(0).Art(landscape)]</value>
 		<value condition="Control.HasFocus(3201) + !String.IsEqual(Container(3201).ListItem(1).DBType,episode) + !String.IsEmpty(Container(3201).ListItem(0).Art(fanart))">$INFO[Container(3201).ListItem(0).Art(fanart)]</value>
 		<value condition="Control.HasFocus(3201) + !String.IsEmpty(Container(3201).ListItem(0).Icon)">$INFO[Container(3201).ListItem(0).Icon]</value>
