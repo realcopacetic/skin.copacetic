@@ -9,7 +9,14 @@
           "type": "assign",
           "value": "true"
         }
-      ]
+      ],
+      "fallback_key": "window",
+      "fallbacks": {
+        "*": {
+          "target_item": "list",
+          "value": "true"
+        }
+      }
     },
     "layout_{item}_include_media": {
       "items": [ "billboard", "showcase", "strip", "grid" ],
