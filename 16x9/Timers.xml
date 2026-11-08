@@ -43,9 +43,9 @@
   </timer>
   <timer>
     <name>playnext</name>
-    <description>opens the play next card (1190) in the last playnext_lead seconds of a library episode with the next one queued, and closes it outside them</description>
-    <start reset="true">Skin.HasSetting(playnext_enabled) + Window.IsVisible(fullscreenvideo) + VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Offset(1).Title) + Integer.IsGreater(Player.TimeRemaining(secs),0) + Integer.IsLess(Player.TimeRemaining(secs),Skin.String(playnext_lead))</start>
-    <stop>![Skin.HasSetting(playnext_enabled) + Window.IsVisible(fullscreenvideo) + VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Offset(1).Title) + Integer.IsGreater(Player.TimeRemaining(secs),0) + Integer.IsLess(Player.TimeRemaining(secs),Skin.String(playnext_lead))]</stop>
+    <description>opens the play next card (1190) in the last playnext_lead seconds of a library episode with the next one queued, and closes it outside them; a user pause closes the open card and resuming opens it again (the hold's own pause carries its stamp)</description>
+    <start reset="true">Skin.HasSetting(playnext_enabled) + Window.IsVisible(fullscreenvideo) + VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Offset(1).Title) + Integer.IsGreater(Player.TimeRemaining(secs),0) + Integer.IsLess(Player.TimeRemaining(secs),Skin.String(playnext_lead)) + !Player.Paused</start>
+    <stop>![Skin.HasSetting(playnext_enabled) + Window.IsVisible(fullscreenvideo) + VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Offset(1).Title) + Integer.IsGreater(Player.TimeRemaining(secs),0) + Integer.IsLess(Player.TimeRemaining(secs),Skin.String(playnext_lead))] | [Player.Paused + Window.IsVisible(1190) + String.IsEmpty(Window(1190).Property(playnext_hold))]</stop>
     <onstart>ActivateWindow(1190)</onstart>
     <onstop>Dialog.Close(1190)</onstop>
   </timer>

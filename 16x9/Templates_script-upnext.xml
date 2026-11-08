@@ -3,7 +3,7 @@
 	<!-- The play next card (Custom_1190_Playnext.xml). The helper only queues the show's next episode on the video playlist,
 		so the card reads VideoPlayer.Offset(1); the playnext timer (Timers.xml) opens and closes it -->
 
-	<!-- The playnext timer's start terms, which Timers.xml can't take as an expression: hides the card in the tick before the timer closes it -->
+	<!-- The playnext timer's start terms but the pause, which Timers.xml can't take as an expression: hides the card in the tick before the timer closes it -->
 	<expression name="playnext_due">Skin.HasSetting(playnext_enabled) + Window.IsVisible(fullscreenvideo) + VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Offset(1).Title) + Integer.IsGreater(Player.TimeRemaining(secs),0) + Integer.IsLess(Player.TimeRemaining(secs),Skin.String(playnext_lead))</expression>
 	<!-- The "Still there?" hold has paused playback: playnext_hold stamps it as it fires; a pause without the stamp is the user's -->
 	<expression name="playnext_held">!String.IsEmpty(Window(1190).Property(playnext_hold)) + Player.Paused</expression>
@@ -65,7 +65,7 @@
 
 	<include name="script-upnext_template">
 		<control type="group">
-			<visible>$EXP[playnext_due] + [!Player.Paused | $EXP[playnext_held]]</visible>
+			<visible>$EXP[playnext_due]</visible> <!-- a user pause closes the card (the playnext timer), so it is never hidden while it has focus -->
 			<include content="Visible_Fade_Delayed_Animation" />
 			<include content="script-upnext_layout" condition="!Skin.String(script-upnext_Artwork,Square) + !Skin.String(script-upnext_Artwork,Posters)" />
 			<include content="script-upnext_layout" condition="Skin.String(script-upnext_Artwork,Square)">
