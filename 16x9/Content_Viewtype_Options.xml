@@ -305,6 +305,16 @@
 		</item>
 	</include>
 
+	<include name="View_Menu_Options">
+		<!-- View options: the view editor, on the kind of item shown. A trailer has stopped already, as the view lost focus -->
+		<item>
+			<onclick>SetFocus(50)</onclick>
+			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,name=viewsettings,mapping=content_types,focus_item=$VAR[label_viewmenu_focus_item])</onclick>
+			<label>$LOCALIZE[14018]</label>
+			<label2>$LOCALIZE[14018]</label2>
+		</item>
+	</include>
+
 
 
 </includes>

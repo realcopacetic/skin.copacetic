@@ -619,6 +619,7 @@
 						<include content="ShowcaseView_Menu_Options" condition="$EXP[layout_showcase_include_media] + !Skin.HasSetting(Kiosk_Mode)" />
 						<include content="StripView_Menu_Options" condition="$EXP[layout_strip_include_media] + !Skin.HasSetting(Kiosk_Mode)" />
 						<include content="GridView_Menu_Options" condition="$EXP[layout_grid_include_media] + !Skin.HasSetting(Kiosk_Mode)" />
+						<include content="View_Menu_Options" condition="!Skin.HasSetting(Kiosk_Mode) + !Window.Is(musicplaylist) + !Window.Is(videoplaylist)" />
 						<include content="Trailer_Autoplay_Menu_Options" condition="Window.Is(videos) + Skin.HasSetting(Trailer_Autoplay)" />
 						<include content="Common_Menu_Options">
 							<param name="target_id" value="$PARAM[target_id]" />
