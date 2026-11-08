@@ -63,7 +63,7 @@
 	<expression name="Prefer_Keyart_Media">$EXP[art_keyart_visible_videos] + !$EXP[Infoscreen_IsVisible]</expression>
 	<expression name="Prefer_Keyart">$EXP[Prefer_Keyart_Media] | $EXP[art_keyart_visible_home] | $EXP[Prefer_Keyart_Infoscreens]</expression>
 	<expression name="Prefer_Keyart_Infoscreens">Window.IsVisible(movieinformation) + Skin.HasSetting(Infoscreens_Prefer_Keyart)</expression>
-	<expression name="Prefer_Landscape_Media">[$EXP[art_landscape_visible_videos] | $EXP[art_landscape_visible_music] | $EXP[art_landscape_visible_programs] | $EXP[art_landscape_visible_addonbrowser] | $EXP[art_landscape_visible_pictures] | $EXP[art_landscape_visible_favourites]] + !$EXP[Infoscreen_IsVisible]</expression>
+	<expression name="Prefer_Landscape_Media">[$EXP[art_landscape_visible_videos] | $EXP[art_landscape_visible_music] | $EXP[art_landscape_visible_programs] | [$EXP[art_landscape_visible_addonbrowser] + Window.IsVisible(addonbrowser)] | $EXP[art_landscape_visible_pictures] | $EXP[art_landscape_visible_favourites]] + !$EXP[Infoscreen_IsVisible]</expression>
 	<expression name="Prefer_Landscape">$EXP[Prefer_Landscape_Media] | $EXP[art_landscape_visible_home] | $EXP[Prefer_Landscape_Infoscreens]</expression>
 	<expression name="Prefer_Landscape_Infoscreens">Window.IsVisible(movieinformation) + Skin.HasSetting(Infoscreens_Prefer_Landscape)</expression>
 	<expression name="Keyart_And_Clearlogo_IsVisible">!$EXP[Prefer_Keyart] + !String.IsEmpty(ListItem.Art(clearlogo)) + !String.IsEmpty(ListItem.Art(keyart))</expression>

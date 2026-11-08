@@ -528,8 +528,10 @@
 
 	<!-- Rows chain Up and Down by their buttons: a hidden row is walked through, a grouplist can't reach inside its groups -->
 	<include name="viewsettings_Right_List_Content">
-		<control type="image">
+		<!-- The picture's id gives the last row a Down target: a grouplist wraps to its first child, and an id of 0 would end the walk -->
+		<control type="image" id="2099">
 			<description>Layout screenshot, above the rows as in Skin settings</description>
+			<visible>Control.HasFocus(205) | !String.IsEqual(Container(100).ListItem.Property(layout),list)</visible>
 			<include content="skinsettings_Detfault_Image" />
 			<texture>$VAR[viewsettings_Screenshot]</texture>
 		</control>

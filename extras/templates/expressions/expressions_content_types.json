@@ -92,7 +92,7 @@
     "art_keyart_visible_{window}": {
       "rules": [
         {
-          "condition": "equals({art_keyart}, true)",
+          "condition": "equals({art_keyart}, true) + In({layout}, [list, showcase, strip, grid])",
           "type": "append",
           "value": "{condition}"
         }
@@ -101,7 +101,7 @@
     "art_landscape_visible_{window}": {
       "rules": [
         {
-          "condition": "equals({art_landscape}, true)",
+          "condition": "equals({art_landscape}, true) + In({layout}, [strip, grid])",
           "type": "append",
           "value": "{condition}"
         }

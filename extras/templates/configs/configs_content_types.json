@@ -145,15 +145,10 @@
         "true": "$LOCALIZE[186]",
         "false": "$LOCALIZE[106]"
       },
-      "dependent_fields": [ "layout" ],
       "filter_mode": "exclude",
       "rules": [
         {
           "condition": "not In({content_type}, [movies, sets, tvshows, seasons])",
-          "value": [ "true" ]
-        },
-        {
-          "condition": "equals({layout}, billboard)",
           "value": [ "true" ]
         }
       ],
@@ -166,15 +161,10 @@
         "true": "$LOCALIZE[186]",
         "false": "$LOCALIZE[106]"
       },
-      "dependent_fields": [ "layout" ],
       "filter_mode": "exclude",
       "rules": [
         {
           "condition": "In({content_type}, [episodes, videos, musicvideos])",
-          "value": [ "true" ]
-        },
-        {
-          "condition": "not In({layout}, [strip, grid])",
           "value": [ "true" ]
         }
       ],
