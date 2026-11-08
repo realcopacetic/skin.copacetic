@@ -3,15 +3,6 @@
 	<include name="BillboardView_Menu_Options">
 		<param name="visible" default="Control.IsVisible(501)" />
 		<definition>
-			<item id="1">
-				<description>Layout / Billboard</description>
-				<onclick>SetFocus(501)</onclick>
-				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31001] $VAR[Copacetic_Chevron_Right]</label>
-				<label2>$LOCALIZE[31005] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31001]</label2>
-				<property name="ActionLeft">Container.PreviousViewMode</property>
-				<property name="ActionRight">Container.NextViewMode</property>
-				<visible>$PARAM[visible] + Integer.IsGreater(Container.ViewCount,1)</visible>
-			</item>
 			<!-- Details -->
 			<!-- Movies -->
 			<item>

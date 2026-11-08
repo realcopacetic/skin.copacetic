@@ -3,15 +3,6 @@
 	<include name="StripView_Menu_Options">
 		<param name="visible" default="Control.IsVisible(504)" />
 		<definition>
-			<item id="1">
-				<description>Layout / Strip</description>
-				<onclick>SetFocus(504)</onclick>
-				<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[31003] $VAR[Copacetic_Chevron_Right]</label>
-				<label2>$LOCALIZE[31005] $VAR[Copacetic_Divider_Bold] $LOCALIZE[31003]</label2>
-				<property name="ActionLeft">Container.PreviousViewMode</property>
-				<property name="ActionRight">Container.NextViewMode</property>
-				<visible>$PARAM[visible] + Integer.IsGreater(Container.ViewCount,1)</visible>
-			</item>
 			<!-- Display -->
 			<!-- Movies -->
 			<item id="2">

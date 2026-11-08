@@ -89,6 +89,7 @@
 
 	<include name="addonbrowser_Views">
 		<param name="visible" default="!$EXP[Infoscreen_IsVisible] + !$EXP[globalsearch_IsVisible]" />
+		<param name="window" default="addonbrowser" />
 		<definition>
 			<!-- Background -->
 			<include content="Light_Theme_Background">
@@ -108,17 +109,22 @@
 				<include content="ListView_Display">
 					<param name="art_icon" value="addonbrowser" />
 				</include>
-				<include content="ShowcaseView_Container" condition="$EXP[ShowcaseView_Enabled]" />
-				<include content="ShowcaseView_Display" condition="$EXP[ShowcaseView_Enabled]">
+				<include content="ShowcaseView_Container" condition="$EXP[layout_showcase_include_$PARAM[window]]">
+					<param name="visible" value="$EXP[layout_showcase_visible_$PARAM[window]]" />
+				</include>
+				<include content="ShowcaseView_Display" condition="$EXP[layout_showcase_include_$PARAM[window]]">
 					<param name="art_icon" value="addonbrowser" />
 				</include>
-				<include content="StripView_Container" condition="$EXP[StripView_Enabled]" />
-				<include content="StripView_Display" condition="$EXP[StripView_Enabled]">
+				<include content="StripView_Container" condition="$EXP[layout_strip_include_$PARAM[window]]">
+					<param name="visible" value="$EXP[layout_strip_visible_$PARAM[window]]" />
+				</include>
+				<include content="StripView_Display" condition="$EXP[layout_strip_include_$PARAM[window]]">
 					<param name="art_icon" value="addonbrowser" />
 				</include>
 				<include content="Shared_Dialog_Layouts" condition="Skin.HasSetting(Music_Player_Enabled)" />
-				<include content="GridView_Container" condition="$EXP[GridView_Enabled]">
+				<include content="GridView_Container" condition="$EXP[layout_grid_include_$PARAM[window]]">
 					<param name="art_icon" value="addonbrowser" />
+					<param name="visible" value="$EXP[layout_grid_visible_$PARAM[window]]" />
 				</include>
 			</control>
 			<!-- Layer 2 -->
@@ -126,11 +132,13 @@
 				<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Long_Animation" />
-				<include content="ListView_Container" />
+				<include content="ListView_Container">
+					<param name="visible" value="$EXP[layout_list_visible_$PARAM[window]]" />
+				</include>
 				<include content="ListView_Details" />
-				<include content="ShowcaseView_Details" condition="$EXP[ShowcaseView_Enabled]" />
-				<include content="StripView_Details" condition="$EXP[StripView_Enabled]" />
-				<include content="GridView_Overlay_Details" condition="$EXP[GridView_Enabled]" />
+				<include content="ShowcaseView_Details" condition="$EXP[layout_showcase_include_$PARAM[window]]" />
+				<include content="StripView_Details" condition="$EXP[layout_strip_include_$PARAM[window]]" />
+				<include content="GridView_Overlay_Details" condition="$EXP[layout_grid_include_$PARAM[window]]" />
 			</control>
 		</definition>
 	</include>
@@ -144,6 +152,7 @@
 
 	<include name="favourites_Views">
 		<param name="visible" default="!$EXP[Infoscreen_IsVisible] + !$EXP[globalsearch_IsVisible]" />
+		<param name="window" default="favourites" />
 		<definition>
 			<!-- Background -->
 			<include content="Light_Theme_Background">
@@ -163,25 +172,35 @@
 				<include content="ListView_Display">
 					<param name="visible" value="!$EXP[TransparentDialog_IsVisible]" />
 				</include>
-				<include content="BillboardView_Container" condition="$EXP[BillboardView_Enabled]" />
-				<include content="BillboardView_Display" condition="$EXP[BillboardView_Enabled]" />
-				<include content="ShowcaseView_Container" condition="$EXP[ShowcaseView_Enabled]" />
-				<include content="ShowcaseView_Display" condition="$EXP[ShowcaseView_Enabled]" />
-				<include content="StripView_Container" condition="$EXP[StripView_Enabled]" />
-				<include content="StripView_Display" condition="$EXP[StripView_Enabled]" />
+				<include content="BillboardView_Container" condition="$EXP[layout_billboard_include_$PARAM[window]]">
+					<param name="visible" value="$EXP[layout_billboard_visible_$PARAM[window]]" />
+				</include>
+				<include content="BillboardView_Display" condition="$EXP[layout_billboard_include_$PARAM[window]]" />
+				<include content="ShowcaseView_Container" condition="$EXP[layout_showcase_include_$PARAM[window]]">
+					<param name="visible" value="$EXP[layout_showcase_visible_$PARAM[window]]" />
+				</include>
+				<include content="ShowcaseView_Display" condition="$EXP[layout_showcase_include_$PARAM[window]]" />
+				<include content="StripView_Container" condition="$EXP[layout_strip_include_$PARAM[window]]">
+					<param name="visible" value="$EXP[layout_strip_visible_$PARAM[window]]" />
+				</include>
+				<include content="StripView_Display" condition="$EXP[layout_strip_include_$PARAM[window]]" />
 				<include content="Shared_Dialog_Layouts" condition="Skin.HasSetting(Music_Player_Enabled)" />
-				<include content="GridView_Container" condition="$EXP[GridView_Enabled]" />
+				<include content="GridView_Container" condition="$EXP[layout_grid_include_$PARAM[window]]">
+					<param name="visible" value="$EXP[layout_grid_visible_$PARAM[window]]" />
+				</include>
 			</control>
 			<!-- Layer 2 -->
 			<control type="group">
 				<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Long_Animation" />
-				<include content="ListView_Container" />
-				<include content="BillboardView_Details" condition="$EXP[BillboardView_Enabled]" />
-				<include content="ShowcaseView_Details" condition="$EXP[ShowcaseView_Enabled]" />
-				<include content="StripView_Details" condition="$EXP[StripView_Enabled]" />
-				<include content="GridView_Overlay_Details" condition="$EXP[GridView_Enabled]" />
+				<include content="ListView_Container">
+					<param name="visible" value="$EXP[layout_list_visible_$PARAM[window]]" />
+				</include>
+				<include content="BillboardView_Details" condition="$EXP[layout_billboard_include_$PARAM[window]]" />
+				<include content="ShowcaseView_Details" condition="$EXP[layout_showcase_include_$PARAM[window]]" />
+				<include content="StripView_Details" condition="$EXP[layout_strip_include_$PARAM[window]]" />
+				<include content="GridView_Overlay_Details" condition="$EXP[layout_grid_include_$PARAM[window]]" />
 			</control>
 		</definition>
 	</include>
@@ -234,6 +253,7 @@
 
 	<include name="videos_Views">
 		<param name="visible" default="!$EXP[Infoscreen_IsVisible] + !$EXP[globalsearch_IsVisible]" />
+		<param name="window" default="videos" />
 		<definition>
 			<!-- Background -->
 			<include content="Light_Theme_Background">
@@ -254,14 +274,22 @@
 				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
 				<include content="Secondary_List_Array" condition="Skin.HasSetting(Secondary_List_Enabled)" />
 				<include content="ListView_Display" />
-				<include content="BillboardView_Container" condition="$EXP[BillboardView_Enabled]" />
-				<include content="BillboardView_Display" condition="$EXP[BillboardView_Enabled]" />
-				<include content="ShowcaseView_Container" condition="$EXP[ShowcaseView_Enabled]" />
-				<include content="ShowcaseView_Display" condition="$EXP[ShowcaseView_Enabled]" />
-				<include content="StripView_Container" condition="$EXP[StripView_Enabled]" />
-				<include content="StripView_Display" condition="$EXP[StripView_Enabled]" />
+				<include content="BillboardView_Container" condition="$EXP[layout_billboard_include_$PARAM[window]]">
+					<param name="visible" value="$EXP[layout_billboard_visible_$PARAM[window]]" />
+				</include>
+				<include content="BillboardView_Display" condition="$EXP[layout_billboard_include_$PARAM[window]]" />
+				<include content="ShowcaseView_Container" condition="$EXP[layout_showcase_include_$PARAM[window]]">
+					<param name="visible" value="$EXP[layout_showcase_visible_$PARAM[window]]" />
+				</include>
+				<include content="ShowcaseView_Display" condition="$EXP[layout_showcase_include_$PARAM[window]]" />
+				<include content="StripView_Container" condition="$EXP[layout_strip_include_$PARAM[window]]">
+					<param name="visible" value="$EXP[layout_strip_visible_$PARAM[window]]" />
+				</include>
+				<include content="StripView_Display" condition="$EXP[layout_strip_include_$PARAM[window]]" />
 				<include content="Shared_Dialog_Layouts" condition="Skin.HasSetting(Music_Player_Enabled)" />
-				<include content="GridView_Container" condition="$EXP[GridView_Enabled]" />
+				<include content="GridView_Container" condition="$EXP[layout_grid_include_$PARAM[window]]">
+					<param name="visible" value="$EXP[layout_grid_visible_$PARAM[window]]" />
+				</include>
 			</control>
 			<!-- Layer 2 -->
 			<control type="group">
@@ -269,12 +297,14 @@
 				<visible>$PARAM[visible] + !Window.IsVisible(smartplaylisteditor)</visible>
 				<include content="Visible_Fade_Delayed_Long_Animation" />
 				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
-				<include content="ListView_Container" />
+				<include content="ListView_Container">
+					<param name="visible" value="$EXP[layout_list_visible_$PARAM[window]]" />
+				</include>
 				<include content="ListView_Details" />
-				<include content="BillboardView_Details" condition="$EXP[BillboardView_Enabled]" />
-				<include content="ShowcaseView_Details" condition="$EXP[ShowcaseView_Enabled]" />
-				<include content="StripView_Details" condition="$EXP[StripView_Enabled]" />
-				<include content="GridView_Overlay_Details" condition="$EXP[GridView_Enabled]" />
+				<include content="BillboardView_Details" condition="$EXP[layout_billboard_include_$PARAM[window]]" />
+				<include content="ShowcaseView_Details" condition="$EXP[layout_showcase_include_$PARAM[window]]" />
+				<include content="StripView_Details" condition="$EXP[layout_strip_include_$PARAM[window]]" />
+				<include content="GridView_Overlay_Details" condition="$EXP[layout_grid_include_$PARAM[window]]" />
 				<include content="MediaFlags" />
 			</control>
 		</definition>
@@ -302,6 +332,7 @@
 
 	<include name="pictures_Views">
 		<param name="visible" default="!$EXP[Infoscreen_IsVisible] + !$EXP[globalsearch_IsVisible] + !Window.IsVisible(slideshow)" />
+		<param name="window" default="pictures" />
 		<definition>
 			<!-- Background -->
 			<include content="Light_Theme_Background">
@@ -319,17 +350,22 @@
 				<include content="ListView_Display">
 					<param name="art_icon" value="pictures" />
 				</include>
-				<include content="ShowcaseView_Container" condition="$EXP[ShowcaseView_Enabled]" />
-				<include content="ShowcaseView_Display" condition="$EXP[ShowcaseView_Enabled]">
+				<include content="ShowcaseView_Container" condition="$EXP[layout_showcase_include_$PARAM[window]]">
+					<param name="visible" value="$EXP[layout_showcase_visible_$PARAM[window]]" />
+				</include>
+				<include content="ShowcaseView_Display" condition="$EXP[layout_showcase_include_$PARAM[window]]">
 					<param name="art_icon" value="pictures" />
 				</include>
-				<include content="StripView_Container" condition="$EXP[StripView_Enabled]" />
-				<include content="StripView_Display" condition="$EXP[StripView_Enabled]">
+				<include content="StripView_Container" condition="$EXP[layout_strip_include_$PARAM[window]]">
+					<param name="visible" value="$EXP[layout_strip_visible_$PARAM[window]]" />
+				</include>
+				<include content="StripView_Display" condition="$EXP[layout_strip_include_$PARAM[window]]">
 					<param name="art_icon" value="addonbrowser" />
 				</include>
 				<include content="Shared_Dialog_Layouts" condition="Skin.HasSetting(Music_Player_Enabled)" />
-				<include content="GridView_Container" condition="$EXP[GridView_Enabled]">
+				<include content="GridView_Container" condition="$EXP[layout_grid_include_$PARAM[window]]">
 					<param name="art_icon" value="pictures" />
+					<param name="visible" value="$EXP[layout_grid_visible_$PARAM[window]]" />
 				</include>
 			</control>
 			<!-- Layer 2 -->
@@ -337,17 +373,20 @@
 				<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Long_Animation" />
-				<include content="ListView_Container" />
+				<include content="ListView_Container">
+					<param name="visible" value="$EXP[layout_list_visible_$PARAM[window]]" />
+				</include>
 				<include content="ListView_Details" />
-				<include content="ShowcaseView_Details" condition="$EXP[ShowcaseView_Enabled]" />
-				<include content="StripView_Details" condition="$EXP[StripView_Enabled]" />
-				<include content="GridView_Overlay_Details" condition="$EXP[GridView_Enabled]" />
+				<include content="ShowcaseView_Details" condition="$EXP[layout_showcase_include_$PARAM[window]]" />
+				<include content="StripView_Details" condition="$EXP[layout_strip_include_$PARAM[window]]" />
+				<include content="GridView_Overlay_Details" condition="$EXP[layout_grid_include_$PARAM[window]]" />
 			</control>
 		</definition>
 	</include>
 
 	<include name="programs_Views">
 		<param name="visible" default="!$EXP[Infoscreen_IsVisible]" />
+		<param name="window" default="programs" />
 		<definition>
 			<!-- Background -->
 			<include content="Light_Theme_Background">
@@ -359,14 +398,22 @@
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="ListView_Display" />
-				<include content="BillboardView_Container" condition="$EXP[BillboardView_Enabled]" />
-				<include content="BillboardView_Display" condition="$EXP[BillboardView_Enabled]" />
-				<include content="ShowcaseView_Container" condition="$EXP[ShowcaseView_Enabled]" />
-				<include content="ShowcaseView_Display" condition="$EXP[ShowcaseView_Enabled]" />
-				<include content="StripView_Container" condition="$EXP[StripView_Enabled]" />
-				<include content="StripView_Display" condition="$EXP[StripView_Enabled]" />
+				<include content="BillboardView_Container" condition="$EXP[layout_billboard_include_$PARAM[window]]">
+					<param name="visible" value="$EXP[layout_billboard_visible_$PARAM[window]]" />
+				</include>
+				<include content="BillboardView_Display" condition="$EXP[layout_billboard_include_$PARAM[window]]" />
+				<include content="ShowcaseView_Container" condition="$EXP[layout_showcase_include_$PARAM[window]]">
+					<param name="visible" value="$EXP[layout_showcase_visible_$PARAM[window]]" />
+				</include>
+				<include content="ShowcaseView_Display" condition="$EXP[layout_showcase_include_$PARAM[window]]" />
+				<include content="StripView_Container" condition="$EXP[layout_strip_include_$PARAM[window]]">
+					<param name="visible" value="$EXP[layout_strip_visible_$PARAM[window]]" />
+				</include>
+				<include content="StripView_Display" condition="$EXP[layout_strip_include_$PARAM[window]]" />
 				<include content="Shared_Dialog_Layouts" condition="Skin.HasSetting(Music_Player_Enabled)" />
-				<include content="GridView_Container" condition="$EXP[GridView_Enabled]" />
+				<include content="GridView_Container" condition="$EXP[layout_grid_include_$PARAM[window]]">
+					<param name="visible" value="$EXP[layout_grid_visible_$PARAM[window]]" />
+				</include>
 				<include content="MediaFlags" />
 			</control>
 			<!-- Layer 2 -->
@@ -374,12 +421,14 @@
 				<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Long_Animation" />
-				<include content="ListView_Container" />
+				<include content="ListView_Container">
+					<param name="visible" value="$EXP[layout_list_visible_$PARAM[window]]" />
+				</include>
 				<include content="ListView_Details" />
-				<include content="BillboardView_Details" condition="$EXP[BillboardView_Enabled]" />
-				<include content="ShowcaseView_Details" condition="$EXP[ShowcaseView_Enabled]" />
-				<include content="StripView_Details" condition="$EXP[StripView_Enabled]" />
-				<include content="GridView_Overlay_Details" condition="$EXP[GridView_Enabled]" />
+				<include content="BillboardView_Details" condition="$EXP[layout_billboard_include_$PARAM[window]]" />
+				<include content="ShowcaseView_Details" condition="$EXP[layout_showcase_include_$PARAM[window]]" />
+				<include content="StripView_Details" condition="$EXP[layout_strip_include_$PARAM[window]]" />
+				<include content="GridView_Overlay_Details" condition="$EXP[layout_grid_include_$PARAM[window]]" />
 				<include content="MediaFlags" />
 			</control>
 		</definition>
@@ -439,7 +488,9 @@
 				<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Long_Animation" />
-				<include content="ListView_Container" />
+				<include content="ListView_Container">
+					<param name="visible" value="true" />
+				</include>
 				<include content="ListView_Details" />
 			</control>
 		</definition>
@@ -491,9 +542,6 @@
 					<onright condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionRight2))">$INFO[Container(3000).ListItem.Property(ActionRight2)]</onright>
 					<onleft condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionLeft3))">$INFO[Container(3000).ListItem.Property(ActionLeft3)]</onleft>
 					<onright condition="!String.IsEmpty(Container(3000).ListItem.Property(ActionRight3))">$INFO[Container(3000).ListItem.Property(ActionRight3)]</onright>
-					<!-- Reset multiart on viewchange -->
-					<onleft condition="Container(3000).HasFocus(1)">SetFocus(4014)</onleft>
-					<onright condition="Container(3000).HasFocus(1)">SetFocus(4014)</onright>
 					<!-- Transition on left or right -->
 					<onleft condition="Container(3000).HasFocus(2)">SetFocus(4014)</onleft>
 					<onright condition="Container(3000).HasFocus(2)">SetFocus(4014)</onright>
@@ -567,10 +615,10 @@
 					</focusedlayout>
 					<content>
 						<include content="ListView_Menu_Options" condition="!Skin.HasSetting(Kiosk_Mode)" />
-						<include content="BillboardView_Menu_Options" condition="$EXP[BillboardView_Enabled] + !Skin.HasSetting(Kiosk_Mode)" />
-						<include content="ShowcaseView_Menu_Options" condition="$EXP[ShowcaseView_Enabled] + !Skin.HasSetting(Kiosk_Mode)" />
-						<include content="StripView_Menu_Options" condition="$EXP[StripView_Enabled] + !Skin.HasSetting(Kiosk_Mode)" />
-						<include content="GridView_Menu_Options" condition="$EXP[GridView_Enabled] + !Skin.HasSetting(Kiosk_Mode)" />
+						<include content="BillboardView_Menu_Options" condition="$EXP[layout_billboard_include_media] + !Skin.HasSetting(Kiosk_Mode)" />
+						<include content="ShowcaseView_Menu_Options" condition="$EXP[layout_showcase_include_media] + !Skin.HasSetting(Kiosk_Mode)" />
+						<include content="StripView_Menu_Options" condition="$EXP[layout_strip_include_media] + !Skin.HasSetting(Kiosk_Mode)" />
+						<include content="GridView_Menu_Options" condition="$EXP[layout_grid_include_media] + !Skin.HasSetting(Kiosk_Mode)" />
 						<include content="Trailer_Autoplay_Menu_Options" condition="Window.Is(videos) + Skin.HasSetting(Trailer_Autoplay)" />
 						<include content="Common_Menu_Options">
 							<param name="target_id" value="$PARAM[target_id]" />

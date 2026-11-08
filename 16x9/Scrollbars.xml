@@ -408,7 +408,7 @@
 				<param name="orientation" value="vertical" />
 			</include>
 			<!-- Horizontal (Main) -->
-			<include content="Scrollbar_Template" condition="$EXP[BillboardView_Enabled] | $EXP[ShowcaseView_Enabled] | $EXP[StripView_Enabled]">
+			<include content="Scrollbar_Template" condition="$EXP[layout_billboard_include_media] | $EXP[layout_showcase_include_media] | $EXP[layout_strip_include_media] | $EXP[layout_grid_include_media]">
 				<param name="visible" value="[$EXP[BillboardView_IsVisible] + Integer.IsGreater(Container.NumItems,3)] | [$EXP[StripView_IsVisible] + Integer.IsGreater(Container.NumItems,9)] | [Integer.IsGreater(Container.NumItems,5) + [[$EXP[ShowcaseView_IsVisible] + $EXP[ShowcaseView_Details_Off]] | [$EXP[ShowcaseView_Display_IsPosters] + !$EXP[ShowcaseView_Details_Off] + ![Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio]]]] | [$EXP[GridView_IsVisible] + Skin.String(GridView_Size,Horizontal) + Integer.IsGreater(Container.NumItems,9)]" />
 				<param name="right" value="420" />
 				<param name="bottom" value="27" />
@@ -424,7 +424,7 @@
 				<animation effect="slide" end="360" time="0" condition="$EXP[ShowcaseView_IsVisible] + $EXP[ShowcaseView_Display_IsPosters] + !$EXP[ShowcaseView_Details_Off] + ![Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio]">Conditional</animation>
 			</include>
 			<!-- Horizontal (Alternative) -->
-			<include content="Scrollbar_Template" condition="$EXP[ShowcaseView_Enabled]">
+			<include content="Scrollbar_Template" condition="$EXP[layout_showcase_include_media]">
 				<param name="visible" value="Integer.IsGreater(Container.NumItems,5) + [[$EXP[ShowcaseView_Display_IsSquare] + !$EXP[ShowcaseView_Details_Off]] | [$EXP[ShowcaseView_Display_IsPosters] + !$EXP[ShowcaseView_Details_Off] + Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio]]" />
 				<param name="scrollbartype" value="Alternative" />
 				<param name="right" value="90" />

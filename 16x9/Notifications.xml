@@ -553,7 +553,7 @@
 					<animation effect="slide" end="0,900" time="0" condition="$EXP[Containers_Square] | Container.Content(files)">Conditional</animation>
 				</include>
 				<!-- Showcase -->
-				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music)] + Skin.HasSetting(ShowcaseView_Enabled)">
+				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music)] + $EXP[layout_showcase_include_media]">
 					<param name="id" value="6502" />
 					<param name="visible" value="$EXP[ShowcaseView_Display_IsPosters] + !$EXP[ShowcaseView_Details_Off] + $EXP[Music_Player_IsVisible] + !$EXP[Infoscreen_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible] + !Window.IsVisible(home)" />
 					<param name="content_visible" value="$PARAM[content_visible]" />
@@ -567,7 +567,7 @@
 					<param name="center_label_visible" value="true" />
 				</include>
 				<!-- Strip -->
-				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(addonbrowser) | Window.IsVisible(programs)] + Skin.HasSetting(StripView_Enabled)">
+				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(addonbrowser) | Window.IsVisible(programs)] + $EXP[layout_strip_include_media]">
 					<param name="id" value="6503" />
 					<param name="visible" value="$EXP[StripView_IsVisible] + !$EXP[Infoscreen_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible] + !Window.IsVisible(home)" />
 					<param name="content_visible" value="$PARAM[content_visible]" />
@@ -586,7 +586,7 @@
 					<animation effect="slide" end="-75,0" time="0" condition="$EXP[StripView_Display_IsSquare] + $EXP[StripView_Details_Off]">Conditional</animation>
 				</include>
 				<!-- Grid -->
-				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(addonbrowser) | Window.IsVisible(programs)] + Skin.HasSetting(GridView_Enabled)">
+				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(addonbrowser) | Window.IsVisible(programs)] + $EXP[layout_grid_include_media]">
 					<param name="id" value="6504" />
 					<param name="visible" value="$EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible] + !Window.IsVisible(home)" />
 					<param name="content_visible" value="$PARAM[content_visible]" />
@@ -649,7 +649,7 @@
 					<animation effect="slide" end="30,0" time="0" condition="true">Conditional</animation>
 				</include>
 				<!-- Showcase -->
-				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music)] + Skin.HasSetting(ShowcaseView_Enabled)">
+				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music)] + $EXP[layout_showcase_include_media]">
 					<param name="id" value="6507" />
 					<param name="visible" value="$EXP[ShowcaseView_Display_IsSquare] + !$EXP[Container_HasBackground] + !$EXP[Infoscreen_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible] + !Window.IsVisible(home)" />
 					<param name="content_visible" value="$PARAM[content_visible]" />
@@ -662,7 +662,7 @@
 					<param name="left_label_visible" value="true" />
 					<animation effect="slide" end="30,0" time="0" condition="true">Conditional</animation>
 				</include>
-				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music)] + Skin.HasSetting(ShowcaseView_Enabled)">
+				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music)] + $EXP[layout_showcase_include_media]">
 					<param name="id" value="6508" />
 					<param name="visible" value="$EXP[ShowcaseView_Display_IsPosters] + !$EXP[Container_HasBackground] + !$EXP[Infoscreen_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible] + !Window.IsVisible(home)" />
 					<param name="content_visible" value="$PARAM[content_visible]" />
@@ -676,7 +676,7 @@
 					<animation effect="slide" end="30,0" time="0" condition="true">Conditional</animation>
 				</include>
 				<!-- Grid -->
-				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(addonbrowser) | Window.IsVisible(programs)] + Skin.HasSetting(GridView_Enabled)">
+				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(addonbrowser) | Window.IsVisible(programs)] + $EXP[layout_grid_include_media]">
 					<param name="id" value="6509" />
 					<param name="visible" value="$EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible] + !Window.IsVisible(home)" />
 					<param name="content_visible" value="$PARAM[content_visible]" />

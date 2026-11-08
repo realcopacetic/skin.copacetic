@@ -410,5 +410,37 @@
 		</control>
 	</include>
 
+	<!-- The helper sets the layout row's label and value and moves its slider (controls_content_types.json) -->
+	<include name="viewsettings_Right_List_Content">
+		<control type="group" id="2001">
+			<description>Layout</description>
+			<height>90</height>
+			<!-- The row's underline, kept while Select moves focus between the button and its slider -->
+			<control type="image">
+				<visible>Control.HasFocus(200) | Control.HasFocus(2000)</visible>
+				<texture border="2,2,62,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_right.png</texture>
+			</control>
+			<control type="button" id="2000">
+				<width>690</width>
+				<label>$LOCALIZE[31005]</label>
+				<texturefocus />
+				<onleft>100</onleft>
+				<onright>415</onright>
+			</control>
+			<control type="slider" id="200">
+				<right>60</right>
+				<centertop>50%</centertop>
+				<width>120</width>
+				<height>30</height>
+				<orientation>horizontal</orientation>
+			</control>
+		</control>
+		<control type="image">
+			<description>Layout screenshot</description>
+			<include content="skinsettings_Detfault_Image" />
+			<texture>$VAR[viewsettings_Screenshot]</texture>
+		</control>
+	</include>
+
 
 </includes>

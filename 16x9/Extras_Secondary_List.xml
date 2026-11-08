@@ -188,12 +188,12 @@
 				<param name="layout" value="1920x1080" />
 				<animation effect="slide" start="0,0" end="1920,-1080" time="0" condition="$EXP[ListView_Display_IsBackground]">Conditional</animation>
 			</include>
-			<include content="Secondary_List" condition="Skin.HasSetting(ShowcaseView_Enabled) + [Window.Is(videos) | Window.Is(music)]">
+			<include content="Secondary_List" condition="[Window.Is(videos) + $EXP[layout_showcase_include_videos]] | [Window.Is(music) + $EXP[layout_showcase_include_music]]">
 				<param name="visible" value="$EXP[ShowcaseView_Display_IsSquare] + [$EXP[Secondary_List_Video_Conditions] | Container.Content(artists)]" />
 				<param name="width" value="1080" />
 				<param name="layout" value="1080x1080" />
 			</include>
-			<include content="Secondary_List" condition="Skin.HasSetting(StripView_Enabled) + Window.Is(videos)">
+			<include content="Secondary_List" condition="Window.Is(videos) + $EXP[layout_strip_include_videos]">
 				<param name="visible" value="$EXP[StripView_Display_IsPosters] + $EXP[Secondary_List_Video_Conditions]" />
 				<param name="width" value="480" />
 				<param name="left" value="720" />
@@ -202,7 +202,7 @@
 				<param name="layout" value="480x720" />
 				<animation effect="slide" start="0,0" end="0,240" time="0" condition="!Control.HasFocus(3100) + !$EXP[Secondary_List_Container_Switching]">Conditional</animation>
 			</include>
-			<include content="Secondary_List" condition="Skin.HasSetting(StripView_Enabled) + Window.Is(videos)">
+			<include content="Secondary_List" condition="Window.Is(videos) + $EXP[layout_strip_include_videos]">
 				<param name="visible" value="$EXP[StripView_Display_IsFanart] + $EXP[Secondary_List_Video_Conditions]" />
 				<param name="width" value="1120" />
 				<param name="left" value="400" />
@@ -212,7 +212,7 @@
 				<animation effect="slide" start="0,0" end="0,240" time="0" condition="!Control.HasFocus(3100) + !$EXP[Secondary_List_Container_Switching]">Conditional</animation>
 				<animation effect="slide" start="0,0" end="320,0" time="0" condition="!$EXP[StripView_Details_Off]">Conditional</animation>
 			</include>
-			<include content="Secondary_List" condition="Skin.HasSetting(StripView_Enabled) + Window.Is(music)">
+			<include content="Secondary_List" condition="Window.Is(music) + $EXP[layout_strip_include_music]">
 				<param name="visible" value="$EXP[StripView_Display_IsSquare] + Container.Content(artists)" />
 				<param name="width" value="630" />
 				<param name="left" value="645" />

@@ -374,6 +374,12 @@
 			<onclick>Skin.ToggleSetting(Kiosk_Mode)</onclick>
 			<selected>Skin.HasSetting(Kiosk_Mode)</selected>
 		</control>
+		<control type="button" id="1352">
+			<description>View options</description>
+			<visible>ControlGroup(9).HasFocus(13)</visible>
+			<label>$LOCALIZE[14018]</label>
+			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,name=viewsettings,mapping=content_types)</onclick>
+		</control>
 		<control type="label" id="1354">
 			<description>List</description>
 			<visible>ControlGroup(9).HasFocus(13)</visible>
@@ -400,33 +406,6 @@
 			<label>$LOCALIZE[31001]</label>
 			<include content="skinsettings_Default_Label" />
 		</control>
-		<control type="image" id="1301">
-			<description>Billboard screenshot</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<include content="skinsettings_Detfault_Image" />
-			<texture>$VAR[skinsettings_View_Billboard_Screenshots]</texture>
-		</control>
-		<control type="radiobutton" id="1302">
-			<description>Billboard - Videos/Music</description>
-			<label>$LOCALIZE[31446]</label>
-			<visible>ControlGroup(9).HasFocus(13) + !Control.HasFocus(1301)</visible>
-			<onclick>Skin.ToggleSetting(BillboardView_Enabled)</onclick>
-			<selected>Skin.HasSetting(BillboardView_Enabled)</selected>
-		</control>
-		<control type="radiobutton" id="1303">
-			<description>Billboard - Addons/Programs</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31447]</label>
-			<onclick>Skin.ToggleSetting(BillboardView_Enabled_Addons)</onclick>
-			<selected>Skin.HasSetting(BillboardView_Enabled_Addons)</selected>
-		</control>
-		<control type="radiobutton" id="1304">
-			<description>Billboard - Favourites</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31734]</label>
-			<onclick>Skin.ToggleSetting(BillboardView_Enabled_favouritesbrowser)</onclick>
-			<selected>Skin.HasSetting(BillboardView_Enabled_favouritesbrowser)</selected>
-		</control>
 		<control type="radiobutton" id="1305">
 			<description>Add movement</description>
 			<label>$LOCALIZE[31441]</label>
@@ -440,46 +419,12 @@
 			<label>$LOCALIZE[31002]</label>
 			<include content="skinsettings_Default_Label" />
 		</control>
-		<control type="image" id="1311">
-			<description>Showcase screenshot</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<include content="skinsettings_Detfault_Image" />
-			<texture>$VAR[skinsettings_View_Showcase_Screenshots]</texture>
-		</control>
-		<control type="radiobutton" id="1312">
-			<description>Showcase - Videos/Music</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31446]</label>
-			<onclick>Skin.ToggleSetting(ShowcaseView_Enabled)</onclick>
-			<selected>Skin.HasSetting(ShowcaseView_Enabled)</selected>
-		</control>
 		<control type="radiobutton" id="1313">
 			<description>Prefer keyart for poster views</description>
-			<visible>ControlGroup(9).HasFocus(13) + Skin.HasSetting(ShowcaseView_Enabled)</visible>
+			<visible>ControlGroup(9).HasFocus(13)</visible>
 			<label>- $LOCALIZE[31498]</label>
 			<onclick>Skin.ToggleSetting(Showcase_Prefer_Keyart)</onclick>
 			<selected>Skin.HasSetting(Showcase_Prefer_Keyart)</selected>
-		</control>
-		<control type="radiobutton" id="1314">
-			<description>Showcase - Pictures</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31448]</label>
-			<onclick>Skin.ToggleSetting(ShowcaseView_Enabled_Pictures)</onclick>
-			<selected>Skin.HasSetting(ShowcaseView_Enabled_Pictures)</selected>
-		</control>
-		<control type="radiobutton" id="1315">
-			<description>Showcase - Addons/Programs</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31447]</label>
-			<onclick>Skin.ToggleSetting(ShowcaseView_Enabled_Addons)</onclick>
-			<selected>Skin.HasSetting(ShowcaseView_Enabled_Addons)</selected>
-		</control>
-		<control type="radiobutton" id="1316">
-			<description>Showcase - Favourites</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31734]</label>
-			<onclick>Skin.ToggleSetting(ShowcaseView_Enabled_favouritesbrowser)</onclick>
-			<selected>Skin.HasSetting(ShowcaseView_Enabled_favouritesbrowser)</selected>
 		</control>
 		<control type="label" id="1320">
 			<description>Strip</description>
@@ -487,53 +432,19 @@
 			<label>$LOCALIZE[31003]</label>
 			<include content="skinsettings_Default_Label" />
 		</control>
-		<control type="image" id="1321">
-			<description>Strip screenshot</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<include content="skinsettings_Detfault_Image" />
-			<texture>$VAR[skinsettings_View_Strip_Screenshots]</texture>
-		</control>
-		<control type="radiobutton" id="1322">
-			<description>Strip - Videos/Music</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31446]</label>
-			<onclick>Skin.ToggleSetting(StripView_Enabled)</onclick>
-			<selected>Skin.HasSetting(StripView_Enabled)</selected>
-		</control>
 		<control type="radiobutton" id="1323">
 			<description>Prefer keyart for poster views</description>
-			<visible>ControlGroup(9).HasFocus(13) + Skin.HasSetting(StripView_Enabled)</visible>
+			<visible>ControlGroup(9).HasFocus(13)</visible>
 			<label>- $LOCALIZE[31498]</label>
 			<onclick>Skin.ToggleSetting(Strip_Prefer_Keyart)</onclick>
 			<selected>Skin.HasSetting(Strip_Prefer_Keyart)</selected>
 		</control>
 		<control type="radiobutton" id="1324">
 			<description>Prefer landscape art for fanart views</description>
-			<visible>ControlGroup(9).HasFocus(13) + Skin.HasSetting(StripView_Enabled)</visible>
+			<visible>ControlGroup(9).HasFocus(13)</visible>
 			<label>- $LOCALIZE[31499]</label>
 			<onclick>Skin.ToggleSetting(Strip_Prefer_Landscape)</onclick>
 			<selected>Skin.HasSetting(Strip_Prefer_Landscape)</selected>
-		</control>
-		<control type="radiobutton" id="1325">
-			<description>Strip - Pictures</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31448]</label>
-			<onclick>Skin.ToggleSetting(StripView_Enabled_Pictures)</onclick>
-			<selected>Skin.HasSetting(StripView_Enabled_Pictures)</selected>
-		</control>
-		<control type="radiobutton" id="1326">
-			<description>Strip - Addons/Programs</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31447]</label>
-			<onclick>Skin.ToggleSetting(StripView_Enabled_Addons)</onclick>
-			<selected>Skin.HasSetting(StripView_Enabled_Addons)</selected>
-		</control>
-		<control type="radiobutton" id="1327">
-			<description>Strip - Favourites</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31734]</label>
-			<onclick>Skin.ToggleSetting(StripView_Enabled_favouritesbrowser)</onclick>
-			<selected>Skin.HasSetting(StripView_Enabled_favouritesbrowser)</selected>
 		</control>
 		<control type="label" id="1330">
 			<description>Grid</description>
@@ -541,82 +452,48 @@
 			<label>$LOCALIZE[31004]</label>
 			<include content="skinsettings_Default_Label" />
 		</control>
-		<control type="image" id="1331">
-			<description>Grid screenshot</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<include content="skinsettings_Detfault_Image" />
-			<texture>$VAR[skinsettings_View_Grid_Screenshots]</texture>
-		</control>
 		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(13) + Skin.HasSetting(GridView_Enabled)" />
+			<param name="visible" value="ControlGroup(9).HasFocus(13)" />
 			<param name="info" value="GridView_Size" />
 			<param name="label" value="$LOCALIZE[31715]" />
 			<param name="label2" value="$VAR[skinsettings_GridView_Size_Label2]" />
-			<param name="previous" value="1331" />
+			<param name="previous" value="1330" />
 			<param name="id" value="1332" />
-			<param name="next" value="1333" />
+			<param name="next" value="1334" />
 		</include>
-		<control type="radiobutton" id="1333">
-			<description>Grid - Videos/Music</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31446]</label>
-			<onclick>Skin.ToggleSetting(GridView_Enabled)</onclick>
-			<selected>Skin.HasSetting(GridView_Enabled)</selected>
-		</control>
 		<control type="radiobutton" id="1334">
 			<description>Prefer keyart for poster views</description>
-			<visible>ControlGroup(9).HasFocus(13) + Skin.HasSetting(GridView_Enabled)</visible>
+			<visible>ControlGroup(9).HasFocus(13)</visible>
 			<label>- $LOCALIZE[31498]</label>
 			<onclick>Skin.ToggleSetting(Grid_Prefer_Keyart)</onclick>
 			<selected>Skin.HasSetting(Grid_Prefer_Keyart)</selected>
 		</control>
 		<control type="radiobutton" id="1335">
 			<description>Prefer landscape art for fanart views</description>
-			<visible>ControlGroup(9).HasFocus(13) + Skin.HasSetting(GridView_Enabled)</visible>
+			<visible>ControlGroup(9).HasFocus(13)</visible>
 			<label>- $LOCALIZE[31499]</label>
 			<onclick>Skin.ToggleSetting(Grid_Prefer_Landscape)</onclick>
 			<selected>Skin.HasSetting(Grid_Prefer_Landscape)</selected>
 		</control>
 		<control type="image" id="1336">
 			<description>Grid watched screenshot</description>
-			<visible>ControlGroup(9).HasFocus(13) + Skin.HasSetting(GridView_Enabled)</visible>
+			<visible>ControlGroup(9).HasFocus(13)</visible>
 			<include content="skinsettings_Detfault_Image" />
 			<texture>$VAR[skinsettings_Grid_WatchedStatus_Screenshots]</texture>
 		</control>
 		<control type="radiobutton" id="1337">
 			<description>Dim thumbnails for watched listitems</description>
-			<visible>ControlGroup(9).HasFocus(13) + Skin.HasSetting(GridView_Enabled)</visible>
+			<visible>ControlGroup(9).HasFocus(13)</visible>
 			<label>- $LOCALIZE[31449]</label>
 			<onclick>Skin.ToggleSetting(GridView_WatchedStatus_Enabled)</onclick>
 			<selected>Skin.HasSetting(GridView_WatchedStatus_Enabled)</selected>
 		</control>
 		<control type="radiobutton" id="1338">
 			<description>Checkmarks instead of completed progress bar for watched items</description>
-			<visible>ControlGroup(9).HasFocus(13) + Skin.HasSetting(GridView_Enabled)</visible>
+			<visible>ControlGroup(9).HasFocus(13)</visible>
 			<label>- $LOCALIZE[31450]</label>
 			<onclick>Skin.ToggleSetting(GridView_AltWatchedStatus_Enabled)</onclick>
 			<selected>Skin.HasSetting(GridView_AltWatchedStatus_Enabled)</selected>
-		</control>
-		<control type="radiobutton" id="1339">
-			<description>Grid - Pictures</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31448]</label>
-			<onclick>Skin.ToggleSetting(GridView_Enabled_Pictures)</onclick>
-			<selected>Skin.HasSetting(GridView_Enabled_Pictures)</selected>
-		</control>
-		<control type="radiobutton" id="1340">
-			<description>Grid - Addons/Programs</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31447]</label>
-			<onclick>Skin.ToggleSetting(GridView_Enabled_Addons)</onclick>
-			<selected>Skin.HasSetting(GridView_Enabled_Addons)</selected>
-		</control>
-		<control type="radiobutton" id="1341">
-			<description>Grid - Favourites</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31734]</label>
-			<onclick>Skin.ToggleSetting(GridView_Enabled_favouritesbrowser)</onclick>
-			<selected>Skin.HasSetting(GridView_Enabled_favouritesbrowser)</selected>
 		</control>
 
 		<!-- Customisations -->

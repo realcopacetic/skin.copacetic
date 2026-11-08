@@ -9,6 +9,7 @@
 				<visible>!$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo) + !Control.HasFocus(3100)</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<control type="fixedlist" id="50">
+					<visible>$PARAM[visible]</visible>
 					<animation effect="slide" end="720,0" time="0" condition="$EXP[ListView_Display_IsThumbnails]">Conditional</animation>
 					<animation effect="slide" end="30,0" time="0" condition="[Window.Is(addonbrowser) | Window.Is(programs)] + !$EXP[Container_Addons_NonRepo]">Conditional</animation>
 					<viewtype label="List">list</viewtype>
@@ -19,7 +20,6 @@
 					<pagecontrol>60</pagecontrol>
 					<orientation>vertical</orientation>
 					<include content="List_Navigation" />
-					<onfocus condition="Container.Content(favourites)">Skin.SetString(favourites_Viewmode,List)</onfocus>
 					<include content="Default_Scrolltime" />
 					<include content="ListView_Layout_addonbrowser" condition="Window.Is(addonbrowser) | Window.Is(programs)" />
 					<include content="ListView_Layout_videos" condition="Window.Is(videos)" />

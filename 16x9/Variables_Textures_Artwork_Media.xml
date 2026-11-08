@@ -602,24 +602,19 @@
 		<value>special://skin/extras/skinsettings/embedded-list-off_night.jpg</value>
 	</variable>
 
-	<variable name="skinsettings_View_Billboard_Screenshots">
-		<value>special://skin/resources/screenshot-07.jpg</value>
-	</variable>
-	<variable name="skinsettings_View_Showcase_Screenshots">
-		<value condition="Skin.String(Theme,Light)">special://skin/extras/skinsettings/showcase_light.jpg</value>
-		<value>special://skin/extras/skinsettings/showcase_night.jpg</value>
-	</variable>
-	<variable name="skinsettings_View_Strip_Screenshots">
-		<value condition="Skin.String(Theme,Light)">special://skin/extras/skinsettings/strip_light.jpg</value>
-		<value>special://skin/extras/skinsettings/strip_night.jpg</value>
-	</variable>
-	<variable name="skinsettings_View_Grid_Screenshots">
-		<value condition="Skin.String(GridView_Size,Horizontal) + Skin.String(Theme,Light)">special://skin/extras/skinsettings/grid_horizontal_light.jpg</value>
-		<value condition="Skin.String(GridView_Size,Horizontal)">special://skin/extras/skinsettings/grid_horizontal_night.jpg</value>
-		<value condition="Skin.String(GridView_Size,Large) + Skin.String(Theme,Light)">special://skin/extras/skinsettings/grid_large_light.jpg</value>
-		<value condition="Skin.String(GridView_Size,Large)">special://skin/extras/skinsettings/grid_large_night.jpg</value>
-		<value condition="Skin.String(Theme,Light)">special://skin/extras/skinsettings/grid_small_light.jpg</value>
-		<value>special://skin/extras/skinsettings/grid_small_night.jpg</value>
+	<!-- The view editor's picture of the highlighted kind of item's layout (List has none) -->
+	<variable name="viewsettings_Screenshot">
+		<value condition="String.IsEqual(Container(100).ListItem.Property(layout),billboard)">special://skin/resources/screenshot-07.jpg</value>
+		<value condition="String.IsEqual(Container(100).ListItem.Property(layout),showcase) + Skin.String(Theme,Light)">special://skin/extras/skinsettings/showcase_light.jpg</value>
+		<value condition="String.IsEqual(Container(100).ListItem.Property(layout),showcase)">special://skin/extras/skinsettings/showcase_night.jpg</value>
+		<value condition="String.IsEqual(Container(100).ListItem.Property(layout),strip) + Skin.String(Theme,Light)">special://skin/extras/skinsettings/strip_light.jpg</value>
+		<value condition="String.IsEqual(Container(100).ListItem.Property(layout),strip)">special://skin/extras/skinsettings/strip_night.jpg</value>
+		<value condition="String.IsEqual(Container(100).ListItem.Property(layout),grid) + Skin.String(GridView_Size,Horizontal) + Skin.String(Theme,Light)">special://skin/extras/skinsettings/grid_horizontal_light.jpg</value>
+		<value condition="String.IsEqual(Container(100).ListItem.Property(layout),grid) + Skin.String(GridView_Size,Horizontal)">special://skin/extras/skinsettings/grid_horizontal_night.jpg</value>
+		<value condition="String.IsEqual(Container(100).ListItem.Property(layout),grid) + Skin.String(GridView_Size,Large) + Skin.String(Theme,Light)">special://skin/extras/skinsettings/grid_large_light.jpg</value>
+		<value condition="String.IsEqual(Container(100).ListItem.Property(layout),grid) + Skin.String(GridView_Size,Large)">special://skin/extras/skinsettings/grid_large_night.jpg</value>
+		<value condition="String.IsEqual(Container(100).ListItem.Property(layout),grid) + Skin.String(Theme,Light)">special://skin/extras/skinsettings/grid_small_light.jpg</value>
+		<value condition="String.IsEqual(Container(100).ListItem.Property(layout),grid)">special://skin/extras/skinsettings/grid_small_night.jpg</value>
 	</variable>
 
 	<variable name="videobookmarks(-1)Content">

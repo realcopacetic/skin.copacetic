@@ -4,13 +4,12 @@
 		<control type="group">
 			<visible>$EXP[BillboardView_IsVisible]</visible>
 			<include content="Custom_List">
-				<param name="visible" value="![Container.Content() + !Window.Is(programs)] + !Container.Content(files) + !Container.Content(videos) + !Container.Content(albums) + !Container.Content(songs) + !$EXP[Container_Programs_IsFolders] + !$EXP[Content_HasBackground] + !Container.Content(actors)" />
+				<param name="visible" value="$PARAM[visible]" />
 				<param name="type" value="list" />
 				<param name="id" value="501" />
 				<param name="viewtype_label" value="Billboard" />
 				<param name="viewtype" value="wide" />
 				<param name="orientation" value="horizontal" />
-				<onfocus condition="Container.Content(favourites)">Skin.SetString(favourites_Viewmode,Billboard)</onfocus>
 				<include content="Clearlogo_Crop_Pass" condition="Window.Is(videos) | Window.Is(music)" />
 			</include>
 		</control>

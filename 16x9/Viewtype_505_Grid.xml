@@ -14,6 +14,7 @@
 
 	<include name="GridView_Container">
 		<param name="art_icon" default="Grid" />
+		<param name="visible" />
 		<definition>
 			<include content="Hidden_Components">
 				<control type="label" id="6351">
@@ -50,12 +51,11 @@
 				<!-- List -->
 				<control type="panel" id="505">
 					<viewtype label="Grid">icon</viewtype>
-					<visible>!Container.Content(songs)</visible>
+					<visible>$PARAM[visible]</visible>
 					<left>50</left>
 					<top>180</top>
 					<include content="GridView_Vertical_Scrolling" condition="!Skin.String(GridView_Size,Horizontal)" />
 					<include content="GridView_Horizontal_Scrolling" condition="Skin.String(GridView_Size,Horizontal)" />
-					<onfocus condition="Container.Content(favourites)">Skin.SetString(favourites_Viewmode,Grid)</onfocus>
 					<include content="Grid_Vertical_Navigation" condition="!Skin.String(GridView_Size,Horizontal)" />
 					<include content="Grid_Horizontal_Navigation" condition="Skin.String(GridView_Size,Horizontal)" />
 					<pagecontrol>60</pagecontrol>

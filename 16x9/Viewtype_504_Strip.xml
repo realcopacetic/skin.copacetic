@@ -6,12 +6,11 @@
 			<visible>$EXP[StripView_IsVisible]</visible>
 			<include content="Custom_List">
 				<param name="type" value="fixedlist" />
-				<param name="visible" value="![Container.Content() + !Window.Is(programs)] + !$EXP[Container_Addons_Repo] + !Container.Content(files) + !Container.Content(songs) + !$EXP[Content_HasBackground]" />
+				<param name="visible" value="$PARAM[visible]" />
 				<param name="id" value="504" />
 				<param name="viewtype_label" value="Strip" />
 				<param name="viewtype" value="wrap" />
 				<param name="orientation" value="horizontal" />
-				<onfocus condition="Container.Content(favourites)">Skin.SetString(favourites_Viewmode,Strip)</onfocus>
 				<include content="Clearlogo_Crop_Pass" condition="Window.Is(videos) | Window.Is(music)" />
 			</include>
 		</control>

@@ -5,13 +5,12 @@
 		<control type="group">
 			<visible>$EXP[ShowcaseView_IsVisible]</visible>
 			<include content="Custom_List">
-				<param name="visible" value="![Container.Content() + !Window.Is(programs)] + !$EXP[Container_Addons_Repo] + !Container.Content(files) + !Container.Content(episodes) + !Container.Content(videos) + !Container.Content(songs) + !Container.Content(musicvideos) + !$EXP[Content_HasBackground]" />
+				<param name="visible" value="$PARAM[visible]" />
 				<param name="type" value="fixedlist" />
 				<param name="id" value="502" />
 				<param name="viewtype_label" value="Showcase" />
 				<param name="viewtype" value="bigwrap" />
 				<param name="orientation" value="horizontal" />
-				<onfocus condition="Container.Content(favourites)">Skin.SetString(favourites_Viewmode,Showcase)</onfocus>
 				<include content="Clearlogo_Crop_Pass" condition="Window.Is(videos) | Window.Is(music)" />
 			</include>
 		</control>
