@@ -88,7 +88,7 @@
           "value": "{condition}"
         },
         {
-          "condition": "not equals({layout}, list) + In({content_type}, [addons, musicvideos])",
+          "condition": "not equals({layout}, list) + equals({content_type}, musicvideos)",
           "type": "append",
           "value": "{condition}"
         }
