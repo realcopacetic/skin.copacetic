@@ -139,9 +139,7 @@
 		<value condition="Control.HasFocus(1118)">$LOCALIZE[31533]</value>
 		<value condition="Control.HasFocus(11120) | Control.HasFocus(11121)">$LOCALIZE[31544]</value>
 		<!-- Views -->
-		<value condition="Control.HasFocus(1305) | Control.HasFocus(1355)">$LOCALIZE[31541]</value>
-		<value condition="Control.HasFocus(1313) | Control.HasFocus(1323) | Control.HasFocus(1334) | Control.HasFocus(1356)">$LOCALIZE[31598]</value>
-		<value condition="Control.HasFocus(1324) | Control.HasFocus(1335)">$LOCALIZE[31599]</value>
+		<value condition="Control.HasFocus(1355)">$LOCALIZE[31541]</value>
 		<value condition="Control.HasFocus(13320) | Control.HasFocus(13321)">$LOCALIZE[31815]</value>
 		<value condition="Control.HasFocus(1351)">$LOCALIZE[31575]</value>
 		<!-- Customisations -->

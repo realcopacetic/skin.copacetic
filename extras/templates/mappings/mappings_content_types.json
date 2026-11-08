@@ -28,7 +28,9 @@
         "display": "{layout}_display",
         "details": "{layout}_details",
         "flags": "{content_type}_flags",
-        "logo": "{content_type}_logo"
+        "logo": "{content_type}_logo",
+        "art_keyart": "{content_type}_art_keyart",
+        "art_landscape": "{content_type}_art_landscape"
       }
     },
     "metadata": {

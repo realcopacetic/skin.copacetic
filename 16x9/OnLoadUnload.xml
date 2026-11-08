@@ -106,6 +106,7 @@
 		<onload condition="Skin.String(Background_Slideshow2) + !Skin.String(slideshow2_source)">Skin.SetString(slideshow2_source,$INFO[Skin.String(Background_Slideshow2)])</onload>
 		<onload condition="Skin.String(Background_Slideshow2_Custom_Path) + !Skin.String(slideshow2_path)">Skin.SetString(slideshow2_path,$ESCINFO[Skin.String(Background_Slideshow2_Custom_Path)])</onload>
 		<onload condition="Skin.String(Background_Slideshow2_Timer) + !Skin.String(slideshow2_start)">Skin.SetString(slideshow2_start,$INFO[Skin.String(Background_Slideshow2_Timer)])</onload>
+		<onload condition="Skin.HasSetting(Billboard_Ken_Burns_Effect)">Skin.SetBool(List_Ken_Burns_Effect)</onload>
 		<onload condition="Skin.String(Music_Rating_Like_Threshold)">Skin.Reset(Music_Rating_Like_Threshold)</onload>
 		<onload condition="Skin.String(Background_Interval)">Skin.Reset(Background_Interval)</onload>
 		<onload condition="Skin.String(Background_Slideshow)">Skin.Reset(Background_Slideshow)</onload>
@@ -115,6 +116,7 @@
 		<onload condition="Skin.String(Background_Slideshow2)">Skin.Reset(Background_Slideshow2)</onload>
 		<onload condition="Skin.String(Background_Slideshow2_Custom_Path)">Skin.Reset(Background_Slideshow2_Custom_Path)</onload>
 		<onload condition="Skin.String(Background_Slideshow2_Timer)">Skin.Reset(Background_Slideshow2_Timer)</onload>
+		<onload condition="Skin.HasSetting(Billboard_Ken_Burns_Effect)">Skin.SetBool(Billboard_Ken_Burns_Effect,false)</onload>
 		<!-- Up Next is replaced by the play next card: turn it off once (the helper notifies), after the first build's reload,
 			which would close the notification (builder_ready is generated). Both conditions are read before either row runs -->
 		<onload condition="System.AddonIsEnabled(service.upnext) + !Skin.HasSetting(upnext_turned_off) + $EXP[builder_ready]">RunScript(script.copacetic.helper,action=toggle_addon,id=service.upnext)</onload>

@@ -88,6 +88,24 @@
           "value": "{condition}"
         }
       ]
+    },
+    "art_keyart_visible_{window}": {
+      "rules": [
+        {
+          "condition": "equals({art_keyart}, true)",
+          "type": "append",
+          "value": "{condition}"
+        }
+      ]
+    },
+    "art_landscape_visible_{window}": {
+      "rules": [
+        {
+          "condition": "equals({art_landscape}, true)",
+          "type": "append",
+          "value": "{condition}"
+        }
+      ]
     }
   }
 }

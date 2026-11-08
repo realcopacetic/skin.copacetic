@@ -380,71 +380,12 @@
 			<label>$LOCALIZE[14018]</label>
 			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,name=viewsettings,mapping=content_types)</onclick>
 		</control>
-		<control type="label" id="1354">
-			<description>List</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31000]</label>
-			<include content="skinsettings_Default_Label" />
-		</control>
 		<control type="radiobutton" id="1355">
 			<description>Add movement</description>
 			<label>$LOCALIZE[31441]</label>
 			<onclick>Skin.ToggleSetting(List_Ken_Burns_Effect)</onclick>
 			<selected>Skin.HasSetting(List_Ken_Burns_Effect)</selected>
 			<visible>ControlGroup(9).HasFocus(13)</visible>
-		</control>
-		<control type="radiobutton" id="1356">
-			<description>Prefer keyart for poster views</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31498]</label>
-			<onclick>Skin.ToggleSetting(List_Prefer_Keyart)</onclick>
-			<selected>Skin.HasSetting(List_Prefer_Keyart)</selected>
-		</control>
-		<control type="label" id="1300">
-			<description>Billboard</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31001]</label>
-			<include content="skinsettings_Default_Label" />
-		</control>
-		<control type="radiobutton" id="1305">
-			<description>Add movement</description>
-			<label>$LOCALIZE[31441]</label>
-			<onclick>Skin.ToggleSetting(Billboard_Ken_Burns_Effect)</onclick>
-			<selected>Skin.HasSetting(Billboard_Ken_Burns_Effect)</selected>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-		</control>
-		<control type="label" id="1310">
-			<description>Showcase</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31002]</label>
-			<include content="skinsettings_Default_Label" />
-		</control>
-		<control type="radiobutton" id="1313">
-			<description>Prefer keyart for poster views</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>- $LOCALIZE[31498]</label>
-			<onclick>Skin.ToggleSetting(Showcase_Prefer_Keyart)</onclick>
-			<selected>Skin.HasSetting(Showcase_Prefer_Keyart)</selected>
-		</control>
-		<control type="label" id="1320">
-			<description>Strip</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>$LOCALIZE[31003]</label>
-			<include content="skinsettings_Default_Label" />
-		</control>
-		<control type="radiobutton" id="1323">
-			<description>Prefer keyart for poster views</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>- $LOCALIZE[31498]</label>
-			<onclick>Skin.ToggleSetting(Strip_Prefer_Keyart)</onclick>
-			<selected>Skin.HasSetting(Strip_Prefer_Keyart)</selected>
-		</control>
-		<control type="radiobutton" id="1324">
-			<description>Prefer landscape art for fanart views</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>- $LOCALIZE[31499]</label>
-			<onclick>Skin.ToggleSetting(Strip_Prefer_Landscape)</onclick>
-			<selected>Skin.HasSetting(Strip_Prefer_Landscape)</selected>
 		</control>
 		<control type="label" id="1330">
 			<description>Grid</description>
@@ -459,22 +400,8 @@
 			<param name="label2" value="$VAR[skinsettings_GridView_Size_Label2]" />
 			<param name="previous" value="1330" />
 			<param name="id" value="1332" />
-			<param name="next" value="1334" />
+			<param name="next" value="1337" />
 		</include>
-		<control type="radiobutton" id="1334">
-			<description>Prefer keyart for poster views</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>- $LOCALIZE[31498]</label>
-			<onclick>Skin.ToggleSetting(Grid_Prefer_Keyart)</onclick>
-			<selected>Skin.HasSetting(Grid_Prefer_Keyart)</selected>
-		</control>
-		<control type="radiobutton" id="1335">
-			<description>Prefer landscape art for fanart views</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
-			<label>- $LOCALIZE[31499]</label>
-			<onclick>Skin.ToggleSetting(Grid_Prefer_Landscape)</onclick>
-			<selected>Skin.HasSetting(Grid_Prefer_Landscape)</selected>
-		</control>
 		<control type="image" id="1336">
 			<description>Grid watched screenshot</description>
 			<visible>ControlGroup(9).HasFocus(13)</visible>

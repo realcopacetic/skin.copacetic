@@ -38,6 +38,22 @@
       "control_type": "sliderex",
       "visible": "equals({layout}, billboard) + In({content_type}, [movies, sets, tvshows, artists, program_files])",
       "label": "$LOCALIZE[31023]"
+    },
+    "art_keyart": {
+      "field": "art_keyart",
+      "id": 205,
+      "control_type": "radiobutton",
+      "visible": "In({content_type}, [movies, sets, tvshows, seasons]) + In({layout}, [list, showcase, strip, grid])",
+      "label": "$LOCALIZE[31498]",
+      "description": "$LOCALIZE[31598]"
+    },
+    "art_landscape": {
+      "field": "art_landscape",
+      "id": 206,
+      "control_type": "radiobutton",
+      "visible": "not In({content_type}, [episodes, videos, musicvideos]) + In({layout}, [strip, grid])",
+      "label": "$LOCALIZE[31499]",
+      "description": "$LOCALIZE[31599]"
     }
   }
 }

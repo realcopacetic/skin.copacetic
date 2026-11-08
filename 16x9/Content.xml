@@ -468,7 +468,7 @@
 		<include content="viewsettings_Slider_Row">
 			<param name="id" value="200" />
 			<param name="ondown" value="2010" />
-			<param name="onup" value="2040" />
+			<param name="onup" value="206" />
 		</include>
 		<include content="viewsettings_Slider_Row">
 			<param name="id" value="201" />
@@ -487,9 +487,19 @@
 		</include>
 		<include content="viewsettings_Slider_Row">
 			<param name="id" value="204" />
-			<param name="ondown" value="2000" />
+			<param name="ondown" value="205" />
 			<param name="onup" value="2030" />
 		</include>
+		<control type="radiobutton" id="205">
+			<description>Prefer keyart</description>
+			<textwidth>660</textwidth>
+			<radioposx>750</radioposx>
+		</control>
+		<control type="radiobutton" id="206">
+			<description>Prefer landscape</description>
+			<textwidth>660</textwidth>
+			<radioposx>750</radioposx>
+		</control>
 	</include>
 
 

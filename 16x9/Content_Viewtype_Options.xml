@@ -238,45 +238,6 @@
 		</item>
 	</include>
 
-	<include name="Trailer_Autoplay_Menu_Options">
-		<item>
-			<description>Trailer Autoplay (Movies) / Off</description>
-			<onclick>SetFocus(50)</onclick>
-			<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[591] $VAR[Copacetic_Chevron_Right]</label>
-			<label2>$LOCALIZE[31015] $VAR[Copacetic_Divider_Bold] $LOCALIZE[591]</label2>
-			<property name="ActionLeft">Skin.SetString(Trailer_Autoplay_Movies_Enabled,true)</property>
-			<property name="ActionRight">Skin.SetString(Trailer_Autoplay_Movies_Enabled,true)</property>
-			<visible>Container.Content(movies) + !Control.IsVisible(505) + !Skin.String(Trailer_Autoplay_Movies_Enabled,true)</visible>
-		</item>
-		<item>
-			<description>Trailer Autoplay (Movies) / On</description>
-			<onclick>SetFocus(50)</onclick>
-			<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[34222] $VAR[Copacetic_Chevron_Right]</label>
-			<label2>$LOCALIZE[31015] $VAR[Copacetic_Divider_Bold] $LOCALIZE[34222]</label2>
-			<property name="ActionLeft">Skin.SetString(Trailer_Autoplay_Movies_Enabled,false)</property>
-			<property name="ActionRight">Skin.SetString(Trailer_Autoplay_Movies_Enabled,false)</property>
-			<visible>Container.Content(movies) + !Control.IsVisible(505) + Skin.String(Trailer_Autoplay_Movies_Enabled,true)</visible>
-		</item>
-		<item>
-			<description>Trailer Autoplay (TV Shows) / Off</description>
-			<onclick>SetFocus(50)</onclick>
-			<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[591] $VAR[Copacetic_Chevron_Right]</label>
-			<label2>$LOCALIZE[31015] $VAR[Copacetic_Divider_Bold] $LOCALIZE[591]</label2>
-			<property name="ActionLeft">Skin.SetString(Trailer_Autoplay_TVShows_Enabled,true)</property>
-			<property name="ActionRight">Skin.SetString(Trailer_Autoplay_TVShows_Enabled,true)</property>
-			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Control.IsVisible(505) + !Skin.String(Trailer_Autoplay_TVShows_Enabled,true)</visible>
-		</item>
-		<item>
-			<description>Trailer Autoplay (Shows) / On</description>
-			<onclick>SetFocus(50)</onclick>
-			<label>$VAR[Copacetic_Chevron_Left] $LOCALIZE[34222] $VAR[Copacetic_Chevron_Right]</label>
-			<label2>$LOCALIZE[31015] $VAR[Copacetic_Divider_Bold] $LOCALIZE[34222]</label2>
-			<property name="ActionLeft">Skin.SetString(Trailer_Autoplay_TVShows_Enabled,false)</property>
-			<property name="ActionRight">Skin.SetString(Trailer_Autoplay_TVShows_Enabled,false)</property>
-			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Control.IsVisible(505) + Skin.String(Trailer_Autoplay_TVShows_Enabled,true)</visible>
-		</item>
-	</include>
-
 	<include name="Video_Menu_Options">
 		<!-- Show only unwatched or all videos -->
 		<item id="2">
