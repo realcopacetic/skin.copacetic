@@ -156,27 +156,6 @@
 	<onload condition="!Skin.String(StripView_Flags_Programs_Files)">Skin.SetString(StripView_Flags_Programs_Files,All)</onload>
 	<!-- Grid -->
 	<onload condition="!Skin.String(GridView_Size)">Skin.SetString(GridView_Size,Large)</onload>
-	<onload condition="!Skin.String(GridView_Display_Movies)">Skin.SetString(GridView_Display_Movies,Fanart)</onload>
-	<onload condition="!Skin.String(GridView_Display_Sets)">Skin.SetString(GridView_Display_Sets,Fanart)</onload>
-	<onload condition="!Skin.String(GridView_Display_TVShows)">Skin.SetString(GridView_Display_TVShows,Fanart)</onload>
-	<onload condition="!Skin.String(GridView_Display_Seasons)">Skin.SetString(GridView_Display_Seasons,Fanart)</onload>
-	<onload condition="!Skin.String(GridView_Display_Artists)">Skin.SetString(GridView_Display_Artists,Fanart)</onload>
-	<onload condition="!Skin.String(GridView_Display_Programs_Folders)">Skin.SetString(GridView_Display_Programs_Folders,Posters)</onload>
-	<onload condition="!Skin.String(GridView_Display_Programs_Files)">Skin.SetString(GridView_Display_Programs_Files,Fanart)</onload>
-	<onload condition="!Skin.String(GridView_Display_Favourites)">Skin.SetString(GridView_Display_Favourites,Square)</onload>
-	<onload condition="!Skin.String(GridView_Details_Movies)">Skin.SetString(GridView_Details_Movies,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(GridView_Details_Sets)">Skin.SetString(GridView_Details_Sets,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(GridView_Details_TVShows)">Skin.SetString(GridView_Details_TVShows,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(GridView_Details_Seasons)">Skin.SetString(GridView_Details_Seasons,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(GridView_Details_Episodes)">Skin.SetString(GridView_Details_Episodes,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(GridView_Details_Artists)">Skin.SetString(GridView_Details_Artists,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(GridView_Details_Albums)">Skin.SetString(GridView_Details_Albums,Off)</onload>
-	<onload condition="!Skin.String(GridView_Details_MusicVideos)">Skin.SetString(GridView_Details_MusicVideos,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(GridView_Details_Addons)">Skin.SetString(GridView_Details_Addons,Off)</onload>
-	<onload condition="!Skin.String(GridView_Details_Images)">Skin.SetString(GridView_Details_Images,Off)</onload>
-	<onload condition="!Skin.String(GridView_Details_Programs_Folders)">Skin.SetString(GridView_Details_Programs_Folders,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(GridView_Details_Programs_Files)">Skin.SetString(GridView_Details_Programs_Files,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(GridView_Details_Favourites)">Skin.SetString(GridView_Details_Favourites,Title)</onload>
 	<!-- Startup -->
 	<onload>SetProperty(SkinInitStarted,1,Home)</onload>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>

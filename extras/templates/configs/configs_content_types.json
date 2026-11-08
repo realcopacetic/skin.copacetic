@@ -106,6 +106,68 @@
         "*": "all"
       }
     },
+    "grid_display": {
+      "items": {
+        "posters": "$LOCALIZE[31006]",
+        "fanart": "$LOCALIZE[31007]",
+        "square": "$LOCALIZE[31008]"
+      },
+      "filter_mode": "exclude",
+      "rules": [
+        {
+          "condition": "In({content_type}, [movies, sets, tvshows, seasons])",
+          "value": [ "square" ]
+        },
+        {
+          "condition": "In({content_type}, [artists])",
+          "value": [ "posters" ]
+        },
+        {
+          "condition": "In({content_type}, [program_folders])",
+          "value": [ "fanart" ]
+        },
+        {
+          "condition": "In({content_type}, [episodes, videos, musicvideos])",
+          "value": [ "posters", "square" ]
+        },
+        {
+          "condition": "In({content_type}, [albums, songs, addons, program_addons, images])",
+          "value": [ "posters", "fanart" ]
+        }
+      ],
+      "defaults": {
+        "program_folders": "posters",
+        "favourites": "square",
+        "*": "fanart"
+      }
+    },
+    "grid_details": {
+      "items": {
+        "off": "$LOCALIZE[591]",
+        "breadcrumb": "$LOCALIZE[31030]",
+        "title": "$LOCALIZE[31017]",
+        "info": "$LOCALIZE[31018]"
+      },
+      "filter_mode": "exclude",
+      "rules": [
+        {
+          "condition": "In({content_type}, [videos])",
+          "value": [ "off", "title", "info" ]
+        },
+        {
+          "condition": "In({content_type}, [favourites])",
+          "value": [ "info" ]
+        }
+      ],
+      "defaults": {
+        "albums": "off",
+        "addons": "off",
+        "program_addons": "off",
+        "images": "off",
+        "favourites": "title",
+        "*": "info"
+      }
+    },
     "{content_type}_flags": {
       "items": {
         "off": "$LOCALIZE[591]",

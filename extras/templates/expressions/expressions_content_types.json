@@ -46,17 +46,27 @@
       }
     },
     "display_{item}_visible": {
-      "items": [ "background", "thumbnails" ],
+      "items": [ "background", "thumbnails", "posters", "fanart", "square" ],
       "rules": [
         {
           "condition": "equals({display}, {item})",
+          "type": "append",
+          "value": "{condition}"
+        },
+        {
+          "condition": "In({display}, [posters, fanart, square]) + equals({item}, background) + In({content_type}, [movies, sets, tvshows, seasons, episodes, artists, musicvideos])",
+          "type": "append",
+          "value": "{condition}"
+        },
+        {
+          "condition": "In({display}, [posters, fanart, square]) + equals({item}, thumbnails) + not In({content_type}, [movies, sets, tvshows, seasons, episodes, artists, musicvideos])",
           "type": "append",
           "value": "{condition}"
         }
       ]
     },
     "details_{item}_visible": {
-      "items": [ "title", "info", "plot", "all" ],
+      "items": [ "off", "breadcrumb", "title", "info", "plot", "all" ],
       "rules": [
         {
           "condition": "equals({details}, {item})",

@@ -15,14 +15,14 @@
       "field": "display",
       "id": 201,
       "control_type": "sliderex",
-      "visible": "equals({layout}, list) + In({content_type}, [movies, sets, tvshows, seasons, episodes, artists, albums, songs, musicvideos, program_files])",
+      "visible": "equals({layout}, list) + In({content_type}, [movies, sets, tvshows, seasons, episodes, artists, albums, songs, musicvideos, program_files]) | equals({layout}, grid) + In({content_type}, [movies, sets, tvshows, seasons, artists, program_folders, program_files, favourites])",
       "label": "$LOCALIZE[131]"
     },
     "details": {
       "field": "details",
       "id": 202,
       "control_type": "sliderex",
-      "visible": "equals({layout}, billboard) + In({content_type}, [movies, sets, tvshows, seasons, episodes, artists, musicvideos, program_files]) | equals({layout}, list) + equals({display}, background) + In({content_type}, [movies, sets, tvshows, seasons, episodes, artists, albums, songs, musicvideos, program_files])",
+      "visible": "equals({layout}, billboard) + In({content_type}, [movies, sets, tvshows, seasons, episodes, artists, musicvideos, program_files]) | equals({layout}, list) + equals({display}, background) + In({content_type}, [movies, sets, tvshows, seasons, episodes, artists, albums, songs, musicvideos, program_files]) | equals({layout}, grid) + not In({content_type}, [videos, songs])",
       "label": "$LOCALIZE[31016]"
     },
     "flags": {

@@ -583,11 +583,6 @@
 					<onright condition="Container(3000).HasFocus(10) + Container.Content(sets)">Skin.SetString(StripView_Logo_Sets,Off)</onright>
 					<onright condition="Container(3000).HasFocus(10) + Container.Content(tvshows)">Skin.SetString(StripView_Logo_TVShows,Off)</onright>
 					<onright condition="Container(3000).HasFocus(10) + Container.Content(artists)">Skin.SetString(StripView_Logo_Artists,Off)</onright>
-					<!--Grid: Transition from keyart to poster -->
-					<onleft condition="Container(3000).HasFocus(11)">SetFocus(505)</onleft>
-					<onleft condition="Container(3000).HasFocus(11)">SetFocus(4014)</onleft>
-					<onright condition="Container(3000).HasFocus(12)">SetFocus(505)</onright>
-					<onright condition="Container(3000).HasFocus(12)">SetFocus(4014)</onright>
 					<orientation>vertical</orientation>
 					<focusposition>0</focusposition>
 					<movement>12</movement>
@@ -615,7 +610,6 @@
 					<content>
 						<include content="ShowcaseView_Menu_Options" condition="$EXP[layout_showcase_include_media] + !Skin.HasSetting(Kiosk_Mode)" />
 						<include content="StripView_Menu_Options" condition="$EXP[layout_strip_include_media] + !Skin.HasSetting(Kiosk_Mode)" />
-						<include content="GridView_Menu_Options" condition="$EXP[layout_grid_include_media] + !Skin.HasSetting(Kiosk_Mode)" />
 						<include content="View_Menu_Options" condition="!Skin.HasSetting(Kiosk_Mode) + !Window.Is(musicplaylist) + !Window.Is(videoplaylist)" />
 						<include content="Common_Menu_Options">
 							<param name="target_id" value="$PARAM[target_id]" />
