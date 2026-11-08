@@ -15,28 +15,28 @@
       "field": "display",
       "id": 201,
       "control_type": "sliderex",
-      "visible": "equals({layout}, list) + In({content_type}, [movies, sets, tvshows, seasons, episodes, artists, albums, songs, musicvideos, program_files]) | equals({layout}, grid) + In({content_type}, [movies, sets, tvshows, seasons, artists, program_folders, program_files, favourites]) | equals({layout}, showcase) + In({content_type}, [movies, sets, tvshows, seasons, program_folders, program_files, favourites])",
+      "visible": "equals({layout}, list) + In({content_type}, [movies, sets, tvshows, seasons, episodes, artists, albums, songs, musicvideos, program_files]) | In({layout}, [grid, strip]) + In({content_type}, [movies, sets, tvshows, seasons, artists, program_folders, program_files, favourites]) | equals({layout}, showcase) + In({content_type}, [movies, sets, tvshows, seasons, program_folders, program_files, favourites])",
       "label": "$LOCALIZE[131]"
     },
     "details": {
       "field": "details",
       "id": 202,
       "control_type": "sliderex",
-      "visible": "equals({layout}, billboard) + In({content_type}, [movies, sets, tvshows, seasons, episodes, artists, musicvideos, program_files]) | equals({layout}, list) + equals({display}, background) + In({content_type}, [movies, sets, tvshows, seasons, episodes, artists, albums, songs, musicvideos, program_files]) | In({layout}, [grid, showcase]) + not In({content_type}, [videos, songs])",
+      "visible": "equals({layout}, billboard) + In({content_type}, [movies, sets, tvshows, seasons, episodes, artists, musicvideos, program_files]) | equals({layout}, list) + equals({display}, background) + In({content_type}, [movies, sets, tvshows, seasons, episodes, artists, albums, songs, musicvideos, program_files]) | In({layout}, [grid, showcase, strip]) + not In({content_type}, [videos, songs])",
       "label": "$LOCALIZE[31016]"
     },
     "flags": {
       "field": "flags",
       "id": 203,
       "control_type": "sliderex",
-      "visible": "In({layout}, [list, billboard]) + In({content_type}, [movies, sets, tvshows, seasons, episodes, program_files]) | equals({layout}, showcase) + not In({details}, [off, title_overlay, info_overlay]) + In({content_type}, [movies, sets, tvshows, seasons, episodes, program_files])",
+      "visible": "In({layout}, [list, billboard, strip]) + In({content_type}, [movies, sets, tvshows, seasons, episodes, program_files]) | equals({layout}, showcase) + not In({details}, [off, title_overlay, info_overlay]) + In({content_type}, [movies, sets, tvshows, seasons, episodes, program_files])",
       "label": "$LOCALIZE[31024]"
     },
     "logo": {
       "field": "logo",
       "id": 204,
       "control_type": "sliderex",
-      "visible": "equals({layout}, billboard) + In({content_type}, [movies, sets, tvshows, artists, program_files]) | equals({layout}, showcase) + not In({details}, [off, title_overlay, info_overlay]) + In({content_type}, [movies, sets, tvshows, artists, program_files])",
+      "visible": "equals({layout}, billboard) + In({content_type}, [movies, sets, tvshows, artists, program_files]) | equals({layout}, showcase) + not In({details}, [off, title_overlay, info_overlay]) + In({content_type}, [movies, sets, tvshows, artists, program_files]) | equals({layout}, strip) + not equals({details}, off) + In({content_type}, [movies, sets, tvshows, artists, program_files])",
       "label": "$LOCALIZE[31023]"
     },
     "art_keyart": {

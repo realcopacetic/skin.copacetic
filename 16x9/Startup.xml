@@ -92,39 +92,6 @@
 	<onload condition="!Skin.String(GlobalSearch_Albums_Limit)">Skin.SetString(GlobalSearch_Albums_Limit,30)</onload>
 	<onload condition="!Skin.String(GlobalSearch_Songs_Limit)">Skin.SetString(GlobalSearch_Songs_Limit,30)</onload>
 	<!-- Layout configuration -->
-	<!-- Strip -->
-	<onload condition="!Skin.String(StripView_Display_Movies)">Skin.SetString(StripView_Display_Movies,Posters)</onload>
-	<onload condition="!Skin.String(StripView_Display_Sets)">Skin.SetString(StripView_Display_Sets,Posters)</onload>
-	<onload condition="!Skin.String(StripView_Display_TVShows)">Skin.SetString(StripView_Display_TVShows,Posters)</onload>
-	<onload condition="!Skin.String(StripView_Display_Seasons)">Skin.SetString(StripView_Display_Seasons,Posters)</onload>
-	<onload condition="!Skin.String(StripView_Display_Artists)">Skin.SetString(StripView_Display_Artists,Fanart)</onload>
-	<onload condition="!Skin.String(StripView_Display_Albums)">Skin.SetString(StripView_Display_Albums,Square)</onload>
-	<onload condition="!Skin.String(StripView_Display_Programs_Folders)">Skin.SetString(StripView_Display_Programs_Folders,Posters)</onload>
-	<onload condition="!Skin.String(StripView_Display_Programs_Files)">Skin.SetString(StripView_Display_Programs_Files,Fanart)</onload>
-	<onload condition="!Skin.String(StripView_Display_Favourites)">Skin.SetString(StripView_Display_Favourites,Square)</onload>
-	<onload condition="!Skin.String(StripView_Details_Movies)">Skin.SetString(StripView_Details_Movies,All)</onload>
-	<onload condition="!Skin.String(StripView_Details_Sets)">Skin.SetString(StripView_Details_Sets,All)</onload>
-	<onload condition="!Skin.String(StripView_Details_TVShows)">Skin.SetString(StripView_Details_TVShows,All)</onload>
-	<onload condition="!Skin.String(StripView_Details_Seasons)">Skin.SetString(StripView_Details_Seasons,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(StripView_Details_Episodes)">Skin.SetString(StripView_Details_Episodes,All)</onload>
-	<onload condition="!Skin.String(StripView_Details_Artists)">Skin.SetString(StripView_Details_Artists,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(StripView_Details_Albums)">Skin.SetString(StripView_Details_Albums,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(StripView_Details_MusicVideos)">Skin.SetString(StripView_Details_MusicVideos,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(StripView_Details_Addons)">Skin.SetString(StripView_Details_Addons,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(StripView_Details_Programs_Folders)">Skin.SetString(StripView_Details_Programs_Folders,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(StripView_Details_Programs_Files)">Skin.SetString(StripView_Details_Programs_Files,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(StripView_Details_Favourites)">Skin.SetString(StripView_Details_Favourites,Title)</onload>
-	<onload condition="!Skin.String(StripView_Logo_Movies)">Skin.SetString(StripView_Logo_Movies,Off)</onload>
-	<onload condition="!Skin.String(StripView_Logo_Sets)">Skin.SetString(StripView_Logo_Sets,Off)</onload>
-	<onload condition="!Skin.String(StripView_Logo_TVShows)">Skin.SetString(StripView_Logo_TVShows,Off)</onload>
-	<onload condition="!Skin.String(StripView_Logo_Artists)">Skin.SetString(StripView_Logo_Artists,Off)</onload>
-	<onload condition="!Skin.String(StripView_Logo_Programs_Files)">Skin.SetString(StripView_Logo_Programs_Files,Off)</onload>
-	<onload condition="!Skin.String(StripView_Flags_Movies)">Skin.SetString(StripView_Flags_Movies,All)</onload>
-	<onload condition="!Skin.String(StripView_Flags_Sets)">Skin.SetString(StripView_Flags_Sets,All)</onload>
-	<onload condition="!Skin.String(StripView_Flags_TVShows)">Skin.SetString(StripView_Flags_TVShows,All)</onload>
-	<onload condition="!Skin.String(StripView_Flags_Seasons)">Skin.SetString(StripView_Flags_Seasons,All)</onload>
-	<onload condition="!Skin.String(StripView_Flags_Episodes)">Skin.SetString(StripView_Flags_Episodes,All)</onload>
-	<onload condition="!Skin.String(StripView_Flags_Programs_Files)">Skin.SetString(StripView_Flags_Programs_Files,All)</onload>
 	<!-- Grid -->
 	<onload condition="!Skin.String(GridView_Size)">Skin.SetString(GridView_Size,Large)</onload>
 	<!-- Startup -->
