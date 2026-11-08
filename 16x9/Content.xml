@@ -421,36 +421,70 @@
 		</control>
 	</include>
 
-	<!-- The helper sets the layout row's label and value and moves its slider (controls_content_types.json) -->
+	<!-- One option row: the helper sets its label and value, moves its slider and hides it for kinds of item it doesn't apply to
+	     (controls_content_types.json). The ids are the helper's sliderex convention, {id} slider and {id}0 button (control_factory.py:62-64) -->
+	<include name="viewsettings_Slider_Row">
+		<param name="id" />
+		<param name="ondown" />
+		<param name="onup" />
+		<definition>
+			<control type="group" id="$PARAM[id]1">
+				<visible>Control.IsVisible($PARAM[id])</visible>
+				<height>90</height>
+				<defaultcontrol always="true">$PARAM[id]0</defaultcontrol>
+				<!-- The row's underline, kept while Select moves focus between the button and its slider -->
+				<control type="image">
+					<visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[id]0)</visible>
+					<texture border="2,2,62,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_right.png</texture>
+				</control>
+				<control type="button" id="$PARAM[id]0">
+					<width>690</width>
+					<texturefocus />
+					<onup>$PARAM[onup]</onup>
+					<ondown>$PARAM[ondown]</ondown>
+					<onleft>100</onleft>
+					<onright>415</onright>
+				</control>
+				<control type="slider" id="$PARAM[id]">
+					<right>60</right>
+					<centertop>50%</centertop>
+					<width>120</width>
+					<height>30</height>
+					<orientation>horizontal</orientation>
+					<onup>$PARAM[onup]</onup>
+					<ondown>$PARAM[ondown]</ondown>
+				</control>
+			</control>
+		</definition>
+	</include>
+
+	<!-- Rows chain Up and Down by their buttons: a hidden row is walked through, a grouplist can't reach inside its groups -->
 	<include name="viewsettings_Right_List_Content">
-		<control type="group" id="2001">
-			<description>Layout</description>
-			<height>90</height>
-			<!-- The row's underline, kept while Select moves focus between the button and its slider -->
-			<control type="image">
-				<visible>Control.HasFocus(200) | Control.HasFocus(2000)</visible>
-				<texture border="2,2,62,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_right.png</texture>
-			</control>
-			<control type="button" id="2000">
-				<width>690</width>
-				<label>$LOCALIZE[31005]</label>
-				<texturefocus />
-				<onleft>100</onleft>
-				<onright>415</onright>
-			</control>
-			<control type="slider" id="200">
-				<right>60</right>
-				<centertop>50%</centertop>
-				<width>120</width>
-				<height>30</height>
-				<orientation>horizontal</orientation>
-			</control>
-		</control>
 		<control type="image">
-			<description>Layout screenshot</description>
+			<description>Layout screenshot, above the rows as in Skin settings</description>
 			<include content="skinsettings_Detfault_Image" />
 			<texture>$VAR[viewsettings_Screenshot]</texture>
 		</control>
+		<include content="viewsettings_Slider_Row">
+			<param name="id" value="200" />
+			<param name="ondown" value="2020" />
+			<param name="onup" value="2040" />
+		</include>
+		<include content="viewsettings_Slider_Row">
+			<param name="id" value="202" />
+			<param name="ondown" value="2030" />
+			<param name="onup" value="2000" />
+		</include>
+		<include content="viewsettings_Slider_Row">
+			<param name="id" value="203" />
+			<param name="ondown" value="2040" />
+			<param name="onup" value="2020" />
+		</include>
+		<include content="viewsettings_Slider_Row">
+			<param name="id" value="204" />
+			<param name="ondown" value="2000" />
+			<param name="onup" value="2030" />
+		</include>
 	</include>
 
 

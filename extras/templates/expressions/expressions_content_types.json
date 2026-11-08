@@ -44,6 +44,40 @@
           "value": "invert()"
         }
       }
+    },
+    "details_{item}_visible": {
+      "items": [ "title", "info", "plot", "all" ],
+      "rules": [
+        {
+          "condition": "equals({details}, {item})",
+          "type": "append",
+          "value": "{condition}"
+        },
+        {
+          "condition": "equals({details}, bio) + equals({item}, plot)",
+          "type": "append",
+          "value": "{condition}"
+        }
+      ]
+    },
+    "flags_{item}_visible": {
+      "items": [ "studio", "rating", "all" ],
+      "rules": [
+        {
+          "condition": "equals({flags}, {item})",
+          "type": "append",
+          "value": "{condition}"
+        }
+      ]
+    },
+    "logo_on_visible": {
+      "rules": [
+        {
+          "condition": "equals({logo}, on)",
+          "type": "append",
+          "value": "{condition}"
+        }
+      ]
     }
   }
 }

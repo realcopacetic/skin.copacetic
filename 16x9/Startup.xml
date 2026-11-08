@@ -122,26 +122,6 @@
 	<onload condition="!Skin.String(ListView_Flags_Seasons)">Skin.SetString(ListView_Flags_Seasons,All)</onload>
 	<onload condition="!Skin.String(ListView_Flags_Episodes)">Skin.SetString(ListView_Flags_Episodes,All)</onload>
 	<onload condition="!Skin.String(ListView_Flags_Programs_Files)">Skin.SetString(ListView_Flags_Programs_Files,All)</onload>
-	<!-- Billboard -->
-	<onload condition="!Skin.String(BillboardView_Details_Movies)">Skin.SetString(BillboardView_Details_Movies,All)</onload>
-	<onload condition="!Skin.String(BillboardView_Details_Sets)">Skin.SetString(BillboardView_Details_Sets,All)</onload>
-	<onload condition="!Skin.String(BillboardView_Details_TVShows)">Skin.SetString(BillboardView_Details_TVShows,All)</onload>
-	<onload condition="!Skin.String(BillboardView_Details_Seasons)">Skin.SetString(BillboardView_Details_Seasons,TitleAndInfo)</onload>
-	<onload condition="!Skin.String(BillboardView_Details_Episodes)">Skin.SetString(BillboardView_Details_Episodes,All)</onload>
-	<onload condition="!Skin.String(BillboardView_Details_Artists)">Skin.SetString(BillboardView_Details_Artists,Title)</onload>
-	<onload condition="!Skin.String(BillboardView_Details_MusicVideos)">Skin.SetString(BillboardView_Details_MusicVideos,Title)</onload>
-	<onload condition="!Skin.String(BillboardView_Details_Programs_Files)">Skin.SetString(BillboardView_Details_Programs_Files,All)</onload>
-	<onload condition="!Skin.String(BillboardView_Logo_Movies)">Skin.SetString(BillboardView_Logo_Movies,Off)</onload>
-	<onload condition="!Skin.String(BillboardView_Logo_Sets)">Skin.SetString(BillboardView_Logo_Sets,Off)</onload>
-	<onload condition="!Skin.String(BillboardView_Logo_TVShows)">Skin.SetString(BillboardView_Logo_TVShows,Off)</onload>
-	<onload condition="!Skin.String(BillboardView_Logo_Artists)">Skin.SetString(BillboardView_Logo_Artists,Off)</onload>
-	<onload condition="!Skin.String(BillboardView_Logo_Programs_Files)">Skin.SetString(BillboardView_Logo_Programs_Files,Off)</onload>
-	<onload condition="!Skin.String(BillboardView_Flags_Movies)">Skin.SetString(BillboardView_Flags_Movies,All)</onload>
-	<onload condition="!Skin.String(BillboardView_Flags_Sets)">Skin.SetString(BillboardView_Flags_Sets,All)</onload>
-	<onload condition="!Skin.String(BillboardView_Flags_TVShows)">Skin.SetString(BillboardView_Flags_TVShows,All)</onload>
-	<onload condition="!Skin.String(BillboardView_Flags_Seasons)">Skin.SetString(BillboardView_Flags_Seasons,All)</onload>
-	<onload condition="!Skin.String(BillboardView_Flags_Episodes)">Skin.SetString(BillboardView_Flags_Episodes,All)</onload>
-	<onload condition="!Skin.String(BillboardView_Flags_Programs_Files)">Skin.SetString(BillboardView_Flags_Programs_Files,All)</onload>
 	<!-- Showcase -->
 	<onload condition="!Skin.String(ShowcaseView_Display_Movies)">Skin.SetString(ShowcaseView_Display_Movies,Posters)</onload>
 	<onload condition="!Skin.String(ShowcaseView_Display_Sets)">Skin.SetString(ShowcaseView_Display_Sets,Posters)</onload>

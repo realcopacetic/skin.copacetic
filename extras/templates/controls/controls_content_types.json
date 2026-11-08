@@ -10,6 +10,27 @@
       "id": 200,
       "control_type": "sliderex",
       "label": "$LOCALIZE[31005]"
+    },
+    "details": {
+      "field": "details",
+      "id": 202,
+      "control_type": "sliderex",
+      "visible": "equals({layout}, billboard) + In({content_type}, [movies, sets, tvshows, seasons, episodes, artists, musicvideos, program_files])",
+      "label": "$LOCALIZE[31016]"
+    },
+    "flags": {
+      "field": "flags",
+      "id": 203,
+      "control_type": "sliderex",
+      "visible": "equals({layout}, billboard) + In({content_type}, [movies, sets, tvshows, seasons, episodes, program_files])",
+      "label": "$LOCALIZE[31024]"
+    },
+    "logo": {
+      "field": "logo",
+      "id": 204,
+      "control_type": "sliderex",
+      "visible": "equals({layout}, billboard) + In({content_type}, [movies, sets, tvshows, artists, program_files])",
+      "label": "$LOCALIZE[31023]"
     }
   }
 }

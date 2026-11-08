@@ -614,7 +614,6 @@
 					</focusedlayout>
 					<content>
 						<include content="ListView_Menu_Options" condition="!Skin.HasSetting(Kiosk_Mode)" />
-						<include content="BillboardView_Menu_Options" condition="$EXP[layout_billboard_include_media] + !Skin.HasSetting(Kiosk_Mode)" />
 						<include content="ShowcaseView_Menu_Options" condition="$EXP[layout_showcase_include_media] + !Skin.HasSetting(Kiosk_Mode)" />
 						<include content="StripView_Menu_Options" condition="$EXP[layout_strip_include_media] + !Skin.HasSetting(Kiosk_Mode)" />
 						<include content="GridView_Menu_Options" condition="$EXP[layout_grid_include_media] + !Skin.HasSetting(Kiosk_Mode)" />

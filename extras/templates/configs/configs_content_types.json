@@ -27,6 +27,82 @@
       "defaults": {
         "*": "list"
       }
+    },
+    "{layout}_details": {
+      "items": { "off": "" }
+    },
+    "billboard_details": {
+      "items": {
+        "title": "$LOCALIZE[31017]",
+        "info": "$LOCALIZE[31018]",
+        "plot": "$LOCALIZE[31019]",
+        "bio": "$LOCALIZE[31020]",
+        "all": "$LOCALIZE[593]",
+        "none": ""
+      },
+      "filter_mode": "exclude",
+      "rules": [
+        {
+          "condition": "In({content_type}, [artists, musicvideos])",
+          "value": [ "plot" ]
+        },
+        {
+          "condition": "not In({content_type}, [artists, musicvideos])",
+          "value": [ "bio" ]
+        },
+        {
+          "condition": "In({content_type}, [favourites])",
+          "value": [ "info", "plot", "bio", "all" ]
+        },
+        {
+          "condition": "In({content_type}, [program_addons])",
+          "value": [ "title", "info", "plot", "bio", "all" ]
+        },
+        {
+          "condition": "not In({content_type}, [program_addons])",
+          "value": [ "none" ]
+        }
+      ],
+      "defaults": {
+        "seasons": "info",
+        "artists": "title",
+        "musicvideos": "title",
+        "*": "all"
+      }
+    },
+    "{content_type}_flags": {
+      "items": {
+        "off": "$LOCALIZE[591]",
+        "studio": "$LOCALIZE[31025]",
+        "rating": "$LOCALIZE[31026]",
+        "all": "$LOCALIZE[593]"
+      },
+      "filter_mode": "exclude",
+      "rules": [
+        {
+          "condition": "not In({content_type}, [movies, sets, tvshows, seasons, episodes, program_files])",
+          "value": [ "studio", "rating", "all" ]
+        }
+      ],
+      "defaults": {
+        "*": "all"
+      }
+    },
+    "{content_type}_logo": {
+      "items": {
+        "off": "$LOCALIZE[591]",
+        "on": "$LOCALIZE[34222]"
+      },
+      "filter_mode": "exclude",
+      "rules": [
+        {
+          "condition": "not In({content_type}, [movies, sets, tvshows, artists, program_files])",
+          "value": [ "on" ]
+        }
+      ],
+      "defaults": {
+        "*": "off"
+      }
     }
   }
 }

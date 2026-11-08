@@ -24,7 +24,10 @@
     },
     "config_fields": {
       "global": {
-        "layout": "{content_type}_layout"
+        "layout": "{content_type}_layout",
+        "details": "{layout}_details",
+        "flags": "{content_type}_flags",
+        "logo": "{content_type}_logo"
       }
     },
     "metadata": {
