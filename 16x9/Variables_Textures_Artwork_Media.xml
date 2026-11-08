@@ -433,7 +433,7 @@
 		<value condition="$EXP[StripView_Display_IsSquare] + String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Art(thumb1))">thumb</value>
 		<value condition="$EXP[StripView_Display_IsSquare] + !String.IsEmpty(ListItem.Art(square1))">square</value>
 		<value condition="$EXP[GridView_Display_IsPosters] + [$EXP[Prefer_Keyart] | $EXP[GridView_Details_On]] + !String.IsEmpty(ListItem.Art(keyart1))">keyart</value>
-		<value condition="$EXP[GridView_Display_IsPosters] + [!$EXP[Prefer_Keyart] | String.IsEmpty(ListItem.Art(keyart))] + !String.IsEmpty(ListItem.Art(keyart1))">poster</value>
+		<value condition="$EXP[GridView_Display_IsPosters] + [![$EXP[Prefer_Keyart] | $EXP[GridView_Details_On]] | String.IsEmpty(ListItem.Art(keyart))] + !String.IsEmpty(ListItem.Art(poster1))">poster</value>
 		<value condition="![String.Contains(ListItem.Path,themoviedb.helper) + !Window.Is(home)] + [$EXP[GridView_Display_IsFanart] | $EXP[GridView_Display_IsSpotlight]] + $EXP[Prefer_Landscape] + !String.IsEmpty(ListItem.Art(landscape1))">landscape</value>
 		<value condition="![String.Contains(ListItem.Path,themoviedb.helper) + !Window.Is(home)] + [$EXP[GridView_Display_IsFanart] | $EXP[GridView_Display_IsSpotlight]] + [!$EXP[Prefer_Landscape] | String.IsEmpty(ListItem.Art(landscape))] + !String.IsEmpty(ListItem.Art(fanart1))">fanart</value>
 		<value condition="$EXP[GridView_Display_IsSquare] + String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Art(thumb1))">thumb</value>
