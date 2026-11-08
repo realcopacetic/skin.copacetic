@@ -4,7 +4,6 @@
 		<import addon="xbmc.gui" version="5.17.0" />
 		<import addon="script.copacetic.helper" version="1.1.0" />
 		<import addon="resource.fonts.copacetic" version="1.0.5" />
-		<import addon="script.skinshortcuts" version="1.1.5" />
 	</requires>
 	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
