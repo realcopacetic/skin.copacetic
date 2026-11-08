@@ -558,7 +558,7 @@
 	</variable>
 
 	<variable name="Player_Status_Label">
-		<value condition="!String.IsEmpty(Player.SeekNumeric)">[UPPERCASE]$LOCALIZE[31309] $VAR[Copacetic_Divider_Bold12Q3] $INFO[Player.SeekNumeric(hh:mm:ss)][/UPPERCASE]</value>
+		<value condition="!String.IsEmpty(Player.SeekNumeric)">[UPPERCASE]$LOCALIZE[31309] $VAR[Copacetic_Divider_Bold] $INFO[Player.SeekNumeric(hh:mm:ss)][/UPPERCASE]</value>
 		<value condition="!String.IsEmpty(Player.SeekStepSize)">$INFO[Player.SeekStepSize]</value>
 		<value condition="!String.IsEmpty(Player.SeekOffset) + Player.HasPerformedSeek(3)">$INFO[Player.SeekOffset]</value>
 		<value condition="VideoPlayer.Content(livetv) + Integer.IsGreater(PVR.TimeShiftOffset,5)">[UPPERCASE]$INFO[PVR.TimeShiftOffset, -, $LOCALIZE[31308]][/UPPERCASE]</value>
