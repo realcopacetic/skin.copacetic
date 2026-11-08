@@ -131,7 +131,7 @@
 	<expression name="programs_Level_3">$EXP[Container_Programs_IsFolders]</expression>
 	<expression name="programs_Level_4">$EXP[Container_Programs_IsFiles]</expression>
 
-	<expression name="globalsearch_Container_Switching">[Control.HasFocus(3201) + Window.IsVisible(1131)] | [Control.HasFocus(3202) + Window.IsVisible(1132)] | [Control.HasFocus(3203) + Window.IsVisible(1133)] | [Control.HasFocus(3204) + Window.IsVisible(1134)] | [Control.HasFocus(3205) + Window.IsVisible(1135)] | [Control.HasFocus(3206) + Window.IsVisible(1136)] | [Control.HasFocus(3207) + Window.IsVisible(1137)] | [Control.HasFocus(3208) + Window.IsVisible(1138)] | [Control.HasFocus(3209) + Window.IsVisible(1139)]</expression>
+	<expression name="globalsearch_Container_Switching">[Control.HasFocus(3201) + Window.IsVisible(1131)] | [Control.HasFocus(3202) + Window.IsVisible(1132)] | [Control.HasFocus(3203) + Window.IsVisible(1133)] | [Control.HasFocus(3204) + Window.IsVisible(1134)] | [Control.HasFocus(3205) + Window.IsVisible(1135)] | [Control.HasFocus(3206) + Window.IsVisible(1136)]</expression>
 
 	<!-- Extras -->
 	<expression name="Music_Player_IsVisible">Skin.HasSetting(Music_Player_Enabled) + MusicPlayer.Offset(0).Exists</expression>
@@ -145,15 +145,6 @@
 	<expression name="Trailer_Autoplay_IsVisible">String.IsEqual(Window(home).Property(Trailer_Autoplay),true) + Player.HasVideo</expression>
 
 	<!-- Widgets -->
-	<expression name="Widget1_IsSquare">Skin.HasSetting(Widget1_Content_LatestAlbums) | Skin.HasSetting(Widget1_Content_RecentAlbums) | Skin.HasSetting(Widget1_Content_RandomAlbums) | Skin.HasSetting(Widget1_Content_LikedSongs)</expression>
-	<expression name="Widget2_IsSquare">Skin.HasSetting(Widget2_Content_LatestAlbums) | Skin.HasSetting(Widget2_Content_RecentAlbums) | Skin.HasSetting(Widget2_Content_RandomAlbums) | Skin.HasSetting(Widget2_Content_LikedSongs)</expression>
-	<expression name="Widget3_IsSquare">Skin.HasSetting(Widget3_Content_LatestAlbums) | Skin.HasSetting(Widget3_Content_RecentAlbums) | Skin.HasSetting(Widget3_Content_RandomAlbums) | Skin.HasSetting(Widget3_Content_LikedSongs)</expression>
-	<expression name="Widget4_IsSquare">Skin.HasSetting(Widget4_Content_LatestAlbums) | Skin.HasSetting(Widget4_Content_RecentAlbums) | Skin.HasSetting(Widget4_Content_RandomAlbums) | Skin.HasSetting(Widget4_Content_LikedSongs)</expression>
-	<expression name="Widget5_IsSquare">Skin.HasSetting(Widget5_Content_LatestAlbums) | Skin.HasSetting(Widget5_Content_RecentAlbums) | Skin.HasSetting(Widget5_Content_RandomAlbums) | Skin.HasSetting(Widget5_Content_LikedSongs)</expression>
-	<expression name="Widget6_IsSquare">Skin.HasSetting(Widget6_Content_LatestAlbums) | Skin.HasSetting(Widget6_Content_RecentAlbums) | Skin.HasSetting(Widget6_Content_RandomAlbums) | Skin.HasSetting(Widget6_Content_LikedSongs)</expression>
-	<expression name="Widget7_IsSquare">Skin.HasSetting(Widget7_Content_LatestAlbums) | Skin.HasSetting(Widget7_Content_RecentAlbums) | Skin.HasSetting(Widget7_Content_RandomAlbums) | Skin.HasSetting(Widget7_Content_LikedSongs)</expression>
-	<expression name="Widget8_IsSquare">Skin.HasSetting(Widget8_Content_LatestAlbums) | Skin.HasSetting(Widget8_Content_RecentAlbums) | Skin.HasSetting(Widget8_Content_RandomAlbums) | Skin.HasSetting(Widget8_Content_LikedSongs)</expression>
-	<expression name="Widget9_IsSquare">Skin.HasSetting(Widget9_Content_LatestAlbums) | Skin.HasSetting(Widget9_Content_RecentAlbums) | Skin.HasSetting(Widget9_Content_RandomAlbums) | Skin.HasSetting(Widget9_Content_LikedSongs)</expression>
 	<expression name="Widget_HasLogo">$EXP[Widget_HasLogo_home] | $EXP[Widget_HasLogo_3201] | $EXP[Widget_HasLogo_3202] | $EXP[Widget_HasLogo_3203] | $EXP[Widget_HasLogo_3204] | $EXP[Widget_HasLogo_3205] | $EXP[Widget_HasLogo_3206] | $EXP[Widget_HasLogo_3207] | $EXP[Widget_HasLogo_3208] | $EXP[Widget_HasLogo_3209]</expression>
 	<expression name="Widget_HasLogo_3201">Control.HasFocus(3201) + [String.IsEqual(Container(3201).ListItem.DBType,movie) | String.IsEqual(Container(3201).ListItem.DBType,set) | String.IsEqual(Container(3201).ListItem.DBType,tvshow) | String.IsEqual(Container(3201).ListItem.DBType,artist)] + !String.IsEmpty(Container(3201).ListItem.Art(clearlogo))</expression>
 	<expression name="Widget_HasLogo_3202">Control.HasFocus(3202) + [String.IsEqual(Container(3202).ListItem.DBType,movie) | String.IsEqual(Container(3202).ListItem.DBType,set) | String.IsEqual(Container(3202).ListItem.DBType,tvshow) | String.IsEqual(Container(3202).ListItem.DBType,artist)] + !String.IsEmpty(Container(3202).ListItem.Art(clearlogo))</expression>

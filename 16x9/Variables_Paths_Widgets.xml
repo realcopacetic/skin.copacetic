@@ -1,51 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-	<variable name="Widget1_Custom_Path">
-		<value>$INFO[Skin.String(Widget1_Custom_Path)]</value>
-	</variable>
-	<variable name="Widget2_Custom_Path">
-		<value>$INFO[Skin.String(Widget2_Custom_Path)]</value>
-	</variable>
-	<variable name="Widget3_Custom_Path">
-		<value>$INFO[Skin.String(Widget3_Custom_Path)]</value>
-	</variable>
-	<variable name="Widget4_Custom_Path">
-		<value>$INFO[Skin.String(Widget4_Custom_Path)]</value>
-	</variable>
-	<variable name="Widget5_Custom_Path">
-		<value>$INFO[Skin.String(Widget5_Custom_Path)]</value>
-	</variable>
-	<variable name="Widget6_Custom_Path">
-		<value>$INFO[Skin.String(Widget6_Custom_Path)]</value>
-	</variable>
-	<variable name="Widget7_Custom_Path">
-		<value>$INFO[Skin.String(Widget7_Custom_Path)]</value>
-	</variable>
-	<variable name="Widget8_Custom_Path">
-		<value>$INFO[Skin.String(Widget8_Custom_Path)]</value>
-	</variable>
-	<variable name="Widget9_Custom_Path">
-		<value>$INFO[Skin.String(Widget9_Custom_Path)]</value>
-	</variable>
-
-
-	<!-- Home -->
-	<variable name="Path_LikedSongs_Value">
-		<!-- user rating must be greater than value -->
-		<value condition="Skin.String(like_threshold,10)">9</value>
-		<value condition="Skin.String(like_threshold,9)">8</value>
-		<value condition="Skin.String(like_threshold,8)">7</value>
-		<value condition="Skin.String(like_threshold,7)">6</value>
-		<value condition="Skin.String(like_threshold,6)">5</value>
-		<value condition="Skin.String(like_threshold,5)">4</value>
-		<value condition="Skin.String(like_threshold,4)">3</value>
-		<value condition="Skin.String(like_threshold,3)">2</value>
-		<value condition="Skin.String(like_threshold,2)">1</value>
-		<value condition="Skin.String(like_threshold,1)">0</value>
-		<value>7</value>
-	</variable>
-
 	<!-- Info -->
 	<variable name="ContainerPath_0">
 		<value condition="!String.IsEmpty(Container.FolderPath)">$INFO[Container.FolderPath]</value>
