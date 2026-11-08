@@ -33,7 +33,8 @@
       },
       "quit": {
         "label": "$LOCALIZE[13012]",
-        "action": "Quit()"
+        "action": "Quit()",
+        "visible": "System.ShowExitButton"
       }
     }
   }
