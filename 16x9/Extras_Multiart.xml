@@ -94,7 +94,7 @@
   <expression name="multiart_item_current">String.IsEqual(Container(9300).ListItem.Property(current),Window(home).Property(artwork_cursor_primary))</expression>
   <!-- ...and that serve seeded register 3400 -->
   <expression name="multiart_current_3400">$EXP[multiart_item_current] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))</expression>
-  <expression name="multiart_shown">Control.IsVisible(5008)</expression>
+  <expression name="multiart_shown">Control.IsVisible(5012)</expression>
   <!-- Asks 9300 to seed: the scrollbars page the list without a focus change, so seeding waits for focus to return -->
   <expression name="multiart_serve">Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Control.GetLabel(6400)) + !$EXP[Scrollbar_HasFocus]</expression>
 
@@ -112,8 +112,8 @@
   <!-- On when a serve seeds the focused item; held after the rail's serve replaces 9300, which echoes the same cursor with no multiart.
        Reads its own state (law: a control's visible may read its own Control.IsVisible); false at open, as the cursor is cleared on unload -->
   <include name="Multiart_Shown_Latch">
-    <control type="group" id="5008">
-      <visible>[$EXP[multiart_current_3400] | Control.IsVisible(5008)] + $EXP[multiart_item_current]</visible>
+    <control type="group" id="5012">
+      <visible>[$EXP[multiart_current_3400] | Control.IsVisible(5012)] + $EXP[multiart_item_current]</visible>
     </control>
   </include>
 
