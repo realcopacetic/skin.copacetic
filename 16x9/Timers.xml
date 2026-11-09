@@ -50,6 +50,13 @@
     <onstop>Dialog.Close(1190)</onstop>
   </timer>
   <timer>
+    <name>playnext_resumed</name>
+    <description>a hold resumed with the remote's Play key leaves the card open, so its stamp goes after a second of playback: a later user pause then closes the card as any other. The second covers the hold's own pause, which reaches Player.Playing only when the player thread has taken it</description>
+    <start reset="true">Player.Playing + !String.IsEmpty(Window(1190).Property(playnext_hold))</start>
+    <stop>!Player.Playing | Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(playnext_resumed),1)</stop>
+    <onstop condition="Player.Playing">ClearProperty(playnext_hold,1190)</onstop>
+  </timer>
+  <timer>
     <name>music_playback</name>
     <description>timer that starts whenever music is playing</description>
     <start reset="true">Player.HasAudio + Player.Playing</start>

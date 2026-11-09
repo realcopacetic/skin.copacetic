@@ -13,7 +13,7 @@
 			<animation effect="fadediffuse" end="ff555555" time="0" condition="true">Conditional</animation>
 			<texture fallback="views/dark_grey_100.png">$VAR[script-upnext_Artwork]</texture>
 		</control>
-		<!-- The countdown: the bar shrinks to the left with the time left of the lead (includes_playnext.xml); gone once the hold has paused -->
+		<!-- The countdown: the bar shrinks to the left with the time left of the lead (includes_playnext.xml); gone while the hold's stamp is set -->
 		<control type="group">
 			<visible>String.IsEmpty(Window(1190).Property(playnext_hold))</visible>
 			<bottom>0</bottom>
