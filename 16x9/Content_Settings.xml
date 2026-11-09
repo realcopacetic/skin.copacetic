@@ -318,6 +318,12 @@
 			<label>- $LOCALIZE[31705]</label>
 			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,name=searchsettings,mapping=search)</onclick>
 		</control>
+		<control type="button" id="1105">
+			<description>Search input: remote or keyboard, and the keypad's keys</description>
+			<visible>ControlGroup(9).HasFocus(11) + !Skin.HasSetting(GlobalSearch_Disabled)</visible>
+			<label>- $LOCALIZE[35150]</label>
+			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,focus_item=search,host_focus=205,mapping=copacetic1,name=pathsettings)</onclick>
+		</control>
 		<control type="label" id="1104">
 			<description>General</description>
 			<visible>ControlGroup(9).HasFocus(11)</visible>

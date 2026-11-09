@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- pathsettings: the helper's editor for the copacetic1 mapping: the background slideshows' custom paths (skin settings
-		1602 and 1611) and play next (1409) -->
+		1602 and 1611), play next (1409) and search's input (1105) -->
 	<defaultcontrol always="true">100</defaultcontrol>
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
 	<controls>

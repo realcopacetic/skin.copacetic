@@ -79,5 +79,13 @@
 				<ontextchange condition="!String.IsEqual(Container({index}).CurrentItem,1)">Control.Move({index},1)</ontextchange>
 			</include>
 		</template>
+		<!-- Arriving back on the keypad, for the same reason -->
+		<template>
+			<index start="3201" />
+			<include name="search_keypad_cursor_resets">
+				<onfocus condition="!String.IsEqual(Container({index}).CurrentItem,1)">Control.Move({index},$INFO[Container({index}).CurrentItem,-])</onfocus>
+				<onfocus condition="!String.IsEqual(Container({index}).CurrentItem,1)">Control.Move({index},1)</onfocus>
+			</include>
+		</template>
 	</includes>
 </xml>

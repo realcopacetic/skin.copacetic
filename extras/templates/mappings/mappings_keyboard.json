@@ -1,0 +1,30 @@
+{
+  "keyboard": {
+    "mode": "dynamic",
+    "items": [ "slot1", "slot2", "slot3", "slot4", "slot5", "slot6", "slot7", "slot8", "slot9", "slot10", "slot11", "slot12", "slot13", "slot14", "slot15", "slot16", "slot17", "slot18", "slot19", "slot20", "slot21", "slot22", "slot23", "slot24", "slot25", "slot26", "slot27", "slot28", "slot29", "slot30", "slot31", "slot32", "slot33", "slot34", "slot35", "slot36", "slot37", "slot38", "slot39", "slot40", "slot41", "slot42", "slot43", "slot44", "slot45", "slot46", "slot47", "slot48", "custom" ],
+    "default_order": [ "slot1", "slot2", "slot3", "slot4", "slot5", "slot6", "slot7", "slot8", "slot9", "slot10", "slot11", "slot12", "slot13", "slot14", "slot15", "slot16", "slot17", "slot18", "slot19", "slot20", "slot21", "slot22", "slot23", "slot24", "slot25", "slot26", "slot27", "slot28", "slot29", "slot30", "slot31", "slot32", "slot33", "slot34", "slot35", "slot36" ],
+    "placeholders": {
+      "key": "keyboard_item"
+    },
+    "metadata": {
+      "slot1": { "value": "a" }, "slot2": { "value": "b" }, "slot3": { "value": "c" },
+      "slot4": { "value": "d" }, "slot5": { "value": "e" }, "slot6": { "value": "f" },
+      "slot7": { "value": "g" }, "slot8": { "value": "h" }, "slot9": { "value": "i" },
+      "slot10": { "value": "j" }, "slot11": { "value": "k" }, "slot12": { "value": "l" },
+      "slot13": { "value": "m" }, "slot14": { "value": "n" }, "slot15": { "value": "o" },
+      "slot16": { "value": "p" }, "slot17": { "value": "q" }, "slot18": { "value": "r" },
+      "slot19": { "value": "s" }, "slot20": { "value": "t" }, "slot21": { "value": "u" },
+      "slot22": { "value": "v" }, "slot23": { "value": "w" }, "slot24": { "value": "x" },
+      "slot25": { "value": "y" }, "slot26": { "value": "z" },
+      "slot27": { "value": "0" }, "slot28": { "value": "1" }, "slot29": { "value": "2" },
+      "slot30": { "value": "3" }, "slot31": { "value": "4" }, "slot32": { "value": "5" },
+      "slot33": { "value": "6" }, "slot34": { "value": "7" }, "slot35": { "value": "8" },
+      "slot36": { "value": "9" },
+      "slot37": { "value": "" }, "slot38": { "value": "" }, "slot39": { "value": "" },
+      "slot40": { "value": "" }, "slot41": { "value": "" }, "slot42": { "value": "" },
+      "slot43": { "value": "" }, "slot44": { "value": "" }, "slot45": { "value": "" },
+      "slot46": { "value": "" }, "slot47": { "value": "" }, "slot48": { "value": "" },
+      "custom": { "value": "" }
+    }
+  }
+}

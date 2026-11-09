@@ -1,0 +1,17 @@
+{
+  "mapping": "keyboard",
+  "controls": {
+    "slot_{index}": {
+      "control_type": "listitem",
+      "visible": "true",
+      "label": "{value}"
+    },
+    "slot_value": {
+      "field": "value",
+      "id": 202,
+      "control_type": "edit",
+      "label": "Value",
+      "plain_text": true
+    }
+  }
+}

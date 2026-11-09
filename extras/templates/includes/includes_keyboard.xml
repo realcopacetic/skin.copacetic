@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<mapping>keyboard</mapping>
+	<includes>
+		<!-- One static item per key: the query grows in XML ($INFO resolves when the click runs) and search_log records the key for search_backspace -->
+		<template>
+			<include name="kb_search_items">
+				<item>
+					<label>$NUMBER[{value}]</label>
+					<onclick>SetProperty(search_query,"$INFO[Window(home).Property(search_query)]{value}",home)</onclick>
+					<onclick>SetProperty(search_log,"$INFO[Window(home).Property(search_log)]{value}",home)</onclick>
+				</item>
+			</include>
+		</template>
+		<!-- The keypad's frame: the key grid plus 16 padding, sized by the key count. It parks off the left edge while a rail has focus -->
+		<template>
+			<include name="atr_kb_search_coords">
+				<left>60</left>
+				<centertop>50%</centertop>
+				<width>{max(3, ceil(sqrt(count+1))) * 48 + 32}</width>
+				<height>{ceil((count + 2) / max(3, ceil(sqrt(count+1)))) * 48 + 32}</height>
+				<animation effect="slide" end="-{max(3, ceil(sqrt(count+1))) * 48 + 152},0" time="Default_Transition_1x" tween="quadratic" easing="out" condition="!Control.HasFocus(215)">Conditional</animation>
+			</include>
+		</template>
+	</includes>
+</xml>

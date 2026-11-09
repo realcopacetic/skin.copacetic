@@ -150,7 +150,7 @@
 			<param name="info_label" value="$VAR[Copacetic_Divider_Bold] $PARAM[info]" />
 			<param name="info_label_visible" value="true" />
 			<param name="textcolor" value="$VAR[Breadcrumb_Label_Color]" />
-			<param name="title_label" value="'$INFO[Control.GetLabel(4200).index(1)]'" />
+			<param name="title_label" value="'$VAR[Search_Query_Label]'" />
 			<param name="title_label_id" value="6$PARAM[id]" />
 			<param name="visible" value="Control.HasFocus($PARAM[id]) + !$EXP[TransparentDialog_IsVisible]" />
 		</include>
@@ -160,7 +160,7 @@
 		</include>
 	</include>
 
-	<!-- Search's field, in the breadcrumb's place. Hidden while a rail has focus (allowhiddenfocus lets Up and Back reach it) -->
+	<!-- Search's field, in the breadcrumb's place: the keys' query in Remote mode, the edit 4200 in Keyboard mode. Hidden while a rail has focus -->
 	<include name="Search_Field">
 		<control type="group">
 			<left>60</left>
@@ -168,33 +168,111 @@
 			<top>60</top>
 			<height>60</height>
 			<control type="image">
-				<visible>Control.HasFocus(4200)</visible>
+				<visible>Control.HasFocus(4200) | Control.HasFocus(215)</visible>
 				<top>6</top>
 				<height>48</height>
 				<width>6</width>
 				<texture colordiffuse="$VAR[Accent_Color]">views/white_100.png</texture>
 			</control>
-			<control type="label">
-				<description>An edit draws its hint text only when it hasn't focus (GUIEditControl.cpp:522)</description>
-				<visible>Control.HasFocus(4200) + String.IsEmpty(Control.GetLabel(4200).index(1))</visible>
-				<left>18</left>
-				<height>60</height>
-				<label>$LOCALIZE[137]</label>
-				<font>Title_Breadcrumb_Label</font>
-				<textcolor>$VAR[Breadcrumb_Label_Color]</textcolor>
+			<include content="Search_Field_Query" condition="$EXP[search_landing]" />
+			<include content="Search_Field_Typed" condition="!$EXP[search_landing]" />
+		</control>
+	</include>
+
+	<include name="Search_Field_Query">
+		<control type="label">
+			<visible>Control.HasFocus(215)</visible>
+			<left>18</left>
+			<height>60</height>
+			<label fallback="$LOCALIZE[137]">$INFO[Window(home).Property(search_query)]</label>
+			<font>Title_Breadcrumb_Label</font>
+			<textcolor>$VAR[Breadcrumb_Label_Color]</textcolor>
+		</control>
+	</include>
+
+	<!-- allowhiddenfocus lets Up and Back from a rail reach the edit -->
+	<include name="Search_Field_Typed">
+		<control type="label">
+			<description>An edit draws its hint text only when it hasn't focus (GUIEditControl.cpp:522)</description>
+			<visible>Control.HasFocus(4200) + String.IsEmpty(Control.GetLabel(4200).index(1))</visible>
+			<left>18</left>
+			<height>60</height>
+			<label>$LOCALIZE[137]</label>
+			<font>Title_Breadcrumb_Label</font>
+			<textcolor>$VAR[Breadcrumb_Label_Color]</textcolor>
+		</control>
+		<control type="edit" id="4200">
+			<visible allowhiddenfocus="true">Control.HasFocus(4200)</visible>
+			<height>60</height>
+			<font>Title_Breadcrumb_Label</font>
+			<textoffsetx>18</textoffsetx>
+			<textcolor>$VAR[Breadcrumb_Label_Color]</textcolor>
+			<focusedcolor>$VAR[Breadcrumb_Label_Color]</focusedcolor>
+			<texturefocus />
+			<ondown>3200</ondown>
+			<onright>3200</onright>
+			<ontextchange>RunScript(script.copacetic.helper,action=set_search_query,id=4200,min_length=1)</ontextchange>
+			<include content="search_field_cursor_resets" />
+		</control>
+	</include>
+
+	<!-- Search's on-screen keys, in Strip's details column (Remote mode only). The space and delete keys follow the mapping's -->
+	<include name="Search_Keypad">
+		<control type="group">
+			<include content="atr_kb_search_coords" />
+			<control type="image">
+				<texture colordiffuse="$VAR[Panel_Mask]">views/white_100.png</texture>
 			</control>
-			<control type="edit" id="4200">
-				<visible allowhiddenfocus="true">Control.HasFocus(4200)</visible>
-				<height>60</height>
-				<font>Title_Breadcrumb_Label</font>
-				<textoffsetx>18</textoffsetx>
-				<textcolor>$VAR[Breadcrumb_Label_Color]</textcolor>
-				<focusedcolor>$VAR[Breadcrumb_Label_Color]</focusedcolor>
-				<texturefocus />
-				<ondown>3200</ondown>
+			<control type="panel" id="215">
+				<left>16</left>
+				<right>16</right>
+				<top>16</top>
+				<bottom>16</bottom>
+				<orientation>vertical</orientation>
 				<onright>3200</onright>
-				<ontextchange>RunScript(script.copacetic.helper,action=set_search_query,id=4200,min_length=1)</ontextchange>
-				<include content="search_field_cursor_resets" />
+				<include content="search_keypad_cursor_resets" />
+				<content>
+					<include content="kb_search_items" />
+					<item>
+						<label>—</label>
+						<onclick>SetProperty(search_query,"$INFO[Window(home).Property(search_query)] ",home)</onclick>
+						<onclick>SetProperty(search_log,"$INFO[Window(home).Property(search_log)] ",home)</onclick>
+					</item>
+					<item>
+						<label>←</label>
+						<onclick>SetProperty(search_log,"$INFO[Window(home).Property(search_log)]←",home)</onclick>
+						<onclick>RunScript(script.copacetic.helper,action=search_backspace)</onclick>
+					</item>
+				</content>
+				<itemlayout width="48" height="48">
+					<control type="label">
+						<width>48</width>
+						<height>48</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Keyboard_Button_5</font>
+						<textcolor>$VAR[Unfocused_Color]</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout width="48" height="48">
+					<control type="image">
+						<left>9</left>
+						<right>9</right>
+						<bottom>0</bottom>
+						<height>4</height>
+						<texture colordiffuse="$VAR[Accent_Color]">views/white_100.png</texture>
+					</control>
+					<control type="label">
+						<width>48</width>
+						<height>48</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Keyboard_Button_5</font>
+						<textcolor>$VAR[Light_Color]</textcolor>
+					</control>
+				</focusedlayout>
 			</control>
 		</control>
 	</include>

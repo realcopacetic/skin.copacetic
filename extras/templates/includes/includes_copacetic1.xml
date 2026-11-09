@@ -11,5 +11,20 @@
 				<onload condition="Player.Playing + System.IdleTime({playnext_idle})">PlayerControl(Play)</onload>
 			</include>
 		</template>
+		<!-- Search's input, the keypad 215 or the field 4200: where the window lands, and where Up, Down and Back from the rails go -->
+		<template>
+			<filter>equals({settings_category}, search)</filter>
+			<include name="atr_search_defaultcontrol">
+				<defaultcontrol always="true">{search_optimise_focus}</defaultcontrol>
+			</include>
+		</template>
+		<template>
+			<filter>equals({settings_category}, search)</filter>
+			<include name="atr_search_rails_input">
+				<onup>{search_optimise_focus}</onup>
+				<ondown>{search_optimise_focus}</ondown>
+				<onback>{search_optimise_focus}</onback>
+			</include>
+		</template>
 	</includes>
 </xml>

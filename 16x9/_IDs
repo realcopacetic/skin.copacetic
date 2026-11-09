@@ -111,6 +111,7 @@ PATH EDITOR (pathsettings.xml, ids set by the helper's dynamic_settings_window)
 6             Description textbox (hidden)
 100           Its one entry
 201-202       Slideshow 1 and 2 custom paths (controls_copacetic1.json)
+205-207       Search: Optimise for, keypad layout, keypad's keys (controls_copacetic1.json)
 415           Close
 9001          Controls grouplist
 

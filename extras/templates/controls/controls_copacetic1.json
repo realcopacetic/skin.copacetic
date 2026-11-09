@@ -42,6 +42,33 @@
       "control_type": "cycle",
       "visible": "equals({settings_category}, player)",
       "label": "Still there?"
+    },
+    "search_optimise": {
+      "field": "search_optimise",
+      "id": 205,
+      "control_type": "cycle",
+      "visible": "equals({settings_category}, search)",
+      "label": "Optimise for"
+    },
+    "keyboard_layout": {
+      "id": 206,
+      "control_type": "button",
+      "visible": "equals({settings_category}, search) + equals({search_optimise}, remote)",
+      "label": "Onscreen keyboard layout",
+      "onclick": {
+        "type": "runtime_script",
+        "action": "seed_keyboard_layout"
+      }
+    },
+    "keyboardsettings": {
+      "id": 207,
+      "control_type": "button",
+      "visible": "equals({settings_category}, search) + equals({search_optimise}, remote)",
+      "label": "Onscreen keyboard",
+      "onclick": {
+        "type": "custom",
+        "action": "RunScript(script.copacetic.helper,action=dynamic_settings_window,name=keyboardsettings,mapping=keyboard)"
+      }
     }
   }
 }

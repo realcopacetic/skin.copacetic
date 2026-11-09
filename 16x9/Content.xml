@@ -133,6 +133,16 @@
 			<description>Still there?</description>
 			<label>Still there?</label>
 		</control>
+		<!-- Search row: the helper hides and fills these (controls_copacetic1.json) -->
+		<control type="button" id="205">
+			<description>Search input: remote or keyboard</description>
+		</control>
+		<control type="button" id="206">
+			<description>Keypad layout</description>
+		</control>
+		<control type="button" id="207">
+			<description>Keypad's keys</description>
+		</control>
 	</include>
 
 	<include name="playerprocessinfo_PVR_List_Content">
@@ -451,6 +461,13 @@
 		</control>
 		<control type="radiobutton" id="225">
 			<description>Search reviews and labels</description>
+		</control>
+	</include>
+
+	<!-- The helper sets the label and shows the value as label2 (controls_keyboard.json) -->
+	<include name="keyboard_editor_Right_List_Content">
+		<control type="edit" id="202">
+			<description>The key's character</description>
 		</control>
 	</include>
 

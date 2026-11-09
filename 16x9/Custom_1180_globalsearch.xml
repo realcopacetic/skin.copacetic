@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="window" id="1180">
 	<!-- Search: a window, so Back returns to whatever opened it -->
-	<defaultcontrol always="true">4200</defaultcontrol>
+	<include content="atr_search_defaultcontrol" />
 	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
-	<!-- A skin reload empties the field but keeps the Home property -->
-	<onload condition="String.IsEmpty(Control.GetLabel(4200).index(1)) + !String.IsEmpty(Window(home).Property(search_query))">ClearProperty(search_query,home)</onload>
+	<!-- Keyboard mode: a skin reload empties the field but keeps the Home property, and it writes no key log -->
+	<onload condition="!$EXP[search_landing] + String.IsEmpty(Control.GetLabel(4200).index(1)) + !String.IsEmpty(Window(home).Property(search_query))">ClearProperty(search_query,home)</onload>
+	<onload condition="!$EXP[search_landing]">ClearProperty(search_log,home)</onload>
+	<!-- Remote mode: a query the keys didn't type (keyboard mode's, encoded) has no log to replay -->
+	<onload condition="$EXP[search_landing] + String.IsEmpty(Window(home).Property(search_log)) + !String.IsEmpty(Window(home).Property(search_query))">ClearProperty(search_query,home)</onload>
 	<include content="search_cursor_resets" />
 	<controls>
 		<include content="Light_Theme_Background" />
@@ -20,9 +23,7 @@
 				<itemgap>0</itemgap>
 				<usecontrolcoords>true</usecontrolcoords>
 				<scrolltime>0</scrolltime>
-				<onup>4200</onup>
-				<ondown>4200</ondown>
-				<onback>4200</onback>
+				<include content="atr_search_rails_input" />
 				<defaultcontrol always="true">3201</defaultcontrol>
 				<include content="search_rows" />
 			</control>
@@ -36,6 +37,7 @@
 				<animation effect="slide" end="0,-15" time="0" condition="$EXP[StripView_Display_IsSquare] | $EXP[StripView_Display_IsFanart]">Conditional</animation>
 			</include>
 			<include content="Search_Field" />
+			<include content="Search_Keypad" condition="$EXP[search_landing]" />
 		</control>
 	</controls>
 </window>

@@ -871,6 +871,12 @@
 		<value>Light</value>
 	</variable>
 
+	<!-- The query for a search rail's breadcrumb. Keyboard mode's property is URL-encoded, so that mode reads the edit -->
+	<variable name="Search_Query_Label">
+		<value condition="$EXP[search_landing]">$INFO[Window(home).Property(search_query)]</value>
+		<value>$INFO[Control.GetLabel(4200).index(1)]</value>
+	</variable>
+
 	<variable name="Title_Label">
 		<value condition="VideoPlayer.IsFullscreen + Window.Is(videoosd) + VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Season) + Integer.IsGreater(VideoPlayer.Episode,9)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x]$INFO[VideoPlayer.Title,. ]</value>
 		<value condition="VideoPlayer.IsFullscreen + Window.Is(videoosd) + VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Season) + Integer.IsGreater(VideoPlayer.Episode,0)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x0]$INFO[VideoPlayer.Title,. ]</value>

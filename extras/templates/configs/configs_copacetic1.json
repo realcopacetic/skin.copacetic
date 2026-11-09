@@ -35,6 +35,28 @@
         { "condition": "equals({still_watching}, 3hours)", "value": [ "10800" ] },
         { "condition": "true", "value": [ "999999999" ] }
       ]
+    },
+    "search_optimise": {
+      "items": { "remote": "Remote", "keyboard": "$LOCALIZE[35150]" },
+      "defaults": { "*": "remote" }
+    },
+    "search_optimise_remote": {
+      "dependent_fields": [ "search_optimise" ],
+      "items": [ "true", "false" ],
+      "filter_mode": "include",
+      "rules": [
+        { "condition": "equals({search_optimise}, remote)", "value": [ "true" ] },
+        { "condition": "equals({search_optimise}, keyboard)", "value": [ "false" ] }
+      ]
+    },
+    "search_optimise_focus": {
+      "dependent_fields": [ "search_optimise" ],
+      "items": [ "215", "4200" ],
+      "filter_mode": "include",
+      "rules": [
+        { "condition": "equals({search_optimise}, remote)", "value": [ "215" ] },
+        { "condition": "equals({search_optimise}, keyboard)", "value": [ "4200" ] }
+      ]
     }
   }
 }
