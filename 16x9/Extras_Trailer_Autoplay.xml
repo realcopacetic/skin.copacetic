@@ -45,7 +45,7 @@
   <include name="Trailer_Autoplay_Mask">
     <definition>
       <control type="image">
-        <visible>!Skin.String(Theme,Light) + !Player.HasVideo + String.IsEqual(Window(home).Property(trailer_state),pending)</visible>
+        <visible>!Skin.String(Theme,Light) + !Player.HasVideo + String.IsEqual(Window(home).Property(trailer_state),pending) + [String.IsEqual(Window(home).Property(trailer_item),ListItem.Label) | Control.HasFocus(3100)]</visible>
         <animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_4x" tween="sine" easing="inout" reversible="false">Hidden</animation>
         <texture colordiffuse="$VAR[Dark_Color]">views/white_100.png</texture>
       </control>

@@ -128,6 +128,7 @@
 					</include>
 					<include content="btn_trailer" condition="Skin.HasSetting(Trailer_Autoplay) + Window.Is(videos)">
 						<param name="enabled" value="$EXP[trailer_visible_videos]" />
+						<param name="focus_ids" value="$PARAM[id]" />
 						<param name="id" value="$PARAM[id]" />
 					</include>
 				</focusedlayout>
@@ -265,6 +266,7 @@
 			<include content="HiddenFocusButton" />
 			<include content="btn_trailer" condition="Skin.HasSetting(Trailer_Autoplay) + Window.Is(videos)">
 				<param name="enabled" value="$EXP[trailer_visible_videos]" />
+				<param name="focus_ids" value="50" />
 				<param name="id" value="50" />
 			</include>
 			<include content="Common_List_Layout">
