@@ -66,6 +66,7 @@ ANIMATION DELAYS
 5006          Container Switching delay (to hide multiart following container transition)
 5007          infoline_fade animation break window
 5008          Secondary list taking focus (held 1x after focus arrives)
+5009          Info screen open at least 2x (Infoscreen_Header_Template)
 5010          Player has media (held 1x after media starts)
 5012          Multiart shown latch
 5200          A Home row was reached just now (Timers.xml reads it; generated widgets_container_switching)

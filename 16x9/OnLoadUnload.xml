@@ -56,6 +56,7 @@
 		<onload condition="Skin.HasSetting(Trailer_Autoplay) + String.IsEqual(Window(home).Property(Trailer_Autoplay),true)">ClearProperty(Trailer_Autoplay,home)</onload>
 		<onload condition="!String.IsEmpty(ListItem.DBID)">SetProperty(SelectedItem,$INFO[ListItem.DBID],movieinformation)</onload>
 		<onload>SetProperty(ResetScroll," ")</onload>
+		<onload>SetProperty(Focused_Button,1,movieinformation)</onload> <!-- Until the first button's onfocus (queued, so it runs after this) writes its name -->
 		<include content="Infoscreen_PathTracing" />
 		<include content="Widget_Position_Reset_OnLoad" />
 		<onunload>ClearProperty(Focused_Button,movieinformation)</onunload>
@@ -66,6 +67,7 @@
 		<onload condition="String.IsEqual(ListItem.DBType,album)">SetProperty(Info_Type,album,musicinformation)</onload>
 		<onload>SetProperty(SelectedItem,$INFO[ListItem.DBID],musicinformation)</onload>
 		<onload>SetProperty(ResetScroll," ")</onload>
+		<onload>SetProperty(Focused_Button,1,musicinformation)</onload>
 		<include content="Widget_Position_Reset_OnLoad" />
 		<onunload>ClearProperty(Focused_Button,musicinformation)</onunload>
 	</include>

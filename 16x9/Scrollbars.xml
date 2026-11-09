@@ -653,7 +653,7 @@
 		<include content="Widget_Scrollbar_Template">
 			<param name="visible" value="!Window.IsVisible(shutdownmenu) + Control.IsVisible(50)" />
 			<param name="pos0_enabled" value="true" />
-			<param name="pos0_visible" value="[ControlGroup(3000).HasFocus + !Window.IsVisible(1104)] | $EXP[Music_Player_HasFocus]" />
+			<param name="pos0_visible" value="[ControlGroup(3000).HasFocus + Control.IsVisible(5009)] | $EXP[Music_Player_HasFocus]" />
 			<param name="pos0_active" value="ControlGroup(3000).HasFocus" />
 			<param name="pos1_enabled" value="true" />
 			<param name="pos1_visible" value="Control.IsVisible(50)" />
@@ -666,7 +666,8 @@
 			<param name="visible" value="!Window.IsVisible(shutdownmenu) + !Control.HasFocus(60)" />
 			<param name="pos0_enabled" value="true" />
 			<param name="pos0_visible" value="Control.IsVisible(3000)" />
-			<param name="pos0_active" value="[ControlGroup(3000).HasFocus + !Window.IsVisible(1104)] | Control.HasFocus(60) | Control.HasFocus(3100) | Control.HasFocus(4021) | Control.HasFocus(4022) | $EXP[Music_Player_HasFocus]" />
+			<!-- Focused_Button, not 5009: this is a Conditional animation's condition, so it must read false at window init or the nibs start faded out -->
+			<param name="pos0_active" value="[ControlGroup(3000).HasFocus + !String.IsEmpty(Window(musicinformation).Property(Focused_Button))] | Control.HasFocus(60) | Control.HasFocus(3100) | Control.HasFocus(4021) | Control.HasFocus(4022) | $EXP[Music_Player_HasFocus]" />
 			<param name="pos1_enabled" value="!String.IsEqual(ListItem.DBType,album)" />
 			<param name="pos1_visible" value="Control.IsVisible(3201)" />
 			<param name="pos1_active" value="Control.HasFocus(3201)" />
@@ -687,7 +688,8 @@
 			<param name="visible" value="!Window.IsVisible(shutdownmenu) + !Control.HasFocus(60) + !Control.HasFocus(4020) + !String.IsEqual(ListItem.DBType,video)" />
 			<param name="pos0_enabled" value="true" />
 			<param name="pos0_visible" value="Control.IsVisible(3000)" />
-			<param name="pos0_active" value="[ControlGroup(3000).HasFocus + !Window.IsVisible(1104)] | Control.HasFocus(60) | Control.HasFocus(4021) | Control.HasFocus(4022) | $EXP[Music_Player_HasFocus]" />
+			<!-- Focused_Button, not 5009: as DialogMusicInfo_Scrollbar -->
+			<param name="pos0_active" value="[ControlGroup(3000).HasFocus + !String.IsEmpty(Window(movieinformation).Property(Focused_Button))] | Control.HasFocus(60) | Control.HasFocus(4021) | Control.HasFocus(4022) | $EXP[Music_Player_HasFocus]" />
 			<param name="pos1_enabled" value="true" />
 			<param name="pos1_visible" value="Control.IsVisible(3201)" />
 			<param name="pos1_active" value="Control.HasFocus(3201)" />
