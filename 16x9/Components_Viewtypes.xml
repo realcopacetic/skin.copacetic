@@ -35,9 +35,9 @@
 	</include>
 
 	<include name="Clearlogo_Crop_List">
-		<!-- The focused item's cropped clearlogo (Clearlogo_Crop_Path); readers match the logo its serve echoes (Clearlogo_Served_*) -->
+		<!-- The focused item's art serve (Artwork_Serve): its cropped clearlogo and its multiart; readers match the logo its serve echoes (Clearlogo_Served_*) -->
 		<include content="Hidden_List">
-			<param name="content" value="$VAR[Clearlogo_Crop_Path]" />
+			<param name="content" value="$VAR[Artwork_Serve]" />
 			<param name="id" value="9300" />
 			<param name="visible" value="true" />
 		</include>
@@ -77,6 +77,7 @@
 	</include>
 	
 	<include name="HiddenFocusButton">
+		<param name="id" default="50" />
 		<param name="widget" default="false" />
 		<definition>
 			<control type="button">
@@ -85,19 +86,9 @@
 				<onfocus condition="Control.Hasfocus(505)">SetProperty(GridView_Column,$INFO[Container.Column],home)</onfocus>
 				<onfocus condition="Control.Hasfocus(505)">SetProperty(GridView_Row,$INFO[Container.Row],home)</onfocus>
 				<!-- Multiart -->
-				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Window(home).Property(Multiart_Fadeout),true) + !Control.HasFocus(3100)">ClearProperty(Multiart_Fadeout,home)</onfocus>
-				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Window(home).Property(Multiart_Fadeout),delayed) + !Control.HasFocus(3100)">SetProperty(Multiart_Fadeout,true,home)</onfocus>
-				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),thumb) + !String.IsEmpty(ListItem.Art(thumb))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(thumb)],home)</onfocus>
-				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),keyart) + !String.IsEmpty(ListItem.Art(keyart))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(keyart)],home)</onfocus>
-				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),poster) + !String.IsEmpty(ListItem.Art(poster))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(poster)],home)</onfocus>
-				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),fanart) + !String.IsEmpty(ListItem.Art(fanart))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(fanart)],home)</onfocus>
-				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),landscape) + !String.IsEmpty(ListItem.Art(landscape))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(landscape)],home)</onfocus>
-				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),square) + !String.IsEmpty(ListItem.Art(square))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(square)],home)</onfocus>
-				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),tvshow.keyart) + !String.IsEmpty(ListItem.Art(tvshow.keyart))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(tvshow.keyart)],home)</onfocus>
-				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),tvshow.poster) + !String.IsEmpty(ListItem.Art(tvshow.poster))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(tvshow.poster)],home)</onfocus>
-				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),tvshow.fanart) + !String.IsEmpty(ListItem.Art(tvshow.fanart))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(tvshow.fanart)],home)</onfocus>
-				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),tvshow.landscape) + !String.IsEmpty(ListItem.Art(tvshow.landscape))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(tvshow.landscape)],home)</onfocus>
-				<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + String.IsEqual(Control.GetLabel(6400),tvshow.square) + !String.IsEmpty(ListItem.Art(tvshow.square))">SetProperty(Multiart_0,$ESCINFO[Container.ListItem.Art(tvshow.square)],home)</onfocus>
+				<include content="Multiart_Cursor" condition="Skin.HasSetting(Multiart_Slideshow) + [Window.Is(home) | Window.Is(videos) | Window.Is(music)]">
+					<param name="id" value="$PARAM[id]" />
+				</include>
 				<!-- Trailer Autoplay -->
 				<onunfocus condition="Skin.TimerIsRunning(trailer_autoplay)">Skin.TimerStop(trailer_autoplay)</onunfocus>
 				<onunfocus condition="Skin.TimerIsRunning(trailer_autoplay_home)">Skin.TimerStop(trailer_autoplay_home)</onunfocus>
@@ -110,37 +101,6 @@
 				<onfocus condition="Window.Is(addonbrowser) + !$EXP[Container_Addons_NonRepo]">ClearProperty(Container_Addons_NonRepo,home)</onfocus>
 			</control>
 		</definition>
-	</include>
-
-	<include name="Multiart_Resetter">
-		<control type="button">
-			<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Focus</animation>
-			<visible allowhiddenfocus="true">false</visible>
-			<onfocus condition="!Window.IsVisible(1120)">ClearProperty(Multiart_1,home)</onfocus>
-			<onfocus condition="!Window.IsVisible(1120)">ClearProperty(Multiart_2,home)</onfocus>
-			<onfocus condition="!Window.IsVisible(1120)">ClearProperty(Multiart_3,home)</onfocus>
-			<onfocus condition="!Window.IsVisible(1120)">ClearProperty(Multiart_4,home)</onfocus>
-			<onfocus condition="!Window.IsVisible(1120)">ClearProperty(Multiart_5,home)</onfocus>
-			<onfocus condition="!Window.IsVisible(1120)">ClearProperty(Multiart_6,home)</onfocus>
-			<onfocus condition="!Window.IsVisible(1120)">ClearProperty(Multiart_7,home)</onfocus>
-			<onfocus condition="!Window.IsVisible(1120)">ClearProperty(Multiart_8,home)</onfocus>
-			<onfocus condition="!Window.IsVisible(1120)">ClearProperty(Multiart_9,home)</onfocus>
-			<onfocus condition="!Window.IsVisible(1120)">ClearProperty(Multiart_10,home)</onfocus>
-			<onfocus condition="!Window.IsVisible(1120)">ClearProperty(Multiart_11,home)</onfocus>
-			<onfocus condition="!Window.IsVisible(1120)">ClearProperty(Multiart_12,home)</onfocus>
-			<onfocus condition="!Window.IsVisible(1120)">ClearProperty(Multiart_13,home)</onfocus>
-			<onfocus condition="!Window.IsVisible(1120)">ClearProperty(Multiart_14,home)</onfocus>
-			<onfocus condition="!Window.IsVisible(1120)">ClearProperty(Multiart_15,home)</onfocus>
-		</control>
-	</include>
-
-	<include name="Multiart_Setter">
-		<control type="button">
-			<animation effect="slide" end="0,0" time="Default_Transition_1.5x" reversible="false">Focus</animation>
-			<visible allowhiddenfocus="true">false</visible>
-			<onfocus condition="Skin.HasSetting(Multiart_Slideshow) + !Window.IsVisible(1120) + !String.IsEqual(Control.GetLabel(6400),flags/blank.png)">SetProperty(Multiart_Fadeout,true,home)</onfocus>
-			<include content="Set_Multiart_OnFocus_Conditions" condition="Skin.HasSetting(Multiart_Slideshow) + [Window.Is(home) | Window.Is(videos) | Window.Is(music)]" />
-		</control>
 	</include>
 
 	<include name="Custom_List">
@@ -163,9 +123,9 @@
 				<nested />
 				<include content="Default_Scrolltime" />
 				<focusedlayout width="480">
-					<include content="HiddenFocusButton" />
-					<include content="Multiart_Resetter" condition="Skin.HasSetting(Multiart_Slideshow)" />
-					<include content="Multiart_Setter" condition="Skin.HasSetting(Multiart_Slideshow)" />
+					<include content="HiddenFocusButton">
+						<param name="id" value="$PARAM[id]" />
+					</include>
 				</focusedlayout>
 				<itemlayout width="480" />
 			</control>
@@ -299,8 +259,6 @@
 		<param name="selectedcolor" default="$VAR[Light_Color]" />
 		<definition>
 			<include content="HiddenFocusButton" />
-			<include content="Multiart_Resetter" condition="Skin.HasSetting(Multiart_Slideshow)" />
-			<include content="Multiart_Setter" condition="Skin.HasSetting(Multiart_Slideshow)" />
 			<include content="Common_List_Layout">
 				<param name="icon_slide" value="$PARAM[icon_slide]" />
 				<param name="list_icon" value="$PARAM[list_icon]" />

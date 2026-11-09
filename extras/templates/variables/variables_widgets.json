@@ -24,7 +24,7 @@
       "values": [
         {
           "filter": "equals({range}, 0) + equals({layout}, Billboard)",
-          "condition": "Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Window(home).Property(Multiart_Fadeout))",
+          "condition": "Skin.HasSetting(Multiart_Slideshow) + $EXP[multiart_shown]",
           "value": "$INFO[Control.GetLabel(3400)]"
         },
         {
@@ -140,17 +140,55 @@
         }
       ]
     },
-    "Clearlogo_Crop_Home_Serve": {
-      "note": "9300's URL on Home (the first rows are the Videos/Music views'): one row per entry with clearlogos on, in the layouts with a logo slot.",
+    "Artwork_Serve": {
+      "note": "9300's URL: the focused item's clearlogo crop and multiart. The art URL goes last, before only the palette: a | in it ends the plugin's params. The last row's icon_url is only there so artwork() runs and seeds an item with no logo.",
       "index": {
         "start": 3201
       },
       "filter": "In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom])",
       "values": [
         {
-          "filter": "equals({art_clearlogo}, true) + In({layout}, [Billboard, Showcase, Strip])",
-          "condition": "$EXP[Widget_HasLogo_{window}_{index}] + {focused} + $EXP[Clearlogo_Crop_Primary]",
-          "value": "plugin://script.copacetic.helper/?info=artwork&clean_label=Container({index}).ListItem.Art(clearlogo)&clearlogo_crop=true&clearlogo_fit=$VAR[Clearlogo_Fit_Home]&clearlogo_fit_ids=63{index}&clearlogo_fit_key=$INFO[Container({index}).ListItem.DBType]:$INFO[Container({index}).ListItem.DBID]&focus_guard=$INFO[Container({index}).CurrentItem]&focus_ids={index}&prop_key=9300&target={index}&clearlogo_url=$INFO[Container({index}).ListItem.Art(clearlogo)]"
+          "condition": "System.HasVisibleModalDialog | Control.IsVisible(5001) | Control.IsVisible(5002) | Control.IsVisible(5003) | Control.IsVisible(5004) | Container.OnNext | Container.OnPrevious | Container(3100).OnNext | Container(3100).OnPrevious",
+          "value": ""
+        },
+        {
+          "condition": "$EXP[Clearlogo_Crop_Secondary] + String.IsEqual(Container.ViewMode,Billboard)",
+          "value": "plugin://script.copacetic.helper/?info=artwork&clean_label=Container(3100).ListItem.Art(clearlogo)&clearlogo_crop=true&clearlogo_fit=640,240&clearlogo_fit_ids=63501&clearlogo_fit_key=$INFO[Container(3100).ListItem.DBType]:$INFO[Container(3100).ListItem.DBID]&cursor_key=primary&focus_guard=$INFO[Container(3100).CurrentItem]&focus_ids=3100&prop_key=9300&target=3100&clearlogo_url=$INFO[Container(3100).ListItem.Art(clearlogo)]"
+        },
+        {
+          "condition": "$EXP[Clearlogo_Crop_Secondary] + String.IsEqual(Container.ViewMode,Showcase)",
+          "value": "plugin://script.copacetic.helper/?info=artwork&clean_label=Container(3100).ListItem.Art(clearlogo)&clearlogo_crop=true&clearlogo_fit=660,240&clearlogo_fit_ids=63502&clearlogo_fit_key=$INFO[Container(3100).ListItem.DBType]:$INFO[Container(3100).ListItem.DBID]&cursor_key=primary&focus_guard=$INFO[Container(3100).CurrentItem]&focus_ids=3100&prop_key=9300&target=3100&clearlogo_url=$INFO[Container(3100).ListItem.Art(clearlogo)]$VAR[Clearlogo_Palette_Secondary]"
+        },
+        {
+          "condition": "$EXP[Clearlogo_Crop_Secondary] + String.IsEqual(Container.ViewMode,Strip)",
+          "value": "plugin://script.copacetic.helper/?info=artwork&clean_label=Container(3100).ListItem.Art(clearlogo)&clearlogo_crop=true&clearlogo_fit=600,240&clearlogo_fit_ids=63504&clearlogo_fit_key=$INFO[Container(3100).ListItem.DBType]:$INFO[Container(3100).ListItem.DBID]&cursor_key=primary&focus_guard=$INFO[Container(3100).CurrentItem]&focus_ids=3100&prop_key=9300&target=3100&clearlogo_url=$INFO[Container(3100).ListItem.Art(clearlogo)]$VAR[Clearlogo_Palette_Secondary]"
+        },
+        {
+          "condition": "$EXP[Clearlogo_Crop_Primary] + String.IsEqual(Container.ViewMode,Billboard)",
+          "value": "plugin://script.copacetic.helper/?info=artwork&clean_label=Container.ListItem.Art(clearlogo)&clearlogo_crop=true&clearlogo_fit=640,240&clearlogo_fit_ids=63501&clearlogo_fit_key=$INFO[Container.ListItem.DBType]:$INFO[Container.ListItem.DBID]&focus_guard=$INFO[Container.CurrentItem]&pass=$INFO[Window(home).Property(Clearlogo_Crop_Pass)]&prop_key=9300$VAR[Params_Multiart]&clearlogo_url=$INFO[Container.ListItem.Art(clearlogo)]"
+        },
+        {
+          "condition": "$EXP[Clearlogo_Crop_Primary] + String.IsEqual(Container.ViewMode,Showcase)",
+          "value": "plugin://script.copacetic.helper/?info=artwork&clean_label=Container.ListItem.Art(clearlogo)&clearlogo_crop=true&clearlogo_fit=660,240&clearlogo_fit_ids=63502&clearlogo_fit_key=$INFO[Container.ListItem.DBType]:$INFO[Container.ListItem.DBID]&focus_guard=$INFO[Container.CurrentItem]&pass=$INFO[Window(home).Property(Clearlogo_Crop_Pass)]&prop_key=9300$VAR[Params_Multiart]&clearlogo_url=$INFO[Container.ListItem.Art(clearlogo)]$VAR[Clearlogo_Palette_Primary]"
+        },
+        {
+          "condition": "$EXP[Clearlogo_Crop_Primary] + String.IsEqual(Container.ViewMode,Strip)",
+          "value": "plugin://script.copacetic.helper/?info=artwork&clean_label=Container.ListItem.Art(clearlogo)&clearlogo_crop=true&clearlogo_fit=600,240&clearlogo_fit_ids=63504&clearlogo_fit_key=$INFO[Container.ListItem.DBType]:$INFO[Container.ListItem.DBID]&focus_guard=$INFO[Container.CurrentItem]&pass=$INFO[Window(home).Property(Clearlogo_Crop_Pass)]&prop_key=9300$VAR[Params_Multiart]&clearlogo_url=$INFO[Container.ListItem.Art(clearlogo)]$VAR[Clearlogo_Palette_Primary]"
+        },
+        [
+          {
+            "filter": "equals({art_clearlogo}, true) + In({layout}, [Billboard, Showcase, Strip])",
+            "condition": "$EXP[Widget_HasLogo_{window}_{index}] + {focused} + $EXP[Clearlogo_Crop_Primary]",
+            "value": "plugin://script.copacetic.helper/?info=artwork&clean_label=Container({index}).ListItem.Art(clearlogo)&clearlogo_crop=true&clearlogo_fit=$VAR[Clearlogo_Fit_Home]&clearlogo_fit_ids=63{index}&clearlogo_fit_key=$INFO[Container({index}).ListItem.DBType]:$INFO[Container({index}).ListItem.DBID]&focus_guard=$INFO[Container({index}).CurrentItem]&focus_ids={index}&prop_key=9300&target={index}$VAR[Params_Multiart]&clearlogo_url=$INFO[Container({index}).ListItem.Art(clearlogo)]"
+          },
+          {
+            "condition": "Control.HasFocus({index}) + {focused} + $EXP[multiart_serve]",
+            "value": "plugin://script.copacetic.helper/?info=artwork&focus_guard=$INFO[Container({index}).CurrentItem]&focus_ids={index}&prop_key=9300&target={index}$VAR[Params_Multiart]&icon_url=$INFO[Container({index}).ListItem.Icon]"
+          }
+        ],
+        {
+          "condition": "[Window.Is(videos) | Window.Is(music)] + !Control.HasFocus(3100) + $EXP[multiart_serve]",
+          "value": "plugin://script.copacetic.helper/?info=artwork&focus_guard=$INFO[Container.CurrentItem]&prop_key=9300$VAR[Params_Multiart]&icon_url=$INFO[Container.ListItem.Icon]"
         }
       ]
     },

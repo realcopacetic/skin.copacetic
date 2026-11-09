@@ -2,6 +2,7 @@
 <window>
 	<!-- home -->
 	<include content="Startup_Migrate_Settings" /> <!-- a skin update in place reloads the current window, not Startup -->
+	<include content="Multiart_Reset_OnLoad" />
 	<onunload condition="String.IsEqual(Window(home).Property(Trailer_Autoplay),true) + Player.HasVideo">PlayerControl(Stop)</onunload>
 	<onunload condition="String.IsEqual(Window(home).Property(Trailer_Autoplay),true)">ClearProperty(Trailer_Autoplay,home)</onunload>
 	<onunload>ClearProperty(autoplay_id,home)</onunload>

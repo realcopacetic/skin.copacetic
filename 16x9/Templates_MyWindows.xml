@@ -23,7 +23,7 @@
 		<!-- Set focus to scrollbars -->
 		<control type="button" id="4013">
 			<visible allowhiddenfocus="true">false</visible>
-			<onfocus condition="!String.IsEmpty(Window(home).Property(Multiart_Fadeout))">ClearProperty(Multiart_Fadeout,home)</onfocus>
+			<onfocus>ClearProperty(artwork_cursor_primary,home)</onfocus>
 			<onfocus>SetFocus(60)</onfocus>
 		</control>
 		<!-- Hidden Controls for animation trigger on menu switching and resetting multiart if enabled-->
@@ -32,7 +32,6 @@
 			<onfocus>SetProperty(Options_Switching,Active,Home)</onfocus>
 			<onfocus>SetFocus(50)</onfocus>
 			<onfocus>SetFocus(3000)</onfocus>
-			<include content="Set_Multiart_OnFocus_Conditions" condition="Skin.HasSetting(Multiart_Slideshow) + [Window.Is(videos) | Window.Is(music)]" />
 		</control>
 		<control type="group" id="5005">
 			<visible>Control.HasFocus(4014)</visible>

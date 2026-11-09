@@ -96,7 +96,7 @@
 				<param name="animationcondition" value="$PARAM[animationcondition]" />
 				<!-- Multiart -->
 				<include content="Icon_Component_Multiart_Animated" condition="Skin.HasSetting(Multiart_Slideshow) + !Window.Is(movieinformation) + !Window.Is(musicinformation) + !Window.Is(songinformation) + !Window.Is(addoninformation) + !Window.Is(loginscreen)">
-					<param name="visible" value="$PARAM[multiart] + String.IsEqual(Window(home).Property(Multiart_Fadeout),true)" />
+					<param name="visible" value="$PARAM[multiart] + $EXP[multiart_shown]" />
 					<param name="art_diffuse" value="false" />
 					<param name="animationtype" value="$PARAM[multiartanimationtype]" />
 					<param name="animationeffect" value="$PARAM[multiartanimationeffect]" />
