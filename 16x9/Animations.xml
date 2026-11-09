@@ -58,7 +58,6 @@
 		<include content="fade_animation">
 			<param name="type" value="WindowOpen" />
 			<param name="time" value="1x" />
-			<param name="condition" value="!Window.IsVisible(1106)" />
 			<param name="reversible" value="true" />
 		</include>
 		<include content="fade_animation">
