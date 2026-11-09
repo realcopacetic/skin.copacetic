@@ -128,8 +128,7 @@
 
 	<include name="ClickAction_Open_TVShow">
 		<onclick>Dialog.Close(all)</onclick>
-		<onclick condition="Window.IsVisible(videos)">Container.Update(videodb://tvshows/titles/$INFO[ListItem.DBID]/)</onclick>
-		<onclick condition="!Window.IsVisible(videos)">ActivateWindow(videos,videodb://tvshows/titles/$INFO[ListItem.DBID]/,return)</onclick>
+		<onclick>ActivateWindow(videos,videodb://tvshows/titles/$INFO[ListItem.DBID]/,return)</onclick>
 	</include>
 
 	<include name="ClickAction_Open_Set">
