@@ -73,7 +73,7 @@
 		<onload>SetProperty(Infoscreen_Open,1,home)</onload>
 		<include content="Widget_Position_Reset_OnLoad" />
 		<onunload>ClearProperty(Focused_Button,musicinformation)</onunload>
-		<onunload condition="![Window.IsVisible(musicinformation) + Window.IsVisible(songinformation)]">ClearProperty(Infoscreen_Open,home)</onunload>
+		<onunload>ClearProperty(Infoscreen_Open,home)</onunload>
 	</include>
 
 	<include name="skinsettings_OnLoadUnload">

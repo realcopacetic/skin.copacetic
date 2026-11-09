@@ -93,7 +93,7 @@
   <!-- 9300 holds the focused item: a serve echoes the cursor, so moving on breaks the match at once -->
   <expression name="multiart_item_current">String.IsEqual(Container(9300).ListItem.Property(current),Window(home).Property(artwork_cursor_primary)) + !String.IsEmpty(Window(home).Property(artwork_cursor_primary))</expression>
   <!-- ...and that serve seeded register 3400 -->
-  <expression name="multiart_current_3400">$EXP[multiart_item_current] + !String.IsEmpty(Container(9300).ListItem.Art(multiart)) + !Container(9300).IsUpdating</expression>
+  <expression name="multiart_current_3400">$EXP[multiart_item_current] + !String.IsEmpty(Container(9300).ListItem.Art(multiart)) + ![Container(9300).IsUpdating + String.IsEmpty(Window(home).Property(multiart_seed_sig_3400))]</expression>
   <expression name="multiart_shown">Control.IsVisible(5012)</expression>
   <!-- Asks 9300 to seed: the scrollbars page the list without a focus change, so seeding waits for focus to return -->
   <expression name="multiart_serve">Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Control.GetLabel(6400)) + !$EXP[Scrollbar_HasFocus]</expression>
@@ -106,7 +106,7 @@
     <param name="id" />
     <definition>
       <!-- A move starts the next item from its main image; a return from the rail or a modal has no move, so its rotation carries on -->
-      <onfocus condition="Container($PARAM[id]).OnNext | Container($PARAM[id]).OnPrevious">ClearProperty(multiart_seed_sig_3400,home)</onfocus>
+      <onfocus condition="!Control.HasFocus(3100) + [Container($PARAM[id]).OnNext | Container($PARAM[id]).OnPrevious | !String.StartsWith(Window(home).Property(artwork_cursor_primary),$PARAM[id]/)]">ClearProperty(multiart_seed_sig_3400,home)</onfocus>
       <onfocus condition="!Control.HasFocus(3100)">SetProperty(artwork_cursor_primary,$PARAM[id]/$INFO[Container($PARAM[id]).CurrentItem]/$INFO[Container($PARAM[id]).ListItem.DBID]/,home)</onfocus>
     </definition>
   </include>

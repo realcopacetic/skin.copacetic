@@ -12,7 +12,7 @@
 		<definition>
 			<!-- Not visible for the first 2x, so the content below waits; an info screen opened over or in place of another (a song over its album, a set's movie) arrives at once -->
 			<control type="group" id="5009">
-				<animation effect="fade" start="100" end="100" time="0" delay="Default_Transition_2x" condition="String.IsEmpty(Window(home).Property(Infoscreen_Open))">WindowOpen</animation>
+				<animation effect="fade" start="100" end="100" time="0" delay="Default_Transition_2x" condition="String.IsEmpty(Window(home).Property(Infoscreen_Open)) + ![Window.Is(songinformation) + Window.IsActive(musicinformation)]">WindowOpen</animation>
 			</control>
 			<include content="Infoscreen_Menu" />
 			<include content="User_Scroll_Delay" />
