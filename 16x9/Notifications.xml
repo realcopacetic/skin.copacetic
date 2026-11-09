@@ -307,7 +307,7 @@
 		</include>
 		<include content="Music_Player_Buttons" />
 		<control type="group">
-			<visible>$PARAM[content_visible] + !Window.IsVisible(1107) + !$EXP[Music_Player_HasFocus]</visible>
+			<visible>$PARAM[content_visible] + !Control.IsVisible(5010) + !$EXP[Music_Player_HasFocus]</visible>
 			<include content="Visible_Fade_Delayed_Animation" />
 			<include content="Now_Playing_Icon">
 				<param name="color" value="$VAR[Volume_Focused_Color]" />
@@ -446,7 +446,7 @@
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="content_visible" value="$PARAM[content_visible]" />
 				<param name="background_visible" value="$PARAM[background_visible]" />
-				<param name="label_visible" value="$PARAM[content_visible] + !Window.IsVisible(1107)" />
+				<param name="label_visible" value="$PARAM[content_visible] + !Control.IsVisible(5010)" />
 				<param name="width" value="$PARAM[width]" />
 				<param name="top" value="$PARAM[top]" />
 				<param name="height" value="$PARAM[height]" />
