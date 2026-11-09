@@ -57,7 +57,7 @@
 			<onfocus>SetFocus(6001)</onfocus>
 		</control>
 		<include content="Embedded_VideoPlayer">
-			<param name="visible" value="String.IsEqual(Window(home).Property(Trailer_Autoplay),true)" />
+			<param name="visible" value="$EXP[trailer_playing]" />
 		</include>
 		<include content="Music_Player_Controls" condition="Skin.HasSetting(Music_Player_Enabled)" />
 		<include content="Trailer_Autoplay_Mask" condition="Skin.HasSetting(Trailer_Autoplay) + Window.Is(videos)" />

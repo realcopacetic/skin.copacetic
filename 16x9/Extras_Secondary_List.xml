@@ -92,6 +92,14 @@
 					<control type="group">
 						<visible>![Control.HasFocus(50) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(504)]</visible>
 						<include content="HiddenFocusButton" />
+						<include content="btn_trailer" condition="Skin.HasSetting(Trailer_Autoplay) + Window.Is(videos)">
+							<param name="enabled" value="$EXP[trailer_visible_videos]" />
+							<param name="focus_ids" value="3100" />
+							<param name="id" value="3100" />
+							<param name="item" value="Container(3100).ListItem.Label" />
+							<param name="source_prefix" value="3100" />
+							<param name="trailer" value="Container(3100).ListItem.Trailer" />
+						</include>
 						<include content="Secondary_List_Icon">
 							<param name="artwork" value="$PARAM[artwork]" />
 						</include>

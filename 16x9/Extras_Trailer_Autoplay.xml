@@ -1,13 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+  <!-- Trailer autoplay, C2's machinery (skin.copacetic2 16x9/trailer.xml) with C1's look. The helper's play_trailer starts a trailer -->
+  <!-- trailer_state: pending (then cancelled) -> playing -> interrupted/orphaned -> idle -->
+
+  <expression name="trailer_file_match">String.IsEqual(Player.Filenameandpath,Window(home).Property(trailer_file))</expression>
+  <expression name="trailer_playing">String.IsEqual(Window(home).Property(trailer_state),playing) + Player.HasVideo + $EXP[trailer_file_match]</expression>
+  <!-- paused and hidden, awaiting reap or replace -->
+  <expression name="trailer_zombie">Player.HasVideo + $EXP[trailer_file_match] + [String.IsEqual(Window(home).Property(trailer_state),interrupted) | String.IsEqual(Window(home).Property(trailer_state),orphaned)]</expression>
+  <expression name="trailer_resolving">[String.IsEqual(Window(home).Property(trailer_state),pending) | String.IsEqual(Window(home).Property(trailer_state),cancelled)] + !Player.HasMedia</expression><!-- a request whose plugin resolve may still run -->
+  <expression name="trailer_pending_zombie">String.IsEqual(Window(home).Property(trailer_state),pending) + Player.HasVideo + $EXP[trailer_file_match]</expression><!-- a request on its way to replace a paused trailer still in the player -->
+  <expression name="trailer_opening">String.IsEqual(Window(home).Property(trailer_state),pending) + String.IsEqual(Player.Filenameandpath,Window(home).Property(trailer_request)) + !$EXP[trailer_file_match]</expression><!-- the request's own file has started, before onAVStarted confirms it -->
+  <expression name="trailer_visible_videos">[Skin.String(Trailer_Autoplay_Movies_Enabled,true) + Container.Content(movies)] | [Skin.String(Trailer_Autoplay_TVShows_Enabled,true) + Container.Content(tvshows)]</expression><!-- Skin settings 1534, 1535; which content types start a trailer in Videos -->
+
+  <include name="atr_trailer_interrupt">
+    <!-- scrolling within a container: pause and hide, so the next item's trailer replaces it -->
+    <onfocus condition="[Container($PARAM[id]).OnPrevious | Container($PARAM[id]).OnNext] + $EXP[trailer_playing] + !Player.Paused">PlayerControl(Play)</onfocus>
+    <onfocus condition="[Container($PARAM[id]).OnPrevious | Container($PARAM[id]).OnNext] + $EXP[trailer_playing]">SetProperty(trailer_state,interrupted,home)</onfocus>
+    <onfocus condition="[Container($PARAM[id]).OnPrevious | Container($PARAM[id]).OnNext] + !String.IsEmpty(Window(home).Property(trailer_played_item)) + !String.IsEqual(Window(home).Property(trailer_played_item),ListItem.Label)">ClearProperty(trailer_played_item,home)</onfocus>
+    <onfocus condition="$EXP[trailer_resolving] + !String.IsEqual(Window(home).Property(trailer_item),Container($PARAM[id]).ListItem.Label)">Action(Back,busydialog)</onfocus><!-- any arrival on another item, a new listing included: drop the stale request's resolve -->
+  </include>
+
+  <include name="atr_trailer_region_interrupt">
+    <!-- leaving a Home row for another row or the menu: pause and hide, drop a stale resolve -->
+    <onunfocus condition="$EXP[trailer_playing] + !Player.Paused">PlayerControl(Play)</onunfocus>
+    <onunfocus condition="$EXP[trailer_playing]">SetProperty(trailer_state,interrupted,home)</onunfocus>
+    <onunfocus condition="!String.IsEmpty(Window(home).Property(trailer_played_item))">ClearProperty(trailer_played_item,home)</onunfocus>
+    <onunfocus condition="$EXP[trailer_resolving]">Action(Back,busydialog)</onunfocus>
+  </include>
+
+  <include name="atr_trailer_window_stop">
+    <onunload condition="Window.Next(fullscreenvideo) + $EXP[trailer_pending_zombie]">Action(Back,busydialog)</onunload><!-- Back on Home over a replacing request: drop its resolve, then stop the old trailer, so full screen closes at once -->
+    <onunload condition="$EXP[trailer_playing] | $EXP[trailer_zombie] | $EXP[trailer_opening] | [Window.Next(fullscreenvideo) + $EXP[trailer_pending_zombie]]">PlayerControl(Stop)</onunload>
+    <onunload condition="String.IsEqual(Window(home).Property(trailer_state),pending)">SetProperty(trailer_state,cancelled,home)</onunload><!-- still resolving: the helper stops it as soon as it starts -->
+    <onunload condition="!String.IsEmpty(Window(home).Property(trailer_played_item))">ClearProperty(trailer_played_item,home)</onunload><!-- the same item's trailer plays again on return -->
+  </include>
+
+  <include name="atr_trailer_back">
+    <!-- in the view and rail navigation: Back stops a playing trailer and stays on the list, as a cross-axis key does -->
+    <onback condition="$EXP[trailer_playing]">PlayerControl(Stop)</onback>
+    <onback condition="$EXP[trailer_playing]">4106</onback><!-- bare id so Back is consumed: group 4106 hands focus straight back to the view (or rail) -->
+  </include>
+
   <include name="Trailer_Autoplay_Mask">
-    <param name="timer" default="trailer_autoplay" />
     <definition>
       <control type="image">
-        <visible>!Skin.String(Theme,Light) + !Player.HasVideo + Skin.TimerIsRunning($PARAM[timer]) + Integer.IsLess(Skin.TimerElapsedSecs($PARAM[timer]),2)</visible>
+        <visible>!Skin.String(Theme,Light) + !Player.HasVideo + String.IsEqual(Window(home).Property(trailer_state),pending)</visible>
         <animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_4x" tween="sine" easing="inout" reversible="false">Hidden</animation>
         <texture colordiffuse="$VAR[Dark_Color]">views/white_100.png</texture>
+      </control>
+    </definition>
+  </include>
+
+  <!-- The Focus animation's time is the wait before a trailer; a literal, so one copy per interval. Unfocus resets only the first Focus animation, so a window holds exactly one of them -->
+  <include name="Trailer_Interval_Animation">
+    <param name="time" />
+    <definition>
+      <animation effect="slide" end="0,0" time="$PARAM[time]" reversible="false">Focus</animation>
+    </definition>
+  </include>
+
+  <include name="Trailer_Interval_Animations">
+    <include content="Trailer_Interval_Animation" condition="Skin.String(Trailer_Autoplay_Interval,2)"><param name="time" value="2000" /></include>
+    <include content="Trailer_Interval_Animation" condition="Skin.String(Trailer_Autoplay_Interval,3) | !Skin.String(Trailer_Autoplay_Interval)"><param name="time" value="3000" /></include>
+    <include content="Trailer_Interval_Animation" condition="Skin.String(Trailer_Autoplay_Interval,4)"><param name="time" value="4000" /></include>
+    <include content="Trailer_Interval_Animation" condition="Skin.String(Trailer_Autoplay_Interval,5)"><param name="time" value="5000" /></include>
+    <include content="Trailer_Interval_Animation" condition="Skin.String(Trailer_Autoplay_Interval,6)"><param name="time" value="6000" /></include>
+    <include content="Trailer_Interval_Animation" condition="Skin.String(Trailer_Autoplay_Interval,7)"><param name="time" value="7000" /></include>
+    <include content="Trailer_Interval_Animation" condition="Skin.String(Trailer_Autoplay_Interval,8)"><param name="time" value="8000" /></include>
+    <include content="Trailer_Interval_Animation" condition="Skin.String(Trailer_Autoplay_Interval,9)"><param name="time" value="9000" /></include>
+    <include content="Trailer_Interval_Animation" condition="Skin.String(Trailer_Autoplay_Interval,10)"><param name="time" value="10000" /></include>
+  </include>
+
+  <!-- In a view's or row's focused layout. The first button has no animation, so atr_trailer_interrupt runs at the focus -->
+  <include name="btn_trailer">
+    <param name="enabled" default="true" />
+    <param name="focus_ids" default="" /><!-- controls that must keep focus while the trailer plays; empty = no focus check -->
+    <param name="id" />
+    <param name="item" default="ListItem.Label" /><!-- the item's label; inside a container that isn't the item's, name it -->
+    <param name="source_prefix" default="ListItem" />
+    <param name="trailer" default="ListItem.Trailer" />
+    <definition>
+      <control type="button">
+        <visible allowhiddenfocus="true">false</visible>
+        <include content="atr_trailer_interrupt">
+          <param name="id" value="$PARAM[id]" />
+        </include>
+      </control>
+      <control type="button"><!-- not while cancelled: a window left mid-resolve keeps its resolve until the reap (5 s), and a request now would run inside it -->
+        <visible allowhiddenfocus="true">false</visible>
+        <onfocus condition="[$PARAM[enabled]] + [!Player.HasMedia | $EXP[trailer_zombie]] + !String.IsEqual(Window(home).Property(trailer_state),cancelled) + !System.HasVisibleModalDialog + !String.IsEmpty($PARAM[trailer]) + [!String.StartsWith($PARAM[trailer],plugin://plugin.video.youtube/) | System.AddonIsEnabled(plugin.video.youtube)] + !String.IsEqual(Window(home).Property(trailer_played_item),$PARAM[item])">RunScript(script.copacetic.helper,action=play_trailer,"trailer=$INFO[$PARAM[trailer]]","item=$INFO[$PARAM[item]]","focus_ids=$PARAM[focus_ids]",source_prefix=$PARAM[source_prefix])</onfocus>
+        <onfocus condition="[$PARAM[enabled]] + [!Player.HasMedia | $EXP[trailer_zombie]] + !String.IsEqual(Window(home).Property(trailer_state),cancelled) + !System.HasVisibleModalDialog + !String.IsEmpty($PARAM[trailer]) + [!String.StartsWith($PARAM[trailer],plugin://plugin.video.youtube/) | System.AddonIsEnabled(plugin.video.youtube)] + !String.IsEqual(Window(home).Property(trailer_played_item),$PARAM[item])">SetProperty(trailer_played_item,"$INFO[$PARAM[item]]",home)</onfocus><!-- quote the whole k=v token: titles and paths carry commas -->
+        <include content="Trailer_Interval_Animations" />
       </control>
     </definition>
   </include>

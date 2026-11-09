@@ -7,16 +7,6 @@
     <stop>!Window.IsVisible(videos)</stop>
   </timer>
   <timer>
-    <name>home_visible</name>
-    <start reset="true">Window.IsVisible(home)</start>
-    <stop>!Window.IsVisible(home)</stop>
-  </timer>
-  <timer>
-    <name>videos_visible</name>
-    <start reset="true">Window.IsVisible(videos)</start>
-    <stop>!Window.IsVisible(videos)</stop>
-  </timer>
-  <timer>
     <name>osd_idle</name>
     <start reset="true">String.IsEqual(System.CurrentWindow,Fullscreen OSD) | String.IsEqual(System.CurrentWindow,Music OSD)</start>
     <reset>[VideoPlayer.IsFullscreen + !String.IsEqual(System.CurrentWindow,Fullscreen OSD)] | [Window.IsVisible(visualisation) + !String.IsEqual(System.CurrentWindow,Music OSD)] | [!System.IdleTime(1) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(osd_idle),1)]</reset>
@@ -67,31 +57,11 @@
     <description>timer that starts whenever music visualisation is showing</description>
   </timer>
   <timer>
-    <name>trailer_autoplay</name>
-    <start reset="true">Window.Is(videos) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(videos_visible),3) + Skin.HasSetting(Trailer_Autoplay) + [[Skin.String(Trailer_Autoplay_Movies_Enabled,true) + Container.Content(movies)] | [Skin.String(Trailer_Autoplay_TVShows_Enabled,true) + Container.Content(tvshows)]] + Window.IsVisible(1160) + !Player.HasMedia</start>
-    <reset>Player.HasVideo | Window.IsVisible(movieinformation) | Window.IsVisible(shutdownmenu) | Window.IsVisible(busydialog)</reset>
-    <stop>!String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(home).Property(Trailer_Autoplay)) + !Player.HasVideo</stop>
-    <onstart condition="[Control.HasFocus(50) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(504)] + !String.IsEmpty(ListItem.Trailer)">SetProperty(Trailer_Autoplay,true,home)</onstart>
-    <onstart condition="[Control.HasFocus(50) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(504)] + !String.IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.Trailer],1,noresume)</onstart>
-    <onstart condition="Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.Trailer)">SetProperty(Trailer_Autoplay,true,home)</onstart>
-    <onstart condition="Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.Trailer)">PlayMedia($ESCINFO[Container(3100).ListItem.Trailer],1,noresume)</onstart>
-  </timer>
-  <timer>
-    <name>trailer_autoplay_home</name>
-    <start reset="true">Window.Is(home) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(home_visible),3) + Skin.HasSetting(Trailer_Autoplay) + !String.IsEmpty(window(home).property(Home_Widget)) + Window.IsVisible(1160) + !Player.HasMedia + !Control.IsVisible(5200)</start>
-    <reset>Player.HasVideo | Window.IsVisible(movieinformation) | Window.IsVisible(shutdownmenu) | Window.IsVisible(busydialog)</reset>
-    <stop>!String.IsEmpty(ListItem.Trailer) + String.IsEmpty(Window(home).Property(Trailer_Autoplay)) + !Player.HasVideo</stop>
-    <!-- autoplay_id: the focused row plays trailers (set by the row, Widget_List); Timers.xml takes no $EXP or includes -->
-    <onstart condition="!String.IsEmpty(Window(home).Property(autoplay_id)) + !String.IsEmpty(ListItem.Trailer)">SetProperty(Trailer_Autoplay,true,home)</onstart>
-    <onstart condition="!String.IsEmpty(Window(home).Property(autoplay_id)) + !String.IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.Trailer],1,noresume)</onstart>
-  </timer>
-  <timer>
     <name>widget_spotlight</name>
-    <description>autoscrolls the focused row (autoscroll_id): every 8 s, or with trailers 2 s into the running trailer timer; the switching latch (5200) keeps it from stepping just after a row change</description>
+    <description>autoscrolls the focused row (autoscroll_id): every 8 s, or 4 s once its trailer is requested (btn_trailer stamps trailer_played_item), as C2's widget_autoscroll; the switching latch (5200) keeps it from stepping just after a row change</description>
     <start reset="true">Window.Is(home) + !String.IsEmpty(Window(home).Property(autoscroll_id))</start>
     <reset>Player.HasVideo | Window.IsVisible(movieinformation) | Window.IsVisible(shutdownmenu) | Window.IsVisible(busydialog)</reset>
-    <stop>[[String.IsEmpty(Window(home).Property(autoplay_id)) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(widget_spotlight),8) + System.IdleTime(8)] | [!String.IsEmpty(Window(home).Property(autoplay_id)) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(widget_spotlight),2) + Skin.TimerIsRunning(trailer_autoplay_home) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(trailer_autoplay_home),2)]] + !Player.HasVideo + !Window.IsVisible(movieinformation) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(busydialog) + !Control.IsVisible(5200)</stop>
-    <onstop condition="!String.IsEmpty(Window(home).Property(autoplay_id)) + String.IsEqual(Window(home).Property(Trailer_Autoplay),true)">ClearProperty(Trailer_Autoplay,home)</onstop>
+    <stop>[[!String.IsEqual(Window(home).Property(trailer_played_item),ListItem.Label) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(widget_spotlight),8) + System.IdleTime(8)] | [String.IsEqual(Window(home).Property(trailer_played_item),ListItem.Label) + Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(widget_spotlight),4) + System.IdleTime(4) + !String.IsEqual(Window(home).Property(trailer_state),pending)]] + !Player.HasVideo + !Window.IsVisible(movieinformation) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(busydialog) + !Control.IsVisible(5200)</stop>
     <onstop condition="Window.Is(home) + !String.IsEmpty(Window(home).Property(autoscroll_id))">Control.Move($INFO[Window(home).Property(autoscroll_id)],1)</onstop>
   </timer>
 </timers>

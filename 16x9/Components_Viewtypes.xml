@@ -94,11 +94,6 @@
 				<include content="Multiart_Cursor" condition="Skin.HasSetting(Multiart_Slideshow) + [Window.Is(home) | Window.Is(videos) | Window.Is(music)]">
 					<param name="id" value="$PARAM[id]" />
 				</include>
-				<!-- Trailer Autoplay -->
-				<onunfocus condition="Skin.TimerIsRunning(trailer_autoplay)">Skin.TimerStop(trailer_autoplay)</onunfocus>
-				<onunfocus condition="Skin.TimerIsRunning(trailer_autoplay_home)">Skin.TimerStop(trailer_autoplay_home)</onunfocus>
-				<onunfocus condition="String.IsEqual(Window(home).Property(Trailer_Autoplay),true) + Player.HasVideo">PlayerControl(Stop)</onunfocus>
-				<onunfocus condition="String.IsEqual(Window(home).Property(Trailer_Autoplay),true)">ClearProperty(Trailer_Autoplay,home)</onunfocus>
 				<!-- infoline_changer timer -->
 				<onfocus condition="Skin.TimerIsRunning(infoline_changer)">Skin.TimerStop(infoline_changer)</onfocus>
 				<!-- Settings transition from addonbrowser -->
@@ -129,6 +124,10 @@
 				<include content="Default_Scrolltime" />
 				<focusedlayout width="480">
 					<include content="HiddenFocusButton">
+						<param name="id" value="$PARAM[id]" />
+					</include>
+					<include content="btn_trailer" condition="Skin.HasSetting(Trailer_Autoplay) + Window.Is(videos)">
+						<param name="enabled" value="$EXP[trailer_visible_videos]" />
 						<param name="id" value="$PARAM[id]" />
 					</include>
 				</focusedlayout>
@@ -264,6 +263,10 @@
 		<param name="selectedcolor" default="$VAR[Light_Color]" />
 		<definition>
 			<include content="HiddenFocusButton" />
+			<include content="btn_trailer" condition="Skin.HasSetting(Trailer_Autoplay) + Window.Is(videos)">
+				<param name="enabled" value="$EXP[trailer_visible_videos]" />
+				<param name="id" value="50" />
+			</include>
 			<include content="Common_List_Layout">
 				<param name="icon_slide" value="$PARAM[icon_slide]" />
 				<param name="list_icon" value="$PARAM[list_icon]" />

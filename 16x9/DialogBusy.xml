@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!-- busydialog -->
+	<!-- busydialog, busydialognocancel: closes itself while a trailer request is pending or cancelled, so input flows (each copy's condition names only itself, so it never opens the other) -->
+	<visible>[[Window.Is(busydialog) + Window.IsActive(busydialog)] | [Window.Is(busydialognocancel) + Window.IsActive(busydialognocancel)]] + !String.IsEqual(Window(home).Property(trailer_state),pending) + !String.IsEqual(Window(home).Property(trailer_state),cancelled)</visible>
 	<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
 	<controls>
 		<include content="Busy_Spinner">
-			<param name="visible" value="!Window.IsVisible(shutdownmenu) + !String.IsEqual(Window(home).Property(Trailer_Autoplay),true)" />
+			<param name="visible" value="!Window.IsVisible(shutdownmenu)" />
 		</include>
 	</controls>
 </window>

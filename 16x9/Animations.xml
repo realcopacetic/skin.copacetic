@@ -371,13 +371,13 @@
 	</include>
 
 	<include name="Trailer_Autoplay_Fade_Animation">
-		<animation effect="fade" start="100" end="0" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="$EXP[Trailer_Autoplay_IsVisible]">Conditional</animation>
-		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="Default_Transition_3x" tween="sine" easing="inout" reversible="false" condition="!$EXP[Trailer_Autoplay_IsVisible]">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="$EXP[trailer_playing]">Conditional</animation>
+		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="Default_Transition_3x" tween="sine" easing="inout" reversible="false" condition="!$EXP[trailer_playing]">Conditional</animation>
 	</include>
 
 	<include name="Trailer_Autoplay_Fade_Delayed_Animation">
-		<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="1050" tween="sine" easing="inout" reversible="false" condition="$EXP[Trailer_Autoplay_IsVisible]">Conditional</animation>
-		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="1050" tween="sine" easing="inout" reversible="false" condition="!$EXP[Trailer_Autoplay_IsVisible]">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="1050" tween="sine" easing="inout" reversible="false" condition="$EXP[trailer_playing]">Conditional</animation>
+		<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="1050" tween="sine" easing="inout" reversible="false" condition="!$EXP[trailer_playing]">Conditional</animation>
 	</include>
 
 	<include name="Video_Breadcrumb_Fade_Animation">

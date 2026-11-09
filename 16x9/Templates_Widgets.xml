@@ -18,9 +18,8 @@
 		<param name="use_custom_click" default="false" />
 		<param name="click_action" default="Blank" />
 		<param name="hidden_focus" default="false" /> <!-- true: an empty, hidden rail still reads its URL, for a path that waits on 9000; empty, it still can't take focus -->
-		<param name="row_autoplay" default="false" /> <!-- Home rows: autoplay_id and autoscroll_id for Timers.xml, and a playing trailer stops when the row loses focus -->
+		<param name="row_autoplay" default="false" /> <!-- Home rows: this row starts trailers (btn_trailer), paused and hidden when the row loses focus -->
 		<param name="row_autoscroll" default="false" />
-		<param name="row_stop_trailer" default="false" />
 		<definition>
 			<control type="fixedlist" id="$PARAM[id]">
 				<visible allowhiddenfocus="$PARAM[hidden_focus]">Integer.IsGreaterOrEqual(Container($PARAM[id]).NumItems,$PARAM[min_items]) | Container($PARAM[id]).IsUpdating | $PARAM[bypass_min_items]</visible>
@@ -29,11 +28,9 @@
 				<onfocus>ClearProperty(Focused_Button,movieinformation)</onfocus>
 				<onfocus>ClearProperty(Focused_Button,musicinformation)</onfocus>
 				<onfocus>ClearProperty(Focused_Button,addoninformation)</onfocus>
-				<onfocus condition="$PARAM[row_autoplay]">SetProperty(autoplay_id,$PARAM[id],home)</onfocus>
 				<onfocus condition="$PARAM[row_autoscroll]">SetProperty(autoscroll_id,$PARAM[id],home)</onfocus>
-				<onunfocus condition="$PARAM[row_autoplay]">ClearProperty(autoplay_id,home)</onunfocus>
 				<onunfocus condition="$PARAM[row_autoscroll]">ClearProperty(autoscroll_id,home)</onunfocus>
-				<onunfocus condition="$PARAM[row_stop_trailer] + $EXP[Trailer_Autoplay_IsVisible]">PlayerControl(Stop)</onunfocus>
+				<include content="atr_trailer_region_interrupt" condition="$PARAM[row_autoplay] + Skin.HasSetting(Trailer_Autoplay)" />
 				<viewtype label="widgetlist">list</viewtype>
 				<preloaditems>2</preloaditems>
 				<orientation>horizontal</orientation>
@@ -45,6 +42,11 @@
 				<focusedlayout>
 					<include content="HiddenFocusButton">
 						<param name="id" value="$PARAM[id]" />
+					</include>
+					<include content="btn_trailer" condition="$PARAM[row_autoplay] + Skin.HasSetting(Trailer_Autoplay)">
+						<param name="focus_ids" value="$PARAM[id]" />
+						<param name="id" value="$PARAM[id]" />
+						<param name="source_prefix" value="$PARAM[id]" />
 					</include>
 				</focusedlayout>
 				<itemlayout />

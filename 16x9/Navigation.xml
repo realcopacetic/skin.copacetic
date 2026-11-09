@@ -2,7 +2,7 @@
 
 	<include name="OnBack_Conditions">
 		<!-- return to previous infoscreen if that's where user came from -->
-		<onback condition="Window.Is(videos) + String.IsEqual(Window(movieinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
+		<onback condition="!$EXP[trailer_playing] + Window.Is(videos) + String.IsEqual(Window(movieinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
 		<onback condition="Window.Is(music) + String.IsEqual(Window(musicinformation).Property(SentFromInfo),true)">SetFocus(6001)</onback>
 	</include>
 
@@ -12,13 +12,14 @@
 			<onup condition="Integer.IsEqual(Container.NumItems,1) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onup>
 			<ondown condition="Integer.IsGreater(Container.NumItems,1)">50</ondown>
 			<ondown condition="Integer.IsEqual(Container.NumItems,1) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</ondown>
-			<onleft condition="$EXP[Trailer_Autoplay_IsVisible]">PlayerControl(Stop)</onleft>
-			<onleft condition="!$EXP[Trailer_Autoplay_IsVisible] + $EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)">SetFocus(3100,0)</onleft>
-			<onleft condition="!$EXP[Trailer_Autoplay_IsVisible] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onleft>
+			<onleft condition="$EXP[trailer_playing]">PlayerControl(Stop)</onleft>
+			<onleft condition="!$EXP[trailer_playing] + $EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)">SetFocus(3100,0)</onleft>
+			<onleft condition="!$EXP[trailer_playing] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onleft>
 			<onright condition="$EXP[Music_Player_IsVisible]">SetFocus(3500,1)</onright>
-			<onright condition="!$EXP[Music_Player_IsVisible] + $EXP[Trailer_Autoplay_IsVisible]">PlayerControl(Stop)</onright>
-			<onright condition="!$EXP[Music_Player_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible] + Integer.IsGreater(Container.NumItems,22)">SetFocus(4013)</onright>
-			<onright condition="!$EXP[Music_Player_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible] + Integer.IsLessOrEqual(Container.NumItems,22) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onright>
+			<onright condition="!$EXP[Music_Player_IsVisible] + $EXP[trailer_playing]">PlayerControl(Stop)</onright>
+			<onright condition="!$EXP[Music_Player_IsVisible] + !$EXP[trailer_playing] + Integer.IsGreater(Container.NumItems,22)">SetFocus(4013)</onright>
+			<onright condition="!$EXP[Music_Player_IsVisible] + !$EXP[trailer_playing] + Integer.IsLessOrEqual(Container.NumItems,22) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onright>
+			<include content="atr_trailer_back" />
 			<include content="OnBack_Conditions" />
 		</definition>
 	</include>
@@ -35,50 +36,52 @@
 
 	<include name="Secondary_List_Navigation">
 		<definition>
-			<onleft condition="$EXP[Trailer_Autoplay_IsVisible] + $EXP[ListView_IsVisible]">PlayerControl(Stop)</onleft>
-			<onleft condition="!$EXP[Trailer_Autoplay_IsVisible] + $EXP[ListView_IsVisible]">SetFocus(4104)</onleft>
-			<onright condition="$EXP[Trailer_Autoplay_IsVisible] + $EXP[ListView_IsVisible]">PlayerControl(Stop)</onright>
-			<onright condition="!$EXP[Trailer_Autoplay_IsVisible] + $EXP[ListView_IsVisible]">SetFocus(4100)</onright>
+			<onleft condition="$EXP[trailer_playing] + $EXP[ListView_IsVisible]">PlayerControl(Stop)</onleft>
+			<onleft condition="!$EXP[trailer_playing] + $EXP[ListView_IsVisible]">SetFocus(4104)</onleft>
+			<onright condition="$EXP[trailer_playing] + $EXP[ListView_IsVisible]">PlayerControl(Stop)</onright>
+			<onright condition="!$EXP[trailer_playing] + $EXP[ListView_IsVisible]">SetFocus(4100)</onright>
 			<onup condition="$EXP[ListView_IsVisible]">0</onup>
 			<ondown condition="$EXP[ListView_IsVisible]">0</ondown>
-			<onleft condition="$EXP[Trailer_Autoplay_IsVisible] + $EXP[BillboardView_IsVisible]">PlayerControl(Stop)</onleft>
-			<onleft condition="!$EXP[Trailer_Autoplay_IsVisible] + $EXP[BillboardView_IsVisible]">SetFocus(4100)</onleft>
-			<onright condition="$EXP[Trailer_Autoplay_IsVisible] + $EXP[BillboardView_IsVisible]">PlayerControl(Stop)</onright>
-			<onright condition="!$EXP[Trailer_Autoplay_IsVisible] + $EXP[BillboardView_IsVisible]">SetFocus(4100)</onright>
+			<onleft condition="$EXP[trailer_playing] + $EXP[BillboardView_IsVisible]">PlayerControl(Stop)</onleft>
+			<onleft condition="!$EXP[trailer_playing] + $EXP[BillboardView_IsVisible]">SetFocus(4100)</onleft>
+			<onright condition="$EXP[trailer_playing] + $EXP[BillboardView_IsVisible]">PlayerControl(Stop)</onright>
+			<onright condition="!$EXP[trailer_playing] + $EXP[BillboardView_IsVisible]">SetFocus(4100)</onright>
 			<onup condition="$EXP[BillboardView_IsVisible]">0</onup>
 			<ondown condition="$EXP[BillboardView_IsVisible]">SetFocus(4102)</ondown>
-			<onleft condition="$EXP[Trailer_Autoplay_IsVisible] + $EXP[ShowcaseView_IsVisible]">PlayerControl(Stop)</onleft>
-			<onleft condition="!$EXP[Trailer_Autoplay_IsVisible] + $EXP[ShowcaseView_IsVisible]">SetFocus(4100)</onleft>
-			<onright condition="$EXP[Trailer_Autoplay_IsVisible] + $EXP[ShowcaseView_IsVisible]">PlayerControl(Stop)</onright>
-			<onright condition="!$EXP[Trailer_Autoplay_IsVisible] + $EXP[ShowcaseView_IsVisible]">SetFocus(4100)</onright>
+			<onleft condition="$EXP[trailer_playing] + $EXP[ShowcaseView_IsVisible]">PlayerControl(Stop)</onleft>
+			<onleft condition="!$EXP[trailer_playing] + $EXP[ShowcaseView_IsVisible]">SetFocus(4100)</onleft>
+			<onright condition="$EXP[trailer_playing] + $EXP[ShowcaseView_IsVisible]">PlayerControl(Stop)</onright>
+			<onright condition="!$EXP[trailer_playing] + $EXP[ShowcaseView_IsVisible]">SetFocus(4100)</onright>
 			<onup condition="$EXP[ShowcaseView_IsVisible]">0</onup>
 			<ondown condition="$EXP[ShowcaseView_IsVisible]">SetFocus(4102)</ondown>
-			<onleft condition="$EXP[StripView_IsVisible] + $EXP[Trailer_Autoplay_IsVisible]">PlayerControl(Stop)</onleft>
-			<onleft condition="$EXP[StripView_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible]">SetFocus(4100)</onleft>
-			<onright condition="$EXP[StripView_IsVisible] + $EXP[Trailer_Autoplay_IsVisible]">PlayerControl(Stop)</onright>
-			<onright condition="$EXP[StripView_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible]">SetFocus(4100)</onright>
-			<onup condition="$EXP[StripView_IsVisible] + $EXP[Trailer_Autoplay_IsVisible]">PlayerControl(Stop)</onup>
-			<onup condition="$EXP[StripView_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible]">0</onup>
-			<ondown condition="$EXP[StripView_IsVisible] + $EXP[Trailer_Autoplay_IsVisible]">PlayerControl(Stop)</ondown>
-			<ondown condition="$EXP[StripView_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible]">SetFocus(4102)</ondown>
+			<onleft condition="$EXP[StripView_IsVisible] + $EXP[trailer_playing]">PlayerControl(Stop)</onleft>
+			<onleft condition="$EXP[StripView_IsVisible] + !$EXP[trailer_playing]">SetFocus(4100)</onleft>
+			<onright condition="$EXP[StripView_IsVisible] + $EXP[trailer_playing]">PlayerControl(Stop)</onright>
+			<onright condition="$EXP[StripView_IsVisible] + !$EXP[trailer_playing]">SetFocus(4100)</onright>
+			<onup condition="$EXP[StripView_IsVisible] + $EXP[trailer_playing]">PlayerControl(Stop)</onup>
+			<onup condition="$EXP[StripView_IsVisible] + !$EXP[trailer_playing]">0</onup>
+			<ondown condition="$EXP[StripView_IsVisible] + $EXP[trailer_playing]">PlayerControl(Stop)</ondown>
+			<ondown condition="$EXP[StripView_IsVisible] + !$EXP[trailer_playing]">SetFocus(4102)</ondown>
+			<include content="atr_trailer_back" />
 		</definition>
 	</include>
 
 	<include name="Billboard_Navigation">
 		<definition>
 			<onup condition="$EXP[Music_Player_IsVisible]">SetFocus(3500,1)</onup>
-			<onup condition="!$EXP[Music_Player_IsVisible] + $EXP[Trailer_Autoplay_IsVisible]">PlayerControl(Stop)</onup>
-			<onup condition="!$EXP[Music_Player_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible] + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onup>
-			<ondown condition="$EXP[Trailer_Autoplay_IsVisible]">PlayerControl(Stop)</ondown>
-			<ondown condition="!$EXP[Trailer_Autoplay_IsVisible] + $EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)">SetFocus(3100,0)</ondown>
-			<ondown condition="!$EXP[Trailer_Autoplay_IsVisible] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsGreater(Container.NumItems,3)">SetFocus(4013)</ondown>
-			<ondown condition="!$EXP[Trailer_Autoplay_IsVisible] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsLessOrEqual(Container.NumItems,3) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</ondown>
+			<onup condition="!$EXP[Music_Player_IsVisible] + $EXP[trailer_playing]">PlayerControl(Stop)</onup>
+			<onup condition="!$EXP[Music_Player_IsVisible] + !$EXP[trailer_playing] + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onup>
+			<ondown condition="$EXP[trailer_playing]">PlayerControl(Stop)</ondown>
+			<ondown condition="!$EXP[trailer_playing] + $EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)">SetFocus(3100,0)</ondown>
+			<ondown condition="!$EXP[trailer_playing] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsGreater(Container.NumItems,3)">SetFocus(4013)</ondown>
+			<ondown condition="!$EXP[trailer_playing] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsLessOrEqual(Container.NumItems,3) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</ondown>
 			<onleft condition="Integer.IsGreater(Container.NumItems,3)">501</onleft>
 			<onleft condition="Integer.IsLessOrEqual(Container.NumItems,3) + Integer.IsGreater(Container.NumItems,1)">0</onleft>
 			<onleft condition="Integer.IsEqual(Container.NumItems,1) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onleft>
 			<onright condition="Integer.IsGreater(Container.NumItems,3)">501</onright>
 			<onright condition="Integer.IsLessOrEqual(Container.NumItems,3) + Integer.IsGreater(Container.NumItems,1)">0</onright>
 			<onright condition="Integer.IsEqual(Container.NumItems,1) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onright>
+			<include content="atr_trailer_back" />
 			<include content="OnBack_Conditions" />
 		</definition>
 	</include>
@@ -86,18 +89,19 @@
 	<include name="Showcase_Navigation">
 		<definition>
 			<onup condition="$EXP[Music_Player_IsVisible]">SetFocus(3500,1)</onup>
-			<onup condition="!$EXP[Music_Player_IsVisible] + $EXP[Trailer_Autoplay_IsVisible]">PlayerControl(Stop)</onup>
-			<onup condition="!$EXP[Music_Player_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible] + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onup>
-			<ondown condition="$EXP[Trailer_Autoplay_IsVisible]">PlayerControl(Stop)</ondown>
-			<ondown condition="!$EXP[Trailer_Autoplay_IsVisible] + $EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)">SetFocus(3100,0)</ondown>
-			<ondown condition="!$EXP[Trailer_Autoplay_IsVisible] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsGreater(Container.NumItems,5)">SetFocus(4013)</ondown>
-			<ondown condition="!$EXP[Trailer_Autoplay_IsVisible] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsLessOrEqual(Container.NumItems,5) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</ondown>
+			<onup condition="!$EXP[Music_Player_IsVisible] + $EXP[trailer_playing]">PlayerControl(Stop)</onup>
+			<onup condition="!$EXP[Music_Player_IsVisible] + !$EXP[trailer_playing] + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onup>
+			<ondown condition="$EXP[trailer_playing]">PlayerControl(Stop)</ondown>
+			<ondown condition="!$EXP[trailer_playing] + $EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)">SetFocus(3100,0)</ondown>
+			<ondown condition="!$EXP[trailer_playing] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsGreater(Container.NumItems,5)">SetFocus(4013)</ondown>
+			<ondown condition="!$EXP[trailer_playing] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsLessOrEqual(Container.NumItems,5) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</ondown>
 			<onleft condition="Integer.IsGreater(Container.NumItems,10)">502</onleft>
 			<onleft condition="Integer.IsLessOrEqual(Container.NumItems,10) + Integer.IsGreater(Container.NumItems,1)">0</onleft>
 			<onleft condition="Integer.IsEqual(Container.NumItems,1) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onleft>
 			<onright condition="Integer.IsGreater(Container.NumItems,10)">502</onright>
 			<onright condition="Integer.IsLessOrEqual(Container.NumItems,10) + Integer.IsGreater(Container.NumItems,1)">0</onright>
 			<onright condition="Integer.IsEqual(Container.NumItems,1) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onright>
+			<include content="atr_trailer_back" />
 			<include content="OnBack_Conditions" />
 		</definition>
 	</include>
@@ -105,18 +109,19 @@
 	<include name="Strip_Navigation">
 		<definition>
 			<onup condition="$EXP[Music_Player_IsVisible]">SetFocus(3500,1)</onup>
-			<onup condition="!$EXP[Music_Player_IsVisible] + $EXP[Trailer_Autoplay_IsVisible]">PlayerControl(Stop)</onup>
-			<onup condition="!$EXP[Music_Player_IsVisible] + !$EXP[Trailer_Autoplay_IsVisible] + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onup>
-			<ondown condition="$EXP[Trailer_Autoplay_IsVisible]">PlayerControl(Stop)</ondown>
-			<ondown condition="!$EXP[Trailer_Autoplay_IsVisible] + $EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)">SetFocus(3100,0)</ondown>
-			<ondown condition="!$EXP[Trailer_Autoplay_IsVisible] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsGreater(Container.NumItems,9)">SetFocus(4013)</ondown>
-			<ondown condition="!$EXP[Trailer_Autoplay_IsVisible] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsLessOrEqual(Container.NumItems,9) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</ondown>
+			<onup condition="!$EXP[Music_Player_IsVisible] + $EXP[trailer_playing]">PlayerControl(Stop)</onup>
+			<onup condition="!$EXP[Music_Player_IsVisible] + !$EXP[trailer_playing] + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onup>
+			<ondown condition="$EXP[trailer_playing]">PlayerControl(Stop)</ondown>
+			<ondown condition="!$EXP[trailer_playing] + $EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)">SetFocus(3100,0)</ondown>
+			<ondown condition="!$EXP[trailer_playing] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsGreater(Container.NumItems,9)">SetFocus(4013)</ondown>
+			<ondown condition="!$EXP[trailer_playing] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsLessOrEqual(Container.NumItems,9) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</ondown>
 			<onleft condition="Integer.IsGreater(Container.NumItems,10)">504</onleft>
 			<onleft condition="Integer.IsLessOrEqual(Container.NumItems,10) + Integer.IsGreater(Container.NumItems,1)">0</onleft>
 			<onleft condition="Integer.IsEqual(Container.NumItems,1) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onleft>
 			<onright condition="Integer.IsGreater(Container.NumItems,10)">504</onright>
 			<onright condition="Integer.IsLessOrEqual(Container.NumItems,10) + Integer.IsGreater(Container.NumItems,1)">0</onright>
 			<onright condition="Integer.IsEqual(Container.NumItems,1) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onright>
+			<include content="atr_trailer_back" />
 			<include content="OnBack_Conditions" />
 		</definition>
 	</include>

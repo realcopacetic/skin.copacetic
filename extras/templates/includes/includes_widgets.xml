@@ -18,7 +18,6 @@
 					<param name="min_items" value="1" />
 					<param name="row_autoplay" value="{autoplay}" />
 					<param name="row_autoscroll" value="{autoscroll}" />
-					<param name="row_stop_trailer" value="true" />
 					<param name="sortby" value="{sortby}" />
 					<param name="sortorder" value="{sortorder}" />
 					<param name="target" value="{target}" />

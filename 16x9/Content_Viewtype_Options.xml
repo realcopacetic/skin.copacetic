@@ -266,10 +266,9 @@
 	</include>
 
 	<include name="View_Menu_Options">
-		<!-- View options: the view editor, on the kind of item shown. A trailer is stopped first: opened by Kodi's Menu key over List, the view stops processing before its unfocus can stop it -->
+		<!-- View options: the view editor, on the kind of item shown. A trailer is stopped first: the editor is a dialog with no floor, and the Menu key reaches this with no stop of its own -->
 		<item>
-			<onclick condition="$EXP[Trailer_Autoplay_IsVisible]">PlayerControl(Stop)</onclick>
-			<onclick condition="String.IsEqual(Window(home).Property(Trailer_Autoplay),true)">ClearProperty(Trailer_Autoplay,home)</onclick>
+			<onclick condition="$EXP[trailer_playing] | $EXP[trailer_zombie]">PlayerControl(Stop)</onclick>
 			<onclick>SetFocus(50)</onclick>
 			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,name=viewsettings,mapping=content_types,focus_item=$VAR[label_viewmenu_focus_item])</onclick>
 			<label>$LOCALIZE[14018]</label>
