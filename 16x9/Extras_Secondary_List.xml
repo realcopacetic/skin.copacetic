@@ -167,6 +167,11 @@
 			<param name="onprevious_id" value="5003" />
 			<param name="onprevious_trigger" value="Container(3100).OnPrevious" />
 		</include>
+		<!-- Holds for 1x after the list takes focus (Secondary_List_Taking_Focus), so the details wait for it to slide in; outside the group for the same reason -->
+		<control type="group" id="5008">
+			<visible>!Control.HasFocus(3100)</visible>
+			<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Hidden</animation>
+		</control>
 		<control type="group">
 			<visible>!$EXP[Options_Switching] + !$EXP[Container_Switching] + !$EXP[Music_Player_HasFocus]</visible>
 			<include content="Visible_Fade_Animation" />

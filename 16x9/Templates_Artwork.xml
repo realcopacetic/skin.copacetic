@@ -203,7 +203,7 @@
 
 	<include name="Icon_Component_Secondary_Mask">
 		<control type="group">
-			<visible>!$EXP[Infoscreen_Widget_HasFocus] + [[Control.HasFocus(3100) + Window.IsVisible(1109)] | $EXP[Secondary_List_Container_Switching]] + !$EXP[TransparentDialog_IsVisible]</visible>
+			<visible>!$EXP[Infoscreen_Widget_HasFocus] + [[Control.HasFocus(3100) + Control.IsVisible(5008)] | $EXP[Secondary_List_Container_Switching]] + !$EXP[TransparentDialog_IsVisible]</visible>
 			<animation effect="fade" start="100" end="0" time="Default_Transition_0.25x" delay="Default_Transition_2x" tween="sine" easing="inout" reversible="true">Hidden</animation>
 			<include content="Dialog_Over_Light_Background_Fadediffuse_Animation" />
 			<width>$PARAM[width]</width>

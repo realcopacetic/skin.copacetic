@@ -455,7 +455,7 @@
 	<include name="ShowcaseView_Overlay">
 		<control type="group">
 			<visible>!$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo) + !$EXP[Scrollbar_HasFocus]</visible>
-			<visible>![Control.HasFocus(3100) + Window.IsVisible(1109)] + !$EXP[Secondary_List_Container_Switching] + !$EXP[Secondary_List_Content_Switching]</visible>
+			<visible>![Control.HasFocus(3100) + Control.IsVisible(5008)] + !$EXP[Secondary_List_Container_Switching] + !$EXP[Secondary_List_Content_Switching]</visible>
 			<include content="Visible_Fade_Delayed_Animation" />
 			<width>$PARAM[width]</width>
 			<height>$PARAM[height]</height>
