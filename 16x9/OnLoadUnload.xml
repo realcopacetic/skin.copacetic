@@ -57,9 +57,11 @@
 		<onload condition="!String.IsEmpty(ListItem.DBID)">SetProperty(SelectedItem,$INFO[ListItem.DBID],movieinformation)</onload>
 		<onload>SetProperty(ResetScroll," ")</onload>
 		<onload>SetProperty(Focused_Button,1,movieinformation)</onload> <!-- Until the first button's onfocus (queued, so it runs after this) writes its name -->
+		<onload>SetProperty(Infoscreen_Open,1,home)</onload> <!-- Read by 5009's WindowOpen; a re-open with no close between (a set's movie) keeps it, as no unload runs -->
 		<include content="Infoscreen_PathTracing" />
 		<include content="Widget_Position_Reset_OnLoad" />
 		<onunload>ClearProperty(Focused_Button,movieinformation)</onunload>
+		<onunload>ClearProperty(Infoscreen_Open,home)</onunload>
 	</include>
 
 	<include name="musicinformation_OnLoadUnload">
@@ -68,8 +70,10 @@
 		<onload>SetProperty(SelectedItem,$INFO[ListItem.DBID],musicinformation)</onload>
 		<onload>SetProperty(ResetScroll," ")</onload>
 		<onload>SetProperty(Focused_Button,1,musicinformation)</onload>
+		<onload>SetProperty(Infoscreen_Open,1,home)</onload>
 		<include content="Widget_Position_Reset_OnLoad" />
 		<onunload>ClearProperty(Focused_Button,musicinformation)</onunload>
+		<onunload condition="![Window.IsVisible(musicinformation) + Window.IsVisible(songinformation)]">ClearProperty(Infoscreen_Open,home)</onunload>
 	</include>
 
 	<include name="skinsettings_OnLoadUnload">
