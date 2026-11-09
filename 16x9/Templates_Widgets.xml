@@ -229,7 +229,7 @@
 				<top>16</top>
 				<bottom>16</bottom>
 				<orientation>vertical</orientation>
-				<onright>3200</onright>
+				<onright condition="!$EXP[search_rails_updating]">3200</onright>
 				<include content="search_keypad_cursor_resets" />
 				<content>
 					<include content="kb_search_items" />

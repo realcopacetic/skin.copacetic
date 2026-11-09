@@ -20,6 +20,11 @@
       "index": { "start": 3201 },
       "rules": [ { "type": "append", "value": "{hasfocus}" } ]
     },
+    "search_rails_updating": {
+      "note": "A key press reloads every rail: a rail still loading takes focus even if it ends empty, so the keypad waits for them.",
+      "index": { "start": 3201 },
+      "rules": [ { "type": "append", "value": "Container({index}).IsUpdating" } ]
+    },
     "search_container_switching": {
       "note": "The focused rail was reached less than 0.5x ago (its latch, search_latches).",
       "index": { "start": 3201 },

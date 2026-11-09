@@ -32,7 +32,7 @@
 			<include content="Variable_Title_Label">
 				<param name="label" value="$VAR[Title_Label]" />
 				<param name="textcolor" value="$VAR[Primary_Color]" />
-				<param name="visible" value="!$EXP[search_container_switching] + !$EXP[TransparentDialog_IsVisible]" />
+				<param name="visible" value="!Control.HasFocus(215) + !$EXP[search_container_switching] + !$EXP[TransparentDialog_IsVisible]" />
 				<include content="Visible_Fade_Delayed_Animation" />
 				<animation effect="slide" end="0,-15" time="0" condition="$EXP[StripView_Display_IsSquare] | $EXP[StripView_Display_IsFanart]">Conditional</animation>
 			</include>

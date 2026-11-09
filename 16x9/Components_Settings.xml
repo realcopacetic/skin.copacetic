@@ -265,7 +265,7 @@
 						<param name="width" value="90" />
 						<param name="texture" value="Cross" />
 					</include>
-					<include content="editor_Left_List_Content" condition="$PARAM[embedded_buttons] + [String.Contains(Window.Property(xmlfile),menusettings.xml) | String.Contains(Window.Property(xmlfile),widgetsettings.xml)]" />
+					<include content="editor_Left_List_Content" condition="$PARAM[embedded_buttons] + [String.Contains(Window.Property(xmlfile),menusettings.xml) | String.Contains(Window.Property(xmlfile),widgetsettings.xml) | String.Contains(Window.Property(xmlfile),searchsettings.xml)]" />
 				</focusedlayout>
 			</control>
 		</definition>
