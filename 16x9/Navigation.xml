@@ -357,11 +357,10 @@
 	</include>
 
 	<include name="Multiart_Reset_OnLoad">
-		<!-- Home, Videos and Music are kept in memory: a stale cursor or register would otherwise show for a moment on the next arrival -->
+		<!-- Home, Videos and Music are kept in memory: without these the next arrival would read the last visit's cursor and skip reseeding -->
 		<onunload condition="Skin.HasSetting(Multiart_Slideshow)">ClearProperty(artwork_cursor_primary,home)</onunload>
 		<onunload condition="Skin.HasSetting(Multiart_Slideshow)">ClearProperty(multiart_seed_scope_3400,home)</onunload>
 		<onunload condition="Skin.HasSetting(Multiart_Slideshow)">ClearProperty(multiart_seed_sig_3400,home)</onunload>
-		<onload condition="Skin.HasSetting(Multiart_Slideshow)">RunScript(script.copacetic.helper,action=clear_label,id=3400)</onload>
 	</include>
 
 	<include name="Widget_Position_Reset_OnLoad">

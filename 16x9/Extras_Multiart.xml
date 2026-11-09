@@ -91,9 +91,9 @@
   </include> 
   
   <!-- 9300 holds the focused item: a serve echoes the cursor, so moving on breaks the match at once -->
-  <expression name="multiart_item_current">String.IsEqual(Container(9300).ListItem.Property(current),Window(home).Property(artwork_cursor_primary))</expression>
+  <expression name="multiart_item_current">String.IsEqual(Container(9300).ListItem.Property(current),Window(home).Property(artwork_cursor_primary)) + !String.IsEmpty(Window(home).Property(artwork_cursor_primary))</expression>
   <!-- ...and that serve seeded register 3400 -->
-  <expression name="multiart_current_3400">$EXP[multiart_item_current] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))</expression>
+  <expression name="multiart_current_3400">$EXP[multiart_item_current] + !String.IsEmpty(Container(9300).ListItem.Art(multiart)) + !Container(9300).IsUpdating</expression>
   <expression name="multiart_shown">Control.IsVisible(5012)</expression>
   <!-- Asks 9300 to seed: the scrollbars page the list without a focus change, so seeding waits for focus to return -->
   <expression name="multiart_serve">Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Control.GetLabel(6400)) + !$EXP[Scrollbar_HasFocus]</expression>
@@ -105,6 +105,8 @@
   <include name="Multiart_Cursor">
     <param name="id" />
     <definition>
+      <!-- A move starts the next item from its main image; a return from the rail or a modal has no move, so its rotation carries on -->
+      <onfocus condition="Container($PARAM[id]).OnNext | Container($PARAM[id]).OnPrevious">ClearProperty(multiart_seed_sig_3400,home)</onfocus>
       <onfocus condition="!Control.HasFocus(3100)">SetProperty(artwork_cursor_primary,$PARAM[id]/$INFO[Container($PARAM[id]).CurrentItem]/$INFO[Container($PARAM[id]).ListItem.DBID]/,home)</onfocus>
     </definition>
   </include>
@@ -113,7 +115,7 @@
        Reads its own state (law: a control's visible may read its own Control.IsVisible); false at open, as the cursor is cleared on unload -->
   <include name="Multiart_Shown_Latch">
     <control type="group" id="5012">
-      <visible>[$EXP[multiart_current_3400] | Control.IsVisible(5012)] + $EXP[multiart_item_current]</visible>
+      <visible>[$EXP[multiart_current_3400] | Control.IsVisible(5012)] + [$EXP[multiart_item_current] | [Control.HasFocus(3100) + String.StartsWith(Container(9300).ListItem.Property(current),held/)]]</visible>
     </control>
   </include>
 
