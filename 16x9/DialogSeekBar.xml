@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- seekbar -->
-	<visible>VideoPlayer.IsFullscreen | [Window.IsActive(visualisation) + !Window.IsVisible(1103) + [Player.ShowInfo | Window.IsActive(musicosd)]]</visible>
+	<visible>VideoPlayer.IsFullscreen | [Window.IsActive(visualisation) + [Player.ShowInfo | Window.IsActive(musicosd)]]</visible>
 	<zorder>2</zorder>
 	<controls>
 		<include content="seekbar_Hidden" />

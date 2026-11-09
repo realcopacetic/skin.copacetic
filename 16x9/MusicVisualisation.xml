@@ -32,7 +32,7 @@
 		<include content="Visualisation" condition="Visualisation.Enabled" />
 		<!-- Foreground -->
 		<include content="Transparent_Dialog_Panel">
-			<param name="visible" value="[Player.ShowInfo | Window.IsActive(musicosd)] + !Window.IsVisible(1103) + !$EXP[TransparentDialog_IsVisible]" />
+			<param name="visible" value="[Player.ShowInfo | Window.IsActive(musicosd)] + !$EXP[TransparentDialog_IsVisible]" />
 			<param name="top" value="240" />
 			<param name="bottom" value="240" />
 			<animation effect="zoom" start="60,240,1800,600" end="240,600,1500,480" time="0" condition="!Skin.String(visualisation_Layout,Large)">Conditional</animation>
@@ -40,7 +40,7 @@
 		</include>
 		<!-- Large details -->
 		<include content="Default_NoPanel_Layout" condition="Skin.String(visualisation_Layout,Large)">
-			<param name="visible" value="[Player.ShowInfo | Window.IsActive(musicosd)] + !Window.IsVisible(1103) + !$EXP[TransparentDialog_IsVisible]" />
+			<param name="visible" value="[Player.ShowInfo | Window.IsActive(musicosd)] + !$EXP[TransparentDialog_IsVisible]" />
 			<param name="visible_animation" value="Visible_Fade_Delayed_Animation" />
 			<include content="Variable_Title_Label">
 				<param name="label" value="$INFO[MusicPlayer.Title]" />
@@ -77,7 +77,7 @@
 		</include>
 		<!-- Small details -->
 		<include content="Default_NoPanel_Layout" condition="!Skin.String(visualisation_Layout,Large)">
-			<param name="visible" value="[Player.ShowInfo | Window.IsActive(musicosd)] + !Window.IsVisible(1103) + !$EXP[TransparentDialog_IsVisible]" />
+			<param name="visible" value="[Player.ShowInfo | Window.IsActive(musicosd)] + !$EXP[TransparentDialog_IsVisible]" />
 			<param name="visible_animation" value="Visible_Fade_Delayed_Animation" />
 			<include content="visualisation_Title_and_Info">
 				<param name="top" value="660" />
