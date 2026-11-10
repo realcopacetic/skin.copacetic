@@ -51,6 +51,13 @@
 		<onload>ClearProperty(Breadcrumb_GoToNext)</onload>
 	</include>
 
+	<include name="MyViews_OnLoadUnload">
+		<!-- The windows whose views record the listing's path (atr_folderwatch). An entry starts unrecorded, so it fades as a folder change -->
+		<onload>SetProperty(folder_watch,1,home)</onload>
+		<onunload>ClearProperty(folder_watch,home)</onunload>
+		<onunload condition="!String.IsEmpty(Window(home).Property(folder_path))">ClearProperty(folder_path,home)</onunload>
+	</include>
+
 	<include name="movieinformation_OnLoadUnload">
 		<onload condition="$EXP[trailer_playing] | $EXP[trailer_zombie]">PlayerControl(Stop)</onload>
 		<onload condition="!String.IsEmpty(ListItem.DBID)">SetProperty(SelectedItem,$INFO[ListItem.DBID],movieinformation)</onload>

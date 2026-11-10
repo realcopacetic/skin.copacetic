@@ -5,6 +5,7 @@
 		<control type="group">
 			<visible>$EXP[ShowcaseView_IsVisible]</visible>
 			<include content="Custom_List">
+				<param name="folderwatch" value="true" />
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="type" value="fixedlist" />
 				<param name="id" value="502" />

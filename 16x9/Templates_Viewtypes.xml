@@ -98,9 +98,10 @@
 		<param name="visible" default="true" />
 		<param name="viewtype_label" />
 		<param name="media_view" default="false" />
+		<param name="switching" default="$EXP[Container_Switching]" /><!-- false for the list: it hides by fading instead (ListView_Container) -->
 		<definition>
 			<control type="group">
-				<visible>$EXP[$PARAM[viewtype_label]View_IsVisible] + !$EXP[Container_Switching] + !$EXP[Options_Switching]</visible>
+				<visible>$EXP[$PARAM[viewtype_label]View_IsVisible] + ![$PARAM[switching]] + !$EXP[Options_Switching]</visible>
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Animation" condition="$PARAM[media_view]" />
 				<nested />

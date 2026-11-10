@@ -63,6 +63,7 @@
 			<ondown condition="$EXP[StripView_IsVisible] + $EXP[trailer_playing]">PlayerControl(Stop)</ondown>
 			<ondown condition="$EXP[StripView_IsVisible] + !$EXP[trailer_playing]">SetFocus(4102)</ondown>
 			<include content="atr_trailer_back" />
+			<onback condition="!$EXP[trailer_playing]">4100</onback><!-- bare id so Back is consumed: back to the list through the relay, as Right does, never up a folder -->
 		</definition>
 	</include>
 

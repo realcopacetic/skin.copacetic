@@ -5,9 +5,13 @@
 		<include content="Viewtype_Display_Template">
 			<param name="viewtype_label" value="List" />
 			<param name="media_view" value="true" />
+			<param name="switching" value="false" />
 			<control type="group">
 				<visible>!$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo) + !Control.HasFocus(3100)</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
+				<!-- A folder change cuts the list out and fades it back over 1x, as hiding would, but it keeps running: its hook records the new path (atr_folderwatch) -->
+				<animation effect="fade" start="100" end="0" time="0" condition="$EXP[Container_Switching]">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="!$EXP[Container_Switching]">Conditional</animation>
 				<control type="fixedlist" id="50">
 					<visible>$PARAM[visible]</visible>
 					<animation effect="slide" end="720,0" time="0" condition="$EXP[ListView_Display_IsThumbnails]">Conditional</animation>

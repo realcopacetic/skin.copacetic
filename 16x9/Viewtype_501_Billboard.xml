@@ -4,6 +4,7 @@
 		<control type="group">
 			<visible>$EXP[BillboardView_IsVisible]</visible>
 			<include content="Custom_List">
+				<param name="folderwatch" value="true" />
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="type" value="list" />
 				<param name="id" value="501" />

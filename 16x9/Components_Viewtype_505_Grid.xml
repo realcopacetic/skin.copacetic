@@ -191,6 +191,7 @@
 		<param name="progress_slides" default="240" />
 		<definition>
 			<include content="HiddenFocusButton">
+				<param name="folderwatch" value="true" />
 				<param name="id" value="505" />
 			</include>
 			<control type="group">
