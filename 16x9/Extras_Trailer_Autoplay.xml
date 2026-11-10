@@ -17,7 +17,7 @@
     <onfocus condition="[Container($PARAM[id]).OnPrevious | Container($PARAM[id]).OnNext] + $EXP[trailer_playing] + !Player.Paused">PlayerControl(Play)</onfocus>
     <onfocus condition="[Container($PARAM[id]).OnPrevious | Container($PARAM[id]).OnNext] + $EXP[trailer_playing]">SetProperty(trailer_state,interrupted,home)</onfocus>
     <onfocus condition="[Container($PARAM[id]).OnPrevious | Container($PARAM[id]).OnNext] + !String.IsEmpty(Window(home).Property(trailer_played_item)) + !String.IsEqual(Window(home).Property(trailer_played_item),ListItem.Label)">ClearProperty(trailer_played_item,home)</onfocus>
-    <onfocus condition="$EXP[trailer_resolving] + !String.IsEqual(Window(home).Property(trailer_item),Container($PARAM[id]).ListItem.Label)">Action(Back,busydialog)</onfocus><!-- any arrival on another item, a new listing included: drop the stale request's resolve -->
+    <onfocus condition="$EXP[trailer_resolving] + [!String.IsEqual(Window(home).Property(trailer_item),Container($PARAM[id]).ListItem.Label) | !String.IsEqual(Window(home).Property(trailer_focus_ids),$PARAM[id])]">Action(Back,busydialog)</onfocus><!-- any arrival on another item or in another list, a new listing included: drop the stale request's resolve -->
   </include>
 
   <include name="atr_trailer_region_interrupt">
@@ -44,7 +44,7 @@
   <include name="Trailer_Autoplay_Mask">
     <definition>
       <control type="image">
-        <visible>!Skin.String(Theme,Light) + !Player.HasVideo + String.IsEqual(Window(home).Property(trailer_state),pending) + [String.IsEqual(Window(home).Property(trailer_item),ListItem.Label) | Control.HasFocus(3100)]</visible>
+        <visible>!Skin.String(Theme,Light) + !Player.HasVideo + String.IsEqual(Window(home).Property(trailer_state),pending) + [[!Control.HasFocus(3100) + !String.IsEqual(Window(home).Property(trailer_focus_ids),3100) + String.IsEqual(Window(home).Property(trailer_item),ListItem.Label)] | [Control.HasFocus(3100) + String.IsEqual(Window(home).Property(trailer_focus_ids),3100) + String.IsEqual(Window(home).Property(trailer_item),Container(3100).ListItem.Label)]]</visible><!-- the request is the focused list's and item's: a versions rail repeats the view item's label, and in Videos ListItem reads the view, not the rail (GUIMediaWindow.cpp:173-180) -->
         <animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_4x" tween="sine" easing="inout" reversible="false">Hidden</animation>
         <texture colordiffuse="$VAR[Dark_Color]">views/white_100.png</texture>
       </control>
