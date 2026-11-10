@@ -126,13 +126,13 @@
 		<itemlayout height="60" width="1140" condition="$EXP[ListView_Display_IsThumbnails] + Container.Content(songs)">
 			<include content="Common_List_Unfocused">
 				<param name="label_left" value="90" />
-				<param name="label_maxwidth" value="840" />
+				<param name="label_maxwidth" value="790" />
 			</include>
 		</itemlayout>
 		<focusedlayout height="60" width="1140" condition="$EXP[ListView_Display_IsThumbnails] + Container.Content(songs)">
 			<include content="Common_List_Focused">
 				<param name="label_left" value="90" />
-				<param name="label_maxwidth" value="840" />
+				<param name="label_maxwidth" value="790" />
 			</include>
 		</focusedlayout>
 		<include content="ListView_Layout_Thumbnails">

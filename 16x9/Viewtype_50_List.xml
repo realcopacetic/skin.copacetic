@@ -110,8 +110,8 @@
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails]" />
 					<param name="left" value="810" />
 					<param name="width" value="960" />
-					<param name="hiddenlabelmaxwidth" value="840" />
-					<param name="infolabelwidth" value="120" />
+					<param name="hiddenlabelmaxwidth" value="790" /><!-- matches the songs' title, so 790 + 10 + 160 fills the 960 -->
+					<param name="infolabelwidth" value="160" /><!-- "/ 04:40:40", the widest duration under ten hours, is 156 px -->
 					<param name="infolabel_visible" value="[Container.Content(artists) + Control.HasFocus(3100)] | Container.Content(songs)" />
 				</include>
 			</include>
