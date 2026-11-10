@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<mapping>player_berths</mapping>
+	<includes>
+		<!-- The player's and notification's view-gated instances, mounted by Shared_ and Notification_Dialog_Layouts with their params -->
+		<!-- A row's condition loads it only in the windows that offer its layout; an empty field keeps the widget's default -->
+		<template>
+			<include name="player_berths_{set}">
+				<include content="$PARAM[type]_Widget" condition="{condition}">
+					<param name="align" value="{align}" />
+					<param name="background_visible" value="{background_visible}" />
+					<param name="content_visible" value="$PARAM[content_visible]" />
+					<param name="height" value="{height}" />
+					<param name="id" value="{id}" />
+					<param name="label1" value="$PARAM[label1]" />
+					<param name="label2" value="$PARAM[label2]" />
+					<param name="label2_visible" value="$PARAM[label2_visible]" />
+					<param name="label_padding" value="{label_padding}" />
+					<param name="label_shift" value="{label_shift}" />
+					<param name="label_width" value="{label_width}" />
+					<param name="{label}_label_visible" value="true" />
+					<param name="visible" value="{visible}" />
+					<include content="{slides}" />
+				</include>
+			</include>
+		</template>
+	</includes>
+</xml>

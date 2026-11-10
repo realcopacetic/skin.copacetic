@@ -513,13 +513,15 @@
 		</definition>
 	</include>
 
+	<!-- The instances whose include conditions read no generated expression stay here, so the controls match 11abc62's before the helper's first build -->
+	<!-- The view-gated instances are rows of mappings_player_berths.json, built into player_berths_{set} -->
 	<include name="Shared_Dialog_Layouts">
-		<param name="type" default="Music_Player" />
-		<param name="visible" default="$EXP[Music_Player_IsVisible] + !$EXP[trailer_playing]" />
 		<param name="content_visible" default="![Window.IsVisible(volumebar) | Window.IsVisible(notification) | Window.IsVisible(extendedprogressdialog)]" />
 		<param name="label1" default="$INFO[MusicPlayer.Title]" />
 		<param name="label2" default="$INFO[MusicPlayer.Artist]" />
 		<param name="label2_visible" default="true" />
+		<param name="type" default="Music_Player" />
+		<param name="visible" default="$EXP[Music_Player_IsVisible] + !$EXP[trailer_playing]" />
 		<definition>
 			<control type="group">
 				<visible>$PARAM[visible]</visible>
@@ -552,71 +554,26 @@
 					<animation effect="slide" end="-60,0" time="0" condition="true">Conditional</animation>
 					<animation effect="slide" end="0,900" time="0" condition="$EXP[Containers_Square] | Container.Content(files)">Conditional</animation>
 				</include>
-				<!-- Showcase -->
-				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music)] + $EXP[layout_showcase_include_media]">
-					<param name="id" value="6502" />
-					<param name="visible" value="$EXP[ShowcaseView_Display_IsPosters] + !$EXP[ShowcaseView_Details_Off] + $EXP[Music_Player_IsVisible] + !$EXP[Infoscreen_IsVisible] + !$EXP[trailer_playing] + !Window.IsVisible(home)" />
+				<include content="player_berths_shared">
 					<param name="content_visible" value="$PARAM[content_visible]" />
-					<param name="height" value="360" />
-					<param name="align" value="left" />
-					<param name="label_padding" value="30" />
-					<param name="label_shift" value="false" />
 					<param name="label1" value="$PARAM[label1]" />
 					<param name="label2" value="$PARAM[label2]" />
 					<param name="label2_visible" value="$PARAM[label2_visible]" />
-					<param name="center_label_visible" value="true" />
-				</include>
-				<!-- Strip -->
-				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(addonbrowser) | Window.IsVisible(programs)] + $EXP[layout_strip_include_media]">
-					<param name="id" value="6503" />
-					<param name="visible" value="$EXP[StripView_IsVisible] + !$EXP[Infoscreen_IsVisible] + !$EXP[trailer_playing] + !Window.IsVisible(home)" />
-					<param name="content_visible" value="$PARAM[content_visible]" />
-					<param name="align" value="right" />
-					<param name="height" value="240" />
-					<param name="label_padding" value="30" />
-					<param name="label_width" value="1035" />
-					<param name="label_shift" value="false" />
-					<param name="label1" value="$PARAM[label1]" />
-					<param name="label2" value="$PARAM[label2]" />
-					<param name="label2_visible" value="$PARAM[label2_visible]" />
-					<param name="left_label_visible" value="true" />
-					<animation effect="slide" end="-80,0" time="0" condition="$EXP[StripView_Display_IsPosters] | $EXP[StripView_Display_IsFanart]">Conditional</animation>
-					<animation effect="slide" end="-320,0" time="0" condition="$EXP[StripView_Display_IsFanart] + $EXP[StripView_Details_Off]">Conditional</animation>
-					<animation effect="slide" end="-570,0" time="0" condition="$EXP[StripView_Display_IsSquare]">Conditional</animation>
-					<animation effect="slide" end="-75,0" time="0" condition="$EXP[StripView_Display_IsSquare] + $EXP[StripView_Details_Off]">Conditional</animation>
-				</include>
-				<!-- Grid -->
-				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(addonbrowser) | Window.IsVisible(programs)] + $EXP[layout_grid_include_media]">
-					<param name="id" value="6504" />
-					<param name="visible" value="$EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible] + !$EXP[trailer_playing] + !Window.IsVisible(home)" />
-					<param name="content_visible" value="$PARAM[content_visible]" />
-					<param name="height" value="180" />
-					<param name="label_padding" value="30" />
-					<param name="label_width" value="900" />
-					<param name="label_shift" value="false" />
-					<param name="label1" value="$PARAM[label1]" />
-					<param name="label2" value="$PARAM[label2]" />
-					<param name="label2_visible" value="$PARAM[label2_visible]" />
-					<param name="left_label_visible" value="true" />
-					<animation effect="slide" end="-60,0" time="0" condition="true">Conditional</animation>
-					<animation effect="slide" end="-12,0" time="0" condition="$EXP[GridView_Display_IsFanart] + Skin.String(GridView_Size,Large)" reversible="false">Conditional</animation>
-					<animation effect="slide" end="-4,0" time="0" condition="Skin.String(GridView_Size,Small)" reversible="false">Conditional</animation>
-					<animation effect="slide" end="-130,0" time="0" condition="Skin.String(GridView_Size,Horizontal)" reversible="false">Conditional</animation>
-					<animation effect="slide" end="-12,0" time="0" condition="Skin.String(GridView_Size,Horizontal) + $EXP[GridView_Display_IsFanart]" reversible="false">Conditional</animation>
+					<param name="type" value="$PARAM[type]" />
 				</include>
 			</control>
 		</definition>
 	</include>
 
 	<include name="Notification_Dialog_Layouts">
-		<param name="type" default="Notification" />
-		<param name="visible" default="!$EXP[Music_Player_IsVisible]" />
-		<param name="content_visible" default="!Window.IsVisible(extendedprogressdialog)" />
 		<param name="background_visible" default="false" />
-		<param name="label_padding" default="-30" />
+		<param name="content_visible" default="!Window.IsVisible(extendedprogressdialog)" />
 		<param name="label1" default="$VAR[Notification_Widget_Title_Label]" />
 		<param name="label2" default="$VAR[Notification_Widget_Info_Label]" />
 		<param name="label2_visible" default="true" />
+		<param name="label_padding" default="-30" />
+		<param name="type" default="Notification" />
+		<param name="visible" default="!$EXP[Music_Player_IsVisible]" />
 		<definition>
 			<control type="group">
 				<visible>$PARAM[visible]</visible>
@@ -648,49 +605,37 @@
 					<param name="left_label_visible" value="true" />
 					<animation effect="slide" end="30,0" time="0" condition="true">Conditional</animation>
 				</include>
-				<!-- Showcase -->
-				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music)] + $EXP[layout_showcase_include_media]">
-					<param name="id" value="6507" />
-					<param name="visible" value="$EXP[ShowcaseView_Display_IsSquare] + !$EXP[Container_HasBackground] + !$EXP[Infoscreen_IsVisible] + !$EXP[trailer_playing] + !Window.IsVisible(home)" />
-					<param name="content_visible" value="$PARAM[content_visible]" />
+				<include content="player_berths_notification">
 					<param name="background_visible" value="$PARAM[background_visible]" />
-					<param name="label_width" value="630" />
-					<param name="label_padding" value="$PARAM[label_padding]" />
+					<param name="content_visible" value="$PARAM[content_visible]" />
 					<param name="label1" value="$PARAM[label1]" />
 					<param name="label2" value="$PARAM[label2]" />
 					<param name="label2_visible" value="$PARAM[label2_visible]" />
-					<param name="left_label_visible" value="true" />
-					<animation effect="slide" end="30,0" time="0" condition="true">Conditional</animation>
-				</include>
-				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music)] + $EXP[layout_showcase_include_media]">
-					<param name="id" value="6508" />
-					<param name="visible" value="$EXP[ShowcaseView_Display_IsPosters] + !$EXP[Container_HasBackground] + !$EXP[Infoscreen_IsVisible] + !$EXP[trailer_playing] + !Window.IsVisible(home)" />
-					<param name="content_visible" value="$PARAM[content_visible]" />
-					<param name="background_visible" value="$PARAM[background_visible]" />
-					<param name="label_width" value="1020" />
 					<param name="label_padding" value="$PARAM[label_padding]" />
-					<param name="label1" value="$PARAM[label1]" />
-					<param name="label2" value="$PARAM[label2]" />
-					<param name="label2_visible" value="$PARAM[label2_visible]" />
-					<param name="left_label_visible" value="true" />
-					<animation effect="slide" end="30,0" time="0" condition="true">Conditional</animation>
-				</include>
-				<!-- Grid -->
-				<include content="$PARAM[type]_Widget" condition="[Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(addonbrowser) | Window.IsVisible(programs)] + $EXP[layout_grid_include_media]">
-					<param name="id" value="6509" />
-					<param name="visible" value="$EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible] + !$EXP[trailer_playing] + !Window.IsVisible(home)" />
-					<param name="content_visible" value="$PARAM[content_visible]" />
-					<param name="background_visible" value="$PARAM[background_visible]" />
-					<param name="label_width" value="900" />
-					<param name="label_padding" value="$PARAM[label_padding]" />
-					<param name="label1" value="$PARAM[label1]" />
-					<param name="label2" value="$PARAM[label2]" />
-					<param name="label2_visible" value="$PARAM[label2_visible]" />
-					<param name="left_label_visible" value="true" />
-					<animation effect="slide" end="30,0" time="0" condition="true">Conditional</animation>
+					<param name="type" value="$PARAM[type]" />
 				</include>
 			</control>
 		</definition>
+	</include>
+
+	<!-- The slides a row names in its slides field: hand-written, as one builder row can't carry a list of animations -->
+	<include name="Dialog_Layout_Slides_Strip">
+		<animation effect="slide" end="-80,0" time="0" condition="$EXP[StripView_Display_IsPosters] | $EXP[StripView_Display_IsFanart]">Conditional</animation>
+		<animation effect="slide" end="-320,0" time="0" condition="$EXP[StripView_Display_IsFanart] + $EXP[StripView_Details_Off]">Conditional</animation>
+		<animation effect="slide" end="-570,0" time="0" condition="$EXP[StripView_Display_IsSquare]">Conditional</animation>
+		<animation effect="slide" end="-75,0" time="0" condition="$EXP[StripView_Display_IsSquare] + $EXP[StripView_Details_Off]">Conditional</animation>
+	</include>
+
+	<include name="Dialog_Layout_Slides_Grid">
+		<animation effect="slide" end="-60,0" time="0" condition="true">Conditional</animation>
+		<animation effect="slide" end="-12,0" time="0" condition="$EXP[GridView_Display_IsFanart] + Skin.String(GridView_Size,Large)" reversible="false">Conditional</animation>
+		<animation effect="slide" end="-4,0" time="0" condition="Skin.String(GridView_Size,Small)" reversible="false">Conditional</animation>
+		<animation effect="slide" end="-130,0" time="0" condition="Skin.String(GridView_Size,Horizontal)" reversible="false">Conditional</animation>
+		<animation effect="slide" end="-12,0" time="0" condition="Skin.String(GridView_Size,Horizontal) + $EXP[GridView_Display_IsFanart]" reversible="false">Conditional</animation>
+	</include>
+
+	<include name="Dialog_Layout_Slides_Notification">
+		<animation effect="slide" end="30,0" time="0" condition="true">Conditional</animation>
 	</include>
 
 </includes>

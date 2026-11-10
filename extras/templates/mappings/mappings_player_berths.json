@@ -1,0 +1,100 @@
+{
+  "player_berths": {
+    "mode": "static",
+    "items": [
+      "shared_showcase",
+      "shared_strip",
+      "shared_grid",
+      "notification_showcase_square",
+      "notification_showcase_posters",
+      "notification_grid"
+    ],
+    "placeholders": { "key": "berth" },
+    "metadata": {
+      "shared_showcase": {
+        "align": "left",
+        "background_visible": "",
+        "condition": "[Window.IsVisible(videos) | Window.IsVisible(music)] + $EXP[layout_showcase_include_media]",
+        "height": "360",
+        "id": "6502",
+        "label": "center",
+        "label_padding": "30",
+        "label_shift": "false",
+        "label_width": "",
+        "set": "shared",
+        "slides": "",
+        "visible": "$EXP[ShowcaseView_Display_IsPosters] + !$EXP[ShowcaseView_Details_Off] + $EXP[Music_Player_IsVisible] + !$EXP[Infoscreen_IsVisible] + !$EXP[trailer_playing] + !Window.IsVisible(home)"
+      },
+      "shared_strip": {
+        "align": "",
+        "background_visible": "",
+        "condition": "[Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(addonbrowser) | Window.IsVisible(programs)] + $EXP[layout_strip_include_media]",
+        "height": "240",
+        "id": "6503",
+        "label": "left",
+        "label_padding": "30",
+        "label_shift": "false",
+        "label_width": "1035",
+        "set": "shared",
+        "slides": "Dialog_Layout_Slides_Strip",
+        "visible": "$EXP[StripView_IsVisible] + !$EXP[Infoscreen_IsVisible] + !$EXP[trailer_playing] + !Window.IsVisible(home)"
+      },
+      "shared_grid": {
+        "align": "",
+        "background_visible": "",
+        "condition": "[Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(addonbrowser) | Window.IsVisible(programs)] + $EXP[layout_grid_include_media]",
+        "height": "",
+        "id": "6504",
+        "label": "left",
+        "label_padding": "30",
+        "label_shift": "false",
+        "label_width": "900",
+        "set": "shared",
+        "slides": "Dialog_Layout_Slides_Grid",
+        "visible": "$EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible] + !$EXP[trailer_playing] + !Window.IsVisible(home)"
+      },
+      "notification_showcase_square": {
+        "align": "",
+        "background_visible": "$PARAM[background_visible]",
+        "condition": "[Window.IsVisible(videos) | Window.IsVisible(music)] + $EXP[layout_showcase_include_media]",
+        "height": "",
+        "id": "6507",
+        "label": "left",
+        "label_padding": "$PARAM[label_padding]",
+        "label_shift": "",
+        "label_width": "630",
+        "set": "notification",
+        "slides": "Dialog_Layout_Slides_Notification",
+        "visible": "$EXP[ShowcaseView_Display_IsSquare] + !$EXP[Container_HasBackground] + !$EXP[Infoscreen_IsVisible] + !$EXP[trailer_playing] + !Window.IsVisible(home)"
+      },
+      "notification_showcase_posters": {
+        "align": "",
+        "background_visible": "$PARAM[background_visible]",
+        "condition": "[Window.IsVisible(videos) | Window.IsVisible(music)] + $EXP[layout_showcase_include_media]",
+        "height": "",
+        "id": "6508",
+        "label": "left",
+        "label_padding": "$PARAM[label_padding]",
+        "label_shift": "",
+        "label_width": "1020",
+        "set": "notification",
+        "slides": "Dialog_Layout_Slides_Notification",
+        "visible": "$EXP[ShowcaseView_Display_IsPosters] + !$EXP[Container_HasBackground] + !$EXP[Infoscreen_IsVisible] + !$EXP[trailer_playing] + !Window.IsVisible(home)"
+      },
+      "notification_grid": {
+        "align": "",
+        "background_visible": "$PARAM[background_visible]",
+        "condition": "[Window.IsVisible(videos) | Window.IsVisible(music) | Window.IsVisible(addonbrowser) | Window.IsVisible(programs)] + $EXP[layout_grid_include_media]",
+        "height": "",
+        "id": "6509",
+        "label": "left",
+        "label_padding": "$PARAM[label_padding]",
+        "label_shift": "",
+        "label_width": "900",
+        "set": "notification",
+        "slides": "Dialog_Layout_Slides_Notification",
+        "visible": "$EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible] + !$EXP[trailer_playing] + !Window.IsVisible(home)"
+      }
+    }
+  }
+}
