@@ -131,11 +131,4 @@
 		<onclick>ActivateWindow(videos,videodb://tvshows/titles/$INFO[ListItem.DBID]/,return)</onclick>
 	</include>
 
-	<include name="ClickAction_Open_Set">
-		<onclick>Dialog.Close(all)</onclick>
-		<onclick>SetProperty(SentFromInfo,true,movieinformation)</onclick>
-		<onclick condition="Window.IsVisible(videos)">Container.Update(videodb://movies/sets/$INFO[ListItem.DBID]/)</onclick>
-		<onclick condition="!Window.IsVisible(videos)">ActivateWindow(videos,videodb://movies/sets/$INFO[ListItem.DBID]/,return)</onclick>
-	</include>
-
 </includes>
