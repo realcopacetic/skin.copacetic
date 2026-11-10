@@ -23,16 +23,19 @@
 				<param name="right_label" value="$VAR[seekbar_Right_Label]" />
 				<param name="text_color" value="light" />
 				<param name="include_ranges" value="true" />
-				<visible>Player.Seeking | Player.Rewinding | Player.Forwarding | Player.HasPerformedSeek(3) | [Window.IsVisible(videoosd) + !System.IdleTime(3)] | [Player.Paused + !System.IdleTime(5)] | Window.IsVisible(fullscreeninfo)</visible>
+				<visible>Player.Seeking | Player.Rewinding | Player.Forwarding | Player.HasPerformedSeek(3) | [Window.IsVisible(videoosd) + !System.IdleTime(3)] | [Player.Paused + !System.IdleTime(5)] | Window.IsVisible(fullscreeninfo) | [Player.ShowInfo + VideoPlayer.Content(livetv)]</visible>
+				<visible>!Player.ChannelPreviewActive</visible><!-- the bar and times are the playing channel's, not a previewed one's -->
 				<include content="Visible_Fade_Delayed_Animation" />
 			</include>
-			<include content="Fullscreen_Info" condition="VideoPlayer.IsFullscreen + Skin.HasSetting(Pause_Screen_Info_Enabled)">
+			<!-- Paused, or live TV's channel info: Kodi sets Player.ShowInfo and the shown channel on a zap or a channel start -->
+			<include content="Fullscreen_Info" condition="VideoPlayer.IsFullscreen + [Skin.HasSetting(Pause_Screen_Info_Enabled) | VideoPlayer.Content(livetv)]">
 				<include content="WindowOpenClose_Fade_Delayed_Animation" />
-				<visible>Player.Paused + !Window.IsVisible(videoosd) + !Window.IsVisible(fullscreeninfo) + !$EXP[TransparentDialog_IsVisible]</visible>
+				<visible>[Player.Paused + Skin.HasSetting(Pause_Screen_Info_Enabled)] | [Player.ShowInfo + VideoPlayer.Content(livetv)]</visible>
+				<visible>!Window.IsVisible(videoosd) + !Window.IsVisible(fullscreeninfo) + !$EXP[TransparentDialog_IsVisible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 			</include>
 			<control type="group">
-				<visible>!Window.IsVisible(fullscreeninfo)</visible>
+				<visible>!Window.IsVisible(fullscreeninfo) + ![Player.ShowInfo + VideoPlayer.Content(livetv)]</visible>
 				<include content="Video_Player_Breadcrumb" condition="!Skin.HasSetting(Video_Breadcrumb_Disabled)" />
 				<include content="Player_Status_Icons">
 					<param name="large_label" value="true" />
