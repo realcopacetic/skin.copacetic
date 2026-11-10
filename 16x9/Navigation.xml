@@ -220,9 +220,9 @@
 		<onright condition="!Skin.String(GridView_Size,Horizontal) + $EXP[GridView_Display_IsFanart] + Integer.IsLessorEqual(Container.NumItems,3) + !$EXP[Infoscreen_IsVisible] + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onright>
 		<onright condition="!Skin.String(GridView_Size,Horizontal) + $EXP[GridView_Display_IsPosters] + Integer.IsLessorEqual(Container.NumItems,5) + !$EXP[Infoscreen_IsVisible] + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onright>
 		<onright condition="!Skin.String(GridView_Size,Horizontal) + $EXP[GridView_Display_IsSquare] + Integer.IsLessorEqual(Container.NumItems,10) + !$EXP[Infoscreen_IsVisible] + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onright>
-		<onback condition="Skin.String(GridView_Size,Horizontal) + $EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible]">504</onback>
+		<onback condition="Skin.String(GridView_Size,Horizontal) + $EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible]">505</onback>
 		<onup condition="Skin.String(GridView_Size,Horizontal) + $EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible] + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onup>
-		<ondown condition="Skin.String(GridView_Size,Horizontal) + $EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible]">504</ondown>
+		<ondown condition="Skin.String(GridView_Size,Horizontal) + $EXP[GridView_IsVisible] + !$EXP[Infoscreen_IsVisible]">505</ondown>
 	</include>
 
 	<include name="Home_Menu_Navigation">
