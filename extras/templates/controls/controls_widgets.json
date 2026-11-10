@@ -96,7 +96,8 @@
       "id": 211,
       "control_type": "radiobutton",
       "label": "$LOCALIZE[31467]",
-      "description": "$LOCALIZE[31567]"
+      "description": "$LOCALIZE[31567]",
+      "visible": "not In({widget_preset}, [latest_albums, recent_albums, random_albums, liked_songs, favourites])"
     },
     "widget_artwork": {
       "id": 212,

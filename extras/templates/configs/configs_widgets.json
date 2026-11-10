@@ -70,6 +70,13 @@
     },
     "{widget_preset}_autoplay": {
       "items": { "true": "$LOCALIZE[186]", "false": "$LOCALIZE[106]" },
+      "filter_mode": "exclude",
+      "rules": [
+        {
+          "condition": "In({widget_preset}, [latest_albums, recent_albums, random_albums, liked_songs, favourites])",
+          "value": [ "true" ]
+        }
+      ],
       "defaults": { "*": "false" }
     },
     "{widget_preset}_art_clearlogo": {
