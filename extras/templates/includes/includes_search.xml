@@ -2,12 +2,13 @@
 <xml>
 	<mapping>search</mapping>
 	<includes>
-		<!-- Preview probes, first in the window: each holds its rail's live test, read as Control.IsVisible by search_preview_{index} -->
+		<!-- Preview probes, first in the window, read as Control.IsVisible by search_preview_{index}. A reloading rail keeps the old
+			query's items, so a rail starts previewing once loaded and holds while it reloads (its own Control.IsVisible is last frame's) -->
 		<template>
 			<index start="3201" />
 			<include name="prb_search_preview">
 				<control type="group" id="{index+3052}">
-					<visible>$EXP[search_preview_live_{index}]</visible>
+					<visible>$EXP[search_preview_live_{index}] + [!Container({index}).IsUpdating | Control.IsVisible({index+3052})]</visible>
 				</control>
 			</include>
 		</template>

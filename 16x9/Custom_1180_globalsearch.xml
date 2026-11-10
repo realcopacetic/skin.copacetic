@@ -16,7 +16,10 @@
 			<visible>!$EXP[Infoscreen_IsVisible]</visible>
 			<include content="Visible_Fade_Delayed_Animation" />
 			<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
-			<include content="User_Scroll_Delay" />
+			<include content="User_Scroll_Delay">
+				<param name="onnext_trigger" value="$EXP[search_rails_onnext]" />
+				<param name="onprevious_trigger" value="$EXP[search_rails_onprevious]" />
+			</include>
 			<include content="search_latches" />
 			<control type="grouplist" id="3200">
 				<description>The rails are flat here, so the grouplist chains Up and Down itself and skips rails that can't take focus (no size: they draw nothing)</description>

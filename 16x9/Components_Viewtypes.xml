@@ -67,8 +67,12 @@
 		</definition>
 	</include>
 
+	<!-- Search passes its own triggers; elsewhere they are left out, so the template's defaults apply -->
 	<include name="User_Scroll_Delay">
-		<include content="User_Scroll_Delay_Template" />
+		<include content="User_Scroll_Delay_Template">
+			<param name="onnext_trigger" value="$PARAM[onnext_trigger]" />
+			<param name="onprevious_trigger" value="$PARAM[onprevious_trigger]" />
+		</include>
 		<!-- The window's one container switch delay: the secondary list calls the template alone -->
 		<control type="group" id="5006">
 			<visible>$EXP[Container_Switching]</visible>

@@ -27,7 +27,7 @@
       "rules": [ { "type": "assign", "value": "Control.IsVisible({index+3052})" } ]
     },
     "search_preview_live_{index}": {
-      "note": "The input has focus and this is the first rail with results; a reloading rail keeps its items, so the preview holds while it loads.",
+      "note": "The input has focus and this is the first rail with items; the probe (prb_search_preview) adds the reload rule.",
       "index": { "start": 3201 },
       "rules": [
         {
@@ -47,6 +47,19 @@
           "value": "$EXP[search_prior_clear_{index-1}] + !Integer.IsGreater(Container({index-1}).NumItems,0)"
         }
       ]
+    },
+    "search_has_results": {
+      "index": { "start": 3201 },
+      "rules": [ { "type": "append", "value": "Integer.IsGreater(Container({index}).NumItems,0)" } ]
+    },
+    "search_rails_onprevious": {
+      "note": "Search's scroll latch triggers (User_Scroll_Delay): the focused rail's moves only, so a cursor reset of an unfocused rail never hides the preview's art.",
+      "index": { "start": 3201 },
+      "rules": [ { "type": "append", "value": "[Container({index}).OnPrevious + Control.HasFocus({index})]" } ]
+    },
+    "search_rails_onnext": {
+      "index": { "start": 3201 },
+      "rules": [ { "type": "append", "value": "[Container({index}).OnNext + Control.HasFocus({index})]" } ]
     },
     "search_rails_updating": {
       "note": "A key press reloads every rail: a rail still loading takes focus even if it ends empty, so the input waits for them.",

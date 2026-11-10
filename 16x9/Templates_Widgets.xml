@@ -234,6 +234,7 @@
 				<bottom>16</bottom>
 				<orientation>vertical</orientation>
 				<include content="atr_search_input_right" />
+				<onright condition="!$EXP[search_rails_updating] + !$EXP[search_has_results]">3200</onright><!-- no results: a met action keeps Right from wrapping the row. Not with results: it would follow the route's SetFocus -->
 				<include content="search_keypad_cursor_resets" />
 				<content>
 					<include content="kb_search_items" />
