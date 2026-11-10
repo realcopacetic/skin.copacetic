@@ -4,24 +4,52 @@
     "StripView_Display_IsPosters_Widget_Search": {
       "index": { "start": 3201 },
       "filter": "In({search_type}, [movies, tvshows, episodes, musicvideos, artists, albums, songs])",
-      "rules": [ { "condition": "equals({art}, Posters)", "type": "append", "value": "{hasfocus}" } ]
+      "rules": [ { "condition": "equals({art}, Posters)", "type": "append", "value": "{shown}" } ]
     },
     "StripView_Display_IsFanart_Widget_Search": {
       "index": { "start": 3201 },
       "filter": "In({search_type}, [movies, tvshows, episodes, musicvideos, artists, albums, songs])",
-      "rules": [ { "condition": "equals({art}, Fanart)", "type": "append", "value": "{hasfocus}" } ]
+      "rules": [ { "condition": "equals({art}, Fanart)", "type": "append", "value": "{shown}" } ]
     },
     "StripView_Display_IsSquare_Widget_Search": {
       "index": { "start": 3201 },
       "filter": "In({search_type}, [movies, tvshows, episodes, musicvideos, artists, albums, songs])",
-      "rules": [ { "condition": "equals({art}, Square)", "type": "append", "value": "{hasfocus}" } ]
+      "rules": [ { "condition": "equals({art}, Square)", "type": "append", "value": "{shown}" } ]
     },
     "StripView_Widget_Search_IsVisible": {
+      "note": "A focused rail only, not the preview: the preview keeps Strip's details positions, clear of the keypad.",
       "index": { "start": 3201 },
       "rules": [ { "type": "append", "value": "{hasfocus}" } ]
     },
+    "search_preview_{index}": {
+      "note": "Reads the rail's probe (prb_search_preview), so readers test one cached flag, not the chain.",
+      "index": { "start": 3201 },
+      "rules": [ { "type": "assign", "value": "Control.IsVisible({index+3052})" } ]
+    },
+    "search_preview_live_{index}": {
+      "note": "The input has focus and this is the first rail with results; a reloading rail keeps its items, so the preview holds while it loads.",
+      "index": { "start": 3201 },
+      "rules": [
+        {
+          "type": "assign",
+          "value": "[Control.HasFocus(215) | Control.HasFocus(4200)] + Integer.IsGreater(Container({index}).NumItems,0) + $EXP[search_prior_clear_{index}]"
+        }
+      ]
+    },
+    "search_prior_clear_{index}": {
+      "note": "No rail before this one has results.",
+      "index": { "start": 3201 },
+      "rules": [
+        { "condition": "equals({is_first}, true)", "type": "assign", "value": "true" },
+        {
+          "condition": "equals({is_first}, false)",
+          "type": "assign",
+          "value": "$EXP[search_prior_clear_{index-1}] + !Integer.IsGreater(Container({index-1}).NumItems,0)"
+        }
+      ]
+    },
     "search_rails_updating": {
-      "note": "A key press reloads every rail: a rail still loading takes focus even if it ends empty, so the keypad waits for them.",
+      "note": "A key press reloads every rail: a rail still loading takes focus even if it ends empty, so the input waits for them.",
       "index": { "start": 3201 },
       "rules": [ { "type": "append", "value": "Container({index}).IsUpdating" } ]
     },

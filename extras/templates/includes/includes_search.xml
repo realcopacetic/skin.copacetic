@@ -2,6 +2,29 @@
 <xml>
 	<mapping>search</mapping>
 	<includes>
+		<!-- Preview probes, first in the window: each holds its rail's live test, read as Control.IsVisible by search_preview_{index} -->
+		<template>
+			<index start="3201" />
+			<include name="prb_search_preview">
+				<control type="group" id="{index+3052}">
+					<visible>$EXP[search_preview_live_{index}]</visible>
+				</control>
+			</include>
+		</template>
+		<!-- The input's Right (and the field's Down) go to the previewed rail once every rail has loaded.
+			They read the live test: the probes only update when the window next renders -->
+		<template>
+			<index start="3201" />
+			<include name="atr_search_input_right">
+				<onright condition="!$EXP[search_rails_updating] + $EXP[search_preview_live_{index}]">SetFocus({index})</onright>
+			</include>
+		</template>
+		<template>
+			<index start="3201" />
+			<include name="atr_search_input_down">
+				<ondown condition="!$EXP[search_rails_updating] + $EXP[search_preview_live_{index}]">SetFocus({index})</ondown>
+			</include>
+		</template>
 		<!-- A rail of a type C1 doesn't define (a state file edited by hand) builds nothing here: its fields are missing -->
 		<!-- The rails' containers, flat in grouplist 3200 (Custom_1180): the grouplist chains them and skips the empty ones -->
 		<template>

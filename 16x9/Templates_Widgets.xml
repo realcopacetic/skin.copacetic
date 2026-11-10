@@ -132,15 +132,17 @@
 		</control>
 	</include>
 
-	<!-- One search rail's art, breadcrumb and spinner, each on the rail's focus and outside grouplist 3200; search_layouts calls it once per rail -->
+	<!-- One search rail's art, breadcrumb and spinner, each on the rail's focus and outside grouplist 3200; search_layouts calls it once per rail.
+		The art also shows as the input's preview, beside the keypad; it rises as the rail takes focus -->
 	<include name="Search_Row_Layout">
 		<control type="group">
-			<visible>Control.HasFocus($PARAM[id]) + !Container($PARAM[id]).IsUpdating</visible>
+			<visible>[Control.HasFocus($PARAM[id]) + !Container($PARAM[id]).IsUpdating] | $EXP[search_preview_$PARAM[id]]</visible>
 			<animation effect="slide" start="0" end="0,660" time="0" condition="Control.HasFocus($PARAM[id])">Conditional</animation>
 			<animation effect="slide" start="0" end="0,-660" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus($PARAM[id])">Conditional</animation>
 			<animation effect="fade" start="0" end="100" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus($PARAM[id])">Conditional</animation>
 			<include content="$PARAM[view]View_Display">
-				<param name="art_icon" value="Widget_$PARAM[display]_Thumbnail" />
+				<param name="art_icon" value="search_$PARAM[id]_Thumbnail" />
+				<param name="container" value="Container($PARAM[id])" />
 				<param name="display" value="$PARAM[display]" />
 				<param name="id" value="$PARAM[id]" />
 				<param name="media_view" value="false" />
@@ -211,8 +213,8 @@
 			<textcolor>$VAR[Breadcrumb_Label_Color]</textcolor>
 			<focusedcolor>$VAR[Breadcrumb_Label_Color]</focusedcolor>
 			<texturefocus />
-			<ondown>3200</ondown>
-			<onright>3200</onright>
+			<include content="atr_search_input_down" />
+			<include content="atr_search_input_right" />
 			<ontextchange>RunScript(script.copacetic.helper,action=set_search_query,id=4200,min_length=1)</ontextchange>
 			<include content="search_field_cursor_resets" />
 		</control>
@@ -231,7 +233,7 @@
 				<top>16</top>
 				<bottom>16</bottom>
 				<orientation>vertical</orientation>
-				<onright condition="!$EXP[search_rails_updating]">3200</onright>
+				<include content="atr_search_input_right" />
 				<include content="search_keypad_cursor_resets" />
 				<content>
 					<include content="kb_search_items" />
