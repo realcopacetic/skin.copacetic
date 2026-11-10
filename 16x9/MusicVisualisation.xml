@@ -12,9 +12,10 @@
 				<label>$VAR[Rating_Label]</label>
 			</control>
 		</include>
-		<include content="MyViews_Multiart_Labels">
-			<param name="include_type_label" value="false" />
-			<param name="template" value="visualisation_Multiart" />
+		<include content="Fanart_Multiart_Template">
+			<param name="art" value="artist.fanart" />
+			<param name="info" value="Player" />
+			<info>Player.Art(artist.fanart)</info>
 		</include>
 		<!-- Background -->
 		<include content="Light_Theme_Background">

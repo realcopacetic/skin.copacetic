@@ -108,7 +108,8 @@
 				<param name="content_source" value="$PARAM[content_source]" />
 				<param name="time" value="$PARAM[time]" />
 			</include>
-			<include content="Background_Multiart_Template" condition="$PARAM[include_list]">
+			<include content="Fanart_Multiart_Template" condition="$PARAM[include_list]">
+				<param name="info" value="Container(3300).ListItem" />
 				<param name="transition_time" value="$PARAM[time]" />
 			</include>
 			<control type="group">

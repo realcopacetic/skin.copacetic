@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<mapping>none</mapping>
+	<includes>
+		<!-- The fanart slideshows' extra fanart, fanart1 to fanart15 (Fanart_Multiart_Template): info is the item, art the art type -->
+		<template>
+			<range start="1" end="15" />
+			<include name="multiart_fanart_infos">
+				<info>$PARAM[info].Art($PARAM[art]{range})</info>
+			</include>
+		</template>
+	</includes>
+</xml>

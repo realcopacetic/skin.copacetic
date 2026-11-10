@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-  <include name="Background_Multiart_Template">
+  <!-- The fanart slideshows' register 3401 (the background, info screens, visualisation): fanart1 to fanart15 are generated
+       (includes_multiart.xml), and a caller's own <info> rows (the main fanart) join them; <randomize> shuffles all once at load -->
+  <include name="Fanart_Multiart_Template">
+    <param name="art" default="fanart" />
+    <param name="info" default="ListItem" />
+    <param name="transition_time" default="Multiart_Pause" />
     <definition>
       <control type="fadelabel" id="3401">
         <include content="Hidden_Control" />
         <font>Body</font>
-        <info>Container(3300).ListItem.Art(fanart1)</info>
-        <info>Container(3300).ListItem.Art(fanart2)</info>
-        <info>Container(3300).ListItem.Art(fanart3)</info>
-        <info>Container(3300).ListItem.Art(fanart4)</info>
-        <info>Container(3300).ListItem.Art(fanart5)</info>
-        <info>Container(3300).ListItem.Art(fanart6)</info>
-        <info>Container(3300).ListItem.Art(fanart7)</info>
-        <info>Container(3300).ListItem.Art(fanart8)</info>
-        <info>Container(3300).ListItem.Art(fanart9)</info>
-        <info>Container(3300).ListItem.Art(fanart10)</info>
-        <info>Container(3300).ListItem.Art(fanart11)</info>
-        <info>Container(3300).ListItem.Art(fanart12)</info>
-        <info>Container(3300).ListItem.Art(fanart13)</info>
-        <info>Container(3300).ListItem.Art(fanart14)</info>
-        <info>Container(3300).ListItem.Art(fanart15)</info>
+        <nested />
+        <include content="multiart_fanart_infos">
+          <param name="art" value="$PARAM[art]" />
+          <param name="info" value="$PARAM[info]" />
+        </include>
         <randomize>true</randomize>
         <pauseatend>$PARAM[transition_time]</pauseatend>
         <scroll>false</scroll>
@@ -30,66 +25,6 @@
     </definition>
   </include>
 
-  <include name="Infoscreen_Multiart_Template">
-    <definition>
-      <control type="fadelabel" id="3401">
-        <include content="Hidden_Control" />
-        <font>Body</font>
-        <info>ListItem.Art(fanart)</info>
-        <info>ListItem.Art(fanart1)</info>
-        <info>ListItem.Art(fanart2)</info>
-        <info>ListItem.Art(fanart3)</info>
-        <info>ListItem.Art(fanart4)</info>
-        <info>ListItem.Art(fanart5)</info>
-        <info>ListItem.Art(fanart6)</info>
-        <info>ListItem.Art(fanart7)</info>
-        <info>ListItem.Art(fanart8)</info>
-        <info>ListItem.Art(fanart9)</info>
-        <info>ListItem.Art(fanart10)</info>
-        <info>ListItem.Art(fanart11)</info>
-        <info>ListItem.Art(fanart12)</info>
-        <info>ListItem.Art(fanart13)</info>
-        <info>ListItem.Art(fanart14)</info>
-        <info>ListItem.Art(fanart15)</info>
-        <randomize>true</randomize>
-        <pauseatend>$PARAM[transition_time]</pauseatend>
-        <scroll>false</scroll>
-        <scrollout>false</scrollout>
-        <resetonlabelchange>true</resetonlabelchange>
-      </control>
-    </definition>
-  </include>
-
-  <include name="visualisation_Multiart_Template">
-    <definition>
-      <control type="fadelabel" id="3401">
-        <include content="Hidden_Control" />
-        <font>Body</font>
-        <info>Player.Art(artist.fanart)</info>
-        <info>Player.Art(artist.fanart1)</info>
-        <info>Player.Art(artist.fanart2)</info>
-        <info>Player.Art(artist.fanart3)</info>
-        <info>Player.Art(artist.fanart4)</info>
-        <info>Player.Art(artist.fanart5)</info>
-        <info>Player.Art(artist.fanart6)</info>
-        <info>Player.Art(artist.fanart7)</info>
-        <info>Player.Art(artist.fanart8)</info>
-        <info>Player.Art(artist.fanart9)</info>
-        <info>Player.Art(artist.fanart10)</info>
-        <info>Player.Art(artist.fanart11)</info>
-        <info>Player.Art(artist.fanart12)</info>
-        <info>Player.Art(artist.fanart13)</info>
-        <info>Player.Art(artist.fanart14)</info>
-        <info>Player.Art(artist.fanart15)</info>
-        <randomize>true</randomize>
-        <pauseatend>$PARAM[transition_time]</pauseatend>
-        <scroll>false</scroll>
-        <scrollout>false</scrollout>
-        <resetonlabelchange>true</resetonlabelchange>
-      </control>
-    </definition>
-  </include> 
-  
   <!-- 9300 holds the focused item: a serve echoes the cursor, so moving on breaks the match at once -->
   <expression name="multiart_item_current">String.IsEqual(Container(9300).ListItem.Property(current),Window(home).Property(artwork_cursor_primary)) + !String.IsEmpty(Window(home).Property(artwork_cursor_primary))</expression>
   <!-- ...and that serve seeded register 3400 -->
@@ -124,26 +59,20 @@
     <control type="fadelabel" id="3400">
       <include content="Hidden_Control" />
       <font>Body</font>
-      <pauseatend>$PARAM[transition_time]</pauseatend>
+      <pauseatend>Multiart_Pause</pauseatend>
       <scroll>false</scroll>
       <scrollout>false</scrollout>
     </control>
   </include>
 
   <include name="MyViews_Multiart_Labels">
-    <param name="include_type_label" default="true" />
-    <param name="template" default="Multiart" />
-    <definition>
-      <include content="Hidden_Components" condition="$PARAM[include_type_label]">
-        <control type="label" id="6400">
-          <label>$VAR[Multiart_Type]</label>
-        </control>
-      </include>
-      <include content="Multiart_Shown_Latch" condition="$PARAM[include_type_label]" />
-      <include content="$PARAM[template]_Template">
-        <param name="transition_time" value="Multiart_Pause" />
-      </include>
-    </definition>
+    <include content="Hidden_Components">
+      <control type="label" id="6400">
+        <label>$VAR[Multiart_Type]</label>
+      </control>
+    </include>
+    <include content="Multiart_Shown_Latch" />
+    <include content="Multiart_Template" />
   </include>
 
 </includes>
