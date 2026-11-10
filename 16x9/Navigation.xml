@@ -181,8 +181,9 @@
 	
 	<include name="Music_Player_Navigation">
 		<include content="infoscreen_onup">
-			<param name="condition" value="$EXP[Infoscreen_IsVisible]" />
+			<param name="condition" value="$EXP[Infoscreen_IsVisible] + $EXP[infoscreen_rails_focusable]" />
 		</include>
+		<onup condition="$EXP[Infoscreen_IsVisible] + !$EXP[infoscreen_rails_focusable]">SetFocus(3000)</onup> <!-- no rail can take focus: the menu, as before -->
 		<ondown condition="$EXP[Infoscreen_IsVisible]">SetFocus(3000)</ondown>
 		<include content="widgets_onup">
 			<param name="condition" value="Window.Is(home) + Skin.HasSetting(Widgets_Enabled)" />

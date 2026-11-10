@@ -64,7 +64,7 @@
 			(GUIWindow.cpp:962-980). Action conditions read the topmost dialog's item -->
 		<template>
 			<index start="3201" />
-			<filter>not equals({last}, false)</filter>
+			<filter>In({rail}, [set_movies, director_credits, similar, similar_artists, similar_albums, similar_songs, screenshots])</filter>
 			<include name="infoscreen_onup">
 				<onup condition="{window_is} + {last} + [$PARAM[condition]]">{id}</onup>
 			</include>

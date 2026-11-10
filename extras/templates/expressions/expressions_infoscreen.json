@@ -29,7 +29,7 @@
     "infoscreen_rails_focusable": {
       "note": "The menu's Up and Down: some rail of the topmost dialog can take focus (shown, or hidden with allowhiddenfocus, and with items or loading).",
       "index": { "start": 3201 },
-      "rules": [ { "type": "append", "value": "[{window_is} + {load} + [Control.IsVisible({id}) | {hidden_focus}] + [Integer.IsGreater({container}.NumItems,0) | {container}.IsUpdating]]" } ]
+      "rules": [ { "type": "append", "value": "[{window_is} + [Control.IsVisible({id}) | {hidden_focus}] + [Integer.IsGreater({container}.NumItems,0) | {container}.IsUpdating]]" } ]
     },
     "infoscreen_background_rail": {
       "note": "Infoscreen_HasBackground: the last focused video rail is a Billboard, which draws the background.",
