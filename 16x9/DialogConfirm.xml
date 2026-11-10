@@ -20,13 +20,13 @@
 				<control type="textbox" id="1">
 					<height max="480">auto</height>
 					<font>Main_Menu_Focused</font>
-					<textcolor>$VAR[Light_Color]</textcolor>
+					<textcolor>light</textcolor>
 					<label>$INFO[Control.GetLabel(1)] $INFO[System.Progressbar,- ,%]</label>
 				</control>
 				<control type="textbox" id="9">
 					<height max="480">auto</height>
 					<font>Main_Menu_Unfocused</font>
-					<textcolor>$VAR[Light_Color]</textcolor>
+					<textcolor>light</textcolor>
 				</control>
 			</control>
 			<control type="progress" id="20">
@@ -34,8 +34,8 @@
 				<height>8</height>
 				<left>780</left>
 				<top>1047</top>
-				<texturebg colordiffuse="$VAR[Progress_Light_Background_Color]">views/white_100.png</texturebg>
-				<midtexture colordiffuse="$VAR[Progress_Light_Focused_Color]">views/white_100.png</midtexture>
+				<texturebg colordiffuse="light15">views/white_100.png</texturebg>
+				<midtexture colordiffuse="light">views/white_100.png</midtexture>
 			</control>
 			<include content="Button_Group_Template">
 				<param name="include_labels" value="true" />
@@ -46,8 +46,8 @@
 				<param name="button2_id" value="11" />
 				<param name="button3" value="true" />
 				<param name="button3_id" value="12" />
-				<param name="color" value="$VAR[Light_Color]" />
-				<param name="unfocused_color" value="$VAR[Light_Color]" />
+				<param name="color" value="light" />
+				<param name="unfocused_color" value="light" />
 			</include>
 		</control>
 	</controls>

@@ -2,7 +2,7 @@
 <window>
 	<!-- menusettings: the helper's menu editor, opened from skin settings 1201 and 1202 -->
 	<defaultcontrol always="true">100</defaultcontrol>
-	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<backgroundcolor>dark</backgroundcolor>
 	<controls>
 		<include content="menusettings_Hidden" />
 		<include content="Default_Dialog_Panel_Layout">

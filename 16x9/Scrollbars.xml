@@ -463,7 +463,7 @@
 				<orientation>vertical</orientation>
 				<texturesliderbackground></texturesliderbackground>
 				<texturesliderbar></texturesliderbar>
-				<texturesliderbarfocus colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texturesliderbarfocus>
+				<texturesliderbarfocus colordiffuse="unfocused">views/white_100.png</texturesliderbarfocus>
 				<textureslidernib></textureslidernib>
 				<textureslidernibfocus></textureslidernibfocus>
 			</control>

@@ -4,7 +4,7 @@
 	<onunload condition="!ControlGroup(9).HasFocus(10)">SetFocus(10)</onunload>
 	<onunload>ClearProperty(settings_Passthrough,home)</onunload>
 	<defaultcontrol always="true">3001</defaultcontrol>
-	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<backgroundcolor>dark</backgroundcolor>
 	<controls>
 		<include content="Background_Multiart_Settings" />
 		<include content="Default_Settings_Panel_Layout">
@@ -36,7 +36,7 @@
 				<param name="bottom" value="40" />
 				<param name="right" value="150" />
 				<param name="label" value="$VAR[skinsettings_Hint_Label]" />
-				<param name="textcolor" value="$VAR[Light_Color]" />
+				<param name="textcolor" value="light" />
 			</include>
 		</include>
 	</controls>

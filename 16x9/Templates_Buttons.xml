@@ -32,8 +32,8 @@
 
 	<include name="Simple_Button_Template">
 		<param name="width" default="60" />
-		<param name="focused_color" default="$VAR[Light_Color]" />
-		<param name="unfocused_color" default="$VAR[Light_Color]" />
+		<param name="focused_color" default="light" />
+		<param name="unfocused_color" default="light" />
 		<param name="rotate_180" default="false" />
 		<definition>
 			<control type="button" id="$PARAM[id]">
@@ -80,8 +80,8 @@
 
 	<include name="PVR_Button_Template">
 		<param name="width" default="60" />
-		<param name="focused_color" default="$VAR[Light_Color]" />
-		<param name="unfocused_color" default="$VAR[Light_Color]" />
+		<param name="focused_color" default="light" />
+		<param name="unfocused_color" default="light" />
 		<param name="rotate_180" default="false" />
 		<definition>
 			<control type="button" id="$PARAM[id]">
@@ -107,8 +107,8 @@
 		<param name="target_id" default="" />
 		<param name="right" default="0" />
 		<param name="width" default="120" />
-		<param name="unfocused_color" default="$VAR[Light_Color]" />
-		<param name="focused_color" default="$VAR[Light_Color]" />
+		<param name="unfocused_color" default="light" />
+		<param name="focused_color" default="light" />
 		<param name="texture" default="Cross" />
 		<param name="toggle_button" default="false" />
 		<param name="alt_texture" default="Plus" />
@@ -149,8 +149,8 @@
 		<param name="target_id" default="" />
 		<param name="right" default="0" />
 		<param name="width" default="120" />
-		<param name="unfocused_color" default="$VAR[Light_Color]" />
-		<param name="focused_color" default="$VAR[Light_Color]" />
+		<param name="unfocused_color" default="light" />
+		<param name="focused_color" default="light" />
 		<param name="texture" default="Cross" />
 		<param name="border" default="false" />
 		<param name="border_color" default="$VAR[Accent_Color]" />
@@ -494,19 +494,19 @@
 						<height>1</height>
 						<centertop>50%</centertop>
 						<width>100%</width>
-						<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+						<texture colordiffuse="unfocused">views/white_100.png</texture>
 					</control>
 					<control type="image">
 						<visible>!Control.HasFocus($PARAM[id]1)</visible>
 						<include content="skinsettings_$PARAM[info]_Unfocused_Slides" />
 						<width>1</width>
-						<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+						<texture colordiffuse="unfocused">views/white_100.png</texture>
 					</control>
 					<control type="image">
 						<visible>Control.HasFocus($PARAM[id]1)</visible>
 						<include content="skinsettings_$PARAM[info]_Focused_Slides" />
 						<width>10</width>
-						<texture colordiffuse="$VAR[Light_Color]">views/white_100.png</texture>
+						<texture colordiffuse="light">views/white_100.png</texture>
 					</control>
 				</control>
 			</control>
@@ -567,31 +567,31 @@
 						<height>1</height>
 						<centertop>50%</centertop>
 						<width>100%</width>
-						<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+						<texture colordiffuse="unfocused">views/white_100.png</texture>
 					</control>
 					<control type="image">
 						<visible>!Control.HasFocus($PARAM[id]1)</visible>
 						<include content="skinsettings_$PARAM[info]_Unfocused_Slides" />
 						<width>1</width>
-						<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+						<texture colordiffuse="unfocused">views/white_100.png</texture>
 					</control>
 					<control type="image">
 						<visible>Control.HasFocus($PARAM[id]1)</visible>
 						<include content="skinsettings_$PARAM[info]_Focused_Slides" />
 						<width>10</width>
-						<texture colordiffuse="$VAR[Light_Color]">views/white_100.png</texture>
+						<texture colordiffuse="light">views/white_100.png</texture>
 					</control>
 					<control type="image">
 						<visible>!Control.HasFocus($PARAM[id]2)</visible>
 						<include content="skinsettings_$PARAM[info2]_Unfocused_Slides" />
 						<width>1</width>
-						<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+						<texture colordiffuse="unfocused">views/white_100.png</texture>
 					</control>
 					<control type="image">
 						<visible>Control.HasFocus($PARAM[id]2)</visible>
 						<include content="skinsettings_$PARAM[info2]_Focused_Slides" />
 						<width>10</width>
-						<texture colordiffuse="$VAR[Light_Color]">views/white_100.png</texture>
+						<texture colordiffuse="light">views/white_100.png</texture>
 					</control>
 				</control>
 			</control>

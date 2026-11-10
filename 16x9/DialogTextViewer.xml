@@ -10,7 +10,7 @@
 			<include content="Description_Label">
 				<param name="id" value="5" />
 				<param name="type" value="textbox" />
-				<param name="textcolor" value="$VAR[Light_Color]" />
+				<param name="textcolor" value="light" />
 				<param name="left" value="120" />
 				<param name="right" value="120" />
 				<param name="height" value="645" />

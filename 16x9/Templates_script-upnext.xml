@@ -20,10 +20,10 @@
 			<height>6</height>
 			<animation effect="fade" end="0" time="0">WindowClose</animation> <!-- a close resets the open leg: hide the bar for the window's fade -->
 			<control type="image">
-				<texture colordiffuse="$VAR[Progress_Light_Background_Color]">views/white_100.png</texture>
+				<texture colordiffuse="light15">views/white_100.png</texture>
 			</control>
 			<control type="image">
-				<texture colordiffuse="$VAR[Light_Color]">views/white_100.png</texture>
+				<texture colordiffuse="light">views/white_100.png</texture>
 				<include content="playnext_countdown" />
 			</control>
 		</control>

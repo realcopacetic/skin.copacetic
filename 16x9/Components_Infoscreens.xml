@@ -117,7 +117,7 @@
 			<top>60</top>
 			<height max="206">auto</height>
 			<font>Body</font>
-			<textcolor>$VAR[Light_Color]</textcolor>
+			<textcolor>light</textcolor>
 			<label>$INFO[ListItem.AddonDescription]</label>
 			<align>left</align>
 			<autoscroll>true</autoscroll>
@@ -150,7 +150,7 @@
 					<height max="280">auto</height>
 					<align>$PARAM[align]</align>
 					<font>Billboard_Title</font>
-					<textcolor>$VAR[Light_Color]</textcolor>
+					<textcolor>light</textcolor>
 					<label>$VAR[Title_Label]</label>
 				</control>
 				<!-- Details -->
@@ -159,7 +159,7 @@
 					<width>100%</width>
 					<height max="135">auto</height>
 					<font>Info_Infoscreens_Label</font>
-					<textcolor>$VAR[Light_Color]</textcolor>
+					<textcolor>light</textcolor>
 					<label>$VAR[Info_Infoscreens_Label]</label>
 					<align>$PARAM[align]</align>
 				</control>
@@ -200,7 +200,7 @@
 					<aligny>center</aligny>
 					<font>$PARAM[font]</font>
 					<label>$VAR[Plot_Label]$INFO[Window(musicinformation).Property(ResetScroll)]</label>
-					<textcolor>$VAR[Light_Color]</textcolor>
+					<textcolor>light</textcolor>
 					<pagecontrol>60</pagecontrol>
 					<autoscroll>false</autoscroll>
 				</control>
@@ -266,7 +266,7 @@
 					<width>60</width>
 					<centerleft>50%</centerleft>
 					<height>60</height>
-					<texture colordiffuse="$VAR[Light_Color]">dialogs/icon_arrow_focused.png</texture>
+					<texture colordiffuse="light">dialogs/icon_arrow_focused.png</texture>
 				</control>
 				<control type="image">
 					<height>$PARAM[starheight]</height>
@@ -282,14 +282,14 @@
 					<width>60</width>
 					<centerleft>50%</centerleft>
 					<height>60</height>
-					<texture colordiffuse="$VAR[Light_Color]">dialogs/icon_arrow_focused.png</texture>
+					<texture colordiffuse="light">dialogs/icon_arrow_focused.png</texture>
 				</control>
 				<control type="image">
 					<visible>String.IsEmpty($PARAM[type].UserRating)</visible>
 					<width>60</width>
 					<centerleft>50%</centerleft>
 					<height>60</height>
-					<texture colordiffuse="$VAR[Light_Color]">flags/blank.png</texture>
+					<texture colordiffuse="light">flags/blank.png</texture>
 				</control>
 			</control>
 		</definition>
@@ -375,7 +375,7 @@
 			<visible>![$EXP[TransparentDialog_IsVisible] + [Window.Is(movieinformation) | String.IsEqual(ListItem.DBType,artist)]] + ![$EXP[PanelDialog_IsVisible] + [String.IsEqual(ListItem.DBtype,album) | Window.Is(songinformation)]]</visible>
 			<include content="Visible_Fade_Delayed_Animation" />
 			<include content="Transparent_Dialog_Panel">
-				<param name="colordiffuse" value="$VAR[Dark_Grey_Color]" />
+				<param name="colordiffuse" value="dark_grey" />
 			</include>
 			<include content="Simple_ListIcon" condition="String.IsEqual(ListItem.DBType,episode) | [String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(poster))]">
 				<param name="left" value="420" />
@@ -401,7 +401,7 @@
 					<height>100%</height>
 					<width>480</width>
 					<label>$PARAM[label]</label>
-					<textcolor>$VAR[Light_Color]</textcolor>
+					<textcolor>light</textcolor>
 					<font>Plot_Fullscreen</font>
 					<align>right</align>
 				</control>
@@ -409,7 +409,7 @@
 					<height>100%</height>
 					<width>1140</width>
 					<label>$PARAM[label2]</label>
-					<textcolor>$VAR[Light_Color]</textcolor>
+					<textcolor>light</textcolor>
 					<font>Keyboard_Button_-2</font>
 					<align>left</align>
 					<scroll>true</scroll>
@@ -502,7 +502,7 @@
 					<param name="left" value="60" />
 					<param name="right" value="60" />
 					<param name="height" value="120" />
-					<param name="textcolor" value="$VAR[Light_Color]" />
+					<param name="textcolor" value="light" />
 					<param name="font" value="Grid_Info" />
 					<param name="haspath" value="true" />
 					<scroll>true</scroll>

@@ -16,13 +16,13 @@
 				<top>390</top>
 				<height>90</height>
 				<control type="image">
-					<texture colordiffuse="$VAR[Light_Color]">views/white_100.png</texture>
+					<texture colordiffuse="light">views/white_100.png</texture>
 				</control>
 				<control type="label" id="4">
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>Main_Menu_Unfocused</font>
-					<textcolor>$VAR[Dark_Color]</textcolor>
+					<textcolor>dark</textcolor>
 					<textoffsetx>15</textoffsetx>
 				</control>
 			</control>

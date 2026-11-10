@@ -188,7 +188,7 @@
 						<aligny>center</aligny>
 						<label>$INFO[Container($PARAM[id]).ListItemNoWrap($PARAM[position]).Label]</label>
 						<font>Keyboard_Button_$PARAM[position]</font>
-						<textcolor>$VAR[Light_Color]</textcolor>
+						<textcolor>light</textcolor>
 					</control>
 				</control>
 				<control type="label">
@@ -197,7 +197,7 @@
 					<aligny>center</aligny>
 					<label>$INFO[Container($PARAM[id]).ListItemNoWrap($PARAM[position]).Label]</label>
 					<font>Keyboard_Button_5</font>
-					<textcolor>$VAR[Unfocused_Color]</textcolor>
+					<textcolor>unfocused</textcolor>
 				</control>
 			</control>
 		</definition>
@@ -235,7 +235,7 @@
 						<right>22</right>
 						<top>13</top>
 						<height>6</height>
-						<texture colordiffuse="$VAR[Light_Color]">views/white_100.png</texture>
+						<texture colordiffuse="light">views/white_100.png</texture>
 					</control>
 					<control type="label">
 						<animation effect="rotate" start="0" end="-90" center="auto" time="0" condition="String.IsEqual(Container($PARAM[id]).ListItemNoWrap($PARAM[position]).Label,Ⅲ)">Conditional</animation>
@@ -248,7 +248,7 @@
 						<aligny>center</aligny>
 						<label>$INFO[Container($PARAM[id]).ListItemNoWrap($PARAM[position]).Label]</label>
 						<font>Special_Keyboard_Button_$PARAM[position]</font>
-						<textcolor>$VAR[Light_Color]</textcolor>
+						<textcolor>light</textcolor>
 					</control>
 				</control>
 				<control type="group">
@@ -261,7 +261,7 @@
 						<aligny>center</aligny>
 						<label>$INFO[Container($PARAM[id]).ListItemNoWrap($PARAM[position]).Label]</label>
 						<font>Special_Keyboard_Button_5</font>
-						<textcolor>$VAR[Unfocused_Color]</textcolor>
+						<textcolor>unfocused</textcolor>
 					</control>
 					<control type="image">
 						<visible>String.IsEqual(Container($PARAM[id]).ListItemNoWrap($PARAM[position]).Label,↓)</visible>
@@ -269,7 +269,7 @@
 						<right>35</right>
 						<top>27</top>
 						<height>1</height>
-						<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+						<texture colordiffuse="unfocused">views/white_100.png</texture>
 					</control>
 				</control>
 			</control>
@@ -291,7 +291,7 @@
 						<aligny>center</aligny>
 						<label>$INFO[Container($PARAM[id]).ListItemPosition($PARAM[position]).Label]</label>
 						<font>Special_Keyboard_Button_0</font>
-						<textcolor>$VAR[Light_Color]</textcolor>
+						<textcolor>light</textcolor>
 					</control>
 					<control type="image">
 						<left>15</left>
@@ -307,7 +307,7 @@
 					<aligny>center</aligny>
 					<label>$INFO[Container($PARAM[id]).ListItemPosition($PARAM[position]).Label]</label>
 					<font>Special_Keyboard_Button_5</font>
-					<textcolor>$VAR[Unfocused_Color]</textcolor>
+					<textcolor>unfocused</textcolor>
 				</control>
 			</control>
 		</definition>
@@ -520,7 +520,7 @@
 					<textoffsetx>30</textoffsetx>
 					<label>$INFO[ListItem.Label]</label>
 					<font>Keyboard_Button_5</font>
-					<textcolor>$VAR[Unfocused_Color]</textcolor>
+					<textcolor>unfocused</textcolor>
 					<aligny>center</aligny>
 					<align>center</align>
 				</control>
@@ -531,7 +531,7 @@
 					<textoffsetx>30</textoffsetx>
 					<label>$INFO[ListItem.Label]</label>
 					<font>Keyboard_Button_5</font>
-					<textcolor>$VAR[Light_Color]</textcolor>
+					<textcolor>light</textcolor>
 					<aligny>center</aligny>
 					<align>center</align>
 				</control>
@@ -539,7 +539,7 @@
 					<width>100%</width>
 					<bottom>0</bottom>
 					<height>1</height>
-					<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+					<texture colordiffuse="unfocused">views/white_100.png</texture>
 				</control>
 			</focusedlayout>
 			<content>$VAR[AutoComplete_Path]</content>

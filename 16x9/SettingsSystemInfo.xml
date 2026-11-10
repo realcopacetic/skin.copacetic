@@ -2,7 +2,7 @@
 <window>
 	<!-- systeminfo -->
 	<defaultcontrol always="true">3010</defaultcontrol>
-	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<backgroundcolor>dark</backgroundcolor>
 	<controls>
 		<include content="Background_Multiart_Settings" />
 		<include content="Default_Settings_Panel_Layout">
@@ -54,7 +54,7 @@
 				<font>Description</font>
 				<align>left</align>
 				<label>$INFO[Control.GetLabel(52)]</label>
-				<textcolor>$VAR[Light_Color]</textcolor>
+				<textcolor>light</textcolor>
 			</control>
 			<control type="textbox">
 				<right>120</right>
@@ -64,7 +64,7 @@
 				<font>Description</font>
 				<align>right</align>
 				<label>$LOCALIZE[31618] [B]$INFO[System.CPUUsage][/B][CR]$LOCALIZE[31617] [B]$INFO[System.Memory(used.percent)][/B]</label>
-				<textcolor>$VAR[Light_Color]</textcolor>
+				<textcolor>light</textcolor>
 			</control>
 		</include>
 		<include content="Hidden_Components">

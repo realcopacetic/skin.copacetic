@@ -1,9 +1,40 @@
 <colors>
   <color name="copacetic_dark_color">ff000000</color>
   <color name="copacetic_light_color">ffebedee</color>
-  <color name="copacetic_accent_color">ffff5174</color>
   <color name="copacetic_dark_grey_color">ff0f1415</color>
   <color name="copacetic_light_grey_color">ff299498</color>
   <color name="copacetic_unfocused_color">ff68746d</color>
   <color name="copacetic_rating_color">ffffed78</color>
+  <color name="copacetic_accent_color">ffff5174</color>
+
+  <color name="light">ffebedee</color>
+  <color name="light15">26ebedee</color>
+  <color name="light_background">ffd8d8d8</color>
+  <color name="light_grey">ff299498</color>
+
+  <color name="dark">ff000000</color>
+  <color name="dark15">26000000</color>
+  <color name="dark50">80000000</color>
+  <color name="dark66">aa000000</color>
+  <color name="dark75">bf000000</color>
+  <color name="dark_grey">ff0f1415</color>
+  <color name="dark_grey50">800f1415</color>
+  <color name="dark_grey66">aa0f1415</color>
+  <color name="dark_grey75">bf0f1415</color>
+  <color name="dark_grey85">d90f1415</color>
+  <color name="dark_grey90">e50f1415</color>
+
+  <color name="blank">01000000</color>
+
+  <color name="unfocused">ff68746d</color>
+  <color name="unfocused40">6668746d</color>
+  <color name="unfocused50">8068746d</color>
+
+  <color name="user_rating">ffffed78</color>
+
+  <color name="brightness15">ff262626</color>
+  <color name="brightness25">ff404040</color>
+  <color name="brightness33">ff555555</color>
+  <color name="brightness50">ff808080</color>
+  <color name="brightness66">ffaaaaaa</color>
 </colors>

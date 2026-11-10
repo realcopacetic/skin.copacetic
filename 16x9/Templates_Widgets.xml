@@ -254,7 +254,7 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 						<font>Keyboard_Button_5</font>
-						<textcolor>$VAR[Unfocused_Color]</textcolor>
+						<textcolor>unfocused</textcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout width="48" height="48">
@@ -272,7 +272,7 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 						<font>Keyboard_Button_5</font>
-						<textcolor>$VAR[Light_Color]</textcolor>
+						<textcolor>light</textcolor>
 					</control>
 				</focusedlayout>
 			</control>

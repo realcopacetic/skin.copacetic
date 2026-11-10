@@ -10,14 +10,14 @@
 			<width>90</width>
 			<height>90</height>
 			<texturefocus colordiffuse="$VAR[Primary_Color]">dialogs/mover_tl_focused.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[Unfocused_Color]">dialogs/mover_tl_unfocused.png</texturenofocus>
+			<texturenofocus colordiffuse="unfocused">dialogs/mover_tl_unfocused.png</texturenofocus>
 		</control>
 		<!-- Bottom right mover -->
 		<control type="mover" id="9">
 			<width>90</width>
 			<height>90</height>
 			<texturefocus colordiffuse="$VAR[Primary_Color]">dialogs/mover_br_focused.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[Unfocused_Color]">dialogs/mover_br_unfocused.png</texturenofocus>
+			<texturenofocus colordiffuse="unfocused">dialogs/mover_br_unfocused.png</texturenofocus>
 		</control>
 		<!-- Subtitle position mover -->
 		<control type="mover" id="10">
@@ -26,7 +26,7 @@
 			<width>360</width>
 			<height>30</height>
 			<texturefocus colordiffuse="$VAR[Primary_Color]">dialogs/mover_sub_focused.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[Unfocused_Color]">dialogs/mover_sub_unfocused.png</texturenofocus>
+			<texturenofocus colordiffuse="unfocused">dialogs/mover_sub_unfocused.png</texturenofocus>
 		</control>
 		<!-- Pixel aspect ratio box -->
 		<control type="resize" id="11">
@@ -34,7 +34,7 @@
 			<height>120</height>
 			<centerleft>50%</centerleft>
 			<centertop>50%</centertop>
-			<texturefocus colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texturefocus>
+			<texturefocus colordiffuse="unfocused">views/white_100.png</texturefocus>
 			<texturenofocus />
 			<pulseonselect>no</pulseonselect>
 		</control>

@@ -2,7 +2,7 @@
 <window>
 	<!-- searchsettings: the helper's search rails editor, opened from skin settings 1116 -->
 	<defaultcontrol always="true">100</defaultcontrol>
-	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<backgroundcolor>dark</backgroundcolor>
 	<controls>
 		<include content="editor_Hidden" />
 		<include content="Default_Dialog_Panel_Layout">
@@ -40,7 +40,7 @@
 				<param name="height" value="100" />
 				<param name="id" value="6" />
 				<param name="right" value="150" />
-				<param name="textcolor" value="$VAR[Light_Color]" />
+				<param name="textcolor" value="light" />
 				<param name="type" value="textbox" />
 			</include>
 			<include content="Button_Group_Template">

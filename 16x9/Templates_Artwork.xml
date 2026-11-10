@@ -122,7 +122,7 @@
 				<top>0</top>
 				<height>50%</height>
 				<aspectratio>stretch</aspectratio>
-				<texture colordiffuse="$VAR[Dark_Color]" flipy="true">views/progress_overlay.png</texture>
+				<texture colordiffuse="dark" flipy="true">views/progress_overlay.png</texture>
 			</control>
 		</definition>
 	</include>
@@ -181,7 +181,7 @@
 				<control type="image">
 					<visible>!$EXP[TransparentDialog_IsVisible]</visible>
 					<include content="Visible_Fade_Delayed_Animation" />
-					<texture colordiffuse="$VAR[Light_Color]">views/collection_indicator.png</texture>
+					<texture colordiffuse="light">views/collection_indicator.png</texture>
 				</control>
 			</control>
 		</definition>
@@ -196,7 +196,7 @@
 				<bottom>0</bottom>
 				<height>50%</height>
 				<aspectratio>stretch</aspectratio>
-				<texture colordiffuse="$VAR[Dark_Color]">views/progress_overlay.png</texture>
+				<texture colordiffuse="dark">views/progress_overlay.png</texture>
 			</control>
 		</definition>
 	</include>
@@ -221,7 +221,7 @@
 				</control>
 				<control type="image">
 					<visible>Skin.String(Theme,Light)</visible>
-					<texture colordiffuse="$VAR[Light_Grey_Color]">views/gradient_light-background_$PARAM[bottom].png</texture>
+					<texture colordiffuse="light_grey">views/gradient_light-background_$PARAM[bottom].png</texture>
 				</control>
 			</control>
 		</control>
@@ -348,7 +348,7 @@
 		<param name="flipx" default="false" />
 		<param name="flipy" default="false" />
 		<param name="texture" default="views/dropshadow_left_120.png" />
-		<param name="colordiffuse" default="$VAR[Dropshadow_Diffuse]" />
+		<param name="colordiffuse" default="dark" />
 		<param name="animationtype" default="Visible" />
 		<param name="animationcondition" default="false" />
 		<param name="animationeffect" default="fade" />

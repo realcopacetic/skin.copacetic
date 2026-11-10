@@ -43,13 +43,13 @@
 			<!-- Check -->
 			<include content="Grid_Icon" condition="Skin.HasSetting(GridView_AltWatchedStatus_Enabled) + Window.Is(videos)">
 				<param name="backing_visible" value="false" />
-				<param name="color" value="$VAR[Light_Color]" />
+				<param name="color" value="light" />
 				<bottom>0</bottom>
 				<centerleft>50%</centerleft>
 			</include>
 			<include content="Grid_Icon" condition="Skin.HasSetting(GridView_AltWatchedStatus_Enabled) + [Window.Is(addonbrowser) | Window.Is(programs)]">
 				<param name="backing_visible" value="false" />
-				<param name="color" value="$VAR[Light_Color]" />
+				<param name="color" value="light" />
 				<param name="icon" value="Special_Addonbrowser_focused" />
 				<param name="visible" value="[!String.Contains(Container.FolderPath,/user/) + [ListItem.Property(Addon.IsInstalled) | String.Contains(ListItem.Label,Copacetic)]] | [$EXP[Container_Addons_NonRepo] + String.Contains(Container.FolderPath,/user/) + ListItem.Property(Addon.IsInstalled) + !ListItem.Property(Addon.IsEnabled)]" />
 				<bottom>0</bottom>
@@ -59,7 +59,7 @@
 			<include content="Grid_Icon" condition="Skin.HasSetting(Secondary_List_Enabled) + Window.Is(videos)">
 				<param name="backing_visible" value="false" />
 				<param name="icon" value="Library_focused" />
-				<param name="color" value="$VAR[Light_Color]" />
+				<param name="color" value="light" />
 				<param name="visible" value="ListItem.IsCollection | [ListItem.HasVideoVersions + !String.IsEqual(Container.FolderName,ListItem.Title)]" />
 				<top>0</top>
 				<right>0</right>
@@ -227,7 +227,7 @@
 							<visible>![$EXP[GridView_Details_Off] | $EXP[GridView_Details_Breadcrumb]] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo)</visible>
 							<include content="Visible_Fade_Delayed_Animation" />
 							<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="Default_Transition_1x" tween="sine" easing="inout" reversible="false">Focus</animation>
-							<texture colordiffuse="$VAR[Grid_Mask]">views/white_100.png</texture>
+							<texture colordiffuse="dark66">views/white_100.png</texture>
 						</control>
 					</include>
 				</control>
@@ -678,7 +678,7 @@
 					<control type="textbox">
 						<height max="$PARAM[title_max_height]">auto</height>
 						<font>$PARAM[title_font]</font>
-						<textcolor>$VAR[Light_Color]</textcolor>
+						<textcolor>light</textcolor>
 						<label>$VAR[Title_Label]</label>
 						<align>center</align>
 					</control>
@@ -687,7 +687,7 @@
 						<visible>!String.IsEmpty(Control.GetLabel(6004))</visible>
 						<height>35</height>
 						<font>$PARAM[info_font]</font>
-						<textcolor>$VAR[Light_Color]</textcolor>
+						<textcolor>light</textcolor>
 						<label>$INFO[Control.GetLabel(6004)]</label>
 						<align>center</align>
 					</control>
@@ -715,7 +715,7 @@
 				<control type="textbox">
 					<height max="135">auto</height>
 					<font>Spotlight_Title</font>
-					<textcolor>$VAR[Light_Color]</textcolor>
+					<textcolor>light</textcolor>
 					<label>$VAR[Title_Label]</label>
 					<align>center</align>
 				</control>
@@ -723,7 +723,7 @@
 					<visible>!String.IsEmpty(Control.GetLabel(6004))</visible>
 					<height>35</height>
 					<font>Grid_Info</font>
-					<textcolor>$VAR[Light_Color]</textcolor>
+					<textcolor>light</textcolor>
 					<label>$INFO[Control.GetLabel(6004)]</label>
 					<align>center</align>
 				</control>

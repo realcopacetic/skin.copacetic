@@ -34,7 +34,7 @@
 				<centertop>50%</centertop>
 				<height>$PARAM[height]</height>
 				<aspectratio>scale</aspectratio>
-				<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+				<texture colordiffuse="unfocused">views/white_100.png</texture>
 			</control>
 		</definition>
 	</include>
@@ -60,7 +60,7 @@
 					<visible>$PARAM[dividervisible]</visible>
 					<width>1</width>
 					<aspectratio>scale</aspectratio>
-					<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+					<texture colordiffuse="unfocused">views/white_100.png</texture>
 				</control>
 				<control type="scrollbar" id="$PARAM[id]">
 					<visible>$PARAM[scrollbarvisible]</visible>
@@ -74,8 +74,8 @@
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<texturesliderbackground></texturesliderbackground>
-					<texturesliderbar colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texturesliderbar>
-					<texturesliderbarfocus colordiffuse="$VAR[Light_Color]">views/white_100.png</texturesliderbarfocus>
+					<texturesliderbar colordiffuse="unfocused">views/white_100.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="light">views/white_100.png</texturesliderbarfocus>
 					<textureslidernib></textureslidernib>
 					<textureslidernibfocus></textureslidernibfocus>
 				</control>
@@ -88,7 +88,7 @@
 		<definition>
 			<height>60</height>
 			<font>Main_Menu_Focused</font>
-			<textcolor>$VAR[Light_Color]</textcolor>
+			<textcolor>light</textcolor>
 		</definition>
 	</include>
 
@@ -96,7 +96,7 @@
 		<definition>
 			<height>60</height>
 			<font>Main_Menu_Unfocused</font>
-			<textcolor>$VAR[Light_Color]</textcolor>
+			<textcolor>light</textcolor>
 		</definition>
 	</include>
 
@@ -121,7 +121,7 @@
 				<visible>Control.IsVisible($PARAM[id]) + !Control.HasFocus($PARAM[id])</visible>
 				<font>Default_Settings_List</font>
 				<textoffsetx>60</textoffsetx>
-				<textcolor>$VAR[Unfocused_Color]</textcolor>
+				<textcolor>unfocused</textcolor>
 				<label>$INFO[Control.GetLabel($PARAM[id])]</label>
 			</control>
 			<control type="group">
@@ -129,7 +129,7 @@
 				<control type="label">
 					<font>Default_Settings_List</font>
 					<textoffsetx>60</textoffsetx>
-					<textcolor>$VAR[Light_Color]</textcolor>
+					<textcolor>light</textcolor>
 					<label>$INFO[Control.GetLabel($PARAM[id])]</label>
 				</control>
 				<control type="image">
@@ -137,7 +137,7 @@
 					<right>0</right>
 					<height>1</height>
 					<bottom>0</bottom>
-					<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+					<texture colordiffuse="unfocused">views/white_100.png</texture>
 				</control>
 			</control>
 		</control>
@@ -173,7 +173,7 @@
 	<include name="playerprocessinfo_Button">
 		<textoffsetx>0</textoffsetx>
 		<height>50</height>
-		<textcolor>$VAR[Light_Color]</textcolor>
+		<textcolor>light</textcolor>
 		<texturefocus />
 	</include>
 

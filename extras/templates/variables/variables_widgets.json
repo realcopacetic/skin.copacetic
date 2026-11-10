@@ -205,57 +205,57 @@
       "rows": [
         {
           "condition": "Control.HasFocus(3000) | $EXP[Music_Player_HasFocus] | $EXP[Container_HasBackground] | Control.HasFocus(4201)",
-          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
-          "focused": "$VAR[Light_Color]"
+          "background": "light15",
+          "focused": "light"
         },
         {
           "filter": "equals({layout}, Showcase)",
           "condition": "Control.HasFocus({index}) + Skin.String(Theme,Light)",
-          "background": "$VAR[Alpha_15]$VAR[Dark_Hex]",
-          "focused": "$VAR[Dark_Grey_Color]"
+          "background": "dark15",
+          "focused": "dark_grey"
         },
         {
           "filter": "equals({layout}, Strip) + equals({art}, Posters)",
           "condition": "Control.HasFocus({index}) + !String.IsEmpty(Container({index}).ListItemNoWrap(2).Label)",
-          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
-          "focused": "$VAR[Light_Color]"
+          "background": "light15",
+          "focused": "light"
         },
         {
           "filter": "equals({layout}, Strip) + equals({art}, Square)",
           "condition": "Control.HasFocus({index}) + !String.IsEmpty(Container({index}).ListItemNoWrap(1).Label)",
-          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
-          "focused": "$VAR[Light_Color]"
+          "background": "light15",
+          "focused": "light"
         },
         {
           "filter": "equals({layout}, Strip) + equals({art}, Fanart)",
           "condition": "Control.HasFocus({index}) + !String.IsEmpty(Container({index}).ListItemNoWrap(1).Label)",
-          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
-          "focused": "$VAR[Light_Color]"
+          "background": "light15",
+          "focused": "light"
         },
         {
           "filter": "equals({layout}, Grid) + equals({art}, Posters)",
           "condition": "Control.HasFocus({index}) + !String.IsEmpty(Container({index}).ListItemNoWrap(5).Label)",
-          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
-          "focused": "$VAR[Light_Color]"
+          "background": "light15",
+          "focused": "light"
         },
         {
           "filter": "equals({layout}, Grid) + equals({art}, Square)",
           "condition": "Control.HasFocus({index}) + !String.IsEmpty(Container({index}).ListItemNoWrap(5).Label)",
-          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
-          "focused": "$VAR[Light_Color]"
+          "background": "light15",
+          "focused": "light"
         },
         {
           "filter": "equals({layout}, Grid) + equals({art}, Fanart)",
           "condition": "Control.HasFocus({index}) + !String.IsEmpty(Container({index}).ListItemNoWrap(3).Label)",
-          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
-          "focused": "$VAR[Light_Color]"
+          "background": "light15",
+          "focused": "light"
         },
         {
           "condition": "Skin.String(Theme,Light)",
-          "background": "$VAR[Alpha_15]$VAR[Dark_Hex]"
+          "background": "dark15"
         },
         {
-          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
+          "background": "light15",
           "focused": "$VAR[Primary_Color]"
         }
       ]

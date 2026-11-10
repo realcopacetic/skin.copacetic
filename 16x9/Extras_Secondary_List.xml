@@ -254,7 +254,7 @@
 			<control type="group">
 				<visible>String.IsEqual(Container(3100).ListItem.Overlay,OverlayWatched.png)</visible>
 				<include content="Check_focused">
-					<param name="color" value="$VAR[Light_Color]" />
+					<param name="color" value="light" />
 					<animation effect="slide" start="0,0" end="15,0" time="0" condition="$EXP[ListView_Display_IsThumbnails]">Conditional</animation>
 				</include>
 			</control>

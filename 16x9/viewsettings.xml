@@ -2,7 +2,7 @@
 <window>
 	<!-- viewsettings: the helper's view editor, opened from skin settings 1352 and the view menu's View options -->
 	<defaultcontrol always="true">100</defaultcontrol>
-	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<backgroundcolor>dark</backgroundcolor>
 	<controls>
 		<include content="pathsettings_Hidden" /><!-- the same hidden description textbox 6 the path editor needs -->
 		<!-- Without a visible param: the editor itself counts as a panel dialog (PanelDialog_IsVisible), so the views behind it fade -->

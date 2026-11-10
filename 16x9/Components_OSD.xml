@@ -7,7 +7,7 @@
 			<right>$PARAM[right]</right>
 			<centertop>50%</centertop>
 			<height>18</height>
-			<texturebg colordiffuse="$VAR[Blank_Color]">dialogs/range_chapters_bg.png</texturebg>
+			<texturebg colordiffuse="blank">dialogs/range_chapters_bg.png</texturebg>
 			<righttexture colordiffuse="$VAR[Accent_Color]">dialogs/range_chapters_right.png</righttexture>
 			<info>Player.Chapters</info>
 		</control>
@@ -37,7 +37,7 @@
 			<height>6</height>
 			<!--<info>Player.Progress</info>-->
 			<info>Player.SeekBar</info>
-			<texturebg colordiffuse="$VAR[Blank_Color]">views/white_100.png</texturebg>
+			<texturebg colordiffuse="blank">views/white_100.png</texturebg>
 			<midtexture colordiffuse="$VAR[Seekbar_Focused_Color]">views/white_100.png</midtexture>
 		</control>
 		<!-- Seek bar -->
@@ -48,7 +48,7 @@
 			<right>$PARAM[progress_bar_padding]</right>
 			<height>6</height>
 			<info>Player.SeekBar</info>
-			<texturebg colordiffuse="$VAR[Blank_Color]">views/white_100.png</texturebg>
+			<texturebg colordiffuse="blank">views/white_100.png</texturebg>
 			<midtexture colordiffuse="$VAR[Accent_Color]">views/white_100.png</midtexture>
 		</control>-->
 	</include>
@@ -64,7 +64,7 @@
 			<height>6</height>
 			<info2>PVR.TimeshiftProgressBufferStart</info2>
 			<info>PVR.TimeshiftProgressBufferEnd</info>
-			<texturebg colordiffuse="$VAR[Blank_Color]">views/white_100.png</texturebg>
+			<texturebg colordiffuse="blank">views/white_100.png</texturebg>
 			<midtexture colordiffuse="$VAR[Accent_Color]">views/white_100.png</midtexture>
 		</control>
 		<!-- Progress bar -->
@@ -144,7 +144,7 @@
 				<left>$PARAM[left]</left>
 				<width>$PARAM[width]</width>
 				<height>20</height>
-				<texturesliderbar colordiffuse="$VAR[Light_Color]">dialogs/dialogseekbar_background.png</texturesliderbar>
+				<texturesliderbar colordiffuse="light">dialogs/dialogseekbar_background.png</texturesliderbar>
 				<textureslidernibfocus colordiffuse="$VAR[Accent_Color]">dialogs/dialogslider_nib_20.png</textureslidernibfocus>
 				<info>$PARAM[info]</info>
 				<onup condition="Window.Is(musicosd) | [VideoPlayer.IsFullscreen + VideoPlayer.Content(livetv)]">3010</onup>
@@ -244,7 +244,7 @@
 	<include name="Now_Playing_Icon">
 		<param name="visible" default="true" />
 		<param name="width" default="120" />
-		<param name="color" default="$VAR[Light_Color]" />
+		<param name="color" default="light" />
 		<definition>
 			<control type="group">
 				<visible>!$EXP[TransparentDialog_IsVisible]</visible>
@@ -337,7 +337,7 @@
 		<param name="large_label" default="false" />
 		<param name="small_label" default="false" />
 		<param name="playicon" default="true" />
-		<param name="color" default="$VAR[Light_Color]" />
+		<param name="color" default="light" />
 		<definition>
 			<control type="group">
 				<visible>!Window.IsActive(busydialog)</visible>
@@ -405,7 +405,7 @@
 				<height>240</height>
 				<width>100%</width>
 				<aspectratio>stretch</aspectratio>
-				<texture colordiffuse="$VAR[Dark_Color]" flipy="true">views/progress_overlay.png</texture>
+				<texture colordiffuse="dark" flipy="true">views/progress_overlay.png</texture>
 			</control>
 		</control>
 		<control type="grouplist">
@@ -433,7 +433,7 @@
 				<width max="960">auto</width>
 				<label>$VAR[Title_Breadcrumb_Label]</label>
 				<font>Title_Breadcrumb_Label</font>
-				<textcolor>$VAR[Light_Color]</textcolor>
+				<textcolor>light</textcolor>
 			</control>
 			<!--Label 1 -->
 			<control type="label">
@@ -444,7 +444,7 @@
 				<top>16</top>
 				<label>$VAR[Info_Fullscreen_Label]</label>
 				<font>Info_Breadcrumb_Label</font>
-				<textcolor>$VAR[Light_Color]</textcolor>
+				<textcolor>light</textcolor>
 			</control>
 			<control type="label">
 				<visible>Integer.IsGreater(Skin.TimerElapsedSecs(video_playback),5) + Integer.IsLess(Skin.TimerElapsedSecs(video_playback),8)</visible>
@@ -454,7 +454,7 @@
 				<top>16</top>
 				<label>$VAR[Info_Fullscreen_Label2]</label>
 				<font>Info_Breadcrumb_Label</font>
-				<textcolor>$VAR[Light_Color]</textcolor>
+				<textcolor>light</textcolor>
 			</control>
 			<!-- MPAA -->
 			<control type="image">
@@ -473,7 +473,7 @@
 				<top>16</top>
 				<label>$LOCALIZE[31300]</label>
 				<font>Info_Breadcrumb_Label</font>
-				<textcolor>$VAR[Light_Color]</textcolor>
+				<textcolor>light</textcolor>
 			</control>
 			<include content="MPAA_Flag_Icon" condition="!$EXP[Wide_Flag]" />
 			<include content="MPAA_Flag_Icon" condition="$EXP[Wide_Flag]">
@@ -488,7 +488,7 @@
 				<top>16</top>
 				<label>$VAR[MPAA_Description_Label]</label>
 				<font>Info_Breadcrumb_Label</font>
-				<textcolor>$VAR[Light_Color]</textcolor>
+				<textcolor>light</textcolor>
 			</control>
 		</control>
 	</include>
@@ -503,7 +503,7 @@
 				<left>-15</left>
 				<height>60</height>
 				<aspectratio>keep</aspectratio>
-				<texture colordiffuse="$VAR[Light_Color]">$VAR[MPAA_Flag]</texture>
+				<texture colordiffuse="light">$VAR[MPAA_Flag]</texture>
 			</control>
 		</definition>
 	</include>

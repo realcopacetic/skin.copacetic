@@ -9,15 +9,15 @@
       <height>180</height>
       <control type="label" id="10">
         <font>List_Info</font>
-        <textcolor>$VAR[Light_Color]</textcolor>
+        <textcolor>light</textcolor>
       </control>
       <control type="label" id="11">
         <font>List_Info</font>
-        <textcolor>$VAR[Light_Color]</textcolor>
+        <textcolor>light</textcolor>
       </control>
       <control type="label" id="12">
         <font>List_Info</font>
-        <textcolor>$VAR[Light_Color]</textcolor>
+        <textcolor>light</textcolor>
       </control>
     </control>
   </controls>

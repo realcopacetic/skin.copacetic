@@ -162,7 +162,7 @@
 			<aligny>center</aligny>
 			<font>$PARAM[font]</font>
 			<textcolor>$PARAM[textcolor]</textcolor>
-			<disabledcolor>$VAR[Light_Grey_Color]</disabledcolor>
+			<disabledcolor>light_grey</disabledcolor>
 			<selectedcolor>$PARAM[selectedcolor]</selectedcolor>
 			<label>$VAR[TrackNumber_Label]</label>
 		</control>
@@ -184,8 +184,8 @@
 	<include name="Simple_List_Layout">
 		<param name="visible" default="true" />
 		<param name="font" default="Main_Menu_Unfocused" />
-		<param name="textcolor" default="$VAR[Light_Color]" />
-		<param name="selectedcolor" default="$VAR[Light_Color]" />
+		<param name="textcolor" default="light" />
+		<param name="selectedcolor" default="light" />
 		<param name="scroll" default="false" />
 		<param name="label" default="$VAR[Title_Label]" />
 		<param name="label_left" default="120" />
@@ -198,7 +198,7 @@
 				<width max="$PARAM[label_maxwidth]">auto</width>
 				<font>$PARAM[font]</font>
 				<textcolor>$PARAM[textcolor]</textcolor>
-				<disabledcolor>$VAR[Light_Grey_Color]</disabledcolor>
+				<disabledcolor>light_grey</disabledcolor>
 				<selectedcolor>$PARAM[selectedcolor]</selectedcolor>
 				<label>$PARAM[label]</label>
 				<scroll>$PARAM[scroll]</scroll>
@@ -209,12 +209,12 @@
 
 	<include name="Common_List_Layout">
 		<param name="visible" default="true" />
-		<param name="icon_color" default="$VAR[Light_Color]" />
+		<param name="icon_color" default="light" />
 		<param name="list_icon" default="String.IsEqual(ListItem.Overlay,OverlayWatched.png)" />
 		<param name="list_icon_texture" default="Check_unfocused" />
 		<param name="font" default="List_Unfocused" />
-		<param name="textcolor" default="$VAR[Light_Color]" />
-		<param name="selectedcolor" default="$VAR[Light_Color]" />
+		<param name="textcolor" default="light" />
+		<param name="selectedcolor" default="light" />
 		<param name="scroll" default="false" />
 		<param name="label" default="$VAR[Title_Label]" />
 		<definition>
@@ -239,7 +239,7 @@
 					<param name="label_left" value="$PARAM[label_left]" />
 					<param name="label_maxwidth" value="$PARAM[label_maxwidth]" />
 					<param name="font" value="$PARAM[font]" />
-					<param name="textcolor" value="$VAR[Light_Color]" />
+					<param name="textcolor" value="light" />
 					<param name="selectedcolor" value="$PARAM[selectedcolor]" />
 					<param name="label" value="$PARAM[label]" />
 					<param name="scroll" value="$PARAM[scroll]" />
@@ -255,7 +255,7 @@
 		<param name="music_rating_slide" default="525" />
 		<param name="label_left" default="90" />
 		<param name="label_maxwidth" default="840" />
-		<param name="selectedcolor" default="$VAR[Light_Color]" />
+		<param name="selectedcolor" default="light" />
 		<definition>
 			<param name="selectedcolor" />
 			<include content="Common_List_Layout">
@@ -278,7 +278,7 @@
 		<param name="music_rating_slide" default="525" />
 		<param name="label_left" default="90" />
 		<param name="label_maxwidth" default="990" />
-		<param name="selectedcolor" default="$VAR[Light_Color]" />
+		<param name="selectedcolor" default="light" />
 		<definition>
 			<include content="HiddenFocusButton">
 				<param name="folderwatch" value="true" />
@@ -293,7 +293,7 @@
 				<param name="list_icon" value="$PARAM[list_icon]" />
 				<param name="list_icon_texture" value="$PARAM[list_icon_texture]" />
 				<param name="music_rating_slide" value="$PARAM[music_rating_slide]" />
-				<param name="track_number_color" value="$VAR[Light_Color]" />
+				<param name="track_number_color" value="light" />
 				<param name="label" value="$VAR[Title_Label]" />
 				<param name="label_left" value="$PARAM[label_left]" />
 				<param name="label_maxwidth" value="$PARAM[label_maxwidth]" />
@@ -349,7 +349,7 @@
 					<top>30</top>
 					<height>35</height>
 					<font>List_Info</font>
-					<textcolor>$VAR[Light_Color]</textcolor>
+					<textcolor>light</textcolor>
 					<label>$PARAM[infolabel]</label>
 					<aligny>center</aligny>
 				</control>
@@ -369,7 +369,7 @@
 		<param name="label_left" default="0" />
 		<param name="label" default="$INFO[ListItem.Label]" />
 		<param name="label_maxwidth" default="1020" />
-		<param name="textcolor" default="$VAR[Light_Color]" />
+		<param name="textcolor" default="light" />
 		<param name="selectedcolor" default="$VAR[Accent_Color]" />
 		<param name="pagecontrol" default="60" />
 		<definition>
@@ -503,7 +503,7 @@
 		<param name="logo_id" />
 		<param name="logo_width" default="640" />
 		<param name="title_label" default="$VAR[Title_Label]" />
-		<param name="title_color" default="$VAR[Light_Color]" />
+		<param name="title_color" default="light" />
 		<param name="title_maxheight" default="146" />
 		<param name="info_label" default="$VAR[Info_Label]" />
 		<param name="info_maxheight" default="70" />
@@ -1048,7 +1048,7 @@
 		<param name="width" default="180" />
 		<param name="icon_width" default="90" />
 		<param name="icon_height" default="60" />
-		<param name="colordiffuse" default="$VAR[Light_Color]" />
+		<param name="colordiffuse" default="light" />
 		<param name="fadetime" default="0" />
 		<definition>
 			<control type="group">

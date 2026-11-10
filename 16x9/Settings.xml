@@ -6,7 +6,7 @@
 	<onunload>ClearProperty(Container_Addons_NonRepo,home)</onunload>
 	<onunload>ClearProperty(Home_Widget,home)</onunload>
 	<defaultcontrol always="true">4010</defaultcontrol>
-	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<backgroundcolor>dark</backgroundcolor>
 	<controls>
 		<include content="Focus_Setter">
 			<param name="target_id" value="ReplaceWindowAndFocus(skinsettings,4010)" />

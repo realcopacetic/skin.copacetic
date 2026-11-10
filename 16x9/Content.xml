@@ -479,42 +479,42 @@
 
 	<include name="smartplaylisteditor_Left_List_Content">
 		<control type="button" id="22">
-			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>
+			<texturefocus border="62,2,2,2" colordiffuse="unfocused">dialogs/button_underline_except_60_left.png</texturefocus>
 			<description>Set Playlist type</description>
 			<label>$LOCALIZE[467]</label>
 		</control>
 		<control type="button" id="12">
-			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>
+			<texturefocus border="62,2,2,2" colordiffuse="unfocused">dialogs/button_underline_except_60_left.png</texturefocus>
 			<description>Name of the playlist</description>
 			<label>$LOCALIZE[551]</label>
 		</control>
 		<control type="button" id="16">
-			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>
+			<texturefocus border="62,2,2,2" colordiffuse="unfocused">dialogs/button_underline_except_60_left.png</texturefocus>
 			<description>Match rules option</description>
 			<label>$LOCALIZE[31600]</label>
 		</control>
 		<control type="button" id="17">
-			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>
+			<texturefocus border="62,2,2,2" colordiffuse="unfocused">dialogs/button_underline_except_60_left.png</texturefocus>
 			<description>Limit rules option</description>
 			<label>$LOCALIZE[31601]</label>
 		</control>
 		<control type="button" id="18">
-			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>
+			<texturefocus border="62,2,2,2" colordiffuse="unfocused">dialogs/button_underline_except_60_left.png</texturefocus>
 			<description>Sort rules option</description>
 			<label>$LOCALIZE[31602]</label>
 		</control>
 		<control type="button" id="19">
-			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>
+			<texturefocus border="62,2,2,2" colordiffuse="unfocused">dialogs/button_underline_except_60_left.png</texturefocus>
 			<description>Sort direction option</description>
 			<label>$LOCALIZE[31603]</label>
 		</control>
 		<control type="button" id="23">
-			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>
+			<texturefocus border="62,2,2,2" colordiffuse="unfocused">dialogs/button_underline_except_60_left.png</texturefocus>
 			<description>Group by</description>
 			<label>$LOCALIZE[19141]</label>
 		</control>
 		<control type="radiobutton" id="24">
-			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>
+			<texturefocus border="62,2,2,2" colordiffuse="unfocused">dialogs/button_underline_except_60_left.png</texturefocus>
 			<description>Mixed</description>
 			<label>$LOCALIZE[467]: $LOCALIZE[21459]</label>
 		</control>
@@ -522,15 +522,15 @@
 
 	<include name="smartplaylistrule_List_Content">
 		<control type="togglebutton" id="15">
-			<texturefocus border="2,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_focused.png</texturefocus>
-			<alttexturefocus border="2,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_focused.png</alttexturefocus>
+			<texturefocus border="2,2,2,2" colordiffuse="unfocused">dialogs/button_underline_focused.png</texturefocus>
+			<alttexturefocus border="2,2,2,2" colordiffuse="unfocused">dialogs/button_underline_focused.png</alttexturefocus>
 		</control>
 		<control type="button" id="16">
-			<texturefocus border="2,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_focused.png</texturefocus>
+			<texturefocus border="2,2,2,2" colordiffuse="unfocused">dialogs/button_underline_focused.png</texturefocus>
 		</control>
 		<control type="edit" id="17">
 			<hinttext>$LOCALIZE[16028]...</hinttext>
-			<texturefocus border="2,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_focused.png</texturefocus>
+			<texturefocus border="2,2,2,2" colordiffuse="unfocused">dialogs/button_underline_focused.png</texturefocus>
 		</control>
 	</include>
 
@@ -548,7 +548,7 @@
 				<!-- The row's underline, kept while Select moves focus between the button and its slider -->
 				<control type="image">
 					<visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[id]0)</visible>
-					<texture border="2,2,62,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_right.png</texture>
+					<texture border="2,2,62,2" colordiffuse="unfocused">dialogs/button_underline_except_60_right.png</texture>
 				</control>
 				<control type="button" id="$PARAM[id]0">
 					<width>690</width>

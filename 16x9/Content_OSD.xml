@@ -24,11 +24,11 @@
 			<description>Play/Pause</description>
 			<width>60</width>
 			<height>60</height>
-			<texturefocus colordiffuse="$VAR[Light_Color]">icons/icon_play_focused_60.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_play_unfocused_60.png</texturenofocus>
+			<texturefocus colordiffuse="light">icons/icon_play_focused_60.png</texturefocus>
+			<texturenofocus colordiffuse="light">icons/icon_play_unfocused_60.png</texturenofocus>
 			<usealttexture>![Player.Paused | Player.Forwarding | Player.Rewinding]</usealttexture>
-			<alttexturefocus colordiffuse="$VAR[Light_Color]">icons/icon_pause_focused_60.png</alttexturefocus>
-			<alttexturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_pause_unfocused_60.png</alttexturenofocus>
+			<alttexturefocus colordiffuse="light">icons/icon_pause_focused_60.png</alttexturefocus>
+			<alttexturenofocus colordiffuse="light">icons/icon_pause_unfocused_60.png</alttexturenofocus>
 			<onfocus>SetProperty(MusicOSD_Controls,$VAR[Play_Pause_Label],musicosd)</onfocus>
 			<onclick>PlayerControl(Play)</onclick>
 			<onclick>SetProperty(MusicOSD_Controls,$VAR[Play_Pause_Label],musicosd)</onclick>
@@ -50,11 +50,11 @@
 			<description>Next</description>
 			<width>60</width>
 			<height>60</height>
-			<texturefocus colordiffuse="$VAR[Light_Color]">icons/icon_arrow_horizontal_focused_60.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_arrow_horizontal_unfocused_60.png</texturenofocus>
+			<texturefocus colordiffuse="light">icons/icon_arrow_horizontal_focused_60.png</texturefocus>
+			<texturenofocus colordiffuse="light">icons/icon_arrow_horizontal_unfocused_60.png</texturenofocus>
 			<usealttexture>!MusicPlayer.HasNext</usealttexture>
-			<alttexturefocus colordiffuse="$VAR[Light_Color]">icons/icon_arrow_horizontal_50%_focused_60.png</alttexturefocus>
-			<alttexturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_arrow_horizontal_50%_unfocused_60.png</alttexturenofocus>
+			<alttexturefocus colordiffuse="light">icons/icon_arrow_horizontal_50%_focused_60.png</alttexturefocus>
+			<alttexturenofocus colordiffuse="light">icons/icon_arrow_horizontal_50%_unfocused_60.png</alttexturenofocus>
 			<onfocus>SetProperty(MusicOSD_Controls,$LOCALIZE[209],musicosd)</onfocus>
 			<onclick condition="MusicPlayer.HasNext">PlayerControl(Next)</onclick>
 			<onup>60</onup>
@@ -69,11 +69,11 @@
 			<description>Shuffle</description>
 			<width>60</width>
 			<height>60</height>
-			<texturefocus colordiffuse="$VAR[Light_Color]">icons/icon_shuffle_focused_60.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_shuffle_unfocused_60.png</texturenofocus>
+			<texturefocus colordiffuse="light">icons/icon_shuffle_focused_60.png</texturefocus>
+			<texturenofocus colordiffuse="light">icons/icon_shuffle_unfocused_60.png</texturenofocus>
 			<usealttexture>!Playlist.IsRandom</usealttexture>
-			<alttexturefocus colordiffuse="$VAR[Light_Color]">icons/icon_shuffle_50%_focused_60.png</alttexturefocus>
-			<alttexturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_shuffle_50%_unfocused_60.png</alttexturenofocus>
+			<alttexturefocus colordiffuse="light">icons/icon_shuffle_50%_focused_60.png</alttexturefocus>
+			<alttexturenofocus colordiffuse="light">icons/icon_shuffle_50%_unfocused_60.png</alttexturenofocus>
 			<onfocus>SetProperty(MusicOSD_Controls,$VAR[Random_Button_Label],musicosd)</onfocus>
 			<onclick>PlayerControl(Random)</onclick>
 			<onclick>SetProperty(MusicOSD_Controls,$VAR[Random_Button_Label],musicosd)</onclick>
@@ -95,7 +95,7 @@
 				<onright>2</onright>
 			</control>
 			<control type="image">
-				<texture colordiffuse="$VAR[Light_Color]">$VAR[Repeat_Button_Icon_Texture]</texture>
+				<texture colordiffuse="light">$VAR[Repeat_Button_Icon_Texture]</texture>
 			</control>
 		</control>
 		<include content="Simple_Button_Template">
@@ -132,8 +132,8 @@
 			<description>Like/Unlike</description>
 			<width>60</width>
 			<height>60</height>
-			<texturefocus colordiffuse="$VAR[Light_Color]">icons/icon_heart_unfilled_focused_60.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_heart_unfilled_unfocused_60.png</texturenofocus>
+			<texturefocus colordiffuse="light">icons/icon_heart_unfilled_focused_60.png</texturefocus>
+			<texturenofocus colordiffuse="light">icons/icon_heart_unfilled_unfocused_60.png</texturenofocus>
 			<usealttexture>!Integer.IsLess(MusicPlayer.UserRating,Skin.String(like_threshold))</usealttexture>
 			<alttexturefocus colordiffuse="$VAR[Accent_Color]">icons/icon_heart_filled_focused_60.png</alttexturefocus>
 			<alttexturenofocus colordiffuse="$VAR[Accent_Color]">icons/icon_heart_filled_unfocused_60.png</alttexturenofocus>
@@ -178,11 +178,11 @@
 			<description>Play/Pause</description>
 			<width>60</width>
 			<height>60</height>
-			<texturefocus colordiffuse="$VAR[Light_Color]">icons/icon_play_focused_60.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_play_unfocused_60.png</texturenofocus>
+			<texturefocus colordiffuse="light">icons/icon_play_focused_60.png</texturefocus>
+			<texturenofocus colordiffuse="light">icons/icon_play_unfocused_60.png</texturenofocus>
 			<usealttexture>![Player.Paused | Player.Forwarding | Player.Rewinding]</usealttexture>
-			<alttexturefocus colordiffuse="$VAR[Light_Color]">icons/icon_pause_focused_60.png</alttexturefocus>
-			<alttexturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_pause_unfocused_60.png</alttexturenofocus>
+			<alttexturefocus colordiffuse="light">icons/icon_pause_focused_60.png</alttexturefocus>
+			<alttexturenofocus colordiffuse="light">icons/icon_pause_unfocused_60.png</alttexturenofocus>
 			<onfocus>SetProperty(VideoOSD_Controls,$VAR[Play_Pause_Label],videoosd)</onfocus>
 			<onclick>PlayerControl(Play)</onclick>
 			<onclick>SetProperty(VideoOSD_Controls,$VAR[Play_Pause_Label],videoosd)</onclick>
@@ -300,11 +300,11 @@
 			<description>Play/Pause</description>
 			<width>60</width>
 			<height>60</height>
-			<texturefocus colordiffuse="$VAR[Light_Color]">icons/icon_play_focused_60.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_play_unfocused_60.png</texturenofocus>
+			<texturefocus colordiffuse="light">icons/icon_play_focused_60.png</texturefocus>
+			<texturenofocus colordiffuse="light">icons/icon_play_unfocused_60.png</texturenofocus>
 			<usealttexture>![Player.Paused | Player.Forwarding | Player.Rewinding]</usealttexture>
-			<alttexturefocus colordiffuse="$VAR[Light_Color]">icons/icon_pause_focused_60.png</alttexturefocus>
-			<alttexturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_pause_unfocused_60.png</alttexturenofocus>
+			<alttexturefocus colordiffuse="light">icons/icon_pause_focused_60.png</alttexturefocus>
+			<alttexturenofocus colordiffuse="light">icons/icon_pause_unfocused_60.png</alttexturenofocus>
 			<onfocus>SetProperty(VideoOSD_Controls,$VAR[Play_Pause_Label],videoosd)</onfocus>
 			<onclick>PlayerControl(Play)</onclick>
 			<onclick>SetProperty(VideoOSD_Controls,$VAR[Play_Pause_Label],videoosd)</onclick>
@@ -430,7 +430,7 @@
 			<height>60</height>
 			<width max="960">auto</width>
 			<label>[UPPERCASE]$INFO[VideoPlayer.AudioLanguage][/UPPERCASE]$VAR[AudioCodec_Label, ]$VAR[AudioChannels_Label, ]</label>
-			<textcolor>$VAR[Light_Color]</textcolor>
+			<textcolor>light</textcolor>
 			<font>MusicPlayer_Info</font>
 		</control>
 		<control type="label" id="17">
@@ -439,7 +439,7 @@
 			<top>-2</top>
 			<width max="960">auto</width>
 			<label>[UPPERCASE]$INFO[VideoPlayer.AudioLanguage][/UPPERCASE]$VAR[AudioCodec_Label, ]$VAR[AudioChannels_Label, ]</label>
-			<textcolor>$VAR[Light_Color]</textcolor>
+			<textcolor>light</textcolor>
 			<font>MusicPlayer_Title</font>
 		</control>
 		<include content="Simple_Button_Template">
@@ -457,7 +457,7 @@
 			<height>60</height>
 			<width max="300">auto</width>
 			<label>$VAR[videoosd_Subtitle_Toggle_Label]</label>
-			<textcolor>$VAR[Light_Color]</textcolor>
+			<textcolor>light</textcolor>
 			<font>MusicPlayer_Info</font>
 		</control>
 		<control type="label" id="21">
@@ -466,7 +466,7 @@
 			<top>-2</top>
 			<width max="300">auto</width>
 			<label>$VAR[videoosd_Subtitle_Toggle_Label]</label>
-			<textcolor>$VAR[Light_Color]</textcolor>
+			<textcolor>light</textcolor>
 			<font>MusicPlayer_Title</font>
 		</control>
 	</include>

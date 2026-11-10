@@ -7,8 +7,8 @@
 		<aligny>center</aligny>
 		<font>Default_Settings_List</font>
 		<textoffsetx>0</textoffsetx>
-		<textcolor>$VAR[Unfocused_Color]</textcolor>
-		<disabledcolor>$VAR[Dark_Color]</disabledcolor>
+		<textcolor>unfocused</textcolor>
+		<disabledcolor>dark</disabledcolor>
 		<selectedcolor>$VAR[Accent_Color]</selectedcolor>
 		<scrollspeed>120</scrollspeed>
 	</default>
@@ -18,7 +18,7 @@
 		<aligny>center</aligny>
 		<font>Default_Settings_List</font>
 		<textoffsetx>0</textoffsetx>
-		<textcolor>$VAR[Light_Color]</textcolor>
+		<textcolor>light</textcolor>
 		<autoscroll delay="Autoscroll_Delay" time="Autoscroll_Time" repeat="Autoscroll_Repeat">true</autoscroll>
 	</default>
 
@@ -29,14 +29,14 @@
 		<aligny>center</aligny>
 		<font>Default_Settings_List</font>
 		<textoffsetx>60</textoffsetx>
-		<textcolor>$VAR[Unfocused_Color]</textcolor>
-		<focusedcolor>$VAR[Light_Color]</focusedcolor>
-		<invalidcolor>$VAR[Invalid_Color]</invalidcolor>
-		<disabledcolor>$VAR[Disabled_Color]</disabledcolor>
+		<textcolor>unfocused</textcolor>
+		<focusedcolor>light</focusedcolor>
+		<invalidcolor>unfocused50</invalidcolor>
+		<disabledcolor>unfocused40</disabledcolor>
 		<texturenofocus/>
-		<texturefocus border="2,2,62,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_right.png</texturefocus>
-<!--<texturefocus border="2,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_focused.png</texturefocus>-->
-<!--<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>-->
+		<texturefocus border="2,2,62,2" colordiffuse="unfocused">dialogs/button_underline_except_60_right.png</texturefocus>
+<!--<texturefocus border="2,2,2,2" colordiffuse="unfocused">dialogs/button_underline_focused.png</texturefocus>-->
+<!--<texturefocus border="62,2,2,2" colordiffuse="unfocused">dialogs/button_underline_except_60_left.png</texturefocus>-->
 		<pulseonselect>no</pulseonselect>
 	</default>
 
@@ -46,17 +46,17 @@
 		<aligny>center</aligny>
 		<font>Default_Settings_List</font>
 		<textoffsetx>60</textoffsetx>
-		<textcolor>$VAR[Unfocused_Color]</textcolor>
-		<focusedcolor>$VAR[Light_Color]</focusedcolor>
-		<invalidcolor>$VAR[Invalid_Color]</invalidcolor>
-		<disabledcolor>$VAR[Disabled_Color]</disabledcolor>
+		<textcolor>unfocused</textcolor>
+		<focusedcolor>light</focusedcolor>
+		<invalidcolor>unfocused50</invalidcolor>
+		<disabledcolor>unfocused40</disabledcolor>
 		<colorwidth>180</colorwidth>
 		<colorheight>60</colorheight>
 		<colorposx>1020</colorposx>
 		<texturecolormask>dialogs/color_mask.png</texturecolormask>
-		<texturecolordisabledmask colordiffuse="$VAR[Unfocused_Color]">dialogs/color_mask.png</texturecolordisabledmask>
+		<texturecolordisabledmask colordiffuse="unfocused">dialogs/color_mask.png</texturecolordisabledmask>
 		<texturenofocus/>
-		<texturefocus border="2,2,62,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_right.png</texturefocus>
+		<texturefocus border="2,2,62,2" colordiffuse="unfocused">dialogs/button_underline_except_60_right.png</texturefocus>
 		<pulseonselect>no</pulseonselect>
 	</default>
 
@@ -68,19 +68,19 @@
 		<font>Default_Settings_List</font>
 		<textwidth>990</textwidth>
 		<textoffsetx>60</textoffsetx>
-		<textcolor>$VAR[Unfocused_Color]</textcolor>
-		<focusedcolor>$VAR[Light_Color]</focusedcolor>
-		<disabledcolor>$VAR[Disabled_Color]</disabledcolor>
+		<textcolor>unfocused</textcolor>
+		<focusedcolor>light</focusedcolor>
+		<disabledcolor>unfocused40</disabledcolor>
 		<radiowidth>60</radiowidth>
 		<radioheight>90</radioheight>
 		<radioposx>1140</radioposx>
-		<texturefocus border="2,2,62,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_right.png</texturefocus>
-		<textureradioonfocus colordiffuse="$VAR[Light_Color]">dialogs/Radio_On_Focused.png</textureradioonfocus>
-		<textureradioofffocus colordiffuse="$VAR[Light_Color]">dialogs/Radio_Off_Focused.png</textureradioofffocus>
-		<textureradioonnofocus colordiffuse="$VAR[Unfocused_Color]">dialogs/Radio_On_Unfocused.png</textureradioonnofocus>
-		<textureradiooffnofocus colordiffuse="$VAR[Unfocused_Color]">dialogs/Radio_Off_Unfocused.png</textureradiooffnofocus>
-		<textureradioondisabled colordiffuse="$VAR[Unfocused_Color]">dialogs/Radio_On_Unfocused.png</textureradioondisabled>
-		<textureradiooffdisabled colordiffuse="$VAR[Unfocused_Color]">dialogs/Radio_Off_Unfocused.png</textureradiooffdisabled>
+		<texturefocus border="2,2,62,2" colordiffuse="unfocused">dialogs/button_underline_except_60_right.png</texturefocus>
+		<textureradioonfocus colordiffuse="light">dialogs/Radio_On_Focused.png</textureradioonfocus>
+		<textureradioofffocus colordiffuse="light">dialogs/Radio_Off_Focused.png</textureradioofffocus>
+		<textureradioonnofocus colordiffuse="unfocused">dialogs/Radio_On_Unfocused.png</textureradioonnofocus>
+		<textureradiooffnofocus colordiffuse="unfocused">dialogs/Radio_Off_Unfocused.png</textureradiooffnofocus>
+		<textureradioondisabled colordiffuse="unfocused">dialogs/Radio_On_Unfocused.png</textureradioondisabled>
+		<textureradiooffdisabled colordiffuse="unfocused">dialogs/Radio_Off_Unfocused.png</textureradiooffdisabled>
 		<pulseonselect>no</pulseonselect>
 	</default>
 
@@ -92,18 +92,18 @@
 		<font>Default_Settings_List</font>
 		<textoffsetx>60</textoffsetx>
 		<textwidth>780</textwidth>
-		<textcolor>$VAR[Unfocused_Color]</textcolor>
-		<focusedcolor>$VAR[Light_Color]</focusedcolor>
-		<disabledcolor>$VAR[Disabled_Color]</disabledcolor>
+		<textcolor>unfocused</textcolor>
+		<focusedcolor>light</focusedcolor>
+		<disabledcolor>unfocused40</disabledcolor>
 		<spinwidth>60</spinwidth>
 		<spinheight>90</spinheight>
 		<texturenofocus/>
-		<texturefocus border="2,2,62,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_right.png</texturefocus>
-		<textureup colordiffuse="$VAR[Unfocused_Color]">dialogs/spin_unfocused.png</textureup>
-		<textureupfocus colordiffuse="$VAR[Light_Color]">dialogs/spin_focused.png</textureupfocus>
+		<texturefocus border="2,2,62,2" colordiffuse="unfocused">dialogs/button_underline_except_60_right.png</texturefocus>
+		<textureup colordiffuse="unfocused">dialogs/spin_unfocused.png</textureup>
+		<textureupfocus colordiffuse="light">dialogs/spin_focused.png</textureupfocus>
 		<textureupdisabled/>
-		<texturedown colordiffuse="$VAR[Unfocused_Color]" flipy="true">dialogs/spin_unfocused.png</texturedown>
-		<texturedownfocus colordiffuse="$VAR[Light_Color]" flipy="true">dialogs/spin_focused.png</texturedownfocus>
+		<texturedown colordiffuse="unfocused" flipy="true">dialogs/spin_unfocused.png</texturedown>
+		<texturedownfocus colordiffuse="light" flipy="true">dialogs/spin_focused.png</texturedownfocus>
 		<texturedowndisabled/>
 		<pulseonselect>no</pulseonselect>
 	</default>
@@ -116,19 +116,19 @@
 		<font>Default_Settings_List</font>
 		<textwidth>780</textwidth>
 		<textoffsetx>60</textoffsetx>
-		<textcolor>$VAR[Unfocused_Color]</textcolor>
-		<focusedcolor>$VAR[Light_Color]</focusedcolor>
-		<disabledcolor>$VAR[Disabled_Color]</disabledcolor>
-		<texturefocus border="2,2,62,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_right.png</texturefocus>
+		<textcolor>unfocused</textcolor>
+		<focusedcolor>light</focusedcolor>
+		<disabledcolor>unfocused40</disabledcolor>
+		<texturefocus border="2,2,62,2" colordiffuse="unfocused">dialogs/button_underline_except_60_right.png</texturefocus>
 		<texturenofocus/>
 		<sliderwidth>120</sliderwidth>
 		<sliderheight>30</sliderheight>
 		<orientation>vertical</orientation>
-		<texturesliderbar border="3,3,3,3" colordiffuse="$VAR[Unfocused_Color]">dialogs/slider_background.png</texturesliderbar>
-		<textureslidernib colordiffuse="$VAR[Unfocused_Color]">dialogs/slider_nib_unfocused.png</textureslidernib>
-		<textureslidernibfocus colordiffuse="$VAR[Light_Color]">dialogs/slider_nib_focused.png</textureslidernibfocus>
-		<texturesliderbardisabled colordiffuse="$VAR[Unfocused_Color]">dialogs/slider_background.png</texturesliderbardisabled>
-		<textureslidernibdisabled colordiffuse="$VAR[Unfocused_Color]">dialogs/slider_nib_unfocused.png</textureslidernibdisabled>
+		<texturesliderbar border="3,3,3,3" colordiffuse="unfocused">dialogs/slider_background.png</texturesliderbar>
+		<textureslidernib colordiffuse="unfocused">dialogs/slider_nib_unfocused.png</textureslidernib>
+		<textureslidernibfocus colordiffuse="light">dialogs/slider_nib_focused.png</textureslidernibfocus>
+		<texturesliderbardisabled colordiffuse="unfocused">dialogs/slider_background.png</texturesliderbardisabled>
+		<textureslidernibdisabled colordiffuse="unfocused">dialogs/slider_nib_unfocused.png</textureslidernibdisabled>
 		<pulseonselect>no</pulseonselect>
 	</default>
 
@@ -139,19 +139,19 @@
 		<aligny>center</aligny>
 		<font>Default_Settings_List</font>
 		<textoffsetx>60</textoffsetx>
-		<textcolor>$VAR[Unfocused_Color]</textcolor>
-		<focusedcolor>$VAR[Light_Color]</focusedcolor>
-		<disabledcolor>$VAR[Disabled_Color]</disabledcolor>
-		<texturefocus border="2,2,62,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_right.png</texturefocus>
+		<textcolor>unfocused</textcolor>
+		<focusedcolor>light</focusedcolor>
+		<disabledcolor>unfocused40</disabledcolor>
+		<texturefocus border="2,2,62,2" colordiffuse="unfocused">dialogs/button_underline_except_60_right.png</texturefocus>
 		<texturenofocus />
 		<sliderwidth>120</sliderwidth>
 		<sliderheight>30</sliderheight>
 		<orientation>vertical</orientation>
-		<texturesliderbar border="3,3,3,3" colordiffuse="$VAR[Unfocused_Color]">dialogs/slider_background.png</texturesliderbar>
-		<textureslidernib colordiffuse="$VAR[Unfocused_Color]">dialogs/slider_nib_unfocused.png</textureslidernib>
-		<textureslidernibfocus colordiffuse="$VAR[Light_Color]">dialogs/slider_nib_focused.png</textureslidernibfocus>
-		<texturesliderbardisabled colordiffuse="$VAR[Unfocused_Color]">dialogs/slider_background.png</texturesliderbardisabled>
-		<textureslidernibdisabled colordiffuse="$VAR[Unfocused_Color]">dialogs/slider_nib_unfocused.png</textureslidernibdisabled>
+		<texturesliderbar border="3,3,3,3" colordiffuse="unfocused">dialogs/slider_background.png</texturesliderbar>
+		<textureslidernib colordiffuse="unfocused">dialogs/slider_nib_unfocused.png</textureslidernib>
+		<textureslidernibfocus colordiffuse="light">dialogs/slider_nib_focused.png</textureslidernibfocus>
+		<texturesliderbardisabled colordiffuse="unfocused">dialogs/slider_background.png</texturesliderbardisabled>
+		<textureslidernibdisabled colordiffuse="unfocused">dialogs/slider_nib_unfocused.png</textureslidernibdisabled>
 		<pulseonselect>no</pulseonselect>
 	</default>
 
@@ -162,14 +162,14 @@
 		<aligny>center</aligny>
 		<font>Default_Settings_List</font>
 		<textoffsetx>60</textoffsetx>
-		<textcolor>$VAR[Unfocused_Color]</textcolor>
-		<focusedcolor>$VAR[Light_Color]</focusedcolor>
-		<disabledcolor>$VAR[Disabled_Color]</disabledcolor>
-		<invalidcolor>$VAR[Invalid_Color]</invalidcolor>
+		<textcolor>unfocused</textcolor>
+		<focusedcolor>light</focusedcolor>
+		<disabledcolor>unfocused40</disabledcolor>
+		<invalidcolor>unfocused50</invalidcolor>
 		<scroll>true</scroll>
 		<scrollsuffix> / </scrollsuffix>
 		<hinttext/>
-		<texturefocus border="2,2,62,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_right.png</texturefocus>
+		<texturefocus border="2,2,62,2" colordiffuse="unfocused">dialogs/button_underline_except_60_right.png</texturefocus>
 		<pulseonselect>no</pulseonselect>
 	</default>
 
@@ -192,15 +192,15 @@
 		<font>Default_Settings_List</font>
 		<textwidth>990</textwidth>
 		<textoffsetx>60</textoffsetx>
-		<textcolor>$VAR[Unfocused_Color]</textcolor>
-		<focusedcolor>$VAR[Light_Color]</focusedcolor>
-		<disabledcolor>$VAR[Disabled_Color]</disabledcolor>
+		<textcolor>unfocused</textcolor>
+		<focusedcolor>light</focusedcolor>
+		<disabledcolor>unfocused40</disabledcolor>
 		<radiowidth>90</radiowidth>
 		<radioheight>90</radioheight>
 		<radioposx>1065</radioposx>
-		<texturefocus border="2,2,62,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_right.png</texturefocus>
+		<texturefocus border="2,2,62,2" colordiffuse="unfocused">dialogs/button_underline_except_60_right.png</texturefocus>
 		<texturenofocus/>
-		<alttexturefocus border="2,2,62,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_right.png</alttexturefocus>
+		<alttexturefocus border="2,2,62,2" colordiffuse="unfocused">dialogs/button_underline_except_60_right.png</alttexturefocus>
 		<alttexturenofocus/>
 		<pulseonselect>no</pulseonselect>
 	</default>

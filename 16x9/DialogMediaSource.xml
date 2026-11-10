@@ -2,7 +2,7 @@
 <window>
 	<!-- mediasource -->
 	<defaultcontrol always="true">11</defaultcontrol>
-	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<backgroundcolor>dark</backgroundcolor>
 	<zorder>2</zorder>
 	<controls>
 		<include content="mediasource_Hidden" />
@@ -46,8 +46,8 @@
 			<include content="Button_Group_Template">
 				<param name="ondown" value="10" />
 				<param name="onup" value="12" />
-				<param name="color" value="$VAR[Light_Color]" />
-				<param name="unfocused_color" value="$VAR[Light_Color]" />
+				<param name="color" value="light" />
+				<param name="unfocused_color" value="light" />
 				<param name="button1" value="true" />
 				<param name="button1_id" value="19" />
 				<param name="button2" value="true" />

@@ -159,8 +159,8 @@
 			<top>$PARAM[progress_top]</top>
 			<height>6</height>
 			<info>Player.Progress</info>
-			<texturebg colordiffuse="$VAR[Progress_Light_Background_Color]">views/white_100.png</texturebg>
-			<midtexture colordiffuse="$VAR[Progress_Light_Focused_Color]">views/white_100.png</midtexture>
+			<texturebg colordiffuse="light15">views/white_100.png</texturebg>
+			<midtexture colordiffuse="light">views/white_100.png</midtexture>
 		</control>
 	</include>
 
@@ -264,7 +264,7 @@
 			<visible>!$EXP[Music_Player_HasFocus] + Container.Row(0) + [[Container.Column(2) + $EXP[GridView_Display_IsFanart] + Skin.String(GridView_Size,Large)] | [Container.Column(3) + $EXP[GridView_Display_IsFanart] + Skin.String(GridView_Size,Small)] | [Container.Column(3) + $EXP[GridView_Display_IsSquare] + Skin.String(GridView_Size,Horizontal)] | [Container.Column(4) + !$EXP[GridView_Display_IsFanart] + Skin.String(GridView_Size,Large)] | [Container.Column(5) + $EXP[GridView_Display_IsPosters] + Skin.String(GridView_Size,Horizontal)] | Container.Column(6)]</visible>
 			<bottom>0</bottom>
 			<height>120</height>
-			<texture colordiffuse="$VAR[Dropshadow_Diffuse]">views/dropshadow_top_120.png</texture>
+			<texture colordiffuse="dark">views/dropshadow_top_120.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
 	</include>
@@ -272,7 +272,7 @@
 	<include name="Music_Player_Background">
 		<control type="group">
 			<control type="image">
-				<texture colordiffuse="$VAR[Dark_Color]">views/white_100.png</texture>
+				<texture colordiffuse="dark">views/white_100.png</texture>
 				<aspectratio>scale</aspectratio>
 			</control>
 			<control type="image">
@@ -400,7 +400,7 @@
 							<param name="label1" value="$PARAM[label1]" />
 							<param name="label2" value="$PARAM[label2]" />
 							<param name="label2_visible" value="$PARAM[label2_visible]" />
-							<param name="text_color" value="$VAR[Light_Color]" />
+							<param name="text_color" value="light" />
 						</include>
 					</control>
 					<include content="Common_Notification_Label_Template" condition="$PARAM[right_label_visible]">

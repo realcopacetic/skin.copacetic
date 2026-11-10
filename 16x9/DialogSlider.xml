@@ -20,7 +20,7 @@
 				<height>33</height>
 				<align>center</align>
 				<font>MusicPlayer_Info</font>
-				<textcolor>$VAR[Light_Color]</textcolor>
+				<textcolor>light</textcolor>
 				<label>$INFO[Control.GetLabel(12)]</label>
 			</control>
 			<control type="grouplist">
@@ -36,13 +36,13 @@
 					<animation effect="rotate" center="30,30" end="90" time="0" condition="true" reversible="false">Conditional</animation>
 					<width>60</width>
 					<height>60</height>
-					<texture colordiffuse="$VAR[Light_Color]">dialogs/icon_arrow_focused.png</texture>
+					<texture colordiffuse="light">dialogs/icon_arrow_focused.png</texture>
 				</control>
 				<control type="slider" id="11">
 					<centertop>50%</centertop>
 					<width>600</width>
 					<height>30</height>
-					<texturesliderbar colordiffuse="$VAR[sliderdialog_Bar_Color]">dialogs/dialogslider_background.png</texturesliderbar>
+					<texturesliderbar colordiffuse="light15">dialogs/dialogslider_background.png</texturesliderbar>
 					<textureslidernib />
 					<textureslidernibfocus colordiffuse="$VAR[Accent_Color]">dialogs/dialogslider_nib_30.png</textureslidernibfocus>
 					<orientation>horizontal</orientation>
@@ -51,7 +51,7 @@
 					<animation effect="rotate" center="30,30" end="270" time="0" condition="true" reversible="false">Conditional</animation>
 					<width>60</width>
 					<height>60</height>
-					<texture colordiffuse="$VAR[Light_Color]">dialogs/icon_arrow_focused.png</texture>
+					<texture colordiffuse="light">dialogs/icon_arrow_focused.png</texture>
 				</control>
 			</control>
 		</include>

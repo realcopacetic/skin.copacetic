@@ -10,7 +10,7 @@
 				<height>240</height>
 				<width>100%</width>
 				<aspectratio>stretch</aspectratio>
-				<texture colordiffuse="$VAR[Dark_Color]" flipy="true">views/progress_overlay.png</texture>
+				<texture colordiffuse="dark" flipy="true">views/progress_overlay.png</texture>
 			</control>
 			<include content="Player_Progress">
 				<param name="left" value="60" />
@@ -21,7 +21,7 @@
 				<param name="progress_bar_padding" value="120" />
 				<param name="left_label" value="$VAR[seekbar_Left_Label]" />
 				<param name="right_label" value="$VAR[seekbar_Right_Label]" />
-				<param name="text_color" value="$VAR[Light_Color]" />
+				<param name="text_color" value="light" />
 				<param name="include_ranges" value="true" />
 				<visible>Player.Seeking | Player.Rewinding | Player.Forwarding | Player.HasPerformedSeek(3) | [Window.IsVisible(videoosd) + !System.IdleTime(3)] | [Player.Paused + !System.IdleTime(5)] | Window.IsVisible(fullscreeninfo)</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
@@ -69,7 +69,7 @@
 				<param name="progress_id" value="1" />
 				<param name="left_label" value="$INFO[Player.Time]" />
 				<param name="right_label" value="$INFO[Player.Duration]" />
-				<param name="text_color" value="$VAR[Light_Color]" />
+				<param name="text_color" value="light" />
 			</include>
 			<nested />
 		</control>

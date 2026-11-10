@@ -2,7 +2,7 @@
 <window>
 	<!-- keyboardsettings: the helper's editor for the search keypad's keys, opened from the Search row of pathsettings -->
 	<defaultcontrol always="true">100</defaultcontrol>
-	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<backgroundcolor>dark</backgroundcolor>
 	<controls>
 		<include content="pathsettings_Hidden" />
 		<include content="Default_Dialog_Panel_Layout">

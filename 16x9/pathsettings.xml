@@ -3,7 +3,7 @@
 	<!-- pathsettings: the helper's editor for the copacetic1 mapping: the background slideshows' custom paths (skin settings
 		1602 and 1611), play next (1409) and search's input (1105) -->
 	<defaultcontrol always="true">100</defaultcontrol>
-	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<backgroundcolor>dark</backgroundcolor>
 	<controls>
 		<include content="pathsettings_Hidden" />
 		<include content="Default_Dialog_Panel_Layout">

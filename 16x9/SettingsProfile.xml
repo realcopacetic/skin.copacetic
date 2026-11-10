@@ -2,7 +2,7 @@
 <window>
 	<!-- profiles -->
 	<defaultcontrol always="true">3009</defaultcontrol>
-	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<backgroundcolor>dark</backgroundcolor>
 	<controls>
 		<include content="Background_Multiart_Settings" />
 		<include content="Default_Settings_Panel_Layout">

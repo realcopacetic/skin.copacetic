@@ -2,7 +2,7 @@
 <window>
 	<!-- loginscreen -->
 	<defaultcontrol always="true">4010</defaultcontrol>
-	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<backgroundcolor>dark</backgroundcolor>
 	<controls>
 		<include content="loginscreen_Hidden" />
 		<include content="Background_Multiart_Login" />
@@ -18,7 +18,7 @@
 				<width>1200</width>
 				<align>center</align>
 				<font>Title_Breadcrumb_Label</font>
-				<textcolor>$VAR[Light_Color]</textcolor>
+				<textcolor>light</textcolor>
 			</control>
 			<control type="label">
 				<centerleft>50%</centerleft>
@@ -26,7 +26,7 @@
 				<top>840</top>
 				<height>60</height>
 				<label>$INFO[ListItem.Label]</label>
-				<textcolor>$VAR[Light_Color]</textcolor>
+				<textcolor>light</textcolor>
 				<font>Grid_Title</font>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -38,8 +38,8 @@
 				<param name="button1" value="true" />
 				<param name="button1_texture" value="Power" />
 				<param name="button1_onclick" value="ActivateWindow(shutdownmenu)" />
-				<param name="color" value="$VAR[Light_Color]" />
-				<param name="unfocused_color" value="$VAR[Light_Color]" />
+				<param name="color" value="light" />
+				<param name="unfocused_color" value="light" />
 			</include>
 		</include>
 		<include content="StripView_Art_loginscreen" />

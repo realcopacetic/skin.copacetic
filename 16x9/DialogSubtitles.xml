@@ -25,7 +25,7 @@
 			<include content="Description_Label">
 				<param name="id" value="130" />
 				<param name="type" value="label" />
-				<param name="textcolor" value="$VAR[Light_Color]" />
+				<param name="textcolor" value="light" />
 				<param name="label" value="$INFO[Player.Filename][CR][B]$LOCALIZE[31044][/B]" />
 			</include>
 			<control type="label" id="140">

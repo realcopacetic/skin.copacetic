@@ -473,7 +473,7 @@
 						<visible>$EXP[ShowcaseView_Display_IsSquare]</visible>
 						<height max="260">auto</height>
 						<font>Showcase_Overlay_Title</font>
-						<textcolor>$VAR[Light_Color]</textcolor>
+						<textcolor>light</textcolor>
 						<label>$VAR[Title_Label]</label>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -482,7 +482,7 @@
 						<visible>$EXP[ShowcaseView_Display_IsPosters]</visible>
 						<height max="260">auto</height>
 						<font>Showcase_Title</font>
-						<textcolor>$VAR[Light_Color]</textcolor>
+						<textcolor>light</textcolor>
 						<label>$VAR[Title_Label]</label>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -491,7 +491,7 @@
 						<visible>$EXP[ShowcaseView_Details_Info_Overlay]</visible>
 						<height max="70">auto</height>
 						<font>Showcase_Info</font>
-						<textcolor>$VAR[Light_Color]</textcolor>
+						<textcolor>light</textcolor>
 						<label>$VAR[Info_Label]</label>
 						<align>center</align>
 					</control>
@@ -598,7 +598,7 @@
 		<param name="fallback" />
 		<param name="focus_border_visible" default="$EXP[ShowcaseView_Details_Off] + !$EXP[Scrollbar_HasFocus]" />
 		<param name="focus_border_size" default="11" />
-		<param name="focus_border_color" default="$VAR[Light_Color]" />
+		<param name="focus_border_color" default="light" />
 		<param name="focus_border_texture" default="views/border_10px.png" />
 		<definition>
 			<include content="ShowcaseView_Animated">

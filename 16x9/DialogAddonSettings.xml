@@ -40,7 +40,7 @@
 			<include content="Description_Label">
 				<param name="id" value="6" />
 				<param name="type" value="textbox" />
-				<param name="textcolor" value="$VAR[Light_Color]" />
+				<param name="textcolor" value="light" />
 				<param name="right" value="420" />
 				<param name="height" value="100" />
 				<param name="bottom" value="40" />
@@ -57,8 +57,8 @@
 				<param name="button3" value="true" />
 				<param name="button3_id" value="28" />
 				<param name="button3_texture" value="Check" />
-				<param name="color" value="$VAR[Light_Color]" />
-				<param name="unfocused_color" value="$VAR[Light_Color]" />
+				<param name="color" value="light" />
+				<param name="unfocused_color" value="light" />
 			</include>
 		</include>
 	</controls>

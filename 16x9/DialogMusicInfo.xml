@@ -48,7 +48,7 @@
 				<param name="icon_slide" value="-480" />
 				<param name="music_rating_slide" value="540" />
 				<param name="label" value="$INFO[ListItem.Label]" />
-				<param name="selectedcolor" value="$VAR[Light_Color]" />
+				<param name="selectedcolor" value="light" />
 				<include content="Visible_Fade_Delayed_Animation" />
 				<onclick>RunScript(script.copacetic.helper,action=play_album_from_track,id=$INFO[Container(3100).ListItem.DBID])</onclick>
 				<content>musicdb://albums/$INFO[ListItem.DBID]/-1/</content>
@@ -64,7 +64,7 @@
 				<height max="146">auto</height>
 				<centertop>50%</centertop>
 				<font>Billboard_Title</font>
-				<textcolor>$VAR[Light_Color]</textcolor>
+				<textcolor>light</textcolor>
 				<label>$INFO[ListItem.Artist]</label>
 				<align>left</align>
 			</control>

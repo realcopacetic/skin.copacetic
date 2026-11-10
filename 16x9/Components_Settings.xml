@@ -4,8 +4,8 @@
 	<include name="Default_Settings_Controls_Togglebutton">
 		<control type="togglebutton" id="10">
 			<focusedcolor>$VAR[Settings_Grouplist_Label_Color]</focusedcolor>
-			<texturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</texturefocus>
-			<alttexturefocus border="62,2,2,2" colordiffuse="$VAR[Unfocused_Color]">dialogs/button_underline_except_60_left.png</alttexturefocus>
+			<texturefocus border="62,2,2,2" colordiffuse="unfocused">dialogs/button_underline_except_60_left.png</texturefocus>
+			<alttexturefocus border="62,2,2,2" colordiffuse="unfocused">dialogs/button_underline_except_60_left.png</alttexturefocus>
 		</control>
 	</include>
 
@@ -26,7 +26,7 @@
 			<include content="Default_Settings_Controls_Togglebutton" condition="$PARAM[include_togglebutton]" />
 			<control type="image" id="11">
 				<height>1</height>
-				<texture colordiffuse="$VAR[Blank_Color]">views/white_100.png</texture>
+				<texture colordiffuse="blank">views/white_100.png</texture>
 			</control>
 			<control type="edit" id="12" />
 			<control type="sliderex" id="13" />
@@ -34,7 +34,7 @@
 				<height>90</height>
 				<textoffsetx>30</textoffsetx>
 				<font>Default_Settings_Header</font>
-				<textcolor>$VAR[Unfocused_Color]</textcolor>
+				<textcolor>unfocused</textcolor>
 			</control>
 			<include content="Default_Settings_Controls_Colorbutton" condition="$PARAM[include_colorbutton]" />
 		</definition>
@@ -115,7 +115,7 @@
 				<width>$PARAM[width]</width>
 				<height>1</height>
 				<top>$PARAM[top]</top>
-				<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+				<texture colordiffuse="unfocused">views/white_100.png</texture>
 			</control>
 		</definition>
 	</include>
@@ -127,7 +127,7 @@
 			<right>$PARAM[focus_border_margin_right]</right>
 			<height>1</height>
 			<bottom>0</bottom>
-			<texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+			<texture colordiffuse="unfocused">views/white_100.png</texture>
 		</control>
 	</include>
 
@@ -141,7 +141,7 @@
 		<param name="label2" default="$INFO[ListItem.Label2]" />
 		<param name="label2_scroll" default="false" />
 		<param name="focus_border_enabled" default="false" />
-		<param name="color" default="$VAR[Unfocused_Color]" />
+		<param name="color" default="unfocused" />
 		<definition>
 			<control type="group">
 				<animation effect="slide" end="-30,0" time="0" condition="$PARAM[label_shift]">Conditional</animation>
@@ -413,14 +413,14 @@
 					<top>0</top>
 					<width>30</width>
 					<height>30</height>
-					<texture colordiffuse="$VAR[Light_Color]">settings/category_switcher.png</texture>
+					<texture colordiffuse="light">settings/category_switcher.png</texture>
 				</control>
 				<control type="image">
 					<animation effect="rotate" center="auto" end="180" time="0" condition="true" reversible="false">Conditional</animation>
 					<bottom>0</bottom>
 					<width>30</width>
 					<height>30</height>
-					<texture colordiffuse="$VAR[Light_Color]">settings/category_switcher.png</texture>
+					<texture colordiffuse="light">settings/category_switcher.png</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
 			</control>
@@ -430,7 +430,7 @@
 				<left>15</left>
 				<width>60</width>
 				<height>60</height>
-				<texture colordiffuse="$VAR[Light_Color]">$VAR[SettingsCategory_Icon_Texture]</texture>
+				<texture colordiffuse="light">$VAR[SettingsCategory_Icon_Texture]</texture>
 			</control>
 			<!-- Hidden list -->
 			<control type="grouplist" id="3000">
@@ -511,19 +511,19 @@
 				<visible>!Control.HasFocus(20)</visible>
 				<control type="image">
 					<visible>String.IsEqual(Control.GetLabel(20),$LOCALIZE[10036])</visible>
-					<texture colordiffuse="$VAR[Light_Color]">settings/Settings_Level1_unfocused_120.png</texture>
+					<texture colordiffuse="light">settings/Settings_Level1_unfocused_120.png</texture>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(Control.GetLabel(20),$LOCALIZE[10037])</visible>
-					<texture colordiffuse="$VAR[Light_Color]">settings/Settings_Level2_unfocused_120.png</texture>
+					<texture colordiffuse="light">settings/Settings_Level2_unfocused_120.png</texture>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(Control.GetLabel(20),$LOCALIZE[10038])</visible>
-					<texture colordiffuse="$VAR[Light_Color]">settings/Settings_Level3_unfocused_120.png</texture>
+					<texture colordiffuse="light">settings/Settings_Level3_unfocused_120.png</texture>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(Control.GetLabel(20),$LOCALIZE[10039])</visible>
-					<texture colordiffuse="$VAR[Light_Color]">settings/Settings_Level4_unfocused_120.png</texture>
+					<texture colordiffuse="light">settings/Settings_Level4_unfocused_120.png</texture>
 				</control>
 			</control>
 			<!-- focused -->
@@ -531,19 +531,19 @@
 				<visible>Control.HasFocus(20)</visible>
 				<control type="image">
 					<visible>String.IsEqual(Control.GetLabel(20),$LOCALIZE[10036])</visible>
-					<texture colordiffuse="$VAR[Light_Color]">settings/Settings_Level1_focused_120.png</texture>
+					<texture colordiffuse="light">settings/Settings_Level1_focused_120.png</texture>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(Control.GetLabel(20),$LOCALIZE[10037])</visible>
-					<texture colordiffuse="$VAR[Light_Color]">settings/Settings_Level2_focused_120.png</texture>
+					<texture colordiffuse="light">settings/Settings_Level2_focused_120.png</texture>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(Control.GetLabel(20),$LOCALIZE[10038])</visible>
-					<texture colordiffuse="$VAR[Light_Color]">settings/Settings_Level3_focused_120.png</texture>
+					<texture colordiffuse="light">settings/Settings_Level3_focused_120.png</texture>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(Control.GetLabel(20),$LOCALIZE[10039])</visible>
-					<texture colordiffuse="$VAR[Light_Color]">settings/Settings_Level4_focused_120.png</texture>
+					<texture colordiffuse="light">settings/Settings_Level4_focused_120.png</texture>
 				</control>
 			</control>
 		</control>

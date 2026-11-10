@@ -604,7 +604,7 @@
 			<aligny>center</aligny>
 			<label>$LOCALIZE[10005]</label>
 			<font>Title_Breadcrumb_Label</font>
-			<textcolor>$VAR[Unfocused_Color]</textcolor>
+			<textcolor>unfocused</textcolor>
 		</control>
 	</include>
 </includes>

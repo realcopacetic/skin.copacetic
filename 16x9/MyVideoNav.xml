@@ -8,7 +8,7 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>3000</menucontrol>
 	<views>50,501,502,504,505</views>
-	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<backgroundcolor>dark</backgroundcolor>
 	<controls>
 		<include content="Common_Controls" />
 		<include content="videos_Controls" />

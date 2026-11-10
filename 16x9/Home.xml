@@ -6,7 +6,7 @@
 	<include content="atr_trailer_window_stop" />
 	<onunload>ClearProperty(autoscroll_id,home)</onunload> <!-- a window exit sends no lost focus to the row -->
 	<defaultcontrol always="true">4010</defaultcontrol>
-	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<backgroundcolor>dark</backgroundcolor>
 	<controls>
 		<!-- Hidden -->
 		<!-- Focus setter added to enable scrollbar to trigger on window load -->
@@ -62,8 +62,8 @@
 				<include content="Trailer_Autoplay_Fade_Animation" condition="$EXP[trailer_include_home]" />
 				<include content="Horizontal_List">
 					<param name="hidden_id" value="3000" />
-					<param name="focused_color" value="$VAR[Light_Color]" />
-					<param name="unfocused_color" value="$VAR[Light_Color]" />
+					<param name="focused_color" value="light" />
+					<param name="unfocused_color" value="light" />
 				</include>
 				<include content="Home_Time_Widget" condition="!Skin.String(Time_Widget,None) + !Skin.HasSetting(Time_Widget_Persistent)" />
 				<include content="Search_Button" condition="!Skin.HasSetting(GlobalSearch_Disabled)" />

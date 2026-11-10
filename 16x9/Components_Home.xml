@@ -7,9 +7,9 @@
 		<param name="focused_top" default="0" />
 		<param name="focused_height" default="100%" />
 		<param name="focused_font" default="Main_Menu_Focused" />
-		<param name="focused_color" default="$VAR[Light_Color]" />
+		<param name="focused_color" default="light" />
 		<param name="unfocused_font" default="Main_Menu_Unfocused" />
-		<param name="unfocused_color" default="$VAR[Light_Color]" />
+		<param name="unfocused_color" default="light" />
 		<definition>
 			<control type="label">
 				<top>$PARAM[focused_top]</top>
@@ -359,7 +359,7 @@
 
 	<include name="Clock">
 		<param name="visible" default="true" />
-		<param name="textcolor" default="$VAR[Light_Color]" />
+		<param name="textcolor" default="light" />
 		<definition>
 			<control type="group">
 				<visible>$PARAM[visible]</visible>
@@ -404,7 +404,7 @@
 	<include name="Time_Widget">
 		<param name="visible" default="![$EXP[Music_Player_IsVisible] | $EXP[Music_Player_HasFocus] | $EXP[Infoscreen_IsVisible] | Window.IsVisible(volumebar) | Window.IsVisible(notification) | Window.IsVisible(extendedprogressdialog)]" />
 		<param name="include_weather" default="true" />
-		<param name="textcolor" default="$VAR[Light_Color]" />
+		<param name="textcolor" default="light" />
 		<definition>
 			<control type="grouplist">
 				<visible>$PARAM[visible]</visible>

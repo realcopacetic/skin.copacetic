@@ -23,7 +23,7 @@
 	<include name="Busy_Spinner">
 		<param name="visible" />
 		<param name="size" default="90" />
-		<param name="color" default="$VAR[Light_Color]" />
+		<param name="color" default="light" />
 		<definition>
 			<control type="image">
 				<visible>$PARAM[visible]</visible>
@@ -69,12 +69,12 @@
 					<visible>!String.IsEqual(Window(home).Property(Infoscreen_Transition),true)</visible>
 					<include content="VisibleHidden_Fade_Animation" />
 					<control type="image">
-						<texture colordiffuse="$VAR[Light_Background_Color]">views/white_100.png</texture>
+						<texture colordiffuse="light_background">views/white_100.png</texture>
 					</control>
 					<control type="image">
 						<bottom>0</bottom>
 						<height>50%</height>
-						<texture colordiffuse="$VAR[Light_Grey_Color]">views/gradient_light-background.png</texture>
+						<texture colordiffuse="light_grey">views/gradient_light-background.png</texture>
 					</control>
 				</control>
 			</control>
@@ -132,7 +132,7 @@
 					<param name="gap" value="1010" />
 					<param name="maxheight" value="60" />
 					<param name="font" value="Description" />
-					<param name="color" value="$VAR[Unfocused_Color]" />
+					<param name="color" value="unfocused" />
 					<param name="label" value="$VAR[Background_Label]" />
 					<param name="align" value="right" />
 					<include content="Visible_Fade_Delayed_Animation" />
@@ -221,7 +221,7 @@
 		<definition>
 			<control type="image">
 				<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="Default_Transition_5x" tween="sine" easing="inout" reversible="true">Visible</animation>
-				<texture colordiffuse="$VAR[Dark_Color]">views/white_100.png</texture>
+				<texture colordiffuse="dark">views/white_100.png</texture>
 			</control>
 			<include content="Background_Multiart_Home" condition="Skin.String(slideshow_interval,5)">
 				<param name="visible" value="$PARAM[visible]" />
@@ -296,8 +296,8 @@
 			<height>120</height>
 			<left>30</left>
 			<top>30</top>
-			<texturenofocus colordiffuse="$VAR[Light_Color]">icons/icon_browse_unfocused_120.png</texturenofocus>
-			<texturefocus colordiffuse="$VAR[Light_Color]">icons/icon_browse_focused_120.png</texturefocus>
+			<texturenofocus colordiffuse="light">icons/icon_browse_unfocused_120.png</texturenofocus>
+			<texturefocus colordiffuse="light">icons/icon_browse_focused_120.png</texturefocus>
 			<onclick>ActivateWindow(1180)</onclick>
 			<include content="Search_Button_Navigation" />
 		</control>
@@ -338,7 +338,7 @@
 		<param name="height" default="360" />
 		<param name="align" default="center" />
 		<param name="textalign" default="left" />
-		<param name="textcolor" default="$VAR[Light_Color]" />
+		<param name="textcolor" default="light" />
 		<param name="title_font" default="MusicPlayer_Title" />
 		<param name="title_height" default="80" />
 		<param name="info_font" default="MusicPlayer_Info" />

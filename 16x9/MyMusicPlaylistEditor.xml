@@ -4,7 +4,7 @@
 	<onload>ClearProperty(ActiveList,musicplaylisteditor)</onload>
 	<onunload>ClearProperty(ActiveList,musicplaylisteditor)</onunload>
 	<defaultcontrol always="true">4010</defaultcontrol>
-	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<backgroundcolor>dark</backgroundcolor>
 	<views>50</views>
 	<controls>
 		<include content="musicplaylisteditor_Hidden" />
@@ -40,7 +40,7 @@
 			</include>
 			<!-- Middle label -->
 			<include content="Description_Label">
-				<param name="textcolor" value="$VAR[Unfocused_Color]" />
+				<param name="textcolor" value="unfocused" />
 				<param name="label" value="$VAR[musicplaylisteditor_Info_Label]" />
 				<param name="left" value="810" />
 				<param name="right" value="810" />
@@ -53,7 +53,7 @@
 			<!-- Left side label -->
 			<include content="Description_Label">
 				<param name="type" value="label" />
-				<param name="textcolor" value="$VAR[Light_Color]" />
+				<param name="textcolor" value="light" />
 				<param name="label" value="$VAR[musicplaylisteditor_Directory_Label]" />
 				<param name="left" value="150" />
 				<param name="right" value="1200" />
@@ -63,7 +63,7 @@
 			<!-- Right side label -->
 			<include content="Description_Label">
 				<param name="type" value="label" />
-				<param name="textcolor" value="$VAR[Light_Color]" />
+				<param name="textcolor" value="light" />
 				<param name="label" value="$VAR[musicplaylisteditor_Playlist_Label]" />
 				<param name="left" value="1200" />
 				<param name="right" value="150" />

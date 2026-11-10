@@ -2,7 +2,7 @@
 <window type="window" id="1180">
 	<!-- Search: a window, so Back returns to whatever opened it -->
 	<include content="atr_search_defaultcontrol" />
-	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<backgroundcolor>dark</backgroundcolor>
 	<!-- Keyboard mode: a skin reload empties the field but keeps the Home property, and it writes no key log -->
 	<onload condition="!$EXP[search_landing] + String.IsEmpty(Control.GetLabel(4200).index(1)) + !String.IsEmpty(Window(home).Property(search_query))">ClearProperty(search_query,home)</onload>
 	<onload condition="!$EXP[search_landing]">ClearProperty(search_log,home)</onload>

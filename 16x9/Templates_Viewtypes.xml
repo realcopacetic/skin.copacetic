@@ -83,8 +83,8 @@
 					<include content="Progress_Bar">
 						<param name="id" value="$PARAM[id]" />
 						<param name="visible" value="Control.HasFocus($PARAM[id]) | $EXP[Music_Player_HasFocus]" />
-						<param name="background_color" value="$VAR[Progress_Light_Background_Color]" />
-						<param name="focus_color" value="$VAR[Progress_Light_Focused_Color]" />
+						<param name="background_color" value="light15" />
+						<param name="focus_color" value="light" />
 						<param name="progress_indicator_background" value="$VAR[Accent_Color]" />
 						<param name="progress_indicator_textcolor" value="$VAR[Progress_Grid_Text_Color]" />
 						<param name="slides" value="$PARAM[slides]" />

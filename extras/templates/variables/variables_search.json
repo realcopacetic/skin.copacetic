@@ -41,23 +41,23 @@
         {
           "filter": "In({art}, [Posters, Square])",
           "condition": "Control.HasFocus({index}) + Skin.String(Theme,Light) + !String.IsEmpty(Container({index}).ListItemNoWrap(2).Label)",
-          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
-          "focused": "$VAR[Light_Color]"
+          "background": "light15",
+          "focused": "light"
         },
         {
           "filter": "equals({art}, Fanart)",
           "condition": "Control.HasFocus({index}) + Skin.String(Theme,Light) + !String.IsEmpty(Container({index}).ListItemNoWrap(1).Label)",
-          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
-          "focused": "$VAR[Light_Color]"
+          "background": "light15",
+          "focused": "light"
         },
         {
           "condition": "Skin.String(Theme,Light)",
-          "background": "$VAR[Alpha_15]$VAR[Dark_Hex]",
-          "focused": "$VAR[Dark_Grey_Color]"
+          "background": "dark15",
+          "focused": "dark_grey"
         },
         {
-          "background": "$VAR[Alpha_15]$VAR[Light_Hex]",
-          "focused": "$VAR[Light_Color]"
+          "background": "light15",
+          "focused": "light"
         }
       ]
     }

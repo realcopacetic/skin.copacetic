@@ -8,7 +8,7 @@
 	<zorder>3</zorder>
 	<controls>
 		<include content="OSD_Template">
-			<param name="breadcrumb_color" value="$VAR[Light_Color]" />
+			<param name="breadcrumb_color" value="light" />
 			<param name="windowname" value="videoosd" />
 			<control type="button" id="4023">
 				<visible allowhiddenfocus="true">false</visible>

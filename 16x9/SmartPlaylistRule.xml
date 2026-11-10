@@ -30,7 +30,7 @@
         <right>360</right>
         <bottom>585</bottom>
         <height>1</height>
-        <texture colordiffuse="$VAR[Unfocused_Color]">views/white_100.png</texture>
+        <texture colordiffuse="unfocused">views/white_100.png</texture>
       </control>
       <include content="Button_Group_Template">
         <param name="id" value="4005" />
@@ -41,8 +41,8 @@
         <param name="bottom" value="585" />
         <param name="right" value="360" />
         <param name="button_width" value="90" />
-        <param name="unfocused_color" value="$VAR[Unfocused_Color]" />
-        <param name="color" value="$VAR[Light_Color]" />
+        <param name="unfocused_color" value="unfocused" />
+        <param name="color" value="light" />
         <param name="button1" value="true" />
         <param name="button1_id" value="20" />
         <param name="button1_texture" value="Browse" />
@@ -51,8 +51,8 @@
         <param name="onleft" value="20" />
         <param name="onright" value="0" />
         <param name="onup" value="20" />
-        <param name="color" value="$VAR[Light_Color]" />
-        <param name="unfocused_color" value="$VAR[Light_Color]" />
+        <param name="color" value="light" />
+        <param name="unfocused_color" value="light" />
         <param name="button1" value="true" />
         <param name="button1_id" value="19" />
         <param name="button1_texture" value="Cross" />

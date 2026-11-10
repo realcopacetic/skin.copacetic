@@ -83,7 +83,7 @@
 					<param name="label_maxwidth" value="$PARAM[unfocused_label_maxwidth]" />
 					<param name="icon_slide" value="$PARAM[icon_slide]" />
 					<param name="music_rating_slide" value="$PARAM[music_rating_slide]" />
-					<param name="music_rating_color" value="$VAR[Light_Color]" />
+					<param name="music_rating_color" value="light" />
 				</include>
 			</itemlayout>
 			<focusedlayout height="60" width="1920" condition="$PARAM[condition]">
@@ -92,7 +92,7 @@
 					<param name="label_maxwidth" value="$PARAM[focused_label_maxwidth]" />
 					<param name="icon_slide" value="$PARAM[icon_slide]" />
 					<param name="music_rating_slide" value="$PARAM[music_rating_slide]" />
-					<param name="music_rating_color" value="$VAR[Light_Color]" />
+					<param name="music_rating_color" value="light" />
 				</include>
 			</focusedlayout>
 		</definition>

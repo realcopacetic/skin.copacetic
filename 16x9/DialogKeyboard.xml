@@ -44,10 +44,10 @@
 				<centerleft>50%</centerleft>
 				<top>390</top>
 				<font>Main_Menu_Unfocused</font>
-				<textcolor>$VAR[Dark_Color]</textcolor>
-				<focusedcolor>$VAR[Dark_Color]</focusedcolor>
-				<texturenofocus colordiffuse="$VAR[Light_Color]">views/white_100.png</texturenofocus>
-				<texturefocus colordiffuse="$VAR[Light_Color]">views/white_100.png</texturefocus>
+				<textcolor>dark</textcolor>
+				<focusedcolor>dark</focusedcolor>
+				<texturenofocus colordiffuse="light">views/white_100.png</texturenofocus>
+				<texturefocus colordiffuse="light">views/white_100.png</texturefocus>
 				<onup>3100</onup>
 				<ondown>3000</ondown>
 				<onright>301</onright>

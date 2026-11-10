@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- tvguide / radioguide: stub, PVR isn't skinned (PVR_Stub) -->
-	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<backgroundcolor>dark</backgroundcolor>
 	<views>10</views>
 	<controls>
 		<include content="PVR_Stub" />

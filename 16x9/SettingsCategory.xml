@@ -2,7 +2,7 @@
 <window>
 	<!-- interfacesettings, mediasettings, playersettings, systemsettings, servicesettings, gamesettings, pvrsettings -->
 	<include content="skinsettings_OnLoadUnload" />
-	<backgroundcolor>$VAR[Dark_Color]</backgroundcolor>
+	<backgroundcolor>dark</backgroundcolor>
 	<controls>
 		<include content="Default_Settings_Controls">
 			<param name="include_togglebutton" value="true" />
@@ -39,7 +39,7 @@
 				<param name="type" value="textbox" />
 				<param name="height" value="100" />
 				<param name="bottom" value="40" />
-				<param name="textcolor" value="$VAR[Light_Color]" />
+				<param name="textcolor" value="light" />
 			</include>
 			<control type="textbox">
 				<visible>Control.HasFocus(20)</visible>
@@ -51,7 +51,7 @@
 				<font>MusicPlayer_Title</font>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>$VAR[Light_Color]</textcolor>
+				<textcolor>light</textcolor>
 			</control>
 			<include content="Settings_Level_Button" />
 		</include>
