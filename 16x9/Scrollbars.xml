@@ -492,125 +492,7 @@
 		</definition>
 	</include>
 
-	<include name="Widget_Scrollbar_Template">
-		<param name="visible" />
-		<param name="background_color" default="$VAR[Scroll_Widget_Background_Color]" />
-		<param name="focused_color" default="$VAR[Scroll_Widget_Focused_Color]" />
-		<param name="pos0_enabled" default="false" />
-		<param name="pos0_visible" default="false" />
-		<param name="pos0_active" default="false" />
-		<param name="pos1_enabled" default="false" />
-		<param name="pos1_visible" default="false" />
-		<param name="pos1_active" default="false" />
-		<param name="pos2_enabled" default="false" />
-		<param name="pos2_visible" default="false" />
-		<param name="pos2_active" default="false" />
-		<param name="pos3_enabled" default="false" />
-		<param name="pos3_visible" default="false" />
-		<param name="pos3_active" default="false" />
-		<param name="pos4_enabled" default="false" />
-		<param name="pos4_visible" default="false" />
-		<param name="pos4_active" default="false" />
-		<param name="pos5_enabled" default="false" />
-		<param name="pos5_visible" default="false" />
-		<param name="pos5_active" default="false" />
-		<param name="pos6_enabled" default="false" />
-		<param name="pos6_visible" default="false" />
-		<param name="pos6_active" default="false" />
-		<param name="pos7_enabled" default="false" />
-		<param name="pos7_visible" default="false" />
-		<param name="pos7_active" default="false" />
-		<param name="pos8_enabled" default="false" />
-		<param name="pos8_visible" default="false" />
-		<param name="pos8_active" default="false" />
-		<param name="pos9_enabled" default="false" />
-		<param name="pos9_visible" default="false" />
-		<param name="pos9_active" default="false" />
-		<definition>
-			<control type="grouplist">
-				<visible>$PARAM[visible]</visible>
-				<include content="Visible_Fade_Delayed_Animation" />
-				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos0_active]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos1_active]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos2_active]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos3_active]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos4_active]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos5_active]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos6_active]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos7_active]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos8_active]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[pos9_active]">Conditional</animation>
-				<right>30</right>
-				<width>6</width>
-				<height>100%</height>
-				<align>center</align>
-				<orientation>vertical</orientation>
-				<itemgap>0</itemgap>
-				<include content="Widget_Scrollbar_Nib" condition="$PARAM[pos0_enabled]">
-					<param name="visible" value="$PARAM[pos0_visible]" />
-					<param name="active" value="$PARAM[pos0_active]" />
-					<param name="background_color" value="$PARAM[background_color]" />
-					<param name="focused_color" value="$PARAM[focused_color]" />
-				</include>
-				<include content="Widget_Scrollbar_Nib" condition="$PARAM[pos1_enabled]">
-					<param name="visible" value="$PARAM[pos1_visible]" />
-					<param name="active" value="$PARAM[pos1_active]" />
-					<param name="background_color" value="$PARAM[background_color]" />
-					<param name="focused_color" value="$PARAM[focused_color]" />
-				</include>
-				<include content="Widget_Scrollbar_Nib" condition="$PARAM[pos2_enabled]">
-					<param name="visible" value="$PARAM[pos2_visible]" />
-					<param name="active" value="$PARAM[pos2_active]" />
-					<param name="background_color" value="$PARAM[background_color]" />
-					<param name="focused_color" value="$PARAM[focused_color]" />
-				</include>
-				<include content="Widget_Scrollbar_Nib" condition="$PARAM[pos3_enabled]">
-					<param name="visible" value="$PARAM[pos3_visible]" />
-					<param name="active" value="$PARAM[pos3_active]" />
-					<param name="background_color" value="$PARAM[background_color]" />
-					<param name="focused_color" value="$PARAM[focused_color]" />
-				</include>
-				<include content="Widget_Scrollbar_Nib" condition="$PARAM[pos4_enabled]">
-					<param name="visible" value="$PARAM[pos4_visible]" />
-					<param name="active" value="$PARAM[pos4_active]" />
-					<param name="background_color" value="$PARAM[background_color]" />
-					<param name="focused_color" value="$PARAM[focused_color]" />
-				</include>
-				<include content="Widget_Scrollbar_Nib" condition="$PARAM[pos5_enabled]">
-					<param name="visible" value="$PARAM[pos5_visible]" />
-					<param name="active" value="$PARAM[pos5_active]" />
-					<param name="background_color" value="$PARAM[background_color]" />
-					<param name="focused_color" value="$PARAM[focused_color]" />
-				</include>
-				<include content="Widget_Scrollbar_Nib" condition="$PARAM[pos6_enabled]">
-					<param name="visible" value="$PARAM[pos6_visible]" />
-					<param name="active" value="$PARAM[pos6_active]" />
-					<param name="background_color" value="$PARAM[background_color]" />
-					<param name="focused_color" value="$PARAM[focused_color]" />
-				</include>
-				<include content="Widget_Scrollbar_Nib" condition="$PARAM[pos7_enabled]">
-					<param name="visible" value="$PARAM[pos7_visible]" />
-					<param name="active" value="$PARAM[pos7_active]" />
-					<param name="background_color" value="$PARAM[background_color]" />
-					<param name="focused_color" value="$PARAM[focused_color]" />
-				</include>
-				<include content="Widget_Scrollbar_Nib" condition="$PARAM[pos8_enabled]">
-					<param name="visible" value="$PARAM[pos8_visible]" />
-					<param name="active" value="$PARAM[pos8_active]" />
-					<param name="background_color" value="$PARAM[background_color]" />
-					<param name="focused_color" value="$PARAM[focused_color]" />
-				</include>
-				<include content="Widget_Scrollbar_Nib" condition="$PARAM[pos9_enabled]">
-					<param name="visible" value="$PARAM[pos9_visible]" />
-					<param name="active" value="$PARAM[pos9_active]" />
-					<param name="background_color" value="$PARAM[background_color]" />
-					<param name="focused_color" value="$PARAM[focused_color]" />
-				</include>
-			</control>
-		</definition>
-	</include>
-
-	<!-- Home's row nibs: the template's fixed pos0-pos9 can't hold a free number of rows, so its grouplist is spelled out -->
+	<!-- Home's row nibs: the menu's, then one per row (generated) -->
 	<include name="Home_Scrollbar">
 		<control type="grouplist">
 			<visible>!Control.HasFocus(4300) + !$EXP[TransparentDialog_IsVisible]</visible>
@@ -649,68 +531,61 @@
 		</control>
 	</include>
 
+	<!-- An info dialog's nibs: the menu's, then one per rail (generated, shown while the rail is) -->
+	<include name="Infoscreen_Scrollbar">
+		<param name="dialog" />
+		<param name="menu_active" />
+		<param name="menu_visible" />
+		<param name="visible" />
+		<definition>
+			<control type="grouplist">
+				<visible>$PARAM[visible]</visible>
+				<include content="Visible_Fade_Delayed_Animation" />
+				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="$PARAM[menu_active]">Conditional</animation>
+				<include content="infoscreen_nib_fades_$PARAM[dialog]" />
+				<right>30</right>
+				<width>6</width>
+				<height>100%</height>
+				<align>center</align>
+				<orientation>vertical</orientation>
+				<itemgap>0</itemgap>
+				<include content="Widget_Scrollbar_Nib">
+					<param name="active" value="$PARAM[menu_active]" />
+					<param name="background_color" value="$VAR[Scroll_Widget_Background_Color]" />
+					<param name="focused_color" value="$VAR[Scroll_Widget_Focused_Color]" />
+					<param name="visible" value="$PARAM[menu_visible]" />
+				</include>
+				<include content="infoscreen_nibs_$PARAM[dialog]" />
+			</control>
+		</definition>
+	</include>
+
 	<include name="DialogAddonInfo_Scrollbar">
-		<include content="Widget_Scrollbar_Template">
+		<include content="Infoscreen_Scrollbar">
+			<param name="dialog" value="addoninformation" />
+			<param name="menu_active" value="ControlGroup(3000).HasFocus" />
+			<param name="menu_visible" value="[ControlGroup(3000).HasFocus + Control.IsVisible(5009)] | $EXP[Music_Player_HasFocus]" />
 			<param name="visible" value="!Window.IsVisible(shutdownmenu) + Control.IsVisible(50)" />
-			<param name="pos0_enabled" value="true" />
-			<param name="pos0_visible" value="[ControlGroup(3000).HasFocus + Control.IsVisible(5009)] | $EXP[Music_Player_HasFocus]" />
-			<param name="pos0_active" value="ControlGroup(3000).HasFocus" />
-			<param name="pos1_enabled" value="true" />
-			<param name="pos1_visible" value="Control.IsVisible(50)" />
-			<param name="pos1_active" value="Control.HasFocus(50)" />
 		</include>
 	</include>
 
 	<include name="DialogMusicInfo_Scrollbar">
-		<include content="Widget_Scrollbar_Template">
-			<param name="visible" value="!Window.IsVisible(shutdownmenu) + !Control.HasFocus(60)" />
-			<param name="pos0_enabled" value="true" />
-			<param name="pos0_visible" value="Control.IsVisible(3000)" />
+		<include content="Infoscreen_Scrollbar">
+			<param name="dialog" value="musicinformation" />
 			<!-- Focused_Button, not 5009: this is a Conditional animation's condition, so it must read false at window init or the nibs start faded out -->
-			<param name="pos0_active" value="[ControlGroup(3000).HasFocus + !String.IsEmpty(Window(musicinformation).Property(Focused_Button))] | Control.HasFocus(60) | Control.HasFocus(3100) | Control.HasFocus(4021) | Control.HasFocus(4022) | $EXP[Music_Player_HasFocus]" />
-			<param name="pos1_enabled" value="!String.IsEqual(ListItem.DBType,album)" />
-			<param name="pos1_visible" value="Control.IsVisible(3201)" />
-			<param name="pos1_active" value="Control.HasFocus(3201)" />
-			<param name="pos2_enabled" value="true" />
-			<param name="pos2_visible" value="Control.IsVisible(3202)" />
-			<param name="pos2_active" value="Control.HasFocus(3202)" />
-			<param name="pos3_enabled" value="true" />
-			<param name="pos3_visible" value="Control.IsVisible(3205)" />
-			<param name="pos3_active" value="Control.HasFocus(3205)" />
-			<param name="pos4_enabled" value="true" />
-			<param name="pos4_visible" value="Control.IsVisible(3207)" />
-			<param name="pos4_active" value="Control.HasFocus(3207)" />
+			<param name="menu_active" value="[ControlGroup(3000).HasFocus + !String.IsEmpty(Window(musicinformation).Property(Focused_Button))] | Control.HasFocus(60) | Control.HasFocus(3100) | Control.HasFocus(4021) | Control.HasFocus(4022) | $EXP[Music_Player_HasFocus]" />
+			<param name="menu_visible" value="Control.IsVisible(3000)" />
+			<param name="visible" value="!Window.IsVisible(shutdownmenu) + !Control.HasFocus(60)" />
 		</include>
 	</include>
 
 	<include name="DialogVideoInfo_Scrollbar">
-		<include content="Widget_Scrollbar_Template">
-			<param name="visible" value="!Window.IsVisible(shutdownmenu) + !Control.HasFocus(60) + !Control.HasFocus(4020) + !String.IsEqual(ListItem.DBType,video)" />
-			<param name="pos0_enabled" value="true" />
-			<param name="pos0_visible" value="Control.IsVisible(3000)" />
+		<include content="Infoscreen_Scrollbar">
+			<param name="dialog" value="movieinformation" />
 			<!-- Focused_Button, not 5009: as DialogMusicInfo_Scrollbar -->
-			<param name="pos0_active" value="[ControlGroup(3000).HasFocus + !String.IsEmpty(Window(movieinformation).Property(Focused_Button))] | Control.HasFocus(60) | Control.HasFocus(4021) | Control.HasFocus(4022) | $EXP[Music_Player_HasFocus]" />
-			<param name="pos1_enabled" value="true" />
-			<param name="pos1_visible" value="Control.IsVisible(3201)" />
-			<param name="pos1_active" value="Control.HasFocus(3201)" />
-			<param name="pos2_enabled" value="[String.IsEqual(ListItem.DBType,tvshow) + String.IsEqual(ListItem.Label,ListItem.TVShowTitle)] | String.IsEqual(ListItem.DBType,episode)" />
-			<param name="pos2_visible" value="Control.IsVisible(3202)" />
-			<param name="pos2_active" value="Control.HasFocus(3202)" />
-			<param name="pos3_enabled" value="true" />
-			<param name="pos3_visible" value="Control.IsVisible(50)" />
-			<param name="pos3_active" value="Control.HasFocus(50)" />
-			<param name="pos4_enabled" value="!String.IsEqual(ListItem.DBType,set)" />
-			<param name="pos4_visible" value="Control.IsVisible(3203) + $EXP[Actor_Has_Credits]" />
-			<param name="pos4_active" value="Control.HasFocus(3203)" />
-			<param name="pos5_enabled" value="!String.IsEqual(ListItem.DBType,set)" />
-			<param name="pos5_visible" value="Control.IsVisible(3205)" />
-			<param name="pos5_active" value="Control.HasFocus(3205)" />
-			<param name="pos6_enabled" value="!String.IsEqual(ListItem.DBType,set)" />
-			<param name="pos6_visible" value="Control.IsVisible(3206)" />
-			<param name="pos6_active" value="Control.HasFocus(3206)" />
-			<param name="pos7_enabled" value="!String.IsEqual(ListItem.DBType,set)" />
-			<param name="pos7_visible" value="Control.IsVisible(3207)" />
-			<param name="pos7_active" value="Control.HasFocus(3207)" />
+			<param name="menu_active" value="[ControlGroup(3000).HasFocus + !String.IsEmpty(Window(movieinformation).Property(Focused_Button))] | Control.HasFocus(60) | Control.HasFocus(4021) | Control.HasFocus(4022) | $EXP[Music_Player_HasFocus]" />
+			<param name="menu_visible" value="Control.IsVisible(3000)" />
+			<param name="visible" value="!Window.IsVisible(shutdownmenu) + !Control.HasFocus(60) + !Control.HasFocus(4020) + !String.IsEqual(ListItem.DBType,video)" />
 		</include>
 	</include>
 

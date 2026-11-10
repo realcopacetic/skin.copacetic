@@ -48,6 +48,11 @@
         }
       ]
     },
+    "search_hasfocus": {
+      "note": "Widget_Breadcrumb_Animation: a rail has focus.",
+      "index": { "start": 3201 },
+      "rules": [ { "type": "append", "value": "Control.HasFocus({index})" } ]
+    },
     "search_has_results": {
       "index": { "start": 3201 },
       "rules": [ { "type": "append", "value": "Integer.IsGreater(Container({index}).NumItems,0)" } ]

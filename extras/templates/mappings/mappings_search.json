@@ -16,7 +16,9 @@
     "default_order": [ "movies", "tvshows", "episodes", "artists", "albums", "songs" ],
     "tokens": {
       "hasfocus": "[Window.Is(1180) + Control.HasFocus({index})]",
-      "shown": "[Window.Is(1180) + [Control.HasFocus({index}) | $EXP[search_preview_{index}]]]"
+      "rail_id": "{index}",
+      "shown": "[Window.Is(1180) + [Control.HasFocus({index}) | $EXP[search_preview_{index}]]]",
+      "window": "search"
     },
     "config_fields": {
       "global": {

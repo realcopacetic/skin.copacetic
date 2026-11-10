@@ -30,8 +30,8 @@ LISTS
 3100          Secondary
 3100          Secondary (on infoscreen - album tracklist)
 3100          Hidden list (for set/picture info when secondary lists disabled)
-3200          Home rows grouplist (Templates_Widgets.xml, Home_Widgets)
-32XX          Widgets (Home rows from 3201, generated; info screen and global search rails)
+3200          Home rows grouplist (Home_Widgets); info dialogs rails grouplist (Infoscreen_Rails)
+32XX          Widgets (Home rows from 3201, generated; info screen rails 3201-3214 (mappings_infoscreen.json); global search rails)
 3300          Background slideshow container
 3400          Multiart fadelabel
 3500          Music player controls
@@ -80,8 +80,6 @@ CHECKERS
 6004          Info label empty
 6005-7        Variable title label lengths
 6021          Star rating checker  
-62XX1         Widget view type
-62XX2         Widget display type
 6300          Background art checker
 6303          Studio flag empty
 6304          MPAA flag empty
@@ -91,7 +89,8 @@ CHECKERS
 6308          Breadcrumb title empty
 6309          Breadcrumb info empty
 6310          Clearlogo empty
-63XXX(X)      Details clearlogo sized by 9300 (63 + view id 501, 502, 504, or widget id 3201-3209)
+632XX         Breadcrumb title of an info screen rail (6 + its index, generated) or a search rail (6 + its id)
+63XXX(X)      Details clearlogo sized by 9300 (63 + view id 501, 502, 504, or a Home row or info screen rail id)
 635X          GridView shadow checkers
 6400          Multiart Type
 650X          Music player / Notification checkers

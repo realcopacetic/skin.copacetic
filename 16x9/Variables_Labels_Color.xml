@@ -72,78 +72,33 @@
 		<value condition="!String.IsEmpty(Container(3100).NumItems)">$VAR[Copacetic_Divider_Bold_Dominant]</value>
 	</variable>
 
-	<variable name="3201_ListItem_Duration_Divider">
-		<value condition="!String.IsEmpty(Container(3201).ListItem.Duration)">$VAR[Copacetic_Divider]</value>
+	<!-- The focused container's item: an info rail's, read from its info line (Info_Label_Infoscreen_Widgets) while it has focus -->
+	<variable name="Container_ListItem_Artist_Divider">
+		<value condition="!String.IsEmpty(Container.ListItem.Artist)">$VAR[Copacetic_Divider]</value>
 	</variable>
-	<variable name="3201_ListItem_Duration_Divider_Bold">
-		<value condition="!String.IsEmpty(Container(3201).ListItem.Duration)">$VAR[Copacetic_Divider_Bold]</value>
+	<variable name="Container_ListItem_Duration_Divider">
+		<value condition="!String.IsEmpty(Container.ListItem.Duration)">$VAR[Copacetic_Divider]</value>
 	</variable>
-	<variable name="3202_ListItem_UnwatchedEpisodes_Divider">
-		<value condition="!String.IsEmpty(Container(3202).ListItem.Property(UnwatchedEpisodes))">$VAR[Copacetic_Divider]</value>
+	<variable name="Container_ListItem_Duration_Divider_Bold">
+		<value condition="!String.IsEmpty(Container.ListItem.Duration)">$VAR[Copacetic_Divider_Bold]</value>
 	</variable>
-	<variable name="3202_ListItem_UnwatchedEpisodes_Divider_Bold">
-		<value condition="!String.IsEmpty(Container(3202).ListItem.Property(UnwatchedEpisodes))">$VAR[Copacetic_Divider_Bold]</value>
+	<variable name="Container_ListItem_TotalSeasons_Divider">
+		<value condition="!String.IsEmpty(Container.ListItem.Property(TotalSeasons))">$VAR[Copacetic_Divider]</value>
 	</variable>
-	<variable name="3202_ListItem_WatchedEpisodes_Divider">
-		<value condition="!String.IsEmpty(Container(3202).ListItem.Property(WatchedEpisodes))">$VAR[Copacetic_Divider]</value>
+	<variable name="Container_ListItem_TotalSeasons_Divider_Bold">
+		<value condition="!String.IsEmpty(Container.ListItem.Property(TotalSeasons))">$VAR[Copacetic_Divider_Bold]</value>
 	</variable>
-	<variable name="3202_ListItem_WatchedEpisodes_Divider_Bold">
-		<value condition="!String.IsEmpty(Container(3202).ListItem.Property(WatchedEpisodes))">$VAR[Copacetic_Divider_Bold]</value>
+	<variable name="Container_ListItem_UnwatchedEpisodes_Divider">
+		<value condition="!String.IsEmpty(Container.ListItem.Property(UnwatchedEpisodes))">$VAR[Copacetic_Divider]</value>
 	</variable>
-	<variable name="3202_NumItems_Divider_Bold">
-		<value condition="!String.IsEmpty(Container(3202).NumItems)">$VAR[Copacetic_Divider_Bold]</value>
+	<variable name="Container_ListItem_WatchedEpisodes_Divider">
+		<value condition="!String.IsEmpty(Container.ListItem.Property(WatchedEpisodes))">$VAR[Copacetic_Divider]</value>
 	</variable>
-
-	<variable name="3203_ListItem_TotalSeasons_Divider">
-		<value condition="!String.IsEmpty(Container(3203).ListItem.Property(TotalSeasons))">$VAR[Copacetic_Divider]</value>
+	<variable name="Container_ListItem_Year_Divider_Bold">
+		<value condition="!String.IsEmpty(Container.ListItem.Year)">$VAR[Copacetic_Divider_Bold]</value>
 	</variable>
-	<variable name="3203_ListItem_TotalSeasons_Divider_Bold">
-		<value condition="!String.IsEmpty(Container(3203).ListItem.Property(TotalSeasons))">$VAR[Copacetic_Divider_Bold]</value>
-	</variable>
-
-	<variable name="3205_ListItem_Artist_Divider">
-		<value condition="!String.IsEmpty(Container(3205).ListItem.Artist)">$VAR[Copacetic_Divider]</value>
-	</variable>
-	<variable name="3205_ListItem_Artist_Divider_Bold">
-		<value condition="!String.IsEmpty(Container(3205).ListItem.Artist)">$VAR[Copacetic_Divider_Bold]</value>
-	</variable>
-	<variable name="3205_ListItem_Duration_Divider">
-		<value condition="!String.IsEmpty(Container(3205).ListItem.Duration)">$VAR[Copacetic_Divider]</value>
-	</variable>
-	<variable name="3205_ListItem_Duration_Divider_Bold">
-		<value condition="!String.IsEmpty(Container(3205).ListItem.Duration)">$VAR[Copacetic_Divider_Bold]</value>
-	</variable>
-
-	<variable name="3206_ListItem_Duration_Divider">
-		<value condition="!String.IsEmpty(Container(3206).ListItem.Duration)">$VAR[Copacetic_Divider]</value>
-	</variable>
-	<variable name="3206_ListItem_Duration_Divider_Bold">
-		<value condition="!String.IsEmpty(Container(3206).ListItem.Duration)">$VAR[Copacetic_Divider_Bold]</value>
-	</variable>
-
-	<variable name="3207_ListItem_Duration_Divider">
-		<value condition="!String.IsEmpty(Container(3207).ListItem.Duration)">$VAR[Copacetic_Divider]</value>
-	</variable>
-	<variable name="3207_ListItem_Duration_Divider_Bold">
-		<value condition="!String.IsEmpty(Container(3207).ListItem.Duration)">$VAR[Copacetic_Divider_Bold]</value>
-	</variable>
-	<variable name="3207_ListItem_Year_Divider">
-		<value condition="!String.IsEmpty(Container(3207).ListItem.Year)">$VAR[Copacetic_Divider]</value>
-	</variable>
-	<variable name="3207_ListItem_Year_Divider_Bold">
-		<value condition="!String.IsEmpty(Container(3207).ListItem.Year)">$VAR[Copacetic_Divider_Bold]</value>
-	</variable>
-	<variable name="3207_ListItem_TotalSeasons_Divider">
-		<value condition="!String.IsEmpty(Container(3207).ListItem.Property(TotalSeasons))">$VAR[Copacetic_Divider]</value>
-	</variable>
-	<variable name="3207_ListItem_TotalSeasons_Divider_Bold">
-		<value condition="!String.IsEmpty(Container(3207).ListItem.Property(TotalSeasons))">$VAR[Copacetic_Divider_Bold]</value>
-	</variable>
-	<variable name="3207_ListItem_WatchedEpisodes_Divider">
-		<value condition="!String.IsEmpty(Container(3207).ListItem.Property(WatchedEpisodes))">$VAR[Copacetic_Divider]</value>
-	</variable>
-	<variable name="3207_ListItem_WatchedEpisodes_Divider_Bold">
-		<value condition="!String.IsEmpty(Container(3207).ListItem.Property(WatchedEpisodes))">$VAR[Copacetic_Divider_Bold]</value>
+	<variable name="Container_Resolution_Label_Divider">
+		<value condition="!String.IsEmpty(Container.ListItem.VideoResolution) | String.Contains(Container.ListItem.FileNameAndPath,4320p) | String.Contains(Container.ListItem.FileNameAndPath,2160p) | String.Contains(Container.ListItem.FileNameAndPath,1080p) | String.Contains(Container.ListItem.FileNameAndPath,720p)">$VAR[Copacetic_Divider]</value>
 	</variable>
 
 	<!-- Addons -->
@@ -376,15 +331,7 @@
 	</variable>
 
 	<variable name="GridView_Info_Label_Divider_Bold">
-		<value condition="$EXP[Infoscreen_IsVisible] + Control.HasFocus(50) + !String.IsEmpty(Container(50).ListItem.Label2)">$VAR[Copacetic_Divider_Bold]</value>
-		<value condition="$EXP[Infoscreen_IsVisible] + Control.HasFocus(3201) + !String.IsEmpty(Container(3201).ListItem.Year)">$VAR[Copacetic_Divider_Bold]</value>
-		<value condition="$EXP[Infoscreen_IsVisible] + Control.HasFocus(3202) + !String.IsEmpty(Container(3202).ListItem.Property(WatchedEpisodes))">$VAR[Copacetic_Divider_Bold]</value>
-		<value condition="$EXP[Infoscreen_IsVisible] + Control.HasFocus(3203) + !String.IsEmpty(Container(3203).ListItem.Year)">$VAR[Copacetic_Divider_Bold]</value>
-		<value condition="$EXP[Infoscreen_IsVisible] + Control.HasFocus(3205) + !String.IsEmpty(Container(3205).ListItem.Year)">$VAR[Copacetic_Divider_Bold]</value>
-		<value condition="$EXP[Infoscreen_IsVisible] + Control.HasFocus(3206) + !String.IsEmpty(Container(3206).ListItem.Year)">$VAR[Copacetic_Divider_Bold]</value>
-		<value condition="$EXP[Infoscreen_IsVisible] + Control.HasFocus(3207) + String.IsEqual(Container(3207).ListItem.DBType,artist) + !String.IsEmpty(Container(3207).ListItem.Genre)">$VAR[Copacetic_Divider_Bold]</value>
-		<value condition="$EXP[Infoscreen_IsVisible] + Control.HasFocus(3207) + String.IsEqual(Container(3207).ListItem.DBType,album) + !String.IsEmpty(Container(3207).ListItem.Artist)">$VAR[Copacetic_Divider_Bold]</value>
-		<value condition="$EXP[Infoscreen_IsVisible] + Control.HasFocus(3207) + !String.IsEmpty(Container(3207).ListItem.Year)">$VAR[Copacetic_Divider_Bold]</value>
+		<value condition="$EXP[Infoscreen_IsVisible] + !Window.Is(home)">$VAR[GridView_Info_Label_Divider_Bold_Infoscreen]</value>
 		<value condition="Window.Is(home) + String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Episode)">$VAR[Copacetic_Divider_Bold]</value>
 		<value condition="Window.Is(home) + !String.IsEmpty(ListItem.Year)">$VAR[Copacetic_Divider_Bold]</value>
 	</variable>
@@ -409,34 +356,6 @@
 	</variable>
 	<variable name="Resolution_Label_50_Divider_Bold">
 		<value condition="!String.IsEmpty(Container(50).ListItem.VideoResolution) | String.Contains(Container(50).ListItem.FileNameAndPath,4320p) | String.Contains(Container(50).ListItem.FileNameAndPath,2160p) | String.Contains(Container(50).ListItem.FileNameAndPath,1080p) | String.Contains(Container(50).ListItem.FileNameAndPath,720p)">$VAR[Copacetic_Divider_Bold]</value>
-	</variable>
-
-	<variable name="Resolution_Label_3207_Divider">
-		<value condition="!String.IsEmpty(Container(3207).ListItem.VideoResolution) | String.Contains(Container(3207).ListItem.FileNameAndPath,4320p) | String.Contains(Container(3207).ListItem.FileNameAndPath,2160p) | String.Contains(Container(3207).ListItem.FileNameAndPath,1080p) | String.Contains(Container(3207).ListItem.FileNameAndPath,720p)">$VAR[Copacetic_Divider]</value>
-	</variable>
-	<variable name="Resolution_Label_3207_Divider_Bold">
-		<value condition="!String.IsEmpty(Container(3207).ListItem.VideoResolution) | String.Contains(Container(3207).ListItem.FileNameAndPath,4320p) | String.Contains(Container(3207).ListItem.FileNameAndPath,2160p) | String.Contains(Container(3207).ListItem.FileNameAndPath,1080p) | String.Contains(Container(3207).ListItem.FileNameAndPath,720p)">$VAR[Copacetic_Divider_Bold]</value>
-	</variable>
-
-	<variable name="Resolution_Label_3206_Divider">
-		<value condition="!String.IsEmpty(Container(3206).ListItem.VideoResolution) | String.Contains(Container(3206).ListItem.FileNameAndPath,4320p) | String.Contains(Container(3206).ListItem.FileNameAndPath,2160p) | String.Contains(Container(3206).ListItem.FileNameAndPath,1080p) | String.Contains(Container(3206).ListItem.FileNameAndPath,720p)">$VAR[Copacetic_Divider]</value>
-	</variable>
-	<variable name="Resolution_Label_3206_Divider_Bold">
-		<value condition="!String.IsEmpty(Container(3206).ListItem.VideoResolution) | String.Contains(Container(3206).ListItem.FileNameAndPath,4320p) | String.Contains(Container(3206).ListItem.FileNameAndPath,2160p) | String.Contains(Container(3206).ListItem.FileNameAndPath,1080p) | String.Contains(Container(3206).ListItem.FileNameAndPath,720p)">$VAR[Copacetic_Divider_Bold]</value>
-	</variable>
-
-	<variable name="Resolution_Label_3205_Divider">
-		<value condition="!String.IsEmpty(Container(3205).ListItem.VideoResolution) | String.Contains(Container(3205).ListItem.FileNameAndPath,4320p) | String.Contains(Container(3205).ListItem.FileNameAndPath,2160p) | String.Contains(Container(3205).ListItem.FileNameAndPath,1080p) | String.Contains(Container(3205).ListItem.FileNameAndPath,720p)">$VAR[Copacetic_Divider_Bold]</value>
-	</variable>
-	<variable name="Resolution_Label_3205_Divider_Bold">
-		<value condition="!String.IsEmpty(Container(3205).ListItem.VideoResolution) | String.Contains(Container(3205).ListItem.FileNameAndPath,4320p) | String.Contains(Container(3205).ListItem.FileNameAndPath,2160p) | String.Contains(Container(3205).ListItem.FileNameAndPath,1080p) | String.Contains(Container(3205).ListItem.FileNameAndPath,720p)">$VAR[Copacetic_Divider_Bold]</value>
-	</variable>
-
-	<variable name="Resolution_Label_3201_Divider">
-		<value condition="!String.IsEmpty(Container(3201).ListItem.VideoResolution) | String.Contains(Container(3201).ListItem.FileNameAndPath,4320p) | String.Contains(Container(3201).ListItem.FileNameAndPath,2160p) | String.Contains(Container(3201).ListItem.FileNameAndPath,1080p) | String.Contains(Container(3201).ListItem.FileNameAndPath,720p)">$VAR[Copacetic_Divider]</value>
-	</variable>
-	<variable name="Resolution_Label_3201_Divider_Bold">
-		<value condition="!String.IsEmpty(Container(3201).ListItem.VideoResolution) | String.Contains(Container(3201).ListItem.FileNameAndPath,4320p) | String.Contains(Container(3201).ListItem.FileNameAndPath,2160p) | String.Contains(Container(3201).ListItem.FileNameAndPath,1080p) | String.Contains(Container(3201).ListItem.FileNameAndPath,720p)">$VAR[Copacetic_Divider_Bold]</value>
 	</variable>
 
 	<variable name="Resolution_Label_3100_Divider">

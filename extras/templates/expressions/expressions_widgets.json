@@ -1,45 +1,54 @@
 {
   "mapping": "widgets",
   "expressions": {
-    "BillboardView_Display_IsFanart_Widget_Home": {
+    "BillboardView_Display_IsFanart_Widget_{scope}": {
+      "templates_from": [ "widgets", "infoscreen" ],
       "index": { "start": 3201 },
-      "rules": [ { "condition": "equals({layout}, Billboard)", "type": "append", "value": "{home_row}" } ]
+      "rules": [ { "condition": "equals({layout}, Billboard)", "type": "append", "value": "{row_focus}" } ]
     },
-    "ShowcaseView_Display_IsPosters_Widget_Home": {
+    "ShowcaseView_Display_IsPosters_Widget_{scope}": {
+      "templates_from": [ "widgets", "infoscreen" ],
       "index": { "start": 3201 },
-      "rules": [ { "condition": "equals({layout}, Showcase) + equals({art}, Posters)", "type": "append", "value": "{home_row}" } ]
+      "rules": [ { "condition": "equals({layout}, Showcase) + equals({art}, Posters)", "type": "append", "value": "{row_focus}" } ]
     },
-    "ShowcaseView_Display_IsSquare_Widget_Home": {
+    "ShowcaseView_Display_IsSquare_Widget_{scope}": {
+      "templates_from": [ "widgets", "infoscreen" ],
       "index": { "start": 3201 },
-      "rules": [ { "condition": "equals({layout}, Showcase) + equals({art}, Square)", "type": "append", "value": "{home_row}" } ]
+      "rules": [ { "condition": "equals({layout}, Showcase) + equals({art}, Square)", "type": "append", "value": "{row_focus}" } ]
     },
-    "StripView_Display_IsPosters_Widget_Home": {
+    "StripView_Display_IsPosters_Widget_{scope}": {
+      "templates_from": [ "widgets", "infoscreen" ],
       "index": { "start": 3201 },
-      "rules": [ { "condition": "equals({layout}, Strip) + equals({art}, Posters)", "type": "append", "value": "{home_row}" } ]
+      "rules": [ { "condition": "equals({layout}, Strip) + equals({art}, Posters)", "type": "append", "value": "{row_focus}" } ]
     },
-    "StripView_Display_IsFanart_Widget_Home": {
+    "StripView_Display_IsFanart_Widget_{scope}": {
+      "templates_from": [ "widgets", "infoscreen" ],
       "index": { "start": 3201 },
-      "rules": [ { "condition": "equals({layout}, Strip) + equals({art}, Fanart)", "type": "append", "value": "{home_row}" } ]
+      "rules": [ { "condition": "equals({layout}, Strip) + equals({art}, Fanart)", "type": "append", "value": "{row_focus}" } ]
     },
-    "StripView_Display_IsSquare_Widget_Home": {
+    "StripView_Display_IsSquare_Widget_{scope}": {
+      "templates_from": [ "widgets", "infoscreen" ],
       "index": { "start": 3201 },
-      "rules": [ { "condition": "equals({layout}, Strip) + equals({art}, Square)", "type": "append", "value": "{home_row}" } ]
+      "rules": [ { "condition": "equals({layout}, Strip) + equals({art}, Square)", "type": "append", "value": "{row_focus}" } ]
     },
-    "GridView_Display_IsPosters_Widget_Home": {
+    "GridView_Display_IsPosters_Widget_{scope}": {
+      "templates_from": [ "widgets", "infoscreen" ],
       "index": { "start": 3201 },
-      "rules": [ { "condition": "equals({layout}, Grid) + equals({art}, Posters)", "type": "append", "value": "{home_row}" } ]
+      "rules": [ { "condition": "equals({layout}, Grid) + equals({art}, Posters)", "type": "append", "value": "{row_focus}" } ]
     },
-    "GridView_Display_IsFanart_Widget_Home": {
+    "GridView_Display_IsFanart_Widget_{scope}": {
+      "templates_from": [ "widgets", "infoscreen" ],
       "index": { "start": 3201 },
-      "rules": [ { "condition": "equals({layout}, Grid) + equals({art}, Fanart)", "type": "append", "value": "{home_row}" } ]
+      "rules": [ { "condition": "equals({layout}, Grid) + equals({art}, Fanart)", "type": "append", "value": "{row_focus}" } ]
     },
-    "GridView_Display_IsSquare_Widget_Home": {
+    "GridView_Display_IsSquare_Widget_{scope}": {
+      "templates_from": [ "widgets", "infoscreen" ],
       "index": { "start": 3201 },
-      "rules": [ { "condition": "equals({layout}, Grid) + equals({art}, Square)", "type": "append", "value": "{home_row}" } ]
+      "rules": [ { "condition": "equals({layout}, Grid) + equals({art}, Square)", "type": "append", "value": "{row_focus}" } ]
     },
     "GridView_Display_IsSpotlight_Widget": {
       "index": { "start": 3201 },
-      "rules": [ { "condition": "equals({layout}, Grid) + equals({art}, Spotlight)", "type": "append", "value": "{home_row}" } ]
+      "rules": [ { "condition": "equals({layout}, Grid) + equals({art}, Spotlight)", "type": "append", "value": "{row_focus}" } ]
     },
     "widget_grid_spotlight_{index}": {
       "note": "Include conditions (Home_Row_Layout, Grid details): true when this row is Grid in Spotlight display.",
@@ -69,15 +78,20 @@
       "rules": [ { "condition": "equals({art_landscape}, true)", "type": "append", "value": "{focused}" } ]
     },
     "Widget_HasLogo_{window}": {
+      "note": "Kodi's list 50 in the info dialogs never had a row here.",
+      "templates_from": [ "widgets", "search", "infoscreen" ],
       "index": { "start": 3201 },
+      "filter": "not equals({rail_id}, 50)",
       "rules": [ { "type": "append", "value": "$EXP[Widget_HasLogo_{window}_{index}]" } ]
     },
     "Widget_HasLogo_{window}_{index}": {
+      "templates_from": [ "widgets", "search", "infoscreen" ],
       "index": { "start": 3201 },
+      "filter": "not equals({rail_id}, 50)",
       "rules": [
         {
           "type": "assign",
-          "value": "Control.HasFocus({index}) + [String.IsEqual(Container({index}).ListItem.DBType,movie) | String.IsEqual(Container({index}).ListItem.DBType,set) | String.IsEqual(Container({index}).ListItem.DBType,tvshow) | String.IsEqual(Container({index}).ListItem.DBType,artist)] + !String.IsEmpty(Container({index}).ListItem.Art(clearlogo))"
+          "value": "Control.HasFocus({rail_id}) + [String.IsEqual(Container({rail_id}).ListItem.DBType,movie) | String.IsEqual(Container({rail_id}).ListItem.DBType,set) | String.IsEqual(Container({rail_id}).ListItem.DBType,tvshow) | String.IsEqual(Container({rail_id}).ListItem.DBType,artist)] + !String.IsEmpty(Container({rail_id}).ListItem.Art(clearlogo))"
         }
       ]
     },

@@ -52,9 +52,9 @@
 
 	<include name="User_Scroll_Delay_Template">
 		<param name="onprevious_id" default="5001" />
-		<param name="onprevious_trigger" default="Container.OnPrevious | Container(50).OnPrevious | Container(3201).OnPrevious | Container(3202).OnPrevious | Container(3203).OnPrevious | Container(3204).OnPrevious | Container(3205).OnPrevious | Container(3206).OnPrevious | Container(3207).OnPrevious | Container(3208).OnPrevious | Container(3209).OnPrevious | $EXP[widgets_home_onprevious] | Container(11).OnPrevious | Container(52).OnPrevious" />
+		<param name="onprevious_trigger" default="Container.OnPrevious | Container(50).OnPrevious | $EXP[infoscreen_onprevious] | $EXP[widgets_home_onprevious] | Container(11).OnPrevious | Container(52).OnPrevious" />
 		<param name="onnext_id" default="5002" />
-		<param name="onnext_trigger" default="Container.OnNext | Container(50).OnNext | Container(3201).OnNext | Container(3202).OnNext | Container(3203).OnNext | Container(3204).OnNext | Container(3205).OnNext | Container(3206).OnNext | Container(3207).OnNext | Container(3208).OnNext | Container(3209).OnNext | $EXP[widgets_home_onnext] | Container(11).OnNext | Container(52).OnNext" />
+		<param name="onnext_trigger" default="Container.OnNext | Container(50).OnNext | $EXP[infoscreen_onnext] | $EXP[widgets_home_onnext] | Container(11).OnNext | Container(52).OnNext" />
 		<definition>
 			<control type="group" id="$PARAM[onprevious_id]">
 				<visible>$PARAM[onprevious_trigger]</visible>
@@ -628,9 +628,7 @@
 
 	<include name="Variable_Title_Label">
 		<param name="visible" default="true" />
-		<param name="visible_large" default="!Container(6005).HasNext" />
-		<param name="visible_medium" default="Container(6005).HasNext + !Container(6006).HasNext" />
-		<param name="visible_small" default="Container(6005).HasNext + Container(6006).HasNext" />
+		<param name="checker" default="600" /> <!-- the title-length checkers are <checker>5-7: one set per Strip details (StripView_Details) -->
 		<param name="width" default="1200" />
 		<param name="left" default="360" />
 		<param name="bottom" default="45" />
@@ -646,13 +644,13 @@
 				<height>150</height>
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
-				<control type="textbox" id="6005">
+				<control type="textbox" id="$PARAM[checker]5">
 					<font>$PARAM[font_large]</font>
 					<label>$PARAM[label]</label>
 					<autoscroll>false</autoscroll>
 					<height>75</height>
 				</control>
-				<control type="textbox" id="6006">
+				<control type="textbox" id="$PARAM[checker]6">
 					<font>$PARAM[font_medium]</font>
 					<label>$PARAM[label]</label>
 					<height>75</height>
@@ -666,7 +664,7 @@
 				<bottom>$PARAM[bottom]</bottom>
 				<nested />
 				<control type="textbox">
-					<visible>$PARAM[visible_large]</visible>
+					<visible>!Container($PARAM[checker]5).HasNext</visible>
 					<font>$PARAM[font_large]</font>
 					<textcolor>$PARAM[textcolor]</textcolor>
 					<label>$PARAM[label]</label>
@@ -676,7 +674,7 @@
 					<height>70</height>
 				</control>
 				<control type="textbox">
-					<visible>$PARAM[visible_medium]</visible>
+					<visible>Container($PARAM[checker]5).HasNext + !Container($PARAM[checker]6).HasNext</visible>
 					<font>$PARAM[font_medium]</font>
 					<textcolor>$PARAM[textcolor]</textcolor>
 					<label>$PARAM[label]</label>
@@ -684,8 +682,8 @@
 					<aligny>center</aligny>
 					<autoscroll>false</autoscroll>
 				</control>
-				<control type="label" id="6007">
-					<visible>$PARAM[visible_small]</visible>
+				<control type="label" id="$PARAM[checker]7">
+					<visible>Container($PARAM[checker]5).HasNext + Container($PARAM[checker]6).HasNext</visible>
 					<font>$PARAM[font_small]</font>
 					<textcolor>$PARAM[textcolor]</textcolor>
 					<label>$PARAM[label]</label>

@@ -95,7 +95,6 @@
 
 	<include name="Infoscreen_Furniture_Template">
 		<param name="visible" default="true" />
-		<param name="overlay" default="true" />
 		<definition>
 			<control type="group">
 				<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />

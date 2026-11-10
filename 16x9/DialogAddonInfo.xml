@@ -22,7 +22,9 @@
 		</include>
 		<include content="Infoscreen_Furniture_Template">
 			<param name="visible" value="!Window.IsVisible(selectdialog) + !Window.IsVisible(addonsettings)" />
-			<include content="Infoscreen_Widget_50_Screenshots" />
+			<include content="Infoscreen_Rails">
+				<param name="dialog" value="addoninformation" />
+			</include>
 			<include content="DialogAddonInfo_Scrollbar" />
 		</include>
 	</controls>

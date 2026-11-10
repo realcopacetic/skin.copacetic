@@ -1,0 +1,99 @@
+{
+  "mapping": "infoscreen",
+  "variables": {
+    "infoscreen_path_{index}": {
+      "note": "A rail's content for the item types it shows for; any other item gets the empty playlist, so a rail of another type fetches nothing. Kodi's list 50 has no content.",
+      "index": { "start": 3201 },
+      "filter": "equals({custom}, true)",
+      "values": [
+        { "condition": "{visible}", "value": "{path}" },
+        { "value": "special://skin/extras/playlists/empty.xsp" }
+      ]
+    },
+    "infoscreen_albums": {
+      "note": "An artist's album count in the info line (Info_Infoscreens_Label): Discography's items.",
+      "index": { "start": 3201 },
+      "filter": "equals({rail}, discography)",
+      "values": [ { "value": "$INFO[{container}.NumItems]" } ]
+    },
+    "infoscreen_albums_divider_bold": {
+      "index": { "start": 3201 },
+      "filter": "equals({rail}, discography)",
+      "values": [ { "condition": "!String.IsEmpty({container}.NumItems)", "value": "$VAR[Copacetic_Divider_Bold]" } ]
+    },
+    "Title_Label_Infoscreen_Widgets": {
+      "note": "The focused rail's item as the title in its details (Title_Label).",
+      "index": { "start": 3201 },
+      "values": [
+        { "filter": "equals({label_set}, kodi)", "condition": "Control.HasFocus({id})", "value": "$INFO[{listitem}.Label]" },
+        { "filter": "equals({label_set}, episodes)", "condition": "Control.HasFocus({id}) + Integer.IsGreater({listitem}.Episode,9)", "value": "$INFO[{listitem}.Season]$INFO[{listitem}.Episode,x,.]$INFO[{listitem}.Title, ]" },
+        { "filter": "equals({label_set}, episodes)", "condition": "Control.HasFocus({id}) + Integer.IsGreater({listitem}.Episode,0)", "value": "$INFO[{listitem}.Season]$INFO[{listitem}.Episode,x0,.]$INFO[{listitem}.Title, ]" },
+        { "filter": "not equals({label_set}, kodi)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({listitem}.Label)", "value": "$INFO[{listitem}.Label]" }
+      ]
+    },
+    "Info_Label_Infoscreen_Widgets": {
+      "note": "The focused rail's item's info line (Info_Label). The dividers read the focused container, which is this rail. A row set's Grid rows are left out where none of its rails is Grid.",
+      "index": { "start": 3201 },
+      "values": [
+        { "filter": "equals({label_set}, kodi)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({listitem}.Label2)", "value": "$INFO[{listitem}.Label2]" },
+        { "filter": "equals({label_set}, episodes) + equals({layout}, Grid)", "condition": "Control.HasFocus({id}) + String.IsEqual({listitem}.DBType,episode) + Integer.IsGreater({listitem}.Episode,9)", "value": "$INFO[{listitem}.Season]$INFO[{listitem}.Episode,x]$VAR[Container_ListItem_Duration_Divider_Bold, , ]$INFO[{listitem}.Duration(mins),, $LOCALIZE[31114]]" },
+        { "filter": "equals({label_set}, episodes) + equals({layout}, Grid)", "condition": "Control.HasFocus({id}) + String.IsEqual({listitem}.DBType,episode) + Integer.IsGreater({listitem}.Episode,0)", "value": "$INFO[{listitem}.Season]$INFO[{listitem}.Episode,x0]$VAR[Container_ListItem_Duration_Divider, , ]$INFO[{listitem}.Duration(mins),, $LOCALIZE[31114]]" },
+        { "filter": "equals({label_set}, episodes) + equals({layout}, Grid)", "condition": "Control.HasFocus({id})", "value": "$INFO[{listitem}.Year]$VAR[Container_ListItem_Duration_Divider_Bold, , ]$INFO[{listitem}.Duration(mins),, $LOCALIZE[31114]]" },
+        { "filter": "equals({label_set}, episodes)", "condition": "Control.HasFocus({id}) + String.IsEqual({listitem}.DBType,episode) + Integer.IsGreater({listitem}.Episode,9)", "value": "$INFO[{listitem}.Season]$INFO[{listitem}.Episode,x][UPPERCASE]$VAR[Container_ListItem_Duration_Divider_Bold, , ]$INFO[{listitem}.Duration(mins),, $LOCALIZE[31114]][/UPPERCASE]" },
+        { "filter": "equals({label_set}, episodes)", "condition": "Control.HasFocus({id}) + String.IsEqual({listitem}.DBType,episode) + Integer.IsGreater({listitem}.Episode,0)", "value": "$INFO[{listitem}.Season]$INFO[{listitem}.Episode,x0][UPPERCASE]$VAR[Container_ListItem_Duration_Divider, , ]$INFO[{listitem}.Duration(mins),, $LOCALIZE[31114]][/UPPERCASE]" },
+        { "filter": "equals({label_set}, episodes)", "condition": "Control.HasFocus({id}) + String.IsEqual({listitem}.DBType,song)", "value": "$INFO[{listitem}.Duration]" },
+        { "filter": "equals({label_set}, episodes)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({listitem}.Year)", "value": "[UPPERCASE]$INFO[{listitem}.Year]$VAR[Container_ListItem_Duration_Divider, , ]$INFO[{listitem}.Duration(mins),, $LOCALIZE[31114]]$VAR[Container_Resolution_Label_Divider, , ]$VAR[Container_Resolution_Label][/UPPERCASE]" },
+        { "filter": "equals({label_set}, seasons)", "condition": "Control.HasFocus({id}) + String.IsEqual({listitem}.DBType,album)", "value": "$INFO[{listitem}.Year]" },
+        { "filter": "equals({label_set}, seasons)", "condition": "Control.HasFocus({id}) + String.IsEmpty({listitem}.Property(WatchedEpisodes)) + !String.IsEmpty({listitem}.Year)", "value": "[UPPERCASE]$INFO[{listitem}.Year]$VAR[Container_ListItem_UnwatchedEpisodes_Divider, , ]$INFO[{listitem}.Property(UnwatchedEpisodes),,/]$INFO[{listitem}.Property(TotalEpisodes),, ]$LOCALIZE[16101][/UPPERCASE]" },
+        { "filter": "equals({label_set}, seasons)", "condition": "Control.HasFocus({id}) + String.IsEmpty({listitem}.Property(WatchedEpisodes)) + !String.IsEmpty({listitem}.Property(UnwatchedEpisodes))", "value": "[UPPERCASE]$INFO[{listitem}.Property(UnwatchedEpisodes),,/]$INFO[{listitem}.Property(TotalEpisodes),, ]$LOCALIZE[16101][/UPPERCASE]" },
+        { "filter": "equals({label_set}, seasons)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({listitem}.Year)", "value": "[UPPERCASE]$INFO[{listitem}.Year]$VAR[Container_ListItem_WatchedEpisodes_Divider, , ]$INFO[{listitem}.Property(WatchedEpisodes),,/]$INFO[{listitem}.Property(TotalEpisodes),, ]$LOCALIZE[16102][/UPPERCASE]" },
+        { "filter": "equals({label_set}, seasons)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({listitem}.Property(WatchedEpisodes))", "value": "[UPPERCASE]$INFO[{listitem}.Property(WatchedEpisodes),,/]$INFO[{listitem}.Property(TotalEpisodes),, ]$LOCALIZE[16102][/UPPERCASE]" },
+        { "filter": "equals({label_set}, actor)", "condition": "Control.HasFocus({id}) + String.IsEqual({listitem}.DBType,movie)", "value": "$INFO[{listitem}.Year]" },
+        { "filter": "equals({label_set}, actor) + equals({layout}, Grid)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({listitem}.Year)", "value": "$INFO[{listitem}.Year]$VAR[Container_ListItem_TotalSeasons_Divider_Bold, , ]$INFO[{listitem}.Property(TotalSeasons)]$VAR[Container_Seasons_Label, ]" },
+        { "filter": "equals({label_set}, actor)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({listitem}.Year)", "value": "[UPPERCASE]$INFO[{listitem}.Year]$VAR[Container_ListItem_TotalSeasons_Divider, , ]$INFO[{listitem}.Property(TotalSeasons)]$VAR[Container_Seasons_Label, ][/UPPERCASE]" },
+        { "filter": "equals({label_set}, director)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({listitem}.Year)", "value": "[UPPERCASE]$INFO[{listitem}.Year]$VAR[Container_ListItem_Artist_Divider, , ]$INFO[{listitem}.Artist]$VAR[Container_ListItem_Duration_Divider, , ]$INFO[{listitem}.Duration(mins),, $LOCALIZE[31114]]$VAR[Container_Resolution_Label_Divider, , ]$VAR[Container_Resolution_Label][/UPPERCASE]" },
+        { "filter": "equals({label_set}, studio)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({listitem}.Year)", "value": "[UPPERCASE]$INFO[{listitem}.Year]$VAR[Container_ListItem_Duration_Divider, , ]$INFO[{listitem}.Duration(mins),, $LOCALIZE[31114]]$VAR[Container_Resolution_Label_Divider, , ]$VAR[Container_Resolution_Label][/UPPERCASE]" },
+        { "filter": "equals({label_set}, similar) + equals({layout}, Grid)", "condition": "Control.HasFocus({id}) + String.IsEqual({listitem}.DBType,tvshow) + !String.IsEmpty({listitem}.Year)", "value": "$INFO[{listitem}.Year]$VAR[Container_ListItem_TotalSeasons_Divider_Bold, , ]$INFO[{listitem}.Property(TotalSeasons)]$VAR[Container_Seasons_Label, ]" },
+        { "filter": "equals({label_set}, similar) + equals({layout}, Grid)", "condition": "Control.HasFocus({id}) + String.IsEqual({listitem}.DBType,movie) + !String.IsEmpty({listitem}.Year)", "value": "$INFO[{listitem}.Year]$VAR[Container_ListItem_Duration_Divider_Bold, , ]$INFO[{listitem}.Duration(mins),, $LOCALIZE[31114]]" },
+        { "filter": "equals({label_set}, similar) + equals({layout}, Grid)", "condition": "Control.HasFocus({id}) + String.IsEqual({listitem}.DBType,artist) + !String.IsEmpty({listitem}.Genre)", "value": "$INFO[{listitem}.Genre]" },
+        { "filter": "equals({label_set}, similar) + equals({layout}, Grid)", "condition": "Control.HasFocus({id}) + [String.IsEqual({listitem}.DBType,album) | String.IsEqual({listitem}.DBType,song)] + !String.IsEmpty({listitem}.Artist)", "value": "$INFO[{listitem}.Artist]$VAR[Container_ListItem_Year_Divider_Bold, , ]$INFO[{listitem}.Year]" },
+        { "filter": "equals({label_set}, similar)", "condition": "Control.HasFocus({id}) + String.IsEqual({listitem}.DBType,artist) + !String.IsEmpty({listitem}.Genre)", "value": "[UPPERCASE]$INFO[{listitem}.Genre][/UPPERCASE]" },
+        { "filter": "equals({label_set}, similar)", "condition": "Control.HasFocus({id}) + [String.IsEqual({listitem}.DBType,album) | String.IsEqual({listitem}.DBType,song)] + !String.IsEmpty({listitem}.Artist)", "value": "[UPPERCASE]$INFO[{listitem}.Artist]$VAR[Container_ListItem_Year_Divider_Bold, , ]$INFO[{listitem}.Year][/UPPERCASE]" },
+        { "filter": "equals({label_set}, similar)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({listitem}.Year)", "value": "[UPPERCASE]$INFO[{listitem}.Year]$VAR[Container_ListItem_TotalSeasons_Divider, , ]$INFO[{listitem}.Property(TotalSeasons)]$VAR[Container_Seasons_Label, ]$VAR[Container_ListItem_WatchedEpisodes_Divider, , ]$INFO[{listitem}.Property(WatchedEpisodes),,/]$INFO[{listitem}.Property(TotalEpisodes),, $LOCALIZE[16102]][/UPPERCASE]" }
+      ]
+    },
+    "GridView_Info_Label_Divider_Bold_Infoscreen": {
+      "note": "Grid's divider before Info_Label, for a Grid rail: shown where that rail's info line starts with text.",
+      "index": { "start": 3201 },
+      "filter": "equals({layout}, Grid)",
+      "values": [
+        { "filter": "equals({label_set}, kodi)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({listitem}.Label2)", "value": "$VAR[Copacetic_Divider_Bold]" },
+        { "filter": "In({label_set}, [episodes, actor, director, studio])", "condition": "Control.HasFocus({id}) + !String.IsEmpty({listitem}.Year)", "value": "$VAR[Copacetic_Divider_Bold]" },
+        { "filter": "equals({label_set}, seasons)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({listitem}.Property(WatchedEpisodes))", "value": "$VAR[Copacetic_Divider_Bold]" },
+        { "filter": "equals({label_set}, similar)", "condition": "Control.HasFocus({id}) + String.IsEqual({listitem}.DBType,artist) + !String.IsEmpty({listitem}.Genre)", "value": "$VAR[Copacetic_Divider_Bold]" },
+        { "filter": "equals({label_set}, similar)", "condition": "Control.HasFocus({id}) + String.IsEqual({listitem}.DBType,album) + !String.IsEmpty({listitem}.Artist)", "value": "$VAR[Copacetic_Divider_Bold]" },
+        { "filter": "equals({label_set}, similar)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({listitem}.Year)", "value": "$VAR[Copacetic_Divider_Bold]" }
+      ]
+    },
+    "infoscreen_{index}_Thumbnail({range})Content": {
+      "note": "Each rail's art (Infoscreen_Rail_Layout's art_icon). The focused item reads the rail; the others a bare offset, which reads the focused container. Keyart and landscape are off (Z A).",
+      "index": { "start": 3201 },
+      "range": { "start": -3, "end": 6 },
+      "values": [
+        { "filter": "equals({art}, Posters) + equals({range}, 0)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({container}.ListItemNoWrap(0).Art(poster))", "value": "$INFO[{container}.ListItem(0).Art(poster)]" },
+        { "filter": "equals({art}, Posters) + equals({range}, 0) + equals({rail}, seasons)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({container}.ListItemNoWrap(0).Art(tvshow.poster))", "value": "$INFO[{container}.ListItem(0).Art(tvshow.poster)]" },
+        { "filter": "equals({art}, Posters) + equals({range}, 0)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({container}.ListItemNoWrap(0).Icon)", "value": "$INFO[{container}.ListItem(0).Icon]" },
+        { "filter": "equals({art}, Posters) + not equals({range}, 0)", "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(poster))", "value": "$INFO[ListItem({range}).Art(poster)]" },
+        { "filter": "equals({art}, Posters) + not equals({range}, 0)", "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(tvshow.poster))", "value": "$INFO[ListItem({range}).Art(tvshow.poster)]" },
+        { "filter": "equals({art}, Posters) + not equals({range}, 0)", "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Icon)", "value": "$INFO[ListItem({range}).Icon]" },
+        { "filter": "equals({art}, Fanart) + In({range}, [-3, 5, 6])", "value": "" },
+        { "filter": "equals({art}, Fanart) + equals({range}, 0) + not equals({id}, 50)", "condition": "Control.HasFocus({id}) + !String.IsEqual({container}.ListItem(1).DBType,episode) + !String.IsEmpty({container}.ListItem(0).Art(fanart))", "value": "$INFO[{container}.ListItem(0).Art(fanart)]" },
+        { "filter": "equals({art}, Fanart) + equals({range}, 0)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({container}.ListItem(0).Icon)", "value": "$INFO[{container}.ListItem(0).Icon]" },
+        { "filter": "equals({art}, Fanart) + not In({range}, [-3, 0, 5, 6])", "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(fanart)) + !String.IsEqual(ListItem({range}).DBType,episode)", "value": "$INFO[ListItem({range}).Art(fanart)]" },
+        { "filter": "equals({art}, Fanart) + not In({range}, [-3, 0, 5, 6])", "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Icon)", "value": "$INFO[ListItem({range}).Icon]" },
+        { "filter": "equals({art}, Square) + equals({range}, 0)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({container}.ListItemNoWrap(0).Icon)", "value": "$INFO[{container}.ListItem(0).Icon]" },
+        { "filter": "equals({art}, Square) + not equals({range}, 0)", "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Icon)", "value": "$INFO[ListItem({range}).Icon]" }
+      ]
+    }
+  }
+}

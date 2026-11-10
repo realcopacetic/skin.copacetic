@@ -83,13 +83,9 @@
 			</control>
 		</include>
 		<include content="Infoscreen_Furniture_Template">
-			<param name="overlay" value="![String.IsEqual(ListItem.DBType,artist) + ControlGroup(3000).HasFocus] + ![String.IsEqual(ListItem.DBType,album) + ControlGroup(3000).HasFocus(12)] + ![$EXP[PanelDialog_IsVisible] + !String.IsEqual(ListItem.DBType,artist)]" />
-			<include content="Infoscreen_Widget_3201_MostPlayed" condition="String.IsEqual(ListItem.DBType,artist)" />
-			<include content="Infoscreen_Widget_3202_Discography" />
-			<include content="Infoscreen_Widget_3205_MusicVideos" />
-			<include content="Infoscreen_Widget_3207_SimilarArtists" condition="String.IsEqual(ListItem.DBType,artist)" />
-			<include content="Infoscreen_Widget_3207_SimilarAlbums" condition="String.IsEqual(ListItem.DBType,album)" />
-			<include content="Infoscreen_Widget_3207_SimilarSongs" condition="String.IsEqual(ListItem.DBType,song)" />
+			<include content="Infoscreen_Rails">
+				<param name="dialog" value="musicinformation" />
+			</include>
 			<include content="DialogMusicInfo_Scrollbar" />
 		</include>
 	</controls>

@@ -21,7 +21,9 @@
     "default_order": [ "in_progress", "next_up", "latest_movies", "latest_tvshows" ],
     "tokens": {
       "focused": "String.IsEqual(Window(home).Property(Home_Widget),{index})",
-      "home_row": "Window.Is(home) + String.IsEqual(Window(home).Property(Home_Widget),{index})",
+      "rail_id": "{index}",
+      "row_focus": "Window.Is(home) + String.IsEqual(Window(home).Property(Home_Widget),{index})",
+      "scope": "Home",
       "window": "home"
     },
     "config_fields": {

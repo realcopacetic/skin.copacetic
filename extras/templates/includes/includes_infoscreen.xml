@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<mapping>infoscreen</mapping>
+	<includes>
+		<!-- Each dialog's rail containers, flat in its grouplist 3200: the grouplist chains Up and Down and skips the rails that can't
+			take focus (no size: they draw nothing). A set's movies are Kodi's list 50, which is cast's container -->
+		<template>
+			<index start="3201" />
+			<filter>not equals({rail}, set_movies)</filter>
+			<include name="infoscreen_rails_{dialog}">
+				<include content="Widget_List">
+					<param name="bypass_min_items" value="{bypass_min_items}" />
+					<param name="click_action" value="{click}" />
+					<param name="content" value="{content}" />
+					<param name="hidden_focus" value="{hidden_focus}" />
+					<param name="id" value="{id}" />
+					<param name="limit" value="{limit}" />
+					<param name="min_items" value="{min_items}" />
+					<param name="sortby" value="{sortby}" />
+					<param name="sortorder" value="{sortorder}" />
+					<param name="target" value="{target}" />
+					<param name="use_custom_click" value="{custom}" />
+					<param name="use_custom_content" value="{custom}" />
+					<param name="widget_type" value="Home_Row" />
+					<visible>{container_visible}</visible>
+				</include>
+			</include>
+		</template>
+		<!-- Each rail's art, breadcrumb and details, outside the grouplist: shown for the rail's item types, on its focus -->
+		<template>
+			<index start="3201" />
+			<include name="infoscreen_layouts_{dialog}">
+				<control type="group">
+					<visible>{visible}</visible>
+					<include content="Infoscreen_Rail_Layout">
+						<param name="art_icon" value="infoscreen_{index}_Thumbnail" />
+						<param name="display" value="{art}" />
+						<param name="header" value="{header}" />
+						<param name="id" value="{id}" />
+						<param name="include_progress" value="{include_progress}" />
+						<param name="info" value="{info}" />
+						<param name="info_visible" value="{info_visible}" />
+						<param name="title_label_id" value="6{index}" />
+						<param name="view" value="{layout}" />
+					</include>
+				</control>
+			</include>
+		</template>
+		<template>
+			<index start="3201" />
+			<include name="infoscreen_nibs_{dialog}">
+				<include content="Widget_Scrollbar_Nib">
+					<param name="active" value="Control.HasFocus({id})" />
+					<param name="background_color" value="$VAR[Scroll_Widget_Background_Color]" />
+					<param name="focused_color" value="$VAR[Scroll_Widget_Focused_Color]" />
+					<param name="visible" value="{nib}" />
+				</include>
+			</include>
+		</template>
+		<!-- One conditional fade per rail, so the nibs come back on each rail change (cast's covers a set's movies) -->
+		<template>
+			<index start="3201" />
+			<filter>not equals({rail}, set_movies)</filter>
+			<include name="infoscreen_nib_fades_{dialog}">
+				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus({id})">Conditional</animation>
+			</include>
+		</template>
+		<!-- Up into a dialog's rails from below: OnMove walks back from its last rail through the ones that can't take focus (GUIWindow.cpp:962-980) -->
+		<template>
+			<index start="3201" />
+			<filter>equals({last}, true)</filter>
+			<include name="infoscreen_onup">
+				<onup condition="{window_is} + [$PARAM[condition]]">{id}</onup>
+			</include>
+		</template>
+		<!-- Rails back at their first item as the dialog opens and as its menu takes focus (Kodi's list 50 is reset beside them) -->
+		<template>
+			<index start="3201" />
+			<filter>not equals({id}, 50)</filter>
+			<include name="infoscreen_resets_onload">
+				<onload condition="Integer.IsGreater(Container({id}).CurrentItem,1)">Control.Move({id},$INFO[Container({id}).CurrentItem,-])</onload>
+				<onload condition="Integer.IsGreater(Container({id}).CurrentItem,1)">Control.Move({id},1)</onload>
+			</include>
+		</template>
+		<template>
+			<index start="3201" />
+			<filter>not equals({id}, 50)</filter>
+			<include name="infoscreen_resets_onfocus">
+				<onfocus condition="Integer.IsGreater(Container({id}).CurrentItem,1)">Control.Move({id},$INFO[Container({id}).CurrentItem,-])</onfocus>
+				<onfocus condition="Integer.IsGreater(Container({id}).CurrentItem,1)">Control.Move({id},1)</onfocus>
+			</include>
+		</template>
+	</includes>
+</xml>
