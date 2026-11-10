@@ -509,9 +509,9 @@
 			<visible>ControlGroup(9).HasFocus(14)</visible>
 		</control>
 		<control type="button" id="1409">
-			<description>Play next: the card's time before the end and "Still there?"</description>
+			<description>Play next: on or off, the card's time before the end and "Still there?"</description>
 			<label>$LOCALIZE[10008]</label>
-			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,focus_item=player,host_focus=203,mapping=copacetic1,name=pathsettings)</onclick>
+			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,focus_item=player,host_focus=208,mapping=copacetic1,name=pathsettings)</onclick>
 			<visible>ControlGroup(9).HasFocus(14)</visible>
 		</control>
 		<include content="skinsettings_Slider_Button">

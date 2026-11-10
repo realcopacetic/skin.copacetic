@@ -124,7 +124,13 @@
 			<visible>Skin.HasSetting(slideshow2)</visible>
 			<label>$LOCALIZE[108] 2</label>
 		</control>
-		<!-- Player row: cycles; the helper shows each value as label2 -->
+		<!-- Player row: play next's switch, then two cycles the helper hides while it's off; it shows each value as label2 -->
+		<control type="radiobutton" id="208">
+			<description>Play next on or off</description>
+			<textwidth>660</textwidth>
+			<radioposx>750</radioposx>
+			<label>$LOCALIZE[10008]</label>
+		</control>
 		<control type="button" id="203">
 			<description>Play next card's time before the end</description>
 			<label>Show the card before the end</label>

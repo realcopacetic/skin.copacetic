@@ -29,18 +29,25 @@
         "mode": "widget"
       }
     },
+    "playnext_enabled": {
+      "field": "playnext_enabled",
+      "id": 208,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, player)",
+      "label": "$LOCALIZE[10008]"
+    },
     "playnext_lead": {
       "field": "playnext_lead",
       "id": 203,
       "control_type": "cycle",
-      "visible": "equals({settings_category}, player)",
+      "visible": "equals({settings_category}, player) + equals({playnext_enabled}, true)",
       "label": "Show the card before the end"
     },
     "still_watching": {
       "field": "still_watching",
       "id": 204,
       "control_type": "cycle",
-      "visible": "equals({settings_category}, player)",
+      "visible": "equals({settings_category}, player) + equals({playnext_enabled}, true)",
       "label": "Still there?"
     },
     "search_optimise": {
