@@ -126,6 +126,10 @@
 			which would close the notification (builder_ready is generated). Both conditions are read before either row runs -->
 		<onload condition="System.AddonIsEnabled(service.upnext) + !Skin.HasSetting(upnext_turned_off) + $EXP[builder_ready]">RunScript(script.copacetic.helper,action=toggle_addon,id=service.upnext)</onload>
 		<onload condition="!Skin.HasSetting(upnext_turned_off) + $EXP[builder_ready]">Skin.SetBool(upnext_turned_off)</onload>
+		<!-- 3.0's note, once, for profiles that ran C1 before 3.0 (its Startup wrote Widget1_View). helper_active is set once the
+			helper's build check is done, so another profile's rebuild and reload can't close the note as it opens -->
+		<onload condition="Skin.String(Widget1_View) + !Skin.HasSetting(firstrun_3_shown) + $EXP[builder_ready] + !String.IsEmpty(Window(home).Property(helper_active))">RunScript(script.copacetic.helper,action=dialog_textviewer,"heading=$LOCALIZE[24054]","label=Copacetic 3.0 has been rebuilt under the hood, so your menus, Home rows and views start again from their defaults. Choose them again in Skin settings.")</onload>
+		<onload condition="Skin.String(Widget1_View) + !Skin.HasSetting(firstrun_3_shown) + $EXP[builder_ready] + !String.IsEmpty(Window(home).Property(helper_active))">Skin.SetBool(firstrun_3_shown)</onload>
 	</include>
 
 </includes>
