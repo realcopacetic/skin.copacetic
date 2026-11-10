@@ -42,9 +42,10 @@
   </include>
 
   <include name="Trailer_Autoplay_Mask">
+    <param name="list_focused" default="true" /><!-- Home: the request's row is the focused row, as the same title can sit in two rows -->
     <definition>
       <control type="image">
-        <visible>!Skin.String(Theme,Light) + !Player.HasVideo + String.IsEqual(Window(home).Property(trailer_state),pending) + [[!Control.HasFocus(3100) + !String.IsEqual(Window(home).Property(trailer_focus_ids),3100) + String.IsEqual(Window(home).Property(trailer_item),ListItem.Label)] | [Control.HasFocus(3100) + String.IsEqual(Window(home).Property(trailer_focus_ids),3100) + String.IsEqual(Window(home).Property(trailer_item),Container(3100).ListItem.Label)]]</visible><!-- the request is the focused list's and item's: a versions rail repeats the view item's label, and in Videos ListItem reads the view, not the rail (GUIMediaWindow.cpp:173-180) -->
+        <visible>!Skin.String(Theme,Light) + !Player.HasVideo + String.IsEqual(Window(home).Property(trailer_state),pending) + [[!Control.HasFocus(3100) + !String.IsEqual(Window(home).Property(trailer_focus_ids),3100) + [$PARAM[list_focused]] + String.IsEqual(Window(home).Property(trailer_item),ListItem.Label)] | [Control.HasFocus(3100) + String.IsEqual(Window(home).Property(trailer_focus_ids),3100) + String.IsEqual(Window(home).Property(trailer_item),Container(3100).ListItem.Label)]]</visible><!-- the request is the focused list's and item's: a versions rail repeats the view item's label, and in Videos ListItem reads the view, not the rail (GUIMediaWindow.cpp:173-180) -->
         <animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_4x" tween="sine" easing="inout" reversible="false">Hidden</animation>
         <texture colordiffuse="$VAR[Dark_Color]">views/white_100.png</texture>
       </control>
