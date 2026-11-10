@@ -88,6 +88,9 @@
 	
 	<include name="atr_folderwatch">
 		<!-- A new listing rebuilds and refocuses the view's focused layout. onfocus is thread-messaged, so the path lands next frame -->
+		<onfocus condition="$EXP[folder_changed] + $EXP[trailer_playing] + !Player.Paused">PlayerControl(Play)</onfocus><!-- a trailer never outlives its listing: pause and hide it -->
+		<onfocus condition="$EXP[folder_changed] + $EXP[trailer_playing]">SetProperty(trailer_state,interrupted,home)</onfocus>
+		<onfocus condition="$EXP[folder_changed] + !String.IsEmpty(Window(home).Property(trailer_played_item))">ClearProperty(trailer_played_item,home)</onfocus><!-- a new listing is a new visit: the item's trailer may play again -->
 		<onfocus condition="$EXP[folder_changed]">SetProperty(folder_path,$ESCINFO[Container.FolderPath],home)</onfocus><!-- escaped: plugin paths can carry commas -->
 	</include>
 
