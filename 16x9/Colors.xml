@@ -30,10 +30,6 @@
 		<value condition="Skin.String(Infoscreen_Brightness,25)">brightness25</value>
 		<value>brightness33</value>
 	</variable>
-	<variable name="Dialogs_Artwork_Diffuse">
-		<value condition="Window.Is(addonsettings)">brightness15</value>
-		<value>brightness50</value>
-	</variable>
 
 	<!-- Alpha overlay masks -->
 	<variable name="ListView_Panel_Mask">
@@ -58,10 +54,6 @@
 	<variable name="Transparent_Dialog_Mask">
 		<value condition="VideoPlayer.IsFullscreen">$VAR[OSD_Background_Mask]</value>
 		<value>dark50</value>
-	</variable>
-	<variable name="visualisation_Mask">
-		<value condition="!Skin.HasSetting(visualisation_Disable_Background)">dark</value>
-		<value>$VAR[Secondary_Color]</value>
 	</variable>
 
 	<!-- Labels -->
