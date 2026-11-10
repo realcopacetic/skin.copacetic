@@ -20,11 +20,9 @@
 		<param name="hidden_focus" default="false" /> <!-- true: an empty, hidden rail still reads its URL, for a path that waits on 9000; empty, it still can't take focus -->
 		<param name="row_autoplay" default="false" /> <!-- Home rows: this row starts trailers (btn_trailer), paused and hidden when the row loses focus -->
 		<param name="row_autoscroll" default="false" />
-		<!-- A call's children go to <nested />: an info rail passes its item types as a second <visible>, which Kodi ANDs (GUIControlFactory.cpp:496-504) -->
 		<definition>
 			<control type="fixedlist" id="$PARAM[id]">
 				<visible allowhiddenfocus="$PARAM[hidden_focus]">Integer.IsGreaterOrEqual(Container($PARAM[id]).NumItems,$PARAM[min_items]) | Container($PARAM[id]).IsUpdating | $PARAM[bypass_min_items]</visible>
-				<nested />
 				<onfocus condition="Window.Is(home)">SetProperty(Home_Widget,$PARAM[id],home)</onfocus>
 				<onfocus condition="Window.Is(movieinformation) | Window.Is(musicinformation) | Window.Is(songinformation) | Window.Is(addoninformation)">SetProperty(Infoscreen_Widget,$PARAM[id],home)</onfocus>
 				<onfocus>ClearProperty(Focused_Button,movieinformation)</onfocus>

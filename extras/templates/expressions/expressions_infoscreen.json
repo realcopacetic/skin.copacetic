@@ -19,12 +19,17 @@
       "note": "Scroll_Widget_*_Color: light nibs while the focused rail's art fills their side of the screen.",
       "index": { "start": 3201 },
       "rules": [
-        { "condition": "equals({layout}, Billboard)", "type": "append", "value": "[Control.HasFocus({id}) + {visible}]" },
-        { "condition": "equals({layout}, Strip) + In({art}, [Posters, Square])", "type": "append", "value": "[Control.HasFocus({id}) + {visible} + !String.IsEmpty({container}.ListItemNoWrap(2).Label)]" },
-        { "condition": "equals({layout}, Strip) + equals({art}, Fanart)", "type": "append", "value": "[Control.HasFocus({id}) + {visible} + !String.IsEmpty({container}.ListItemNoWrap(1).Label)]" },
-        { "condition": "equals({layout}, Grid) + In({art}, [Posters, Square])", "type": "append", "value": "[Control.HasFocus({id}) + {visible} + !String.IsEmpty({container}.ListItemNoWrap(5).Label)]" },
-        { "condition": "equals({layout}, Grid) + equals({art}, Fanart)", "type": "append", "value": "[Control.HasFocus({id}) + {visible} + !String.IsEmpty({container}.ListItemNoWrap(3).Label)]" }
+        { "condition": "equals({layout}, Billboard)", "type": "append", "value": "[{window_is} + {load} + Control.HasFocus({id})]" },
+        { "condition": "equals({layout}, Strip) + In({art}, [Posters, Square])", "type": "append", "value": "[{window_is} + {load} + Control.HasFocus({id}) + !String.IsEmpty({container}.ListItemNoWrap(2).Label)]" },
+        { "condition": "equals({layout}, Strip) + equals({art}, Fanart)", "type": "append", "value": "[{window_is} + {load} + Control.HasFocus({id}) + !String.IsEmpty({container}.ListItemNoWrap(1).Label)]" },
+        { "condition": "equals({layout}, Grid) + In({art}, [Posters, Square])", "type": "append", "value": "[{window_is} + {load} + Control.HasFocus({id}) + !String.IsEmpty({container}.ListItemNoWrap(5).Label)]" },
+        { "condition": "equals({layout}, Grid) + equals({art}, Fanart)", "type": "append", "value": "[{window_is} + {load} + Control.HasFocus({id}) + !String.IsEmpty({container}.ListItemNoWrap(3).Label)]" }
       ]
+    },
+    "infoscreen_rails_focusable": {
+      "note": "The menu's Up and Down: some rail of the topmost dialog can take focus (shown, or hidden with allowhiddenfocus, and with items or loading).",
+      "index": { "start": 3201 },
+      "rules": [ { "type": "append", "value": "[{window_is} + {load} + [Control.IsVisible({id}) | {hidden_focus}] + [Integer.IsGreater({container}.NumItems,0) | {container}.IsUpdating]]" } ]
     },
     "infoscreen_background_rail": {
       "note": "Infoscreen_HasBackground: the last focused video rail is a Billboard, which draws the background.",

@@ -1,15 +1,6 @@
 {
   "mapping": "infoscreen",
   "variables": {
-    "infoscreen_path_{index}": {
-      "note": "A rail's content for the item types it shows for; any other item gets the empty playlist, so a rail of another type fetches nothing. Kodi's list 50 has no content.",
-      "index": { "start": 3201 },
-      "filter": "equals({custom}, true)",
-      "values": [
-        { "condition": "{visible}", "value": "{path}" },
-        { "value": "special://skin/extras/playlists/empty.xsp" }
-      ]
-    },
     "infoscreen_albums": {
       "note": "An artist's album count in the info line (Info_Infoscreens_Label): Discography's items.",
       "index": { "start": 3201 },

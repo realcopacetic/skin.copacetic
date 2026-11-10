@@ -243,10 +243,10 @@
 
 	<include name="MovieInfo_Dialog_Menu_Navigation">
 		<onback>SetFocus(4020)</onback>
-		<ondown>3200</ondown> <!-- the rails' grouplist: its first rail that can take focus -->
+		<ondown condition="$EXP[infoscreen_rails_focusable]">3200</ondown> <!-- the rails' grouplist: its first rail that can take focus -->
 		<onup condition="$EXP[Music_Player_IsVisible]">SetFocus(3500,1)</onup>
 		<include content="infoscreen_onup">
-			<param name="condition" value="!$EXP[Music_Player_IsVisible]" />
+			<param name="condition" value="!$EXP[Music_Player_IsVisible] + $EXP[infoscreen_rails_focusable]" />
 		</include>
 		<include content="Widget_Position_Reset_OnFocus" />
 	</include>

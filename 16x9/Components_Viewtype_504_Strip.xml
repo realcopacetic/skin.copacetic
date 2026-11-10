@@ -140,7 +140,7 @@
 					<visible>!String.IsEqual(Container($PARAM[target_id]).NumItems,1)</visible>
 					<!-- Move Icon -3 to -2 -->
 					<include content="StripView_ListIcon_Animated" condition="!Window.Is(home) + !$PARAM[displaytype_isfanart]">
-						<param name="visible" value="Container($PARAM[target_id]).OnPrevious + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Infoscreen_IsVisible]]" />
+						<param name="visible" value="Container($PARAM[target_id]).OnPrevious + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Rail_IsVisible]]" />
 						<param name="position" value="-2" />
 						<param name="left" value="-$PARAM[item_width]" />
 						<param name="top" value="$PARAM[item_top]" />
@@ -156,7 +156,7 @@
 					</include>
 					<!-- Move Icon -2 to -1 -->
 					<include content="StripView_ListIcon_Animated" condition="!Window.Is(home)">
-						<param name="visible" value="Container($PARAM[target_id]).OnPrevious + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Infoscreen_IsVisible]]" />
+						<param name="visible" value="Container($PARAM[target_id]).OnPrevious + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Rail_IsVisible]]" />
 						<param name="position" value="-1" />
 						<param name="left" value="0" />
 						<param name="top" value="$PARAM[item_top]" />
@@ -172,7 +172,7 @@
 					</include>
 					<!-- Move Icon -1 to 0 -->
 					<include content="StripView_ListIcon_Animated" condition="!Window.Is(home)">
-						<param name="visible" value="Container($PARAM[target_id]).OnPrevious + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Infoscreen_IsVisible]]" />
+						<param name="visible" value="Container($PARAM[target_id]).OnPrevious + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Rail_IsVisible]]" />
 						<param name="position" value="0" />
 						<param name="left" value="$PARAM[item_width]" />
 						<param name="top" value="$PARAM[item_top]" />
@@ -260,7 +260,7 @@
 					<!-- Dropshadow for icon 0 to 1 -->
 					<!-- Left Side -->
 					<include content="DropShadow" condition="!Window.Is(home)">
-						<param name="visible" value="Container($PARAM[target_id]).OnPrevious + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Infoscreen_IsVisible]] + ![String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(1).Label) + String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(1).Art(thumb))]" />
+						<param name="visible" value="Container($PARAM[target_id]).OnPrevious + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Rail_IsVisible]] + ![String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(1).Label) + String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(1).Art(thumb))]" />
 						<param name="left" value="$PARAM[2x_item_width_minus_dropshadow_width]" />
 						<param name="top" value="$PARAM[item_top]" />
 						<param name="height" value="$PARAM[item_height]" />
@@ -296,7 +296,7 @@
 					<!-- Dropshadow for icon -1 to 0 -->
 					<!-- Left Side -->
 					<include content="DropShadow" condition="!Window.Is(home)">
-						<param name="visible" value="$EXP[Content_Previous] + !Container($PARAM[target_id]).OnPrevious + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Infoscreen_IsVisible]] + ![String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(-1).Label) + String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(-1).Art(thumb))]" />
+						<param name="visible" value="$EXP[Content_Previous] + !Container($PARAM[target_id]).OnPrevious + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Rail_IsVisible]] + ![String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(-1).Label) + String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(-1).Art(thumb))]" />
 						<param name="left" value="$PARAM[item_width]" />
 						<param name="top" value="$PARAM[item_top]" />
 						<param name="width" value="1" />
@@ -336,7 +336,7 @@
 					<visible>!String.IsEqual(Container($PARAM[target_id]).NumItems,1)</visible>
 					<!-- Move Icon -2 to -3 -->
 					<include content="StripView_ListIcon_Animated" condition="!Window.Is(home) + !$PARAM[displaytype_isfanart]">
-						<param name="visible" value="Container($PARAM[target_id]).OnNext + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Infoscreen_IsVisible]]" />
+						<param name="visible" value="Container($PARAM[target_id]).OnNext + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Rail_IsVisible]]" />
 						<param name="position" value="-3" />
 						<param name="left" value="0" />
 						<param name="top" value="$PARAM[item_top]" />
@@ -352,7 +352,7 @@
 					</include>
 					<!-- Move Icon -1 to -2 -->
 					<include content="StripView_ListIcon_Animated" condition="!Window.Is(home)">
-						<param name="visible" value="Container($PARAM[target_id]).OnNext + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Infoscreen_IsVisible]]" />
+						<param name="visible" value="Container($PARAM[target_id]).OnNext + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Rail_IsVisible]]" />
 						<param name="position" value="-2" />
 						<param name="left" value="$PARAM[item_width]" />
 						<param name="top" value="$PARAM[item_top]" />
@@ -368,7 +368,7 @@
 					</include>
 					<!-- Move Icon 0 to -1 -->
 					<include content="StripView_Multiart_Animated" condition="!Window.Is(home)">
-						<param name="visible" value="Container($PARAM[target_id]).OnNext + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Infoscreen_IsVisible]]" />
+						<param name="visible" value="Container($PARAM[target_id]).OnNext + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Rail_IsVisible]]" />
 						<param name="position" value="-1" />
 						<param name="left" value="$PARAM[2x_item_width]" />
 						<param name="top" value="0" />
@@ -461,7 +461,7 @@
 					<!-- Dropshadow for icon 0 to -1 -->
 					<!-- Left Side -->
 					<include content="DropShadow" condition="!Window.Is(home)">
-						<param name="visible" value="Container($PARAM[target_id]).OnNext + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Infoscreen_IsVisible]] + ![String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(-2).Label) + String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(-2).Art(thumb))]" />
+						<param name="visible" value="Container($PARAM[target_id]).OnNext + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Rail_IsVisible]] + ![String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(-2).Label) + String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(-2).Art(thumb))]" />
 						<param name="left" value="$PARAM[2x_item_width_minus_dropshadow_width]" />
 						<param name="top" value="$PARAM[item_top]" />
 						<param name="height" value="$PARAM[item_height]" />
@@ -497,7 +497,7 @@
 					<!-- Dropshadow for icon 1 to 0 -->
 					<!-- Left Side -->
 					<include content="DropShadow" condition="!Window.Is(home)">
-						<param name="visible" value="$EXP[Content_Next] + !Container($PARAM[target_id]).OnNext + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Infoscreen_IsVisible]] + ![String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(-1).Label) + String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(-1).Art(thumb))]" />
+						<param name="visible" value="$EXP[Content_Next] + !Container($PARAM[target_id]).OnNext + [$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Rail_IsVisible]] + ![String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(-1).Label) + String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(-1).Art(thumb))]" />
 						<param name="left" value="$PARAM[2x_item_width_plus_focus_width]" />
 						<param name="top" value="0" />
 						<param name="width" value="1" />
@@ -571,7 +571,7 @@
 					<visible>!$EXP[Content_Switching_Base]</visible>
 					<!-- Unfocused -->
 					<include content="StripView_ListIcon_Static_Unfocused" condition="!Window.Is(home) + !$PARAM[displaytype_isfanart]">
-						<param name="visible" value="$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Infoscreen_IsVisible]" />
+						<param name="visible" value="$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Rail_IsVisible]" />
 						<param name="position" value="-2" />
 						<param name="left" value="0" />
 						<param name="top" value="$PARAM[item_top]" />
@@ -585,7 +585,7 @@
 					<control type="group">
 						<animation effect="slide" start="0,0" end="-$PARAM[item_width],0" time="0" condition="$PARAM[displaytype_isfanart]">Conditional</animation>
 						<include content="StripView_ListIcon_Static_Unfocused" condition="!Window.Is(home)">
-							<param name="visible" value="$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Infoscreen_IsVisible]" />
+							<param name="visible" value="$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Rail_IsVisible]" />
 							<param name="position" value="-1" />
 							<param name="left" value="$PARAM[item_width]" />
 							<param name="top" value="$PARAM[item_top]" />
@@ -620,7 +620,7 @@
 						</include>
 						<!-- Dropshadow -->
 						<include content="DropShadow" condition="!Window.Is(home)">
-							<param name="visible" value="[$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Infoscreen_IsVisible]] + ![String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(-1).Label) + String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(-1).Art(thumb))]" />
+							<param name="visible" value="[$EXP[StripView_Details_Off] | $EXP[StripView_Widget_Rail_IsVisible]] + ![String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(-1).Label) + String.IsEmpty(Container($PARAM[target_id]).ListItemNoWrap(-1).Art(thumb))]" />
 							<param name="left" value="$PARAM[2x_item_width_minus_dropshadow_width]" />
 							<param name="top" value="$PARAM[item_top]" />
 							<param name="height" value="$PARAM[item_height]" />
@@ -780,7 +780,7 @@
 				<param name="secondary_mask_top" value="240" />
 				<param name="secondary_mask_bottom" value="210" />
 				<animation effect="slide" start="0,0" end="-560,0" time="0" condition="true">Conditional</animation>
-				<animation effect="slide" start="0,0" end="320,0" time="0" condition="!$EXP[StripView_Details_Off] + !$EXP[StripView_Widget_Infoscreen_IsVisible]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="320,0" time="0" condition="!$EXP[StripView_Details_Off] + !$EXP[StripView_Widget_Rail_IsVisible]">Conditional</animation>
 			</include>
 		</definition>
 	</include>
@@ -810,7 +810,7 @@
 				<param name="secondary_mask_top" value="240" />
 				<param name="secondary_mask_bottom" value="210" />
 				<animation effect="slide" start="0,0" end="-435,0" time="0" condition="true">Conditional</animation>
-				<animation effect="slide" start="0,0" end="75,0" time="0" condition="!$EXP[StripView_Details_Off] + !$EXP[StripView_Widget_Infoscreen_IsVisible]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="75,0" time="0" condition="!$EXP[StripView_Details_Off] + !$EXP[StripView_Widget_Rail_IsVisible]">Conditional</animation>
 			</include>
 		</definition>
 	</include>

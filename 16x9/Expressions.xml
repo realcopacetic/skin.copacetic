@@ -78,7 +78,7 @@
 	<expression name="Content_Previous">Control.IsVisible(5001)</expression>
 	<expression name="Content_Switching">$EXP[Content_Switching_Base] + !$EXP[Content_Switching_Exclusions_StripView]</expression>
 	<expression name="Content_Switching_Base">[Control.IsVisible(5001) | Control.IsVisible(5002)] + [!String.IsEqual(Container.NumItems,1) | Window.Is(movieinformation) | Window.Is(musicinformation) | Window.Is(songinformation) | Window.Is(addoninformation)] + !Window.IsVisible(managevideoversions) + !Window.IsVisible(managevideoextras)</expression>
-	<expression name="Content_Switching_Exclusions_StripView">[$EXP[StripView_Media_IsVisible] + $EXP[StripView_Details_Off]] | $EXP[StripView_Widget_Infoscreen_IsVisible]</expression>
+	<expression name="Content_Switching_Exclusions_StripView">[$EXP[StripView_Media_IsVisible] + $EXP[StripView_Details_Off]] | $EXP[StripView_Widget_Rail_IsVisible]</expression>
 
 	<!-- Container Transitions -->
 	<expression name="folder_changed">!String.IsEmpty(Window(home).Property(folder_watch)) + !String.IsEqual(Container.FolderPath,Window(home).Property(folder_path))</expression><!-- the listing isn't the one the views last recorded (atr_folderwatch). folder_watch: only windows with those views record, so no other window waits on it -->
@@ -232,7 +232,7 @@
 	<expression name="StripView_Media_IsVisible">!$EXP[Infoscreen_IsVisible] + [Control.HasFocus(504) | String.IsEqual(Container.ViewMode,Strip)]</expression>
 	<expression name="StripView_Widget_IsVisible">$EXP[StripView_Display_IsPosters_Widget] | $EXP[StripView_Display_IsFanart_Widget] | $EXP[StripView_Display_IsSquare_Widget]</expression>
 	<expression name="StripView_Widget_Home_IsVisible">$EXP[StripView_Display_IsPosters_Widget_Home] | $EXP[StripView_Display_IsFanart_Widget_Home] | $EXP[StripView_Display_IsSquare_Widget_Home]</expression>
-	<expression name="StripView_Widget_Infoscreen_IsVisible">$EXP[StripView_Display_IsPosters_Widget_Infoscreen] | $EXP[StripView_Display_IsFanart_Widget_Infoscreen] | $EXP[StripView_Display_IsSquare_Widget_Infoscreen] | $EXP[StripView_Widget_Search_IsVisible]</expression>
+	<expression name="StripView_Widget_Rail_IsVisible">$EXP[StripView_Display_IsPosters_Widget_Infoscreen] | $EXP[StripView_Display_IsFanart_Widget_Infoscreen] | $EXP[StripView_Display_IsSquare_Widget_Infoscreen] | $EXP[StripView_Widget_Search_IsVisible]</expression> <!-- an info screen or search rail in Strip -->
 	<!-- Display: Posters -->
 	<expression name="StripView_Display_IsPosters">[$EXP[StripView_Media_IsVisible] + [$EXP[display_posters_visible] | Container.Content(actors)]] | $EXP[StripView_Display_IsPosters_Widget]</expression>
 	<expression name="StripView_Display_IsPosters_Widget">$EXP[StripView_Display_IsPosters_Widget_Home] | $EXP[StripView_Display_IsPosters_Widget_Infoscreen] | $EXP[StripView_Display_IsPosters_Widget_Search]</expression>
