@@ -51,6 +51,11 @@
       "index": { "start": 3201 },
       "rules": [ { "condition": "equals({art_landscape}, true)", "type": "assign", "value": "true" } ]
     },
+    "trailer_include_{window}": {
+      "note": "Include conditions on Home (the black cover, the fades): some row plays trailers.",
+      "index": { "start": 3201 },
+      "rules": [ { "condition": "equals({autoplay}, true)", "type": "assign", "value": "true" } ]
+    },
     "art_clearlogo_visible_{window}": {
       "index": { "start": 3201 },
       "rules": [ { "condition": "equals({art_clearlogo}, true)", "type": "append", "value": "{focused}" } ]

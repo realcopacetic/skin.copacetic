@@ -126,7 +126,7 @@
 					<include content="HiddenFocusButton">
 						<param name="id" value="$PARAM[id]" />
 					</include>
-					<include content="btn_trailer" condition="Skin.HasSetting(Trailer_Autoplay) + Window.Is(videos)">
+					<include content="btn_trailer" condition="$EXP[trailer_include_videos] + Window.Is(videos)">
 						<param name="enabled" value="$EXP[trailer_visible_videos]" />
 						<param name="focus_ids" value="$PARAM[id]" />
 						<param name="id" value="$PARAM[id]" />
@@ -264,7 +264,7 @@
 		<param name="selectedcolor" default="$VAR[Light_Color]" />
 		<definition>
 			<include content="HiddenFocusButton" />
-			<include content="btn_trailer" condition="Skin.HasSetting(Trailer_Autoplay) + Window.Is(videos)">
+			<include content="btn_trailer" condition="$EXP[trailer_include_videos] + Window.Is(videos)">
 				<param name="enabled" value="$EXP[trailer_visible_videos]" />
 				<param name="focus_ids" value="50" />
 				<param name="id" value="50" />

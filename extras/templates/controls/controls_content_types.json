@@ -54,6 +54,13 @@
       "visible": "not In({content_type}, [episodes, videos, musicvideos]) + In({layout}, [strip, grid])",
       "label": "$LOCALIZE[31499]",
       "description": "$LOCALIZE[31599]"
+    },
+    "trailer": {
+      "field": "trailer",
+      "id": 207,
+      "control_type": "radiobutton",
+      "visible": "In({content_type}, [movies, tvshows]) + not equals({layout}, grid)",
+      "label": "$LOCALIZE[31465]"
     }
   }
 }

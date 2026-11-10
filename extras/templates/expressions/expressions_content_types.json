@@ -130,6 +130,26 @@
           "value": "{condition}"
         }
       ]
+    },
+    "trailer_include_{window}": {
+      "note": "Include conditions: some kind of item in this window plays trailers (btn_trailer, the black cover, the fades).",
+      "rules": [
+        {
+          "condition": "equals({trailer}, true)",
+          "type": "assign",
+          "value": "true"
+        }
+      ]
+    },
+    "trailer_visible_{window}": {
+      "note": "btn_trailer's enabled: the shown kind of item plays trailers.",
+      "rules": [
+        {
+          "condition": "equals({trailer}, true)",
+          "type": "append",
+          "value": "{condition}"
+        }
+      ]
     }
   }
 }

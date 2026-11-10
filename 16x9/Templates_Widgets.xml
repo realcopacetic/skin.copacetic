@@ -30,7 +30,7 @@
 				<onfocus>ClearProperty(Focused_Button,addoninformation)</onfocus>
 				<onfocus condition="$PARAM[row_autoscroll]">SetProperty(autoscroll_id,$PARAM[id],home)</onfocus>
 				<onunfocus condition="$PARAM[row_autoscroll]">ClearProperty(autoscroll_id,home)</onunfocus>
-				<include content="atr_trailer_region_interrupt" condition="$PARAM[row_autoplay] + Skin.HasSetting(Trailer_Autoplay)" />
+				<include content="atr_trailer_region_interrupt" condition="$PARAM[row_autoplay]" />
 				<viewtype label="widgetlist">list</viewtype>
 				<preloaditems>2</preloaditems>
 				<orientation>horizontal</orientation>
@@ -43,7 +43,7 @@
 					<include content="HiddenFocusButton">
 						<param name="id" value="$PARAM[id]" />
 					</include>
-					<include content="btn_trailer" condition="$PARAM[row_autoplay] + Skin.HasSetting(Trailer_Autoplay)">
+					<include content="btn_trailer" condition="$PARAM[row_autoplay]">
 						<param name="focus_ids" value="$PARAM[id]" />
 						<param name="id" value="$PARAM[id]" />
 						<param name="source_prefix" value="$PARAM[id]" />
@@ -106,7 +106,7 @@
 		<control type="group">
 			<visible>!$EXP[TransparentDialog_IsVisible]</visible>
 			<include content="Visible_Fade_Delayed_Animation" />
-			<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay) + !$EXP[widget_grid_spotlight_$PARAM[id]]" />
+			<include content="Trailer_Autoplay_Fade_Animation" condition="$PARAM[autoplay] + !$EXP[widget_grid_spotlight_$PARAM[id]]" />
 			<include content="$PARAM[view]View_Details">
 				<param name="id" value="$PARAM[id]" />
 				<param name="media_view" value="false" />
@@ -121,13 +121,13 @@
 				<param name="textcolor" value="$VAR[Breadcrumb_Label_Color]" />
 				<param name="title_label" value="$PARAM[header]" />
 				<param name="visible" value="Control.HasFocus($PARAM[id])" />
-				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay) + $EXP[widget_grid_spotlight_$PARAM[id]]" />
+				<include content="Trailer_Autoplay_Fade_Animation" condition="$PARAM[autoplay] + $EXP[widget_grid_spotlight_$PARAM[id]]" />
 			</include>
 			<!-- Busy spinner -->
 			<include content="Busy_Spinner">
 				<param name="color" value="$VAR[Volume_Focused_Color]" />
 				<param name="visible" value="Control.HasFocus($PARAM[id]) + Container($PARAM[id]).IsUpdating + !Window.IsVisible(busydialog) + !$PARAM[autoplay]" />
-				<include content="Trailer_Autoplay_Fade_Delayed_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
+				<include content="Trailer_Autoplay_Fade_Delayed_Animation" condition="$PARAM[autoplay]" />
 			</include>
 		</control>
 	</include>

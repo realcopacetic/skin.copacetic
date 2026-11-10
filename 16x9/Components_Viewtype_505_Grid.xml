@@ -1442,7 +1442,7 @@
 				<param name="5x_item_width" value="1800" />
 				<param name="6x_item_width" value="2160" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
-				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
+				<include content="Trailer_Autoplay_Fade_Animation" condition="$EXP[trailer_include_home]" />
 			</include>
 		</definition>
 	</include>
@@ -1465,7 +1465,7 @@
 				<param name="4x_item_width" value="2368" />
 				<param name="5x_item_width" value="2960" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
-				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
+				<include content="Trailer_Autoplay_Fade_Animation" condition="$EXP[trailer_include_home]" />
 				<nested />
 			</include>
 		</definition>
@@ -1519,7 +1519,7 @@
 				<param name="5x_item_width" value="1800" />
 				<param name="6x_item_width" value="2160" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
-				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
+				<include content="Trailer_Autoplay_Fade_Animation" condition="$EXP[trailer_include_home]" />
 			</include>
 		</definition>
 	</include>

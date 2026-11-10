@@ -119,10 +119,7 @@
 		<value condition="Control.HasFocus(1513)">$LOCALIZE[31560]</value>
 		<value condition="Control.HasFocus(1523)">$LOCALIZE[31562]</value>
 		<value condition="Control.HasFocus(15240) | Control.HasFocus(15241)">$LOCALIZE[31563]</value>
-		<value condition="Control.HasFocus(1531)">$LOCALIZE[31565]</value>
 		<value condition="Control.HasFocus(15320) | Control.HasFocus(15321)">$LOCALIZE[31566]</value>
-		<value condition="Control.HasFocus(1533)">$LOCALIZE[31567]</value>
-		<value condition="Control.HasFocus(1534) | Control.HasFocus(1535)">$LOCALIZE[31568]</value>
 	</variable>
 	<variable name="skinsettings_slideshow_interval_Label">
 		<!-- Slideshow interval: the 5 to 30 minute presets in minutes, any other in seconds, 10 seconds when unset -->

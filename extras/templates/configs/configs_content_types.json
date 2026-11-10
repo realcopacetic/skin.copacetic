@@ -383,6 +383,27 @@
       "defaults": {
         "*": "false"
       }
+    },
+    "{content_type}_trailer": {
+      "items": {
+        "true": "$LOCALIZE[186]",
+        "false": "$LOCALIZE[106]"
+      },
+      "dependent_fields": [ "layout" ],
+      "filter_mode": "exclude",
+      "rules": [
+        {
+          "condition": "not In({content_type}, [movies, tvshows])",
+          "value": [ "true" ]
+        },
+        {
+          "condition": "equals({layout}, grid)",
+          "value": [ "true" ]
+        }
+      ],
+      "defaults": {
+        "*": "false"
+      }
     }
   }
 }

@@ -641,45 +641,23 @@
 			<param name="id" value="1524" />
 			<param name="next" value="1530" />
 		</include>
+		<!-- Trailers are turned on per kind of item in View options and per Home row; the delay shows once one is on -->
 		<control type="label" id="1530">
 			<description>Trailer autoplay</description>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[31464]</label>
-			<visible>ControlGroup(9).HasFocus(15)</visible>
-		</control>
-		<control type="radiobutton" id="1531">
-			<description>Enable trailers to autoplay</description>
-			<label>$LOCALIZE[31465]</label>
-			<onclick>Skin.ToggleSetting(Trailer_Autoplay)</onclick>
-			<selected>Skin.HasSetting(Trailer_Autoplay)</selected>
-			<visible>ControlGroup(9).HasFocus(15)</visible>
+			<visible>ControlGroup(9).HasFocus(15) + [$EXP[trailer_include_videos] | $EXP[trailer_include_home]]</visible>
 		</control>
 		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(15) + Skin.HasSetting(Trailer_Autoplay)" />
+			<param name="visible" value="ControlGroup(9).HasFocus(15) + [$EXP[trailer_include_videos] | $EXP[trailer_include_home]]" />
 			<param name="info" value="Trailer_Autoplay_Interval" />
 			<param name="label" value="- $LOCALIZE[31466]" />
 			<param name="label2" value="$INFO[Skin.String(Trailer_Autoplay_Interval)]" />
 			<param name="category" value="15" />
-			<param name="previous" value="1531" />
+			<param name="previous" value="1524" />
 			<param name="id" value="1532" />
-			<param name="next" value="1534" />
+			<param name="next" value="1502" />
 		</include>
-		<control type="radiobutton" id="1534">
-			<description>Videos / Movies</description>
-			<label>- $LOCALIZE[31468]</label>
-			<selected>Skin.String(Trailer_Autoplay_Movies_Enabled,true)</selected>
-			<onclick condition="Skin.String(Trailer_Autoplay_Movies_Enabled,true)">Skin.SetString(Trailer_Autoplay_Movies_Enabled,false)</onclick>
-			<onclick condition="!Skin.String(Trailer_Autoplay_Movies_Enabled,true)">Skin.SetString(Trailer_Autoplay_Movies_Enabled,true)</onclick>
-			<visible>ControlGroup(9).HasFocus(15) + Skin.HasSetting(Trailer_Autoplay)</visible>
-		</control>
-		<control type="radiobutton" id="1535">
-			<description>Videos / TV shows</description>
-			<label>- $LOCALIZE[31469]</label>
-			<selected>Skin.String(Trailer_Autoplay_TVShows_Enabled,true)</selected>
-			<onclick condition="Skin.String(Trailer_Autoplay_TVShows_Enabled,true)">Skin.SetString(Trailer_Autoplay_TVShows_Enabled,false)</onclick>
-			<onclick condition="!Skin.String(Trailer_Autoplay_TVShows_Enabled,true)">Skin.SetString(Trailer_Autoplay_TVShows_Enabled,true)</onclick>
-			<visible>ControlGroup(9).HasFocus(15) + Skin.HasSetting(Trailer_Autoplay)</visible>
-		</control>
 	</include>
 
 	<include name="systeminfo_Left_List_Content">

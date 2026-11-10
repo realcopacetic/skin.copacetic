@@ -343,7 +343,7 @@
 		<param name="textcolor" default="$VAR[Time_Widget_Label_Color]" />
 		<definition>
 			<control type="group">
-				<include content="Trailer_Autoplay_Fade_Animation" condition="Skin.HasSetting(Trailer_Autoplay)" />
+				<include content="Trailer_Autoplay_Fade_Animation" condition="$EXP[trailer_include_home]" />
 				<include content="Clock" condition="!Skin.String(Time_Widget,Date) + !Skin.String(Time_Widget,Weather)">
 					<param name="visible" value="$PARAM[visible]" />
 					<param name="textcolor" value="$PARAM[textcolor]" />

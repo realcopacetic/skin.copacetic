@@ -577,7 +577,7 @@
 		<include content="viewsettings_Slider_Row">
 			<param name="id" value="200" />
 			<param name="ondown" value="2010" />
-			<param name="onup" value="206" />
+			<param name="onup" value="207" />
 		</include>
 		<include content="viewsettings_Slider_Row">
 			<param name="id" value="201" />
@@ -606,6 +606,11 @@
 		</control>
 		<control type="radiobutton" id="206">
 			<description>Prefer landscape</description>
+			<textwidth>660</textwidth>
+			<radioposx>750</radioposx>
+		</control>
+		<control type="radiobutton" id="207">
+			<description>Autoplay trailers</description>
 			<textwidth>660</textwidth>
 			<radioposx>750</radioposx>
 		</control>

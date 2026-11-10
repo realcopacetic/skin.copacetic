@@ -96,8 +96,7 @@
       "id": 211,
       "control_type": "radiobutton",
       "label": "$LOCALIZE[31467]",
-      "description": "$LOCALIZE[31567]",
-      "visible": "xml(Skin.HasSetting(Trailer_Autoplay))"
+      "description": "$LOCALIZE[31567]"
     },
     "widget_artwork": {
       "id": 212,
