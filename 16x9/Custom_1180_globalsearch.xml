@@ -10,7 +10,7 @@
 	<onload condition="$EXP[search_landing] + String.IsEmpty(Window(home).Property(search_log)) + !String.IsEmpty(Window(home).Property(search_query))">ClearProperty(search_query,home)</onload>
 	<include content="search_cursor_resets" />
 	<controls>
-		<include content="prb_search_preview" /><!-- first, so every later control reads this frame's previews -->
+		<include content="prb_search_preview" /><!-- first, so every later control reads this frame's previews (the probes read only their mirrors) -->
 		<include content="Light_Theme_Background" />
 		<control type="group">
 			<visible>!$EXP[Infoscreen_IsVisible]</visible>

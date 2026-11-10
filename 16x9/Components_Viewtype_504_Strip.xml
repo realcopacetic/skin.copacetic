@@ -111,6 +111,7 @@
 		</definition>
 	</include>
 
+	<!-- animated_condition is appended to the group's condition as it is (" + …"): empty unless a caller passes it, as search does to keep these slots to a focused rail -->
 	<include name="StripView_Animated">
 		<param name="target_id" />
 		<param name="displaytype_label" />
@@ -130,7 +131,7 @@
 		<param name="fallback" />
 		<definition>
 			<control type="group">
-				<visible>$EXP[StripView_Display_Is$PARAM[displaytype_label]] + !$EXP[Container_Switching]</visible>
+				<visible>$EXP[StripView_Display_Is$PARAM[displaytype_label]] + !$EXP[Container_Switching]$PARAM[animated_condition]</visible>
 				<include content="Visible_Fade_Animation" />
 				<animation effect="slide" start="0,0" end="-960,0" time="0" condition="$PARAM[displaytype_isfanart]">Conditional</animation>
 				<top>$PARAM[top]</top>
@@ -694,6 +695,7 @@
 					<param name="2x_item_width_minus_dropshadow_width" value="$PARAM[2x_item_width_minus_dropshadow_width]" />
 					<param name="art_icon" value="$PARAM[art_icon]" />
 					<param name="container" value="$PARAM[container]" />
+					<param name="animated_condition" value="$PARAM[animated_condition]" />
 					<param name="fallback" value="$PARAM[fallback]" />
 				</include>
 				<include content="StripView_Static">
@@ -746,6 +748,7 @@
 				<param name="4x_item_width_plus_focus_width" value="2080" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
 				<param name="container" value="$PARAM[container]" />
+				<param name="animated_condition" value="$PARAM[animated_condition]" />
 				<param name="secondary_mask_top" value="180" />
 				<param name="secondary_mask_bottom" value="180" />
 				<animation effect="slide" start="0,0" end="-80,0" time="0" condition="true">Conditional</animation>
@@ -773,6 +776,7 @@
 				<param name="3x_item_width_plus_focus_width" value="4000" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
 				<param name="container" value="$PARAM[container]" />
+				<param name="animated_condition" value="$PARAM[animated_condition]" />
 				<param name="secondary_mask_top" value="240" />
 				<param name="secondary_mask_bottom" value="210" />
 				<animation effect="slide" start="0,0" end="-560,0" time="0" condition="true">Conditional</animation>
@@ -802,6 +806,7 @@
 				<param name="4x_item_width_plus_focus_width" value="2790" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
 				<param name="container" value="$PARAM[container]" />
+				<param name="animated_condition" value="$PARAM[animated_condition]" />
 				<param name="secondary_mask_top" value="240" />
 				<param name="secondary_mask_bottom" value="210" />
 				<animation effect="slide" start="0,0" end="-435,0" time="0" condition="true">Conditional</animation>

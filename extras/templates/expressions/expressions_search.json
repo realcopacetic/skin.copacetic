@@ -22,7 +22,7 @@
       "rules": [ { "type": "append", "value": "{hasfocus}" } ]
     },
     "search_preview_{index}": {
-      "note": "Reads the rail's probe (prb_search_preview), so readers test one cached flag, not the chain.",
+      "note": "Reads the rail's probe (prb_search_preview), so readers test one flag, not the chain; only controls after the probe read it, the probe reads its mirror.",
       "index": { "start": 3201 },
       "rules": [ { "type": "assign", "value": "Control.IsVisible({index+3052})" } ]
     },
