@@ -11,6 +11,7 @@
 				<param name="width" value="$PARAM[width]" />
 				<param name="height" value="$PARAM[height]" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
+				<param name="container" value="$PARAM[container]" />
 				<param name="art_diffuse" value="false" />
 				<param name="icon_width" value="50" />
 				<param name="fallback" value="$PARAM[fallback]" />
@@ -30,6 +31,7 @@
 				<param name="width" value="$PARAM[width]" />
 				<param name="height" value="$PARAM[height]" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
+				<param name="container" value="$PARAM[container]" />
 				<param name="art_diffuse" value="false" />
 				<param name="fallback" value="$PARAM[fallback]" />
 				<!-- Multiart -->
@@ -66,6 +68,7 @@
 				<param name="width" value="$PARAM[width]" />
 				<param name="height" value="$PARAM[height]" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
+				<param name="container" value="$PARAM[container]" />
 				<param name="fallback" value="$PARAM[fallback]" />
 				<param name="art_diffuse" value="false" />
 				<param name="icon_width" value="$PARAM[icon_width]" />
@@ -88,6 +91,7 @@
 				<param name="width" value="$PARAM[width]" />
 				<param name="height" value="$PARAM[height]" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
+				<param name="container" value="$PARAM[container]" />
 				<param name="fallback" value="$PARAM[fallback]" />
 				<param name="art_diffuse" value="false" />
 				<param name="animationtype" value="$PARAM[animationtype]" />
@@ -142,6 +146,7 @@
 						<param name="width" value="$PARAM[item_width]" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="container" value="$PARAM[container]" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="animationtype" value="Hidden" />
 						<param name="animationcondition" value="true" />
@@ -157,6 +162,7 @@
 						<param name="width" value="$PARAM[item_width]" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="container" value="$PARAM[container]" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="animationtype" value="Hidden" />
 						<param name="animationcondition" value="true" />
@@ -172,6 +178,7 @@
 						<param name="width" value="$PARAM[item_width]" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="container" value="$PARAM[container]" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="animationtype" value="Hidden" />
 						<param name="animationcondition" value="true" />
@@ -187,6 +194,7 @@
 						<param name="width" value="$PARAM[focus_width]" />
 						<param name="height" value="$PARAM[focus_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="container" value="$PARAM[container]" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="icon_width" value="60" />
 						<param name="animationtype" value="Hidden" />
@@ -203,6 +211,7 @@
 						<param name="width" value="$PARAM[focus_width]" />
 						<param name="height" value="$PARAM[focus_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="container" value="$PARAM[container]" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="icon_width" value="60" />
 						<param name="animationtype" value="Hidden" />
@@ -224,6 +233,7 @@
 						<param name="width" value="$PARAM[item_width]" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="container" value="$PARAM[container]" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="animationtype" value="Hidden" />
 						<param name="animationcondition" value="true" />
@@ -239,6 +249,7 @@
 						<param name="width" value="$PARAM[item_width]" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="container" value="$PARAM[container]" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="animationtype" value="Hidden" />
 						<param name="animationcondition" value="true" />
@@ -331,6 +342,7 @@
 						<param name="width" value="$PARAM[item_width]" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="container" value="$PARAM[container]" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="animationtype" value="Hidden" />
 						<param name="animationcondition" value="true" />
@@ -346,6 +358,7 @@
 						<param name="width" value="$PARAM[item_width]" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="container" value="$PARAM[container]" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="animationtype" value="Hidden" />
 						<param name="animationcondition" value="true" />
@@ -361,6 +374,7 @@
 						<param name="width" value="$PARAM[focus_width]" />
 						<param name="height" value="$PARAM[focus_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="container" value="$PARAM[container]" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="icon_width" value="60" />
 						<param name="animationtype" value="Hidden" />
@@ -382,6 +396,7 @@
 						<param name="width" value="$PARAM[focus_width]" />
 						<param name="height" value="$PARAM[focus_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="container" value="$PARAM[container]" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="icon_width" value="60" />
 						<param name="animationtype" value="Hidden" />
@@ -403,6 +418,7 @@
 						<param name="width" value="$PARAM[item_width]" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="container" value="$PARAM[container]" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="animationtype" value="Hidden" />
 						<param name="animationcondition" value="true" />
@@ -418,6 +434,7 @@
 						<param name="width" value="$PARAM[item_width]" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="container" value="$PARAM[container]" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="animationtype" value="Hidden" />
 						<param name="animationcondition" value="true" />
@@ -433,6 +450,7 @@
 						<param name="width" value="$PARAM[item_width]" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="container" value="$PARAM[container]" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="animationtype" value="Hidden" />
 						<param name="animationcondition" value="true" />
@@ -559,6 +577,7 @@
 						<param name="width" value="$PARAM[item_width]" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="container" value="$PARAM[container]" />
 						<param name="fallback" value="$PARAM[fallback]" />
 						<param name="progress_overlay" value="$PARAM[progress_overlay]" />
 					</include>
@@ -572,6 +591,7 @@
 							<param name="width" value="$PARAM[item_width]" />
 							<param name="height" value="$PARAM[item_height]" />
 							<param name="art_icon" value="$PARAM[art_icon]" />
+							<param name="container" value="$PARAM[container]" />
 							<param name="fallback" value="$PARAM[fallback]" />
 							<param name="progress_overlay" value="$PARAM[progress_overlay]" />
 						</include>
@@ -582,6 +602,7 @@
 							<param name="width" value="$PARAM[item_width]" />
 							<param name="height" value="$PARAM[item_height]" />
 							<param name="art_icon" value="$PARAM[art_icon]" />
+							<param name="container" value="$PARAM[container]" />
 							<param name="fallback" value="$PARAM[fallback]" />
 							<param name="progress_overlay" value="$PARAM[progress_overlay]" />
 						</include>
@@ -592,6 +613,7 @@
 							<param name="width" value="$PARAM[item_width]" />
 							<param name="height" value="$PARAM[item_height]" />
 							<param name="art_icon" value="$PARAM[art_icon]" />
+							<param name="container" value="$PARAM[container]" />
 							<param name="fallback" value="$PARAM[fallback]" />
 							<param name="progress_overlay" value="$PARAM[progress_overlay]" />
 						</include>
@@ -616,6 +638,7 @@
 							<param name="width" value="$PARAM[focus_width]" />
 							<param name="height" value="$PARAM[focus_height]" />
 							<param name="art_icon" value="$PARAM[art_icon]" />
+							<param name="container" value="$PARAM[container]" />
 							<param name="fallback" value="$PARAM[fallback]" />
 							<param name="progress_overlay" value="$PARAM[progress_overlay]" />
 							<param name="border_visible" value="$PARAM[focus_border_visible]" />
@@ -670,6 +693,7 @@
 					<param name="4x_item_width_plus_focus_width" value="$PARAM[4x_item_width_plus_focus_width]" />
 					<param name="2x_item_width_minus_dropshadow_width" value="$PARAM[2x_item_width_minus_dropshadow_width]" />
 					<param name="art_icon" value="$PARAM[art_icon]" />
+					<param name="container" value="$PARAM[container]" />
 					<param name="fallback" value="$PARAM[fallback]" />
 				</include>
 				<include content="StripView_Static">
@@ -687,6 +711,7 @@
 					<param name="3x_item_width_plus_focus_width" value="$PARAM[3x_item_width_plus_focus_width]" />
 					<param name="2x_item_width_minus_dropshadow_width" value="$PARAM[2x_item_width_minus_dropshadow_width]" />
 					<param name="art_icon" value="$PARAM[art_icon]" />
+					<param name="container" value="$PARAM[container]" />
 					<param name="fallback" value="$PARAM[fallback]" />
 					<param name="focus_border_visible" value="false" />
 					<param name="focus_border_edge" value="0" />
@@ -720,6 +745,7 @@
 				<param name="3x_item_width_plus_focus_width" value="1680" />
 				<param name="4x_item_width_plus_focus_width" value="2080" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
+				<param name="container" value="$PARAM[container]" />
 				<param name="secondary_mask_top" value="180" />
 				<param name="secondary_mask_bottom" value="180" />
 				<animation effect="slide" start="0,0" end="-80,0" time="0" condition="true">Conditional</animation>
@@ -746,6 +772,7 @@
 				<param name="2x_item_width_minus_dropshadow_width" value="1800" />
 				<param name="3x_item_width_plus_focus_width" value="4000" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
+				<param name="container" value="$PARAM[container]" />
 				<param name="secondary_mask_top" value="240" />
 				<param name="secondary_mask_bottom" value="210" />
 				<animation effect="slide" start="0,0" end="-560,0" time="0" condition="true">Conditional</animation>
@@ -774,6 +801,7 @@
 				<param name="3x_item_width_plus_focus_width" value="2250" />
 				<param name="4x_item_width_plus_focus_width" value="2790" />
 				<param name="art_icon" value="$PARAM[art_icon]" />
+				<param name="container" value="$PARAM[container]" />
 				<param name="secondary_mask_top" value="240" />
 				<param name="secondary_mask_bottom" value="210" />
 				<animation effect="slide" start="0,0" end="-435,0" time="0" condition="true">Conditional</animation>

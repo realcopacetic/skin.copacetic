@@ -227,6 +227,7 @@
 		</control>
 	</include>
 
+	<!-- container: the list the slot reads; Container (the focused list) unless a caller names one, as search's preview does -->
 	<include name="ListIcon_Static_Unfocused">
 		<param name="visible" default="true" />
 		<param name="position" default="0" />
@@ -235,12 +236,13 @@
 		<param name="width" default="100%" />
 		<param name="height" default="100%" />
 		<param name="art_icon" default="Thumbnail" />
+		<param name="container" default="Container" />
 		<param name="indicator" default="true" />
 		<param name="fadetime" default="0" />
 		<definition>
 			<control type="group">
 				<visible>$PARAM[visible]</visible>
-				<visible>![String.IsEmpty(Container.ListItemNoWrap($PARAM[position]).Art(thumb)) + String.IsEmpty(Container.ListItemNoWrap($PARAM[position]).Label)] | Window.Is(loginscreen) | Window.Is(videobookmarks) | $EXP[ListView_IsVisible] | $EXP[BillboardView_IsVisible]</visible>
+				<visible>![String.IsEmpty($PARAM[container].ListItemNoWrap($PARAM[position]).Art(thumb)) + String.IsEmpty($PARAM[container].ListItemNoWrap($PARAM[position]).Label)] | Window.Is(loginscreen) | Window.Is(videobookmarks) | $EXP[ListView_IsVisible] | $EXP[BillboardView_IsVisible]</visible>
 				<left>$PARAM[left]</left>
 				<top>$PARAM[top]</top>
 				<width>$PARAM[width]</width>
@@ -255,7 +257,7 @@
 				</include>
 				<nested />
 				<include content="Icon_Component_Indicator" condition="Skin.HasSetting(Secondary_List_Enabled) + $PARAM[indicator]">
-					<param name="visible" value="Container.ListItemNoWrap($PARAM[position]).IsCollection | [Container.ListItemNoWrap($PARAM[position]).HasVideoVersions + !String.IsEqual(Container.FolderName,Container.ListItemNoWrap($PARAM[position]).Title)]" />
+					<param name="visible" value="$PARAM[container].ListItemNoWrap($PARAM[position]).IsCollection | [$PARAM[container].ListItemNoWrap($PARAM[position]).HasVideoVersions + !String.IsEqual(Container.FolderName,$PARAM[container].ListItemNoWrap($PARAM[position]).Title)]" />
 					<param name="width" value="$PARAM[icon_width]" />
 				</include>
 			</control>
@@ -270,11 +272,12 @@
 		<param name="width" default="100%" />
 		<param name="height" default="100%" />
 		<param name="art_icon" default="Thumbnail" />
+		<param name="container" default="Container" />
 		<param name="indicator" default="true" />
 		<definition>
 			<control type="group">
 				<visible>$PARAM[visible]</visible>
-				<visible>![String.IsEmpty(Container.ListItemNoWrap($PARAM[position]).Art(thumb)) + String.IsEmpty(Container.ListItemNoWrap($PARAM[position]).Label)] | Window.Is(loginscreen) | Window.Is(videobookmarks) | $EXP[ListView_IsVisible] | $EXP[BillboardView_IsVisible]</visible>
+				<visible>![String.IsEmpty($PARAM[container].ListItemNoWrap($PARAM[position]).Art(thumb)) + String.IsEmpty($PARAM[container].ListItemNoWrap($PARAM[position]).Label)] | Window.Is(loginscreen) | Window.Is(videobookmarks) | $EXP[ListView_IsVisible] | $EXP[BillboardView_IsVisible]</visible>
 				<left>$PARAM[left]</left>
 				<top>$PARAM[top]</top>
 				<width>$PARAM[width]</width>
@@ -291,7 +294,7 @@
 				</include>
 				<nested />
 				<include content="Icon_Component_Indicator" condition="Skin.HasSetting(Secondary_List_Enabled) + $PARAM[indicator]">
-					<param name="visible" value="Container.ListItemNoWrap($PARAM[position]).IsCollection | [Container.ListItemNoWrap($PARAM[position]).HasVideoVersions + !String.IsEqual(Container.FolderName,Container.ListItemNoWrap($PARAM[position]).Title)]" />
+					<param name="visible" value="$PARAM[container].ListItemNoWrap($PARAM[position]).IsCollection | [$PARAM[container].ListItemNoWrap($PARAM[position]).HasVideoVersions + !String.IsEqual(Container.FolderName,$PARAM[container].ListItemNoWrap($PARAM[position]).Title)]" />
 					<include content="Secondary_List_Scroll_Animation" />
 				</include>
 			</control>
@@ -306,6 +309,7 @@
 		<param name="width" default="100%" />
 		<param name="height" default="100%" />
 		<param name="art_icon" default="Thumbnail" />
+		<param name="container" default="Container" />
 		<param name="indicator" default="true" />
 		<param name="animationeffect" default="fade" />
 		<param name="animationend" default="100" />
@@ -314,7 +318,7 @@
 		<definition>
 			<control type="group">
 				<visible>$PARAM[visible]</visible>
-				<visible>![String.IsEmpty(Container.ListItemNoWrap($PARAM[position]).Art(thumb)) + String.IsEmpty(Container.ListItemNoWrap($PARAM[position]).Label)] | Window.Is(loginscreen) | Window.Is(videobookmarks) | $EXP[ListView_IsVisible] | $EXP[BillboardView_IsVisible]</visible>
+				<visible>![String.IsEmpty($PARAM[container].ListItemNoWrap($PARAM[position]).Art(thumb)) + String.IsEmpty($PARAM[container].ListItemNoWrap($PARAM[position]).Label)] | Window.Is(loginscreen) | Window.Is(videobookmarks) | $EXP[ListView_IsVisible] | $EXP[BillboardView_IsVisible]</visible>
 				<animation effect="$PARAM[animationeffect]" end="$PARAM[animationend]" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="$PARAM[animationcondition]">$PARAM[animationtype]</animation>
 				<left>$PARAM[left]</left>
 				<top>$PARAM[top]</top>
@@ -332,7 +336,7 @@
 				</include>
 				<nested />
 				<include content="Icon_Component_Indicator" condition="Skin.HasSetting(Secondary_List_Enabled) + $PARAM[indicator]">
-					<param name="visible" value="Container.ListItemNoWrap($PARAM[position]).IsCollection | [Container.ListItemNoWrap($PARAM[position]).HasVideoVersions + !String.IsEqual(Container.FolderName,Container.ListItemNoWrap($PARAM[position]).Title)]" />
+					<param name="visible" value="$PARAM[container].ListItemNoWrap($PARAM[position]).IsCollection | [$PARAM[container].ListItemNoWrap($PARAM[position]).HasVideoVersions + !String.IsEqual(Container.FolderName,$PARAM[container].ListItemNoWrap($PARAM[position]).Title)]" />
 					<param name="width" value="$PARAM[icon_width]" />
 				</include>
 			</control>
