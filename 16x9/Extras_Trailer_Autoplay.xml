@@ -52,26 +52,6 @@
     </definition>
   </include>
 
-  <!-- The Focus animation's time is the wait before a trailer; a literal, so one copy per interval. Unfocus resets only the first Focus animation, so a window holds exactly one of them -->
-  <include name="Trailer_Interval_Animation">
-    <param name="time" />
-    <definition>
-      <animation effect="slide" end="0,0" time="$PARAM[time]" reversible="false">Focus</animation>
-    </definition>
-  </include>
-
-  <include name="Trailer_Interval_Animations">
-    <include content="Trailer_Interval_Animation" condition="Skin.String(Trailer_Autoplay_Interval,2)"><param name="time" value="2000" /></include>
-    <include content="Trailer_Interval_Animation" condition="Skin.String(Trailer_Autoplay_Interval,3) | !Skin.String(Trailer_Autoplay_Interval)"><param name="time" value="3000" /></include>
-    <include content="Trailer_Interval_Animation" condition="Skin.String(Trailer_Autoplay_Interval,4)"><param name="time" value="4000" /></include>
-    <include content="Trailer_Interval_Animation" condition="Skin.String(Trailer_Autoplay_Interval,5)"><param name="time" value="5000" /></include>
-    <include content="Trailer_Interval_Animation" condition="Skin.String(Trailer_Autoplay_Interval,6)"><param name="time" value="6000" /></include>
-    <include content="Trailer_Interval_Animation" condition="Skin.String(Trailer_Autoplay_Interval,7)"><param name="time" value="7000" /></include>
-    <include content="Trailer_Interval_Animation" condition="Skin.String(Trailer_Autoplay_Interval,8)"><param name="time" value="8000" /></include>
-    <include content="Trailer_Interval_Animation" condition="Skin.String(Trailer_Autoplay_Interval,9)"><param name="time" value="9000" /></include>
-    <include content="Trailer_Interval_Animation" condition="Skin.String(Trailer_Autoplay_Interval,10)"><param name="time" value="10000" /></include>
-  </include>
-
   <!-- In a view's or row's focused layout. The first button has no animation, so atr_trailer_interrupt runs at the focus -->
   <include name="btn_trailer">
     <param name="enabled" default="true" />
@@ -91,7 +71,7 @@
         <visible allowhiddenfocus="true">false</visible>
         <onfocus condition="[$PARAM[enabled]] + [!Player.HasMedia | $EXP[trailer_zombie]] + !String.IsEqual(Window(home).Property(trailer_state),cancelled) + !System.HasVisibleModalDialog + !String.IsEmpty($PARAM[trailer]) + [!String.StartsWith($PARAM[trailer],plugin://plugin.video.youtube/) | System.AddonIsEnabled(plugin.video.youtube)] + !String.IsEqual(Window(home).Property(trailer_played_item),$PARAM[item])">RunScript(script.copacetic.helper,action=play_trailer,"trailer=$INFO[$PARAM[trailer]]","item=$INFO[$PARAM[item]]","focus_ids=$PARAM[focus_ids]",source_prefix=$PARAM[source_prefix])</onfocus>
         <onfocus condition="[$PARAM[enabled]] + [!Player.HasMedia | $EXP[trailer_zombie]] + !String.IsEqual(Window(home).Property(trailer_state),cancelled) + !System.HasVisibleModalDialog + !String.IsEmpty($PARAM[trailer]) + [!String.StartsWith($PARAM[trailer],plugin://plugin.video.youtube/) | System.AddonIsEnabled(plugin.video.youtube)] + !String.IsEqual(Window(home).Property(trailer_played_item),$PARAM[item])">SetProperty(trailer_played_item,"$INFO[$PARAM[item]]",home)</onfocus><!-- quote the whole k=v token: titles and paths carry commas -->
-        <include content="Trailer_Interval_Animations" />
+        <animation effect="slide" end="0,0" time="Trailer_Delay" reversible="false">Focus</animation><!-- the wait before a trailer; Unfocus resets only a button's first Focus animation -->
       </control>
     </definition>
   </include>

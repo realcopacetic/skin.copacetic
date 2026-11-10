@@ -140,20 +140,8 @@
         </control>
       </include>
       <include content="Multiart_Shown_Latch" condition="$PARAM[include_type_label]" />
-      <include content="$PARAM[template]_Template" condition="Skin.String(Multiart_Interval,3)">
-        <param name="transition_time" value="3000" />
-      </include>
-      <include content="$PARAM[template]_Template" condition="Skin.String(Multiart_Interval,4) | !Skin.String(Multiart_Interval)">
-        <param name="transition_time" value="4000" />
-      </include>
-      <include content="$PARAM[template]_Template" condition="Skin.String(Multiart_Interval,5)">
-        <param name="transition_time" value="5000" />
-      </include>
-      <include content="$PARAM[template]_Template" condition="Skin.String(Multiart_Interval,7)">
-        <param name="transition_time" value="7000" />
-      </include>
-      <include content="$PARAM[template]_Template" condition="Skin.String(Multiart_Interval,10)">
-        <param name="transition_time" value="10000" />
+      <include content="$PARAM[template]_Template">
+        <param name="transition_time" value="Multiart_Pause" />
       </include>
     </definition>
   </include>

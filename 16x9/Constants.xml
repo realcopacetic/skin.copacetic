@@ -20,6 +20,10 @@
 	<constant name="Autoscroll_Time">5000</constant>
 	<constant name="Autoscroll_Repeat">2000</constant>
 
+	<!-- Multiart and trailers, C2's fixed timings: a slide every 5 s (held 4.8 s, then the fadelabel's 0.2 s fade), 2.4 s before a trailer -->
+	<constant name="Multiart_Pause">4800</constant>
+	<constant name="Trailer_Delay">2400</constant>
+
 	<!-- Now playing bars animation-->
 	<constant name="NowPlaying_Bar_1">168</constant>
 	<constant name="NowPlaying_Bar_1_Delay">77</constant>

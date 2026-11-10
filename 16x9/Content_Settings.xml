@@ -632,32 +632,6 @@
 			<onclick>Skin.ToggleSetting(Multiart_Slideshow)</onclick>
 			<selected>Skin.HasSetting(Multiart_Slideshow)</selected>
 		</control>
-		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(15) + Skin.HasSetting(Multiart_Slideshow)" />
-			<param name="info" value="Multiart_Interval" />
-			<param name="label" value="- $LOCALIZE[31427]" />
-			<param name="label2" value="$VAR[skinsettings_Multiart_Interval_Label]" />
-			<param name="previous" value="1523" />
-			<param name="id" value="1524" />
-			<param name="next" value="1530" />
-		</include>
-		<!-- Trailers are turned on per kind of item in View options and per Home row; the delay shows once one is on -->
-		<control type="label" id="1530">
-			<description>Trailer autoplay</description>
-			<include content="skinsettings_Default_Label" />
-			<label>$LOCALIZE[31464]</label>
-			<visible>ControlGroup(9).HasFocus(15) + [$EXP[trailer_include_videos] | $EXP[trailer_include_home]]</visible>
-		</control>
-		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(15) + [$EXP[trailer_include_videos] | $EXP[trailer_include_home]]" />
-			<param name="info" value="Trailer_Autoplay_Interval" />
-			<param name="label" value="- $LOCALIZE[31466]" />
-			<param name="label2" value="$INFO[Skin.String(Trailer_Autoplay_Interval)]" />
-			<param name="category" value="15" />
-			<param name="previous" value="1524" />
-			<param name="id" value="1532" />
-			<param name="next" value="1502" />
-		</include>
 	</include>
 
 	<include name="systeminfo_Left_List_Content">

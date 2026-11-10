@@ -118,8 +118,6 @@
 		<value condition="Control.HasFocus(1502)">$LOCALIZE[31558]</value>
 		<value condition="Control.HasFocus(1513)">$LOCALIZE[31560]</value>
 		<value condition="Control.HasFocus(1523)">$LOCALIZE[31562]</value>
-		<value condition="Control.HasFocus(15240) | Control.HasFocus(15241)">$LOCALIZE[31563]</value>
-		<value condition="Control.HasFocus(15320) | Control.HasFocus(15321)">$LOCALIZE[31566]</value>
 	</variable>
 	<variable name="skinsettings_slideshow_interval_Label">
 		<!-- Slideshow interval: the 5 to 30 minute presets in minutes, any other in seconds, 10 seconds when unset -->
@@ -172,11 +170,6 @@
 		<value condition="Skin.String(GridView_Size,Horizontal)">$LOCALIZE[31415]</value>
 		<value condition="Skin.String(GridView_Size,Small)">$LOCALIZE[31482]</value>
 		<value>$LOCALIZE[31483]</value>
-	</variable>
-	<variable name="skinsettings_Multiart_Interval_Label">
-		<!-- Multiart interval: the seconds each picture shows (3, 4, 5, 7 or 10), 4 when unset -->
-		<value condition="Skin.String(Multiart_Interval)">$INFO[Skin.String(Multiart_Interval)]</value>
-		<value>4</value>
 	</variable>
 	<variable name="skinsettings_like_threshold_Label">
 		<!-- like_threshold / Off -->

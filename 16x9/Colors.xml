@@ -334,16 +334,8 @@
 		<value condition="Control.HasFocus(16070) | Control.HasFocus(16071)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
-	<variable name="skinsettings_Multiart_Interval_Button_Textcolor">
-		<value condition="Control.HasFocus(15240) | Control.HasFocus(15241)">$VAR[Light_Color]</value>
-		<value>$VAR[Unfocused_Color]</value>
-	</variable>
 	<variable name="skinsettings_OSD_Background_Brightness_Button_Textcolor">
 		<value condition="Control.HasFocus(16080) | Control.HasFocus(16081)">$VAR[Light_Color]</value>
-		<value>$VAR[Unfocused_Color]</value>
-	</variable>
-	<variable name="skinsettings_Trailer_Autoplay_Interval_Button_Textcolor">
-		<value condition="Control.HasFocus(15320) | Control.HasFocus(15321)">$VAR[Light_Color]</value>
 		<value>$VAR[Unfocused_Color]</value>
 	</variable>
 	<variable name="skinsettings_script-upnext_Artwork_Button_Textcolor">

@@ -379,29 +379,6 @@
 		<animation effect="slide" end="110" time="0" condition="Skin.String(GridView_Size,Horizontal)">Conditional</animation>
 	</include>
 
-	<include name="skinsettings_Multiart_Interval_Button_Conditions">
-		<onleft condition="Skin.String(Multiart_Interval,10)">Skin.SetString(Multiart_Interval,7)</onleft>
-		<onleft condition="Skin.String(Multiart_Interval,7)">Skin.SetString(Multiart_Interval,5)</onleft>
-		<onleft condition="Skin.String(Multiart_Interval,5)">Skin.SetString(Multiart_Interval,4)</onleft>
-		<onleft condition="Skin.String(Multiart_Interval,4) | !Skin.String(Multiart_Interval)">Skin.SetString(Multiart_Interval,3)</onleft>
-		<onright condition="Skin.String(Multiart_Interval,3)">Skin.SetString(Multiart_Interval,4)</onright>
-		<onright condition="Skin.String(Multiart_Interval,4) | !Skin.String(Multiart_Interval)">Skin.SetString(Multiart_Interval,5)</onright>
-		<onright condition="Skin.String(Multiart_Interval,5)">Skin.SetString(Multiart_Interval,7)</onright>
-		<onright condition="Skin.String(Multiart_Interval,7)">Skin.SetString(Multiart_Interval,10)</onright>
-	</include>
-	<include name="skinsettings_Multiart_Interval_Unfocused_Slides">
-		<animation effect="slide" end="30" time="0" condition="Integer.IsGreater(Skin.String(Multiart_Interval),3)">Conditional</animation>
-		<animation effect="slide" end="30" time="0" condition="Integer.IsGreater(Skin.String(Multiart_Interval),4) | !Skin.String(Multiart_Interval)">Conditional</animation>
-		<animation effect="slide" end="30" time="0" condition="Integer.IsGreater(Skin.String(Multiart_Interval),5)">Conditional</animation>
-		<animation effect="slide" end="30" time="0" condition="Integer.IsGreater(Skin.String(Multiart_Interval),7)">Conditional</animation>
-	</include>
-	<include name="skinsettings_Multiart_Interval_Focused_Slides">
-		<animation effect="slide" end="27" time="0" condition="Integer.IsGreater(Skin.String(Multiart_Interval),3)">Conditional</animation>
-		<animation effect="slide" end="28" time="0" condition="Integer.IsGreater(Skin.String(Multiart_Interval),4) | !Skin.String(Multiart_Interval)">Conditional</animation>
-		<animation effect="slide" end="27" time="0" condition="Integer.IsGreater(Skin.String(Multiart_Interval),5)">Conditional</animation>
-		<animation effect="slide" end="28" time="0" condition="Integer.IsGreater(Skin.String(Multiart_Interval),7)">Conditional</animation>
-	</include>
-
 	<include name="skinsettings_like_threshold_Button_Conditions">
 		<onleft condition="Skin.String(like_threshold,10)">Skin.SetString(like_threshold,9)</onleft>
 		<onleft condition="Skin.String(like_threshold,9)">Skin.SetString(like_threshold,8)</onleft>
@@ -477,45 +454,6 @@
 	<include name="skinsettings_script-upnext_Artwork_Focused_Slides">
 		<animation effect="slide" end="55" time="0" condition="Skin.String(script-upnext_Artwork,Fanart)">Conditional</animation>
 		<animation effect="slide" end="110" time="0" condition="Skin.String(script-upnext_Artwork,Square)">Conditional</animation>
-	</include>
-
-	<include name="skinsettings_Trailer_Autoplay_Interval_Button_Conditions">
-		<onleft condition="Skin.String(Trailer_Autoplay_Interval,10)">Skin.SetString(Trailer_Autoplay_Interval,9)</onleft>
-		<onleft condition="Skin.String(Trailer_Autoplay_Interval,9)">Skin.SetString(Trailer_Autoplay_Interval,8)</onleft>
-		<onleft condition="Skin.String(Trailer_Autoplay_Interval,8)">Skin.SetString(Trailer_Autoplay_Interval,7)</onleft>
-		<onleft condition="Skin.String(Trailer_Autoplay_Interval,7)">Skin.SetString(Trailer_Autoplay_Interval,6)</onleft>
-		<onleft condition="Skin.String(Trailer_Autoplay_Interval,6)">Skin.SetString(Trailer_Autoplay_Interval,5)</onleft>
-		<onleft condition="Skin.String(Trailer_Autoplay_Interval,5)">Skin.SetString(Trailer_Autoplay_Interval,4)</onleft>
-		<onleft condition="Skin.String(Trailer_Autoplay_Interval,4)">Skin.SetString(Trailer_Autoplay_Interval,3)</onleft>
-		<onleft condition="Skin.String(Trailer_Autoplay_Interval,3) | !Skin.String(Trailer_Autoplay_Interval)">Skin.SetString(Trailer_Autoplay_Interval,2)</onleft>
-		<onright condition="Skin.String(Trailer_Autoplay_Interval,2)">Skin.SetString(Trailer_Autoplay_Interval,3)</onright>
-		<onright condition="Skin.String(Trailer_Autoplay_Interval,3) | !Skin.String(Trailer_Autoplay_Interval)">Skin.SetString(Trailer_Autoplay_Interval,4)</onright>
-		<onright condition="Skin.String(Trailer_Autoplay_Interval,4)">Skin.SetString(Trailer_Autoplay_Interval,5)</onright>
-		<onright condition="Skin.String(Trailer_Autoplay_Interval,5)">Skin.SetString(Trailer_Autoplay_Interval,6)</onright>
-		<onright condition="Skin.String(Trailer_Autoplay_Interval,6)">Skin.SetString(Trailer_Autoplay_Interval,7)</onright>
-		<onright condition="Skin.String(Trailer_Autoplay_Interval,7)">Skin.SetString(Trailer_Autoplay_Interval,8)</onright>
-		<onright condition="Skin.String(Trailer_Autoplay_Interval,8)">Skin.SetString(Trailer_Autoplay_Interval,9)</onright>
-		<onright condition="Skin.String(Trailer_Autoplay_Interval,9)">Skin.SetString(Trailer_Autoplay_Interval,10)</onright>
-	</include>
-	<include name="skinsettings_Trailer_Autoplay_Interval_Unfocused_Slides">
-		<animation effect="slide" end="15" time="0" condition="Integer.IsGreater(Skin.String(Trailer_Autoplay_Interval),2)">Conditional</animation>
-		<animation effect="slide" end="15" time="0" condition="Integer.IsGreater(Skin.String(Trailer_Autoplay_Interval),3) | !Skin.String(Trailer_Autoplay_Interval)">Conditional</animation>
-		<animation effect="slide" end="15" time="0" condition="Integer.IsGreater(Skin.String(Trailer_Autoplay_Interval),4)">Conditional</animation>
-		<animation effect="slide" end="15" time="0" condition="Integer.IsGreater(Skin.String(Trailer_Autoplay_Interval),5)">Conditional</animation>
-		<animation effect="slide" end="15" time="0" condition="Integer.IsGreater(Skin.String(Trailer_Autoplay_Interval),6)">Conditional</animation>
-		<animation effect="slide" end="15" time="0" condition="Integer.IsGreater(Skin.String(Trailer_Autoplay_Interval),7)">Conditional</animation>
-		<animation effect="slide" end="15" time="0" condition="Integer.IsGreater(Skin.String(Trailer_Autoplay_Interval),8)">Conditional</animation>
-		<animation effect="slide" end="15" time="0" condition="Integer.IsGreater(Skin.String(Trailer_Autoplay_Interval),9)">Conditional</animation>
-	</include>
-	<include name="skinsettings_Trailer_Autoplay_Interval_Focused_Slides">
-		<animation effect="slide" end="14" time="0" condition="Integer.IsGreater(Skin.String(Trailer_Autoplay_Interval),2)">Conditional</animation>
-		<animation effect="slide" end="14" time="0" condition="Integer.IsGreater(Skin.String(Trailer_Autoplay_Interval),3) | !Skin.String(Trailer_Autoplay_Interval)">Conditional</animation>
-		<animation effect="slide" end="14" time="0" condition="Integer.IsGreater(Skin.String(Trailer_Autoplay_Interval),4)">Conditional</animation>
-		<animation effect="slide" end="13" time="0" condition="Integer.IsGreater(Skin.String(Trailer_Autoplay_Interval),5)">Conditional</animation>
-		<animation effect="slide" end="14" time="0" condition="Integer.IsGreater(Skin.String(Trailer_Autoplay_Interval),6)">Conditional</animation>
-		<animation effect="slide" end="14" time="0" condition="Integer.IsGreater(Skin.String(Trailer_Autoplay_Interval),7)">Conditional</animation>
-		<animation effect="slide" end="14" time="0" condition="Integer.IsGreater(Skin.String(Trailer_Autoplay_Interval),8)">Conditional</animation>
-		<animation effect="slide" end="13" time="0" condition="Integer.IsGreater(Skin.String(Trailer_Autoplay_Interval),9)">Conditional</animation>
 	</include>
 
 	<include name="skinsettings_Time_Widget_Button_Conditions">
