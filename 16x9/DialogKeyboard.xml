@@ -8,12 +8,19 @@
 		<include content="Default_Dialog_Panel_Layout">
 			<param name="visible" value="!Window.IsVisible(shutdownmenu) + !Window.IsVisible(numericinput)" />
 			<param name="panel_edge_top" value="435" />
+			<!-- After the heading, the layout's name: Kodi labels the layout button 309 with it.
+			     With no heading Kodi only hides 311 and leaves its text, so the bar and name follow 311's visibility -->
 			<include content="Breadcrumb_Label">
+				<param name="bar" value="Control.IsVisible(311)" />
+				<param name="info_label" value="$VAR[Copacetic_Divider_Bold] $INFO[Control.GetLabel(309)]" />
+				<param name="info_label_visible" value="Control.IsVisible(311)" />
 				<param name="title_label_id" value="311" />
 				<param name="visible" value="!Window.IsVisible(1180)" />
 			</include>
 			<!-- Over search: an edit's keyboard heading is always "Enter value" (GUIEditControl.cpp:83) -->
 			<include content="Breadcrumb_Label">
+				<param name="info_label" value="$VAR[Copacetic_Divider_Bold] $INFO[Control.GetLabel(309)]" />
+				<param name="info_label_visible" value="true" />
 				<param name="title_label" value="$LOCALIZE[137]" />
 				<param name="title_label_id" value="6309" />
 				<param name="visible" value="Window.IsVisible(1180)" />
@@ -39,6 +46,28 @@
 				</include>
 			</control>
 			<include content="DialogKeyboard_Autocomplete" condition="System.AddonIsEnabled(plugin.program.autocompletion)" />
+			<!-- Word-list layouts (Chinese): Kodi shows 313 and 314 only for those, in the suggestions' place over the field -->
+			<include content="Transparent_Dialog_Panel">
+				<param name="bottom" value="645" />
+				<param name="visible" value="Control.IsVisible(313)" />
+				<include content="Visible_Fade_Animation" />
+			</include>
+			<control type="label" id="313"><!-- the code typed so far -->
+				<left>150</left>
+				<top>225</top>
+				<width>180</width>
+				<height>120</height>
+				<font>Main_Menu_Unfocused</font>
+				<textcolor>$VAR[Accent_Color]</textcolor>
+			</control>
+			<control type="label" id="314"><!-- the candidates, paged by 305 and 306: Kodi fits the list to this width and font -->
+				<left>360</left>
+				<top>225</top>
+				<width>1410</width>
+				<height>120</height>
+				<font>Main_Menu_Unfocused</font>
+				<textcolor>light</textcolor>
+			</control>
 			<control type="edit" id="312">
 				<width>1200</width>
 				<centerleft>50%</centerleft>

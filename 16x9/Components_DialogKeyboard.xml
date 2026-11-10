@@ -499,7 +499,7 @@
 
 	<include name="DialogKeyboard_Autocomplete">
 		<include content="Transparent_Dialog_Panel">
-			<param name="visible" value="Integer.IsGreater(Container(3100).NumItems,0)" />
+			<param name="visible" value="Integer.IsGreater(Container(3100).NumItems,0) + !Control.IsVisible(313)" />
 			<param name="bottom" value="645" />
 			<include content="Visible_Fade_Animation" />
 		</include>
