@@ -37,28 +37,13 @@
       "values": [
         {
           "filter": "equals({art}, Posters)",
-          "condition": "!String.IsEmpty(Container({index}).ListItemNoWrap({range}).Art(keyart)) + Skin.HasSetting(Infoscreens_Prefer_Keyart)",
-          "value": "$INFO[Container({index}).ListItemNoWrap({range}).Art(keyart)]"
-        },
-        {
-          "filter": "equals({art}, Posters)",
           "condition": "!String.IsEmpty(Container({index}).ListItemNoWrap({range}).Art(poster))",
           "value": "$INFO[Container({index}).ListItemNoWrap({range}).Art(poster)]"
         },
         {
           "filter": "equals({art}, Posters)",
-          "condition": "!String.IsEmpty(Container({index}).ListItemNoWrap({range}).Art(tvshow.keyart)) + Skin.HasSetting(Infoscreens_Prefer_Keyart)",
-          "value": "$INFO[Container({index}).ListItemNoWrap({range}).Art(tvshow.keyart)]"
-        },
-        {
-          "filter": "equals({art}, Posters)",
           "condition": "!String.IsEmpty(Container({index}).ListItemNoWrap({range}).Art(tvshow.poster))",
           "value": "$INFO[Container({index}).ListItemNoWrap({range}).Art(tvshow.poster)]"
-        },
-        {
-          "filter": "equals({art}, Fanart) + not equals({search_type}, episodes)",
-          "condition": "Skin.HasSetting(Infoscreens_Prefer_Landscape) + !String.IsEmpty(Container({index}).ListItemNoWrap({range}).Art(landscape))",
-          "value": "$INFO[Container({index}).ListItemNoWrap({range}).Art(landscape)]"
         },
         {
           "filter": "equals({art}, Fanart) + not equals({search_type}, episodes)",

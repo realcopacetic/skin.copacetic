@@ -136,20 +136,6 @@
 			<onclick>Skin.ToggleSetting(Colorise_Flags)</onclick>
 			<selected>Skin.HasSetting(Colorise_Flags)</selected>
 		</control>
-		<control type="radiobutton" id="1023">
-			<description>Prefer keyart to posters on infoscreens</description>
-			<visible>ControlGroup(9).HasFocus(10)</visible>
-			<label>$LOCALIZE[31428]</label>
-			<onclick>Skin.ToggleSetting(Infoscreens_Prefer_Keyart)</onclick>
-			<selected>Skin.HasSetting(Infoscreens_Prefer_Keyart)</selected>
-		</control>
-		<control type="radiobutton" id="1024">
-			<description>Prefer landscape art to fanart on infoscreens</description>
-			<visible>ControlGroup(9).HasFocus(10)</visible>
-			<label>$LOCALIZE[31700]</label>
-			<onclick>Skin.ToggleSetting(Infoscreens_Prefer_Landscape)</onclick>
-			<selected>Skin.HasSetting(Infoscreens_Prefer_Landscape)</selected>
-		</control>
 
 		<!-- Menus -->
 		<control type="button" id="1201">
