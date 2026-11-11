@@ -2,10 +2,25 @@
 <window>
 	<!-- skinsettings: a shell under the helper's editor (copaceticsettings.xml), which draws Skin settings. The condition
 		stops onload running again (LOAD_EVERY_TIME) while that editor is closing -->
+	<onload condition="String.IsEmpty(Window(home).Property(active_editor_name))">ClearProperty(editor_shown)</onload>
 	<onload condition="String.IsEmpty(Window(home).Property(active_editor_name))">RunScript(script.copacetic.helper,action=dynamic_settings_window,host=skinsettings,host_focus=3001,mapping=copacetic1,name=copaceticsettings)</onload>
 	<onunload>ClearProperty(settings_Passthrough,home)</onunload>
 	<backgroundcolor>dark</backgroundcolor>
 	<controls>
 		<include content="Background_Multiart_Settings" />
+		<!-- Cover: Skin settings' frame without its lists, for the moments before the editor opens and after it goes to another
+			settings window. editor_shown (set by the editor, cleared on that way out) keeps it hidden on a Back exit -->
+		<control type="group">
+			<visible>!Window.IsVisible(copaceticsettings.xml) + String.IsEmpty(Window.Property(editor_shown))</visible>
+			<include content="Default_Settings_Panel_Layout">
+				<param name="include_settings_categories" value="false" />
+				<param name="visible" value="true" />
+				<include content="SettingsCategory_Look">
+					<param name="arrows_visible" value="true" />
+					<param name="icon" value="settings/Copacetic_focused_60.png" />
+					<param name="title_label" value="$LOCALIZE[31472]" />
+				</include>
+			</include>
+		</control>
 	</controls>
 </window>

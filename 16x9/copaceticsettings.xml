@@ -2,6 +2,9 @@
 <window>
 	<!-- copaceticsettings: Skin settings, the helper's editor for the copacetic1 mapping, opened by the skinsettings shell.
 		List 100 holds the categories, grouplist 9001 their rows; a modal dialog, so the switcher takes its dialog variant -->
+	<!-- The shell's cover stays hidden from here on, except on the way to another settings window (its host_exit_target) -->
+	<onload>SetProperty(editor_shown,true,skinsettings)</onload>
+	<onunload condition="!String.IsEmpty(Window(home).Property(host_exit_target))">ClearProperty(editor_shown,skinsettings)</onunload>
 	<defaultcontrol always="true">3001</defaultcontrol>
 	<controls>
 		<include content="editor_Description_Hidden" />

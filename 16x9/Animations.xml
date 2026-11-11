@@ -97,6 +97,7 @@
 		</include>
 	</include>
 
+	<!-- No fade between settings windows: host_exit_target is the Skin settings editor (a dialog) on its way to one -->
 	<include name="Settings_WindowOpenClose_Fade_Delayed_Animation">
 		<include content="fade_animation">
 			<param name="type" value="WindowOpen" />
@@ -108,7 +109,7 @@
 		<include content="fade_animation">
 			<param name="type" value="WindowClose" />
 			<param name="time" value="0.5x" />
-			<param name="condition" value="![Window.Next(skinsettings) | Window.Next(interfacesettings) | Window.Next(mediasettings) | Window.Next(playersettings) | Window.Next(systemsettings) | Window.Next(servicesettings) | Window.Next(gamesettings) | Window.Next(pvrsettings) | Window.Next(profiles) | Window.Next(systeminfo) | Window.Next(filemanager)]" />
+			<param name="condition" value="![Window.Next(skinsettings) | Window.Next(interfacesettings) | Window.Next(mediasettings) | Window.Next(playersettings) | Window.Next(systemsettings) | Window.Next(servicesettings) | Window.Next(gamesettings) | Window.Next(pvrsettings) | Window.Next(profiles) | Window.Next(systeminfo) | Window.Next(filemanager)] + String.IsEmpty(Window(home).Property(host_exit_target))" />
 			<param name="reversible" value="true" />
 		</include>
 	</include>
@@ -124,7 +125,7 @@
 		<include content="fade_animation">
 			<param name="type" value="WindowClose" />
 			<param name="time" value="0.5x" />
-			<param name="condition" value="![Window.Next(skinsettings) | Window.Next(interfacesettings) | Window.Next(mediasettings) | Window.Next(playersettings) | Window.Next(systemsettings) | Window.Next(servicesettings) | Window.Next(gamesettings) | Window.Next(pvrsettings) | Window.Next(profiles) | Window.Next(systeminfo) | Window.Next(filemanager)]" />
+			<param name="condition" value="![Window.Next(skinsettings) | Window.Next(interfacesettings) | Window.Next(mediasettings) | Window.Next(playersettings) | Window.Next(systemsettings) | Window.Next(servicesettings) | Window.Next(gamesettings) | Window.Next(pvrsettings) | Window.Next(profiles) | Window.Next(systeminfo) | Window.Next(filemanager)] + String.IsEmpty(Window(home).Property(host_exit_target))" />
 			<param name="reversible" value="true" />
 		</include>
 	</include>

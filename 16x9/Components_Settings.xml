@@ -400,7 +400,45 @@
 		<param name="iconborder" default="false" />
 		<param name="title_label" default="$VAR[Title_Breadcrumb_Label]" />
 		<definition>
+			<include content="SettingsCategory_Look">
+				<param name="icon" value="$PARAM[icon]" />
+				<param name="title_label" value="$PARAM[title_label]" />
+			</include>
+			<!-- Hidden list -->
+			<control type="grouplist" id="3000">
+				<visible allowhiddenfocus="true">false</visible>
+				<top>60</top>
+				<left>15</left>
+				<width>60</width>
+				<height>60</height>
+				<orientation>vertical</orientation>
+				<!-- In a dialog 3001 is alone, so the grouplist hands it these Up and Down: a modal dialog can't change windows,
+					so they only record the window the helper opens once it has closed the editor -->
+				<onup condition="$PARAM[dialog]">SetProperty(host_exit_target,filemanager,home)</onup>
+				<ondown condition="$PARAM[dialog]">SetProperty(host_exit_target,interfacesettings,home)</ondown>
+				<onleft condition="!$PARAM[alt_right_condition]">$PARAM[right_list_id]</onleft>
+				<onleft condition="$PARAM[alt_right_condition]">$PARAM[alt_right_id]</onleft>
+				<onright>$PARAM[left_list_id]</onright>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<scrolltime>0</scrolltime>
+				<control type="button" id="3001">
+					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
+					<onfocus condition="!$PARAM[dialog] + !Window.Is(skinsettings)">ReplaceWindowAndFocus(skinsettings,3001)</onfocus>
+				</control>
+				<include content="SettingsCategory_Windows" condition="!$PARAM[dialog]" />
+			</control>
+		</definition>
+	</include>
+
+	<!-- The switcher's look without its buttons: also the Skin settings shell's cover, which nothing can focus -->
+	<include name="SettingsCategory_Look">
+		<param name="arrows_visible" default="ControlGroup(3000).HasFocus" />
+		<param name="icon" default="$VAR[SettingsCategory_Icon_Texture]" />
+		<param name="title_label" default="$VAR[Title_Breadcrumb_Label]" />
+		<definition>
 			<include content="Breadcrumb_Label">
+				<param name="info_label" value="" /><!-- never shown here (info_label_visible): spares its variable's conditions -->
 				<param name="left" value="90" />
 				<param name="title_label" value="$PARAM[title_label]" />
 				<param name="visible" value="!Window.IsVisible(textviewer)" />
@@ -408,7 +446,7 @@
 			<!-- Arrows when focused -->
 			<control type="group">
 				<animation effect="zoom" center="auto" start="112" end="100" time="Default_Transition_0.5x" tween="back" easing="in" condition="ControlGroup(3000).HasFocus">Conditional</animation>
-				<visible>ControlGroup(3000).HasFocus</visible>
+				<visible>$PARAM[arrows_visible]</visible>
 				<left>30</left>
 				<width>60</width>
 				<top>30</top>
@@ -435,30 +473,6 @@
 				<width>60</width>
 				<height>60</height>
 				<texture colordiffuse="light">$PARAM[icon]</texture>
-			</control>
-			<!-- Hidden list -->
-			<control type="grouplist" id="3000">
-				<visible allowhiddenfocus="true">false</visible>
-				<top>60</top>
-				<left>15</left>
-				<width>60</width>
-				<height>60</height>
-				<orientation>vertical</orientation>
-				<!-- In a dialog 3001 is alone, so the grouplist hands it these Up and Down: a modal dialog can't change windows,
-					so they only record the window the helper opens once it has closed the editor -->
-				<onup condition="$PARAM[dialog]">SetProperty(host_exit_target,filemanager,home)</onup>
-				<ondown condition="$PARAM[dialog]">SetProperty(host_exit_target,interfacesettings,home)</ondown>
-				<onleft condition="!$PARAM[alt_right_condition]">$PARAM[right_list_id]</onleft>
-				<onleft condition="$PARAM[alt_right_condition]">$PARAM[alt_right_id]</onleft>
-				<onright>$PARAM[left_list_id]</onright>
-				<align>center</align>
-				<itemgap>0</itemgap>
-				<scrolltime>0</scrolltime>
-				<control type="button" id="3001">
-					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
-					<onfocus condition="!$PARAM[dialog] + !Window.Is(skinsettings)">ReplaceWindowAndFocus(skinsettings,3001)</onfocus>
-				</control>
-				<include content="SettingsCategory_Windows" condition="!$PARAM[dialog]" />
 			</control>
 		</definition>
 	</include>
