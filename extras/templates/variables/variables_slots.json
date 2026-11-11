@@ -2,12 +2,12 @@
   "mapping": "none",
   "variables": {
     "texture_{texture_prefix}_fanart{range}": {
-      "note": "Billboard (slot 0) shows a program add-on's fanart before its icon, as it always has, so the thumb row skips it there.",
+      "note": "Billboard (slot 0) shows a program add-on's fanart before its icon, as it always has, so the thumb row skips it there; List's Background shows an album's fanart, not its cover.",
       "templates_from": [ "regions" ],
       "range": { "start": -3, "end": 3 },
       "filter": "In({range}, {slot_range}) + not In({range}, [-3, 3])",
       "values": [
-        { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(thumb)) + [String.IsEqual({listitem}({range}).DBType,episode) | String.IsEqual({listitem}({range}).DBType,album) | [Container.Content(addons) + !$EXP[layout_billboard_visible_programs]] | Container.Content(videos)]", "value": "$INFO[{listitem}({range}).Art(thumb)]" },
+        { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(thumb)) + [String.IsEqual({listitem}({range}).DBType,episode) | [String.IsEqual({listitem}({range}).DBType,album) + !$EXP[ListView_Display_IsBackground_Albums]] | [Container.Content(addons) + !$EXP[layout_billboard_visible_programs]] | Container.Content(videos)]", "value": "$INFO[{listitem}({range}).Art(thumb)]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(landscape)) + $EXP[art_landscape_{art_context}]", "value": "$INFO[{listitem}({range}).Art(landscape)]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(fanart))", "value": "$INFO[{listitem}({range}).Art(fanart)]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.landscape)) + $EXP[art_landscape_{art_context}]", "value": "$INFO[{listitem}({range}).Art(tvshow.landscape)]" },
@@ -44,7 +44,7 @@
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(square))", "value": "$INFO[{listitem}({range}).Art(square)]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(snap))", "value": "$INFO[{listitem}({range}).Art(snap)]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(icon)) + $EXP[Container_Programs_IsFolders]", "value": "$INFO[{listitem}({range}).Art(icon)]" },
-        { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(thumb)) + [String.IsEqual({listitem}({range}).DBType,artist) | String.IsEqual({listitem}({range}).DBType,episode) | String.IsEqual({listitem}({range}).DBType,album) | Container.Content(addons) | Container.Content(videos)]", "value": "$INFO[{listitem}({range}).Art(thumb)]" },
+        { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(thumb)) + [String.IsEqual({listitem}({range}).DBType,artist) | String.IsEqual({listitem}({range}).DBType,episode) | String.IsEqual({listitem}({range}).DBType,album) | String.IsEqual({listitem}({range}).DBType,song) | Container.Content(addons) | Container.Content(videos)]", "value": "$INFO[{listitem}({range}).Art(thumb)]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Icon) + [[Container.Content(addons) + !Window.IsVisible(programs)] | Container.Content(images)]", "value": "$INFO[{listitem}({range}).Icon]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(landscape)) + $EXP[art_landscape_{art_context}]", "value": "$INFO[{listitem}({range}).Art(landscape)]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(fanart))", "value": "$INFO[{listitem}({range}).Art(fanart)]" },

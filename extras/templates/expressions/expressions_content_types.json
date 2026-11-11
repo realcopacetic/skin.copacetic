@@ -88,6 +88,32 @@
         }
       ]
     },
+    "display_{item}_include_list_{window}": {
+      "note": "Include conditions: some content type in this window shows List with this art (vue_list_*): Background, or the Thumbnails shape its kind of item takes (Containers_Posters, Containers_Square, 16:9 for episodes and videos). Untyped content shows the icon, which always loads.",
+      "items": [ "background", "posters", "square", "landscape" ],
+      "rules": [
+        {
+          "condition": "equals({layout}, list) + equals({display}, background) + equals({item}, background)",
+          "type": "assign",
+          "value": "true"
+        },
+        {
+          "condition": "equals({layout}, list) + equals({display}, thumbnails) + equals({item}, posters) + In({content_type}, [movies, sets, tvshows, seasons, program_folders, program_files])",
+          "type": "assign",
+          "value": "true"
+        },
+        {
+          "condition": "equals({layout}, list) + equals({display}, thumbnails) + equals({item}, square) + In({content_type}, [artists, albums, songs, addons, program_addons, images])",
+          "type": "assign",
+          "value": "true"
+        },
+        {
+          "condition": "equals({layout}, list) + equals({display}, thumbnails) + equals({item}, landscape) + In({content_type}, [episodes, videos])",
+          "type": "assign",
+          "value": "true"
+        }
+      ]
+    },
     "display_{item}_visible": {
       "items": [ "background", "thumbnails", "posters", "fanart", "square" ],
       "rules": [
