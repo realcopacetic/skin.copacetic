@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- C1's copy of the parts of C2's secondary.xml that Strip's embedded list uses, under C2's names so a C2 fix diffs across.
-		C1 has no jumpbar, so no entry hold or double tap; its ids 4100-4105 still serve the other views' lists, so these buttons are 4107-4110 -->
+		C1 has no jumpbar, so no entry hold or double tap; its ids 4100-4105 still serve the other views' lists, so these buttons are 4107-4111 -->
 
 	<variable name="texture_probe_base_secondary">
 		<value condition="$EXP[display_fanart_visible]">$VAR[texture_secondary_fanart_base0]</value>
@@ -43,7 +43,11 @@
 						<param name="trailer" value="Container(3100).ListItem.Trailer" />
 					</include>
 				</control>
+				<include content="img_layout_preload"><!-- C1: warms the list's art while blk_secondary_art is down; the cursor item draws this layout focused or not -->
+					<param name="texture" value="$VAR[texture_probe_secondary]" />
+				</include>
 			</focusedlayout>
+			<onfocus condition="!Control.IsVisible(6315)">SetFocus(4111)</onfocus><!-- C1: focus that skipped the entry (the menu key's return) goes round through it, so the region scrolls to the list's art -->
 			<include content="atr_navigation_secondary_vertical" />
 			<include content="Default_Scrolltime" />
 			<include content="blk_layouts" />
@@ -65,16 +69,14 @@
 		<onback condition="!$EXP[trailer_playing]">4107</onback><!-- bare id so Back is consumed: back to the view through the relay, never up a folder -->
 	</include>
 
-	<include name="atr_secondary_window_reset"><!-- a window exit never unfocuses 3100, so tpl_focus_region stays scrolled to the secondary art: park focus inside the primary art -->
-		<onunload condition="Control.HasFocus(3100) + $EXP[StripView_Media_IsVisible]">SetFocus(4109)</onunload>
-	</include>
-
 	<include name="blk_secondary_art">
 		<param name="height" default="720" />
 		<param name="id" default="3100" />
 		<param name="width" default="480" />
 		<definition>
-			<control type="group">
+			<control type="group" id="6315"><!-- C1: up only while the list or a relay holds focus. Hidden, it drops out of the region, which then
+				snaps back to the view's art however focus left (menu, a rail's click, a new listing, the mouse, a window exit) -->
+				<visible>Control.HasFocus($PARAM[id]) | Control.HasFocus(4107) | Control.HasFocus(4108) | Control.HasFocus(4110) | Control.HasFocus(4111)</visible>
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
 				<include content="tpl_art_focused"><!-- static -->
@@ -103,18 +105,22 @@
 	</include>
 
 	<include name="btn_secondary_redirect">
-		<control type="button" id="4107"><!-- C2's 4100: first in the focus region, so focusing it scrolls the region back; C1 resets the list on the way, as 4101 -->
+		<control type="button" id="4107"><!-- C2's 4100: first in the focus region, so focusing it scrolls the region back. C1, as 4101: it holds
+			focus for the scroll (onfocus runs as its Focus animation ends), then resets the list out of sight -->
 			<visible allowhiddenfocus="true">false</visible>
 			<onfocus>SetFocus(3100,0,absolute)</onfocus>
 			<onfocus>SetFocus(50)</onfocus>
-		</control>
-		<control type="button" id="4109"><!-- C2's 4102: 4107 without the relay, for window exit: 4107's SetFocus(50) would run in the next window -->
-			<visible allowhiddenfocus="true">false</visible>
+			<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Focus</animation>
 		</control>
 		<control type="button" id="4110"><!-- C1: 4107 for Down off the list's last item, which goes on to the scrollbar, as 4103 -->
 			<visible allowhiddenfocus="true">false</visible>
 			<onfocus>SetFocus(3100,0,absolute)</onfocus>
 			<onfocus>SetFocus(4013)</onfocus>
+			<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Focus</animation>
+		</control>
+		<control type="button" id="4111"><!-- C1: the entry's first step. Its focus brings blk_secondary_art up a frame early, so 4108 can take focus and scroll the region to it -->
+			<visible allowhiddenfocus="true">false</visible>
+			<onfocus>SetFocus(4108)</onfocus>
 		</control>
 	</include>
 

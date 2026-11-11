@@ -56,8 +56,8 @@ BUTTONS
 410X          Set focus away from secondary list
 4107          Strip's embedded list: back to the view through the primary art in the focus region, which scrolls back (C2's 4100)
 4108          Strip's embedded list: entry, last in the focus region, which scrolls to the list's art (C2's 4101)
-4109          Strip's embedded list: window exit anchor in the primary art (C2's 4102)
 4110          Strip's embedded list: Down off its last item, to the scrollbar through the primary art
+4111          Strip's embedded list: entry's first step, in the primary art, so 4108 is up before it takes focus
 4201          Global search button
 4300          Set focus to screensaver
 
@@ -95,6 +95,7 @@ CHECKERS
 6310          Clearlogo empty
 6311-6312     tpl_art_transition's default texture probes, landing and base art (C2's 6301-6302; no caller yet)
 6313-6314     Strip's embedded list texture probes, landing and base art (prb_texture_secondary; C2's 6303-6304)
+6315          Strip's embedded list art in the focus region (blk_secondary_art): up while 3100 or its relays hold focus; 3100's onfocus reads it
 632XX         Breadcrumb title of an info screen rail (6 + its index, generated) or a search rail (6 + its id)
 63XXX(X)      Details clearlogo sized by 9300 (63 + view id 501, 502, 504, or a Home row or info screen rail id)
 635X          GridView shadow checkers

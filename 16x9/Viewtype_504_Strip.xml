@@ -22,7 +22,7 @@
 	</include>
 
 	<!-- The media windows' Strip: C2's vue_strip (strip.xml) in the display's wrapper, which hides it while the listing changes
-		and fades it for a trailer. secondary: the window's embedded list slides through the focused berth -->
+		and fades it for a trailer. secondary: the window's embedded list draws its art in the focus region, below the view's -->
 	<include name="StripView_Media">
 		<param name="secondary" default="false" />
 		<param name="window" />
