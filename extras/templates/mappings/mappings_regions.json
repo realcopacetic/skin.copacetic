@@ -1,0 +1,17 @@
+{
+  "regions": {
+    "mode": "static",
+    "items": [ "primary" ],
+    "placeholders": { "key": "region" },
+    "tokens": {
+      "art_context": "visible",
+      "texture_prefix": "{region}"
+    },
+    "metadata": {
+      "primary": {
+        "listitem": "ListItem",
+        "slot_range": "[-3, -2, -1, 0, 1, 2, 3]"
+      }
+    }
+  }
+}

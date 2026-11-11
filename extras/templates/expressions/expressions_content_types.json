@@ -113,12 +113,32 @@
         }
       ]
     },
+    "art_keyart_visible": {
+      "note": "The visible window's art_keyart_visible_{window}, for art shared by every media window (texture_primary_*).",
+      "rules": [
+        {
+          "condition": "equals({art_keyart}, true) + In({layout}, [list, showcase, strip, grid])",
+          "type": "append",
+          "value": "[{@windows:{window}.window_visible} + $EXP[art_keyart_visible_{window}]]"
+        }
+      ]
+    },
     "art_keyart_visible_{window}": {
       "rules": [
         {
           "condition": "equals({art_keyart}, true) + In({layout}, [list, showcase, strip, grid])",
           "type": "append",
           "value": "{condition}"
+        }
+      ]
+    },
+    "art_landscape_visible": {
+      "note": "The visible window's art_landscape_visible_{window}, for art shared by every media window (texture_primary_*).",
+      "rules": [
+        {
+          "condition": "equals({art_landscape}, true) + In({layout}, [strip, grid])",
+          "type": "append",
+          "value": "[{@windows:{window}.window_visible} + $EXP[art_landscape_visible_{window}]]"
         }
       ]
     },
