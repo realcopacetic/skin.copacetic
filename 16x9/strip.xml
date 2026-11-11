@@ -36,11 +36,11 @@
 		</definition>
 	</include>
 
-	<!-- Positions are with the slots left of the focus (left_visible, one condition: the media view's details off); without them the whole art
+	<!-- Positions are with the slots left of the focus (left_visible: the media view's details off); without them the whole art
 		slides 320 right. ladders_visible: the transition ladders' visible, the view's own in the media view -->
 	<include name="vue_strip_fanart">
 		<control type="group">
-			<animation effect="slide" end="320,0" time="0" condition="!$PARAM[left_visible]">Conditional</animation>
+			<animation effect="slide" end="320,0" time="0" condition="![$PARAM[left_visible]]">Conditional</animation>
 			<include content="tpl_strip_art">
 				<param name="art" value="fanart" />
 				<param name="centerx" value="560" />
@@ -106,7 +106,7 @@
 	<!-- As vue_strip_fanart: without the slots left of the focus the whole art slides 75 right -->
 	<include name="vue_strip_square">
 		<control type="group">
-			<animation effect="slide" end="75,0" time="0" condition="!$PARAM[left_visible]">Conditional</animation>
+			<animation effect="slide" end="75,0" time="0" condition="![$PARAM[left_visible]]">Conditional</animation>
 			<include content="tpl_strip_art">
 				<param name="art" value="square" />
 				<param name="centerx" value="315" />
