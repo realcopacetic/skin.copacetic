@@ -2,6 +2,7 @@
 <includes>
 	<include file="Actions.xml" />
 	<include file="Animations.xml" />
+	<include file="art.xml" />
 	<include file="Buttons_Infoscreen_Path_Tracer.xml" />
 	<include file="Colors.xml" />
 	<include file="Components_Buttons.xml" />
@@ -33,7 +34,9 @@
 	<include file="Navigation.xml" />
 	<include file="Notifications.xml" />
 	<include file="OnLoadUnload.xml" />
+	<include file="primary.xml" />
 	<include file="Scrollbars.xml" />
+	<include file="strip.xml" />
 	<!-- Built by the helper from extras/templates; until the first build Kodi only logs them as missing -->
 	<include file="script-copacetic-helper_expressions.xml" />
 	<include file="script-copacetic-helper_includes.xml" />

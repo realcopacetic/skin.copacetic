@@ -45,6 +45,17 @@
         }
       }
     },
+    "display_{item}_include_strip_{window}": {
+      "note": "Include conditions: some content type in this window shows Strip with this art (vue_strip), so only that art's vue loads.",
+      "items": [ "posters", "fanart", "square" ],
+      "rules": [
+        {
+          "condition": "equals({layout}, strip) + equals({display}, {item})",
+          "type": "assign",
+          "value": "true"
+        }
+      ]
+    },
     "display_{item}_visible": {
       "items": [ "background", "thumbnails", "posters", "fanart", "square" ],
       "rules": [

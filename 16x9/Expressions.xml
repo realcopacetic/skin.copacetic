@@ -78,6 +78,11 @@
 	<expression name="Content_Previous">Control.IsVisible(5001)</expression>
 	<expression name="Content_Switching">$EXP[Content_Switching_Base] + !$EXP[Content_Switching_Exclusions_StripView]</expression>
 	<expression name="Content_Switching_Base">[Control.IsVisible(5001) | Control.IsVisible(5002)] + [!String.IsEqual(Container.NumItems,1) | Window.Is(movieinformation) | Window.Is(musicinformation) | Window.Is(songinformation) | Window.Is(addoninformation)] + !Window.IsVisible(managevideoversions) + !Window.IsVisible(managevideoextras)</expression>
+	<!-- C2's scroll names over C1's latches (5001 previous, 5002 next) for the views on C2's code; the either-way one keeps
+		Content_Switching_Base's guards, so a one-item list's wrap onto itself is no scroll -->
+	<expression name="container_scrolling_primary">$EXP[Content_Switching_Base]</expression>
+	<expression name="container_scrolling_primary_next">Control.IsVisible(5002)</expression>
+	<expression name="container_scrolling_primary_prev">Control.IsVisible(5001)</expression>
 	<expression name="Content_Switching_Exclusions_StripView">[$EXP[StripView_Media_IsVisible] + $EXP[StripView_Details_Off]] | $EXP[StripView_Widget_Rail_IsVisible]</expression>
 
 	<!-- Container Transitions -->

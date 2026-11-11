@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- C1's copy of the parts of C2's art.xml that its views use, under C2's names so a C2 fix diffs across.
+		C1's look: no diffuses, view masks, blur bands, now-playing marks or add-on plate, and C1's timing constants -->
+
+	<include name="tpl_art_focused">
+		<param name="multiart" default="false" />
+		<param name="multiart_register" default="3400" />
+		<param name="position" default="0" />
+		<param name="visible" default="true" />
+		<definition>
+			<include content="grp_icon">
+				<param name="height" value="$PARAM[height]" />
+				<param name="id" value="$PARAM[id]" />
+				<param name="left" value="$PARAM[left]" />
+				<param name="position" value="$PARAM[position]" />
+				<param name="top" value="$PARAM[top]" />
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="width" value="$PARAM[width]" />
+				<include content="img_art_base">
+					<param name="multiart" value="$PARAM[multiart]" />
+					<param name="position" value="$PARAM[position]" />
+					<param name="texture_stub" value="$PARAM[texture_stub]" />
+				</include>
+				<include content="img_multiart_focused" condition="$EXP[multiart_window]">
+					<param name="register" value="$PARAM[multiart_register]" />
+					<param name="visible" value="[$PARAM[multiart]] + String.StartsWith(Container(9300).ListItem.Property(current),$PARAM[id]/)" /><!-- a switch's first frame would draw the old container's slide -->
+				</include>
+				<nested />
+			</include>
+		</definition>
+	</include>
+
+	<include name="img_art_base"><!-- Default base image for tpl_art_focused -->
+		<param name="multiart" default="false" />
+		<param name="position" default="0" />
+		<definition>
+			<include content="img_art">
+				<param name="texture" value="$VAR[texture_$PARAM[texture_stub]$PARAM[position]]" />
+				<animation effect="fadediffuse" end="80000000" time="Default_Transition_1x" delay="Default_Transition_4x" condition="!String.IsEmpty(Container(9300).ListItem.Art(multiart)) + [$PARAM[multiart]]" reversible="false">Conditional</animation><!-- Delay matches img_multiart_focused's fadetime, so the base stays opaque until the overlay is -->
+			</include>
+		</definition>
+	</include>
+
+	<include name="tpl_art_animated">
+		<param name="ani_condition" default="false" />
+		<param name="ani_delay" default="0" />
+		<param name="ani_effect" default="fade" />
+		<param name="ani_end" default="100" />
+		<param name="ani_time" default="Default_Transition_1x" />
+		<param name="ani_type" default="Conditional" />
+		<param name="position" default="0" />
+		<param name="visible" default="true" />
+		<definition>
+			<include content="tpl_art_unfocused">
+				<param name="fadetime" value="$PARAM[fadetime]" />
+				<param name="height" value="$PARAM[height]" />
+				<param name="id" value="$PARAM[id]" />
+				<param name="left" value="$PARAM[left]" />
+				<param name="position" value="$PARAM[position]" />
+				<param name="texture_stub" value="$PARAM[texture_stub]" />
+				<param name="top" value="$PARAM[top]" />
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="width" value="$PARAM[width]" />
+				<animation effect="$PARAM[ani_effect]" end="$PARAM[ani_end]" time="$PARAM[ani_time]" delay="$PARAM[ani_delay]" tween="sine" easing="inout" reversible="false" condition="$PARAM[ani_condition]">$PARAM[ani_type]</animation>
+				<nested />
+			</include>
+		</definition>
+	</include>
+
+	<include name="tpl_art_unfocused">
+		<param name="position" default="0" />
+		<param name="visible" default="true" />
+		<definition>
+			<include content="grp_icon">
+				<param name="height" value="$PARAM[height]" />
+				<param name="id" value="$PARAM[id]" />
+				<param name="left" value="$PARAM[left]" />
+				<param name="position" value="$PARAM[position]" />
+				<param name="top" value="$PARAM[top]" />
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="width" value="$PARAM[width]" />
+				<include content="img_art">
+					<param name="fadetime" value="$PARAM[fadetime]" />
+					<param name="texture" value="$VAR[texture_$PARAM[texture_stub]$PARAM[position]]" />
+				</include>
+				<nested />
+			</include>
+		</definition>
+	</include>
+
+	<include name="efx_ladder_prev"><!-- Prev transition ladder shows unless scrolling next; the LastScroll guard stops a
+		fast direction reversal flashing it -->
+		<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="![Container($PARAM[id]).OnPrevious | [!Container($PARAM[id]).OnNext + [!$EXP[container_scrolling_$PARAM[region]_next] | !String.IsEqual(Window(home).Property(LastScroll),Next)]]]">Conditional</animation>
+	</include>
+
+	<include name="efx_ladder_next"><!-- Mirror of efx_ladder_prev -->
+		<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="![Container($PARAM[id]).OnNext | [!Container($PARAM[id]).OnPrevious + [!$EXP[container_scrolling_$PARAM[region]_prev] | !String.IsEqual(Window(home).Property(LastScroll),Prev)]]]">Conditional</animation>
+	</include>
+
+	<include name="grp_art_anchor"><!-- Focused art anchor. No id: C2's helper reads 6300's rect, C1 reads nothing, and each art would repeat it -->
+		<param name="ani_visible" default="Visible_Fade_Animation" />
+		<definition>
+			<control type="group">
+				<visible>$PARAM[visible]</visible>
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<include content="$PARAM[ani_visible]" /><!-- C1's intros are Visible animations: they need no condition -->
+				<nested />
+			</control>
+		</definition>
+	</include>
+
+	<include name="img_multiart_unfocused">
+		<param name="flipx" default="false" />
+		<param name="flipy" default="false" />
+		<param name="register" default="3400" />
+		<definition>
+			<include content="img_art">
+				<param name="fadetime" value="0" />
+				<param name="flipx" value="$PARAM[flipx]" />
+				<param name="flipy" value="$PARAM[flipy]" />
+				<param name="texture" value="$VAR[texture_multiart_$PARAM[register]]" />
+				<param name="visible" value="$PARAM[visible]" />
+				<include content="fade_animation">
+					<param name="time" value="1x" />
+					<param name="type" value="Hidden" />
+				</include>
+				<nested />
+			</include>
+		</definition>
+	</include>
+
+	<include name="tpl_focus_region"><!-- A grouplist the size of the focused berth: its own scrolling stays inside it, an animated child's doesn't (clipping law) -->
+		<param name="height" default="720" />
+		<param name="left" default="0" />
+		<param name="orientation" default="vertical" />
+		<param name="top" default="0" />
+		<param name="visible" default="true" />
+		<param name="width" default="480" />
+		<definition>
+			<control type="grouplist">
+				<visible>$PARAM[visible]</visible>
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<orientation>$PARAM[orientation]</orientation>
+				<itemgap>0</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<include content="Default_Scrolltime" />
+				<nested />
+			</control>
+		</definition>
+	</include>
+
+	<include name="grp_icon">
+		<control type="group">
+			<visible>$PARAM[visible]</visible>
+			<visible>!String.IsEmpty(Container($PARAM[id]).ListItemNoWrap($PARAM[position]).Label) | !String.IsEmpty(Container($PARAM[id]).ListItemNoWrap($PARAM[position]).Art(thumb))</visible><!-- a slot with no item stays hidden; add-on info's screenshots have a thumb and no label -->
+			<left>$PARAM[left]</left>
+			<top>$PARAM[top]</top>
+			<width>$PARAM[width]</width>
+			<height>$PARAM[height]</height>
+			<nested />
+		</control>
+	</include>
+
+	<include name="img_multiart_focused">
+		<param name="register" default="3400" />
+		<definition>
+			<include content="img_art">
+				<param name="fadetime" value="Default_Transition_4x" />
+				<param name="texture" value="$VAR[texture_multiart_$PARAM[register]]" />
+				<param name="visible" value="$PARAM[visible]" />
+				<include content="Visible_Fade_Animation" />
+				<nested />
+			</include>
+		</definition>
+	</include>
+
+	<include name="img_art">
+		<param name="fadetime" default="0" />
+		<param name="flipx" default="false" />
+		<param name="flipy" default="false" />
+		<param name="visible" default="true" />
+		<definition>
+			<control type="image">
+				<visible>$PARAM[visible]</visible>
+				<aspectratio align="center" aligny="center">scale</aspectratio>
+				<texture background="true" flipx="$PARAM[flipx]" flipy="$PARAM[flipy]">$PARAM[texture]</texture>
+				<fadetime>$PARAM[fadetime]</fadetime>
+				<nested />
+			</control>
+		</definition>
+	</include>
+
+</includes>

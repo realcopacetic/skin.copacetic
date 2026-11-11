@@ -98,13 +98,23 @@
 		<onfocus condition="$EXP[folder_changed]">SetProperty(folder_path,$ESCINFO[Container.FolderPath],home)</onfocus><!-- escaped: plugin paths can carry commas -->
 	</include>
 
+	<include name="atr_last_scroll">
+		<!-- The last move's direction: the transition ladders' reversal guard (efx_ladder_prev, efx_ladder_next) -->
+		<onfocus condition="Container($PARAM[id]).OnPrevious">SetProperty(LastScroll,Prev,home)</onfocus>
+		<onfocus condition="Container($PARAM[id]).OnNext">SetProperty(LastScroll,Next,home)</onfocus>
+	</include>
+
 	<include name="HiddenFocusButton">
 		<param name="folderwatch" default="false" />
 		<param name="id" default="50" />
+		<param name="ladders" default="false" /><!-- true in a view whose transition ladders read LastScroll -->
 		<param name="widget" default="false" />
 		<definition>
 			<control type="button">
 				<visible allowhiddenfocus="true">false</visible>
+				<include content="atr_last_scroll" condition="$PARAM[ladders]">
+					<param name="id" value="$PARAM[id]" />
+				</include>
 				<include content="atr_folderwatch" condition="$PARAM[folderwatch]" />
 				<!-- Grid position -->
 				<onfocus condition="Control.Hasfocus(505)">SetProperty(GridView_Column,$INFO[Container.Column],home)</onfocus>
@@ -124,6 +134,7 @@
 
 	<include name="Custom_List">
 		<param name="folderwatch" default="false" />
+		<param name="ladders" default="false" />
 		<param name="type" default="fixedlist" />
 		<param name="id" />
 		<param name="viewtype_label" />
@@ -146,6 +157,7 @@
 					<include content="HiddenFocusButton">
 						<param name="folderwatch" value="$PARAM[folderwatch]" />
 						<param name="id" value="$PARAM[id]" />
+						<param name="ladders" value="$PARAM[ladders]" />
 					</include>
 					<include content="btn_trailer" condition="$EXP[trailer_include_videos] + Window.Is(videos)">
 						<param name="enabled" value="$EXP[trailer_visible_videos]" />

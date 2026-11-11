@@ -30,6 +30,12 @@
   <!-- ...and that serve seeded register 3400 -->
   <expression name="multiart_current_3400">$EXP[multiart_item_current] + !String.IsEmpty(Container(9300).ListItem.Art(multiart)) + ![Container(9300).IsUpdating + String.IsEmpty(Window(home).Property(multiart_seed_sig_3400))]</expression>
   <expression name="multiart_shown">Control.IsVisible(5012)</expression>
+  <!-- The windows holding register 3400 (MyViews_Multiart_Labels): include condition for the multiart images of the views on C2's code -->
+  <expression name="multiart_window">Skin.HasSetting(Multiart_Slideshow) + [Window.Is(home) | Window.Is(videos) | Window.Is(music)]</expression>
+  <!-- Register 3400's slide, as those images read it -->
+  <variable name="texture_multiart_3400">
+    <value>$INFO[Control.GetLabel(3400)]</value>
+  </variable>
   <!-- Asks 9300 to seed: the scrollbars page the list without a focus change, so seeding waits for focus to return -->
   <expression name="multiart_serve">Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Control.GetLabel(6400)) + !$EXP[Scrollbar_HasFocus]</expression>
 

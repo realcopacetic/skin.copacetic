@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- C1's copy of C2's strip.xml, under C2's names so a C2 fix diffs across. C1's look: the items abut, the slots left of
+		the focus show only with details off, drop shadows at the focus's edges, no masks, diffuses, blur bands or now-playing marks -->
+
+	<include name="vue_strip">
+		<param name="secondary" default="false" />
+		<definition>
+			<include content="vue_strip_fanart" condition="$EXP[display_fanart_include_strip_$PARAM[window]]">
+				<param name="id" value="$PARAM[id]" />
+				<param name="region" value="primary" />
+				<param name="secondary" value="$PARAM[secondary]" />
+				<param name="texture_prefix" value="primary" />
+				<param name="visible" value="$EXP[display_fanart_visible]" />
+			</include>
+			<include content="vue_strip_poster" condition="$EXP[display_posters_include_strip_$PARAM[window]]">
+				<param name="id" value="$PARAM[id]" />
+				<param name="region" value="primary" />
+				<param name="secondary" value="$PARAM[secondary]" />
+				<param name="texture_prefix" value="primary" />
+				<param name="visible" value="$EXP[display_posters_visible]" />
+			</include>
+			<include content="vue_strip_square" condition="$EXP[display_square_include_strip_$PARAM[window]]">
+				<param name="id" value="$PARAM[id]" />
+				<param name="region" value="primary" />
+				<param name="secondary" value="$PARAM[secondary]" />
+				<param name="texture_prefix" value="primary" />
+				<param name="visible" value="$EXP[display_square_visible]" />
+			</include>
+		</definition>
+	</include>
+
+	<!-- Positions are details off; details on slides the whole art 320 right -->
+	<include name="vue_strip_fanart">
+		<control type="group">
+			<animation effect="slide" end="320,0" time="0" condition="!$EXP[StripView_Details_Off]">Conditional</animation>
+			<include content="tpl_strip_art">
+				<param name="art" value="fanart" />
+				<param name="focus_height" value="630" />
+				<param name="focus_top" value="240" />
+				<param name="focus_width" value="1120" />
+				<param name="id" value="$PARAM[id]" />
+				<param name="item_height" value="540" />
+				<param name="item_slide" value="960" />
+				<param name="item_top" value="285" />
+				<param name="item_width" value="960" />
+				<param name="left_visible" value="$EXP[StripView_Details_Off]" />
+				<param name="offleft_posx" value="-2640" />
+				<param name="offleft_slide" value="3040" />
+				<param name="outer" value="false" />
+				<param name="posx-1" value="-560" />
+				<param name="posx-2" value="-1520" />
+				<param name="posx0" value="400" />
+				<param name="posx1" value="1520" />
+				<param name="posx2" value="2480" />
+				<param name="preload_prev" value="-2" />
+				<param name="region" value="$PARAM[region]" />
+				<param name="secondary" value="$PARAM[secondary]" />
+				<param name="secondary_mask_bottom" value="210" />
+				<param name="secondary_mask_top" value="240" />
+				<param name="shadow_left" value="280" />
+				<param name="texture_prefix" value="$PARAM[texture_prefix]" />
+				<param name="visible" value="$PARAM[visible]" />
+			</include>
+		</control>
+	</include>
+
+	<include name="vue_strip_poster">
+		<include content="tpl_strip_art">
+			<param name="art" value="poster" />
+			<param name="focus_height" value="720" />
+			<param name="focus_top" value="180" />
+			<param name="focus_width" value="480" />
+			<param name="id" value="$PARAM[id]" />
+			<param name="item_height" value="600" />
+			<param name="item_slide" value="400" />
+			<param name="item_top" value="240" />
+			<param name="item_width" value="400" />
+			<param name="left_visible" value="$EXP[StripView_Details_Off]" />
+			<param name="offleft_posx" value="-560" />
+			<param name="offleft_slide" value="1280" />
+			<param name="posx-1" value="320" />
+			<param name="posx-2" value="-80" />
+			<param name="posx-3" value="-480" />
+			<param name="posx0" value="720" />
+			<param name="posx1" value="1200" />
+			<param name="posx2" value="1600" />
+			<param name="posx3" value="2000" />
+			<param name="region" value="$PARAM[region]" />
+			<param name="secondary" value="$PARAM[secondary]" />
+			<param name="secondary_mask_bottom" value="180" />
+			<param name="secondary_mask_top" value="180" />
+			<param name="shadow_left" value="600" />
+			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
+			<param name="visible" value="$PARAM[visible]" />
+		</include>
+	</include>
+
+	<!-- Positions are details off; details on slides the whole art 75 right -->
+	<include name="vue_strip_square">
+		<control type="group">
+			<animation effect="slide" end="75,0" time="0" condition="!$EXP[StripView_Details_Off]">Conditional</animation>
+			<include content="tpl_strip_art">
+				<param name="art" value="square" />
+				<param name="focus_height" value="630" />
+				<param name="focus_top" value="240" />
+				<param name="focus_width" value="630" />
+				<param name="id" value="$PARAM[id]" />
+				<param name="item_height" value="540" />
+				<param name="item_slide" value="540" />
+				<param name="item_top" value="285" />
+				<param name="item_width" value="540" />
+				<param name="left_visible" value="$EXP[StripView_Details_Off]" />
+				<param name="offleft_posx" value="-1065" />
+				<param name="offleft_slide" value="1710" />
+				<param name="posx-1" value="105" />
+				<param name="posx-2" value="-435" />
+				<param name="posx-3" value="-975" />
+				<param name="posx0" value="645" />
+				<param name="posx1" value="1275" />
+				<param name="posx2" value="1815" />
+				<param name="posx3" value="2355" />
+				<param name="region" value="$PARAM[region]" />
+				<param name="secondary" value="$PARAM[secondary]" />
+				<param name="secondary_mask_bottom" value="210" />
+				<param name="secondary_mask_top" value="240" />
+				<param name="shadow_left" value="525" />
+				<param name="texture_prefix" value="$PARAM[texture_prefix]" />
+				<param name="visible" value="$PARAM[visible]" />
+			</include>
+		</control>
+	</include>
+
+	<include name="tpl_strip_art">
+		<include content="tpl_strip_art_static">
+			<param name="art" value="$PARAM[art]" />
+			<param name="focus_height" value="$PARAM[focus_height]" />
+			<param name="focus_top" value="$PARAM[focus_top]" />
+			<param name="focus_width" value="$PARAM[focus_width]" />
+			<param name="id" value="$PARAM[id]" />
+			<param name="item_height" value="$PARAM[item_height]" />
+			<param name="item_top" value="$PARAM[item_top]" />
+			<param name="item_width" value="$PARAM[item_width]" />
+			<param name="left_visible" value="$PARAM[left_visible]" />
+			<param name="outer" value="$PARAM[outer]" />
+			<param name="posx-1" value="$PARAM[posx-1]" />
+			<param name="posx-2" value="$PARAM[posx-2]" />
+			<param name="posx0" value="$PARAM[posx0]" />
+			<param name="posx1" value="$PARAM[posx1]" />
+			<param name="posx2" value="$PARAM[posx2]" />
+			<param name="preload_prev" value="$PARAM[preload_prev]" />
+			<param name="region" value="$PARAM[region]" />
+			<param name="secondary" value="$PARAM[secondary]" />
+			<param name="secondary_mask_bottom" value="$PARAM[secondary_mask_bottom]" />
+			<param name="secondary_mask_top" value="$PARAM[secondary_mask_top]" />
+			<param name="shadow_left" value="$PARAM[shadow_left]" />
+			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
+			<param name="visible" value="$PARAM[visible]" />
+		</include>
+		<include content="tpl_strip_art_transition">
+			<param name="art" value="$PARAM[art]" />
+			<param name="focus_height" value="$PARAM[focus_height]" />
+			<param name="focus_top" value="$PARAM[focus_top]" />
+			<param name="focus_width" value="$PARAM[focus_width]" />
+			<param name="id" value="$PARAM[id]" />
+			<param name="item_height" value="$PARAM[item_height]" />
+			<param name="item_slide" value="$PARAM[item_slide]" />
+			<param name="item_top" value="$PARAM[item_top]" />
+			<param name="item_width" value="$PARAM[item_width]" />
+			<param name="left_visible" value="$PARAM[left_visible]" />
+			<param name="offleft_posx" value="$PARAM[offleft_posx]" />
+			<param name="offleft_slide" value="$PARAM[offleft_slide]" />
+			<param name="outer" value="$PARAM[outer]" />
+			<param name="posx-1" value="$PARAM[posx-1]" />
+			<param name="posx-2" value="$PARAM[posx-2]" />
+			<param name="posx-3" value="$PARAM[posx-3]" />
+			<param name="posx0" value="$PARAM[posx0]" />
+			<param name="posx1" value="$PARAM[posx1]" />
+			<param name="posx2" value="$PARAM[posx2]" />
+			<param name="posx3" value="$PARAM[posx3]" />
+			<param name="region" value="$PARAM[region]" />
+			<param name="shadow_left" value="$PARAM[shadow_left]" />
+			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
+			<param name="visible" value="$PARAM[visible]" />
+		</include>
+	</include>
+
+	<include name="tpl_strip_art_static">
+		<param name="ani_visible" default="Visible_Fade_Animation" /><!-- C1's intro, on the anchor and the unfocused artwork -->
+		<param name="left_visible" default="true" /><!-- C1: the slots left of the focus and the focus's left shadow; the media view shows them with details off -->
+		<param name="outer" default="true" /><!-- the ±2 statics; false for fanart -->
+		<param name="preload_prev" default="-3" /><!-- the slot a prev press slides in: -3, or -2 for fanart -->
+		<param name="secondary" default="false" /><!-- true where the embedded list (3100) slides through the berth -->
+		<definition>
+			<include content="grp_art_anchor"><!-- focused artwork -->
+				<param name="ani_visible" value="$PARAM[ani_visible]" />
+				<param name="height" value="$PARAM[focus_height]" />
+				<param name="left" value="$PARAM[posx0]" />
+				<param name="top" value="$PARAM[focus_top]" />
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="width" value="$PARAM[focus_width]" />
+				<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="$EXP[container_scrolling_$PARAM[region]]">Conditional</animation>
+				<include content="tpl_focus_region">
+					<param name="height" value="$PARAM[focus_height]" />
+					<param name="width" value="$PARAM[focus_width]" />
+					<include content="tpl_art_focused">
+						<param name="height" value="$PARAM[focus_height]" />
+						<param name="id" value="$PARAM[id]" />
+						<param name="multiart" value="!$EXP[container_scrolling_$PARAM[region]] + $EXP[multiart_current_3400] + !String.IsEqual(Container.FolderName,ListItem.Title)" /><!-- not inside a movie's versions -->
+						<param name="position" value="0" />
+						<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+						<param name="width" value="$PARAM[focus_width]" />
+						<include content="Secondary_List_Scroll_Animation" condition="$PARAM[secondary]" /><!-- until the embedded list is drawn in the focus region (A4-3): the art leaves the berth as the list rises into it -->
+						<include content="grp_collection_indicator">
+							<param name="id" value="$PARAM[id]" />
+							<param name="position" value="0" />
+							<param name="width" value="60" />
+						</include>
+					</include>
+				</include>
+				<!-- Until the embedded list is drawn in the focus region (A4-3): it slides through the berth, so these bars cover it, and the rising art,
+					above and below. After the focus region, which would clip them away and whose clip rides the art's slide -->
+				<include content="Icon_Component_Secondary_Mask" condition="$PARAM[secondary]">
+					<param name="bottom" value="$PARAM[secondary_mask_bottom]" />
+					<param name="height" value="$PARAM[focus_height]" />
+					<param name="left" value="0" />
+					<param name="top" value="$PARAM[secondary_mask_top]" />
+					<param name="width" value="$PARAM[focus_width]" />
+				</include>
+			</include>
+			<control type="group"><!-- unfocused artwork -->
+				<visible>$PARAM[visible]</visible>
+				<include content="$PARAM[ani_visible]" />
+				<include content="tpl_art_unfocused" condition="$PARAM[outer]">
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left" value="$PARAM[posx-2]" />
+					<param name="position" value="-2" />
+					<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="!$EXP[container_scrolling_$PARAM[region]] + [$PARAM[left_visible]]" />
+					<param name="width" value="$PARAM[item_width]" />
+					<include content="grp_collection_indicator">
+						<param name="id" value="$PARAM[id]" />
+						<param name="position" value="-2" />
+						<param name="width" value="50" />
+					</include>
+				</include>
+				<include content="tpl_art_unfocused">
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left" value="$PARAM[posx-1]" />
+					<param name="position" value="-1" />
+					<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="!$EXP[container_scrolling_$PARAM[region]] + [$PARAM[left_visible]]" />
+					<param name="width" value="$PARAM[item_width]" />
+					<include content="grp_collection_indicator">
+						<param name="id" value="$PARAM[id]" />
+						<param name="position" value="-1" />
+						<param name="width" value="50" />
+					</include>
+				</include>
+				<include content="tpl_art_unfocused">
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left" value="$PARAM[posx1]" />
+					<param name="position" value="1" />
+					<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="!$EXP[container_scrolling_$PARAM[region]]" />
+					<param name="width" value="$PARAM[item_width]" />
+					<include content="grp_collection_indicator">
+						<param name="id" value="$PARAM[id]" />
+						<param name="position" value="1" />
+						<param name="width" value="50" />
+					</include>
+				</include>
+				<include content="tpl_art_unfocused" condition="$PARAM[outer]">
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left" value="$PARAM[posx2]" />
+					<param name="position" value="2" />
+					<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="!$EXP[container_scrolling_$PARAM[region]]" />
+					<param name="width" value="$PARAM[item_width]" />
+					<include content="grp_collection_indicator">
+						<param name="id" value="$PARAM[id]" />
+						<param name="position" value="2" />
+						<param name="width" value="50" />
+					</include>
+				</include>
+				<!-- C1's shadows: the focus casts one over each neighbour -->
+				<include content="DropShadow">
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="left" value="$PARAM[shadow_left]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="!$EXP[container_scrolling_$PARAM[region]] + [$PARAM[left_visible]] + ![String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(-1).Label) + String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(-1).Art(thumb))]" />
+				</include>
+				<include content="DropShadow">
+					<param name="flipx" value="true" />
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="left" value="$PARAM[posx1]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="!$EXP[container_scrolling_$PARAM[region]] + ![String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(1).Label) + String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(1).Art(thumb))]" />
+				</include>
+				<include content="img_layout_preload"><!-- warms the art a prev press slides in: the container preloads only one item before the cursor.
+					Off screen at either details position -->
+					<param name="texture" value="$VAR[texture_$PARAM[texture_prefix]_$PARAM[art]$PARAM[preload_prev]]" />
+					<left>-1</left>
+					<top>-1</top>
+				</include>
+			</control>
+		</definition>
+	</include>
+
+	<include name="tpl_strip_art_transition">
+		<param name="left_visible" default="true" /><!-- as tpl_strip_art_static; with it false, item 0 rides off and on at the left edge instead -->
+		<param name="outer" default="true" /><!-- the outer rungs (±3 ↔ ±2); false for fanart -->
+		<definition>
+			<control type="group"><!-- prev -->
+				<visible>[$PARAM[visible]] + Integer.IsGreater(Container($PARAM[id]).NumItems,1)</visible>
+				<include content="efx_ladder_prev">
+					<param name="id" value="$PARAM[id]" />
+					<param name="region" value="$PARAM[region]" />
+				</include>
+				<include content="tpl_art_animated" condition="$PARAM[outer]"> <!-- -3 -> -2 -->
+					<param name="ani_condition" value="true" />
+					<param name="ani_effect" value="slide" />
+					<param name="ani_end" value="$PARAM[item_slide],0" />
+					<param name="ani_type" value="Hidden" />
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left" value="$PARAM[posx-3]" />
+					<param name="position" value="-2" />
+					<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="Container($PARAM[id]).OnPrevious + [$PARAM[left_visible]]" />
+					<param name="width" value="$PARAM[item_width]" />
+					<include content="grp_collection_indicator">
+						<param name="id" value="$PARAM[id]" />
+						<param name="position" value="-2" />
+						<param name="width" value="50" />
+					</include>
+				</include>
+				<include content="tpl_art_animated"> <!-- -2 -> -1 -->
+					<param name="ani_condition" value="true" />
+					<param name="ani_effect" value="slide" />
+					<param name="ani_end" value="$PARAM[item_slide],0" />
+					<param name="ani_type" value="Hidden" />
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left" value="$PARAM[posx-2]" />
+					<param name="position" value="-1" />
+					<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="Container($PARAM[id]).OnPrevious + [$PARAM[left_visible]]" />
+					<param name="width" value="$PARAM[item_width]" />
+					<include content="grp_collection_indicator">
+						<param name="id" value="$PARAM[id]" />
+						<param name="position" value="-1" />
+						<param name="width" value="50" />
+					</include>
+				</include>
+				<include content="tpl_art_animated"> <!-- -1 -> 0 -->
+					<param name="ani_condition" value="true" />
+					<param name="ani_effect" value="zoom" />
+					<param name="ani_end" value="$PARAM[posx0],$PARAM[focus_top],$PARAM[focus_width],$PARAM[focus_height]" />
+					<param name="ani_type" value="Hidden" />
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left" value="$PARAM[posx-1]" />
+					<param name="position" value="0" />
+					<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="Container($PARAM[id]).OnPrevious + [$PARAM[left_visible]]" />
+					<param name="width" value="$PARAM[item_width]" />
+					<include content="grp_collection_indicator">
+						<param name="id" value="$PARAM[id]" />
+						<param name="position" value="0" />
+						<param name="width" value="50" />
+					</include>
+				</include>
+				<include content="tpl_art_animated"> <!-- C1: off-left -> 0 where the slots left of the focus are hidden -->
+					<param name="ani_condition" value="true" />
+					<param name="ani_effect" value="slide" />
+					<param name="ani_end" value="$PARAM[offleft_slide],0" />
+					<param name="ani_type" value="Hidden" />
+					<param name="height" value="$PARAM[focus_height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left" value="$PARAM[offleft_posx]" />
+					<param name="position" value="0" />
+					<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+					<param name="top" value="$PARAM[focus_top]" />
+					<param name="visible" value="Container($PARAM[id]).OnPrevious + ![$PARAM[left_visible]]" />
+					<param name="width" value="$PARAM[focus_width]" />
+					<include content="grp_collection_indicator">
+						<param name="id" value="$PARAM[id]" />
+						<param name="position" value="0" />
+						<param name="width" value="60" />
+					</include>
+				</include>
+				<include content="tpl_art_animated"> <!-- 0 -> 1 -->
+					<param name="ani_condition" value="true" />
+					<param name="ani_effect" value="zoom" />
+					<param name="ani_end" value="$PARAM[posx1],$PARAM[item_top],$PARAM[item_width],$PARAM[item_height]" />
+					<param name="ani_type" value="Hidden" />
+					<param name="height" value="$PARAM[focus_height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left" value="$PARAM[posx0]" />
+					<param name="position" value="1" />
+					<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+					<param name="top" value="$PARAM[focus_top]" />
+					<param name="visible" value="Container($PARAM[id]).OnPrevious" />
+					<param name="width" value="$PARAM[focus_width]" />
+					<include content="img_multiart_unfocused" condition="$EXP[multiart_window]">
+						<param name="visible" value="Container($PARAM[id]).OnPrevious + String.IsEqual(Container(9300).ListItem.Property(previous_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(next),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(next),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))" />
+					</include>
+					<include content="grp_collection_indicator">
+						<param name="id" value="$PARAM[id]" />
+						<param name="position" value="1" />
+						<param name="width" value="60" />
+					</include>
+				</include>
+				<include content="tpl_art_animated"> <!-- 1 -> 2 -->
+					<param name="ani_condition" value="true" />
+					<param name="ani_effect" value="slide" />
+					<param name="ani_end" value="$PARAM[item_slide],0" />
+					<param name="ani_type" value="Hidden" />
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left" value="$PARAM[posx1]" />
+					<param name="position" value="2" />
+					<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="Container($PARAM[id]).OnPrevious" />
+					<param name="width" value="$PARAM[item_width]" />
+					<include content="grp_collection_indicator">
+						<param name="id" value="$PARAM[id]" />
+						<param name="position" value="2" />
+						<param name="width" value="50" />
+					</include>
+				</include>
+				<include content="tpl_art_animated" condition="$PARAM[outer]"> <!-- 2 -> 3 -->
+					<param name="ani_condition" value="true" />
+					<param name="ani_effect" value="slide" />
+					<param name="ani_end" value="$PARAM[item_slide],0" />
+					<param name="ani_type" value="Hidden" />
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left" value="$PARAM[posx2]" />
+					<param name="position" value="3" />
+					<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="Container($PARAM[id]).OnPrevious" />
+					<param name="width" value="$PARAM[item_width]" />
+					<include content="grp_collection_indicator">
+						<param name="id" value="$PARAM[id]" />
+						<param name="position" value="3" />
+						<param name="width" value="50" />
+					</include>
+				</include>
+				<!-- C1's shadows: the focus's two leave with the old focus on the pulse, the new focus's grow in through the scroll latch -->
+				<include content="DropShadow"> <!-- left, 0 -> 1 -->
+					<param name="animation2center" value="$PARAM[posx0],540" />
+					<param name="animation2effect" value="zoom" />
+					<param name="animation2end" value="0,100" />
+					<param name="animation2time" value="Default_Transition_0.5x" />
+					<param name="animation3effect" value="fade" />
+					<param name="animation3end" value="0" />
+					<param name="animation3time" value="Default_Transition_0.5x" />
+					<param name="animationcondition" value="true" />
+					<param name="animationeffect" value="zoom" />
+					<param name="animationend" value="$PARAM[posx1],$PARAM[focus_top],0,$PARAM[focus_height]" />
+					<param name="animationtype" value="Hidden" />
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="left" value="$PARAM[shadow_left]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="Container($PARAM[id]).OnPrevious + [$PARAM[left_visible]] + ![String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(1).Label) + String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(1).Art(thumb))]" />
+				</include>
+				<include content="DropShadow"> <!-- right, 1 -> 2 -->
+					<param name="animation2effect" value="fade" />
+					<param name="animation2end" value="0" />
+					<param name="animation2time" value="Default_Transition_1x" />
+					<param name="animationcondition" value="true" />
+					<param name="animationeffect" value="zoom" />
+					<param name="animationend" value="$PARAM[posx2],$PARAM[item_top],0,$PARAM[item_height]" />
+					<param name="animationtype" value="Hidden" />
+					<param name="flipx" value="true" />
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="left" value="$PARAM[posx1]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="Container($PARAM[id]).OnPrevious + ![String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(2).Label) + String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(2).Art(thumb))]" />
+				</include>
+				<include content="DropShadow"> <!-- left, the new focus's -->
+					<param name="animation2effect" value="fade" />
+					<param name="animation2end" value="100" />
+					<param name="animation2start" value="0" />
+					<param name="animation2time" value="Default_Transition_1x" />
+					<param name="animationcondition" value="true" />
+					<param name="animationeffect" value="zoom" />
+					<param name="animationend" value="$PARAM[shadow_left],$PARAM[item_top],120,$PARAM[item_height]" />
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="left" value="$PARAM[posx-1]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="$EXP[container_scrolling_$PARAM[region]_prev] + !Container($PARAM[id]).OnPrevious + [$PARAM[left_visible]] + ![String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(-1).Label) + String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(-1).Art(thumb))]" />
+					<param name="width" value="1" />
+				</include>
+				<include content="DropShadow"> <!-- right, the new focus's -->
+					<param name="animation2delay" value="Default_Transition_0.5x" />
+					<param name="animation2effect" value="fade" />
+					<param name="animation2end" value="100" />
+					<param name="animation2start" value="0" />
+					<param name="animation2time" value="Default_Transition_0.5x" />
+					<param name="animationcondition" value="true" />
+					<param name="animationeffect" value="zoom" />
+					<param name="animationend" value="$PARAM[posx1],$PARAM[item_top],120,$PARAM[item_height]" />
+					<param name="flipx" value="true" />
+					<param name="height" value="$PARAM[focus_height]" />
+					<param name="left" value="$PARAM[posx0]" />
+					<param name="top" value="$PARAM[focus_top]" />
+					<param name="visible" value="$EXP[container_scrolling_$PARAM[region]_prev] + !Container($PARAM[id]).OnPrevious + ![String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(1).Label) + String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(1).Art(thumb))]" />
+					<param name="width" value="1" />
+				</include>
+			</control>
+			<control type="group"><!-- next -->
+				<visible>[$PARAM[visible]] + Integer.IsGreater(Container($PARAM[id]).NumItems,1)</visible>
+				<include content="efx_ladder_next">
+					<param name="id" value="$PARAM[id]" />
+					<param name="region" value="$PARAM[region]" />
+				</include>
+				<include content="tpl_art_animated" condition="$PARAM[outer]"> <!-- -2 -> -3 -->
+					<param name="ani_condition" value="true" />
+					<param name="ani_effect" value="slide" />
+					<param name="ani_end" value="-$PARAM[item_slide],0" />
+					<param name="ani_type" value="Hidden" />
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left" value="$PARAM[posx-2]" />
+					<param name="position" value="-3" />
+					<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="Container($PARAM[id]).OnNext + [$PARAM[left_visible]]" />
+					<param name="width" value="$PARAM[item_width]" />
+					<include content="grp_collection_indicator">
+						<param name="id" value="$PARAM[id]" />
+						<param name="position" value="-3" />
+						<param name="width" value="50" />
+					</include>
+				</include>
+				<include content="tpl_art_animated"> <!-- -1 -> -2 -->
+					<param name="ani_condition" value="true" />
+					<param name="ani_effect" value="slide" />
+					<param name="ani_end" value="-$PARAM[item_slide],0" />
+					<param name="ani_type" value="Hidden" />
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left" value="$PARAM[posx-1]" />
+					<param name="position" value="-2" />
+					<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="Container($PARAM[id]).OnNext + [$PARAM[left_visible]]" />
+					<param name="width" value="$PARAM[item_width]" />
+					<include content="grp_collection_indicator">
+						<param name="id" value="$PARAM[id]" />
+						<param name="position" value="-2" />
+						<param name="width" value="50" />
+					</include>
+				</include>
+				<include content="tpl_art_animated"> <!-- 0 -> -1 -->
+					<param name="ani_condition" value="true" />
+					<param name="ani_effect" value="zoom" />
+					<param name="ani_end" value="$PARAM[posx-1],$PARAM[item_top],$PARAM[item_width],$PARAM[item_height]" />
+					<param name="ani_type" value="Hidden" />
+					<param name="height" value="$PARAM[focus_height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left" value="$PARAM[posx0]" />
+					<param name="position" value="-1" />
+					<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+					<param name="top" value="$PARAM[focus_top]" />
+					<param name="visible" value="Container($PARAM[id]).OnNext + [$PARAM[left_visible]]" />
+					<param name="width" value="$PARAM[focus_width]" />
+					<include content="img_multiart_unfocused" condition="$EXP[multiart_window]">
+						<param name="visible" value="Container($PARAM[id]).OnNext + String.IsEqual(Container(9300).ListItem.Property(next_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(previous),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(previous),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))" />
+					</include>
+					<include content="grp_collection_indicator">
+						<param name="id" value="$PARAM[id]" />
+						<param name="position" value="-1" />
+						<param name="width" value="60" />
+					</include>
+				</include>
+				<include content="tpl_art_animated"> <!-- C1: 0 -> off-left where the slots left of the focus are hidden -->
+					<param name="ani_condition" value="true" />
+					<param name="ani_effect" value="slide" />
+					<param name="ani_end" value="-$PARAM[offleft_slide],0" />
+					<param name="ani_type" value="Hidden" />
+					<param name="height" value="$PARAM[focus_height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left" value="$PARAM[posx0]" />
+					<param name="position" value="-1" />
+					<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+					<param name="top" value="$PARAM[focus_top]" />
+					<param name="visible" value="Container($PARAM[id]).OnNext + ![$PARAM[left_visible]]" />
+					<param name="width" value="$PARAM[focus_width]" />
+					<include content="img_multiart_unfocused" condition="$EXP[multiart_window]">
+						<param name="visible" value="Container($PARAM[id]).OnNext + String.IsEqual(Container(9300).ListItem.Property(next_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(previous),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(previous),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))" />
+					</include>
+					<include content="grp_collection_indicator">
+						<param name="id" value="$PARAM[id]" />
+						<param name="position" value="-1" />
+						<param name="width" value="60" />
+					</include>
+				</include>
+				<include content="tpl_art_animated"> <!-- 1 -> 0 -->
+					<param name="ani_condition" value="true" />
+					<param name="ani_effect" value="zoom" />
+					<param name="ani_end" value="$PARAM[posx0],$PARAM[focus_top],$PARAM[focus_width],$PARAM[focus_height]" />
+					<param name="ani_type" value="Hidden" />
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left" value="$PARAM[posx1]" />
+					<param name="position" value="0" />
+					<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="Container($PARAM[id]).OnNext" />
+					<param name="width" value="$PARAM[item_width]" />
+					<include content="grp_collection_indicator">
+						<param name="id" value="$PARAM[id]" />
+						<param name="position" value="0" />
+						<param name="width" value="50" />
+					</include>
+				</include>
+				<include content="tpl_art_animated"> <!-- 2 -> 1 -->
+					<param name="ani_condition" value="true" />
+					<param name="ani_effect" value="slide" />
+					<param name="ani_end" value="-$PARAM[item_slide],0" />
+					<param name="ani_type" value="Hidden" />
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left" value="$PARAM[posx2]" />
+					<param name="position" value="1" />
+					<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="Container($PARAM[id]).OnNext" />
+					<param name="width" value="$PARAM[item_width]" />
+					<include content="grp_collection_indicator">
+						<param name="id" value="$PARAM[id]" />
+						<param name="position" value="1" />
+						<param name="width" value="50" />
+					</include>
+				</include>
+				<include content="tpl_art_animated" condition="$PARAM[outer]"> <!-- 3 -> 2 -->
+					<param name="ani_condition" value="true" />
+					<param name="ani_effect" value="slide" />
+					<param name="ani_end" value="-$PARAM[item_slide],0" />
+					<param name="ani_type" value="Hidden" />
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left" value="$PARAM[posx3]" />
+					<param name="position" value="2" />
+					<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="Container($PARAM[id]).OnNext" />
+					<param name="width" value="$PARAM[item_width]" />
+					<include content="grp_collection_indicator">
+						<param name="id" value="$PARAM[id]" />
+						<param name="position" value="2" />
+						<param name="width" value="50" />
+					</include>
+				</include>
+				<!-- Mirror of the prev ladder's shadows -->
+				<include content="DropShadow"> <!-- left, -1 -> -2 -->
+					<param name="animation2effect" value="fade" />
+					<param name="animation2end" value="0" />
+					<param name="animation2time" value="Default_Transition_1x" />
+					<param name="animationcondition" value="true" />
+					<param name="animationeffect" value="zoom" />
+					<param name="animationend" value="$PARAM[posx-1],$PARAM[item_top],0,$PARAM[item_height]" />
+					<param name="animationtype" value="Hidden" />
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="left" value="$PARAM[shadow_left]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="Container($PARAM[id]).OnNext + [$PARAM[left_visible]] + ![String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(-2).Label) + String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(-2).Art(thumb))]" />
+				</include>
+				<include content="DropShadow"> <!-- right, 0 -> -1 -->
+					<param name="animation2center" value="$PARAM[posx1],540" />
+					<param name="animation2effect" value="zoom" />
+					<param name="animation2end" value="0,100" />
+					<param name="animation2time" value="Default_Transition_0.5x" />
+					<param name="animation3effect" value="fade" />
+					<param name="animation3end" value="0" />
+					<param name="animation3time" value="Default_Transition_0.5x" />
+					<param name="animationcondition" value="true" />
+					<param name="animationeffect" value="zoom" />
+					<param name="animationend" value="$PARAM[posx0],$PARAM[focus_top],0,$PARAM[focus_height]" />
+					<param name="animationtype" value="Hidden" />
+					<param name="flipx" value="true" />
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="left" value="$PARAM[posx1]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="Container($PARAM[id]).OnNext + ![String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(-1).Label) + String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(-1).Art(thumb))]" />
+				</include>
+				<include content="DropShadow"> <!-- left, the new focus's -->
+					<param name="animation2delay" value="Default_Transition_0.5x" />
+					<param name="animation2effect" value="fade" />
+					<param name="animation2end" value="100" />
+					<param name="animation2start" value="0" />
+					<param name="animation2time" value="Default_Transition_0.5x" />
+					<param name="animationcondition" value="true" />
+					<param name="animationeffect" value="zoom" />
+					<param name="animationend" value="$PARAM[shadow_left],$PARAM[item_top],120,$PARAM[item_height]" />
+					<param name="height" value="$PARAM[focus_height]" />
+					<param name="left" value="$PARAM[posx1]" />
+					<param name="top" value="$PARAM[focus_top]" />
+					<param name="visible" value="$EXP[container_scrolling_$PARAM[region]_next] + !Container($PARAM[id]).OnNext + [$PARAM[left_visible]] + ![String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(-1).Label) + String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(-1).Art(thumb))]" />
+					<param name="width" value="1" />
+				</include>
+				<include content="DropShadow"> <!-- right, the new focus's -->
+					<param name="animation2effect" value="fade" />
+					<param name="animation2end" value="100" />
+					<param name="animation2start" value="0" />
+					<param name="animation2time" value="Default_Transition_1x" />
+					<param name="animationcondition" value="true" />
+					<param name="animationeffect" value="zoom" />
+					<param name="animationend" value="$PARAM[posx1],$PARAM[item_top],120,$PARAM[item_height]" />
+					<param name="flipx" value="true" />
+					<param name="height" value="$PARAM[item_height]" />
+					<param name="left" value="$PARAM[posx2]" />
+					<param name="top" value="$PARAM[item_top]" />
+					<param name="visible" value="$EXP[container_scrolling_$PARAM[region]_next] + !Container($PARAM[id]).OnNext + ![String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(1).Label) + String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(1).Art(thumb))]" />
+					<param name="width" value="1" />
+				</include>
+			</control>
+		</definition>
+	</include>
+
+	<!-- C1's collection mark on a slot whose item is a set or has versions, which the embedded list opens -->
+	<include name="grp_collection_indicator">
+		<include content="Icon_Component_Indicator" condition="Skin.HasSetting(Secondary_List_Enabled)">
+			<param name="visible" value="Container($PARAM[id]).ListItemNoWrap($PARAM[position]).IsCollection | [Container($PARAM[id]).ListItemNoWrap($PARAM[position]).HasVideoVersions + !String.IsEqual(Container.FolderName,Container($PARAM[id]).ListItemNoWrap($PARAM[position]).Title)]" />
+			<param name="width" value="$PARAM[width]" />
+		</include>
+	</include>
+
+</includes>

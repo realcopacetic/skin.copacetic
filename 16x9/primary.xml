@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- C1's copy of the parts of C2's primary.xml that its views use, under C2's names -->
+
+	<include name="img_layout_preload">
+		<param name="texture" />
+		<definition>
+			<control type="image">
+				<width>1</width>
+				<height>1</height>
+				<texture background="true">$PARAM[texture]</texture>
+				<nested />
+			</control>
+		</definition>
+	</include>
+
+	<!-- The view's item layouts: each warms its item's art for the slots it scrolls into. C1's view containers sit on screen
+		at 0,0, so the image goes one pixel above the top edge -->
+	<include name="blk_layouts">
+		<param name="height" default="360" />  <!-- N = 1080/height (vertical views)  -->
+		<param name="width" default="640" />   <!-- N = 1920/width  (horizontal views) -->
+		<definition>
+			<itemlayout width="$PARAM[width]" height="$PARAM[height]" condition="$EXP[display_fanart_visible]">
+				<include content="img_layout_preload">
+					<param name="texture" value="$VAR[texture_primary_fanart0]" />
+					<top>-1</top>
+				</include>
+			</itemlayout>
+			<itemlayout width="$PARAM[width]" height="$PARAM[height]" condition="$EXP[display_posters_visible]">
+				<include content="img_layout_preload">
+					<param name="texture" value="$VAR[texture_primary_poster0]" />
+					<top>-1</top>
+				</include>
+			</itemlayout>
+			<itemlayout width="$PARAM[width]" height="$PARAM[height]"><!-- square fallback -->
+				<include content="img_layout_preload">
+					<param name="texture" value="$VAR[texture_primary_square0]" />
+					<top>-1</top>
+				</include>
+			</itemlayout>
+		</definition>
+	</include>
+
+</includes>
