@@ -563,7 +563,6 @@
 				<control type="button" id="$PARAM[id]1">
 					<include content="skinsettings_$PARAM[info]_Button_Conditions" />
 					<onclick>SetFocus($PARAM[id]2)</onclick>
-					<onback>SetFocus($PARAM[id]0)</onback>
 					<onup>$PARAM[previous]</onup>
 					<ondown>$PARAM[next]</ondown>
 					<align>right</align>
@@ -574,7 +573,6 @@
 				<control type="button" id="$PARAM[id]2">
 					<include content="skinsettings_$PARAM[info2]_Button_Conditions" />
 					<onclick>SetFocus($PARAM[id]0)</onclick>
-					<onback>SetFocus($PARAM[id]1)</onback>
 					<onup>$PARAM[previous]</onup>
 					<ondown>$PARAM[next]</ondown>
 				</control>
