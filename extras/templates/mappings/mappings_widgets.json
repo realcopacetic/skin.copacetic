@@ -21,9 +21,13 @@
     "default_order": [ "in_progress", "next_up", "latest_movies", "latest_tvshows" ],
     "tokens": {
       "focused": "String.IsEqual(Window(home).Property(Home_Widget),{index})",
+      "listitem": "Container({index}).ListItem",
       "rail_id": "{index}",
+      "region": "widgets",
       "row_focus": "Window.Is(home) + String.IsEqual(Window(home).Property(Home_Widget),{index})",
       "scope": "Home",
+      "slot_filter": "In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom])",
+      "texture_prefix": "widgets_{index}",
       "window": "home"
     },
     "config_fields": {

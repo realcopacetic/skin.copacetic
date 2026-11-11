@@ -15,9 +15,16 @@
     },
     "default_order": [ "movies", "tvshows", "episodes", "artists", "albums", "songs" ],
     "tokens": {
+      "art_keyart": "false",
+      "art_landscape": "false",
+      "episode_thumbs": "true",
       "hasfocus": "[Window.Is(1180) + Control.HasFocus({index})]",
+      "listitem": "Container({index}).ListItem",
       "rail_id": "{index}",
+      "region": "search",
       "shown": "[Window.Is(1180) + [Control.HasFocus({index}) | $EXP[search_preview_{index}]]]",
+      "slot_filter": "In({search_type}, [movies, tvshows, episodes, musicvideos, artists, albums, songs])",
+      "texture_prefix": "search_{index}",
       "window": "search"
     },
     "config_fields": {

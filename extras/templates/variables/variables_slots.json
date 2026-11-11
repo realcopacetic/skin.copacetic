@@ -56,6 +56,31 @@
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.poster))", "value": "$INFO[{listitem}({range}).Art(tvshow.poster)]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Icon)", "value": "$INFO[{listitem}({range}).Icon]" }
       ]
+    },
+    "texture_{texture_prefix}_{item}{range}": {
+      "note": "A Strip rail's slots (Home rows, search rails and the preview, info screen rails): its own art, in the rails' order, keyart and landscape on the row's fields. A Home row never shows the slots left of its focus, so -3 and -2 stay empty.",
+      "templates_from": [ "widgets", "search", "infoscreen" ],
+      "index": { "start": 3201 },
+      "items": [ "poster", "fanart", "square" ],
+      "range": { "start": -3, "end": 3 },
+      "filter": "{slot_filter} + equals({layout}, Strip) + In({art}_{item}, [Posters_poster, Fanart_fanart, Square_square]) + not In({item}{range}, [fanart-3, fanart3])",
+      "values": [
+        { "filter": "equals({window}, home) + In({range}, [-3, -2])", "value": "" },
+        { "filter": "equals({item}, poster) + equals({art_keyart}, true)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.keyart))", "value": "$INFO[{listitem}({range}).Art(tvshow.keyart)]" },
+        { "filter": "equals({item}, poster) + equals({art_keyart}, true)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(keyart))", "value": "$INFO[{listitem}({range}).Art(keyart)]" },
+        { "filter": "equals({item}, poster) + equals({window}, home)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.poster))", "value": "$INFO[{listitem}({range}).Art(tvshow.poster)]" },
+        { "filter": "equals({item}, poster)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(poster))", "value": "$INFO[{listitem}({range}).Art(poster)]" },
+        { "filter": "equals({item}, poster) + not equals({window}, home)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.poster))", "value": "$INFO[{listitem}({range}).Art(tvshow.poster)]" },
+        { "filter": "equals({item}, fanart) + equals({episode_thumbs}, true)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(thumb)) + [String.IsEqual({listitem}NoWrap({range}).DBType,episode) | String.IsEqual({listitem}NoWrap({range}).DBType,video)]", "value": "$INFO[{listitem}({range}).Art(thumb)]" },
+        { "filter": "equals({item}, square)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.square))", "value": "$INFO[{listitem}({range}).Art(tvshow.square)]" },
+        { "filter": "equals({item}, square)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(square))", "value": "$INFO[{listitem}({range}).Art(square)]" },
+        { "filter": "equals({item}, square)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(thumb))", "value": "$INFO[{listitem}({range}).Art(thumb)]" },
+        { "filter": "not equals({item}, poster) + equals({art_landscape}, true)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.landscape))", "value": "$INFO[{listitem}({range}).Art(tvshow.landscape)]" },
+        { "filter": "not equals({item}, poster) + equals({art_landscape}, true)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(landscape)) + !String.IsEqual({listitem}NoWrap({range}).DBType,album) + !String.IsEqual({listitem}NoWrap({range}).DBType,song)", "value": "$INFO[{listitem}({range}).Art(landscape)]" },
+        { "filter": "not equals({item}, poster)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.fanart))", "value": "$INFO[{listitem}({range}).Art(tvshow.fanart)]" },
+        { "filter": "not equals({item}, poster)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(fanart)) + !String.IsEqual({listitem}NoWrap({range}).DBType,album) + !String.IsEqual({listitem}NoWrap({range}).DBType,song)", "value": "$INFO[{listitem}({range}).Art(fanart)]" },
+        { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Icon)", "value": "$INFO[{listitem}({range}).Icon]" }
+      ]
     }
   }
 }

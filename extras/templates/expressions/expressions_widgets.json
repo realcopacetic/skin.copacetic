@@ -77,6 +77,22 @@
       "index": { "start": 3201 },
       "rules": [ { "condition": "equals({art_landscape}, true)", "type": "append", "value": "{focused}" } ]
     },
+    "container_scrolling_{region}": {
+      "note": "A Strip rail's scroll names (strip.xml): each rail window's User_Scroll_Delay latches, 5001 prev and 5002 next, as container_scrolling_primary reads them.",
+      "templates_from": [ "widgets", "search", "infoscreen" ],
+      "index": { "start": 3201 },
+      "rules": [ { "type": "append", "value": "[Control.IsVisible(5001) | Control.IsVisible(5002)] + !Window.IsVisible(managevideoversions) + !Window.IsVisible(managevideoextras)" } ]
+    },
+    "container_scrolling_{region}_next": {
+      "templates_from": [ "widgets", "search", "infoscreen" ],
+      "index": { "start": 3201 },
+      "rules": [ { "type": "append", "value": "Control.IsVisible(5002)" } ]
+    },
+    "container_scrolling_{region}_prev": {
+      "templates_from": [ "widgets", "search", "infoscreen" ],
+      "index": { "start": 3201 },
+      "rules": [ { "type": "append", "value": "Control.IsVisible(5001)" } ]
+    },
     "Widget_HasLogo_{window}": {
       "note": "Kodi's list 50 in the info dialogs never had a row here.",
       "templates_from": [ "widgets", "search", "infoscreen" ],

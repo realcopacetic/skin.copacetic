@@ -9,11 +9,15 @@
       "art_landscape": "false",
       "container": "Container({id})",
       "custom": "true",
+      "episode_thumbs": "true",
       "listitem": "Container({id}).ListItem",
       "nib": "Control.IsVisible({id})",
       "rail_id": "{id}",
+      "region": "infoscreen",
       "row_focus": "{window_is} + String.IsEqual(Window(home).Property(Infoscreen_Widget),{id})",
       "scope": "Infoscreen",
+      "slot_filter": "true",
+      "texture_prefix": "infoscreen_{index}",
       "window": "infoscreen"
     },
     "metadata": {
