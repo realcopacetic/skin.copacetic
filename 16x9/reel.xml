@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<!-- C1's copy of C2's reel.xml for Showcase, under C2's names so a C2 fix diffs across. C1's look: full-height tiles that abut,
-		the focus at the left edge with C1's border and shadow, C1's half-bright neighbours, C1's overlay details over the focus;
-		no ring, context fade, label, masks, diffuses or now-playing marks -->
+	<!-- C1's copy of C2's reel.xml for Showcase, under C2's names so a C2 fix diffs across. C1's look: abutting full-height tiles, the focus
+		at the left with C1's border, shadow, half-bright neighbours and overlay details; no ring, context fade, label, masks or diffuses -->
 
 	<include name="vue_reel">
 		<param name="secondary" default="false" />
@@ -71,9 +70,8 @@
 		</include>
 	</include>
 
-	<!-- C1: right_visible, the neighbours right of the focus, its border and shadows (details off or over the art); with details beside
-		the art only the focus shows. overlay: the details over the art, which hold every tile half bright. player_visible: the music
-		player beside a posters' details, which slides the view 360 right, so the incoming focus starts that much further left -->
+	<!-- C1: right_visible, the neighbours, border and shadows (details off or over the art); overlay, the details over the art (every tile
+		half bright); player_visible, the music player's 360 slide beside posters' details, so the incoming focus starts further left -->
 	<include name="tpl_reel">
 		<param name="outer" default="false" />
 		<param name="overlay" default="$EXP[ShowcaseView_Details_Overlay_IsVisible]" />
@@ -151,7 +149,7 @@
 						</include>
 					</include>
 					<include content="tpl_art_unfocused"><!-- incoming focused: alpha-gated so the focus region owns the slot at rest -->
-						<param name="ani_dim" value="efx_reel_dim_arrive" />
+						<param name="ani_dim" value="ani_fadediffuse_darken50_out" />
 						<param name="ani_dim_condition" value="[!Container($PARAM[id]).OnNext + !Container($PARAM[id]).OnPrevious + $EXP[container_scrolling_$PARAM[region]] + ![$PARAM[overlay]]] | ![$PARAM[right_visible]]" /><!-- C1: brightens as it rides into the focus with details off -->
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="id" value="$PARAM[id]" />
@@ -319,7 +317,7 @@
 		<animation effect="fadediffuse" end="ff808080" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="$PARAM[condition]">Conditional</animation>
 	</include>
 
-	<include name="efx_reel_dim_arrive"><!-- C2's ani_fadediffuse_darken50_out: half bright while condition is false, up to full over 1x as it rises -->
+	<include name="ani_fadediffuse_darken50_out"><!-- C2's (animations.xml), with C1's constants: half bright while condition is false, up to full over 1x as it rises -->
 		<animation effect="fadediffuse" end="ff808080" time="0" condition="![$PARAM[condition]]">Conditional</animation>
 		<animation effect="fadediffuse" start="ff808080" end="ffffffff" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="$PARAM[condition]">Conditional</animation>
 	</include>

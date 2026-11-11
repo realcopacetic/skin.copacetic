@@ -69,7 +69,7 @@
 		<definition>
 			<control type="group">
 				<control type="image">
-					<animation effect="fadediffuse" end="ff808080" time="0" condition="$EXP[ListView_Display_IsBackground] | $EXP[BillboardView_IsVisible] | [$EXP[ShowcaseView_IsVisible] + $EXP[ShowcaseView_Details_Overlay_IsVisible]]">Conditional</animation>
+					<animation effect="fadediffuse" end="ff808080" time="0" condition="$EXP[ListView_Display_IsBackground] | $EXP[BillboardView_IsVisible]">Conditional</animation>
 					<texture background="true">$PARAM[texture]</texture>
 					<aspectratio>scale</aspectratio>
 				</control>
