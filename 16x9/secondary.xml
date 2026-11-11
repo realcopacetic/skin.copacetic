@@ -47,7 +47,8 @@
 					<param name="texture" value="$VAR[texture_probe_secondary]" />
 				</include>
 			</focusedlayout>
-			<onfocus condition="!Control.IsVisible(6315)">SetFocus(4111)</onfocus><!-- C1: focus that skipped the entry (the menu key's return) goes round through it, so the region scrolls to the list's art -->
+			<onfocus condition="!Control.IsVisible(6315) + !$EXP[Options_Switching] + !$EXP[Container_Switching]">SetFocus(4111)</onfocus><!-- C1: focus that skipped the entry (the menu key's return) goes round through it, so the region scrolls to the list's art -->
+			<onfocus condition="!Control.IsVisible(6315) + [$EXP[Options_Switching] | $EXP[Container_Switching]]">SetFocus(50)</onfocus><!-- while a switch hides the view, a copy of the list frozen visible can take focus, and 4111 would be hidden too: back to the view -->
 			<include content="atr_navigation_secondary_vertical" />
 			<include content="Default_Scrolltime" />
 			<include content="blk_layouts" />
@@ -123,15 +124,16 @@
 		<control type="button" id="4111"><!-- C1: the entry's first step. Its onfocus waits for a Process (the Focus animation), in which prb_secondary_art
 			comes up, so 4108 can take focus and scroll the region, and 3100's onfocus never sends focus round again -->
 			<visible allowhiddenfocus="true">false</visible>
+			<include content="atr_secondary_hold_back" />
 			<onfocus>SetFocus(4108)</onfocus>
 			<animation effect="slide" end="0,0" time="Default_Transition_0x" reversible="false">Focus</animation>
 		</control>
 	</include>
 
-	<include name="atr_secondary_hold_back"><!-- C1: Back during 4107's or 4110's hold finishes it now, in this window: the reset, then the view.
-		A bare id so Back is consumed; the unfocus drops the hold's own onfocus -->
+	<include name="atr_secondary_hold_back"><!-- C1: Back on a relay (4107's or 4110's hold, 4111's frame) finishes in this window: the reset, then the view.
+		A bare id so Back is consumed; the unfocus drops the relay's own onfocus -->
 		<onback>SetFocus(3100,0,absolute)</onback>
-		<onback>504</onback>
+		<onback>50</onback>
 	</include>
 
 	<include name="prb_secondary_art"><!-- C1: up while the list or a relay holds focus. One copy, processed whatever the views show, so
