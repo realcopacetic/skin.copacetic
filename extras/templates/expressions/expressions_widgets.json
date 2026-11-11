@@ -81,7 +81,16 @@
       "note": "A Strip rail's scroll names (strip.xml): each rail window's User_Scroll_Delay latches, 5001 prev and 5002 next, as container_scrolling_primary reads them.",
       "templates_from": [ "widgets", "search", "infoscreen" ],
       "index": { "start": 3201 },
-      "rules": [ { "type": "append", "value": "[Control.IsVisible(5001) | Control.IsVisible(5002)] + !Window.IsVisible(managevideoversions) + !Window.IsVisible(managevideoextras)" } ]
+      "rules": [
+        { "condition": "equals({region}, infoscreen)", "type": "append", "value": "[Control.IsVisible(5001) | Control.IsVisible(5002)] + !Window.IsVisible(managevideoversions) + !Window.IsVisible(managevideoextras)" },
+        { "condition": "not equals({region}, infoscreen)", "type": "append", "value": "[Control.IsVisible(5001) | Control.IsVisible(5002)] + !Window.IsVisible(managevideoversions) + !Window.IsVisible(managevideoextras) + !$EXP[container_single_{region}]" }
+      ]
+    },
+    "container_single_{region}": {
+      "note": "The focused Home row or search rail holds one item: a press or an autoscroll step wraps it onto itself and pulses OnNext, which moves nothing.",
+      "templates_from": [ "widgets", "search" ],
+      "index": { "start": 3201 },
+      "rules": [ { "type": "append", "value": "[Control.HasFocus({rail_id}) + Integer.IsEqual(Container({rail_id}).NumItems,1)]" } ]
     },
     "container_scrolling_{region}_next": {
       "templates_from": [ "widgets", "search", "infoscreen" ],
