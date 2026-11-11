@@ -67,9 +67,10 @@
       ]
     },
     "infoscreen_{index}_Thumbnail({range})Content": {
-      "note": "Each rail's art (Infoscreen_Rail_Layout's art_icon). The focused item reads the rail; the others a bare offset, which reads the focused container. Keyart and landscape are off (Z A).",
+      "note": "A Grid or Billboard rail's art (Infoscreen_Rail_Layout's art_icon); a Strip rail reads texture_infoscreen_{index}_{art}N (variables_slots.json). The focused item reads the rail; the others a bare offset, which reads the focused container. Keyart and landscape are off (Z A).",
       "index": { "start": 3201 },
-      "range": { "start": -3, "end": 6 },
+      "filter": "not equals({layout}, Strip)",
+      "range": { "start": -2, "end": 6 },
       "values": [
         { "filter": "equals({art}, Posters) + equals({range}, 0)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({container}.ListItemNoWrap(0).Art(poster))", "value": "$INFO[{container}.ListItem(0).Art(poster)]" },
         { "filter": "equals({art}, Posters) + equals({range}, 0) + equals({rail}, seasons)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({container}.ListItemNoWrap(0).Art(tvshow.poster))", "value": "$INFO[{container}.ListItem(0).Art(tvshow.poster)]" },
@@ -77,11 +78,11 @@
         { "filter": "equals({art}, Posters) + not equals({range}, 0)", "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(poster))", "value": "$INFO[ListItem({range}).Art(poster)]" },
         { "filter": "equals({art}, Posters) + not equals({range}, 0)", "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(tvshow.poster))", "value": "$INFO[ListItem({range}).Art(tvshow.poster)]" },
         { "filter": "equals({art}, Posters) + not equals({range}, 0)", "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Icon)", "value": "$INFO[ListItem({range}).Icon]" },
-        { "filter": "equals({art}, Fanart) + In({range}, [-3, 5, 6])", "value": "" },
+        { "filter": "equals({art}, Fanart) + In({range}, [5, 6])", "value": "" },
         { "filter": "equals({art}, Fanart) + equals({range}, 0) + not equals({id}, 50)", "condition": "Control.HasFocus({id}) + !String.IsEqual({container}.ListItem(1).DBType,episode) + !String.IsEmpty({container}.ListItem(0).Art(fanart))", "value": "$INFO[{container}.ListItem(0).Art(fanart)]" },
         { "filter": "equals({art}, Fanart) + equals({range}, 0)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({container}.ListItem(0).Icon)", "value": "$INFO[{container}.ListItem(0).Icon]" },
-        { "filter": "equals({art}, Fanart) + not In({range}, [-3, 0, 5, 6])", "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(fanart)) + !String.IsEqual(ListItem({range}).DBType,episode)", "value": "$INFO[ListItem({range}).Art(fanart)]" },
-        { "filter": "equals({art}, Fanart) + not In({range}, [-3, 0, 5, 6])", "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Icon)", "value": "$INFO[ListItem({range}).Icon]" },
+        { "filter": "equals({art}, Fanart) + not In({range}, [0, 5, 6])", "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Art(fanart)) + !String.IsEqual(ListItem({range}).DBType,episode)", "value": "$INFO[ListItem({range}).Art(fanart)]" },
+        { "filter": "equals({art}, Fanart) + not In({range}, [0, 5, 6])", "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Icon)", "value": "$INFO[ListItem({range}).Icon]" },
         { "filter": "equals({art}, Square) + equals({range}, 0)", "condition": "Control.HasFocus({id}) + !String.IsEmpty({container}.ListItemNoWrap(0).Icon)", "value": "$INFO[{container}.ListItem(0).Icon]" },
         { "filter": "equals({art}, Square) + not equals({range}, 0)", "condition": "!String.IsEmpty(Container.ListItemNoWrap({range}).Icon)", "value": "$INFO[ListItem({range}).Icon]" }
       ]

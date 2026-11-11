@@ -36,6 +36,7 @@
 					<param name="include_progress" value="{include_progress}" />
 					<param name="info" value="{info}" />
 					<param name="info_visible" value="{info_visible}" />
+					<param name="texture_prefix" value="{texture_prefix}" />
 					<param name="title_label_id" value="6{index}" />
 					<param name="view" value="{layout}" />
 				</include>

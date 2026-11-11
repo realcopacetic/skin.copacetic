@@ -60,6 +60,7 @@
 					<param name="display" value="{art}" />
 					<param name="id" value="{index}" />
 					<param name="info" value="$VAR[search_info_{index}]" />
+					<param name="texture_prefix" value="{texture_prefix}" />
 					<param name="view" value="{layout}" />
 				</include>
 			</include>

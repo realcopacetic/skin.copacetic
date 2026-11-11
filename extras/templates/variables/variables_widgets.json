@@ -1,22 +1,12 @@
 {
   "mapping": "widgets",
   "variables": {
-    "widgets_{index}_Thumbnail(-3)Content": {
-      "note": "Slot -3 is never shown: its texture sits off the row's left edge.",
-      "index": {
-        "start": 3201
-      },
-      "values": [
-        {
-          "value": ""
-        }
-      ]
-    },
     "widgets_{index}_Thumbnail({range})Content": {
+      "note": "Showcase, Grid and Billboard rows; a Strip row reads texture_widgets_{index}_{art}N (variables_slots.json).",
       "index": {
         "start": 3201
       },
-      "filter": "In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom])",
+      "filter": "In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom]) + not equals({layout}, Strip)",
       "range": {
         "start": -2,
         "end": 6

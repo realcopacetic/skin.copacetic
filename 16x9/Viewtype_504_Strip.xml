@@ -41,26 +41,78 @@
 		</definition>
 	</include>
 
-	<!-- The rails' Strip (Home rows, search): each rail names its own {art_icon}(N)Content family -->
+	<!-- The rails' Strip in Home and search: the rail's art (StripView_Art_<display>) in the display's wrapper -->
 	<include name="StripView_Display">
-		<param name="id" default="504" />
-		<param name="media_view" default="false" />
-		<param name="widget_view" default="false" />
 		<param name="display" />
 		<definition>
 			<include content="Viewtype_Display_Template">
 				<param name="viewtype_label" value="Strip" />
 				<param name="visible" value="!Window.IsVisible(selectvideoversion)" />
-				<param name="media_view" value="$PARAM[media_view]" />
 				<include content="Trailer_Autoplay_Fade_Animation" condition="$EXP[trailer_include_videos] | $EXP[trailer_include_home]" />
-				<include content="StripView_Art_$PARAM[display]" condition="$PARAM[widget_view]">
-					<param name="target_id" value="$PARAM[id]" />
-					<param name="art_icon" value="$PARAM[art_icon]" />
-					<param name="container" value="$PARAM[container]" />
-					<param name="animated_condition" value="$PARAM[animated_condition]" />
+				<include content="StripView_Art_$PARAM[display]">
+					<param name="id" value="$PARAM[id]" />
+					<param name="ladders_visible" value="$PARAM[ladders_visible]" />
+					<param name="left_visible" value="$PARAM[left_visible]" />
+					<param name="region" value="$PARAM[region]" />
+					<param name="texture_prefix" value="$PARAM[texture_prefix]" />
 				</include>
 			</include>
 		</definition>
+	</include>
+
+	<!-- A rail's Strip art (Home rows, search rails, info screen rails): C2's vue_strip_<art> on the rail's slot family
+		(texture_<texture_prefix>_<art>N) and scroll names (container_scrolling_<region>), dimmed under a transparent dialog as before.
+		left_visible: the slots left of the focus show (Home rows never; the art then sits at the media view's details-on place) -->
+	<include name="StripView_Rail">
+		<param name="ladders_visible" default="true" /><!-- the transition ladders' visible: a search rail's preview is moved by its cursor resets, so it keeps them off -->
+		<definition>
+			<control type="group">
+				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" />
+				<include content="vue_strip_$PARAM[art]">
+					<param name="id" value="$PARAM[id]" />
+					<param name="ladders_visible" value="$PARAM[ladders_visible]" />
+					<param name="left_visible" value="$PARAM[left_visible]" />
+					<param name="region" value="$PARAM[region]" />
+					<param name="secondary" value="false" />
+					<param name="texture_prefix" value="$PARAM[texture_prefix]" />
+					<param name="visible" value="true" />
+				</include>
+			</control>
+		</definition>
+	</include>
+
+	<!-- The rails' display names onto C2's art names -->
+	<include name="StripView_Art_Fanart">
+		<include content="StripView_Rail">
+			<param name="art" value="fanart" />
+			<param name="id" value="$PARAM[id]" />
+			<param name="ladders_visible" value="$PARAM[ladders_visible]" />
+			<param name="left_visible" value="$PARAM[left_visible]" />
+			<param name="region" value="$PARAM[region]" />
+			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
+		</include>
+	</include>
+
+	<include name="StripView_Art_Posters">
+		<include content="StripView_Rail">
+			<param name="art" value="poster" />
+			<param name="id" value="$PARAM[id]" />
+			<param name="ladders_visible" value="$PARAM[ladders_visible]" />
+			<param name="left_visible" value="$PARAM[left_visible]" />
+			<param name="region" value="$PARAM[region]" />
+			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
+		</include>
+	</include>
+
+	<include name="StripView_Art_Square">
+		<include content="StripView_Rail">
+			<param name="art" value="square" />
+			<param name="id" value="$PARAM[id]" />
+			<param name="ladders_visible" value="$PARAM[ladders_visible]" />
+			<param name="left_visible" value="$PARAM[left_visible]" />
+			<param name="region" value="$PARAM[region]" />
+			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
+		</include>
 	</include>
 
 	<include name="StripView_Details">

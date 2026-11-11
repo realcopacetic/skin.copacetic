@@ -8,6 +8,8 @@
 		<definition>
 			<include content="vue_strip_fanart" condition="$EXP[display_fanart_include_strip_$PARAM[window]]">
 				<param name="id" value="$PARAM[id]" />
+				<param name="ladders_visible" value="$EXP[display_fanart_visible]" />
+				<param name="left_visible" value="$EXP[StripView_Details_Off]" />
 				<param name="region" value="primary" />
 				<param name="secondary" value="$PARAM[secondary]" />
 				<param name="texture_prefix" value="primary" />
@@ -15,6 +17,8 @@
 			</include>
 			<include content="vue_strip_poster" condition="$EXP[display_posters_include_strip_$PARAM[window]]">
 				<param name="id" value="$PARAM[id]" />
+				<param name="ladders_visible" value="$EXP[display_posters_visible]" />
+				<param name="left_visible" value="$EXP[StripView_Details_Off]" />
 				<param name="region" value="primary" />
 				<param name="secondary" value="$PARAM[secondary]" />
 				<param name="texture_prefix" value="primary" />
@@ -22,6 +26,8 @@
 			</include>
 			<include content="vue_strip_square" condition="$EXP[display_square_include_strip_$PARAM[window]]">
 				<param name="id" value="$PARAM[id]" />
+				<param name="ladders_visible" value="$EXP[display_square_visible]" />
+				<param name="left_visible" value="$EXP[StripView_Details_Off]" />
 				<param name="region" value="primary" />
 				<param name="secondary" value="$PARAM[secondary]" />
 				<param name="texture_prefix" value="primary" />
@@ -30,10 +36,11 @@
 		</definition>
 	</include>
 
-	<!-- Positions are details off; details on slides the whole art 320 right -->
+	<!-- Positions are with the slots left of the focus (left_visible, one condition: the media view's details off); without them the whole art
+		slides 320 right. ladders_visible: the transition ladders' visible, the view's own in the media view -->
 	<include name="vue_strip_fanart">
 		<control type="group">
-			<animation effect="slide" end="320,0" time="0" condition="!$EXP[StripView_Details_Off]">Conditional</animation>
+			<animation effect="slide" end="320,0" time="0" condition="!$PARAM[left_visible]">Conditional</animation>
 			<include content="tpl_strip_art">
 				<param name="art" value="fanart" />
 				<param name="focus_height" value="630" />
@@ -44,7 +51,8 @@
 				<param name="item_slide" value="960" />
 				<param name="item_top" value="285" />
 				<param name="item_width" value="960" />
-				<param name="left_visible" value="$EXP[StripView_Details_Off]" />
+				<param name="ladders_visible" value="$PARAM[ladders_visible]" />
+				<param name="left_visible" value="$PARAM[left_visible]" />
 				<param name="offleft_posx" value="-2640" />
 				<param name="offleft_slide" value="3040" />
 				<param name="outer" value="false" />
@@ -76,7 +84,8 @@
 			<param name="item_slide" value="400" />
 			<param name="item_top" value="240" />
 			<param name="item_width" value="400" />
-			<param name="left_visible" value="$EXP[StripView_Details_Off]" />
+			<param name="ladders_visible" value="$PARAM[ladders_visible]" />
+			<param name="left_visible" value="$PARAM[left_visible]" />
 			<param name="offleft_posx" value="-560" />
 			<param name="offleft_slide" value="1280" />
 			<param name="posx-1" value="320" />
@@ -96,10 +105,10 @@
 		</include>
 	</include>
 
-	<!-- Positions are details off; details on slides the whole art 75 right -->
+	<!-- As vue_strip_fanart: without the slots left of the focus the whole art slides 75 right -->
 	<include name="vue_strip_square">
 		<control type="group">
-			<animation effect="slide" end="75,0" time="0" condition="!$EXP[StripView_Details_Off]">Conditional</animation>
+			<animation effect="slide" end="75,0" time="0" condition="!$PARAM[left_visible]">Conditional</animation>
 			<include content="tpl_strip_art">
 				<param name="art" value="square" />
 				<param name="focus_height" value="630" />
@@ -110,7 +119,8 @@
 				<param name="item_slide" value="540" />
 				<param name="item_top" value="285" />
 				<param name="item_width" value="540" />
-				<param name="left_visible" value="$EXP[StripView_Details_Off]" />
+				<param name="ladders_visible" value="$PARAM[ladders_visible]" />
+				<param name="left_visible" value="$PARAM[left_visible]" />
 				<param name="offleft_posx" value="-1065" />
 				<param name="offleft_slide" value="1710" />
 				<param name="posx-1" value="105" />
@@ -181,7 +191,7 @@
 			<param name="region" value="$PARAM[region]" />
 			<param name="shadow_left" value="$PARAM[shadow_left]" />
 			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
-			<param name="visible" value="$PARAM[visible]" />
+			<param name="visible" value="$PARAM[ladders_visible]" /><!-- C1: the view's visible, or less where something other than a press moves the list (search's preview) -->
 		</include>
 	</include>
 

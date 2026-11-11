@@ -42,6 +42,7 @@
 				<focusedlayout>
 					<include content="HiddenFocusButton">
 						<param name="id" value="$PARAM[id]" />
+						<param name="ladders" value="true" /><!-- a Strip rail's transition ladders read LastScroll -->
 					</include>
 					<include content="btn_trailer" condition="$PARAM[row_autoplay]">
 						<param name="focus_ids" value="$PARAM[id]" />
@@ -98,7 +99,10 @@
 				<param name="art_landscape" value="$PARAM[art_landscape]" />
 				<param name="display" value="$PARAM[display]" />
 				<param name="id" value="$PARAM[id]" />
+				<param name="left_visible" value="false" />
 				<param name="media_view" value="false" />
+				<param name="region" value="widgets" />
+				<param name="texture_prefix" value="$PARAM[texture_prefix]" />
 				<param name="widget_view" value="true" />
 			</include>
 		</control>
@@ -133,7 +137,7 @@
 	</include>
 
 	<!-- One search rail's art, breadcrumb and spinner, each on the rail's focus and outside grouplist 3200; search_layouts calls it once per rail.
-		The art also shows as the input's preview, beside the keypad; it rises as the rail takes focus -->
+		The art also shows as the input's preview, beside the keypad, at the media view's details-on place; it rises as the rail takes focus -->
 	<include name="Search_Row_Layout">
 		<control type="group">
 			<visible>[Control.HasFocus($PARAM[id]) + !Container($PARAM[id]).IsUpdating] | $EXP[search_preview_$PARAM[id]]</visible>
@@ -141,13 +145,12 @@
 			<animation effect="slide" start="0" end="0,-660" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus($PARAM[id])">Conditional</animation>
 			<animation effect="fade" start="0" end="100" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus($PARAM[id])">Conditional</animation>
 			<include content="$PARAM[view]View_Display">
-				<param name="animated_condition" value=" + Control.HasFocus($PARAM[id])" /><!-- the preview's cursor resets pulse OnNext/OnPrevious: no moving slots under its static row -->
-				<param name="art_icon" value="search_$PARAM[id]_Thumbnail" />
-				<param name="container" value="Container($PARAM[id])" />
 				<param name="display" value="$PARAM[display]" />
 				<param name="id" value="$PARAM[id]" />
-				<param name="media_view" value="false" />
-				<param name="widget_view" value="true" />
+				<param name="ladders_visible" value="Control.HasFocus($PARAM[id])" /><!-- the preview's cursor resets pulse OnNext/OnPrevious (Control.Move): no moving slots under its static row -->
+				<param name="left_visible" value="Control.HasFocus($PARAM[id])" />
+				<param name="region" value="search" />
+				<param name="texture_prefix" value="$PARAM[texture_prefix]" />
 			</include>
 		</control>
 		<include content="Breadcrumb_Label">
@@ -317,7 +320,11 @@
 				<animation effect="fade" start="0" end="100" time="Default_Transition_0.5x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus($PARAM[id])">Conditional</animation>
 				<include content="$PARAM[view]View_Art_$PARAM[display]">
 					<param name="art_icon" value="$PARAM[art_icon]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="left_visible" value="true" />
+					<param name="region" value="infoscreen" />
 					<param name="target_id" value="$PARAM[id]" />
+					<param name="texture_prefix" value="$PARAM[texture_prefix]" />
 				</include>
 			</control>
 			<!-- Breadcrumb -->

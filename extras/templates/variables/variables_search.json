@@ -29,38 +29,6 @@
         }
       ]
     },
-    "search_{index}_Thumbnail({range})Content": {
-      "note": "Each rail's Strip art names its rail: the preview draws it while the input has focus, and a bare ListItem reads the focused control.",
-      "index": { "start": 3201 },
-      "filter": "In({search_type}, [movies, tvshows, episodes, musicvideos, artists, albums, songs])",
-      "range": { "start": -3, "end": 3 },
-      "values": [
-        {
-          "filter": "equals({art}, Posters)",
-          "condition": "!String.IsEmpty(Container({index}).ListItemNoWrap({range}).Art(poster))",
-          "value": "$INFO[Container({index}).ListItemNoWrap({range}).Art(poster)]"
-        },
-        {
-          "filter": "equals({art}, Posters)",
-          "condition": "!String.IsEmpty(Container({index}).ListItemNoWrap({range}).Art(tvshow.poster))",
-          "value": "$INFO[Container({index}).ListItemNoWrap({range}).Art(tvshow.poster)]"
-        },
-        {
-          "filter": "equals({art}, Fanart) + not equals({search_type}, episodes)",
-          "condition": "!String.IsEmpty(Container({index}).ListItemNoWrap({range}).Art(fanart))",
-          "value": "$INFO[Container({index}).ListItemNoWrap({range}).Art(fanart)]"
-        },
-        {
-          "filter": "equals({art}, Fanart) + not equals({search_type}, episodes)",
-          "condition": "!String.IsEmpty(Container({index}).ListItemNoWrap({range}).Art(thumb))",
-          "value": "$INFO[Container({index}).ListItemNoWrap({range}).Art(thumb)]"
-        },
-        {
-          "condition": "!String.IsEmpty(Container({index}).ListItemNoWrap({range}).Icon)",
-          "value": "$INFO[Container({index}).ListItemNoWrap({range}).Icon]"
-        }
-      ]
-    },
     "_search_scroll_nib_cluster": {
       "note": "Light nibs on a Strip's art with a focused or previewed rail, otherwise as the theme.",
       "index": { "start": 3201 },
