@@ -1,0 +1,18 @@
+{
+  "grid": {
+    "mode": "static",
+    "items": [ "posters_large", "posters_small", "posters_horizontal", "fanart_large", "fanart_small", "fanart_horizontal", "square_large", "square_small", "square_horizontal" ],
+    "placeholders": { "key": "grid_layout" },
+    "metadata": {
+      "posters_large": { "art": "poster", "border": "10", "cell_h": "540", "cell_w": "360", "display": "posters", "left": "10", "progress_left": "60", "progress_slides": "240", "progress_width": "240", "size": "Large" },
+      "posters_small": { "art": "poster", "border": "8", "cell_h": "384", "cell_w": "256", "display": "posters", "left": "14", "progress_left": "8", "progress_slides": "240", "progress_width": "240", "size": "Small" },
+      "posters_horizontal": { "art": "poster", "border": "8", "cell_h": "420", "cell_w": "280", "display": "posters", "left": "0", "progress_left": "20", "progress_slides": "240", "progress_width": "240", "size": "Horizontal" },
+      "fanart_large": { "art": "fanart", "border": "10", "cell_h": "333", "cell_w": "592", "display": "fanart", "left": "22", "progress_left": "116", "progress_slides": "360", "progress_width": "360", "size": "Large" },
+      "fanart_small": { "art": "fanart", "border": "8", "cell_h": "252", "cell_w": "448", "display": "fanart", "left": "14", "progress_left": "44", "progress_slides": "360", "progress_width": "360", "size": "Small" },
+      "fanart_horizontal": { "art": "fanart", "border": "8", "cell_h": "279", "cell_w": "496", "display": "fanart", "left": "0", "progress_left": "68", "progress_slides": "360", "progress_width": "360", "size": "Horizontal" },
+      "square_large": { "art": "square", "border": "10", "cell_h": "360", "cell_w": "360", "display": "square", "left": "10", "progress_left": "60", "progress_slides": "240", "progress_width": "240", "size": "Large" },
+      "square_small": { "art": "square", "border": "8", "cell_h": "256", "cell_w": "256", "display": "square", "left": "14", "progress_left": "8", "progress_slides": "240", "progress_width": "240", "size": "Small" },
+      "square_horizontal": { "art": "square", "border": "8", "cell_h": "420", "cell_w": "420", "display": "square", "left": "0", "progress_left": "30", "progress_slides": "360", "progress_width": "360", "size": "Horizontal" }
+    }
+  }
+}

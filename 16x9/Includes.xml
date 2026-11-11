@@ -30,6 +30,7 @@
 	<include file="Extras_Multiart.xml" />
 	<include file="Extras_Secondary_List.xml" />
 	<include file="Extras_Trailer_Autoplay.xml" />
+	<include file="grid.xml" />
 	<include file="Hidden.xml" />
 	<include file="Navigation.xml" />
 	<include file="Notifications.xml" />

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- C1's copy of C2's grid.xml, under C2's names so a C2 fix diffs across. C1's look: C1's cells and its three Grid sizes
+		(a Skin setting), drop shadows, border, watched dim and checkmarks; no rings, masks, diffuses or now-playing marks -->
+
+	<include name="ctn_grid">
+		<param name="base" default="ctn_grid_primary" /><!-- mount target: the media view's; a rail would pass its own -->
+		<definition>
+			<include content="$PARAM[base]">
+				<param name="id" value="$PARAM[id]" />
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="window" value="$PARAM[window]" />
+			</include>
+		</definition>
+	</include>
+
+	<!-- The media view: the panel's shape and navigation follow Grid size, the cells each content type's art -->
+	<include name="ctn_grid_primary">
+		<include content="ctn_grid_base">
+			<param name="id" value="$PARAM[id]" />
+			<param name="visible" value="$PARAM[visible]" />
+			<include content="GridView_Vertical_Scrolling" condition="!Skin.String(GridView_Size,Horizontal)" />
+			<include content="GridView_Horizontal_Scrolling" condition="Skin.String(GridView_Size,Horizontal)" />
+			<include content="Grid_Vertical_Navigation" condition="!Skin.String(GridView_Size,Horizontal)" />
+			<include content="Grid_Horizontal_Navigation" condition="Skin.String(GridView_Size,Horizontal)" />
+			<include content="blk_grid_layouts_primary">
+				<param name="id" value="$PARAM[id]" />
+				<param name="window" value="$PARAM[window]" />
+			</include>
+		</include>
+	</include>
+
+	<!-- One cell's item layouts. left: the art's inset in the cell; size: Grid size, which picks the drop shadows' columns.
+		The art and its overlays take the cell's size (100%); the border sits outside it -->
+	<include name="tpl_grid_layouts">
+		<definition>
+			<itemlayout width="$PARAM[cell_width]" height="$PARAM[cell_height]" condition="$PARAM[condition]">
+				<include content="ListIcon_Static_Unfocused">
+					<param name="fallback" value="views/dark_grey_100.png" />
+					<param name="indicator" value="false" />
+					<param name="left" value="$PARAM[left]" />
+					<param name="texture" value="$PARAM[texture]" />
+					<param name="visible" value="!$EXP[Container_Switching] + !$EXP[Options_Switching]" />
+					<param name="watched_diffuse" value="[Skin.HasSetting(GridView_WatchedStatus_Enabled) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(addons) + ListItem.Property(Addon.IsInstalled) + !ListItem.Property(Addon.IsEnabled)]" />
+					<include content="Visible_Fade_Animation" />
+					<!-- Check -->
+					<include content="Grid_Icon" condition="Skin.HasSetting(GridView_AltWatchedStatus_Enabled) + Window.Is(videos)">
+						<param name="backing_visible" value="false" />
+						<param name="color" value="light" />
+						<bottom>0</bottom>
+						<centerleft>50%</centerleft>
+					</include>
+					<include content="Grid_Icon" condition="Skin.HasSetting(GridView_AltWatchedStatus_Enabled) + [Window.Is(addonbrowser) | Window.Is(programs)]">
+						<param name="backing_visible" value="false" />
+						<param name="color" value="light" />
+						<param name="icon" value="Special_Addonbrowser_focused" />
+						<param name="visible" value="[!String.Contains(Container.FolderPath,/user/) + [ListItem.Property(Addon.IsInstalled) | String.Contains(ListItem.Label,Copacetic)]] | [$EXP[Container_Addons_NonRepo] + String.Contains(Container.FolderPath,/user/) + ListItem.Property(Addon.IsInstalled) + !ListItem.Property(Addon.IsEnabled)]" />
+						<bottom>0</bottom>
+						<centerleft>50%</centerleft>
+					</include>
+					<!-- IsCollection or HasVideoVersions -->
+					<include content="Grid_Icon" condition="Skin.HasSetting(Secondary_List_Enabled) + Window.Is(videos)">
+						<param name="backing_visible" value="false" />
+						<param name="color" value="light" />
+						<param name="icon" value="Library_focused" />
+						<param name="visible" value="ListItem.IsCollection | [ListItem.HasVideoVersions + !String.IsEqual(Container.FolderName,ListItem.Title)]" />
+						<top>0</top>
+						<right>0</right>
+					</include>
+				</include>
+			</itemlayout>
+			<focusedlayout width="$PARAM[cell_width]" height="$PARAM[cell_height]" condition="$PARAM[condition]" infoupdate="500">
+				<nested /><!-- the caller's focus hook (HiddenFocusButton) -->
+				<control type="group">
+					<visible>!$EXP[Container_Switching] + !$EXP[Options_Switching]</visible>
+					<include content="Visible_Fade_Animation" />
+					<left>$PARAM[left]</left>
+					<width>100%</width>
+					<height>100%</height>
+					<!-- Dropshadow -->
+					<include content="GridView_Dropshadow_$PARAM[size]" />
+					<!-- Artwork -->
+					<control type="group">
+						<include content="Focus_Zoom_Animation" />
+						<include content="ListIcon_Static_Focused">
+							<param name="fallback" value="views/dark_grey_100.png" />
+							<param name="indicator" value="false" />
+							<param name="texture" value="$PARAM[texture]" />
+							<!-- Multiart -->
+							<include content="Icon_Component_Multiart_Static" condition="Skin.HasSetting(Multiart_Slideshow) + [Window.Is(videos) | Window.Is(music)]">
+								<param name="fadetime" value="360" />
+							</include>
+							<!-- Progress overlay -->
+							<include content="Icon_Component_Progress_Overlay" condition="Window.Is(home) | Window.Is(videos) | Window.Is(movieinformation)">
+								<param name="visible" value="[$EXP[GridView_Details_Off] | $EXP[GridView_Details_Breadcrumb]] + $EXP[Progress_IsVisible]" />
+							</include>
+							<!-- Artwork Mask -->
+							<control type="image">
+								<visible>![$EXP[GridView_Details_Off] | $EXP[GridView_Details_Breadcrumb]] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo)</visible>
+								<include content="Visible_Fade_Delayed_Animation" />
+								<animation effect="fade" start="0" end="100" time="Default_Transition_1x" delay="Default_Transition_1x" tween="sine" easing="inout" reversible="false">Focus</animation>
+								<texture colordiffuse="dark66">views/white_100.png</texture>
+							</control>
+						</include>
+					</control>
+					<!-- Border: four bars outside the art, each the art's side plus the corners -->
+					<control type="group">
+						<visible>!$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo) + !$EXP[Scrollbar_HasFocus] + !$EXP[Music_Player_HasFocus]</visible>
+						<include content="Visible_Fade_Animation" />
+						<control type="image"><!-- top -->
+							<left>-$PARAM[border]</left>
+							<right>-$PARAM[border]</right>
+							<top>-$PARAM[border]</top>
+							<height>$PARAM[border]</height>
+							<texture colordiffuse="$VAR[Accent_Color]">views/white_100.png</texture>
+						</control>
+						<control type="image"><!-- bottom -->
+							<left>-$PARAM[border]</left>
+							<right>-$PARAM[border]</right>
+							<bottom>-$PARAM[border]</bottom>
+							<height>$PARAM[border]</height>
+							<texture colordiffuse="$VAR[Accent_Color]">views/white_100.png</texture>
+						</control>
+						<control type="image"><!-- left -->
+							<left>-$PARAM[border]</left>
+							<width>$PARAM[border]</width>
+							<top>-$PARAM[border]</top>
+							<bottom>-$PARAM[border]</bottom>
+							<texture colordiffuse="$VAR[Accent_Color]">views/white_100.png</texture>
+						</control>
+						<control type="image"><!-- right -->
+							<right>-$PARAM[border]</right>
+							<width>$PARAM[border]</width>
+							<top>-$PARAM[border]</top>
+							<bottom>-$PARAM[border]</bottom>
+							<texture colordiffuse="$VAR[Accent_Color]">views/white_100.png</texture>
+						</control>
+					</control>
+					<!-- Progress -->
+					<include content="Progress_Grid" condition="Window.Is(videos)">
+						<param name="id" value="505" />
+						<param name="left" value="$PARAM[progress_left]" />
+						<param name="slides" value="$PARAM[progress_slides]" />
+						<param name="width" value="$PARAM[progress_width]" />
+					</include>
+					<!-- Check -->
+					<include content="Grid_Icon" condition="Skin.HasSetting(GridView_AltWatchedStatus_Enabled) + Window.Is(videos)">
+						<bottom>0</bottom>
+						<centerleft>50%</centerleft>
+					</include>
+					<include content="Grid_Icon" condition="Skin.HasSetting(GridView_AltWatchedStatus_Enabled) + [Window.Is(addonbrowser) | Window.Is(programs)]">
+						<param name="icon" value="Special_Addonbrowser_focused" />
+						<param name="visible" value="[!String.Contains(Container.FolderPath,/user/) + [ListItem.Property(Addon.IsInstalled) | String.Contains(ListItem.Label,Copacetic)]] | [$EXP[Container_Addons_NonRepo] + String.Contains(Container.FolderPath,/user/) + ListItem.Property(Addon.IsInstalled) + !ListItem.Property(Addon.IsEnabled)]" />
+						<bottom>0</bottom>
+						<centerleft>50%</centerleft>
+					</include>
+					<!-- IsCollection or HasVideoVersions -->
+					<include content="Grid_Icon" condition="Skin.HasSetting(Secondary_List_Enabled) + Window.Is(videos)">
+						<param name="icon" value="Library_focused" />
+						<param name="visible" value="ListItem.IsCollection | [ListItem.HasVideoVersions + !String.IsEqual(Container.FolderName,ListItem.Title)]" />
+						<top>0</top>
+						<right>0</right>
+					</include>
+				</control>
+			</focusedlayout>
+		</definition>
+	</include>
+
+	<include name="ctn_grid_base">
+		<definition>
+			<control type="panel" id="$PARAM[id]">
+				<viewtype label="Grid">icon</viewtype>
+				<visible>$PARAM[visible]</visible>
+				<left>50</left>
+				<top>180</top>
+				<pagecontrol>60</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<include content="Default_Scrolltime" />
+				<nested />
+			</control>
+		</definition>
+	</include>
+
+</includes>

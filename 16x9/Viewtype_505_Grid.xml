@@ -13,8 +13,8 @@
 	</include>
 
 	<include name="GridView_Container">
-		<param name="art_icon" default="Grid" />
 		<param name="visible" />
+		<param name="window" />
 		<definition>
 			<include content="Hidden_Components">
 				<control type="label" id="6351">
@@ -49,31 +49,11 @@
 				<include content="GridView_Slides_Small" condition="Skin.String(GridView_Size,Small)" />
 				<include content="GridView_Slides_Horizontal" condition="Skin.String(GridView_Size,Horizontal)" />
 				<!-- List -->
-				<control type="panel" id="505">
-					<viewtype label="Grid">icon</viewtype>
-					<visible>$PARAM[visible]</visible>
-					<left>50</left>
-					<top>180</top>
-					<include content="GridView_Vertical_Scrolling" condition="!Skin.String(GridView_Size,Horizontal)" />
-					<include content="GridView_Horizontal_Scrolling" condition="Skin.String(GridView_Size,Horizontal)" />
-					<include content="Grid_Vertical_Navigation" condition="!Skin.String(GridView_Size,Horizontal)" />
-					<include content="Grid_Horizontal_Navigation" condition="Skin.String(GridView_Size,Horizontal)" />
-					<pagecontrol>60</pagecontrol>
-					<preloaditems>2</preloaditems>
-					<include content="Default_Scrolltime" />
-					<include content="GridView_Layout_Array" condition="Window.Is(favouritesbrowser) | Window.Is(music) | Window.Is(pictures) | Window.Is(programs) | Window.Is(videos)">
-						<param name="displaytype_label" value="Fanart" />
-						<param name="art_icon" value="$PARAM[art_icon]" />
-					</include>
-					<include content="GridView_Layout_Array" condition="Window.Is(favouritesbrowser) | Window.Is(music) | Window.Is(programs) | Window.Is(videos)">
-						<param name="displaytype_label" value="Posters" />
-						<param name="art_icon" value="$PARAM[art_icon]" />
-					</include>
-					<include content="GridView_Layout_Array">
-						<param name="displaytype_label" value="Square" />
-						<param name="art_icon" value="$PARAM[art_icon]" />
-					</include>
-				</control>
+				<include content="ctn_grid">
+					<param name="id" value="505" />
+					<param name="visible" value="$PARAM[visible]" />
+					<param name="window" value="$PARAM[window]" />
+				</include>
 			</control>
 		</definition>
 	</include>

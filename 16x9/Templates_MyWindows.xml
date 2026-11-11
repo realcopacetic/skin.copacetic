@@ -122,8 +122,8 @@
 				</include>
 				<include content="Shared_Dialog_Layouts" condition="Skin.HasSetting(Music_Player_Enabled)" />
 				<include content="GridView_Container" condition="$EXP[layout_grid_include_$PARAM[window]]">
-					<param name="art_icon" value="addonbrowser" />
 					<param name="visible" value="$EXP[layout_grid_visible_$PARAM[window]]" />
+					<param name="window" value="$PARAM[window]" />
 				</include>
 			</control>
 			<!-- Layer 2 -->
@@ -192,6 +192,7 @@
 				<include content="Shared_Dialog_Layouts" condition="Skin.HasSetting(Music_Player_Enabled)" />
 				<include content="GridView_Container" condition="$EXP[layout_grid_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_grid_visible_$PARAM[window]]" />
+					<param name="window" value="$PARAM[window]" />
 				</include>
 			</control>
 			<!-- Layer 2 -->
@@ -302,6 +303,7 @@
 				<include content="Shared_Dialog_Layouts" condition="Skin.HasSetting(Music_Player_Enabled)" />
 				<include content="GridView_Container" condition="$EXP[layout_grid_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_grid_visible_$PARAM[window]]" />
+					<param name="window" value="$PARAM[window]" />
 				</include>
 			</control>
 			<!-- Layer 2 -->
@@ -377,8 +379,8 @@
 				</include>
 				<include content="Shared_Dialog_Layouts" condition="Skin.HasSetting(Music_Player_Enabled)" />
 				<include content="GridView_Container" condition="$EXP[layout_grid_include_$PARAM[window]]">
-					<param name="art_icon" value="pictures" />
 					<param name="visible" value="$EXP[layout_grid_visible_$PARAM[window]]" />
+					<param name="window" value="$PARAM[window]" />
 				</include>
 			</control>
 			<!-- Layer 2 -->
@@ -432,6 +434,7 @@
 				<include content="Shared_Dialog_Layouts" condition="Skin.HasSetting(Music_Player_Enabled)" />
 				<include content="GridView_Container" condition="$EXP[layout_grid_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_grid_visible_$PARAM[window]]" />
+					<param name="window" value="$PARAM[window]" />
 				</include>
 				<include content="MediaFlags" />
 			</control>

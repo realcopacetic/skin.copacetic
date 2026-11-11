@@ -1,6 +1,27 @@
 {
   "mapping": "content_types",
   "expressions": {
+    "art_{grid_layout}_include_grid_{window}": {
+      "note": "Include conditions: some content type in this window shows Grid in this cell's art, and Grid size (a Skin setting) is this cell's, so only that cell's item layouts load.",
+      "items_from": "grid",
+      "rules": [
+        {
+          "condition": "equals({layout}, grid) + equals({grid_layout}, {display}_large)",
+          "type": "assign",
+          "value": "!Skin.String(GridView_Size,Small) + !Skin.String(GridView_Size,Horizontal)"
+        },
+        {
+          "condition": "equals({layout}, grid) + equals({grid_layout}, {display}_small)",
+          "type": "assign",
+          "value": "Skin.String(GridView_Size,Small)"
+        },
+        {
+          "condition": "equals({layout}, grid) + equals({grid_layout}, {display}_horizontal)",
+          "type": "assign",
+          "value": "Skin.String(GridView_Size,Horizontal)"
+        }
+      ]
+    },
     "layout_{item}_include_{window}": {
       "items": [ "list", "billboard", "showcase", "strip", "grid" ],
       "rules": [
@@ -136,12 +157,17 @@
       ]
     },
     "art_keyart_visible": {
-      "note": "The visible window's art_keyart_visible_{window}, for art shared by every media window (texture_primary_*).",
+      "note": "The visible window's art_keyart_visible_{window}, for art shared by every media window (texture_primary_*). Grid also shows keyart under its title or info overlay, as it always has.",
       "rules": [
         {
           "condition": "equals({art_keyart}, true) + In({layout}, [list, showcase, strip, grid])",
           "type": "append",
           "value": "[{@windows:{window}.window_visible} + $EXP[art_keyart_visible_{window}]]"
+        },
+        {
+          "condition": "not equals({art_keyart}, true) + equals({layout}, grid) + In({details}, [title, info])",
+          "type": "append",
+          "value": "[{@windows:{window}.window_visible} + {condition}]"
         }
       ]
     },

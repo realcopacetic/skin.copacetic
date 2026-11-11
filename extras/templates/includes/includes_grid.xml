@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<mapping>grid</mapping>
+	<includes>
+		<!-- One cell's item layouts per art and size, C1's cell geometry from the mapping -->
+		<template>
+			<include name="blk_grid_layout_{grid_layout}">
+				<include content="tpl_grid_layouts">
+					<param name="border" value="{border}" />
+					<param name="cell_height" value="{cell_h}" />
+					<param name="cell_width" value="{cell_w}" />
+					<param name="condition" value="$PARAM[condition]" />
+					<param name="left" value="{left}" />
+					<param name="progress_left" value="{progress_left}" />
+					<param name="progress_slides" value="{progress_slides}" />
+					<param name="progress_width" value="{progress_width}" />
+					<param name="size" value="{size}" />
+					<param name="texture" value="$PARAM[texture]" />
+					<nested />
+				</include>
+			</include>
+		</template>
+		<!-- The media view's cells: each loads only where a content type shows Grid in its art at the chosen size,
+			and is picked per item by its art at runtime -->
+		<template>
+			<include name="blk_grid_layouts_primary">
+				<include content="blk_grid_layout_{grid_layout}" condition="$EXP[art_{grid_layout}_include_grid_$PARAM[window]]">
+					<param name="condition" value="$EXP[display_{display}_visible]" />
+					<param name="texture" value="$VAR[texture_primary_{art}0]" />
+					<include content="HiddenFocusButton">
+						<param name="folderwatch" value="true" />
+						<param name="id" value="$PARAM[id]" />
+					</include>
+				</include>
+			</include>
+		</template>
+	</includes>
+</xml>
