@@ -24,7 +24,7 @@
 				</include>
 				<include content="img_multiart_focused" condition="$EXP[multiart_window]">
 					<param name="register" value="$PARAM[multiart_register]" />
-					<param name="visible" value="[$PARAM[multiart]] + String.StartsWith(Container(9300).ListItem.Property(current),$PARAM[id]/)" /><!-- a switch's first frame would draw the old container's slide -->
+					<param name="visible" value="[$PARAM[multiart]] + [String.StartsWith(Container(9300).ListItem.Property(current),$PARAM[id]/) | $EXP[multiart_shown]]" /><!-- a switch's first frame would draw the old container's slide; C1: the shown latch holds it through the embedded list's serve -->
 				</include>
 				<nested />
 			</include>
@@ -37,7 +37,7 @@
 		<definition>
 			<include content="img_art">
 				<param name="texture" value="$VAR[texture_$PARAM[texture_stub]$PARAM[position]]" />
-				<animation effect="fadediffuse" end="80000000" time="Default_Transition_1x" delay="Default_Transition_4x" condition="!String.IsEmpty(Container(9300).ListItem.Art(multiart)) + [$PARAM[multiart]]" reversible="false">Conditional</animation><!-- Delay matches img_multiart_focused's fadetime, so the base stays opaque until the overlay is -->
+				<animation effect="fadediffuse" end="80000000" time="Default_Transition_1x" delay="Default_Transition_4x" condition="[!String.IsEmpty(Container(9300).ListItem.Art(multiart)) | $EXP[multiart_shown]] + [$PARAM[multiart]]" reversible="false">Conditional</animation><!-- Delay matches img_multiart_focused's fadetime, so the base stays opaque until the overlay is -->
 			</include>
 		</definition>
 	</include>
