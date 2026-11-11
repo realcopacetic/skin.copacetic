@@ -30,7 +30,7 @@
       "field": "slideshow_path",
       "id": 201,
       "control_type": "button",
-      "visible": "equals({settings_category}, background) + xml(Skin.String(slideshow_source,custom))",
+      "visible": "equals({settings_category}, background)",
       "label": "- $LOCALIZE[31439]",
       "onclick": {
         "type": "browse_content",
@@ -42,7 +42,7 @@
       "field": "slideshow2_path",
       "id": 202,
       "control_type": "button",
-      "visible": "equals({settings_category}, background) + xml(Skin.HasSetting(slideshow2)) + xml(Skin.String(slideshow2_source,custom))",
+      "visible": "equals({settings_category}, background) + xml(Skin.HasSetting(slideshow2))",
       "label": "   - $LOCALIZE[31439]",
       "onclick": {
         "type": "browse_content",

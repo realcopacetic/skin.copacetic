@@ -125,7 +125,7 @@
 		</include>
 		<control type="button" id="201">
 			<description>Slideshow 1 custom path</description>
-			<visible>$EXP[skinsettings_Category_Background]</visible>
+			<visible>$EXP[skinsettings_Category_Background] + [Skin.String(slideshow_source,custom) | !$EXP[Library_Has_Content]]</visible>
 			<label>- $LOCALIZE[31439]</label>
 		</control>
 		<control type="radiobutton" id="1609">
@@ -146,7 +146,7 @@
 		</include>
 		<control type="button" id="202">
 			<description>Slideshow 2 custom path</description>
-			<visible>$EXP[skinsettings_Category_Background]</visible>
+			<visible>$EXP[skinsettings_Category_Background] + Skin.HasSetting(slideshow2) + [Skin.String(slideshow2_source,custom) | !$EXP[Library_Has_Content]]</visible>
 			<label>   - $LOCALIZE[31439]</label>
 		</control>
 		<include content="skinsettings_Double_Slider_Button">
