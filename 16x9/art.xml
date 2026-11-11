@@ -108,10 +108,10 @@
 		</definition>
 	</include>
 
-	<include name="efx_none"><!-- no animation, for an include param that takes one (the ani_dim hooks) -->
+	<include name="efx_none"><!-- C2's: no animation, for an include param that takes one. C1: declares the ani_dim hooks' condition, which they pass -->
 		<param name="condition" default="false" />
 		<definition>
-			<!-- Keep this comment: an include with no child node isn't registered -->
+			<!-- empty: nothing to insert -->
 		</definition>
 	</include>
 
@@ -195,6 +195,7 @@
 		<param name="height" default="720" />
 		<param name="left" default="0" />
 		<param name="orientation" default="vertical" />
+		<param name="dim_secondary" default="false" /><!-- C1: the embedded list's art half bright while this holds -->
 		<param name="secondary" default="false" /><!-- the primary view's region also draws the embedded list's art, below its own -->
 		<param name="top" default="0" />
 		<param name="visible" default="true" />
@@ -214,6 +215,7 @@
 				<scrolltime tween="sine" easing="inout">252</scrolltime><!-- Default_Transition_1x, the old list's slide: scrolltime takes no constant (GUIIncludes.cpp) -->
 				<nested />
 				<include content="blk_secondary_art" condition="$PARAM[secondary]">
+					<param name="dim" value="$PARAM[dim_secondary]" />
 					<param name="height" value="$PARAM[height]" />
 					<param name="texture_stub" value="$PARAM[texture_stub_secondary]" />
 					<param name="width" value="$PARAM[width]" />

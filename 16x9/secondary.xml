@@ -71,6 +71,7 @@
 	</include>
 
 	<include name="blk_secondary_art">
+		<param name="dim" default="false" /><!-- C1: half bright while this holds (Showcase's details over the art); no marks inside to spare -->
 		<param name="height" default="720" />
 		<param name="id" default="3100" />
 		<param name="width" default="480" />
@@ -80,6 +81,7 @@
 				<visible>Control.IsVisible(6315)</visible>
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
+				<animation effect="fadediffuse" end="ff808080" time="0" condition="$PARAM[dim]">Conditional</animation>
 				<include content="tpl_art_focused"><!-- static -->
 					<param name="height" value="$PARAM[height]" />
 					<param name="id" value="$PARAM[id]" />
