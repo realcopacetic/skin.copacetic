@@ -35,6 +35,7 @@
 	<include file="Notifications.xml" />
 	<include file="OnLoadUnload.xml" />
 	<include file="primary.xml" />
+	<include file="reel.xml" />
 	<include file="Scrollbars.xml" />
 	<include file="secondary.xml" />
 	<include file="strip.xml" />

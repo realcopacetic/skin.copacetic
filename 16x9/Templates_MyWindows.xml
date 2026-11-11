@@ -111,8 +111,8 @@
 				<include content="ShowcaseView_Container" condition="$EXP[layout_showcase_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_showcase_visible_$PARAM[window]]" />
 				</include>
-				<include content="ShowcaseView_Display" condition="$EXP[layout_showcase_include_$PARAM[window]]">
-					<param name="art_icon" value="addonbrowser" />
+				<include content="ShowcaseView_Media" condition="$EXP[layout_showcase_include_$PARAM[window]]">
+					<param name="window" value="$PARAM[window]" />
 				</include>
 				<include content="StripView_Container" condition="$EXP[layout_strip_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_strip_visible_$PARAM[window]]" />
@@ -180,7 +180,9 @@
 				<include content="ShowcaseView_Container" condition="$EXP[layout_showcase_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_showcase_visible_$PARAM[window]]" />
 				</include>
-				<include content="ShowcaseView_Display" condition="$EXP[layout_showcase_include_$PARAM[window]]" />
+				<include content="ShowcaseView_Media" condition="$EXP[layout_showcase_include_$PARAM[window]]">
+					<param name="window" value="$PARAM[window]" />
+				</include>
 				<include content="StripView_Container" condition="$EXP[layout_strip_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_strip_visible_$PARAM[window]]" />
 				</include>
@@ -286,7 +288,9 @@
 				<include content="ShowcaseView_Container" condition="$EXP[layout_showcase_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_showcase_visible_$PARAM[window]]" />
 				</include>
-				<include content="ShowcaseView_Display" condition="$EXP[layout_showcase_include_$PARAM[window]]" />
+				<include content="ShowcaseView_Media" condition="$EXP[layout_showcase_include_$PARAM[window]]">
+					<param name="window" value="$PARAM[window]" />
+				</include>
 				<include content="StripView_Container" condition="$EXP[layout_strip_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_strip_visible_$PARAM[window]]" />
 				</include>
@@ -361,8 +365,8 @@
 				<include content="ShowcaseView_Container" condition="$EXP[layout_showcase_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_showcase_visible_$PARAM[window]]" />
 				</include>
-				<include content="ShowcaseView_Display" condition="$EXP[layout_showcase_include_$PARAM[window]]">
-					<param name="art_icon" value="pictures" />
+				<include content="ShowcaseView_Media" condition="$EXP[layout_showcase_include_$PARAM[window]]">
+					<param name="window" value="$PARAM[window]" />
 				</include>
 				<include content="StripView_Container" condition="$EXP[layout_strip_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_strip_visible_$PARAM[window]]" />
@@ -415,7 +419,9 @@
 				<include content="ShowcaseView_Container" condition="$EXP[layout_showcase_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_showcase_visible_$PARAM[window]]" />
 				</include>
-				<include content="ShowcaseView_Display" condition="$EXP[layout_showcase_include_$PARAM[window]]" />
+				<include content="ShowcaseView_Media" condition="$EXP[layout_showcase_include_$PARAM[window]]">
+					<param name="window" value="$PARAM[window]" />
+				</include>
 				<include content="StripView_Container" condition="$EXP[layout_strip_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_strip_visible_$PARAM[window]]" />
 				</include>

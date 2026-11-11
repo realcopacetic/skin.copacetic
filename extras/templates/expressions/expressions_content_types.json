@@ -56,6 +56,17 @@
         }
       ]
     },
+    "display_{item}_include_showcase_{window}": {
+      "note": "Include conditions: some content type in this window shows Showcase with this art (vue_reel), so only that art's vue loads.",
+      "items": [ "posters", "square" ],
+      "rules": [
+        {
+          "condition": "equals({layout}, showcase) + equals({display}, {item})",
+          "type": "assign",
+          "value": "true"
+        }
+      ]
+    },
     "display_{item}_visible": {
       "items": [ "background", "thumbnails", "posters", "fanart", "square" ],
       "rules": [

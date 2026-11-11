@@ -452,54 +452,6 @@
 		</definition>
 	</include>
 
-	<include name="ShowcaseView_Overlay">
-		<control type="group">
-			<visible>!$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo) + !$EXP[Scrollbar_HasFocus]</visible>
-			<visible>![Control.HasFocus(3100) + Control.IsVisible(5008)] + !$EXP[Secondary_List_Container_Switching] + !$EXP[Secondary_List_Content_Switching]</visible>
-			<include content="Visible_Fade_Delayed_Animation" />
-			<width>$PARAM[width]</width>
-			<height>$PARAM[height]</height>
-			<control type="group">
-				<visible>!$EXP[Content_Switching]</visible>
-				<include content="Visible_Fade_Delayed_Long_Animation" />
-				<control type="grouplist">
-					<left>30</left>
-					<right>30</right>
-					<visible>$EXP[ShowcaseView_Details_Overlay_IsVisible] + !Control.HasFocus(3100)</visible>
-					<orientation>vertical</orientation>
-					<align>center</align>
-					<itemgap>0</itemgap>
-					<control type="textbox">
-						<visible>$EXP[ShowcaseView_Display_IsSquare]</visible>
-						<height max="260">auto</height>
-						<font>Showcase_Overlay_Title</font>
-						<textcolor>light</textcolor>
-						<label>$VAR[Title_Label]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-					</control>
-					<control type="textbox">
-						<visible>$EXP[ShowcaseView_Display_IsPosters]</visible>
-						<height max="260">auto</height>
-						<font>Showcase_Title</font>
-						<textcolor>light</textcolor>
-						<label>$VAR[Title_Label]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-					</control>
-					<control type="label">
-						<visible>$EXP[ShowcaseView_Details_Info_Overlay]</visible>
-						<height max="70">auto</height>
-						<font>Showcase_Info</font>
-						<textcolor>light</textcolor>
-						<label>$VAR[Info_Label]</label>
-						<align>center</align>
-					</control>
-				</control>
-			</control>
-		</control>
-	</include>
-
 	<include name="ShowcaseView_Static">
 		<param name="target_id" />
 		<param name="viewtype_label" />

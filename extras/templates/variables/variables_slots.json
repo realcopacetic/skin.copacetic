@@ -22,15 +22,16 @@
       ]
     },
     "texture_{texture_prefix}_poster{range}": {
+      "note": "Keyart also under Showcase's details over the art (Title or Info over the art), where the poster's own title would clash.",
       "templates_from": [ "regions" ],
       "range": { "start": -3, "end": 3 },
       "filter": "In({range}, {slot_range})",
       "values": [
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(thumb)) + [String.IsEqual({listitem}({range}).DBType,episode) | String.IsEqual({listitem}({range}).DBType,album) | Container.Content(addons) | Container.Content(videos)]", "value": "$INFO[{listitem}({range}).Art(thumb)]" },
-        { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(keyart)) + $EXP[art_keyart_{art_context}]", "value": "$INFO[{listitem}({range}).Art(keyart)]" },
+        { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(keyart)) + [$EXP[art_keyart_{art_context}] | $EXP[details_title_overlay_visible] | $EXP[details_info_overlay_visible]]", "value": "$INFO[{listitem}({range}).Art(keyart)]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(poster))", "value": "$INFO[{listitem}({range}).Art(poster)]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(boxfront))", "value": "$INFO[{listitem}({range}).Art(boxfront)]" },
-        { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.keyart)) + $EXP[art_keyart_{art_context}]", "value": "$INFO[{listitem}({range}).Art(tvshow.keyart)]" },
+        { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.keyart)) + [$EXP[art_keyart_{art_context}] | $EXP[details_title_overlay_visible] | $EXP[details_info_overlay_visible]]", "value": "$INFO[{listitem}({range}).Art(tvshow.keyart)]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.poster))", "value": "$INFO[{listitem}({range}).Art(tvshow.poster)]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Icon)", "value": "$INFO[{listitem}({range}).Icon]" }
       ]
