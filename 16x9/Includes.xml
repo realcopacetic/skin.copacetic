@@ -14,7 +14,6 @@
 	<include file="Components_Settings.xml" />
 	<include file="Components_Viewtype_50_List.xml" />
 	<include file="Components_Viewtype_502_Showcase.xml" />
-	<include file="Components_Viewtype_504_Strip.xml" />
 	<include file="Components_Viewtype_505_Grid.xml" />
 	<include file="Components_Viewtypes.xml" />
 	<include file="Components.xml" />
