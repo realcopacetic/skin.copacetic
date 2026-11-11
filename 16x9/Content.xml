@@ -4,32 +4,44 @@
 	<include name="managevideoversions_List_Content">
 		<control type="button" id="21">
 			<description>Play</description>
-			<include content="Hidden_Button_Template" />
+			<include content="Hidden_Button_Slot">
+				<param name="id" value="21" />
+			</include>
 			<onfocus>SetProperty(Focused_Button,$LOCALIZE[208],managevideoversions)</onfocus>
 		</control>
 		<control type="button" id="22">
 			<description>Add version</description>
-			<include content="Hidden_Button_Template" />
+			<include content="Hidden_Button_Slot">
+				<param name="id" value="22" />
+			</include>
 			<onfocus>SetProperty(Focused_Button,$LOCALIZE[40014],managevideoversions)</onfocus>
 		</control>
 		<control type="button" id="27">
 			<description>Choose art</description>
-			<include content="Hidden_Button_Template" />
+			<include content="Hidden_Button_Slot">
+				<param name="id" value="27" />
+			</include>
 			<onfocus>SetProperty(Focused_Button,$LOCALIZE[13511],managevideoversions)</onfocus>
 		</control>
 		<control type="button" id="24">
 			<description>Choose type</description>
-			<include content="Hidden_Button_Template" />
+			<include content="Hidden_Button_Slot">
+				<param name="id" value="24" />
+			</include>
 			<onfocus>SetProperty(Focused_Button,$LOCALIZE[40004],managevideoversions)</onfocus>
 		</control>
 		<control type="button" id="25">
 			<description>Set default</description>
-			<include content="Hidden_Button_Template" />
+			<include content="Hidden_Button_Slot">
+				<param name="id" value="25" />
+			</include>
 			<onfocus>SetProperty(Focused_Button,$LOCALIZE[40023],managevideoversions)</onfocus>
 		</control>
 		<control type="button" id="26">
 			<description>Remove</description>
-			<include content="Hidden_Button_Template" />
+			<include content="Hidden_Button_Slot">
+				<param name="id" value="26" />
+			</include>
 			<onfocus>SetProperty(Focused_Button,$LOCALIZE[15015],managevideoversions)</onfocus>
 		</control>
 	</include>
@@ -64,27 +76,37 @@
 	<include name="managevideoextras_List_Content">
 		<control type="button" id="21">
 			<description>Play</description>
-			<include content="Hidden_Button_Template" />
+			<include content="Hidden_Button_Slot">
+				<param name="id" value="21" />
+			</include>
 			<onfocus>SetProperty(Focused_Button,$LOCALIZE[208],managevideoversions)</onfocus>
 		</control>
 		<control type="button" id="23">
 			<description>Add extra</description>
-			<include content="Hidden_Button_Template" />
+			<include content="Hidden_Button_Slot">
+				<param name="id" value="23" />
+			</include>
 			<onfocus>SetProperty(Focused_Button,$LOCALIZE[40014],managevideoversions)</onfocus>
 		</control>
 		<control type="button" id="27">
 			<description>Choose art</description>
-			<include content="Hidden_Button_Template" />
+			<include content="Hidden_Button_Slot">
+				<param name="id" value="27" />
+			</include>
 			<onfocus>SetProperty(Focused_Button,$LOCALIZE[13511],managevideoversions)</onfocus>
 		</control>
 		<control type="button" id="28">
 			<description>Rename</description>
-			<include content="Hidden_Button_Template" />
+			<include content="Hidden_Button_Slot">
+				<param name="id" value="28" />
+			</include>
 			<onfocus>SetProperty(Focused_Button,$LOCALIZE[40004],managevideoversions)</onfocus>
 		</control>
 		<control type="button" id="26">
 			<description>Remove</description>
-			<include content="Hidden_Button_Template" />
+			<include content="Hidden_Button_Slot">
+				<param name="id" value="26" />
+			</include>
 			<onfocus>SetProperty(Focused_Button,$LOCALIZE[15015],managevideoversions)</onfocus>
 		</control>
 	</include>

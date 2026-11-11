@@ -76,14 +76,21 @@
 			</include>
 			<!-- The buttons, as Button_Group_Template draws them, written out for their conditional actions -->
 			<include content="Hidden_Button_Grouplist">
+				<param name="bottom" value="0" />
+				<param name="height" value="120" />
+				<param name="right" value="40" />
 				<control type="button" id="3012"> <!-- play now, or carry on after the hold; the player first, as a closing dialog drops actions -->
-					<include content="Hidden_Button_Template" />
+					<include content="Hidden_Button_Slot">
+						<param name="id" value="3012" />
+					</include>
 					<onclick condition="!$EXP[playnext_held]">PlayerControl(Next)</onclick>
 					<onclick condition="$EXP[playnext_held]">PlayerControl(Play)</onclick>
 					<onclick>Dialog.Close(1190)</onclick>
 				</control>
 				<control type="button" id="3013"> <!-- cancel: the episode plays out and nothing follows; Playlist.Clear empties the music playlist too -->
-					<include content="Hidden_Button_Template" />
+					<include content="Hidden_Button_Slot">
+						<param name="id" value="3013" />
+					</include>
 					<onclick condition="$EXP[playnext_held]">PlayerControl(Play)</onclick>
 					<onclick>Playlist.Clear</onclick>
 					<onclick>Dialog.Close(1190)</onclick>

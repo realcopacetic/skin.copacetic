@@ -16,8 +16,11 @@
 				<param name="id" value="50" />
 			</include>
 			<include content="Hidden_Button_Grouplist">
+				<param name="bottom" value="30" />
+				<param name="height" value="120" />
 				<param name="onleft" value="50" />
 				<param name="onright" value="noop" />
+				<param name="right" value="60" />
 				<include content="managevideoversions_List_Content" condition="Window.Is(managevideoversions)" />
 				<include content="managevideoextras_List_Content" condition="Window.Is(managevideoextras)" />
 			</include>
