@@ -201,32 +201,6 @@
 		</definition>
 	</include>
 
-	<include name="Icon_Component_Secondary_Mask">
-		<control type="group">
-			<visible>!$EXP[Infoscreen_Widget_HasFocus] + [[Control.HasFocus(3100) + Control.IsVisible(5008)] | $EXP[Secondary_List_Container_Switching]] + !$EXP[TransparentDialog_IsVisible]</visible>
-			<animation effect="fade" start="100" end="0" time="Default_Transition_0.25x" delay="Default_Transition_2x" tween="sine" easing="inout" reversible="true">Hidden</animation>
-			<include content="Dialog_Over_Light_Background_Fadediffuse_Animation" />
-			<width>$PARAM[width]</width>
-			<left>$PARAM[left]</left>
-			<control type="image">
-				<top>-$PARAM[top]</top>
-				<height>$PARAM[top]</height>
-				<texture colordiffuse="$VAR[Secondary_Color]">views/white_100.png</texture>
-			</control>
-			<control type="group">
-				<top>$PARAM[height]</top>
-				<height>$PARAM[bottom]</height>
-				<control type="image">
-					<texture colordiffuse="$VAR[Secondary_Color]">views/white_100.png</texture>
-				</control>
-				<control type="image">
-					<visible>Skin.String(Theme,Light)</visible>
-					<texture colordiffuse="light_grey">views/gradient_light-background_$PARAM[bottom].png</texture>
-				</control>
-			</control>
-		</control>
-	</include>
-
 	<!-- container: the list the slot reads; Container (the focused list) unless a caller names one, as search's preview does.
 		texture: the slot's art, which every caller names -->
 	<include name="ListIcon_Static_Unfocused">
