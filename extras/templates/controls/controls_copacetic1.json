@@ -42,7 +42,7 @@
       "field": "slideshow2_path",
       "id": 202,
       "control_type": "button",
-      "visible": "equals({settings_category}, background) + xml(Skin.HasSetting(slideshow2))",
+      "visible": "equals({settings_category}, background)",
       "label": "   - $LOCALIZE[31439]",
       "onclick": {
         "type": "browse_content",
