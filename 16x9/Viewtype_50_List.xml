@@ -35,13 +35,12 @@
 		</include>
 	</include>
 
-	<!-- The list's art: C2's vue_list_* (list.xml), only the shapes this window's content types chose; the icon serves untyped content.
-		window: whose content types' choices apply (the playlists take music's, and the video playlist always shows the background) -->
+	<!-- The list's art: C2's vue_list_* (list.xml), each shape in the windows it can show in, and the icon for untyped content. By window,
+		not by choice: content from another window's types (video add-ons, music videos in Music) shows List whatever its choice -->
 	<include name="ListView_Display">
 		<param name="art_icon" default="Thumbnail" />
 		<param name="id" default="50" />
 		<param name="visible" default="true" />
-		<param name="window" />
 		<definition>
 			<include content="Viewtype_Display_Template">
 				<param name="visible" value="![$EXP[ListView_Display_IsThumbnails] + Window.IsVisible(selectvideoversion)] + $PARAM[visible]" />
@@ -53,17 +52,17 @@
 					<include content="Visible_Fade_Animation" />
 					<animation effect="zoom" start="60,180,1800,720" end="720,180,1140,720" time="0" condition="$EXP[Containers_Posters] | $EXP[Containers_Square]">Conditional</animation>
 				</include>
-				<include content="vue_list_poster" condition="$EXP[display_posters_include_list_$PARAM[window]]">
+				<include content="vue_list_poster" condition="Window.Is(videos) | Window.Is(programs)">
 					<param name="id" value="$PARAM[id]" />
 					<param name="texture_prefix" value="primary" />
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + $EXP[Containers_Posters]" />
 				</include>
-				<include content="vue_list_square" condition="$EXP[display_square_include_list_$PARAM[window]] + !Window.Is(videoplaylist)">
+				<include content="vue_list_square" condition="Window.Is(videos) | Window.Is(music) | Window.Is(musicplaylist) | Window.Is(pictures) | Window.Is(addonbrowser)">
 					<param name="id" value="$PARAM[id]" />
 					<param name="texture_prefix" value="primary" />
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + $EXP[Containers_Square]" />
 				</include>
-				<include content="vue_list_fanart_thumbnail" condition="$EXP[display_landscape_include_list_$PARAM[window]]">
+				<include content="vue_list_fanart_thumbnail" condition="Window.Is(videos)">
 					<param name="id" value="$PARAM[id]" />
 					<param name="texture_prefix" value="primary" />
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + [Container.Content(videos) | Container.Content(episodes)]" />
@@ -76,7 +75,7 @@
 					<param name="aspectratio" value="keep" />
 					<param name="fadetime" value="0" />
 				</include>
-				<include content="vue_list_fanart" condition="$EXP[display_background_include_list_$PARAM[window]] | Window.Is(videoplaylist)">
+				<include content="vue_list_fanart" condition="!Window.Is(addonbrowser) + !Window.Is(pictures)">
 					<param name="id" value="$PARAM[id]" />
 					<param name="texture_prefix" value="primary" />
 					<param name="visible" value="[$EXP[ListView_Display_IsBackground] + !$EXP[Content_HasBackground] + !Container.Content()] | Window.Is(videoplaylist)" />

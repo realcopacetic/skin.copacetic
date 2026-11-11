@@ -107,7 +107,6 @@
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="ListView_Display">
 					<param name="art_icon" value="addonbrowser" />
-					<param name="window" value="$PARAM[window]" />
 				</include>
 				<include content="ShowcaseView_Container" condition="$EXP[layout_showcase_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_showcase_visible_$PARAM[window]]" />
@@ -171,7 +170,6 @@
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="ListView_Display">
 					<param name="visible" value="!$EXP[TransparentDialog_IsVisible]" />
-					<param name="window" value="$PARAM[window]" />
 				</include>
 				<include content="BillboardView_Container" condition="$EXP[layout_billboard_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_billboard_visible_$PARAM[window]]" />
@@ -281,9 +279,7 @@
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="Trailer_Autoplay_Fade_Animation" condition="$EXP[trailer_include_videos]" />
 				<include content="Secondary_List_Array" condition="Skin.HasSetting(Secondary_List_Enabled)" />
-				<include content="ListView_Display">
-					<param name="window" value="$PARAM[window]" />
-				</include>
+				<include content="ListView_Display" />
 				<include content="BillboardView_Container" condition="$EXP[layout_billboard_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_billboard_visible_$PARAM[window]]" />
 				</include>
@@ -368,7 +364,6 @@
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="ListView_Display">
 					<param name="art_icon" value="pictures" />
-					<param name="window" value="$PARAM[window]" />
 				</include>
 				<include content="ShowcaseView_Container" condition="$EXP[layout_showcase_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_showcase_visible_$PARAM[window]]" />
@@ -417,9 +412,7 @@
 				<include content="WindowOpenClose_Fade_Delayed_Animation" />
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
-				<include content="ListView_Display">
-					<param name="window" value="$PARAM[window]" />
-				</include>
+				<include content="ListView_Display" />
 				<include content="BillboardView_Container" condition="$EXP[layout_billboard_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_billboard_visible_$PARAM[window]]" />
 				</include>
@@ -509,7 +502,6 @@
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="ListView_Display">
 					<param name="art_icon" value="$PARAM[art_icon]" />
-					<param name="window" value="music" /><!-- the music playlist shows the songs' choice; the video playlist always the background -->
 				</include>
 				<include content="Shared_Dialog_Layouts" condition="Skin.HasSetting(Music_Player_Enabled)" />
 			</control>
