@@ -119,6 +119,8 @@
 				</include>
 				<include content="StripView_Display" condition="$EXP[layout_strip_include_$PARAM[window]]">
 					<param name="art_icon" value="addonbrowser" />
+					<param name="texture_close" value=")Content" />
+					<param name="texture_open" value="(" />
 				</include>
 				<include content="Shared_Dialog_Layouts" condition="Skin.HasSetting(Music_Player_Enabled)" />
 				<include content="GridView_Container" condition="$EXP[layout_grid_include_$PARAM[window]]">
@@ -360,6 +362,8 @@
 				</include>
 				<include content="StripView_Display" condition="$EXP[layout_strip_include_$PARAM[window]]">
 					<param name="art_icon" value="addonbrowser" />
+					<param name="texture_close" value=")Content" />
+					<param name="texture_open" value="(" />
 				</include>
 				<include content="Shared_Dialog_Layouts" condition="Skin.HasSetting(Music_Player_Enabled)" />
 				<include content="GridView_Container" condition="$EXP[layout_grid_include_$PARAM[window]]">

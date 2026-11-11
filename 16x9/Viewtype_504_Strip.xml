@@ -17,10 +17,13 @@
 		</control>
 	</include>
 
+	<!-- The media view reads each art's generated family; a window with its own {art_icon}(N)Content family
+		passes art_icon with texture_open "(" and texture_close ")Content" (StripView_Animated) -->
 	<include name="StripView_Display">
 		<param name="id" default="504" />
-		<param name="art_icon" default="Strip" />
 		<param name="media_view" default="true" />
+		<param name="texture_close" default="" />
+		<param name="texture_open" default="" />
 		<param name="widget_view" default="false" />
 		<param name="display" />
 		<definition>
@@ -36,16 +39,22 @@
 					<param name="animated_condition" value="$PARAM[animated_condition]" />
 				</include>
 				<include content="StripView_Art_Posters" condition="$PARAM[media_view] + !Window.Is(addonbrowser)">
-					<param name="target_id" value="$PARAM[id]" />
 					<param name="art_icon" value="$PARAM[art_icon]" />
+					<param name="target_id" value="$PARAM[id]" />
+					<param name="texture_close" value="$PARAM[texture_close]" />
+					<param name="texture_open" value="$PARAM[texture_open]" />
 				</include>
 				<include content="StripView_Art_Fanart" condition="$PARAM[media_view] + !Window.Is(addonbrowser)">
-					<param name="target_id" value="$PARAM[id]" />
 					<param name="art_icon" value="$PARAM[art_icon]" />
+					<param name="target_id" value="$PARAM[id]" />
+					<param name="texture_close" value="$PARAM[texture_close]" />
+					<param name="texture_open" value="$PARAM[texture_open]" />
 				</include>
 				<include content="StripView_Art_Square" condition="$PARAM[media_view]">
-					<param name="target_id" value="$PARAM[id]" />
 					<param name="art_icon" value="$PARAM[art_icon]" />
+					<param name="target_id" value="$PARAM[id]" />
+					<param name="texture_close" value="$PARAM[texture_close]" />
+					<param name="texture_open" value="$PARAM[texture_open]" />
 				</include>
 			</include>
 		</definition>

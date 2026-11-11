@@ -33,7 +33,7 @@
 			<param name="visible" value="!$EXP[Container_Switching] + !$EXP[Options_Switching]" />
 			<param name="left" value="$PARAM[left]" />
 			<param name="top" value="$PARAM[top]" />
-			<param name="art_icon" value="$PARAM[art_icon]" />
+			<param name="texture" value="$VAR[$PARAM[art_icon](0)Content]" />
 			<param name="fallback" value="views/dark_grey_100.png" />
 			<param name="indicator" value="false" />
 			<param name="watched_diffuse" value="[Skin.HasSetting(GridView_WatchedStatus_Enabled) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(addons) + ListItem.Property(Addon.IsInstalled) + !ListItem.Property(Addon.IsEnabled)]" />
@@ -211,7 +211,7 @@
 				<control type="group">
 					<include content="Focus_Zoom_Animation" />
 					<include content="ListIcon_Static_Focused">
-						<param name="art_icon" value="$PARAM[art_icon]" />
+						<param name="texture" value="$VAR[$PARAM[art_icon](0)Content]" />
 						<param name="indicator" value="false" />
 						<param name="fallback" value="views/dark_grey_100.png" />
 						<!-- Multiart -->
@@ -740,7 +740,7 @@
 			<param name="top" value="$PARAM[top]" />
 			<param name="width" value="$PARAM[width]" />
 			<param name="height" value="$PARAM[height]" />
-			<param name="art_icon" value="$PARAM[art_icon]" />
+			<param name="texture" value="$VAR[$PARAM[art_icon]($PARAM[position])Content]" />
 			<param name="art_diffuse" value="false" />
 			<param name="fallback" value="$PARAM[fallback]" />
 			<!-- Progress overlay -->
@@ -760,7 +760,7 @@
 				<param name="top" value="$PARAM[top]" />
 				<param name="width" value="$PARAM[width]" />
 				<param name="height" value="$PARAM[height]" />
-				<param name="art_icon" value="$PARAM[art_icon]" />
+				<param name="texture" value="$VAR[$PARAM[art_icon]($PARAM[position])Content]" />
 				<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 				<param name="fallback" value="$PARAM[fallback]" />
 				<!-- Multiart -->
@@ -793,7 +793,7 @@
 				<param name="top" value="$PARAM[top]" />
 				<param name="width" value="$PARAM[width]" />
 				<param name="height" value="$PARAM[height]" />
-				<param name="art_icon" value="$PARAM[art_icon]" />
+				<param name="texture" value="$VAR[$PARAM[art_icon]($PARAM[position])Content]" />
 				<param name="art_diffuse" value="false" />
 				<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
 				<param name="fallback" value="$PARAM[fallback]" />
@@ -827,7 +827,7 @@
 				<param name="top" value="$PARAM[top]" />
 				<param name="width" value="$PARAM[width]" />
 				<param name="height" value="$PARAM[height]" />
-				<param name="art_icon" value="$PARAM[art_icon]" />
+				<param name="texture" value="$VAR[$PARAM[art_icon]($PARAM[position])Content]" />
 				<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 				<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
 				<param name="art_diffuse_fadeout_1" value="$PARAM[art_diffuse_fadeout_1]" />

@@ -65,12 +65,12 @@
 	</include>
 
 	<include name="Secondary_List_Icon">
-		<param name="artwork" default="Default" />
+		<param name="texture" default="$VAR[Default(0)Content]" />
 		<definition>
 			<control type="group">
 				<control type="image">
 					<animation effect="fadediffuse" end="ff808080" time="0" condition="$EXP[ListView_Display_IsBackground] | $EXP[BillboardView_IsVisible] | [$EXP[ShowcaseView_IsVisible] + $EXP[ShowcaseView_Details_Overlay_IsVisible]]">Conditional</animation>
-					<texture background="true">$VAR[$PARAM[artwork](0)Content]</texture>
+					<texture background="true">$PARAM[texture]</texture>
 					<aspectratio>scale</aspectratio>
 				</control>
 			</control>
@@ -83,7 +83,7 @@
 		<definition>
 			<itemlayout width="$PARAM[width]" height="$PARAM[height]">
 				<include content="Secondary_List_Icon">
-					<param name="artwork" value="$PARAM[artwork]" />
+					<param name="texture" value="$PARAM[texture]" />
 				</include>
 			</itemlayout>
 			<focusedlayout width="$PARAM[width]" height="$PARAM[height]">
@@ -101,7 +101,7 @@
 							<param name="trailer" value="Container(3100).ListItem.Trailer" />
 						</include>
 						<include content="Secondary_List_Icon">
-							<param name="artwork" value="$PARAM[artwork]" />
+							<param name="texture" value="$PARAM[texture]" />
 						</include>
 					</control>
 				</control>
@@ -131,7 +131,7 @@
 		<include content="Secondary_List_Layout">
 			<param name="width" value="720" />
 			<param name="height" value="1080" />
-			<param name="artwork" value="Secondary" />
+			<param name="texture" value="$VAR[Secondary(0)Content]" />
 		</include>
 	</include>
 
@@ -139,7 +139,7 @@
 		<include content="Secondary_List_Layout">
 			<param name="width" value="1080" />
 			<param name="height" value="1080" />
-			<param name="artwork" value="Showcase" />
+			<param name="texture" value="$VAR[Showcase(0)Content]" />
 		</include>
 	</include>
 
@@ -147,7 +147,7 @@
 		<include content="Secondary_List_Layout">
 			<param name="width" value="480" />
 			<param name="height" value="720" />
-			<param name="artwork" value="Strip" />
+			<param name="texture" value="$VAR[texture_primary_poster0]" />
 		</include>
 	</include>
 
@@ -155,7 +155,7 @@
 		<include content="Secondary_List_Layout">
 			<param name="width" value="1120" />
 			<param name="height" value="630" />
-			<param name="artwork" value="Strip" />
+			<param name="texture" value="$VAR[texture_primary_fanart0]" />
 		</include>
 	</include>
 
@@ -163,7 +163,7 @@
 		<include content="Secondary_List_Layout">
 			<param name="width" value="630" />
 			<param name="height" value="630" />
-			<param name="artwork" value="Strip" />
+			<param name="texture" value="$VAR[texture_primary_square0]" />
 		</include>
 	</include>
 

@@ -11,7 +11,7 @@
 				<param name="top" value="$PARAM[top]" />
 				<param name="width" value="$PARAM[width]" />
 				<param name="height" value="$PARAM[height]" />
-				<param name="art_icon" value="$PARAM[art_icon]" />
+				<param name="texture" value="$VAR[$PARAM[art_icon]($PARAM[position])Content]" />
 				<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 				<param name="fallback" value="$PARAM[fallback]" />
 				<!-- Progress overlay -->
@@ -30,7 +30,7 @@
 				<param name="top" value="$PARAM[top]" />
 				<param name="width" value="$PARAM[width]" />
 				<param name="height" value="$PARAM[height]" />
-				<param name="art_icon" value="$PARAM[art_icon]" />
+				<param name="texture" value="$VAR[$PARAM[art_icon]($PARAM[position])Content]" />
 				<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 				<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
 				<param name="art_diffuse_fadeout_1" value="$PARAM[art_diffuse_fadeout_1]" />
@@ -69,7 +69,7 @@
 				<param name="top" value="$PARAM[top]" />
 				<param name="width" value="$PARAM[width]" />
 				<param name="height" value="$PARAM[height]" />
-				<param name="art_icon" value="$PARAM[art_icon]" />
+				<param name="texture" value="$VAR[$PARAM[art_icon]($PARAM[position])Content]" />
 				<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 				<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
 				<param name="art_diffuse_fadeout_1" value="$PARAM[art_diffuse_fadeout_1]" />
@@ -110,7 +110,7 @@
 				<param name="width" value="$PARAM[width]" />
 				<param name="height" value="$PARAM[height]" />
 				<param name="fallback" value="$PARAM[fallback]" />
-				<param name="art_icon" value="$PARAM[art_icon]" />
+				<param name="texture" value="$VAR[$PARAM[art_icon]($PARAM[position])Content]" />
 				<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 				<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
 				<param name="art_diffuse_fadeout_1" value="$PARAM[art_diffuse_fadeout_1]" />

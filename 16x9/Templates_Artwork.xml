@@ -227,7 +227,8 @@
 		</control>
 	</include>
 
-	<!-- container: the list the slot reads; Container (the focused list) unless a caller names one, as search's preview does -->
+	<!-- container: the list the slot reads; Container (the focused list) unless a caller names one, as search's preview does.
+		texture: the slot's art, which every caller names -->
 	<include name="ListIcon_Static_Unfocused">
 		<param name="visible" default="true" />
 		<param name="position" default="0" />
@@ -235,7 +236,6 @@
 		<param name="top" default="0" />
 		<param name="width" default="100%" />
 		<param name="height" default="100%" />
-		<param name="art_icon" default="Thumbnail" />
 		<param name="container" default="Container" />
 		<param name="indicator" default="true" />
 		<param name="fadetime" default="0" />
@@ -248,7 +248,7 @@
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
 				<include content="Icon_Art_Unfocused">
-					<param name="texture" value="$VAR[$PARAM[art_icon]($PARAM[position])Content]" />
+					<param name="texture" value="$PARAM[texture]" />
 					<param name="fadetime" value="$PARAM[fadetime]" />
 					<param name="aspectratio" value="$PARAM[aspectratio]" />
 					<param name="fallback" value="$PARAM[fallback]" />
@@ -271,7 +271,6 @@
 		<param name="top" default="0" />
 		<param name="width" default="100%" />
 		<param name="height" default="100%" />
-		<param name="art_icon" default="Thumbnail" />
 		<param name="container" default="Container" />
 		<param name="indicator" default="true" />
 		<definition>
@@ -284,7 +283,7 @@
 				<height>$PARAM[height]</height>
 				<!-- Artwork -->
 				<include content="Icon_Art_Focused">
-					<param name="texture" value="$VAR[$PARAM[art_icon]($PARAM[position])Content]" />
+					<param name="texture" value="$PARAM[texture]" />
 					<param name="aspectratio" value="$PARAM[aspectratio]" />
 					<param name="fallback" value="$PARAM[fallback]" />
 					<param name="art_diffuse" value="$PARAM[art_diffuse]" />
@@ -308,7 +307,6 @@
 		<param name="top" default="0" />
 		<param name="width" default="100%" />
 		<param name="height" default="100%" />
-		<param name="art_icon" default="Thumbnail" />
 		<param name="container" default="Container" />
 		<param name="indicator" default="true" />
 		<param name="animationeffect" default="fade" />
@@ -325,7 +323,7 @@
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
 				<include content="Icon_Art_Unfocused">
-					<param name="texture" value="$VAR[$PARAM[art_icon]($PARAM[position])Content]" />
+					<param name="texture" value="$PARAM[texture]" />
 					<param name="aspectratio" value="$PARAM[aspectratio]" />
 					<param name="fadetime" value="$PARAM[fadetime]" />
 					<param name="fallback" value="$PARAM[fallback]" />
