@@ -105,9 +105,9 @@
 			<onup condition="!$EXP[Music_Player_IsVisible] + $EXP[trailer_playing]">PlayerControl(Stop)</onup>
 			<onup condition="!$EXP[Music_Player_IsVisible] + !$EXP[trailer_playing] + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onup>
 			<ondown condition="$EXP[trailer_playing]">PlayerControl(Stop)</ondown>
-			<ondown condition="!$EXP[trailer_playing] + $EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)">SetFocus(4108)</ondown><!-- through the list's art in the focus region, which scrolls to it (secondary.xml) -->
-			<ondown condition="!$EXP[trailer_playing] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsGreater(Container.NumItems,9)">SetFocus(4013)</ondown>
-			<ondown condition="!$EXP[trailer_playing] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsLessOrEqual(Container.NumItems,9) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</ondown>
+			<ondown condition="!$EXP[trailer_playing] + $EXP[Secondary_List_Focus] + Control.IsVisible(3100) + Integer.IsGreater(Container(3100).NumItems,0)">SetFocus(4108)</ondown><!-- through the list's art in the focus region, which scrolls to it (secondary.xml). IsVisible: a hidden copy of 3100 keeps its old items -->
+			<ondown condition="!$EXP[trailer_playing] + ![$EXP[Secondary_List_Focus] + Control.IsVisible(3100) + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsGreater(Container.NumItems,9)">SetFocus(4013)</ondown>
+			<ondown condition="!$EXP[trailer_playing] + ![$EXP[Secondary_List_Focus] + Control.IsVisible(3100) + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsLessOrEqual(Container.NumItems,9) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</ondown>
 			<onleft condition="Integer.IsGreater(Container.NumItems,10)">504</onleft>
 			<onleft condition="Integer.IsLessOrEqual(Container.NumItems,10) + Integer.IsGreater(Container.NumItems,1)">0</onleft>
 			<onleft condition="Integer.IsEqual(Container.NumItems,1) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onleft>
