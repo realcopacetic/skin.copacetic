@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- C1's copy of C2's list.xml art (AP A), under C2's names so a C2 fix diffs across. Kodi's list control and its rows stay C1's
+		(Viewtype_50_List.xml); C1's look: no mask or diffuse, the art crossfades on a move, Background half bright with C1's Ken Burns -->
+
+	<include name="vue_list_fanart"><!-- C1: Background, full screen -->
+		<include content="tpl_list_art">
+			<param name="art" value="fanart" />
+			<param name="height" value="1080" />
+			<param name="id" value="$PARAM[id]" />
+			<param name="left" value="0" />
+			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
+			<param name="top" value="0" />
+			<param name="visible" value="$PARAM[visible]" />
+			<param name="width" value="1920" />
+			<animation effect="fadediffuse" end="ff808080" time="0" condition="true">Conditional</animation><!-- C1: half bright under the rows -->
+			<include content="Ken_Burns_Effect_Animation" condition="Skin.HasSetting(List_Ken_Burns_Effect)" />
+		</include>
+	</include>
+
+	<include name="vue_list_fanart_thumbnail"><!-- C1 only: Thumbnails' 16:9 shape (episodes and videos), centred on the left -->
+		<include content="tpl_list_art">
+			<param name="art" value="fanart" />
+			<param name="height" value="405" />
+			<param name="id" value="$PARAM[id]" />
+			<param name="left" value="0" />
+			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
+			<param name="top" value="337.5" />
+			<param name="visible" value="$PARAM[visible]" />
+			<param name="width" value="720" />
+		</include>
+	</include>
+
+	<include name="vue_list_poster"><!-- C1: Thumbnails' poster shape, full height on the left -->
+		<include content="tpl_list_art">
+			<param name="art" value="poster" />
+			<param name="height" value="1080" />
+			<param name="id" value="$PARAM[id]" />
+			<param name="left" value="0" />
+			<param name="progress" value="Window.Is(videos)" />
+			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
+			<param name="top" value="0" />
+			<param name="visible" value="$PARAM[visible]" />
+			<param name="width" value="720" />
+		</include>
+	</include>
+
+	<include name="vue_list_square"><!-- C1: Thumbnails' square shape, centred on the left -->
+		<include content="tpl_list_art">
+			<param name="art" value="square" />
+			<param name="height" value="720" />
+			<param name="id" value="$PARAM[id]" />
+			<param name="left" value="0" />
+			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
+			<param name="top" value="180" />
+			<param name="visible" value="$PARAM[visible]" />
+			<param name="width" value="720" />
+		</include>
+	</include>
+
+	<include name="tpl_list_art"><!-- C1: the vue's own animations go on the anchor (nested); the marks go over the art, outside them -->
+		<param name="progress" default="false" /><!-- C1: the progress overlay at the foot of the art -->
+		<definition>
+			<include content="grp_art_anchor">
+				<param name="height" value="$PARAM[height]" />
+				<param name="left" value="$PARAM[left]" />
+				<param name="top" value="$PARAM[top]" />
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="width" value="$PARAM[width]" />
+				<nested />
+				<include content="Secondary_List_Scroll_Animation" /><!-- C1's on-screen embedded list carries the art away. After the zoom, as Billboard: the zoom scales the slide -->
+				<include content="img_art"><!-- C1's crossfade: an instant copy under the fading art fills the fade's dip -->
+					<param name="fadetime" value="5" />
+					<param name="texture" value="$VAR[texture_$PARAM[texture_prefix]_$PARAM[art]0]" />
+				</include>
+				<include content="tpl_focus_region">
+					<param name="height" value="$PARAM[height]" />
+					<param name="width" value="$PARAM[width]" />
+					<include content="tpl_art_focused">
+						<param name="fadetime" value="360" />
+						<param name="height" value="$PARAM[height]" />
+						<param name="id" value="$PARAM[id]" />
+						<param name="multiart" value="!$EXP[container_scrolling_primary] + [$EXP[multiart_current_3400] | $EXP[multiart_shown]]" /><!-- as Billboard: the old list's art showed the slide inside a movie's versions too -->
+						<param name="position" value="0" />
+						<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+						<param name="width" value="$PARAM[width]" />
+					</include>
+				</include>
+			</include>
+			<control type="group"><!-- C1's collection mark and progress overlay, outside the zoom -->
+				<visible>$PARAM[visible]</visible>
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<include content="Secondary_List_Scroll_Animation" />
+				<include content="grp_collection_indicator">
+					<param name="id" value="$PARAM[id]" />
+					<param name="position" value="0" />
+					<param name="width" value="60" />
+				</include>
+				<include content="Icon_Component_Progress_Overlay" condition="$PARAM[progress]">
+					<param name="visible" value="!String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(0).Label)" />
+				</include>
+			</control>
+		</definition>
+	</include>
+
+</includes>

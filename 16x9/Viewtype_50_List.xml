@@ -35,10 +35,13 @@
 		</include>
 	</include>
 
+	<!-- The list's art: C2's vue_list_* (list.xml), only the shapes this window's content types chose; the icon serves untyped content.
+		window: whose content types' choices apply (the playlists take music's, and the video playlist always shows the background) -->
 	<include name="ListView_Display">
+		<param name="art_icon" default="Thumbnail" />
 		<param name="id" default="50" />
 		<param name="visible" default="true" />
-		<param name="art_icon" default="Thumbnail" />
+		<param name="window" />
 		<definition>
 			<include content="Viewtype_Display_Template">
 				<param name="visible" value="![$EXP[ListView_Display_IsThumbnails] + Window.IsVisible(selectvideoversion)] + $PARAM[visible]" />
@@ -50,26 +53,20 @@
 					<include content="Visible_Fade_Animation" />
 					<animation effect="zoom" start="60,180,1800,720" end="720,180,1140,720" time="0" condition="$EXP[Containers_Posters] | $EXP[Containers_Square]">Conditional</animation>
 				</include>
-				<include content="Artwork_Transition_Fade" condition="Window.Is(videos) | Window.Is(programs)">
+				<include content="vue_list_poster" condition="$EXP[display_posters_include_list_$PARAM[window]]">
+					<param name="id" value="$PARAM[id]" />
+					<param name="texture_prefix" value="primary" />
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + $EXP[Containers_Posters]" />
-					<param name="target_id" value="$PARAM[id]" />
-					<param name="width" value="720" />
-					<param name="art_icon" value="$PARAM[art_icon]" />
-					<param name="include_progress" value="true" />
 				</include>
-				<include content="Artwork_Transition_Fade" condition="Window.Is(videos) | Window.Is(music) | Window.Is(musicplaylist) | Window.Is(pictures) | Window.Is(addonbrowser)">
+				<include content="vue_list_square" condition="$EXP[display_square_include_list_$PARAM[window]] + !Window.Is(videoplaylist)">
+					<param name="id" value="$PARAM[id]" />
+					<param name="texture_prefix" value="primary" />
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + $EXP[Containers_Square]" />
-					<param name="width" value="720" />
-					<param name="height" value="720" />
-					<param name="target_id" value="$PARAM[id]" />
-					<param name="art_icon" value="$PARAM[art_icon]" />
 				</include>
-				<include content="Artwork_Transition_Fade" condition="Window.Is(videos)">
+				<include content="vue_list_fanart_thumbnail" condition="$EXP[display_landscape_include_list_$PARAM[window]]">
+					<param name="id" value="$PARAM[id]" />
+					<param name="texture_prefix" value="primary" />
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + [Container.Content(videos) | Container.Content(episodes)]" />
-					<param name="width" value="720" />
-					<param name="height" value="405" />
-					<param name="target_id" value="$PARAM[id]" />
-					<param name="art_icon" value="$PARAM[art_icon]" />
 				</include>
 				<include content="Simple_ListIcon">
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + !$EXP[Containers_Posters] + !$EXP[Containers_Square] + !Container.Content(videos) + !Container.Content(episodes)" />
@@ -79,11 +76,10 @@
 					<param name="aspectratio" value="keep" />
 					<param name="fadetime" value="0" />
 				</include>
-				<include content="Artwork_Transition_Fade" condition="!Window.Is(addonbrowser) + !Window.Is(pictures)">
+				<include content="vue_list_fanart" condition="$EXP[display_background_include_list_$PARAM[window]] | Window.Is(videoplaylist)">
+					<param name="id" value="$PARAM[id]" />
+					<param name="texture_prefix" value="primary" />
 					<param name="visible" value="[$EXP[ListView_Display_IsBackground] + !$EXP[Content_HasBackground] + !Container.Content()] | Window.Is(videoplaylist)" />
-					<param name="target_id" value="$PARAM[id]" />
-					<param name="art_icon" value="$PARAM[art_icon]" />
-					<param name="kenburns" value="Skin.HasSetting(List_Ken_Burns_Effect)" />
 				</include>
 			</include>
 		</definition>

@@ -32,6 +32,7 @@
 	<include file="Extras_Trailer_Autoplay.xml" />
 	<include file="grid.xml" />
 	<include file="Hidden.xml" />
+	<include file="list.xml" />
 	<include file="Navigation.xml" />
 	<include file="Notifications.xml" />
 	<include file="OnLoadUnload.xml" />
