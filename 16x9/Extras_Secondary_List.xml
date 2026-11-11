@@ -156,6 +156,7 @@
 			<visible>!Control.HasFocus(3100)</visible>
 			<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Hidden</animation>
 		</control>
+		<include content="prb_secondary_art" condition="[Window.Is(videos) + $EXP[layout_strip_include_videos]] | [Window.Is(music) + $EXP[layout_strip_include_music]]" />
 		<control type="group">
 			<visible>!$EXP[Options_Switching] + !$EXP[Container_Switching] + !$EXP[Music_Player_HasFocus]</visible>
 			<include content="Visible_Fade_Animation" />
