@@ -135,6 +135,10 @@
 						<param name="top" value="$PARAM[item_top]" />
 						<param name="width" value="$PARAM[item_width]" />
 						<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="!$EXP[container_scrolling_$PARAM[region]_next]">Conditional</animation>
+						<include content="efx_ladder_next"><!-- C1: off on a fast reversal, while 5002 still holds -->
+							<param name="id" value="$PARAM[id]" />
+							<param name="region" value="$PARAM[region]" />
+						</include>
 						<include content="img_multiart_unfocused" condition="$EXP[multiart_window]">
 							<param name="visible" value="Container($PARAM[id]).OnNext + Integer.IsGreater(Container($PARAM[id]).NumItems,1) + [[String.IsEqual(Container(9300).ListItem.Property(next_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(next),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(next),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_shown] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- C1: or the focus's held slide, while 9300 still holds the embedded list's serve (as Strip's) -->
 							<include content="efx_reel_dim_leave"><!-- C1: the slide dims with the art -->
@@ -209,6 +213,10 @@
 						<param name="top" value="$PARAM[item_top]" />
 						<param name="width" value="$PARAM[item_width]" />
 						<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="![$EXP[container_scrolling_$PARAM[region]_prev] + Control.HasFocus($PARAM[id]) + Integer.IsGreater(Container($PARAM[id]).NumItems,1)]">Conditional</animation>
+						<include content="efx_ladder_prev"><!-- C1: off on a fast reversal, while 5001 still holds -->
+							<param name="id" value="$PARAM[id]" />
+							<param name="region" value="$PARAM[region]" />
+						</include>
 						<animation effect="slide" end="$PARAM[offright_slide],0" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="!Container($PARAM[id]).OnPrevious + $EXP[container_scrolling_$PARAM[region]_prev] + Control.HasFocus($PARAM[id]) + ![$PARAM[right_visible]]">Conditional</animation><!-- C1: on to the right edge, past the details -->
 						<include content="img_multiart_unfocused" condition="$EXP[multiart_window]">
 							<param name="visible" value="Container($PARAM[id]).OnPrevious + Integer.IsGreater(Container($PARAM[id]).NumItems,1) + [[String.IsEqual(Container(9300).ListItem.Property(previous_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(previous),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(previous),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_shown] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- as the exit lane's -->
