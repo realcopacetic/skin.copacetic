@@ -182,6 +182,8 @@
 				<top>$PARAM[top]</top>
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
+				<hitrect x="0" y="0" w="-1" h="-1" /><!-- C1: none of its own (a 0x0 rect still hits its corner, so -1), so a swipe or the wheel over the art
+					reaches the list below; its children are still hit first -->
 				<orientation>$PARAM[orientation]</orientation>
 				<itemgap>0</itemgap>
 				<usecontrolcoords>true</usecontrolcoords>
