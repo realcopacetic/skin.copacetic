@@ -108,12 +108,14 @@
 		<control type="button" id="4107"><!-- C2's 4100: first in the focus region, so focusing it scrolls the region back. C1, as 4101: it holds
 			focus for the scroll (onfocus runs as its Focus animation ends), then resets the list out of sight -->
 			<visible allowhiddenfocus="true">false</visible>
+			<include content="atr_secondary_hold_back" />
 			<onfocus>SetFocus(3100,0,absolute)</onfocus>
 			<onfocus>SetFocus(50)</onfocus>
 			<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Focus</animation>
 		</control>
 		<control type="button" id="4110"><!-- C1: 4107 for Down off the list's last item, which goes on to the scrollbar, as 4103 -->
 			<visible allowhiddenfocus="true">false</visible>
+			<include content="atr_secondary_hold_back" />
 			<onfocus>SetFocus(3100,0,absolute)</onfocus>
 			<onfocus>SetFocus(4013)</onfocus>
 			<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Focus</animation>
@@ -124,6 +126,12 @@
 			<onfocus>SetFocus(4108)</onfocus>
 			<animation effect="slide" end="0,0" time="Default_Transition_0x" reversible="false">Focus</animation>
 		</control>
+	</include>
+
+	<include name="atr_secondary_hold_back"><!-- C1: Back during 4107's or 4110's hold finishes it now, in this window: the reset, then the view.
+		A bare id so Back is consumed; the unfocus drops the hold's own onfocus -->
+		<onback>SetFocus(3100,0,absolute)</onback>
+		<onback>504</onback>
 	</include>
 
 	<include name="prb_secondary_art"><!-- C1: up while the list or a relay holds focus. One copy, processed whatever the views show, so
