@@ -183,7 +183,7 @@
 				<orientation>$PARAM[orientation]</orientation>
 				<itemgap>0</itemgap>
 				<usecontrolcoords>true</usecontrolcoords>
-				<include content="Default_Scrolltime" />
+				<scrolltime tween="sine" easing="inout">252</scrolltime><!-- Default_Transition_1x, the old list's slide: scrolltime takes no constant (GUIIncludes.cpp) -->
 				<nested />
 				<include content="blk_secondary_art" condition="$PARAM[secondary]">
 					<param name="height" value="$PARAM[height]" />
