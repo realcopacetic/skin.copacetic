@@ -88,8 +88,8 @@
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="width" value="$PARAM[item_width]" />
 				<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="$EXP[container_scrolling_$PARAM[region]]">Conditional</animation>
-				<animation effect="fadediffuse" end="ff808080" time="0" condition="[[$PARAM[overlay]] | [$EXP[TransparentDialog_IsVisible] + [$PARAM[right_visible]] + ![$PARAM[overlay]] + !String.IsEmpty(Window(home).Property(OptionsMenuTransition))]] + !$EXP[Infoscreen_Widget_HasFocus]">Conditional</animation><!-- C1: half bright under the overlay details, or under the options menu -->
-				<animation effect="fadediffuse" end="ff808080" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="[$PARAM[right_visible]] + ![$PARAM[overlay]] + [[$EXP[TransparentDialog_IsVisible] + String.IsEmpty(Window(home).Property(OptionsMenuTransition))] | Window.IsVisible(pictureinfo)]">Conditional</animation><!-- C1: dims for a dialog over it -->
+				<animation effect="fadediffuse" end="ff808080" time="0" condition="$EXP[TransparentDialog_IsVisible] + [$PARAM[right_visible]] + ![$PARAM[overlay]] + !String.IsEmpty(Window(home).Property(OptionsMenuTransition)) + !$EXP[Infoscreen_Widget_HasFocus]">Conditional</animation><!-- C1: half bright under the options menu, or dims for a dialog over it (which hide the marks) -->
+				<animation effect="fadediffuse" end="ff808080" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="[$PARAM[right_visible]] + ![$PARAM[overlay]] + [[$EXP[TransparentDialog_IsVisible] + String.IsEmpty(Window(home).Property(OptionsMenuTransition))] | Window.IsVisible(pictureinfo)]">Conditional</animation>
 				<include content="tpl_focus_region">
 					<param name="height" value="$PARAM[item_height]" />
 					<param name="secondary" value="$PARAM[secondary]" />
@@ -98,6 +98,8 @@
 					<param name="zoom_center_next" value="$PARAM[centerx],0" />
 					<param name="zoom_center_prev" value="$PARAM[centerx],$PARAM[item_height]" />
 					<include content="tpl_art_focused">
+						<param name="ani_dim" value="efx_reel_dim_hold" />
+						<param name="ani_dim_condition" value="[$PARAM[overlay]] + !$EXP[Infoscreen_Widget_HasFocus]" /><!-- C1: half bright under the overlay details -->
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="id" value="$PARAM[id]" />
 						<param name="multiart" value="!$EXP[container_scrolling_$PARAM[region]] + [$EXP[multiart_current_3400] | $EXP[multiart_shown]] + !String.IsEqual(Container.FolderName,ListItem.Title)" /><!-- as Strip's: held through the embedded list's serve; not inside a movie's versions -->
@@ -124,6 +126,8 @@
 						<param name="region" value="$PARAM[region]" />
 					</include>
 					<include content="tpl_art_unfocused"><!-- exit lane: rides off the left edge on next. C1: shown only then, as the music player's slide would bring it on screen -->
+						<param name="ani_dim" value="efx_reel_dim_leave" />
+						<param name="ani_dim_condition" value="[!Container($PARAM[id]).OnNext + $EXP[container_scrolling_$PARAM[region]_next] + [$PARAM[right_visible]]] | [$PARAM[overlay]]" /><!-- C1: dims as it leaves the focus with details off -->
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="id" value="$PARAM[id]" />
 						<param name="left" value="$PARAM[posx-1]" />
@@ -132,16 +136,11 @@
 						<param name="top" value="$PARAM[item_top]" />
 						<param name="width" value="$PARAM[item_width]" />
 						<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="!$EXP[container_scrolling_$PARAM[region]_next]">Conditional</animation>
-						<include content="efx_reel_dim">
-							<param name="id" value="$PARAM[id]" />
-							<param name="on" value="Next" />
-							<param name="overlay" value="$PARAM[overlay]" />
-							<param name="region" value="$PARAM[region]" />
-							<param name="right_visible" value="$PARAM[right_visible]" />
-							<param name="scroll" value="next" />
-						</include>
 						<include content="img_multiart_unfocused" condition="$EXP[multiart_window]">
 							<param name="visible" value="Container($PARAM[id]).OnNext + Integer.IsGreater(Container($PARAM[id]).NumItems,1) + [[String.IsEqual(Container(9300).ListItem.Property(next_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(next),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(next),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_shown] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- C1: or the focus's held slide, while 9300 still holds the embedded list's serve (as Strip's) -->
+							<include content="efx_reel_dim_leave"><!-- C1: the slide dims with the art -->
+								<param name="condition" value="[!Container($PARAM[id]).OnNext + $EXP[container_scrolling_$PARAM[region]_next] + [$PARAM[right_visible]]] | [$PARAM[overlay]]" />
+							</include>
 						</include>
 						<include content="grp_reel_marks">
 							<param name="id" value="$PARAM[id]" />
@@ -149,6 +148,8 @@
 						</include>
 					</include>
 					<include content="tpl_art_unfocused"><!-- incoming focused: alpha-gated so the focus region owns the slot at rest -->
+						<param name="ani_dim" value="efx_reel_dim_arrive" />
+						<param name="ani_dim_condition" value="[!Container($PARAM[id]).OnNext + !Container($PARAM[id]).OnPrevious + $EXP[container_scrolling_$PARAM[region]] + ![$PARAM[overlay]]] | ![$PARAM[right_visible]]" /><!-- C1: brightens as it rides into the focus with details off -->
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="id" value="$PARAM[id]" />
 						<param name="left" value="$PARAM[posx0]" />
@@ -157,9 +158,6 @@
 						<param name="top" value="$PARAM[item_top]" />
 						<param name="width" value="$PARAM[item_width]" />
 						<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="!$EXP[container_scrolling_$PARAM[region]]">Conditional</animation>
-						<animation effect="fadediffuse" end="ff808080" time="0" condition="$PARAM[overlay]">Conditional</animation>
-						<animation effect="fadediffuse" end="ff808080" time="0" reversible="false" condition="[Container($PARAM[id]).OnNext | Container($PARAM[id]).OnPrevious] + Integer.IsGreater(Container($PARAM[id]).NumItems,1) + [$PARAM[right_visible]] + ![$PARAM[overlay]]">Conditional</animation><!-- C1: brightens as it rides into the focus -->
-						<animation effect="fadediffuse" start="ff808080" end="ffffffff" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="!Container($PARAM[id]).OnNext + !Container($PARAM[id]).OnPrevious + $EXP[container_scrolling_$PARAM[region]] + Integer.IsGreater(Container($PARAM[id]).NumItems,1) + [$PARAM[right_visible]] + ![$PARAM[overlay]]">Conditional</animation>
 						<include content="efx_reel_ride"><!-- C1: from the right edge, past the details -->
 							<param name="condition" value="![$PARAM[right_visible]]" />
 							<param name="id" value="$PARAM[id]" />
@@ -186,6 +184,8 @@
 						</include>
 					</include>
 					<include content="tpl_art_unfocused"><!-- context item at +1; the overlay below carries the prev-exit role -->
+						<param name="ani_dim" value="efx_reel_dim_hold" />
+						<param name="ani_dim_condition" value="true" /><!-- C1: the neighbours are half bright -->
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="id" value="$PARAM[id]" />
 						<param name="left" value="$PARAM[posx1]" />
@@ -194,13 +194,14 @@
 						<param name="top" value="$PARAM[item_top]" />
 						<param name="visible" value="$PARAM[right_visible]" />
 						<param name="width" value="$PARAM[item_width]" />
-						<animation effect="fadediffuse" end="ff808080" time="0" condition="true">Conditional</animation>
 						<include content="grp_reel_marks">
 							<param name="id" value="$PARAM[id]" />
 							<param name="position" value="1" />
 						</include>
 					</include>
 					<include content="tpl_art_unfocused"><!-- prev exit overlay: keep-alive twin of position 1, opaque only through the prev window -->
+						<param name="ani_dim" value="efx_reel_dim_leave" />
+						<param name="ani_dim_condition" value="[!Container($PARAM[id]).OnPrevious + $EXP[container_scrolling_$PARAM[region]_prev] + [$PARAM[right_visible]]] | [$PARAM[overlay]]" /><!-- as the exit lane's -->
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="id" value="$PARAM[id]" />
 						<param name="left" value="$PARAM[posx1]" />
@@ -210,16 +211,11 @@
 						<param name="width" value="$PARAM[item_width]" />
 						<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="![$EXP[container_scrolling_$PARAM[region]_prev] + Control.HasFocus($PARAM[id]) + Integer.IsGreater(Container($PARAM[id]).NumItems,1)]">Conditional</animation>
 						<animation effect="slide" end="$PARAM[offright_slide],0" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="!Container($PARAM[id]).OnPrevious + $EXP[container_scrolling_$PARAM[region]_prev] + Control.HasFocus($PARAM[id]) + ![$PARAM[right_visible]]">Conditional</animation><!-- C1: on to the right edge, past the details -->
-						<include content="efx_reel_dim">
-							<param name="id" value="$PARAM[id]" />
-							<param name="on" value="Previous" />
-							<param name="overlay" value="$PARAM[overlay]" />
-							<param name="region" value="$PARAM[region]" />
-							<param name="right_visible" value="$PARAM[right_visible]" />
-							<param name="scroll" value="prev" />
-						</include>
 						<include content="img_multiart_unfocused" condition="$EXP[multiart_window]">
 							<param name="visible" value="Container($PARAM[id]).OnPrevious + Integer.IsGreater(Container($PARAM[id]).NumItems,1) + [[String.IsEqual(Container(9300).ListItem.Property(previous_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(previous),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(previous),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_shown] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- as the exit lane's -->
+							<include content="efx_reel_dim_leave"><!-- C1: the slide dims with the art -->
+								<param name="condition" value="[!Container($PARAM[id]).OnPrevious + $EXP[container_scrolling_$PARAM[region]_prev] + [$PARAM[right_visible]]] | [$PARAM[overlay]]" />
+							</include>
 						</include>
 						<include content="grp_reel_marks">
 							<param name="id" value="$PARAM[id]" />
@@ -227,6 +223,8 @@
 						</include>
 					</include>
 					<include content="tpl_art_unfocused">
+						<param name="ani_dim" value="efx_reel_dim_hold" />
+						<param name="ani_dim_condition" value="true" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="id" value="$PARAM[id]" />
 						<param name="left" value="$PARAM[posx2]" />
@@ -235,13 +233,14 @@
 						<param name="top" value="$PARAM[item_top]" />
 						<param name="visible" value="$PARAM[right_visible]" />
 						<param name="width" value="$PARAM[item_width]" />
-						<animation effect="fadediffuse" end="ff808080" time="0" condition="true">Conditional</animation>
 						<include content="grp_reel_marks">
 							<param name="id" value="$PARAM[id]" />
 							<param name="position" value="2" />
 						</include>
 					</include>
 					<include content="tpl_art_unfocused" condition="$PARAM[outer]">
+						<param name="ani_dim" value="efx_reel_dim_hold" />
+						<param name="ani_dim_condition" value="true" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="id" value="$PARAM[id]" />
 						<param name="left" value="$PARAM[posx3]" />
@@ -250,7 +249,6 @@
 						<param name="top" value="$PARAM[item_top]" />
 						<param name="visible" value="$PARAM[right_visible]" />
 						<param name="width" value="$PARAM[item_width]" />
-						<animation effect="fadediffuse" end="ff808080" time="0" condition="true">Conditional</animation>
 						<include content="grp_reel_marks">
 							<param name="id" value="$PARAM[id]" />
 							<param name="position" value="3" />
@@ -299,10 +297,18 @@
 		<animation effect="slide" start="$PARAM[slide],0" end="0,0" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="!Container($PARAM[id]).On$PARAM[on] + $EXP[container_scrolling_$PARAM[region]_$PARAM[scroll]] + !String.IsEqual(Window(home).Property(LastScroll),$PARAM[last]) + Control.HasFocus($PARAM[id]) + Integer.IsGreater(Container($PARAM[id]).NumItems,1) + [$PARAM[condition]]">Conditional</animation>
 	</include>
 
-	<!-- C1: the outgoing focus dims to half as it rides out with details off; under the overlay details it stays half bright -->
-	<include name="efx_reel_dim">
-		<animation effect="fadediffuse" end="ff808080" time="0" condition="$PARAM[overlay]">Conditional</animation>
-		<animation effect="fadediffuse" end="ff808080" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="!Container($PARAM[id]).On$PARAM[on] + $EXP[container_scrolling_$PARAM[region]_$PARAM[scroll]] + [$PARAM[right_visible]] + ![$PARAM[overlay]]">Conditional</animation>
+	<!-- C1's dims, for the art's ani_dim hook (art.xml), so the marks over the art stay bright as they did -->
+	<include name="efx_reel_dim_hold"><!-- half bright while condition -->
+		<animation effect="fadediffuse" end="ff808080" time="0" condition="$PARAM[condition]">Conditional</animation>
+	</include>
+
+	<include name="efx_reel_dim_leave"><!-- to half over 1x as condition rises, back at once as it falls, so each ride starts bright -->
+		<animation effect="fadediffuse" end="ff808080" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="$PARAM[condition]">Conditional</animation>
+	</include>
+
+	<include name="efx_reel_dim_arrive"><!-- C2's ani_fadediffuse_darken50_out: half bright while condition is false, up to full over 1x as it rises -->
+		<animation effect="fadediffuse" end="ff808080" time="0" condition="![$PARAM[condition]]">Conditional</animation>
+		<animation effect="fadediffuse" start="ff808080" end="ffffffff" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="$PARAM[condition]">Conditional</animation>
 	</include>
 
 	<!-- C1's marks on a tile: the progress shade (Videos), the focus border (border: the focus's tiles), the collection mark -->

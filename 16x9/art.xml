@@ -4,6 +4,8 @@
 		C1's look: no diffuses, view masks, blur bands, now-playing marks or add-on plate, and C1's timing constants -->
 
 	<include name="tpl_art_focused">
+		<param name="ani_dim" default="efx_none" />
+		<param name="ani_dim_condition" default="false" />
 		<param name="multiart" default="false" />
 		<param name="multiart_register" default="3400" />
 		<param name="position" default="0" />
@@ -18,6 +20,8 @@
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="width" value="$PARAM[width]" />
 				<include content="img_art_base">
+					<param name="ani_dim" value="$PARAM[ani_dim]" />
+					<param name="ani_dim_condition" value="$PARAM[ani_dim_condition]" />
 					<param name="fadetime" value="$PARAM[fadetime]" /><!-- C1: Billboard's crossfade -->
 					<param name="multiart" value="$PARAM[multiart]" />
 					<param name="position" value="$PARAM[position]" />
@@ -26,6 +30,9 @@
 				<include content="img_multiart_focused" condition="$EXP[multiart_window]">
 					<param name="register" value="$PARAM[multiart_register]" />
 					<param name="visible" value="[$PARAM[multiart]] + [String.StartsWith(Container(9300).ListItem.Property(current),$PARAM[id]/) | $EXP[multiart_shown]]" /><!-- a switch's first frame would draw the old container's slide; C1: the shown latch holds it through the embedded list's serve -->
+					<include content="$PARAM[ani_dim]"><!-- C1: the slide dims with the art -->
+						<param name="condition" value="$PARAM[ani_dim_condition]" />
+					</include>
 				</include>
 				<nested />
 			</include>
@@ -33,6 +40,8 @@
 	</include>
 
 	<include name="img_art_base"><!-- Default base image for tpl_art_focused -->
+		<param name="ani_dim" default="efx_none" />
+		<param name="ani_dim_condition" default="false" />
 		<param name="multiart" default="false" />
 		<param name="position" default="0" />
 		<definition>
@@ -40,6 +49,9 @@
 				<param name="fadetime" value="$PARAM[fadetime]" />
 				<param name="texture" value="$VAR[texture_$PARAM[texture_stub]$PARAM[position]]" />
 				<animation effect="fadediffuse" end="80000000" time="Default_Transition_1x" delay="Default_Transition_4x" condition="[!String.IsEmpty(Container(9300).ListItem.Art(multiart)) | $EXP[multiart_shown]] + [$PARAM[multiart]]" reversible="false">Conditional</animation><!-- Delay matches img_multiart_focused's fadetime, so the base stays opaque until the overlay is -->
+				<include content="$PARAM[ani_dim]"><!-- Dim hook on the image only: on grp_icon a fadediffuse would also tint the nested marks -->
+					<param name="condition" value="$PARAM[ani_dim_condition]" />
+				</include>
 			</include>
 		</definition>
 	</include>
@@ -71,6 +83,8 @@
 	</include>
 
 	<include name="tpl_art_unfocused">
+		<param name="ani_dim" default="efx_none" />
+		<param name="ani_dim_condition" default="false" />
 		<param name="position" default="0" />
 		<param name="visible" default="true" />
 		<definition>
@@ -85,9 +99,19 @@
 				<include content="img_art">
 					<param name="fadetime" value="$PARAM[fadetime]" />
 					<param name="texture" value="$VAR[texture_$PARAM[texture_stub]$PARAM[position]]" />
+					<include content="$PARAM[ani_dim]"><!-- Dim hook on the image only: on grp_icon a fadediffuse would also tint the nested marks -->
+						<param name="condition" value="$PARAM[ani_dim_condition]" />
+					</include>
 				</include>
 				<nested />
 			</include>
+		</definition>
+	</include>
+
+	<include name="efx_none"><!-- no animation, for an include param that takes one (the ani_dim hooks) -->
+		<param name="condition" default="false" />
+		<definition>
+			<!-- Keep this comment: an include with no child node isn't registered -->
 		</definition>
 	</include>
 
