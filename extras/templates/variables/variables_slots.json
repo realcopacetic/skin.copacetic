@@ -58,7 +58,7 @@
       ]
     },
     "texture_{texture_prefix}_{item}{range}": {
-      "note": "A Strip rail's slots (Home rows, search rails and the preview, info screen rails): its own art, in the rails' order, keyart and landscape on the row's fields. A Home row never shows the slots left of its focus, so -3 and -2 stay empty.",
+      "note": "A Strip rail's slots (Home rows, search rails and the preview, info screen rails): its own art, in each scope's order of old: a Home row's chain, keyart and landscape on its fields; search and info rails fanart (not for an episode), then Icon, which hides an unwatched episode's thumb as Kodi's setting asks. A Home row never shows the slots left of its focus, so -3 and -2 stay empty.",
       "templates_from": [ "widgets", "search", "infoscreen" ],
       "index": { "start": 3201 },
       "items": [ "poster", "fanart", "square" ],
@@ -72,13 +72,14 @@
         { "filter": "equals({item}, poster)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(poster))", "value": "$INFO[{listitem}({range}).Art(poster)]" },
         { "filter": "equals({item}, poster) + not equals({window}, home)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.poster))", "value": "$INFO[{listitem}({range}).Art(tvshow.poster)]" },
         { "filter": "equals({item}, fanart) + equals({episode_thumbs}, true)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(thumb)) + [String.IsEqual({listitem}NoWrap({range}).DBType,episode) | String.IsEqual({listitem}NoWrap({range}).DBType,video)]", "value": "$INFO[{listitem}({range}).Art(thumb)]" },
-        { "filter": "equals({item}, square)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.square))", "value": "$INFO[{listitem}({range}).Art(tvshow.square)]" },
-        { "filter": "equals({item}, square)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(square))", "value": "$INFO[{listitem}({range}).Art(square)]" },
-        { "filter": "equals({item}, square)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(thumb))", "value": "$INFO[{listitem}({range}).Art(thumb)]" },
+        { "filter": "equals({item}, square) + equals({window}, home)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.square))", "value": "$INFO[{listitem}({range}).Art(tvshow.square)]" },
+        { "filter": "equals({item}, square) + equals({window}, home)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(square))", "value": "$INFO[{listitem}({range}).Art(square)]" },
+        { "filter": "equals({item}, square) + equals({window}, home)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(thumb))", "value": "$INFO[{listitem}({range}).Art(thumb)]" },
         { "filter": "not equals({item}, poster) + equals({art_landscape}, true)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.landscape))", "value": "$INFO[{listitem}({range}).Art(tvshow.landscape)]" },
         { "filter": "not equals({item}, poster) + equals({art_landscape}, true)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(landscape)) + !String.IsEqual({listitem}NoWrap({range}).DBType,album) + !String.IsEqual({listitem}NoWrap({range}).DBType,song)", "value": "$INFO[{listitem}({range}).Art(landscape)]" },
-        { "filter": "not equals({item}, poster)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.fanart))", "value": "$INFO[{listitem}({range}).Art(tvshow.fanart)]" },
-        { "filter": "not equals({item}, poster)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(fanart)) + !String.IsEqual({listitem}NoWrap({range}).DBType,album) + !String.IsEqual({listitem}NoWrap({range}).DBType,song)", "value": "$INFO[{listitem}({range}).Art(fanart)]" },
+        { "filter": "not equals({item}, poster) + equals({window}, home)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.fanart))", "value": "$INFO[{listitem}({range}).Art(tvshow.fanart)]" },
+        { "filter": "not equals({item}, poster) + equals({window}, home)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(fanart)) + !String.IsEqual({listitem}NoWrap({range}).DBType,album) + !String.IsEqual({listitem}NoWrap({range}).DBType,song)", "value": "$INFO[{listitem}({range}).Art(fanart)]" },
+        { "filter": "equals({item}, fanart) + not equals({window}, home)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(fanart)) + !String.IsEqual({listitem}NoWrap({range}).DBType,episode)", "value": "$INFO[{listitem}({range}).Art(fanart)]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Icon)", "value": "$INFO[{listitem}({range}).Icon]" }
       ]
     },

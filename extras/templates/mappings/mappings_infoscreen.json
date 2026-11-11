@@ -9,7 +9,7 @@
       "art_landscape": "false",
       "container": "Container({id})",
       "custom": "true",
-      "episode_thumbs": "true",
+      "episode_thumbs": "false",
       "listitem": "Container({id}).ListItem",
       "nib": "Control.IsVisible({id})",
       "rail_id": "{id}",

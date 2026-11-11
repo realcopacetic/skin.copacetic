@@ -17,7 +17,7 @@
     "tokens": {
       "art_keyart": "false",
       "art_landscape": "false",
-      "episode_thumbs": "true",
+      "episode_thumbs": "false",
       "hasfocus": "[Window.Is(1180) + Control.HasFocus({index})]",
       "listitem": "Container({index}).ListItem",
       "rail_id": "{index}",
