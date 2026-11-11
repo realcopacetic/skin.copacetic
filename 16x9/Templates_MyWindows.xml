@@ -289,6 +289,7 @@
 					<param name="visible" value="$EXP[layout_showcase_visible_$PARAM[window]]" />
 				</include>
 				<include content="ShowcaseView_Media" condition="$EXP[layout_showcase_include_$PARAM[window]]">
+					<param name="secondary" value="Skin.HasSetting(Secondary_List_Enabled)" />
 					<param name="window" value="$PARAM[window]" />
 				</include>
 				<include content="StripView_Container" condition="$EXP[layout_strip_include_$PARAM[window]]">

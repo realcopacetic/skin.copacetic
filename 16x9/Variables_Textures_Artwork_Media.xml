@@ -100,23 +100,6 @@
 		<value condition="!String.IsEmpty(ListItem(0).Icon)">$INFO[ListItem(0).Icon]</value>
 	</variable>
 
-	<!-- The embedded list's art in Showcase (Secondary(0)Content, 1080x1080_Layout) until it moves to the focus region -->
-	<variable name="Showcase(0)Content">
-		<value condition="!String.IsEmpty(ListItemNoWrap(0).Art(square)) + $EXP[ShowcaseView_Display_IsSquare]">$INFO[ListItem(0).Art(square)]</value>
-		<value condition="!String.IsEmpty(ListItemNoWrap(0).Art(snap)) + $EXP[ShowcaseView_Display_IsSquare]">$INFO[ListItem(0).Art(snap)]</value>
-		<value condition="!String.IsEmpty(ListItemNoWrap(0).Art(icon)) + $EXP[ShowcaseView_Display_IsSquare] + $EXP[Container_Programs_IsFolders]">$INFO[ListItem(0).Art(icon)]</value>
-		<value condition="!String.IsEmpty(ListItemNoWrap(0).Art(thumb)) + [String.IsEqual(ListItem(0).DBType,artist) | String.IsEqual(ListItem(0).DBType,album) | Container.Content(addons)]">$INFO[ListItem(0).Art(thumb)]</value>
-		<value condition="!String.IsEmpty(ListItemNoWrap(0).Art(fanart)) + $EXP[ShowcaseView_Display_IsSquare]">$INFO[ListItem(0).Art(fanart)]</value>
-		<value condition="!String.IsEmpty(ListItemNoWrap(0).Art(keyart)) + $EXP[ShowcaseView_Display_IsSquare]">$INFO[ListItem(0).Art(keyart)]</value>
-		<value condition="!String.IsEmpty(ListItemNoWrap(0).Art(tvshow.square)) + $EXP[ShowcaseView_Display_IsSquare]">$INFO[ListItem(0).Art(tvshow.square)]</value>
-		<value condition="!String.IsEmpty(ListItemNoWrap(0).Art(tvshow.fanart)) + $EXP[ShowcaseView_Display_IsSquare]">$INFO[ListItem(0).Art(tvshow.fanart)]</value>
-		<value condition="!String.IsEmpty(ListItemNoWrap(0).Art(keyart)) + [$EXP[ShowcaseView_Details_Overlay_IsVisible] | $EXP[art_keyart_visible]]">$INFO[ListItem(0).Art(keyart)]</value>
-		<value condition="!String.IsEmpty(ListItemNoWrap(0).Art(poster))">$INFO[ListItem(0).Art(poster)]</value>
-		<value condition="!String.IsEmpty(ListItemNoWrap(0).Art(boxfront))">$INFO[ListItem(0).Art(boxfront)]</value>
-		<value condition="!String.IsEmpty(ListItemNoWrap(0).Art(tvshow.keyart)) + [$EXP[ShowcaseView_Details_Overlay_IsVisible] | $EXP[art_keyart_visible]]">$INFO[ListItem(0).Art(tvshow.keyart)]</value>
-		<value condition="!String.IsEmpty(ListItemNoWrap(0).Art(tvshow.poster))">$INFO[ListItem(0).Art(tvshow.poster)]</value>
-		<value condition="!String.IsEmpty(ListItemNoWrap(0).Icon)">$INFO[ListItem(0).Icon]</value>
-	</variable>
 	<variable name="Thumbnail(-3)Content">
 		<value />
 	</variable>
@@ -171,11 +154,6 @@
 	</variable>
 	<variable name="Thumbnail(6)Content">
 		<value />
-	</variable>
-
-	<variable name="Secondary(0)Content">
-		<value condition="$EXP[ShowcaseView_IsVisible]">$VAR[Showcase(0)Content]</value>
-		<value>$VAR[Default(0)Content]</value>
 	</variable>
 
 	<variable name="Multiart_Type_Media">

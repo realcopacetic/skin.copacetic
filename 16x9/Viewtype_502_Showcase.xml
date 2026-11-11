@@ -22,8 +22,9 @@
 	</include>
 
 	<!-- The media windows' Showcase: C2's vue_reel (reel.xml) in the display's wrapper, which hides it while the listing changes,
-		fades it for a trailer and slides posters with details right of the music player -->
+		fades it for a trailer and slides posters with details right of the music player. secondary: as StripView_Media's -->
 	<include name="ShowcaseView_Media">
+		<param name="secondary" default="false" />
 		<param name="window" />
 		<definition>
 			<include content="Viewtype_Display_Template">
@@ -34,6 +35,7 @@
 				<include content="Trailer_Autoplay_Fade_Animation" condition="$EXP[trailer_include_$PARAM[window]]" />
 				<include content="vue_reel">
 					<param name="id" value="502" />
+					<param name="secondary" value="$PARAM[secondary]" />
 					<param name="window" value="$PARAM[window]" />
 				</include>
 			</include>

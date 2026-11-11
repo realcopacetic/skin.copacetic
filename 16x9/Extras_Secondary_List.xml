@@ -131,15 +131,6 @@
 		<include content="Secondary_List_Layout">
 			<param name="width" value="720" />
 			<param name="height" value="1080" />
-			<param name="texture" value="$VAR[Secondary(0)Content]" />
-		</include>
-	</include>
-
-	<include name="1080x1080_Layout">
-		<include content="Secondary_List_Layout">
-			<param name="width" value="1080" />
-			<param name="height" value="1080" />
-			<param name="texture" value="$VAR[Showcase(0)Content]" />
 		</include>
 	</include>
 
@@ -156,14 +147,13 @@
 			<visible>!Control.HasFocus(3100)</visible>
 			<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Hidden</animation>
 		</control>
-		<include content="prb_secondary_art" condition="[Window.Is(videos) + $EXP[layout_strip_include_videos]] | [Window.Is(music) + $EXP[layout_strip_include_music]]" />
+		<include content="prb_secondary_art" condition="[Window.Is(videos) + [$EXP[layout_strip_include_videos] | $EXP[layout_showcase_include_videos]]] | [Window.Is(music) + [$EXP[layout_strip_include_music] | $EXP[layout_showcase_include_music]]]" />
 		<control type="group">
 			<visible>!$EXP[Options_Switching] + !$EXP[Container_Switching] + !$EXP[Music_Player_HasFocus]</visible>
 			<include content="Visible_Fade_Animation" />
 			<include content="Secondary_List_Hidden_Controls" />
 			<include content="Secondary_List" condition="Window.Is(videos)">
-				<param name="visible" value="[$EXP[ListView_Display_IsThumbnails] | $EXP[ShowcaseView_Display_IsPosters]] + $EXP[Secondary_List_Video_Conditions]" />
-				<animation effect="slide" start="0,0" end="360,0" time="Default_Transition_1x" tween="sine" easing="inout" reversible="true" condition="$EXP[ShowcaseView_Display_IsPosters] + !$EXP[ShowcaseView_Details_Off] + Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio">Conditional</animation>
+				<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + $EXP[Secondary_List_Video_Conditions]" />
 			</include>
 			<include content="Secondary_List" condition="Window.Is(music)">
 				<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + Container.Content(artists)" />
@@ -178,17 +168,12 @@
 				<param name="layout" value="1920x1080" />
 				<animation effect="slide" start="0,0" end="1920,-1080" time="0" condition="$EXP[ListView_Display_IsBackground]">Conditional</animation>
 			</include>
-			<include content="Secondary_List" condition="[Window.Is(videos) + $EXP[layout_showcase_include_videos]] | [Window.Is(music) + $EXP[layout_showcase_include_music]]">
-				<param name="visible" value="$EXP[ShowcaseView_Display_IsSquare] + [$EXP[Secondary_List_Video_Conditions] | Container.Content(artists)]" />
-				<param name="width" value="1080" />
-				<param name="layout" value="1080x1080" />
+			<!-- Strip and Showcase: off screen, its art drawn in the view's focus region (secondary.xml) -->
+			<include content="ctn_secondary" condition="Window.Is(videos) + [$EXP[layout_strip_include_videos] | $EXP[layout_showcase_include_videos]]">
+				<param name="visible" value="[[$EXP[StripView_Display_IsPosters] | $EXP[StripView_Display_IsFanart] | $EXP[ShowcaseView_IsVisible]] + $EXP[Secondary_List_Video_Conditions]] | [$EXP[ShowcaseView_Display_IsSquare] + Container.Content(artists)]" />
 			</include>
-			<!-- Strip: off screen, its art drawn in the view's focus region (secondary.xml) -->
-			<include content="ctn_secondary" condition="Window.Is(videos) + $EXP[layout_strip_include_videos]">
-				<param name="visible" value="[$EXP[StripView_Display_IsPosters] | $EXP[StripView_Display_IsFanart]] + $EXP[Secondary_List_Video_Conditions]" />
-			</include>
-			<include content="ctn_secondary" condition="Window.Is(music) + $EXP[layout_strip_include_music]">
-				<param name="visible" value="$EXP[StripView_Display_IsSquare] + Container.Content(artists)" />
+			<include content="ctn_secondary" condition="Window.Is(music) + [$EXP[layout_strip_include_music] | $EXP[layout_showcase_include_music]]">
+				<param name="visible" value="[$EXP[StripView_Display_IsSquare] | $EXP[ShowcaseView_Display_IsSquare]] + Container.Content(artists)" />
 			</include>
 			<include content="Secondary_List" condition="Window.Is(videos)">
 				<param name="visible" value="Control.HasFocus(505) + ListItem.IsCollection" />

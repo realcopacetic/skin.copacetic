@@ -5,16 +5,19 @@
 		no ring, context fade, label, masks, diffuses or now-playing marks -->
 
 	<include name="vue_reel">
+		<param name="secondary" default="false" />
 		<definition>
 			<include content="vue_reel_poster" condition="$EXP[display_posters_include_showcase_$PARAM[window]]">
 				<param name="id" value="$PARAM[id]" />
 				<param name="region" value="primary" />
+				<param name="secondary" value="$PARAM[secondary]" />
 				<param name="texture_prefix" value="primary" />
 				<param name="visible" value="$EXP[display_posters_visible]" />
 			</include>
 			<include content="vue_reel_square" condition="$EXP[display_square_include_showcase_$PARAM[window]]">
 				<param name="id" value="$PARAM[id]" />
 				<param name="region" value="primary" />
+				<param name="secondary" value="$PARAM[secondary]" />
 				<param name="texture_prefix" value="primary" />
 				<param name="visible" value="$EXP[display_square_visible]" />
 			</include>
@@ -25,6 +28,7 @@
 	<include name="vue_reel_poster">
 		<include content="tpl_reel">
 			<param name="art" value="poster" />
+			<param name="centerx" value="360" />
 			<param name="id" value="$PARAM[id]" />
 			<param name="item_height" value="1080" />
 			<param name="item_slide" value="720" />
@@ -39,6 +43,7 @@
 			<param name="posx2" value="1440" />
 			<param name="posx3" value="2160" />
 			<param name="region" value="$PARAM[region]" />
+			<param name="secondary" value="$PARAM[secondary]" />
 			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
 			<param name="visible" value="$PARAM[visible]" />
 		</include>
@@ -47,6 +52,7 @@
 	<include name="vue_reel_square">
 		<include content="tpl_reel">
 			<param name="art" value="square" />
+			<param name="centerx" value="540" />
 			<param name="id" value="$PARAM[id]" />
 			<param name="item_height" value="1080" />
 			<param name="item_slide" value="1080" />
@@ -59,6 +65,7 @@
 			<param name="posx1" value="1080" />
 			<param name="posx2" value="2160" />
 			<param name="region" value="$PARAM[region]" />
+			<param name="secondary" value="$PARAM[secondary]" />
 			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
 			<param name="visible" value="$PARAM[visible]" />
 		</include>
@@ -72,6 +79,7 @@
 		<param name="overlay" default="$EXP[ShowcaseView_Details_Overlay_IsVisible]" />
 		<param name="player_visible" default="false" />
 		<param name="right_visible" default="$EXP[ShowcaseView_Details_Off]" />
+		<param name="secondary" default="false" /><!-- true where the embedded list (3100) draws its art in the focus region, below the view's -->
 		<definition>
 			<include content="grp_art_anchor"><!-- focused artwork -->
 				<param name="height" value="$PARAM[item_height]" />
@@ -82,10 +90,13 @@
 				<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="$EXP[container_scrolling_$PARAM[region]]">Conditional</animation>
 				<animation effect="fadediffuse" end="ff808080" time="0" condition="[[$PARAM[overlay]] | [$EXP[TransparentDialog_IsVisible] + [$PARAM[right_visible]] + ![$PARAM[overlay]] + !String.IsEmpty(Window(home).Property(OptionsMenuTransition))]] + !$EXP[Infoscreen_Widget_HasFocus]">Conditional</animation><!-- C1: half bright under the overlay details, or under the options menu -->
 				<animation effect="fadediffuse" end="ff808080" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="[$PARAM[right_visible]] + ![$PARAM[overlay]] + [[$EXP[TransparentDialog_IsVisible] + String.IsEmpty(Window(home).Property(OptionsMenuTransition))] | Window.IsVisible(pictureinfo)]">Conditional</animation><!-- C1: dims for a dialog over it -->
-				<include content="Secondary_List_Scroll_Animation" /><!-- C1's on-screen embedded list carries the art up -->
 				<include content="tpl_focus_region">
 					<param name="height" value="$PARAM[item_height]" />
+					<param name="secondary" value="$PARAM[secondary]" />
+					<param name="texture_stub_secondary" value="secondary_$PARAM[art]" />
 					<param name="width" value="$PARAM[item_width]" />
+					<param name="zoom_center_next" value="$PARAM[centerx],0" />
+					<param name="zoom_center_prev" value="$PARAM[centerx],$PARAM[item_height]" />
 					<include content="tpl_art_focused">
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="id" value="$PARAM[id]" />
@@ -99,6 +110,7 @@
 							<param name="id" value="$PARAM[id]" />
 							<param name="position" value="0" />
 						</include>
+						<include content="btn_secondary_redirect" condition="$PARAM[secondary]" />
 					</include>
 				</include>
 			</include>
