@@ -43,6 +43,7 @@
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(snap))", "value": "$INFO[{listitem}({range}).Art(snap)]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(icon)) + $EXP[Container_Programs_IsFolders]", "value": "$INFO[{listitem}({range}).Art(icon)]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(thumb)) + [String.IsEqual({listitem}({range}).DBType,artist) | String.IsEqual({listitem}({range}).DBType,episode) | String.IsEqual({listitem}({range}).DBType,album) | Container.Content(addons) | Container.Content(videos)]", "value": "$INFO[{listitem}({range}).Art(thumb)]" },
+        { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Icon) + [[Container.Content(addons) + !Window.IsVisible(programs)] | Container.Content(images)]", "value": "$INFO[{listitem}({range}).Icon]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(landscape)) + $EXP[art_landscape_{art_context}]", "value": "$INFO[{listitem}({range}).Art(landscape)]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(fanart))", "value": "$INFO[{listitem}({range}).Art(fanart)]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.landscape)) + $EXP[art_landscape_{art_context}]", "value": "$INFO[{listitem}({range}).Art(tvshow.landscape)]" },
