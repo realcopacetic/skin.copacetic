@@ -130,7 +130,7 @@
 		</control>
 	</include>
 
-	<include name="atr_secondary_hold_back"><!-- C1: Back on a relay (4107's or 4110's hold, 4111's frame) finishes in this window: the reset, then the view.
+	<include name="atr_secondary_hold_back"><!-- C1: Back on a relay (4107's or 4110's hold, 4111's frame on the menu key's return) finishes in this window: the reset, then the view.
 		A bare id so Back is consumed; the unfocus drops the relay's own onfocus -->
 		<onback>SetFocus(3100,0,absolute)</onback>
 		<onback>50</onback>
