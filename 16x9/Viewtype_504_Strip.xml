@@ -60,9 +60,8 @@
 		</definition>
 	</include>
 
-	<!-- A rail's Strip art (Home rows, search rails, info screen rails): C2's vue_strip_<art> on the rail's slot family
-		(texture_<texture_prefix>_<art>N) and scroll names (container_scrolling_<region>), dimmed under a transparent dialog as before.
-		left_visible: the slots left of the focus show (Home rows never; the art then sits at the media view's details-on place) -->
+	<!-- A rail's Strip art: C2's vue_strip_<art> on the rail's texture_prefix and region, dimmed under a transparent dialog as before.
+		left_visible: the slots left of the focus show (never in Home, whose art then sits at the details-on place) -->
 	<include name="StripView_Rail">
 		<param name="ladders_visible" default="true" /><!-- the transition ladders' visible: a search rail's preview is moved by its cursor resets, so it keeps them off -->
 		<definition>

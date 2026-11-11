@@ -48,6 +48,7 @@
 			<include content="Visible_Fade_Delayed_Long_Animation" />
 			<include content="tpl_strip_art">
 				<param name="art" value="square" />
+				<param name="centerx" value="240" />
 				<param name="focus_height" value="480" />
 				<param name="focus_top" value="300" />
 				<param name="focus_width" value="480" />
