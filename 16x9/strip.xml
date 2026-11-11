@@ -736,12 +736,4 @@
 		</definition>
 	</include>
 
-	<!-- C1's collection mark on a slot whose item is a set or has versions, which the embedded list opens -->
-	<include name="grp_collection_indicator">
-		<include content="Icon_Component_Indicator" condition="Skin.HasSetting(Secondary_List_Enabled)">
-			<param name="visible" value="Container($PARAM[id]).ListItemNoWrap($PARAM[position]).IsCollection | [Container($PARAM[id]).ListItemNoWrap($PARAM[position]).HasVideoVersions + !String.IsEqual(Container.FolderName,Container($PARAM[id]).ListItemNoWrap($PARAM[position]).Title)]" />
-			<param name="width" value="$PARAM[width]" />
-		</include>
-	</include>
-
 </includes>
