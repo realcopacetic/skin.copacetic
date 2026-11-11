@@ -35,7 +35,7 @@
 						<param name="fadetime" value="360" />
 						<param name="height" value="$PARAM[height]" />
 						<param name="id" value="$PARAM[id]" />
-						<param name="multiart" value="!$EXP[container_scrolling_primary] + [$EXP[multiart_current_3400] | $EXP[multiart_shown]]" /><!-- as Strip's: multiart_shown holds it while the embedded list's serve replaces 9300 -->
+						<param name="multiart" value="!$EXP[container_scrolling_primary] + [$EXP[multiart_current_3400] | $EXP[multiart_shown]]" /><!-- the old Billboard's: unlike Strip's, also inside a movie's versions; multiart_shown holds it through the embedded list's serve -->
 						<param name="position" value="0" />
 						<param name="texture_stub" value="$PARAM[texture_prefix]_fanart" />
 						<param name="width" value="$PARAM[width]" />
