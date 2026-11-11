@@ -3,17 +3,6 @@
 	<!-- C1's copy of C2's grid.xml, under C2's names so a C2 fix diffs across. C1's look: C1's cells and its three Grid sizes
 		(a Skin setting), drop shadows, border, watched dim and checkmarks; no rings, masks, diffuses or now-playing marks -->
 
-	<include name="ctn_grid">
-		<param name="base" default="ctn_grid_primary" /><!-- mount target: the media view's; a rail would pass its own -->
-		<definition>
-			<include content="$PARAM[base]">
-				<param name="id" value="$PARAM[id]" />
-				<param name="visible" value="$PARAM[visible]" />
-				<param name="window" value="$PARAM[window]" />
-			</include>
-		</definition>
-	</include>
-
 	<!-- The media view: the panel's shape and navigation follow Grid size, the cells each content type's art -->
 	<include name="ctn_grid_primary">
 		<include content="ctn_grid_base">
@@ -169,12 +158,12 @@
 	<include name="ctn_grid_base">
 		<definition>
 			<control type="panel" id="$PARAM[id]">
-				<viewtype label="Grid">icon</viewtype>
 				<visible>$PARAM[visible]</visible>
 				<left>50</left>
 				<top>180</top>
 				<pagecontrol>60</pagecontrol>
 				<preloaditems>2</preloaditems>
+				<viewtype label="Grid">icon</viewtype>
 				<include content="Default_Scrolltime" />
 				<nested />
 			</control>

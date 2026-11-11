@@ -49,7 +49,7 @@
 				<include content="GridView_Slides_Small" condition="Skin.String(GridView_Size,Small)" />
 				<include content="GridView_Slides_Horizontal" condition="Skin.String(GridView_Size,Horizontal)" />
 				<!-- List -->
-				<include content="ctn_grid">
+				<include content="ctn_grid_primary">
 					<param name="id" value="505" />
 					<param name="visible" value="$PARAM[visible]" />
 					<param name="window" value="$PARAM[window]" />
