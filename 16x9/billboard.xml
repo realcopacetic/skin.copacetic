@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- C1's copy of C2's billboard.xml, under C2's names so a C2 fix diffs across. C1's look: parallax off (none of its buttons,
+		properties or hooks), the art crossfades on a move, half bright, with C1's Ken Burns; no spotlight body (C1's details stay) -->
+
+	<include name="vue_billboard_fanart">
+		<include content="tpl_billboard_art">
+			<param name="id" value="$PARAM[id]" />
+			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
+		</include>
+	</include>
+
+	<include name="tpl_billboard_art">
+		<param name="height" default="1080" />
+		<param name="visible" default="true" />
+		<param name="width" default="1920" />
+		<definition>
+			<include content="grp_art_anchor">
+				<param name="height" value="$PARAM[height]" />
+				<param name="left" value="0" />
+				<param name="top" value="0" />
+				<param name="visible" value="$PARAM[visible]" />
+				<param name="width" value="$PARAM[width]" />
+				<animation effect="fadediffuse" end="ff808080" time="0" condition="true">Conditional</animation><!-- C1: half bright under the details -->
+				<include content="Ken_Burns_Effect_Animation" condition="Skin.HasSetting(List_Ken_Burns_Effect)" />
+				<include content="Secondary_List_Scroll_Animation" /><!-- C1's on-screen embedded list carries the art up. After the zoom, as before: the zoom scales the slide -->
+				<include content="img_art"><!-- C1's crossfade: an instant copy under the fading art fills the fade's dip -->
+					<param name="fadetime" value="5" />
+					<param name="texture" value="$VAR[texture_$PARAM[texture_prefix]_fanart0]" />
+				</include>
+				<include content="tpl_focus_region">
+					<param name="height" value="$PARAM[height]" />
+					<param name="width" value="$PARAM[width]" />
+					<include content="tpl_art_focused">
+						<param name="fadetime" value="360" />
+						<param name="height" value="$PARAM[height]" />
+						<param name="id" value="$PARAM[id]" />
+						<param name="multiart" value="!$EXP[container_scrolling_primary] + [$EXP[multiart_current_3400] | $EXP[multiart_shown]]" /><!-- as Strip's: multiart_shown holds it while the embedded list's serve replaces 9300 -->
+						<param name="position" value="0" />
+						<param name="texture_stub" value="$PARAM[texture_prefix]_fanart" />
+						<param name="width" value="$PARAM[width]" />
+					</include>
+				</include>
+			</include>
+			<control type="group"><!-- C1's collection mark, outside the zoom -->
+				<include content="Secondary_List_Scroll_Animation" />
+				<include content="grp_collection_indicator">
+					<param name="id" value="$PARAM[id]" />
+					<param name="position" value="0" />
+					<param name="width" value="60" />
+				</include>
+			</control>
+		</definition>
+	</include>
+
+</includes>

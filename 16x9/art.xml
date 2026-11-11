@@ -18,6 +18,7 @@
 				<param name="visible" value="$PARAM[visible]" />
 				<param name="width" value="$PARAM[width]" />
 				<include content="img_art_base">
+					<param name="fadetime" value="$PARAM[fadetime]" /><!-- C1: Billboard's crossfade -->
 					<param name="multiart" value="$PARAM[multiart]" />
 					<param name="position" value="$PARAM[position]" />
 					<param name="texture_stub" value="$PARAM[texture_stub]" />
@@ -36,6 +37,7 @@
 		<param name="position" default="0" />
 		<definition>
 			<include content="img_art">
+				<param name="fadetime" value="$PARAM[fadetime]" />
 				<param name="texture" value="$VAR[texture_$PARAM[texture_stub]$PARAM[position]]" />
 				<animation effect="fadediffuse" end="80000000" time="Default_Transition_1x" delay="Default_Transition_4x" condition="[!String.IsEmpty(Container(9300).ListItem.Art(multiart)) | $EXP[multiart_shown]] + [$PARAM[multiart]]" reversible="false">Conditional</animation><!-- Delay matches img_multiart_focused's fadetime, so the base stays opaque until the overlay is -->
 			</include>

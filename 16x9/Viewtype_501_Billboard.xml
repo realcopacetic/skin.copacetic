@@ -16,6 +16,24 @@
 		</control>
 	</include>
 
+	<!-- The media windows' Billboard: C2's vue_billboard_fanart (billboard.xml) in the display's wrapper, which hides it while the listing
+		changes and fades it for a trailer -->
+	<include name="BillboardView_Media">
+		<param name="window" />
+		<definition>
+			<include content="Viewtype_Display_Template">
+				<param name="media_view" value="true" />
+				<param name="viewtype_label" value="Billboard" />
+				<include content="Trailer_Autoplay_Fade_Animation" condition="$EXP[trailer_include_$PARAM[window]]" />
+				<include content="vue_billboard_fanart">
+					<param name="id" value="501" />
+					<param name="texture_prefix" value="primary" />
+				</include>
+			</include>
+		</definition>
+	</include>
+
+	<!-- The rails' Billboard (Home rows, info screen rails): the rail's art through the list's crossfade -->
 	<include name="BillboardView_Art_Fanart">
 		<include content="Artwork_Transition_Fade">
 			<param name="target_id" value="$PARAM[target_id]" />

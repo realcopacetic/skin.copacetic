@@ -3,6 +3,7 @@
 	<include file="Actions.xml" />
 	<include file="Animations.xml" />
 	<include file="art.xml" />
+	<include file="billboard.xml" />
 	<include file="Buttons_Infoscreen_Path_Tracer.xml" />
 	<include file="Colors.xml" />
 	<include file="Components_Buttons.xml" />

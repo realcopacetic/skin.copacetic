@@ -174,7 +174,9 @@
 				<include content="BillboardView_Container" condition="$EXP[layout_billboard_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_billboard_visible_$PARAM[window]]" />
 				</include>
-				<include content="BillboardView_Display" condition="$EXP[layout_billboard_include_$PARAM[window]]" />
+				<include content="BillboardView_Media" condition="$EXP[layout_billboard_include_$PARAM[window]]">
+					<param name="window" value="$PARAM[window]" />
+				</include>
 				<include content="ShowcaseView_Container" condition="$EXP[layout_showcase_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_showcase_visible_$PARAM[window]]" />
 				</include>
@@ -278,7 +280,9 @@
 				<include content="BillboardView_Container" condition="$EXP[layout_billboard_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_billboard_visible_$PARAM[window]]" />
 				</include>
-				<include content="BillboardView_Display" condition="$EXP[layout_billboard_include_$PARAM[window]]" />
+				<include content="BillboardView_Media" condition="$EXP[layout_billboard_include_$PARAM[window]]">
+					<param name="window" value="$PARAM[window]" />
+				</include>
 				<include content="ShowcaseView_Container" condition="$EXP[layout_showcase_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_showcase_visible_$PARAM[window]]" />
 				</include>
@@ -405,7 +409,9 @@
 				<include content="BillboardView_Container" condition="$EXP[layout_billboard_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_billboard_visible_$PARAM[window]]" />
 				</include>
-				<include content="BillboardView_Display" condition="$EXP[layout_billboard_include_$PARAM[window]]" />
+				<include content="BillboardView_Media" condition="$EXP[layout_billboard_include_$PARAM[window]]">
+					<param name="window" value="$PARAM[window]" />
+				</include>
 				<include content="ShowcaseView_Container" condition="$EXP[layout_showcase_include_$PARAM[window]]">
 					<param name="visible" value="$EXP[layout_showcase_visible_$PARAM[window]]" />
 				</include>
