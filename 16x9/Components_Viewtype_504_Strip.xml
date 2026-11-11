@@ -128,8 +128,8 @@
 		<param name="3x_item_width_plus_focus_width" />
 		<param name="4x_item_width_plus_focus_width" />
 		<param name="art_icon" />
-		<!-- Each slot reads $VAR[{art_icon}{texture_open}N{texture_close}]: the caller's {art_icon}(N)Content family,
-			or with both passed empty the media view's generated texture_primary_{art}N -->
+		<!-- Each slot reads $VAR[{art_icon}{texture_open}N{texture_close}], the rail's {art_icon}(N)Content family. Only the
+			media view passed texture_open and texture_close (empty); it now runs on vue_strip (strip.xml) -->
 		<param name="texture_close" default=")Content" />
 		<param name="texture_open" default="(" />
 		<param name="fallback" />
@@ -737,10 +737,9 @@
 		</definition>
 	</include>
 
-	<!-- art_icon: the art's generated family (texture_primary_{art}N) unless a caller names its own -->
 	<include name="StripView_Art_Posters">
 		<param name="target_id" />
-		<param name="art_icon" default="texture_primary_poster" />
+		<param name="art_icon" />
 		<definition>
 			<include content="StripView_Art">
 				<param name="target_id" value="$PARAM[target_id]" />
@@ -771,7 +770,7 @@
 
 	<include name="StripView_Art_Fanart">
 		<param name="target_id" />
-		<param name="art_icon" default="texture_primary_fanart" />
+		<param name="art_icon" />
 		<definition>
 			<include content="StripView_Art">
 				<param name="target_id" value="$PARAM[target_id]" />
@@ -802,7 +801,7 @@
 
 	<include name="StripView_Art_Square">
 		<param name="target_id" />
-		<param name="art_icon" default="texture_primary_square" />
+		<param name="art_icon" />
 		<definition>
 			<include content="StripView_Art">
 				<param name="target_id" value="$PARAM[target_id]" />
