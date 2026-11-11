@@ -395,10 +395,14 @@
 	<include name="SettingsCategory_Layout">
 		<param name="alt_right_id" default="20" />
 		<param name="alt_right_condition" default="false" />
+		<param name="dialog" default="false" />
+		<param name="icon" default="$VAR[SettingsCategory_Icon_Texture]" />
 		<param name="iconborder" default="false" />
+		<param name="title_label" default="$VAR[Title_Breadcrumb_Label]" />
 		<definition>
 			<include content="Breadcrumb_Label">
 				<param name="left" value="90" />
+				<param name="title_label" value="$PARAM[title_label]" />
 				<param name="visible" value="!Window.IsVisible(textviewer)" />
 			</include>
 			<!-- Arrows when focused -->
@@ -430,7 +434,7 @@
 				<left>15</left>
 				<width>60</width>
 				<height>60</height>
-				<texture colordiffuse="light">$VAR[SettingsCategory_Icon_Texture]</texture>
+				<texture colordiffuse="light">$PARAM[icon]</texture>
 			</control>
 			<!-- Hidden list -->
 			<control type="grouplist" id="3000">
@@ -440,6 +444,10 @@
 				<width>60</width>
 				<height>60</height>
 				<orientation>vertical</orientation>
+				<!-- In a dialog 3001 is alone, so the grouplist hands it these Up and Down: a modal dialog can't change windows,
+					so they only record the window the helper opens once it has closed the editor -->
+				<onup condition="$PARAM[dialog]">SetProperty(host_exit_target,filemanager,home)</onup>
+				<ondown condition="$PARAM[dialog]">SetProperty(host_exit_target,interfacesettings,home)</ondown>
 				<onleft condition="!$PARAM[alt_right_condition]">$PARAM[right_list_id]</onleft>
 				<onleft condition="$PARAM[alt_right_condition]">$PARAM[alt_right_id]</onleft>
 				<onright>$PARAM[left_list_id]</onright>
@@ -448,50 +456,54 @@
 				<scrolltime>0</scrolltime>
 				<control type="button" id="3001">
 					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
-					<onfocus condition="!Window.Is(skinsettings)">ReplaceWindowAndFocus(skinsettings,3001)</onfocus>
+					<onfocus condition="!$PARAM[dialog] + !Window.Is(skinsettings)">ReplaceWindowAndFocus(skinsettings,3001)</onfocus>
 				</control>
-				<control type="button" id="3002">
-					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
-					<onfocus condition="!Window.Is(interfacesettings)">ReplaceWindowAndFocus(interfacesettings,3002)</onfocus>
-				</control>
-				<control type="button" id="3003">
-					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
-					<onfocus condition="!Window.Is(mediasettings)">ReplaceWindowAndFocus(mediasettings,3003)</onfocus>
-				</control>
-				<control type="button" id="3004">
-					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
-					<onfocus condition="!Window.Is(playersettings)">ReplaceWindowAndFocus(playersettings,3004)</onfocus>
-				</control>
-				<control type="button" id="3005">
-					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
-					<onfocus condition="!Window.Is(systemsettings)">ReplaceWindowAndFocus(systemsettings,3005)</onfocus>
-				</control>
-				<control type="button" id="3006">
-					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
-					<onfocus condition="!Window.Is(servicesettings)">ReplaceWindowAndFocus(servicesettings,3006)</onfocus>
-				</control>
-				<control type="button" id="3007">
-					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
-					<onfocus condition="!Window.Is(gamesettings)">ReplaceWindowAndFocus(gamesettings,3007)</onfocus>
-				</control>
-				<control type="button" id="3008">
-					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
-					<onfocus condition="!Window.Is(pvrsettings)">ReplaceWindowAndFocus(pvrsettings,3008)</onfocus>
-				</control>
-				<control type="button" id="3009">
-					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
-					<onfocus condition="!Window.Is(profiles)">ReplaceWindowAndFocus(profiles,3009)</onfocus>
-				</control>
-				<control type="button" id="3010">
-					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
-					<onfocus condition="!Window.Is(systeminfo)">ReplaceWindowAndFocus(systeminfo,3010)</onfocus>
-				</control>
-				<control type="button" id="3011">
-					<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
-					<onfocus condition="!Window.Is(filemanager)">ReplaceWindowAndFocus(filemanager,3011)</onfocus>
-				</control>
+				<include content="SettingsCategory_Windows" condition="!$PARAM[dialog]" />
 			</control>
 		</definition>
+	</include>
+
+	<include name="SettingsCategory_Windows">
+		<control type="button" id="3002">
+			<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
+			<onfocus condition="!Window.Is(interfacesettings)">ReplaceWindowAndFocus(interfacesettings,3002)</onfocus>
+		</control>
+		<control type="button" id="3003">
+			<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
+			<onfocus condition="!Window.Is(mediasettings)">ReplaceWindowAndFocus(mediasettings,3003)</onfocus>
+		</control>
+		<control type="button" id="3004">
+			<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
+			<onfocus condition="!Window.Is(playersettings)">ReplaceWindowAndFocus(playersettings,3004)</onfocus>
+		</control>
+		<control type="button" id="3005">
+			<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
+			<onfocus condition="!Window.Is(systemsettings)">ReplaceWindowAndFocus(systemsettings,3005)</onfocus>
+		</control>
+		<control type="button" id="3006">
+			<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
+			<onfocus condition="!Window.Is(servicesettings)">ReplaceWindowAndFocus(servicesettings,3006)</onfocus>
+		</control>
+		<control type="button" id="3007">
+			<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
+			<onfocus condition="!Window.Is(gamesettings)">ReplaceWindowAndFocus(gamesettings,3007)</onfocus>
+		</control>
+		<control type="button" id="3008">
+			<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
+			<onfocus condition="!Window.Is(pvrsettings)">ReplaceWindowAndFocus(pvrsettings,3008)</onfocus>
+		</control>
+		<control type="button" id="3009">
+			<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
+			<onfocus condition="!Window.Is(profiles)">ReplaceWindowAndFocus(profiles,3009)</onfocus>
+		</control>
+		<control type="button" id="3010">
+			<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
+			<onfocus condition="!Window.Is(systeminfo)">ReplaceWindowAndFocus(systeminfo,3010)</onfocus>
+		</control>
+		<control type="button" id="3011">
+			<animation effect="slide" start="0" end="0" time="Default_Transition_0.5x">Hidden</animation>
+			<onfocus condition="!Window.Is(filemanager)">ReplaceWindowAndFocus(filemanager,3011)</onfocus>
+		</control>
 	</include>
 
 	<include name="Settings_Level_Button">

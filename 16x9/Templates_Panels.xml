@@ -51,7 +51,10 @@
 		<param name="panel_edge_bottom" default="180" />
 		<param name="alt_right_id" default="20" />
 		<param name="alt_right_condition" default="false" />
+		<param name="dialog" default="false" />
+		<param name="icon" default="$VAR[SettingsCategory_Icon_Texture]" />
 		<param name="include_settings_categories" default="true" />
+		<param name="title_label" default="$VAR[Title_Breadcrumb_Label]" />
 		<definition>
 			<include content="Transparent_Dialog_Panel">
 				<param name="visible" value="$PARAM[visible]" />
@@ -70,6 +73,9 @@
 					<param name="right_list_id" value="$PARAM[right_list_id]" />
 					<param name="alt_right_id" value="$PARAM[alt_right_id]" />
 					<param name="alt_right_condition" value="$PARAM[alt_right_condition]" />
+					<param name="dialog" value="$PARAM[dialog]" />
+					<param name="icon" value="$PARAM[icon]" />
+					<param name="title_label" value="$PARAM[title_label]" />
 				</include>
 				<nested />
 			</control>
