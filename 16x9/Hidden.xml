@@ -311,6 +311,7 @@
 			<param name="target_id" value="SetFocus(52)" />
 		</include>
 		<include content="Custom_List">
+			<param name="ladders" value="true" />
 			<param name="type" value="fixedlist" />
 			<param name="visible" value="true" />
 			<param name="id" value="52" />

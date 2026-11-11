@@ -42,6 +42,36 @@
 				<param name="unfocused_color" value="light" />
 			</include>
 		</include>
-		<include content="StripView_Art_loginscreen" />
+		<!-- The profiles in Strip (C2's strip template, texture_loginscreen_squareN), squares as the media view's but smaller: 360, focus 480 -->
+		<control type="group">
+			<visible>!$EXP[Hidden_Focus_Setter] + !System.HasVisibleModalDialog</visible>
+			<include content="Visible_Fade_Delayed_Long_Animation" />
+			<include content="tpl_strip_art">
+				<param name="art" value="square" />
+				<param name="focus_height" value="480" />
+				<param name="focus_top" value="300" />
+				<param name="focus_width" value="480" />
+				<param name="id" value="52" />
+				<param name="item_height" value="360" />
+				<param name="item_slide" value="360" />
+				<param name="item_top" value="360" />
+				<param name="item_width" value="360" />
+				<param name="ladders_visible" value="true" />
+				<param name="left_visible" value="true" />
+				<param name="offleft_posx" value="-480" />
+				<param name="offleft_slide" value="1200" />
+				<param name="posx-1" value="360" />
+				<param name="posx-2" value="0" />
+				<param name="posx-3" value="-360" />
+				<param name="posx0" value="720" />
+				<param name="posx1" value="1200" />
+				<param name="posx2" value="1560" />
+				<param name="posx3" value="1920" />
+				<param name="region" value="primary" />
+				<param name="shadow_left" value="600" />
+				<param name="texture_prefix" value="loginscreen" />
+				<param name="visible" value="true" />
+			</include>
+		</control>
 	</controls>
 </window>

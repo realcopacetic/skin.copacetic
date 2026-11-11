@@ -296,25 +296,25 @@
 		<value condition="String.IsEqual(Container.FolderPath,plugin://plugin.program.advanced.emulator.launcher/) + $EXP[GridView_IsVisible] + !String.IsEmpty(ListItem(0).Art(fanart))">$INFO[ListItem(0).Art(icon)]</value>
 	</variable>
 
-	<variable name="loginscreen(-3)Content">
+	<variable name="texture_loginscreen_square-3">
 		<value condition="!String.IsEmpty(Container(52).ListItemNoWrap(-3).Label) + !String.IsEmpty(Container(52).ListItem(-3).Icon)">$INFO[Container(52).ListItem(-3).Icon]</value>
 	</variable>
-	<variable name="loginscreen(-2)Content">
+	<variable name="texture_loginscreen_square-2">
 		<value condition="!String.IsEmpty(Container(52).ListItemNoWrap(-2).Label) + !String.IsEmpty(Container(52).ListItem(-2).Icon)">$INFO[Container(52).ListItem(-2).Icon]</value>
 	</variable>
-	<variable name="loginscreen(-1)Content">
+	<variable name="texture_loginscreen_square-1">
 		<value condition="!String.IsEmpty(Container(52).ListItemNoWrap(-1).Label) + !String.IsEmpty(Container(52).ListItem(-1).Icon)">$INFO[Container(52).ListItem(-1).Icon]</value>
 	</variable>
-	<variable name="loginscreen(0)Content">
+	<variable name="texture_loginscreen_square0">
 		<value condition="!String.IsEmpty(Container(52).ListItem(0).Icon)">$INFO[Container(52).ListItem(0).Icon]</value>
 	</variable>
-	<variable name="loginscreen(1)Content">
+	<variable name="texture_loginscreen_square1">
 		<value condition="!String.IsEmpty(Container(52).ListItemNoWrap(1).Label) + !String.IsEmpty(Container(52).ListItem(1).Icon)">$INFO[Container(52).ListItem(1).Icon]</value>
 	</variable>
-	<variable name="loginscreen(2)Content">
+	<variable name="texture_loginscreen_square2">
 		<value condition="!String.IsEmpty(Container(52).ListItemNoWrap(2).Label) + !String.IsEmpty(Container(52).ListItem(2).Icon)">$INFO[Container(52).ListItem(2).Icon]</value>
 	</variable>
-	<variable name="loginscreen(3)Content">
+	<variable name="texture_loginscreen_square3">
 		<value condition="!String.IsEmpty(Container(52).ListItemNoWrap(3).Label) + !String.IsEmpty(Container(52).ListItem(3).Icon)">$INFO[Container(52).ListItem(3).Icon]</value>
 	</variable>
 
