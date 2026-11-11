@@ -90,10 +90,6 @@
 		<value condition="Control.HasFocus(3100)">light</value>
 		<value>blank</value>
 	</variable>
-	<variable name="Background_Ellipsis_Color">
-		<value condition="$EXP[Dominant_Color_Night]">$INFO[Container(9300).ListItem.Art(background_palette_logo)]</value>
-		<value>$VAR[Accent_Color]</value>
-	</variable>
 	<variable name="Flag_Color">
 		<value condition="$EXP[Dominant_Color_Night]">$INFO[Container(9300).ListItem.Art(background_palette_logo)]</value>
 		<value condition="$EXP[Container_HasBackground]">light</value>
