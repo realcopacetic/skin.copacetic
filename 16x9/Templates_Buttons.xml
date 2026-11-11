@@ -291,14 +291,26 @@
 			<control type="group">
 				<nested />
 				<visible>$PARAM[visible]</visible>
+				<!-- Lies over the icon row so a click or tap on an icon presses its button; slid off screen while the icons don't show -->
 				<control type="grouplist" id="$PARAM[id]">
+					<right>$PARAM[right]</right>
+					<bottom>$PARAM[bottom]</bottom>
+					<width>100%</width>
+					<height>$PARAM[button_width]</height>
+					<orientation>horizontal</orientation>
+					<align>right</align>
+					<itemgap>0</itemgap>
 					<onleft>$PARAM[onleft]</onleft>
 					<onright>$PARAM[onright]</onright>
 					<onup>$PARAM[onup]</onup>
 					<ondown>$PARAM[ondown]</ondown>
-					<orientation>horizontal</orientation>
+					<animation effect="slide" end="0,1080" time="0" condition="$PARAM[show_labels] | !$PARAM[include_textures]">Conditional</animation>
+					<!-- Each button takes a slot only while its icon shows (Button_Template's condition, less its own Control.IsVisible) -->
 					<control type="button" id="$PARAM[button1_id]">
 						<visible>$PARAM[button1]</visible>
+						<visible>Window.IsVisible(selectdialog) | [!String.IsEqual(Window.Property(xmlfile),DialogSettings.xml) + Control.IsEnabled($PARAM[button1_id])] | [String.IsEqual(Window.Property(xmlfile),DialogSettings.xml) + !String.IsEmpty(Control.GetLabel($PARAM[button1_id]))]</visible>
+						<width>$PARAM[button_width]</width>
+						<height>$PARAM[button_width]</height>
 						<onclick>$PARAM[button1_onclick]</onclick>
 						<onclick>$PARAM[button1_onclick2]</onclick>
 						<label>$PARAM[button1_label]</label>
@@ -306,6 +318,9 @@
 					</control>
 					<control type="button" id="$PARAM[button2_id]">
 						<visible>$PARAM[button2]</visible>
+						<visible>Window.IsVisible(selectdialog) | [!String.IsEqual(Window.Property(xmlfile),DialogSettings.xml) + Control.IsEnabled($PARAM[button2_id])] | [String.IsEqual(Window.Property(xmlfile),DialogSettings.xml) + !String.IsEmpty(Control.GetLabel($PARAM[button2_id]))]</visible>
+						<width>$PARAM[button_width]</width>
+						<height>$PARAM[button_width]</height>
 						<onclick>$PARAM[button2_onclick]</onclick>
 						<onclick>$PARAM[button2_onclick2]</onclick>
 						<label>$PARAM[button2_label]</label>
@@ -313,6 +328,9 @@
 					</control>
 					<control type="button" id="$PARAM[button3_id]">
 						<visible>$PARAM[button3]</visible>
+						<visible>Window.IsVisible(selectdialog) | [!String.IsEqual(Window.Property(xmlfile),DialogSettings.xml) + Control.IsEnabled($PARAM[button3_id])] | [String.IsEqual(Window.Property(xmlfile),DialogSettings.xml) + !String.IsEmpty(Control.GetLabel($PARAM[button3_id]))]</visible>
+						<width>$PARAM[button_width]</width>
+						<height>$PARAM[button_width]</height>
 						<onclick>$PARAM[button3_onclick]</onclick>
 						<onclick>$PARAM[button3_onclick2]</onclick>
 						<label>$PARAM[button3_label]</label>
@@ -320,6 +338,9 @@
 					</control>
 					<control type="button" id="$PARAM[button4_id]">
 						<visible>$PARAM[button4]</visible>
+						<visible>Window.IsVisible(selectdialog) | [!String.IsEqual(Window.Property(xmlfile),DialogSettings.xml) + Control.IsEnabled($PARAM[button4_id])] | [String.IsEqual(Window.Property(xmlfile),DialogSettings.xml) + !String.IsEmpty(Control.GetLabel($PARAM[button4_id]))]</visible>
+						<width>$PARAM[button_width]</width>
+						<height>$PARAM[button_width]</height>
 						<onclick>$PARAM[button4_onclick]</onclick>
 						<onclick>$PARAM[button4_onclick2]</onclick>
 						<label>$PARAM[button4_label]</label>
