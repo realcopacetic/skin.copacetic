@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- C1's copy of the parts of C2's secondary.xml that Strip's embedded list uses, under C2's names so a C2 fix diffs across.
+		C1 has no jumpbar, so no entry hold or double tap; its ids 4100-4105 still serve the other views' lists, so these buttons are 4107-4110 -->
+
+	<variable name="texture_probe_base_secondary">
+		<value condition="$EXP[display_fanart_visible]">$VAR[texture_secondary_fanart_base0]</value>
+		<value condition="$EXP[display_posters_visible]">$VAR[texture_secondary_poster_base0]</value>
+		<value>$VAR[texture_secondary_square_base0]</value>
+	</variable>
+	<variable name="texture_probe_secondary">
+		<value condition="$EXP[display_fanart_visible]">$VAR[texture_secondary_fanart0]</value>
+		<value condition="$EXP[display_posters_visible]">$VAR[texture_secondary_poster0]</value>
+		<value>$VAR[texture_secondary_square0]</value>
+	</variable>
+
+	<!-- Strip's embedded list: off screen, its art drawn by blk_secondary_art in the view's focus region -->
+	<include name="ctn_secondary">
+		<control type="fixedlist" id="3100">
+			<visible>$PARAM[visible]</visible>
+			<visible>Skin.HasSetting(Secondary_List_Enabled) + !$EXP[Content_Switching] + !$EXP[Scrollbar_HasFocus]</visible>
+			<visible>String.Contains(ListItem.FolderPath,videodb://) | String.Contains(ListItem.FolderPath,musicdb://)</visible>
+			<left>3840</left>
+			<width>1920</width>
+			<height>1080</height>
+			<orientation>vertical</orientation>
+			<preloaditems>2</preloaditems>
+			<focusposition>0</focusposition>
+			<content target="$VAR[Secondary_List_Target]" sortby="$VAR[Secondary_List_Sort]" sortorder="$VAR[Secondary_List_Sort_Order]" browse="never">$VAR[Secondary_List_Path]</content>
+			<focusedlayout width="640" height="360">
+				<control type="group"><!-- C1: as Secondary_List_Layout, the hooks wait until the list itself holds focus, not its reset on the way out -->
+					<visible>![Control.HasFocus(50) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(504)]</visible>
+					<include content="HiddenFocusButton">
+						<param name="id" value="3100" />
+						<param name="ladders" value="true" />
+					</include>
+					<include content="btn_trailer" condition="$EXP[trailer_include_videos] + Window.Is(videos)">
+						<param name="enabled" value="$EXP[trailer_visible_videos]" />
+						<param name="focus_ids" value="3100" />
+						<param name="id" value="3100" />
+						<param name="item" value="Container(3100).ListItem.Label" />
+						<param name="source_prefix" value="3100" />
+						<param name="trailer" value="Container(3100).ListItem.Trailer" />
+					</include>
+				</control>
+			</focusedlayout>
+			<include content="atr_navigation_secondary_vertical" />
+			<include content="Default_Scrolltime" />
+			<include content="blk_layouts" />
+		</control>
+	</include>
+
+	<!-- C1's routes: Up stops at the first item, Down off the last goes to the scrollbar, the sides and Back go back to the view.
+		Each exit passes through the primary art (btn_secondary_redirect), which scrolls the focus region back -->
+	<include name="atr_navigation_secondary_vertical">
+		<onup condition="$EXP[trailer_playing]">PlayerControl(Stop)</onup>
+		<onup condition="!$EXP[trailer_playing]">0</onup>
+		<ondown condition="$EXP[trailer_playing]">PlayerControl(Stop)</ondown>
+		<ondown condition="!$EXP[trailer_playing]">SetFocus(4110)</ondown>
+		<onleft condition="$EXP[trailer_playing]">PlayerControl(Stop)</onleft>
+		<onleft condition="!$EXP[trailer_playing]">SetFocus(4107)</onleft>
+		<onright condition="$EXP[trailer_playing]">PlayerControl(Stop)</onright>
+		<onright condition="!$EXP[trailer_playing]">SetFocus(4107)</onright>
+		<include content="atr_trailer_back" />
+		<onback condition="!$EXP[trailer_playing]">4107</onback><!-- bare id so Back is consumed: back to the view through the relay, never up a folder -->
+	</include>
+
+	<include name="atr_secondary_window_reset"><!-- a window exit never unfocuses 3100, so tpl_focus_region stays scrolled to the secondary art: park focus inside the primary art -->
+		<onunload condition="Control.HasFocus(3100) + $EXP[StripView_Media_IsVisible]">SetFocus(4109)</onunload>
+	</include>
+
+	<include name="blk_secondary_art">
+		<param name="height" default="720" />
+		<param name="id" default="3100" />
+		<param name="width" default="480" />
+		<definition>
+			<control type="group">
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<include content="tpl_art_focused"><!-- static -->
+					<param name="height" value="$PARAM[height]" />
+					<param name="id" value="$PARAM[id]" />
+					<param name="position" value="0" />
+					<param name="texture_stub" value="$PARAM[texture_stub]_base" />
+					<param name="width" value="$PARAM[width]" />
+					<control type="button" id="4108"><!-- C2's 4101: last in the focus region, so focusing it scrolls the region to this art -->
+						<visible allowhiddenfocus="true">false</visible>
+						<onfocus>SetFocus($PARAM[id],0)</onfocus>
+					</control>
+				</include>
+				<include content="tpl_art_transition"><!-- transition -->
+					<param name="id" value="$PARAM[id]" />
+					<param name="region" value="secondary" />
+					<param name="texture_probe_destination" value="6313" />
+					<param name="texture_probe_source" value="6314" />
+					<param name="texture_stub" value="$PARAM[texture_stub]" />
+					<param name="zoom_center_next" value="$PARAM[zoom_center_next]" />
+					<param name="zoom_center_prev" value="$PARAM[zoom_center_prev]" />
+				</include>
+				<include content="prb_texture_secondary" />
+			</control>
+		</definition>
+	</include>
+
+	<include name="btn_secondary_redirect">
+		<control type="button" id="4107"><!-- C2's 4100: first in the focus region, so focusing it scrolls the region back; C1 resets the list on the way, as 4101 -->
+			<visible allowhiddenfocus="true">false</visible>
+			<onfocus>SetFocus(3100,0,absolute)</onfocus>
+			<onfocus>SetFocus(50)</onfocus>
+		</control>
+		<control type="button" id="4109"><!-- C2's 4102: 4107 without the relay, for window exit: 4107's SetFocus(50) would run in the next window -->
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+		<control type="button" id="4110"><!-- C1: 4107 for Down off the list's last item, which goes on to the scrollbar, as 4103 -->
+			<visible allowhiddenfocus="true">false</visible>
+			<onfocus>SetFocus(3100,0,absolute)</onfocus>
+			<onfocus>SetFocus(4013)</onfocus>
+		</control>
+	</include>
+
+	<include name="prb_texture_secondary"><!-- C2's texture probes 6303/6304 (blk_probes) for tpl_art_transition; a hidden label still answers Control.GetLabel -->
+		<control type="label" id="6313">
+			<visible>false</visible>
+			<label>$VAR[texture_probe_secondary]</label>
+		</control>
+		<control type="label" id="6314">
+			<visible>false</visible>
+			<label>$VAR[texture_probe_base_secondary]</label>
+		</control>
+	</include>
+
+</includes>

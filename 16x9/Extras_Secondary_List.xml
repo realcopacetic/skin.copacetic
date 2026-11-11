@@ -143,30 +143,6 @@
 		</include>
 	</include>
 
-	<include name="480x720_Layout">
-		<include content="Secondary_List_Layout">
-			<param name="width" value="480" />
-			<param name="height" value="720" />
-			<param name="texture" value="$VAR[texture_primary_poster0]" />
-		</include>
-	</include>
-
-	<include name="1120x630_Layout">
-		<include content="Secondary_List_Layout">
-			<param name="width" value="1120" />
-			<param name="height" value="630" />
-			<param name="texture" value="$VAR[texture_primary_fanart0]" />
-		</include>
-	</include>
-
-	<include name="630x630_Layout">
-		<include content="Secondary_List_Layout">
-			<param name="width" value="630" />
-			<param name="height" value="630" />
-			<param name="texture" value="$VAR[texture_primary_square0]" />
-		</include>
-	</include>
-
 	<include name="Secondary_List_Array">
 		<!-- Outside the group below: a hidden group stops updating its children, so 5003/5004 would keep their last state -->
 		<include content="User_Scroll_Delay_Template">
@@ -206,34 +182,12 @@
 				<param name="width" value="1080" />
 				<param name="layout" value="1080x1080" />
 			</include>
-			<include content="Secondary_List" condition="Window.Is(videos) + $EXP[layout_strip_include_videos]">
-				<param name="visible" value="$EXP[StripView_Display_IsPosters] + $EXP[Secondary_List_Video_Conditions]" />
-				<param name="width" value="480" />
-				<param name="left" value="720" />
-				<param name="height" value="720" />
-				<param name="top" value="900" />
-				<param name="layout" value="480x720" />
-				<animation effect="slide" start="0,0" end="0,240" time="0" condition="!Control.HasFocus(3100) + !$EXP[Secondary_List_Container_Switching]">Conditional</animation>
+			<!-- Strip: off screen, its art drawn in the view's focus region (secondary.xml) -->
+			<include content="ctn_secondary" condition="Window.Is(videos) + $EXP[layout_strip_include_videos]">
+				<param name="visible" value="[$EXP[StripView_Display_IsPosters] | $EXP[StripView_Display_IsFanart]] + $EXP[Secondary_List_Video_Conditions]" />
 			</include>
-			<include content="Secondary_List" condition="Window.Is(videos) + $EXP[layout_strip_include_videos]">
-				<param name="visible" value="$EXP[StripView_Display_IsFanart] + $EXP[Secondary_List_Video_Conditions]" />
-				<param name="width" value="1120" />
-				<param name="left" value="400" />
-				<param name="height" value="630" />
-				<param name="top" value="870" />
-				<param name="layout" value="1120x630" />
-				<animation effect="slide" start="0,0" end="0,240" time="0" condition="!Control.HasFocus(3100) + !$EXP[Secondary_List_Container_Switching]">Conditional</animation>
-				<animation effect="slide" start="0,0" end="320,0" time="0" condition="!$EXP[StripView_Details_Off]">Conditional</animation>
-			</include>
-			<include content="Secondary_List" condition="Window.Is(music) + $EXP[layout_strip_include_music]">
+			<include content="ctn_secondary" condition="Window.Is(music) + $EXP[layout_strip_include_music]">
 				<param name="visible" value="$EXP[StripView_Display_IsSquare] + Container.Content(artists)" />
-				<param name="width" value="630" />
-				<param name="left" value="645" />
-				<param name="height" value="630" />
-				<param name="top" value="870" />
-				<param name="layout" value="630x630" />
-				<animation effect="slide" start="0,0" end="0,240" time="0" condition="!Control.HasFocus(3100) + !$EXP[Secondary_List_Container_Switching]">Conditional</animation>
-				<animation effect="slide" start="0,0" end="75,0" time="0" condition="!$EXP[StripView_Details_Off]">Conditional</animation>
 			</include>
 			<include content="Secondary_List" condition="Window.Is(videos)">
 				<param name="visible" value="Control.HasFocus(505) + ListItem.IsCollection" />

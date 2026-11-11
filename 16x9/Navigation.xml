@@ -54,14 +54,6 @@
 			<onright condition="!$EXP[trailer_playing] + $EXP[ShowcaseView_IsVisible]">SetFocus(4100)</onright>
 			<onup condition="$EXP[ShowcaseView_IsVisible]">0</onup>
 			<ondown condition="$EXP[ShowcaseView_IsVisible]">SetFocus(4102)</ondown>
-			<onleft condition="$EXP[StripView_IsVisible] + $EXP[trailer_playing]">PlayerControl(Stop)</onleft>
-			<onleft condition="$EXP[StripView_IsVisible] + !$EXP[trailer_playing]">SetFocus(4100)</onleft>
-			<onright condition="$EXP[StripView_IsVisible] + $EXP[trailer_playing]">PlayerControl(Stop)</onright>
-			<onright condition="$EXP[StripView_IsVisible] + !$EXP[trailer_playing]">SetFocus(4100)</onright>
-			<onup condition="$EXP[StripView_IsVisible] + $EXP[trailer_playing]">PlayerControl(Stop)</onup>
-			<onup condition="$EXP[StripView_IsVisible] + !$EXP[trailer_playing]">0</onup>
-			<ondown condition="$EXP[StripView_IsVisible] + $EXP[trailer_playing]">PlayerControl(Stop)</ondown>
-			<ondown condition="$EXP[StripView_IsVisible] + !$EXP[trailer_playing]">SetFocus(4102)</ondown>
 			<include content="atr_trailer_back" />
 			<onback condition="!$EXP[trailer_playing]">4100</onback><!-- bare id so Back is consumed: back to the list through the relay, as Right does, never up a folder -->
 		</definition>
@@ -113,7 +105,7 @@
 			<onup condition="!$EXP[Music_Player_IsVisible] + $EXP[trailer_playing]">PlayerControl(Stop)</onup>
 			<onup condition="!$EXP[Music_Player_IsVisible] + !$EXP[trailer_playing] + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onup>
 			<ondown condition="$EXP[trailer_playing]">PlayerControl(Stop)</ondown>
-			<ondown condition="!$EXP[trailer_playing] + $EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)">SetFocus(3100,0)</ondown>
+			<ondown condition="!$EXP[trailer_playing] + $EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)">SetFocus(4108)</ondown><!-- through the list's art in the focus region, which scrolls to it (secondary.xml) -->
 			<ondown condition="!$EXP[trailer_playing] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsGreater(Container.NumItems,9)">SetFocus(4013)</ondown>
 			<ondown condition="!$EXP[trailer_playing] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsLessOrEqual(Container.NumItems,9) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</ondown>
 			<onleft condition="Integer.IsGreater(Container.NumItems,10)">504</onleft>

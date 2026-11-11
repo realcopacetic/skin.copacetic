@@ -83,6 +83,12 @@
 	<expression name="container_scrolling_primary">$EXP[Content_Switching_Base]</expression>
 	<expression name="container_scrolling_primary_next">Control.IsVisible(5002)</expression>
 	<expression name="container_scrolling_primary_prev">Control.IsVisible(5001)</expression>
+	<!-- The same over the embedded list's latches (5003 previous, 5004 next), only while it has focus: its reset on the way out is no scroll -->
+	<expression name="container_scrolling_secondary_next">Control.IsVisible(5004) + Control.HasFocus(3100)</expression>
+	<expression name="container_scrolling_secondary_prev">Control.IsVisible(5003) + Control.HasFocus(3100)</expression>
+	<!-- C2's base lag: the embedded list's base art keeps the item left from the move until its latch ends (texture_secondary_{art}_base0) -->
+	<expression name="base_lag_secondary_next">Control.HasFocus(3100) + !Container(3100).OnPrevious + [Container(3100).OnNext | [$EXP[container_scrolling_secondary_next] + String.IsEqual(Window(home).Property(LastScroll),Next)]]</expression>
+	<expression name="base_lag_secondary_prev">Control.HasFocus(3100) + !Container(3100).OnNext + [Container(3100).OnPrevious | [$EXP[container_scrolling_secondary_prev] + String.IsEqual(Window(home).Property(LastScroll),Prev)]]</expression>
 	<expression name="Content_Switching_Exclusions_StripView">[$EXP[StripView_Media_IsVisible] + $EXP[StripView_Details_Off]] | $EXP[StripView_Widget_Rail_IsVisible]</expression>
 
 	<!-- Container Transitions -->
@@ -92,7 +98,7 @@
 	<expression name="Music_Player_IsVisible">Skin.HasSetting(Music_Player_Enabled) + MusicPlayer.Offset(0).Exists</expression>
 	<expression name="Music_Player_HasFocus">Control.HasFocus(3500) | String.IsEqual(System.CurrentControlID,3500)</expression>
 	<expression name="Music_Player_HasArt">Player.HasAudio + [$EXP[ListView_Display_IsThumbnails] | [$EXP[ShowcaseView_Display_IsPosters] + !$EXP[ShowcaseView_Details_Off]] | $EXP[StripView_Media_IsVisible] | $EXP[GridView_Media_IsVisible]]</expression>
-	<expression name="Secondary_List_Container_Switching">Control.HasFocus(4100) | String.IsEqual(System.CurrentControlID,4100) | Control.HasFocus(4101) | String.IsEqual(System.CurrentControlID,4101) | Control.HasFocus(4102) | String.IsEqual(System.CurrentControlID,4102) | Control.HasFocus(4103) | String.IsEqual(System.CurrentControlID,4103) | Control.HasFocus(4104) | String.IsEqual(System.CurrentControlID,4104) | Control.HasFocus(4105) | String.IsEqual(System.CurrentControlID,4105)</expression>
+	<expression name="Secondary_List_Container_Switching">Control.HasFocus(4100) | String.IsEqual(System.CurrentControlID,4100) | Control.HasFocus(4101) | String.IsEqual(System.CurrentControlID,4101) | Control.HasFocus(4102) | String.IsEqual(System.CurrentControlID,4102) | Control.HasFocus(4103) | String.IsEqual(System.CurrentControlID,4103) | Control.HasFocus(4104) | String.IsEqual(System.CurrentControlID,4104) | Control.HasFocus(4105) | String.IsEqual(System.CurrentControlID,4105) | Control.HasFocus(4107) | String.IsEqual(System.CurrentControlID,4107) | Control.HasFocus(4108) | String.IsEqual(System.CurrentControlID,4108) | Control.HasFocus(4110) | String.IsEqual(System.CurrentControlID,4110)</expression>
 	<expression name="Secondary_List_Content_Switching">[Control.IsVisible(5003) | Control.IsVisible(5004)] + !String.IsEqual(Container(3100).NumItems,1)</expression>
 	<expression name="Secondary_List_Focus">Skin.HasSetting(Secondary_List_Enabled) + [$EXP[Secondary_List_Video_Conditions] | [Container.Content(artists) + !$EXP[ListView_Display_IsBackground]]]</expression>
 	<expression name="Secondary_List_Taking_Focus">Control.HasFocus(3100) + Control.IsVisible(5008)</expression>

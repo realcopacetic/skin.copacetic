@@ -81,6 +81,17 @@
         { "filter": "not equals({item}, poster)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(fanart)) + !String.IsEqual({listitem}NoWrap({range}).DBType,album) + !String.IsEqual({listitem}NoWrap({range}).DBType,song)", "value": "$INFO[{listitem}({range}).Art(fanart)]" },
         { "condition": "!String.IsEmpty({listitem}NoWrap({range}).Icon)", "value": "$INFO[{listitem}({range}).Icon]" }
       ]
+    },
+    "texture_{texture_prefix}_{item}_base0": {
+      "note": "C2's base art, for the embedded list only: while a move's latch holds it keeps the item left, so tpl_art_transition fades the new one in over it.",
+      "templates_from": [ "regions" ],
+      "items": [ "poster", "fanart", "square" ],
+      "filter": "equals({region}, secondary)",
+      "values": [
+        { "condition": "$EXP[base_lag_{texture_prefix}_prev]", "value": "$VAR[texture_{texture_prefix}_{item}1]" },
+        { "condition": "$EXP[base_lag_{texture_prefix}_next]", "value": "$VAR[texture_{texture_prefix}_{item}-1]" },
+        { "value": "$VAR[texture_{texture_prefix}_{item}0]" }
+      ]
     }
   }
 }

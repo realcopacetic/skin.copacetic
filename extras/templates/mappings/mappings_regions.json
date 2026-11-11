@@ -1,7 +1,7 @@
 {
   "regions": {
     "mode": "static",
-    "items": [ "primary" ],
+    "items": [ "primary", "secondary" ],
     "placeholders": { "key": "region" },
     "tokens": {
       "art_context": "visible",
@@ -11,6 +11,10 @@
       "primary": {
         "listitem": "ListItem",
         "slot_range": "[-3, -2, -1, 0, 1, 2, 3]"
+      },
+      "secondary": {
+        "listitem": "Container(3100).ListItem",
+        "slot_range": "[-1, 0, 1]"
       }
     }
   }

@@ -98,6 +98,38 @@
 		<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="![Container($PARAM[id]).OnNext | [!Container($PARAM[id]).OnPrevious + [!$EXP[container_scrolling_$PARAM[region]_prev] | !String.IsEqual(Window(home).Property(LastScroll),Prev)]]]">Conditional</animation>
 	</include>
 
+	<include name="tpl_art_transition">
+		<param name="texture_probe_destination" default="6311" />
+		<param name="texture_probe_source" default="6312" />
+		<param name="zoom_start" default="100" /><!-- C1: fade only. C2 zooms from 108, which spills past a berth with no mask (backlog N30) -->
+		<definition>
+			<include content="img_art">
+				<param name="texture" value="$VAR[texture_$PARAM[texture_stub]0]" />
+				<param name="visible" value="$EXP[container_scrolling_$PARAM[region]_prev] + !Container($PARAM[id]).OnPrevious + !String.IsEqual(Control.GetLabel($PARAM[texture_probe_destination]),Control.GetLabel($PARAM[texture_probe_source]))" />
+				<include content="efx_ladder_prev">
+					<param name="id" value="$PARAM[id]" />
+					<param name="region" value="$PARAM[region]" />
+				</include>
+				<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="Default_Transition_1x" tween="sine" easing="inout" />
+					<effect type="zoom" start="$PARAM[zoom_start]" end="100" center="$PARAM[zoom_center_prev]" time="Default_Transition_1x" tween="sine" easing="inout" />
+				</animation>
+			</include>
+			<include content="img_art">
+				<param name="texture" value="$VAR[texture_$PARAM[texture_stub]0]" />
+				<param name="visible" value="$EXP[container_scrolling_$PARAM[region]_next] + !Container($PARAM[id]).OnNext + !String.IsEqual(Control.GetLabel($PARAM[texture_probe_destination]),Control.GetLabel($PARAM[texture_probe_source]))" />
+				<include content="efx_ladder_next">
+					<param name="id" value="$PARAM[id]" />
+					<param name="region" value="$PARAM[region]" />
+				</include>
+				<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="Default_Transition_1x" tween="sine" easing="inout" />
+					<effect type="zoom" start="$PARAM[zoom_start]" end="100" center="$PARAM[zoom_center_next]" time="Default_Transition_1x" tween="sine" easing="inout" />
+				</animation>
+			</include>
+		</definition>
+	</include>
+
 	<include name="grp_art_anchor"><!-- Focused art anchor. No id: C2's helper reads 6300's rect, C1 reads nothing, and each art would repeat it -->
 		<param name="ani_visible" default="Visible_Fade_Animation" />
 		<definition>
@@ -137,6 +169,7 @@
 		<param name="height" default="720" />
 		<param name="left" default="0" />
 		<param name="orientation" default="vertical" />
+		<param name="secondary" default="false" /><!-- the primary view's region also draws the embedded list's art, below its own -->
 		<param name="top" default="0" />
 		<param name="visible" default="true" />
 		<param name="width" default="480" />
@@ -152,6 +185,13 @@
 				<usecontrolcoords>true</usecontrolcoords>
 				<include content="Default_Scrolltime" />
 				<nested />
+				<include content="blk_secondary_art" condition="$PARAM[secondary]">
+					<param name="height" value="$PARAM[height]" />
+					<param name="texture_stub" value="$PARAM[texture_stub_secondary]" />
+					<param name="width" value="$PARAM[width]" />
+					<param name="zoom_center_next" value="$PARAM[zoom_center_next]" />
+					<param name="zoom_center_prev" value="$PARAM[zoom_center_prev]" />
+				</include>
 			</control>
 		</definition>
 	</include>

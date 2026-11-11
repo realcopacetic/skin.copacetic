@@ -36,6 +36,7 @@
 	<include file="OnLoadUnload.xml" />
 	<include file="primary.xml" />
 	<include file="Scrollbars.xml" />
+	<include file="secondary.xml" />
 	<include file="strip.xml" />
 	<!-- Built by the helper from extras/templates; until the first build Kodi only logs them as missing -->
 	<include file="script-copacetic-helper_expressions.xml" />

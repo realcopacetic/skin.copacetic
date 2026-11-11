@@ -43,6 +43,7 @@
 			<animation effect="slide" end="320,0" time="0" condition="!$PARAM[left_visible]">Conditional</animation>
 			<include content="tpl_strip_art">
 				<param name="art" value="fanart" />
+				<param name="centerx" value="560" />
 				<param name="focus_height" value="630" />
 				<param name="focus_top" value="240" />
 				<param name="focus_width" value="1120" />
@@ -64,8 +65,6 @@
 				<param name="preload_prev" value="-2" />
 				<param name="region" value="$PARAM[region]" />
 				<param name="secondary" value="$PARAM[secondary]" />
-				<param name="secondary_mask_bottom" value="210" />
-				<param name="secondary_mask_top" value="240" />
 				<param name="shadow_left" value="280" />
 				<param name="texture_prefix" value="$PARAM[texture_prefix]" />
 				<param name="visible" value="$PARAM[visible]" />
@@ -76,6 +75,7 @@
 	<include name="vue_strip_poster">
 		<include content="tpl_strip_art">
 			<param name="art" value="poster" />
+			<param name="centerx" value="240" />
 			<param name="focus_height" value="720" />
 			<param name="focus_top" value="180" />
 			<param name="focus_width" value="480" />
@@ -97,8 +97,6 @@
 			<param name="posx3" value="2000" />
 			<param name="region" value="$PARAM[region]" />
 			<param name="secondary" value="$PARAM[secondary]" />
-			<param name="secondary_mask_bottom" value="180" />
-			<param name="secondary_mask_top" value="180" />
 			<param name="shadow_left" value="600" />
 			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
 			<param name="visible" value="$PARAM[visible]" />
@@ -111,6 +109,7 @@
 			<animation effect="slide" end="75,0" time="0" condition="!$PARAM[left_visible]">Conditional</animation>
 			<include content="tpl_strip_art">
 				<param name="art" value="square" />
+				<param name="centerx" value="315" />
 				<param name="focus_height" value="630" />
 				<param name="focus_top" value="240" />
 				<param name="focus_width" value="630" />
@@ -132,8 +131,6 @@
 				<param name="posx3" value="2355" />
 				<param name="region" value="$PARAM[region]" />
 				<param name="secondary" value="$PARAM[secondary]" />
-				<param name="secondary_mask_bottom" value="210" />
-				<param name="secondary_mask_top" value="240" />
 				<param name="shadow_left" value="525" />
 				<param name="texture_prefix" value="$PARAM[texture_prefix]" />
 				<param name="visible" value="$PARAM[visible]" />
@@ -144,6 +141,7 @@
 	<include name="tpl_strip_art">
 		<include content="tpl_strip_art_static">
 			<param name="art" value="$PARAM[art]" />
+			<param name="centerx" value="$PARAM[centerx]" />
 			<param name="focus_height" value="$PARAM[focus_height]" />
 			<param name="focus_top" value="$PARAM[focus_top]" />
 			<param name="focus_width" value="$PARAM[focus_width]" />
@@ -161,8 +159,6 @@
 			<param name="preload_prev" value="$PARAM[preload_prev]" />
 			<param name="region" value="$PARAM[region]" />
 			<param name="secondary" value="$PARAM[secondary]" />
-			<param name="secondary_mask_bottom" value="$PARAM[secondary_mask_bottom]" />
-			<param name="secondary_mask_top" value="$PARAM[secondary_mask_top]" />
 			<param name="shadow_left" value="$PARAM[shadow_left]" />
 			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
 			<param name="visible" value="$PARAM[visible]" />
@@ -200,7 +196,7 @@
 		<param name="left_visible" default="true" /><!-- C1: the slots left of the focus and the focus's left shadow; the media view shows them with details off -->
 		<param name="outer" default="true" /><!-- the ±2 statics; false for fanart -->
 		<param name="preload_prev" default="-3" /><!-- the slot a prev press slides in: -3, or -2 for fanart -->
-		<param name="secondary" default="false" /><!-- true where the embedded list (3100) slides through the berth -->
+		<param name="secondary" default="false" /><!-- true where the embedded list (3100) draws its art in the focus region, below the view's -->
 		<definition>
 			<include content="grp_art_anchor"><!-- focused artwork -->
 				<param name="ani_visible" value="$PARAM[ani_visible]" />
@@ -212,7 +208,11 @@
 				<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="$EXP[container_scrolling_$PARAM[region]]">Conditional</animation>
 				<include content="tpl_focus_region">
 					<param name="height" value="$PARAM[focus_height]" />
+					<param name="secondary" value="$PARAM[secondary]" />
+					<param name="texture_stub_secondary" value="secondary_$PARAM[art]" />
 					<param name="width" value="$PARAM[focus_width]" />
+					<param name="zoom_center_next" value="$PARAM[centerx],0" />
+					<param name="zoom_center_prev" value="$PARAM[centerx],$PARAM[focus_height]" />
 					<include content="tpl_art_focused">
 						<param name="height" value="$PARAM[focus_height]" />
 						<param name="id" value="$PARAM[id]" />
@@ -220,22 +220,13 @@
 						<param name="position" value="0" />
 						<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
 						<param name="width" value="$PARAM[focus_width]" />
-						<include content="Secondary_List_Scroll_Animation" condition="$PARAM[secondary]" /><!-- until the embedded list is drawn in the focus region (A4-3): the art leaves the berth as the list rises into it -->
 						<include content="grp_collection_indicator">
 							<param name="id" value="$PARAM[id]" />
 							<param name="position" value="0" />
 							<param name="width" value="60" />
 						</include>
+						<include content="btn_secondary_redirect" condition="$PARAM[secondary]" />
 					</include>
-				</include>
-				<!-- Until the embedded list is drawn in the focus region (A4-3): it slides through the berth, so these bars cover it, and the rising art,
-					above and below. After the focus region, which would clip them away and whose clip rides the art's slide -->
-				<include content="Icon_Component_Secondary_Mask" condition="$PARAM[secondary]">
-					<param name="bottom" value="$PARAM[secondary_mask_bottom]" />
-					<param name="height" value="$PARAM[focus_height]" />
-					<param name="left" value="0" />
-					<param name="top" value="$PARAM[secondary_mask_top]" />
-					<param name="width" value="$PARAM[focus_width]" />
 				</include>
 			</include>
 			<control type="group"><!-- unfocused artwork -->
