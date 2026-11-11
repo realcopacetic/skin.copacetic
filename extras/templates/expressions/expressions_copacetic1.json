@@ -7,7 +7,7 @@
     "search_landing": {
       "note": "Search takes its input from the on-screen keys (Remote); read by include conditions, so a mode change reloads the skin.",
       "templates_from": [ "copacetic1" ],
-      "filter": "equals({settings_category}, search)",
+      "filter": "equals({settings_category}, home)",
       "rules": [ { "condition": "equals({search_optimise_remote}, true)", "type": "assign", "value": "true" } ]
     }
   }

@@ -442,7 +442,7 @@
 		<param name="visible" default="true" />
 		<param name="id" />
 		<param name="top" default="0" />
-		<param name="left" default="9" />
+		<param name="left" default="100" />
 		<param name="right" default="3000" />
 		<param name="previous" />
 		<param name="next" />
@@ -515,9 +515,8 @@
 
 	<include name="skinsettings_Double_Slider_Button">
 		<param name="visible" default="true" />
-		<param name="category" />
 		<param name="id" />
-		<param name="left" default="9" />
+		<param name="left" default="100" />
 		<param name="right" default="3000" />
 		<param name="previous" />
 		<param name="next" />
@@ -528,7 +527,7 @@
 		<param name="textcolor" />
 		<definition>
 			<control type="group" id="$PARAM[id]">
-				<visible>ControlGroup($PARAM[left]).HasFocus($PARAM[category]) + $PARAM[visible]</visible>
+				<visible>$PARAM[visible]</visible>
 				<height>90</height>
 				<defaultcontrol>$PARAM[id]0</defaultcontrol>
 				<control type="button" id="$PARAM[id]0">

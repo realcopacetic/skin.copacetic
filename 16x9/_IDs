@@ -118,13 +118,14 @@ MENU EDITOR (menusettings.xml, ids set by the helper's dynamic_settings_window)
 414-415       Reset, close
 9001          Controls grouplist
 
-PATH EDITOR (pathsettings.xml, ids set by the helper's dynamic_settings_window)
+SKIN SETTINGS EDITOR (copaceticsettings.xml over the skinsettings shell, ids set by the helper's dynamic_settings_window)
 6             Description textbox (hidden)
-100           Its one entry
-201-202       Slideshow 1 and 2 custom paths (controls_copacetic1.json)
-205-207       Search: Optimise for, keypad layout, keypad's keys (controls_copacetic1.json)
-415           Close
-9001          Controls grouplist
+100           Categories
+201-202       Background: slideshow 1 and 2 custom paths (controls_copacetic1.json)
+203-204, 208  Customisations: play next's card lead and "Still there?", play next on or off (controls_copacetic1.json)
+205-207       Home: search's Optimise for, keypad layout, keypad's keys (controls_copacetic1.json)
+1201-1202, 1113, 1116, 1352  Menus, Configure widgets, Configure global search, View options (controls_copacetic1.json)
+9001          Rows grouplist (hand rows 1000-1523 keep their ids)
 
 VIEW EDITOR (viewsettings.xml, ids set by the helper's dynamic_settings_window)
 6             Description textbox (hidden)

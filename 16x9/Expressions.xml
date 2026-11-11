@@ -4,6 +4,14 @@
 	<!-- Windows -->
 	<expression name="Home_HasBackground">Window.IsVisible(home) + [String.IsEmpty(Window(home).Property(Home_Widget)) | $EXP[BillboardView_Display_IsFanart_Widget_Home]] + !$EXP[Infoscreen_IsVisible]</expression>
 	<expression name="Settings_Window_IsVisible">Window.IsVisible(settings) | Window.IsVisible(skinsettings) | Window.IsVisible(appearancesettings) | Window.IsVisible(mediasettings) | Window.IsVisible(playersettings) | Window.IsVisible(servicesettings) | Window.IsVisible(systemsettings) | Window.IsVisible(pvrsettings) | Window.IsVisible(gamesettings) | Window.IsVisible(profiles) | Window.IsVisible(systeminfo) | Window.IsVisible(filemanager)</expression>
+	<!-- Skin settings' category: the row the editor's list 100 has selected (copaceticsettings.xml) -->
+	<expression name="skinsettings_Category_General">String.IsEqual(Container(100).ListItem.Property(mapping_item),general)</expression>
+	<expression name="skinsettings_Category_Menus">String.IsEqual(Container(100).ListItem.Property(mapping_item),menus)</expression>
+	<expression name="skinsettings_Category_Background">String.IsEqual(Container(100).ListItem.Property(mapping_item),background)</expression>
+	<expression name="skinsettings_Category_Home">String.IsEqual(Container(100).ListItem.Property(mapping_item),home)</expression>
+	<expression name="skinsettings_Category_Views">String.IsEqual(Container(100).ListItem.Property(mapping_item),views)</expression>
+	<expression name="skinsettings_Category_Customisations">String.IsEqual(Container(100).ListItem.Property(mapping_item),customisations)</expression>
+	<expression name="skinsettings_Category_Extras">String.IsEqual(Container(100).ListItem.Property(mapping_item),extras)</expression>
 	<expression name="Window_HasBackground">[Window.IsVisible(addonsettings) + !String.IsEmpty(ListItem.Art(fanart))] | [Window.IsVisible(addonbrowser) + !$EXP[Container_Addons_NonRepo]] | Window.IsVisible(favouritesbrowser) | Window.IsVisible(loginscreen) | Window.IsVisible(musicplaylisteditor)</expression>
 	<expression name="Container_HasBackground">[$EXP[ListView_Display_IsBackground] | $EXP[BillboardView_IsVisible] | $EXP[ShowcaseView_Display_HasBackground]] + !$EXP[Infoscreen_IsVisible]</expression>
 	<expression name="Content_HasBackground">Container.Content(videoversions) | Container.Content(genres) | Container.Content(years) | Container.Content(playlists) | Container.Content(sources) | Container.Content(studios) | Container.Content(directors) | Container.Content(tags) | Container.Content(countries) | Container.Content(roles)</expression>

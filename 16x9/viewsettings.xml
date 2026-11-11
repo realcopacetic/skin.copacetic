@@ -4,7 +4,7 @@
 	<defaultcontrol always="true">100</defaultcontrol>
 	<backgroundcolor>dark</backgroundcolor>
 	<controls>
-		<include content="pathsettings_Hidden" /><!-- the same hidden description textbox 6 the path editor needs -->
+		<include content="editor_Description_Hidden" />
 		<!-- Without a visible param: the editor itself counts as a panel dialog (PanelDialog_IsVisible), so the views behind it fade -->
 		<include content="Default_Dialog_Panel_Layout">
 			<include content="Breadcrumb_Label">

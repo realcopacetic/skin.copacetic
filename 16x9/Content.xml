@@ -112,45 +112,6 @@
 		</include>
 	</include>
 
-	<!-- The helper sets the labels and shows each path as label2 (controls_copacetic1.json) -->
-	<include name="pathsettings_Right_List_Content">
-		<control type="button" id="201">
-			<description>Slideshow 1 custom path</description>
-			<label>$LOCALIZE[108] 1</label>
-		</control>
-		<!-- The helper hides it too, but only once the window has opened -->
-		<control type="button" id="202">
-			<description>Slideshow 2 custom path</description>
-			<visible>Skin.HasSetting(slideshow2)</visible>
-			<label>$LOCALIZE[108] 2</label>
-		</control>
-		<!-- Player row: play next's switch, then two cycles the helper hides while it's off; it shows each value as label2 -->
-		<control type="radiobutton" id="208">
-			<description>Play next on or off</description>
-			<textwidth>660</textwidth>
-			<radioposx>750</radioposx>
-			<label>$LOCALIZE[10008]</label>
-		</control>
-		<control type="button" id="203">
-			<description>Play next card's time before the end</description>
-			<label>Show the card before the end</label>
-		</control>
-		<control type="button" id="204">
-			<description>Still there?</description>
-			<label>Still there?</label>
-		</control>
-		<!-- Search row: the helper hides and fills these (controls_copacetic1.json) -->
-		<control type="button" id="205">
-			<description>Search input: remote or keyboard</description>
-		</control>
-		<control type="button" id="206">
-			<description>Keypad layout</description>
-		</control>
-		<control type="button" id="207">
-			<description>Keypad's keys</description>
-		</control>
-	</include>
-
 	<include name="playerprocessinfo_PVR_List_Content">
 		<control type="button">
 			<description>PVR backend</description>

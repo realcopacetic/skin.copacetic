@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!-- keyboardsettings: the helper's editor for the search keypad's keys, opened from the Search row of pathsettings -->
+	<!-- keyboardsettings: the helper's editor for the search keypad's keys, opened from Skin settings, Home, 207 -->
 	<defaultcontrol always="true">100</defaultcontrol>
 	<backgroundcolor>dark</backgroundcolor>
 	<controls>
-		<include content="pathsettings_Hidden" />
+		<include content="editor_Description_Hidden" />
 		<include content="Default_Dialog_Panel_Layout">
 			<param name="visible" value="!$EXP[TransparentDialog_IsVisible]" />
 			<include content="Breadcrumb_Label">

@@ -3,14 +3,35 @@
   "controls": {
     "category_item": {
       "control_type": "listitem",
-      "label": "{label}"
+      "label": "{label}",
+      "description": "{description}"
+    },
+    "mainmenu": {
+      "id": 1201,
+      "control_type": "button",
+      "visible": "equals({settings_category}, menus)",
+      "label": "$LOCALIZE[31417]",
+      "onclick": {
+        "type": "custom",
+        "action": "RunScript(script.copacetic.helper,action=dynamic_settings_window,name=menusettings,mapping=mainmenu)"
+      }
+    },
+    "shutdownmenu": {
+      "id": 1202,
+      "control_type": "button",
+      "visible": "equals({settings_category}, menus)",
+      "label": "$LOCALIZE[31418]",
+      "onclick": {
+        "type": "custom",
+        "action": "RunScript(script.copacetic.helper,action=dynamic_settings_window,name=menusettings,mapping=shutdownmenu,controls_from=mainmenu)"
+      }
     },
     "slideshow_path": {
       "field": "slideshow_path",
       "id": 201,
       "control_type": "button",
-      "visible": "equals({settings_category}, background)",
-      "label": "$LOCALIZE[108] 1",
+      "visible": "equals({settings_category}, background) + xml(Skin.String(slideshow_source,custom))",
+      "label": "- $LOCALIZE[31439]",
       "onclick": {
         "type": "browse_content",
         "heading": "$LOCALIZE[31439]",
@@ -21,47 +42,46 @@
       "field": "slideshow2_path",
       "id": 202,
       "control_type": "button",
-      "visible": "equals({settings_category}, background) + xml(Skin.HasSetting(slideshow2))",
-      "label": "$LOCALIZE[108] 2",
+      "visible": "equals({settings_category}, background) + xml(Skin.HasSetting(slideshow2)) + xml(Skin.String(slideshow2_source,custom))",
+      "label": "   - $LOCALIZE[31439]",
       "onclick": {
         "type": "browse_content",
         "heading": "$LOCALIZE[31439]",
         "mode": "widget"
       }
     },
-    "playnext_enabled": {
-      "field": "playnext_enabled",
-      "id": 208,
-      "control_type": "radiobutton",
-      "visible": "equals({settings_category}, player)",
-      "label": "$LOCALIZE[10008]"
+    "widgets": {
+      "id": 1113,
+      "control_type": "button",
+      "visible": "equals({settings_category}, home) + xml(Skin.HasSetting(Widgets_Enabled))",
+      "label": "- $LOCALIZE[31489]",
+      "onclick": {
+        "type": "custom",
+        "action": "RunScript(script.copacetic.helper,action=dynamic_settings_window,name=widgetsettings,mapping=widgets)"
+      }
     },
-    "playnext_lead": {
-      "field": "playnext_lead",
-      "id": 203,
-      "control_type": "cycle",
-      "visible": "equals({settings_category}, player) + equals({playnext_enabled}, true)",
-      "label": "Show the card before the end"
-    },
-    "still_watching": {
-      "field": "still_watching",
-      "id": 204,
-      "control_type": "cycle",
-      "visible": "equals({settings_category}, player) + equals({playnext_enabled}, true)",
-      "label": "Still there?"
+    "searchsettings": {
+      "id": 1116,
+      "control_type": "button",
+      "visible": "equals({settings_category}, home) + xml(!Skin.HasSetting(GlobalSearch_Disabled))",
+      "label": "- $LOCALIZE[31705]",
+      "onclick": {
+        "type": "custom",
+        "action": "RunScript(script.copacetic.helper,action=dynamic_settings_window,name=searchsettings,mapping=search)"
+      }
     },
     "search_optimise": {
       "field": "search_optimise",
       "id": 205,
       "control_type": "cycle",
-      "visible": "equals({settings_category}, search)",
-      "label": "Optimise for"
+      "visible": "equals({settings_category}, home) + xml(!Skin.HasSetting(GlobalSearch_Disabled))",
+      "label": "- Optimise for"
     },
     "keyboard_layout": {
       "id": 206,
       "control_type": "button",
-      "visible": "equals({settings_category}, search) + equals({search_optimise}, remote)",
-      "label": "Onscreen keyboard layout",
+      "visible": "equals({settings_category}, home) + xml(!Skin.HasSetting(GlobalSearch_Disabled)) + equals({search_optimise}, remote)",
+      "label": "   - Onscreen keyboard layout",
       "onclick": {
         "type": "runtime_script",
         "action": "seed_keyboard_layout"
@@ -70,12 +90,43 @@
     "keyboardsettings": {
       "id": 207,
       "control_type": "button",
-      "visible": "equals({settings_category}, search) + equals({search_optimise}, remote)",
-      "label": "Onscreen keyboard",
+      "visible": "equals({settings_category}, home) + xml(!Skin.HasSetting(GlobalSearch_Disabled)) + equals({search_optimise}, remote)",
+      "label": "   - Onscreen keyboard",
       "onclick": {
         "type": "custom",
         "action": "RunScript(script.copacetic.helper,action=dynamic_settings_window,name=keyboardsettings,mapping=keyboard)"
       }
+    },
+    "viewsettings": {
+      "id": 1352,
+      "control_type": "button",
+      "visible": "equals({settings_category}, views)",
+      "label": "$LOCALIZE[14018]",
+      "onclick": {
+        "type": "custom",
+        "action": "RunScript(script.copacetic.helper,action=dynamic_settings_window,name=viewsettings,mapping=content_types)"
+      }
+    },
+    "playnext_enabled": {
+      "field": "playnext_enabled",
+      "id": 208,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, customisations)",
+      "label": "$LOCALIZE[10008]"
+    },
+    "playnext_lead": {
+      "field": "playnext_lead",
+      "id": 203,
+      "control_type": "cycle",
+      "visible": "equals({settings_category}, customisations) + equals({playnext_enabled}, true)",
+      "label": "- Show the card before the end"
+    },
+    "still_watching": {
+      "field": "still_watching",
+      "id": 204,
+      "control_type": "cycle",
+      "visible": "equals({settings_category}, customisations) + equals({playnext_enabled}, true)",
+      "label": "- Still there?"
     }
   }
 }

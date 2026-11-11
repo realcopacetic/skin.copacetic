@@ -28,62 +28,26 @@
 		</control>
 	</include>
 
-	<include name="skinsettings_Left_List_Content">
-		<control type="button" id="10">
-			<description>General</description>
-			<label>$LOCALIZE[31400]</label>
-			<texturefocus />
-		</control>
-		<control type="button" id="12">
-			<description>Menus</description>
-			<label>$LOCALIZE[31416]</label>
-			<texturefocus />
-		</control>
-		<control type="button" id="16">
-			<description>Background</description>
-			<label>$LOCALIZE[31432]</label>
-			<texturefocus />
-		</control>
-		<control type="button" id="11">
-			<description>Home</description>
-			<label>$LOCALIZE[31401]</label>
-			<texturefocus />
-		</control>
-		<control type="button" id="13">
-			<description>Views</description>
-			<label>$LOCALIZE[31403]</label>
-			<texturefocus />
-		</control>
-		<control type="button" id="14">
-			<description>Customisations</description>
-			<label>$LOCALIZE[31404]</label>
-			<texturefocus />
-		</control>
-		<control type="button" id="15">
-			<description>Extras</description>
-			<label>$LOCALIZE[31405]</label>
-			<texturefocus />
-		</control>
-	</include>
-
+	<!-- Skin settings' rows in the editor's grouplist 9001 (copaceticsettings.xml). A row the helper draws (controls_copacetic1.json)
+		has no onclick and its own category test as well, so it stays hidden until the helper has filled the list -->
 	<include name="skinsettings_Right_List_Content_Home">
 		<!-- General -->
 		<control type="label" id="1000">
 			<description>Look and feel</description>
-			<visible>!ControlGroup(9).HasFocus(11) + !ControlGroup(9).HasFocus(12) + !ControlGroup(9).HasFocus(13) + !ControlGroup(9).HasFocus(14) + !ControlGroup(9).HasFocus(15) + !ControlGroup(9).HasFocus(16) + !ControlGroup(9).HasFocus(17)</visible>
+			<visible>$EXP[skinsettings_Category_General]</visible>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[24997]</label>
 			<animation effect="slide" start="0" end="0,-1" condition="true">Conditional</animation>
 		</control>
 		<control type="image" id="1001">
 			<description>Themes screenshot</description>
-			<visible>!ControlGroup(9).HasFocus(11) + !ControlGroup(9).HasFocus(12) + !ControlGroup(9).HasFocus(13) + !ControlGroup(9).HasFocus(14) + !ControlGroup(9).HasFocus(15) + !ControlGroup(9).HasFocus(16) + !ControlGroup(9).HasFocus(17)</visible>
+			<visible>$EXP[skinsettings_Category_General]</visible>
 			<include content="skinsettings_Detfault_Image" />
 			<texture>$VAR[skinsettings_Themes_Screenshots]</texture>
 		</control>
 		<control type="radiobutton" id="1002">
 			<description>Night / Light</description>
-			<visible>!ControlGroup(9).HasFocus(11) + !ControlGroup(9).HasFocus(12) + !ControlGroup(9).HasFocus(13) + !ControlGroup(9).HasFocus(14) + !ControlGroup(9).HasFocus(15) + !ControlGroup(9).HasFocus(16) + !ControlGroup(9).HasFocus(17)</visible>
+			<visible>$EXP[skinsettings_Category_General]</visible>
 			<label>$LOCALIZE[15111]</label>
 			<label2>$VAR[Theme_Label]</label2>
 			<selected>!Skin.String(Theme,Light)</selected>
@@ -98,14 +62,14 @@
 		</control>
 		<control type="colorbutton" id="1003">
 			<description>Accent colour</description>
-			<visible>ControlGroup(9).HasFocus(10)</visible>
+			<visible>$EXP[skinsettings_Category_General]</visible>
 			<label>$LOCALIZE[31409]</label>
 			<onclick>Skin.SetColor(User_Defined_Accent_Color,31410,ff5174)</onclick>
 			<colorbox>$VAR[Accent_Color]</colorbox>
 		</control>
 		<control type="button" id="1004">
 			<description>Reset accent colour</description>
-			<visible>ControlGroup(9).HasFocus(10)</visible>
+			<visible>$EXP[skinsettings_Category_General]</visible>
 			<visible>!Skin.String(User_Defined_Accent_Color,copacetic_accent_color)</visible>
 			<label>- $LOCALIZE[31411]</label>
 			<onclick>Skin.SetString(User_Defined_Accent_Color,copacetic_accent_color)</onclick>
@@ -113,25 +77,25 @@
 		</control>
 		<control type="label" id="1015">
 			<description>Artwork</description>
-			<visible>ControlGroup(9).HasFocus(10)</visible>
+			<visible>$EXP[skinsettings_Category_General]</visible>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[39123]</label>
 		</control>
 		<control type="image" id="1018">
 			<description>Themes screenshot</description>
-			<visible>ControlGroup(9).HasFocus(10)</visible>
+			<visible>$EXP[skinsettings_Category_General]</visible>
 			<include content="skinsettings_Detfault_Image" />
 			<texture>$VAR[skinsettings_Clearlogo_Cropper_Screenshots]</texture>
 		</control>
 		<control type="button" id="1020">
 			<description>Clear cache</description>
-			<visible>ControlGroup(9).HasFocus(10)</visible>
+			<visible>$EXP[skinsettings_Category_General]</visible>
 			<label>$LOCALIZE[31422]</label>
 			<onclick>RunScript(script.copacetic.helper,action=clear_cache)</onclick>
 		</control>
 		<control type="radiobutton" id="1021">
 			<description>Colorise media flags</description>
-			<visible>ControlGroup(9).HasFocus(10)</visible>
+			<visible>$EXP[skinsettings_Category_General]</visible>
 			<label>$LOCALIZE[31423]</label>
 			<onclick>Skin.ToggleSetting(Colorise_Flags)</onclick>
 			<selected>Skin.HasSetting(Colorise_Flags)</selected>
@@ -140,68 +104,63 @@
 		<!-- Menus -->
 		<control type="button" id="1201">
 			<description>Home menu</description>
-			<visible>ControlGroup(9).HasFocus(12)</visible>
+			<visible>$EXP[skinsettings_Category_Menus]</visible>
 			<label>$LOCALIZE[31417]</label>
-			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,name=menusettings,mapping=mainmenu)</onclick>
 		</control>
 		<control type="button" id="1202">
 			<description>Shutdown menu</description>
-			<visible>ControlGroup(9).HasFocus(12)</visible>
+			<visible>$EXP[skinsettings_Category_Menus]</visible>
 			<label>$LOCALIZE[31418]</label>
-			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,name=menusettings,mapping=shutdownmenu,controls_from=mainmenu)</onclick>
 		</control>
 
 		<!-- Background -->
 		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(16)" />
+			<param name="visible" value="$EXP[skinsettings_Category_Background]" />
 			<param name="info" value="slideshow_source" />
 			<param name="label" value="$LOCALIZE[31426]" />
 			<param name="label2" value="$VAR[skinsettings_slideshow_source_Label]" />
 			<param name="previous" value="1608" />
 			<param name="id" value="1601" />
-			<param name="next" value="1602" />
+			<param name="next" value="201" />
 		</include>
-		<control type="button" id="1602">
-			<description>- Choose a custom path</description>
-			<label>$VAR[skinsettings_slideshow_path_Label,- ]</label>
-			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,host_focus=201,mapping=copacetic1,name=pathsettings)</onclick>
-			<visible>ControlGroup(9).HasFocus(16) + [Skin.String(slideshow_source,custom) | !$EXP[Library_Has_Content]]</visible>
+		<control type="button" id="201">
+			<description>Slideshow 1 custom path</description>
+			<visible>$EXP[skinsettings_Category_Background]</visible>
+			<label>- $LOCALIZE[31439]</label>
 		</control>
 		<control type="radiobutton" id="1609">
 			<description>Enable second background slideshow</description>
-			<visible>ControlGroup(9).HasFocus(16)</visible>
+			<visible>$EXP[skinsettings_Category_Background]</visible>
 			<label>$LOCALIZE[31729]</label>
 			<onclick>Skin.ToggleSetting(slideshow2)</onclick>
 			<selected>Skin.HasSetting(slideshow2)</selected>
 		</control>
 		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(16) + Skin.HasSetting(slideshow2)" />
+			<param name="visible" value="$EXP[skinsettings_Category_Background] + Skin.HasSetting(slideshow2)" />
 			<param name="info" value="slideshow2_source" />
 			<param name="label" value="- $LOCALIZE[31730]" />
 			<param name="label2" value="$VAR[skinsettings_slideshow2_source_Label]" />
 			<param name="previous" value="1609" />
 			<param name="id" value="1610" />
-			<param name="next" value="1611" />
+			<param name="next" value="202" />
 		</include>
-		<control type="button" id="1611">
-			<description>- Choose a custom path</description>
-			<label>$VAR[skinsettings_slideshow2_path_Label,   - ]</label>
-			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,host_focus=202,mapping=copacetic1,name=pathsettings)</onclick>
-			<visible>ControlGroup(9).HasFocus(16) + Skin.HasSetting(slideshow2) + [Skin.String(slideshow2_source,custom) | !$EXP[Library_Has_Content]]</visible>
+		<control type="button" id="202">
+			<description>Slideshow 2 custom path</description>
+			<visible>$EXP[skinsettings_Category_Background]</visible>
+			<label>   - $LOCALIZE[31439]</label>
 		</control>
 		<include content="skinsettings_Double_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(16) + Skin.HasSetting(slideshow2)" />
+			<param name="visible" value="$EXP[skinsettings_Category_Background] + Skin.HasSetting(slideshow2)" />
 			<param name="info" value="slideshow_start" />
 			<param name="info2" value="slideshow2_start" />
 			<param name="label" value="   - $LOCALIZE[31731]" />
 			<param name="label2" value="Slideshow 1 ($VAR[skinsettings_slideshow_start_Label]) / Slideshow 2 ($VAR[skinsettings_slideshow2_start_Label])" />
-			<param name="category" value="16" />
-			<param name="previous" value="1611" />
+			<param name="previous" value="202" />
 			<param name="id" value="1613" />
 			<param name="next" value="1603" />
 		</include>
 		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(16)" />
+			<param name="visible" value="$EXP[skinsettings_Category_Background]" />
 			<param name="info" value="slideshow_interval" />
 			<param name="label" value="$LOCALIZE[31427]" />
 			<param name="label2" value="$VAR[skinsettings_slideshow_interval_Label]" />
@@ -210,7 +169,7 @@
 			<param name="next" value="1605" />
 		</include>
 		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(16)" />
+			<param name="visible" value="$EXP[skinsettings_Category_Background]" />
 			<param name="info" value="Background_Brightness" />
 			<param name="label" value="$LOCALIZE[31440]" />
 			<param name="label2" value="$INFO[Skin.String(Background_Brightness)]" />
@@ -220,13 +179,13 @@
 		</include>
 		<control type="radiobutton" id="1604">
 			<description>Show the name of currently displaying background artworks</description>
-			<visible>ControlGroup(9).HasFocus(16)</visible>
+			<visible>$EXP[skinsettings_Category_Background]</visible>
 			<label>$LOCALIZE[31495]</label>
 			<onclick>Skin.ToggleSetting(Background_Label_Enabled)</onclick>
 			<selected>Skin.HasSetting(Background_Label_Enabled)</selected>
 		</control>
 		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(16)" />
+			<param name="visible" value="$EXP[skinsettings_Category_Background]" />
 			<param name="info" value="Background_Opacity" />
 			<param name="label" value="$LOCALIZE[31487]" />
 			<param name="label2" value="$VAR[skinsettings_Background_Opacity_Label]" />
@@ -235,7 +194,7 @@
 			<param name="next" value="1607" />
 		</include>
 		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(16)" />
+			<param name="visible" value="$EXP[skinsettings_Category_Background]" />
 			<param name="info" value="Infoscreen_Brightness" />
 			<param name="label" value="$LOCALIZE[31722]" />
 			<param name="label2" value="$INFO[Skin.String(Infoscreen_Brightness)]" />
@@ -244,7 +203,7 @@
 			<param name="next" value="1608" />
 		</include>
 		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(16)" />
+			<param name="visible" value="$EXP[skinsettings_Category_Background]" />
 			<param name="info" value="OSD_Background_Brightness" />
 			<param name="label" value="$LOCALIZE[31719]" />
 			<param name="label2" value="$INFO[Skin.String(OSD_Background_Brightness)]" />
@@ -255,83 +214,91 @@
 		<!--Home-->
 		<control type="label" id="1117">
 			<description>Background</description>
-			<visible>ControlGroup(9).HasFocus(11)</visible>
+			<visible>$EXP[skinsettings_Category_Home]</visible>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[31432]</label>
 		</control>
 		<control type="radiobutton" id="1118">
 			<description>Override home menu backgrounds</description>
-			<visible>ControlGroup(9).HasFocus(11)</visible>
+			<visible>$EXP[skinsettings_Category_Home]</visible>
 			<label>$LOCALIZE[31433]</label>
 			<onclick>Skin.ToggleSetting(Home_Background_Override_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_Background_Override_Enabled)</selected>
 		</control>
 		<control type="label" id="1100">
 			<description>Widgets</description>
-			<visible>ControlGroup(9).HasFocus(11)</visible>
+			<visible>$EXP[skinsettings_Category_Home]</visible>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[31402]</label>
 		</control>
 		<control type="radiobutton" id="1101">
 			<description>Enable widgets</description>
-			<visible>ControlGroup(9).HasFocus(11)</visible>
+			<visible>$EXP[skinsettings_Category_Home]</visible>
 			<label>$LOCALIZE[31429]</label>
 			<onclick>Skin.ToggleSetting(Widgets_Enabled)</onclick>
 			<selected>Skin.HasSetting(Widgets_Enabled)</selected>
 		</control>
 		<control type="button" id="1113">
 			<description>Configure widgets</description>
-			<visible>ControlGroup(9).HasFocus(11) + Skin.HasSetting(Widgets_Enabled)</visible>
+			<visible>$EXP[skinsettings_Category_Home]</visible>
 			<label>- $LOCALIZE[31489]</label>
-			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,name=widgetsettings,mapping=widgets)</onclick>
 		</control>
 		<control type="label" id="1114">
 			<description>Global search</description>
-			<visible>ControlGroup(9).HasFocus(11)</visible>
+			<visible>$EXP[skinsettings_Category_Home]</visible>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[31635]</label>
 		</control>
 		<control type="radiobutton" id="1115">
 			<description>Enable Global search</description>
-			<visible>ControlGroup(9).HasFocus(11)</visible>
+			<visible>$EXP[skinsettings_Category_Home]</visible>
 			<label>$LOCALIZE[31704]</label>
 			<onclick>Skin.ToggleSetting(GlobalSearch_Disabled)</onclick>
 			<selected>!Skin.HasSetting(GlobalSearch_Disabled)</selected>
 		</control>
 		<control type="button" id="1116">
 			<description>Configure global search</description>
-			<visible>ControlGroup(9).HasFocus(11) + !Skin.HasSetting(GlobalSearch_Disabled)</visible>
+			<visible>$EXP[skinsettings_Category_Home]</visible>
 			<label>- $LOCALIZE[31705]</label>
-			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,name=searchsettings,mapping=search)</onclick>
 		</control>
-		<control type="button" id="1105">
-			<description>Search input: remote or keyboard, and the keypad's keys</description>
-			<visible>ControlGroup(9).HasFocus(11) + !Skin.HasSetting(GlobalSearch_Disabled)</visible>
-			<label>- $LOCALIZE[35150]</label>
-			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,focus_item=search,host_focus=205,mapping=copacetic1,name=pathsettings)</onclick>
+		<!-- Search's input: the helper shows the value as label2, and the keypad rows only for Remote -->
+		<control type="button" id="205">
+			<description>Search input: remote or keyboard</description>
+			<visible>$EXP[skinsettings_Category_Home]</visible>
+			<label>- Optimise for</label>
+		</control>
+		<control type="button" id="206">
+			<description>Keypad layout</description>
+			<visible>$EXP[skinsettings_Category_Home]</visible>
+			<label>   - Onscreen keyboard layout</label>
+		</control>
+		<control type="button" id="207">
+			<description>Keypad's keys</description>
+			<visible>$EXP[skinsettings_Category_Home]</visible>
+			<label>   - Onscreen keyboard</label>
 		</control>
 		<control type="label" id="1104">
 			<description>General</description>
-			<visible>ControlGroup(9).HasFocus(11)</visible>
+			<visible>$EXP[skinsettings_Category_Home]</visible>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[31400]</label>
 		</control>
 		<control type="radiobutton" id="1110">
 			<description>Enable screensaver</description>
-			<visible>ControlGroup(9).HasFocus(11)</visible>
+			<visible>$EXP[skinsettings_Category_Home]</visible>
 			<label>$LOCALIZE[31442]</label>
 			<onclick>Skin.ToggleSetting(Home_Screensaver_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_Screensaver_Enabled)</selected>
 		</control>
 		<control type="radiobutton" id="1111">
 			<description> - Show clearlogo</description>
-			<visible>ControlGroup(9).HasFocus(11) + Skin.HasSetting(Home_Screensaver_Enabled)</visible>
+			<visible>$EXP[skinsettings_Category_Home] + Skin.HasSetting(Home_Screensaver_Enabled)</visible>
 			<label>- $LOCALIZE[31443]</label>
 			<onclick>Skin.ToggleSetting(Home_Screensaver_Clearlogo_Enabled)</onclick>
 			<selected>Skin.HasSetting(Home_Screensaver_Clearlogo_Enabled)</selected>
 		</control>
 		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(11)" />
+			<param name="visible" value="$EXP[skinsettings_Category_Home]" />
 			<param name="info" value="Time_Widget" />
 			<param name="label" value="$LOCALIZE[31444]" />
 			<param name="label2" value="$VAR[skinsettings_Time_Widget_Label]" />
@@ -341,7 +308,7 @@
 		</include>
 		<control type="radiobutton" id="1119">
 			<description> - Make persistent across homescreen</description>
-			<visible>ControlGroup(9).HasFocus(11) + !Skin.String(Time_Widget,None)</visible>
+			<visible>$EXP[skinsettings_Category_Home] + !Skin.String(Time_Widget,None)</visible>
 			<label>- $LOCALIZE[31728]</label>
 			<onclick>Skin.ToggleSetting(Time_Widget_Persistent)</onclick>
 			<selected>Skin.HasSetting(Time_Widget_Persistent)</selected>
@@ -349,38 +316,37 @@
 		<!-- Views -->
 		<control type="label" id="1350">
 			<description>General</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
+			<visible>$EXP[skinsettings_Category_Views]</visible>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[31400]</label>
 		</control>
 		<control type="radiobutton" id="1351">
 			<description>Kiosk mode</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
+			<visible>$EXP[skinsettings_Category_Views]</visible>
 			<label>$LOCALIZE[31475]</label>
 			<onclick>Skin.ToggleSetting(Kiosk_Mode)</onclick>
 			<selected>Skin.HasSetting(Kiosk_Mode)</selected>
 		</control>
 		<control type="button" id="1352">
 			<description>View options</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
+			<visible>$EXP[skinsettings_Category_Views]</visible>
 			<label>$LOCALIZE[14018]</label>
-			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,name=viewsettings,mapping=content_types)</onclick>
 		</control>
 		<control type="radiobutton" id="1355">
 			<description>Add movement</description>
 			<label>$LOCALIZE[31441]</label>
 			<onclick>Skin.ToggleSetting(List_Ken_Burns_Effect)</onclick>
 			<selected>Skin.HasSetting(List_Ken_Burns_Effect)</selected>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
+			<visible>$EXP[skinsettings_Category_Views]</visible>
 		</control>
 		<control type="label" id="1330">
 			<description>Grid</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
+			<visible>$EXP[skinsettings_Category_Views]</visible>
 			<label>$LOCALIZE[31004]</label>
 			<include content="skinsettings_Default_Label" />
 		</control>
 		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(13)" />
+			<param name="visible" value="$EXP[skinsettings_Category_Views]" />
 			<param name="info" value="GridView_Size" />
 			<param name="label" value="$LOCALIZE[31715]" />
 			<param name="label2" value="$VAR[skinsettings_GridView_Size_Label2]" />
@@ -390,20 +356,20 @@
 		</include>
 		<control type="image" id="1336">
 			<description>Grid watched screenshot</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
+			<visible>$EXP[skinsettings_Category_Views]</visible>
 			<include content="skinsettings_Detfault_Image" />
 			<texture>$VAR[skinsettings_Grid_WatchedStatus_Screenshots]</texture>
 		</control>
 		<control type="radiobutton" id="1337">
 			<description>Dim thumbnails for watched listitems</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
+			<visible>$EXP[skinsettings_Category_Views]</visible>
 			<label>- $LOCALIZE[31449]</label>
 			<onclick>Skin.ToggleSetting(GridView_WatchedStatus_Enabled)</onclick>
 			<selected>Skin.HasSetting(GridView_WatchedStatus_Enabled)</selected>
 		</control>
 		<control type="radiobutton" id="1338">
 			<description>Checkmarks instead of completed progress bar for watched items</description>
-			<visible>ControlGroup(9).HasFocus(13)</visible>
+			<visible>$EXP[skinsettings_Category_Views]</visible>
 			<label>- $LOCALIZE[31450]</label>
 			<onclick>Skin.ToggleSetting(GridView_AltWatchedStatus_Enabled)</onclick>
 			<selected>Skin.HasSetting(GridView_AltWatchedStatus_Enabled)</selected>
@@ -414,11 +380,11 @@
 			<description>Library</description>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[14022]</label>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
+			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
 		<control type="image" id="1401">
 			<description>Unwatched episode count image</description>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
+			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 			<include content="skinsettings_Detfault_Image">
 				<param name="height" value="360" />
 			</include>
@@ -429,24 +395,24 @@
 			<label>$LOCALIZE[31451]</label>
 			<onclick>Skin.ToggleSetting(Unwatched_Indicator)</onclick>
 			<selected>Skin.HasSetting(Unwatched_Indicator)</selected>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
+			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
 		<control type="button" id="1403">
 			<description>Choose preferred classification ratings...</description>
 			<label>$VAR[skinsettings_Preferred_MPAA_Label]</label>
 			<label2>$VAR[skinsettings_Preferred_MPAA_Label2]</label2>
 			<onclick>Skin.SelectBool(31452, 31951|Preferred_Rating_BBFC, 31952|Preferred_Rating_MPAA, 31953|Preferred_Rating_CHVRS, 31954|Preferred_Rating_ACB, 31955|Preferred_Rating_DJCTQ, 31956|Preferred_Rating_EIRIN, 31957|Preferred_Rating_FSK, 31959|Preferred_Rating_KIJKWIJZER)</onclick>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
+			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
 		<control type="radiobutton" id="1404">
 			<description>Scroll by sort letter</description>
 			<label>$LOCALIZE[31453]</label>
 			<onclick>Skin.ToggleSetting(SortLetter_Enabled)</onclick>
 			<selected>Skin.HasSetting(SortLetter_Enabled)</selected>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
+			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
 		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(14)" />
+			<param name="visible" value="$EXP[skinsettings_Category_Customisations]" />
 			<param name="info" value="like_threshold" />
 			<param name="label" value="$LOCALIZE[31454]" />
 			<param name="label2" value="$VAR[skinsettings_like_threshold_Label]" />
@@ -458,54 +424,64 @@
 			<description>Info screens</description>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[31484]</label>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
+			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
 		<control type="radiobutton" id="1407">
 			<description>Disable star ratings</description>
 			<label>$LOCALIZE[31485]</label>
 			<onclick>Skin.ToggleSetting(Star_Ratings_Disabled)</onclick>
 			<selected>Skin.HasSetting(Star_Ratings_Disabled)</selected>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
+			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
 		<control type="label" id="1408">
 			<description>Video Player</description>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[31478]</label>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
+			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
 		<control type="button" id="1421">
 			<description>Subtitle limiter</description>
 			<label>$LOCALIZE[31711]</label>
 			<label2>$INFO[Skin.String(Subtitle_Limiter)]</label2>
 			<onclick>Skin.SetString(Subtitle_Limiter)</onclick>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
+			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
 		<control type="radiobutton" id="1424">
 			<description>Disable video information label during playback</description>
 			<label>$LOCALIZE[31713]</label>
 			<onclick>Skin.ToggleSetting(Video_Breadcrumb_Disabled)</onclick>
 			<selected>Skin.HasSetting(Video_Breadcrumb_Disabled)</selected>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
+			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
 		<control type="radiobutton" id="1426">
 			<description>Prefer time remaining to video duration in player seek bar</description>
 			<label>$LOCALIZE[31718]</label>
 			<onclick>Skin.ToggleSetting(Prefer_TimeRemaining)</onclick>
 			<selected>Skin.HasSetting(Prefer_TimeRemaining)</selected>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
+			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
-		<control type="button" id="1409">
-			<description>Play next: on or off, the card's time before the end and "Still there?"</description>
+		<!-- Play next: its switch, then two cycles the helper hides while it's off; it shows each value as label2 -->
+		<control type="radiobutton" id="208">
+			<description>Play next on or off</description>
+			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 			<label>$LOCALIZE[10008]</label>
-			<onclick>RunScript(script.copacetic.helper,action=dynamic_settings_window,focus_item=player,host_focus=208,mapping=copacetic1,name=pathsettings)</onclick>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
+		</control>
+		<control type="button" id="203">
+			<description>Play next card's time before the end</description>
+			<visible>$EXP[skinsettings_Category_Customisations]</visible>
+			<label>- Show the card before the end</label>
+		</control>
+		<control type="button" id="204">
+			<description>Still there?</description>
+			<visible>$EXP[skinsettings_Category_Customisations]</visible>
+			<label>- Still there?</label>
 		</control>
 		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(14)" />
+			<param name="visible" value="$EXP[skinsettings_Category_Customisations]" />
 			<param name="info" value="script-upnext_Artwork" />
 			<param name="label" value="$LOCALIZE[31491]" />
 			<param name="label2" value="$VAR[skinsettings_script-upnext_Artwork_Label2]" />
-			<param name="previous" value="1409" />
+			<param name="previous" value="204" />
 			<param name="id" value="1410" />
 			<param name="next" value="1412" />
 		</include>
@@ -514,23 +490,23 @@
 			<label>$LOCALIZE[31456]</label>
 			<onclick>Skin.ToggleSetting(Pause_Screen_Info_Enabled)</onclick>
 			<selected>Skin.HasSetting(Pause_Screen_Info_Enabled)</selected>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
+			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
 		<control type="label" id="1413">
 			<description>Music Player</description>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[31479]</label>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
+			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
 		<control type="radiobutton" id="1414">
 			<description>Enable background fanart</description>
 			<label>$LOCALIZE[31480]</label>
 			<onclick>Skin.ToggleSetting(visualisation_Disable_Background)</onclick>
 			<selected>!Skin.HasSetting(visualisation_Disable_Background)</selected>
-			<visible>ControlGroup(9).HasFocus(14)</visible>
+			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
 		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="ControlGroup(9).HasFocus(14)" />
+			<param name="visible" value="$EXP[skinsettings_Category_Customisations]" />
 			<param name="info" value="visualisation_Layout" />
 			<param name="label" value="$LOCALIZE[31481]" />
 			<param name="label2" value="$VAR[skinsettings_visualisation_Layout_Label2]" />
@@ -542,38 +518,38 @@
 		<!-- Extras -->
 		<control type="label" id="1500">
 			<description>Embedded lists</description>
-			<visible>ControlGroup(9).HasFocus(15)</visible>
+			<visible>$EXP[skinsettings_Category_Extras]</visible>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[31457]</label>
 		</control>
 		<control type="image" id="1501">
 			<description>Embedded lists image</description>
-			<visible>ControlGroup(9).HasFocus(15)</visible>
+			<visible>$EXP[skinsettings_Category_Extras]</visible>
 			<include content="skinsettings_Detfault_Image" />
 			<texture>$VAR[skinsettings_Embedded_Lists_Screenshots]</texture>
 		</control>
 		<control type="radiobutton" id="1502">
 			<description>Enable embedded lists for sets, tv shows and artists</description>
-			<visible>ControlGroup(9).HasFocus(15)</visible>
+			<visible>$EXP[skinsettings_Category_Extras]</visible>
 			<label>$LOCALIZE[31458]</label>
 			<onclick>Skin.ToggleSetting(Secondary_List_Enabled)</onclick>
 			<selected>Skin.HasSetting(Secondary_List_Enabled)</selected>
 		</control>
 		<control type="label" id="1510">
 			<description>Music player</description>
-			<visible>ControlGroup(9).HasFocus(15)</visible>
+			<visible>$EXP[skinsettings_Category_Extras]</visible>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[31459]</label>
 		</control>
 		<control type="image" id="1511">
 			<description>Music player image</description>
-			<visible>ControlGroup(9).HasFocus(15)</visible>
+			<visible>$EXP[skinsettings_Category_Extras]</visible>
 			<include content="skinsettings_Detfault_Image" />
 			<texture>$VAR[skinsettings_Music_Player_Screenshots]</texture>
 		</control>
 		<control type="multiimage" id="1512">
 			<description>Music player multiimage</description>
-			<visible>ControlGroup(9).HasFocus(15) + Skin.HasSetting(Music_Player_Enabled)</visible>
+			<visible>$EXP[skinsettings_Category_Extras] + Skin.HasSetting(Music_Player_Enabled)</visible>
 			<top>-450</top>
 			<include content="skinsettings_Detfault_Image">
 				<param name="fadetime" value="360" />
@@ -583,26 +559,26 @@
 		</control>
 		<control type="radiobutton" id="1513">
 			<description>Enable embedded music player</description>
-			<visible>ControlGroup(9).HasFocus(15)</visible>
+			<visible>$EXP[skinsettings_Category_Extras]</visible>
 			<label>$LOCALIZE[31460]</label>
 			<onclick>Skin.ToggleSetting(Music_Player_Enabled)</onclick>
 			<selected>Skin.HasSetting(Music_Player_Enabled)</selected>
 		</control>
 		<control type="label" id="1520">
 			<description>Multiart slideshow</description>
-			<visible>ControlGroup(9).HasFocus(15)</visible>
+			<visible>$EXP[skinsettings_Category_Extras]</visible>
 			<include content="skinsettings_Default_Label" />
 			<label>$LOCALIZE[31461]</label>
 		</control>
 		<control type="image" id="1521">
 			<description>Multiart slideshow image</description>
-			<visible>ControlGroup(9).HasFocus(15)</visible>
+			<visible>$EXP[skinsettings_Category_Extras]</visible>
 			<include content="skinsettings_Detfault_Image" />
 			<texture>$VAR[skinsettings_Multiart_Slideshow_Screenshots]</texture>
 		</control>
 		<control type="multiimage" id="1522">
 			<description>Multiart slideshow multiimage</description>
-			<visible>ControlGroup(9).HasFocus(15) + Skin.HasSetting(Multiart_Slideshow)</visible>
+			<visible>$EXP[skinsettings_Category_Extras] + Skin.HasSetting(Multiart_Slideshow)</visible>
 			<top>-450</top>
 			<randomize>true</randomize>
 			<include content="skinsettings_Detfault_Image">
@@ -613,7 +589,7 @@
 		</control>
 		<control type="radiobutton" id="1523">
 			<description>Enable multiart slideshows</description>
-			<visible>ControlGroup(9).HasFocus(15)</visible>
+			<visible>$EXP[skinsettings_Category_Extras]</visible>
 			<label>$LOCALIZE[31462]</label>
 			<onclick>Skin.ToggleSetting(Multiart_Slideshow)</onclick>
 			<selected>Skin.HasSetting(Multiart_Slideshow)</selected>

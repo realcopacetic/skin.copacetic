@@ -1,7 +1,7 @@
 {
   "copacetic1": {
     "mode": "dynamic",
-    "items": [ "background", "player", "search" ],
+    "items": [ "general", "menus", "background", "home", "views", "customisations", "extras" ],
     "placeholders": { "key": "settings_category" },
     "skin_mirrors": {
       "slideshow_path": "slideshow_path",
@@ -10,22 +10,26 @@
       "playnext_lead": "playnext_lead"
     },
     "config_fields": {
-      "player": {
+      "home": {
+        "search_optimise": "search_optimise",
+        "search_optimise_remote": "search_optimise_remote",
+        "search_optimise_focus": "search_optimise_focus"
+      },
+      "customisations": {
         "playnext_enabled": "playnext_enabled",
         "playnext_lead": "playnext_lead",
         "still_watching": "still_watching",
         "playnext_idle": "playnext_idle"
-      },
-      "search": {
-        "search_optimise": "search_optimise",
-        "search_optimise_remote": "search_optimise_remote",
-        "search_optimise_focus": "search_optimise_focus"
       }
     },
     "metadata": {
-      "background": { "label": "$LOCALIZE[31438]" },
-      "player": { "label": "$LOCALIZE[14200]" },
-      "search": { "label": "$LOCALIZE[137]" }
+      "general": { "label": "$LOCALIZE[31400]", "description": "$LOCALIZE[31500]" },
+      "menus": { "label": "$LOCALIZE[31416]", "description": "$LOCALIZE[31516]" },
+      "background": { "label": "$LOCALIZE[31432]", "description": "$LOCALIZE[31532]" },
+      "home": { "label": "$LOCALIZE[31401]", "description": "$LOCALIZE[31501]" },
+      "views": { "label": "$LOCALIZE[31403]", "description": "$LOCALIZE[31503]" },
+      "customisations": { "label": "$LOCALIZE[31404]", "description": "$LOCALIZE[31504]" },
+      "extras": { "label": "$LOCALIZE[31405]", "description": "$LOCALIZE[31505]" }
     }
   }
 }

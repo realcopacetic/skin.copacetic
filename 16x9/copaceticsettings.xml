@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- copaceticsettings: Skin settings, the helper's editor for the copacetic1 mapping, opened by the skinsettings shell.
+		List 100 holds the categories, grouplist 9001 their rows; a modal dialog, so the switcher takes its dialog variant -->
+	<defaultcontrol always="true">3001</defaultcontrol>
+	<controls>
+		<include content="editor_Description_Hidden" />
+		<include content="Default_Settings_Panel_Layout">
+			<param name="dialog" value="true" />
+			<param name="icon" value="settings/Copacetic_focused_60.png" />
+			<param name="left_list_id" value="100" />
+			<param name="right_list_id" value="9001" />
+			<param name="title_label" value="$LOCALIZE[31472]" />
+			<param name="visible" value="Window.IsModalDialogTopmost(copaceticsettings.xml)" />
+			<include content="Settings_List_Template">
+				<param name="focus_border_margin_left" value="60" />
+				<param name="focus_color" value="$VAR[skinsettings_Category_Color]" />
+				<param name="height" value="630" />
+				<param name="id" value="100" />
+				<param name="label2_visible" value="false" />
+				<param name="left" value="90" />
+				<param name="top" value="225" />
+				<param name="width" value="480" />
+				<onleft>3001</onleft>
+				<onright>9001</onright>
+			</include>
+			<include content="Settings_Grouplist_Template">
+				<param name="id" value="9001" />
+				<param name="left" value="570" />
+				<param name="onleft" value="100" />
+				<param name="onright" value="3001" />
+				<param name="pagecontrol" value="61" />
+				<param name="scrollbar_visible" value="ControlGroup(9001).HasFocus" />
+				<param name="width" value="1260" />
+				<include content="skinsettings_Right_List_Content_Home" />
+			</include>
+			<include content="Description_Label">
+				<param name="bottom" value="40" />
+				<param name="height" value="100" />
+				<param name="label" value="$VAR[skinsettings_Hint_Label]" />
+				<param name="right" value="150" />
+				<param name="textcolor" value="light" />
+				<param name="type" value="textbox" />
+			</include>
+		</include>
+	</controls>
+</window>

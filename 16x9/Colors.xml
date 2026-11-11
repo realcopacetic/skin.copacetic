@@ -126,6 +126,10 @@
 		<value condition="Window.Is(musicplaylisteditor) + Control.HasFocus(50)">light</value>
 		<value>unfocused</value>
 	</variable>
+	<variable name="skinsettings_Category_Color"><!-- Skin settings' categories: lit only while the list has focus, as the buttons were -->
+		<value condition="Control.HasFocus(100)">light</value>
+		<value>unfocused</value>
+	</variable>
 	<variable name="Settings_Right_List_Focus_Color">
 		<value condition="Window.Is(filemanager) + Control.HasFocus(21)">light</value>
 		<value condition="Window.Is(musicplaylisteditor) + Control.HasFocus(100)">light</value>
