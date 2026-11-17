@@ -64,6 +64,7 @@
 
 	<include name="Home_Widgets">
 		<include content="widgets_latches" />
+		<include content="widgets_move_latches" />
 		<control type="group" id="5200"> <!-- Timers.xml reads this (no $EXP there): a row was reached just now -->
 			<visible>$EXP[widgets_container_switching]</visible>
 		</control>
