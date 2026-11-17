@@ -32,7 +32,6 @@
 			<filter>In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom])</filter>
 			<include name="widgets_layouts">
 				<include content="Home_Row_Layout">
-					<param name="art_landscape" value="{art_landscape}" />
 					<param name="autoplay" value="{autoplay}" />
 					<param name="clearlogos" value="{art_clearlogo}" />
 					<param name="display" value="{art}" />

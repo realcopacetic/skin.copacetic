@@ -41,9 +41,11 @@
 		</definition>
 	</include>
 
-	<!-- The rails' Strip in Home and search: the rail's art (StripView_Art_<display>) in the display's wrapper -->
+	<!-- The rails' Strip in Home and search: the rail's art (StripView_Art_<display>) in the display's wrapper.
+		left_visible: off in Home, whose art sits at the details-on place -->
 	<include name="StripView_Display">
 		<param name="display" />
+		<param name="left_visible" default="false" />
 		<definition>
 			<include content="Viewtype_Display_Template">
 				<param name="viewtype_label" value="Strip" />

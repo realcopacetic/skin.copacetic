@@ -47,7 +47,7 @@
 		<include content="Viewtype_Display_Template">
 			<param name="viewtype_label" value="Billboard" />
 			<include content="Trailer_Autoplay_Fade_Animation" condition="$EXP[trailer_include_videos] | $EXP[trailer_include_home]" />
-			<include content="BillboardView_Art_Fanart">
+			<include content="BillboardView_Art_$PARAM[display]">
 				<param name="id" value="$PARAM[id]" />
 				<param name="region" value="$PARAM[region]" />
 				<param name="texture_prefix" value="$PARAM[texture_prefix]" />
