@@ -245,32 +245,6 @@
 					<param name="id" value="1018" />
 				</include>
 			</control>
-			<!-- Past 18 choices list 996 draws the rows; this draws the focused one over its row, in the focused font -->
-			<control type="label">
-				<visible>Integer.IsGreater(Container(996).NumItems,18)</visible>
-				<left>960</left>
-				<top>0</top>
-				<width>900</width>
-				<include content="ContextMenuLabelFocused" />
-				<label>$INFO[System.CurrentControl]</label>
-				<animation effect="slide" end="0,60" time="0" condition="Container(996).Position(1)">Conditional</animation>
-				<animation effect="slide" end="0,120" time="0" condition="Container(996).Position(2)">Conditional</animation>
-				<animation effect="slide" end="0,180" time="0" condition="Container(996).Position(3)">Conditional</animation>
-				<animation effect="slide" end="0,240" time="0" condition="Container(996).Position(4)">Conditional</animation>
-				<animation effect="slide" end="0,300" time="0" condition="Container(996).Position(5)">Conditional</animation>
-				<animation effect="slide" end="0,360" time="0" condition="Container(996).Position(6)">Conditional</animation>
-				<animation effect="slide" end="0,420" time="0" condition="Container(996).Position(7)">Conditional</animation>
-				<animation effect="slide" end="0,480" time="0" condition="Container(996).Position(8)">Conditional</animation>
-				<animation effect="slide" end="0,540" time="0" condition="Container(996).Position(9)">Conditional</animation>
-				<animation effect="slide" end="0,600" time="0" condition="Container(996).Position(10)">Conditional</animation>
-				<animation effect="slide" end="0,660" time="0" condition="Container(996).Position(11)">Conditional</animation>
-				<animation effect="slide" end="0,720" time="0" condition="Container(996).Position(12)">Conditional</animation>
-				<animation effect="slide" end="0,780" time="0" condition="Container(996).Position(13)">Conditional</animation>
-				<animation effect="slide" end="0,840" time="0" condition="Container(996).Position(14)">Conditional</animation>
-				<animation effect="slide" end="0,900" time="0" condition="Container(996).Position(15)">Conditional</animation>
-				<animation effect="slide" end="0,960" time="0" condition="Container(996).Position(16)">Conditional</animation>
-				<animation effect="slide" end="0,1020" time="0" condition="Container(996).Position(17)">Conditional</animation>
-			</control>
 		</control>
 		<!-- The engine clones button 1000 here once per choice (1001 up). Up to 18 it is hidden and owns focus under the labels
 		     above, in their rows; past 18 it draws itself, scrolling (as C2's past 20) -->
@@ -287,7 +261,7 @@
 			<scrolltime>0</scrolltime>
 			<onleft>Close</onleft>
 			<onright>Close</onright>
-			<!-- Default button: every clone copies it, an unfocused row; the label above draws the focused one -->
+			<!-- Default button: every clone copies it, an unfocused row; the label after the list draws the focused one -->
 			<control type="button" id="1000">
 				<width>900</width>
 				<height>60</height>
@@ -297,6 +271,34 @@
 				<focusedcolor>00ebedee</focusedcolor>
 				<texturefocus />
 			</control>
+		</control>
+		<!-- Past 18 the focused row in the focused font, over list 996; after it, so Position is this frame's -->
+		<control type="label">
+			<visible>Integer.IsGreater(Container(996).NumItems,18) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(textviewer)</visible>
+			<left>960</left>
+			<top>0</top>
+			<width>900</width>
+			<label>$INFO[System.CurrentControl]</label>
+			<animation effect="slide" end="0,60" time="0" condition="Container(996).Position(1)">Conditional</animation>
+			<animation effect="slide" end="0,120" time="0" condition="Container(996).Position(2)">Conditional</animation>
+			<animation effect="slide" end="0,180" time="0" condition="Container(996).Position(3)">Conditional</animation>
+			<animation effect="slide" end="0,240" time="0" condition="Container(996).Position(4)">Conditional</animation>
+			<animation effect="slide" end="0,300" time="0" condition="Container(996).Position(5)">Conditional</animation>
+			<animation effect="slide" end="0,360" time="0" condition="Container(996).Position(6)">Conditional</animation>
+			<animation effect="slide" end="0,420" time="0" condition="Container(996).Position(7)">Conditional</animation>
+			<animation effect="slide" end="0,480" time="0" condition="Container(996).Position(8)">Conditional</animation>
+			<animation effect="slide" end="0,540" time="0" condition="Container(996).Position(9)">Conditional</animation>
+			<animation effect="slide" end="0,600" time="0" condition="Container(996).Position(10)">Conditional</animation>
+			<animation effect="slide" end="0,660" time="0" condition="Container(996).Position(11)">Conditional</animation>
+			<animation effect="slide" end="0,720" time="0" condition="Container(996).Position(12)">Conditional</animation>
+			<animation effect="slide" end="0,780" time="0" condition="Container(996).Position(13)">Conditional</animation>
+			<animation effect="slide" end="0,840" time="0" condition="Container(996).Position(14)">Conditional</animation>
+			<animation effect="slide" end="0,900" time="0" condition="Container(996).Position(15)">Conditional</animation>
+			<animation effect="slide" end="0,960" time="0" condition="Container(996).Position(16)">Conditional</animation>
+			<animation effect="slide" end="0,1020" time="0" condition="Container(996).Position(17)">Conditional</animation>
+			<include content="ContextMenuLabelFocused" />
+			<include content="WindowOpenClose_Fade_Delayed_Long_Animation" />
+			<include content="Visible_Fade_Delayed_Long_Animation" />
 		</control>
 	</include>
 
