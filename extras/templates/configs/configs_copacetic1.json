@@ -81,6 +81,22 @@
       },
       "defaults": { "*": "Clock" }
     },
+    "GridView_Size": {
+      "items": { "Small": "$LOCALIZE[31482]", "Large": "$LOCALIZE[31483]", "Horizontal": "$LOCALIZE[31415]" },
+      "defaults": { "*": "Large" }
+    },
+    "like_threshold": {
+      "items": { "0": "$LOCALIZE[351]", "6": "6", "7": "7", "8": "8", "9": "9", "10": "10" },
+      "defaults": { "*": "8" }
+    },
+    "script-upnext_Artwork": {
+      "items": { "Posters": "$LOCALIZE[31006]", "Fanart": "$LOCALIZE[31007]", "Square": "$LOCALIZE[31008]" },
+      "defaults": { "*": "Fanart" }
+    },
+    "visualisation_Layout": {
+      "items": { "Small": "$LOCALIZE[31830]", "Large": "$LOCALIZE[31829]" },
+      "defaults": { "*": "Small" }
+    },
     "playnext_enabled": {
       "items": [ "true", "false" ],
       "defaults": { "*": "true" }

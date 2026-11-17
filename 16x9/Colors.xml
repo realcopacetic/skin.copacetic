@@ -136,24 +136,6 @@
 		<value>unfocused</value>
 	</variable>
 
-	<variable name="skinsettings_GridView_Size_Button_Textcolor">
-		<value condition="Control.HasFocus(13400) | Control.HasFocus(13401)">light</value>
-		<value>unfocused</value>
-	</variable>
-	<variable name="skinsettings_script-upnext_Artwork_Button_Textcolor">
-		<value condition="Control.HasFocus(14100) | Control.HasFocus(14101)">light</value>
-		<value>unfocused</value>
-	</variable>
-	<variable name="skinsettings_visualisation_Layout_Button_Textcolor">
-		<value condition="Control.HasFocus(14130) | Control.HasFocus(14131)">light</value>
-		<value>unfocused</value>
-	</variable>
-
-	<variable name="skinsettings_like_threshold_Button_Textcolor">
-		<value condition="Control.HasFocus(14050) | Control.HasFocus(14051)">light</value>
-		<value>unfocused</value>
-	</variable>
-
 	<variable name="SortLetter_Background_Color">
 		<value condition="Control.HasFocus(62) + $EXP[Container_HasBackground]">light</value>
 		<value condition="Control.HasFocus(62) + Skin.String(Theme,Light)">dark</value>

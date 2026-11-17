@@ -25,9 +25,28 @@
       "Home_Screensaver_Clearlogo_Enabled": "Home_Screensaver_Clearlogo_Enabled",
       "Time_Widget": "Time_Widget",
       "Time_Widget_Persistent": "Time_Widget_Persistent",
+      "Kiosk_Mode": "Kiosk_Mode",
+      "List_Ken_Burns_Effect": "List_Ken_Burns_Effect",
+      "GridView_Size": "GridView_Size",
+      "GridView_WatchedStatus_Enabled": "GridView_WatchedStatus_Enabled",
+      "GridView_AltWatchedStatus_Enabled": "GridView_AltWatchedStatus_Enabled",
+      "Unwatched_Indicator": "Unwatched_Indicator",
+      "rating_system": "rating_system",
+      "SortLetter_Enabled": "SortLetter_Enabled",
+      "like_threshold": "like_threshold",
+      "Star_Ratings_Disabled": "Star_Ratings_Disabled",
+      "Subtitle_Limiter": "Subtitle_Limiter",
+      "Video_Breadcrumb_Disabled": "Video_Breadcrumb_Disabled",
+      "Prefer_TimeRemaining": "Prefer_TimeRemaining",
       "playnext_enabled": "playnext_enabled",
       "playnext_lead": "playnext_lead",
-      "rating_system": "rating_system"
+      "script-upnext_Artwork": "script-upnext_Artwork",
+      "Pause_Screen_Info_Enabled": "Pause_Screen_Info_Enabled",
+      "visualisation_Background": "visualisation_Background",
+      "visualisation_Layout": "visualisation_Layout",
+      "Secondary_List_Enabled": "Secondary_List_Enabled",
+      "Music_Player_Enabled": "Music_Player_Enabled",
+      "Multiart_Slideshow": "Multiart_Slideshow"
     },
     "config_fields": {
       "general": {
@@ -58,12 +77,34 @@
         "search_optimise_remote": "search_optimise_remote",
         "search_optimise_focus": "search_optimise_focus"
       },
+      "views": {
+        "Kiosk_Mode": "toggle_off",
+        "List_Ken_Burns_Effect": "toggle_off",
+        "GridView_Size": "GridView_Size",
+        "GridView_WatchedStatus_Enabled": "toggle_off",
+        "GridView_AltWatchedStatus_Enabled": "toggle_off"
+      },
       "customisations": {
+        "Unwatched_Indicator": "toggle_off",
+        "rating_system": "rating_system",
+        "SortLetter_Enabled": "toggle_off",
+        "like_threshold": "like_threshold",
+        "Star_Ratings_Disabled": "toggle_off",
+        "Video_Breadcrumb_Disabled": "toggle_off",
+        "Prefer_TimeRemaining": "toggle_off",
         "playnext_enabled": "playnext_enabled",
         "playnext_lead": "playnext_lead",
         "still_watching": "still_watching",
         "playnext_idle": "playnext_idle",
-        "rating_system": "rating_system"
+        "script-upnext_Artwork": "script-upnext_Artwork",
+        "Pause_Screen_Info_Enabled": "toggle_off",
+        "visualisation_Background": "toggle_on",
+        "visualisation_Layout": "visualisation_Layout"
+      },
+      "extras": {
+        "Secondary_List_Enabled": "toggle_off",
+        "Music_Player_Enabled": "toggle_off",
+        "Multiart_Slideshow": "toggle_off"
       }
     },
     "metadata": {
@@ -72,7 +113,7 @@
       "background": { "label": "$LOCALIZE[31432]", "description": "$LOCALIZE[31532]" },
       "home": { "label": "$LOCALIZE[31401]", "description": "$LOCALIZE[31501]" },
       "views": { "label": "$LOCALIZE[31403]", "description": "$LOCALIZE[31503]" },
-      "customisations": { "label": "$LOCALIZE[31404]", "description": "$LOCALIZE[31504]" },
+      "customisations": { "label": "$LOCALIZE[31404]", "description": "$LOCALIZE[31504]", "Subtitle_Limiter": "" },
       "extras": { "label": "$LOCALIZE[31405]", "description": "$LOCALIZE[31505]" }
     }
   }

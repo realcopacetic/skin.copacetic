@@ -304,8 +304,6 @@
 			<description>Kiosk mode</description>
 			<visible>$EXP[skinsettings_Category_Views]</visible>
 			<label>$LOCALIZE[31475]</label>
-			<onclick>Skin.ToggleSetting(Kiosk_Mode)</onclick>
-			<selected>Skin.HasSetting(Kiosk_Mode)</selected>
 		</control>
 		<control type="button" id="1352">
 			<description>View options</description>
@@ -315,8 +313,6 @@
 		<control type="radiobutton" id="1355">
 			<description>Add movement</description>
 			<label>$LOCALIZE[31441]</label>
-			<onclick>Skin.ToggleSetting(List_Ken_Burns_Effect)</onclick>
-			<selected>Skin.HasSetting(List_Ken_Burns_Effect)</selected>
 			<visible>$EXP[skinsettings_Category_Views]</visible>
 		</control>
 		<control type="label" id="1330">
@@ -325,14 +321,13 @@
 			<label>$LOCALIZE[31004]</label>
 			<include content="skinsettings_Default_Label" />
 		</control>
-		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="$EXP[skinsettings_Category_Views]" />
-			<param name="info" value="GridView_Size" />
-			<param name="label" value="$LOCALIZE[31715]" />
-			<param name="label2" value="$VAR[skinsettings_GridView_Size_Label2]" />
-			<param name="previous" value="1330" />
+		<include content="viewsettings_Slider_Row">
 			<param name="id" value="1332" />
-			<param name="next" value="1337" />
+			<param name="ondown" value="1336" />
+			<param name="onright" value="3001" />
+			<param name="onup" value="1330" />
+			<param name="visible" value="$EXP[skinsettings_Category_Views]" />
+			<param name="width" value="1080" />
 		</include>
 		<control type="image" id="1336">
 			<description>Grid watched screenshot</description>
@@ -344,15 +339,11 @@
 			<description>Dim thumbnails for watched listitems</description>
 			<visible>$EXP[skinsettings_Category_Views]</visible>
 			<label>- $LOCALIZE[31449]</label>
-			<onclick>Skin.ToggleSetting(GridView_WatchedStatus_Enabled)</onclick>
-			<selected>Skin.HasSetting(GridView_WatchedStatus_Enabled)</selected>
 		</control>
 		<control type="radiobutton" id="1338">
 			<description>Checkmarks instead of completed progress bar for watched items</description>
 			<visible>$EXP[skinsettings_Category_Views]</visible>
 			<label>- $LOCALIZE[31450]</label>
-			<onclick>Skin.ToggleSetting(GridView_AltWatchedStatus_Enabled)</onclick>
-			<selected>Skin.HasSetting(GridView_AltWatchedStatus_Enabled)</selected>
 		</control>
 
 		<!-- Customisations -->
@@ -373,8 +364,6 @@
 		<control type="radiobutton" id="1402">
 			<description>Show unwatched episodes count</description>
 			<label>$LOCALIZE[31451]</label>
-			<onclick>Skin.ToggleSetting(Unwatched_Indicator)</onclick>
-			<selected>Skin.HasSetting(Unwatched_Indicator)</selected>
 			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
 		<!-- Age rating flags: rating_system, a select over the systems; the helper shows the pick as label2 -->
@@ -386,18 +375,15 @@
 		<control type="radiobutton" id="1404">
 			<description>Scroll by sort letter</description>
 			<label>$LOCALIZE[31453]</label>
-			<onclick>Skin.ToggleSetting(SortLetter_Enabled)</onclick>
-			<selected>Skin.HasSetting(SortLetter_Enabled)</selected>
 			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
-		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="$EXP[skinsettings_Category_Customisations]" />
-			<param name="info" value="like_threshold" />
-			<param name="label" value="$LOCALIZE[31454]" />
-			<param name="label2" value="$VAR[skinsettings_like_threshold_Label]" />
-			<param name="previous" value="1404" />
+		<include content="viewsettings_Slider_Row">
 			<param name="id" value="1405" />
-			<param name="next" value="1407" />
+			<param name="ondown" value="1406" />
+			<param name="onright" value="3001" />
+			<param name="onup" value="1404" />
+			<param name="visible" value="$EXP[skinsettings_Category_Customisations]" />
+			<param name="width" value="1080" />
 		</include>
 		<control type="label" id="1406">
 			<description>Info screens</description>
@@ -408,8 +394,6 @@
 		<control type="radiobutton" id="1407">
 			<description>Disable star ratings</description>
 			<label>$LOCALIZE[31485]</label>
-			<onclick>Skin.ToggleSetting(Star_Ratings_Disabled)</onclick>
-			<selected>Skin.HasSetting(Star_Ratings_Disabled)</selected>
 			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
 		<control type="label" id="1408">
@@ -418,25 +402,21 @@
 			<label>$LOCALIZE[31478]</label>
 			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
-		<control type="button" id="1421">
+		<!-- Subtitle_Limiter: the helper shows the stored language as the edit's text and saves what the keyboard returns. An edit,
+			as the helper's input button opens its keyboard empty and takes an empty entry as a cancel, so it couldn't clear one -->
+		<control type="edit" id="1421">
 			<description>Subtitle limiter</description>
-			<label>$LOCALIZE[31711]</label>
-			<label2>$INFO[Skin.String(Subtitle_Limiter)]</label2>
-			<onclick>Skin.SetString(Subtitle_Limiter)</onclick>
 			<visible>$EXP[skinsettings_Category_Customisations]</visible>
+			<label>$LOCALIZE[31711]</label>
 		</control>
 		<control type="radiobutton" id="1424">
 			<description>Disable video information label during playback</description>
 			<label>$LOCALIZE[31713]</label>
-			<onclick>Skin.ToggleSetting(Video_Breadcrumb_Disabled)</onclick>
-			<selected>Skin.HasSetting(Video_Breadcrumb_Disabled)</selected>
 			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
 		<control type="radiobutton" id="1426">
 			<description>Prefer time remaining to video duration in player seek bar</description>
 			<label>$LOCALIZE[31718]</label>
-			<onclick>Skin.ToggleSetting(Prefer_TimeRemaining)</onclick>
-			<selected>Skin.HasSetting(Prefer_TimeRemaining)</selected>
 			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
 		<!-- Play next: its switch, then two cycles the helper hides while it's off; it shows each value as label2 -->
@@ -455,20 +435,17 @@
 			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 			<label>- Still there?</label>
 		</control>
-		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="$EXP[skinsettings_Category_Customisations]" />
-			<param name="info" value="script-upnext_Artwork" />
-			<param name="label" value="$LOCALIZE[31491]" />
-			<param name="label2" value="$VAR[skinsettings_script-upnext_Artwork_Label2]" />
-			<param name="previous" value="204" />
+		<include content="viewsettings_Slider_Row">
 			<param name="id" value="1410" />
-			<param name="next" value="1412" />
+			<param name="ondown" value="1412" />
+			<param name="onright" value="3001" />
+			<param name="onup" value="204" />
+			<param name="visible" value="$EXP[skinsettings_Category_Customisations]" />
+			<param name="width" value="1080" />
 		</include>
 		<control type="radiobutton" id="1412">
 			<description>Show info on pause screen</description>
 			<label>$LOCALIZE[31456]</label>
-			<onclick>Skin.ToggleSetting(Pause_Screen_Info_Enabled)</onclick>
-			<selected>Skin.HasSetting(Pause_Screen_Info_Enabled)</selected>
 			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
 		<control type="label" id="1413">
@@ -480,18 +457,15 @@
 		<control type="radiobutton" id="1414">
 			<description>Enable background fanart</description>
 			<label>$LOCALIZE[31480]</label>
-			<onclick>Skin.ToggleSetting(visualisation_Disable_Background)</onclick>
-			<selected>!Skin.HasSetting(visualisation_Disable_Background)</selected>
 			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
-		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="$EXP[skinsettings_Category_Customisations]" />
-			<param name="info" value="visualisation_Layout" />
-			<param name="label" value="$LOCALIZE[31481]" />
-			<param name="label2" value="$VAR[skinsettings_visualisation_Layout_Label2]" />
-			<param name="previous" value="1414" />
+		<include content="viewsettings_Slider_Row">
 			<param name="id" value="1415" />
-			<param name="next" value="1402" />
+			<param name="ondown" value="1500" />
+			<param name="onright" value="3001" />
+			<param name="onup" value="1414" />
+			<param name="visible" value="$EXP[skinsettings_Category_Customisations]" />
+			<param name="width" value="1080" />
 		</include>
 
 		<!-- Extras -->
@@ -511,8 +485,6 @@
 			<description>Enable embedded lists for sets, tv shows and artists</description>
 			<visible>$EXP[skinsettings_Category_Extras]</visible>
 			<label>$LOCALIZE[31458]</label>
-			<onclick>Skin.ToggleSetting(Secondary_List_Enabled)</onclick>
-			<selected>Skin.HasSetting(Secondary_List_Enabled)</selected>
 		</control>
 		<control type="label" id="1510">
 			<description>Music player</description>
@@ -540,8 +512,6 @@
 			<description>Enable embedded music player</description>
 			<visible>$EXP[skinsettings_Category_Extras]</visible>
 			<label>$LOCALIZE[31460]</label>
-			<onclick>Skin.ToggleSetting(Music_Player_Enabled)</onclick>
-			<selected>Skin.HasSetting(Music_Player_Enabled)</selected>
 		</control>
 		<control type="label" id="1520">
 			<description>Multiart slideshow</description>
@@ -570,8 +540,6 @@
 			<description>Enable multiart slideshows</description>
 			<visible>$EXP[skinsettings_Category_Extras]</visible>
 			<label>$LOCALIZE[31462]</label>
-			<onclick>Skin.ToggleSetting(Multiart_Slideshow)</onclick>
-			<selected>Skin.HasSetting(Multiart_Slideshow)</selected>
 		</control>
 	</include>
 

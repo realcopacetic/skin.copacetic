@@ -109,10 +109,8 @@
 	<!-- Renamed settings: copy each old value once unless the new name has one (a Skin settings field's mirror writes its own),
 	     then clear the old name. From Startup and Home's onload, which a skin update in place reaches without Startup -->
 	<include name="Startup_Migrate_Settings">
-		<onload condition="Skin.String(Music_Rating_Like_Threshold) + !Skin.String(like_threshold)">Skin.SetString(like_threshold,$INFO[Skin.String(Music_Rating_Like_Threshold)])</onload>
 		<onload condition="Skin.String(Background_Slideshow_Custom_Path) + !Skin.String(slideshow_path)">Skin.SetString(slideshow_path,$ESCINFO[Skin.String(Background_Slideshow_Custom_Path)])</onload>
 		<onload condition="Skin.String(Background_Slideshow2_Custom_Path) + !Skin.String(slideshow2_path)">Skin.SetString(slideshow2_path,$ESCINFO[Skin.String(Background_Slideshow2_Custom_Path)])</onload>
-		<onload condition="Skin.HasSetting(Billboard_Ken_Burns_Effect)">Skin.SetBool(List_Ken_Burns_Effect)</onload>
 		<onload condition="Skin.String(Music_Rating_Like_Threshold)">Skin.Reset(Music_Rating_Like_Threshold)</onload>
 		<onload condition="Skin.String(Background_Interval)">Skin.Reset(Background_Interval)</onload>
 		<onload condition="Skin.String(Background_Slideshow)">Skin.Reset(Background_Slideshow)</onload>
@@ -124,6 +122,7 @@
 		<onload condition="Skin.String(Background_Slideshow2_Timer)">Skin.Reset(Background_Slideshow2_Timer)</onload>
 		<onload condition="Skin.HasSetting(Billboard_Ken_Burns_Effect)">Skin.SetBool(Billboard_Ken_Burns_Effect,false)</onload>
 		<onload condition="Skin.HasSetting(GlobalSearch_Disabled)">Skin.Reset(GlobalSearch_Disabled)</onload>
+		<onload condition="Skin.HasSetting(visualisation_Disable_Background)">Skin.Reset(visualisation_Disable_Background)</onload>
 		<!-- Up Next is replaced by the play next card: turn it off once (the helper notifies), after the first build's reload,
 			which would close the notification (builder_ready is generated). Both conditions are read before either row runs -->
 		<onload condition="System.AddonIsEnabled(service.upnext) + !Skin.HasSetting(upnext_turned_off) + $EXP[builder_ready]">RunScript(script.copacetic.helper,action=toggle_addon,id=service.upnext)</onload>

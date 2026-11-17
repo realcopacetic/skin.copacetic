@@ -100,14 +100,14 @@
 		<value condition="Control.HasFocus(11120) | Control.HasFocus(1112)">$LOCALIZE[31544]</value>
 		<!-- Views -->
 		<value condition="Control.HasFocus(1355)">$LOCALIZE[31541]</value>
-		<value condition="Control.HasFocus(13320) | Control.HasFocus(13321)">$LOCALIZE[31815]</value>
+		<value condition="Control.HasFocus(13320) | Control.HasFocus(1332)">$LOCALIZE[31815]</value>
 		<value condition="Control.HasFocus(1351)">$LOCALIZE[31575]</value>
 		<!-- Customisations -->
 		<value condition="Control.HasFocus(1402)">$LOCALIZE[31551]</value>
 		<value condition="Control.HasFocus(1403)">$LOCALIZE[31552]</value>
 		<value condition="Control.HasFocus(1404)">$LOCALIZE[31553]</value>
-		<value condition="Control.HasFocus(14050) | Control.HasFocus(14051)">$LOCALIZE[31554]</value>
-		<value condition="Control.HasFocus(14100) | Control.HasFocus(14101)">$LOCALIZE[31591]</value>
+		<value condition="Control.HasFocus(14050) | Control.HasFocus(1405)">$LOCALIZE[31554]</value>
+		<value condition="Control.HasFocus(14100) | Control.HasFocus(1410)">$LOCALIZE[31591]</value>
 		<value condition="Control.HasFocus(1408)">$LOCALIZE[31556]</value>
 		<value condition="Control.HasFocus(1421)">$LOCALIZE[31811]</value>
 		<value condition="Control.HasFocus(1424)">$LOCALIZE[31813]</value>
@@ -115,26 +115,6 @@
 		<value condition="Control.HasFocus(1502)">$LOCALIZE[31558]</value>
 		<value condition="Control.HasFocus(1513)">$LOCALIZE[31560]</value>
 		<value condition="Control.HasFocus(1523)">$LOCALIZE[31562]</value>
-	</variable>
-	<!-- Large / Small / Medium-->
-	<variable name="skinsettings_GridView_Size_Label2">
-		<value condition="Skin.String(GridView_Size,Horizontal)">$LOCALIZE[31415]</value>
-		<value condition="Skin.String(GridView_Size,Small)">$LOCALIZE[31482]</value>
-		<value>$LOCALIZE[31483]</value>
-	</variable>
-	<variable name="skinsettings_like_threshold_Label">
-		<!-- like_threshold / Off -->
-		<value condition="Integer.IsGreater(Skin.String(like_threshold),0)">$INFO[Skin.String(like_threshold)]</value>
-		<value>$LOCALIZE[351]</value>
-	</variable>
-	<variable name="skinsettings_script-upnext_Artwork_Label2">
-		<value condition="Skin.String(script-upnext_Artwork,Square)">$LOCALIZE[31008]</value>
-		<value condition="Skin.String(script-upnext_Artwork,Posters)">$LOCALIZE[31006]</value>
-		<value>$LOCALIZE[31007]</value>
-	</variable>
-	<variable name="skinsettings_visualisation_Layout_Label2">
-		<value condition="Skin.String(visualisation_Layout,Large)">$LOCALIZE[31829]</value>
-		<value>$LOCALIZE[31830]</value>
 	</variable>
 
 	<variable name="subtitlesearch_Label">

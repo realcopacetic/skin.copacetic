@@ -2,15 +2,10 @@
 <window>
 	<!-- Look and feel -->
 	<onload condition="!Skin.String(Theme)">Skin.SetString(Theme,Dark)</onload>
-	<onload condition="!Skin.String(script-upnext_Artwork)">Skin.SetString(script-upnext_Artwork,Fanart)</onload>
-	<onload condition="!Skin.String(visualisation_Layout)">Skin.SetString(visualisation_Layout,Small)</onload>
 
-	<!-- Renamed settings. After the defaults above, so a copy wins: every condition is tested before the first action runs -->
+	<!-- Renamed settings -->
 	<include content="Startup_Migrate_Settings" />
 
-	<!-- Layout configuration -->
-	<!-- Grid -->
-	<onload condition="!Skin.String(GridView_Size)">Skin.SetString(GridView_Size,Large)</onload>
 	<!-- Startup -->
 	<onload>SetProperty(SkinInitStarted,1,Home)</onload>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>

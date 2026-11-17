@@ -289,6 +289,20 @@
       "label": "- $LOCALIZE[31728]",
       "label2": ""
     },
+    "title_views_general": {
+      "id": 1350,
+      "control_type": "label",
+      "visible": "equals({settings_category}, views)",
+      "label": "$LOCALIZE[31400]"
+    },
+    "Kiosk_Mode": {
+      "field": "Kiosk_Mode",
+      "id": 1351,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, views)",
+      "label": "$LOCALIZE[31475]",
+      "label2": ""
+    },
     "viewsettings": {
       "id": 1352,
       "control_type": "button",
@@ -298,6 +312,57 @@
         "type": "custom",
         "action": "RunScript(script.copacetic.helper,action=dynamic_settings_window,name=viewsettings,mapping=content_types)"
       }
+    },
+    "List_Ken_Burns_Effect": {
+      "field": "List_Ken_Burns_Effect",
+      "id": 1355,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, views)",
+      "label": "$LOCALIZE[31441]",
+      "label2": ""
+    },
+    "title_grid": {
+      "id": 1330,
+      "control_type": "label",
+      "visible": "equals({settings_category}, views)",
+      "label": "$LOCALIZE[31004]"
+    },
+    "GridView_Size": {
+      "field": "GridView_Size",
+      "id": 1332,
+      "control_type": "sliderex",
+      "visible": "equals({settings_category}, views)",
+      "label": "$LOCALIZE[31715]"
+    },
+    "GridView_WatchedStatus_Enabled": {
+      "field": "GridView_WatchedStatus_Enabled",
+      "id": 1337,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, views)",
+      "label": "- $LOCALIZE[31449]",
+      "label2": ""
+    },
+    "GridView_AltWatchedStatus_Enabled": {
+      "field": "GridView_AltWatchedStatus_Enabled",
+      "id": 1338,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, views)",
+      "label": "- $LOCALIZE[31450]",
+      "label2": ""
+    },
+    "title_library": {
+      "id": 1400,
+      "control_type": "label",
+      "visible": "equals({settings_category}, customisations)",
+      "label": "$LOCALIZE[14022]"
+    },
+    "Unwatched_Indicator": {
+      "field": "Unwatched_Indicator",
+      "id": 1402,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, customisations)",
+      "label": "$LOCALIZE[31451]",
+      "label2": ""
     },
     "rating_system": {
       "field": "rating_system",
@@ -309,6 +374,64 @@
         "type": "select",
         "heading": "$LOCALIZE[31452]"
       }
+    },
+    "SortLetter_Enabled": {
+      "field": "SortLetter_Enabled",
+      "id": 1404,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, customisations)",
+      "label": "$LOCALIZE[31453]",
+      "label2": ""
+    },
+    "like_threshold": {
+      "field": "like_threshold",
+      "id": 1405,
+      "control_type": "sliderex",
+      "visible": "equals({settings_category}, customisations)",
+      "label": "$LOCALIZE[31454]"
+    },
+    "title_infoscreens": {
+      "id": 1406,
+      "control_type": "label",
+      "visible": "equals({settings_category}, customisations)",
+      "label": "$LOCALIZE[31484]"
+    },
+    "Star_Ratings_Disabled": {
+      "field": "Star_Ratings_Disabled",
+      "id": 1407,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, customisations)",
+      "label": "$LOCALIZE[31485]",
+      "label2": ""
+    },
+    "title_videoplayer": {
+      "id": 1408,
+      "control_type": "label",
+      "visible": "equals({settings_category}, customisations)",
+      "label": "$LOCALIZE[31478]"
+    },
+    "Subtitle_Limiter": {
+      "field": "Subtitle_Limiter",
+      "id": 1421,
+      "control_type": "edit",
+      "visible": "equals({settings_category}, customisations)",
+      "label": "$LOCALIZE[31711]"
+    },
+    "Video_Breadcrumb_Disabled": {
+      "field": "Video_Breadcrumb_Disabled",
+      "id": 1424,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, customisations)",
+      "label": "$LOCALIZE[31713]",
+      "label2": ""
+    },
+    "Prefer_TimeRemaining": {
+      "field": "Prefer_TimeRemaining",
+      "id": 1426,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, customisations)",
+      "label": "$LOCALIZE[31718]",
+      "label2": ""
     },
     "playnext_enabled": {
       "field": "playnext_enabled",
@@ -330,6 +453,84 @@
       "control_type": "cycle",
       "visible": "equals({settings_category}, customisations) + equals({playnext_enabled}, true)",
       "label": "- Still there?"
+    },
+    "script-upnext_Artwork": {
+      "field": "script-upnext_Artwork",
+      "id": 1410,
+      "control_type": "sliderex",
+      "visible": "equals({settings_category}, customisations)",
+      "label": "$LOCALIZE[31491]"
+    },
+    "Pause_Screen_Info_Enabled": {
+      "field": "Pause_Screen_Info_Enabled",
+      "id": 1412,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, customisations)",
+      "label": "$LOCALIZE[31456]",
+      "label2": ""
+    },
+    "title_musicplayer": {
+      "id": 1413,
+      "control_type": "label",
+      "visible": "equals({settings_category}, customisations)",
+      "label": "$LOCALIZE[31479]"
+    },
+    "visualisation_Background": {
+      "field": "visualisation_Background",
+      "id": 1414,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, customisations)",
+      "label": "$LOCALIZE[31480]",
+      "label2": ""
+    },
+    "visualisation_Layout": {
+      "field": "visualisation_Layout",
+      "id": 1415,
+      "control_type": "sliderex",
+      "visible": "equals({settings_category}, customisations)",
+      "label": "$LOCALIZE[31481]"
+    },
+    "title_embedded_lists": {
+      "id": 1500,
+      "control_type": "label",
+      "visible": "equals({settings_category}, extras)",
+      "label": "$LOCALIZE[31457]"
+    },
+    "Secondary_List_Enabled": {
+      "field": "Secondary_List_Enabled",
+      "id": 1502,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, extras)",
+      "label": "$LOCALIZE[31458]",
+      "label2": ""
+    },
+    "title_music_player": {
+      "id": 1510,
+      "control_type": "label",
+      "visible": "equals({settings_category}, extras)",
+      "label": "$LOCALIZE[31459]"
+    },
+    "Music_Player_Enabled": {
+      "field": "Music_Player_Enabled",
+      "id": 1513,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, extras)",
+      "label": "$LOCALIZE[31460]",
+      "label2": ""
+    },
+    "title_multiart": {
+      "id": 1520,
+      "control_type": "label",
+      "visible": "equals({settings_category}, extras)",
+      "label": "$LOCALIZE[31461]"
+    },
+    "Multiart_Slideshow": {
+      "field": "Multiart_Slideshow",
+      "id": 1523,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, extras)",
+      "label": "$LOCALIZE[31462]",
+      "label2": ""
     }
   }
 }
