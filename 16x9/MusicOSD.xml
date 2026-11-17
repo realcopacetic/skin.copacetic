@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- musicosd -->
-	<onload condition="!String.IsEmpty(window(musicosd).property(MusicOSD_Controls))">ClearProperty(MusicOSD_Controls,musicosd)</onload>
-	<onunload condition="!String.IsEmpty(window(musicosd).property(MusicOSD_Controls))">ClearProperty(MusicOSD_Controls,musicosd)</onunload>
+	<!-- OSD_Label's button name: one home property for both OSDs (radio shows the PVR rows here) -->
+	<onload>ClearProperty(OSD_Controls,home)</onload>
+	<onunload>ClearProperty(OSD_Controls,home)</onunload>
 	<defaultcontrol always="true">1</defaultcontrol>
 	<zorder>3</zorder>
 	<controls>

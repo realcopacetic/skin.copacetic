@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- videoosd -->
-	<onload condition="!String.IsEmpty(window(videoosd).property(VideoOSD_Controls))">ClearProperty(VideoOSD_Controls,videoosd)</onload>
-	<onunload condition="!String.IsEmpty(window(videoosd).property(VideoOSD_Controls))">ClearProperty(VideoOSD_Controls,videoosd)</onunload>
+	<!-- OSD_Label's button name: one home property for both OSDs -->
+	<onload>ClearProperty(OSD_Controls,home)</onload>
+	<onunload>ClearProperty(OSD_Controls,home)</onunload>
 	<onload condition="!Skin.TimerIsRunning(video_playback_label_interruptor)">Skin.TimerStart(video_playback_label_interruptor)</onload>
 	<defaultcontrol always="true">4</defaultcontrol>
 	<zorder>3</zorder>

@@ -513,8 +513,7 @@
 
 	<variable name="OSD_Label">
 		<value condition="Control.HasFocus(60)">$LOCALIZE[10115]</value>
-		<value condition="Window.IsVisible(videoosd)">$INFO[Window(videoosd).Property(VideoOSD_Controls)]</value>
-		<value condition="Window.IsVisible(musicosd)">$INFO[Window(musicosd).Property(MusicOSD_Controls)]</value>
+		<value>$INFO[Window(home).Property(OSD_Controls)]</value>
 	</variable>
 
 	<variable name="Play_Pause_Label">
