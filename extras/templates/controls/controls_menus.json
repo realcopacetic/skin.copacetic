@@ -36,6 +36,7 @@
       "onclick": {
         "type": "browse_single",
         "browseType": "images",
+        "clearable": true,
         "heading": "$LOCALIZE[33068]"
       }
     },
@@ -47,6 +48,7 @@
       "visible": "xml(String.IsEqual(Window(home).Property(current_mapping),mainmenu))",
       "onclick": {
         "type": "browse_content",
+        "clearable": true,
         "heading": "$LOCALIZE[20425]"
       }
     }
