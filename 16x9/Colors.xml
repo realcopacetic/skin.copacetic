@@ -26,9 +26,9 @@
 		<value>brightness33</value>
 	</variable>
 	<variable name="Infoscreen_Artwork_Diffuse">
-		<value condition="Skin.String(Infoscreen_Brightness,50)">brightness50</value>
+		<value condition="Skin.String(Infoscreen_Brightness,33)">brightness33</value>
 		<value condition="Skin.String(Infoscreen_Brightness,25)">brightness25</value>
-		<value>brightness33</value>
+		<value>brightness50</value>
 	</variable>
 
 	<!-- Alpha overlay masks -->
