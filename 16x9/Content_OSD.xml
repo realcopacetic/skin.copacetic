@@ -58,9 +58,9 @@
 			<onfocus>SetProperty(OSD_Controls,$LOCALIZE[209],home)</onfocus>
 			<onclick condition="MusicPlayer.HasNext">PlayerControl(Next)</onclick>
 			<onup>60</onup>
-			<ondown condition="!Skin.String(like_threshold)">10</ondown>
-			<ondown condition="Skin.String(like_threshold) + Integer.IsGreater(MusicPlayer.DBID,0)">11</ondown>
-			<ondown condition="Skin.String(like_threshold) + !Integer.IsGreater(MusicPlayer.DBID,0)">5</ondown>
+			<ondown condition="!Integer.IsGreater(Skin.String(like_threshold),0)">10</ondown>
+			<ondown condition="Integer.IsGreater(Skin.String(like_threshold),0) + Integer.IsGreater(MusicPlayer.DBID,0)">11</ondown>
+			<ondown condition="Integer.IsGreater(Skin.String(like_threshold),0) + !Integer.IsGreater(MusicPlayer.DBID,0)">5</ondown>
 		</control>
 	</include>
 
@@ -117,7 +117,7 @@
 			<onup>7</onup>
 			<ondown>60</ondown>
 		</include>
-		<include content="Simple_Button_Template" condition="!Skin.String(like_threshold)">
+		<include content="Simple_Button_Template" condition="!Integer.IsGreater(Skin.String(like_threshold),0)">
 			<param name="id" value="10" />
 			<param name="description" value="Rating" />
 			<param name="icon" value="star" />
@@ -128,7 +128,7 @@
 			<ondown>60</ondown>
 		</include>
 		<control type="togglebutton" id="11">
-			<visible>Skin.String(like_threshold) + Integer.IsGreater(MusicPlayer.DBID,0)</visible>
+			<visible>Integer.IsGreater(Skin.String(like_threshold),0) + Integer.IsGreater(MusicPlayer.DBID,0)</visible>
 			<description>Like/Unlike</description>
 			<width>60</width>
 			<height>60</height>

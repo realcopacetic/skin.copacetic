@@ -188,7 +188,7 @@
 		<param name="visible" default="!String.IsEmpty(ListItem.UserRating) + Integer.IsGreaterOrEqual(ListItem.UserRating,Skin.Numeric(like_threshold))" />
 		<param name="slide" />
 		<definition>
-			<include content="Like_focused" condition="Skin.String(like_threshold)">
+			<include content="Like_focused" condition="Integer.IsGreater(Skin.String(like_threshold),0)">
 				<param name="visible" value="String.IsEqual(ListItem.DBType,song) + $PARAM[visible]" />
 				<param name="color" value="$VAR[Accent_Color]" />
 				<animation effect="slide" end="$PARAM[slide]" time="0" condition="true">Conditional</animation>
