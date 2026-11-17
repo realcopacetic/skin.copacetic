@@ -19,8 +19,8 @@
         "custom": "$LOCALIZE[31438]"
       },
       "rules": [
-        { "condition": "xml(!Library.HasContent(video) + !Library.HasContent(music))", "value": [ "global" ] },
-        { "condition": "xml(!Library.HasContent(video))", "value": [ "videos" ] },
+        { "condition": "xml(!Library.HasContent(movies) + !Library.HasContent(tvshows) + !Library.HasContent(music))", "value": [ "global" ] },
+        { "condition": "xml(!Library.HasContent(movies) + !Library.HasContent(tvshows))", "value": [ "videos" ] },
         { "condition": "xml(!Library.HasContent(movies))", "value": [ "movies" ] },
         { "condition": "xml(!Library.HasContent(tvshows))", "value": [ "tvshows" ] },
         { "condition": "xml(!Library.HasContent(music))", "value": [ "artists" ] }
