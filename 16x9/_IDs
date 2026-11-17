@@ -96,6 +96,7 @@ CHECKERS
 6311-6312     tpl_art_transition's default texture probes, landing and base art (C2's 6301-6302; no caller yet)
 6313-6314     Strip's embedded list texture probes, landing and base art (prb_texture_secondary; C2's 6303-6304)
 6315          Strip's embedded list art probe (prb_secondary_art, one per window): up while 3100 or its relays hold focus; blk_secondary_art and 3100's onfocus read it
+6345-6346     Flag_Probes: the age rating's source text (label_mpaa) and its show marker (label_episodic), read by texture_mpaa_*
 632XX         Breadcrumb title of an info screen rail (6 + its index, generated) or a search rail (6 + its id)
 63XXX(X)      Details clearlogo sized by 9300 (63 + view id 501, 502, 504, or a Home row or info screen rail id)
 635X          GridView shadow checkers

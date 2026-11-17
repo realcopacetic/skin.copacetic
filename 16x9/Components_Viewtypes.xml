@@ -1056,6 +1056,19 @@
 		</control>
 	</include>
 
+	<include name="Flag_Probes">
+		<!-- What the rating tables read: a label resolves its text when Control.GetLabel asks, so a hidden group serves -->
+		<control type="group">
+			<visible>false</visible>
+			<control type="label" id="6345">
+				<label>$VAR[label_mpaa]</label>
+			</control>
+			<control type="label" id="6346">
+				<label>$VAR[label_episodic]</label>
+			</control>
+		</control>
+	</include>
+
 	<include name="Flag_Icon">
 		<param name="visible" default="false" />
 		<param name="texture" />

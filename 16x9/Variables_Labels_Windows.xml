@@ -164,21 +164,6 @@
 		<value condition="Integer.IsGreater(Skin.String(like_threshold),0)">$INFO[Skin.String(like_threshold)]</value>
 		<value>$LOCALIZE[351]</value>
 	</variable>
-	<variable name="skinsettings_Preferred_MPAA_Label">
-		<value condition="Skin.HasSetting(Preferred_Rating_BBFC) | Skin.HasSetting(Preferred_Rating_MPAA) | Skin.HasSetting(Preferred_Rating_CHVRS) | Skin.HasSetting(Preferred_Rating_ACB) | Skin.HasSetting(Preferred_Rating_FSK) | Skin.HasSetting(Preferred_Rating_DJCTQ) | Skin.HasSetting(Preferred_Rating_KIJKWIJZER) | Skin.HasSetting(Preferred_Rating_EIRIN)">$LOCALIZE[31452]</value>
-		<value>$LOCALIZE[31624]</value>
-	</variable>
-	<variable name="skinsettings_Preferred_MPAA_Label2">
-		<value condition="Skin.HasSetting(Preferred_Rating_BBFC)">$LOCALIZE[31951]</value>
-		<value condition="Skin.HasSetting(Preferred_Rating_MPAA)">$LOCALIZE[31952]</value>
-		<value condition="Skin.HasSetting(Preferred_Rating_CHVRS)">$LOCALIZE[31954]</value>
-		<value condition="Skin.HasSetting(Preferred_Rating_ACB)">$LOCALIZE[31953]</value>
-		<value condition="Skin.HasSetting(Preferred_Rating_FSK)">$LOCALIZE[31957]</value>
-		<value condition="Skin.HasSetting(Preferred_Rating_DJCTQ)">$LOCALIZE[31955]</value>
-		<value condition="Skin.HasSetting(Preferred_Rating_KIJKWIJZER)">$LOCALIZE[31959]</value>
-		<value condition="Skin.HasSetting(Preferred_Rating_EIRIN)">$LOCALIZE[31956]</value>
-		<value>$LOCALIZE[31624]</value>
-	</variable>
 	<variable name="skinsettings_script-upnext_Artwork_Label2">
 		<value condition="Skin.String(script-upnext_Artwork,Square)">$LOCALIZE[31008]</value>
 		<value condition="Skin.String(script-upnext_Artwork,Posters)">$LOCALIZE[31006]</value>

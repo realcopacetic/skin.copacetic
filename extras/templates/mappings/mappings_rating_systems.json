@@ -1,0 +1,21 @@
+{
+  "rating_systems": {
+    "mode": "static",
+    "items": {
+      "ACB": [ "R18", "MA15", "M", "PG", "G", "E" ],
+      "BBFC": [ "U", "PG", "12A", "12", "15", "18", "X" ],
+      "CBSC": [ "18", "14", "PG", "G", "C8", "C" ],
+      "CHVRS": [ "18A", "14A", "PG", "G", "R" ],
+      "DJCTQ": [ "18", "16", "14", "12", "10", "L", "ER" ],
+      "EIRIN": [ "R18", "R15", "PG", "G" ],
+      "FSK": [ "18", "16", "12", "6", "0" ],
+      "KIJKWIJZER": [ "18", "16", "14", "12", "9", "6", "AL" ],
+      "MPAA": [ "NC-17", "PG-13", "PG", "G", "R" ],
+      "TVPG": [ "TV-MA", "TV-14", "TV-PG", "TV-G", "TV-Y7", "TV-Y" ]
+    },
+    "placeholders": { 
+      "key": "rating_system", 
+      "value": "rung" 
+    }
+  }
+}

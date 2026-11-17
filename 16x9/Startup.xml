@@ -12,7 +12,6 @@
 	<onload condition="!Skin.String(Time_Widget)">Skin.SetString(Time_Widget,Clock)</onload>
 	<onload condition="!Skin.String(script-upnext_Artwork)">Skin.SetString(script-upnext_Artwork,Fanart)</onload>
 	<onload condition="!Skin.String(visualisation_Layout)">Skin.SetString(visualisation_Layout,Small)</onload>
-	<onload condition="![Skin.HasSetting(Preferred_Rating_BBFC) | Skin.HasSetting(Preferred_Rating_MPAA) | Skin.HasSetting(Preferred_Rating_CHVRS) | Skin.HasSetting(Preferred_Rating_ACB) | Skin.HasSetting(Preferred_Rating_IFCO) | Skin.HasSetting(Preferred_Rating_FSK) | Skin.HasSetting(Preferred_Rating_DJCTQ) | Skin.HasSetting(Preferred_Rating_KIJKWIJZER) | Skin.HasSetting(Preferred_Rating_EIRIN)]">Skin.SetBool(Preferred_Rating_BBFC)</onload>
 
 	<!-- Renamed settings. After the defaults above, so a copy wins: every condition is tested before the first action runs -->
 	<include content="Startup_Migrate_Settings" />

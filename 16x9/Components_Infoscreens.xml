@@ -21,6 +21,7 @@
 	</include>
 
 	<include name="Infoscreen_Flag_Checkers">
+		<include content="Flag_Probes" />
 		<include content="Flag_Checker">
 			<param name="id" value="6303" />
 			<param name="texture" value="$VAR[Studio_Flag]" />

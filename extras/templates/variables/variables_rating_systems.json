@@ -1,0 +1,14 @@
+{
+  "mapping": "rating_systems",
+  "variables": {
+    "texture_mpaa_{rating_system}": {
+      "note": "String.Contains ignores case, so a one-letter rung would match any reason text ('Rated R for strong language' holds a g): it matches only as the whole label, after 'Rated ' or after a country code's colon, and tests after the longer rungs (the second row).",
+      "values": [
+        { "filter": "not In({rung}, [C, E, G, L, M, R, U, X])", "condition": "String.Contains(Control.GetLabel(6345),{rung})",
+          "value": "flags/mpaa/{rating_system}/{rung}.png" },
+        { "filter": "In({rung}, [C, E, G, L, M, R, U, X])", "condition": "String.IsEqual(Control.GetLabel(6345),{rung}) | String.Contains(Control.GetLabel(6345),rated {rung}) | String.EndsWith(Control.GetLabel(6345),:{rung})",
+          "value": "flags/mpaa/{rating_system}/{rung}.png" }
+      ]
+    }
+  }
+}

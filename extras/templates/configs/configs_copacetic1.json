@@ -36,6 +36,19 @@
         { "condition": "true", "value": [ "999999999" ] }
       ]
     },
+    "rating_system": {
+      "items": {
+        "BBFC": "$LOCALIZE[31951]",
+        "MPAA": "$LOCALIZE[31952]",
+        "ACB": "$LOCALIZE[31953]",
+        "CHVRS": "$LOCALIZE[31954]",
+        "DJCTQ": "$LOCALIZE[31955]",
+        "EIRIN": "$LOCALIZE[31956]",
+        "FSK": "$LOCALIZE[31957]",
+        "KIJKWIJZER": "$LOCALIZE[31959]"
+      },
+      "defaults": { "*": "BBFC" }
+    },
     "search_optimise": {
       "items": { "remote": "Remote", "keyboard": "$LOCALIZE[35150]" },
       "defaults": { "*": "remote" }

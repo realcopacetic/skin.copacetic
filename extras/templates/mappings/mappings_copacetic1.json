@@ -7,7 +7,8 @@
       "slideshow_path": "slideshow_path",
       "slideshow2_path": "slideshow2_path",
       "playnext_enabled": "playnext_enabled",
-      "playnext_lead": "playnext_lead"
+      "playnext_lead": "playnext_lead",
+      "rating_system": "rating_system"
     },
     "config_fields": {
       "home": {
@@ -19,7 +20,8 @@
         "playnext_enabled": "playnext_enabled",
         "playnext_lead": "playnext_lead",
         "still_watching": "still_watching",
-        "playnext_idle": "playnext_idle"
+        "playnext_idle": "playnext_idle",
+        "rating_system": "rating_system"
       }
     },
     "metadata": {

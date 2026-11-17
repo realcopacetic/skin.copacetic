@@ -107,6 +107,17 @@
         "action": "RunScript(script.copacetic.helper,action=dynamic_settings_window,name=viewsettings,mapping=content_types)"
       }
     },
+    "rating_system": {
+      "field": "rating_system",
+      "id": 1403,
+      "control_type": "button",
+      "visible": "equals({settings_category}, customisations)",
+      "label": "$LOCALIZE[31452]",
+      "onclick": {
+        "type": "select",
+        "heading": "$LOCALIZE[31452]"
+      }
+    },
     "playnext_enabled": {
       "field": "playnext_enabled",
       "id": 208,

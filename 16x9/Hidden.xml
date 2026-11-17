@@ -397,6 +397,7 @@
 		<control type="slider" id="403">
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
+		<include content="Flag_Probes" />
 		<control type="image" id="6304">
 			<include content="Hidden_Control" />
 			<texture fallback="flags/blank.png">$VAR[MPAA_Flag]</texture>

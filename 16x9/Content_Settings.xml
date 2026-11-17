@@ -397,12 +397,11 @@
 			<selected>Skin.HasSetting(Unwatched_Indicator)</selected>
 			<visible>$EXP[skinsettings_Category_Customisations]</visible>
 		</control>
+		<!-- Age rating flags: rating_system, a select over the systems; the helper shows the pick as label2 -->
 		<control type="button" id="1403">
 			<description>Choose preferred classification ratings...</description>
-			<label>$VAR[skinsettings_Preferred_MPAA_Label]</label>
-			<label2>$VAR[skinsettings_Preferred_MPAA_Label2]</label2>
-			<onclick>Skin.SelectBool(31452, 31951|Preferred_Rating_BBFC, 31952|Preferred_Rating_MPAA, 31953|Preferred_Rating_CHVRS, 31954|Preferred_Rating_ACB, 31955|Preferred_Rating_DJCTQ, 31956|Preferred_Rating_EIRIN, 31957|Preferred_Rating_FSK, 31959|Preferred_Rating_KIJKWIJZER)</onclick>
 			<visible>$EXP[skinsettings_Category_Customisations]</visible>
+			<label>$LOCALIZE[31452]</label>
 		</control>
 		<control type="radiobutton" id="1404">
 			<description>Scroll by sort letter</description>

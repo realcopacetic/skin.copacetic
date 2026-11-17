@@ -1,0 +1,62 @@
+{
+  "mapping": "none",
+  "variables": {
+    "_probe_flags_cluster": {
+      "note": "The age rating's source (probe 6345) and its show marker (6346), from one row: the player, the focused embedded list, a set's films, then the item. A source with no rating falls through, as C1's tables did.",
+      "outputs": {
+        "mpaa": "label_mpaa",
+        "episodic": "label_episodic"
+      },
+      "rows": [
+        {
+          "condition": "VideoPlayer.IsFullscreen + !String.IsEmpty(VideoPlayer.mpaa)",
+          "mpaa": "$INFO[VideoPlayer.mpaa]",
+          "episodic": "$INFO[VideoPlayer.TVShowDBID]"
+        },
+        {
+          "condition": "Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.mpaa) + [String.IsEqual(Container(3100).ListItem.DBType,tvshow) | String.IsEqual(Container(3100).ListItem.DBType,season) | String.IsEqual(Container(3100).ListItem.DBType,episode)]",
+          "episodic": "$INFO[Container(3100).ListItem.DBType]"
+        },
+        {
+          "condition": "Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.mpaa)",
+          "mpaa": "$INFO[Container(3100).ListItem.mpaa]",
+          "episodic": ""
+        },
+        {
+          "condition": "ListItem.IsCollection + Window.Is(movieinformation) + !String.IsEmpty(Container(50).ListItem.mpaa)",
+          "mpaa": "$INFO[Container(50).ListItem.mpaa]",
+          "episodic": ""
+        },
+        {
+          "condition": "ListItem.IsCollection + !String.IsEmpty(Container(3100).ListItem.mpaa)",
+          "mpaa": "$INFO[Container(3100).ListItem.mpaa]",
+          "episodic": ""
+        },
+        {
+          "condition": "String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)",
+          "episodic": "$INFO[ListItem.DBType]"
+        },
+        {
+          "mpaa": "$INFO[ListItem.mpaa]"
+        }
+      ]
+    },
+    "_texture_mpaa_region_cluster": {
+      "outputs": {
+        "us": "texture_mpaa_us",
+        "ca": "texture_mpaa_ca"
+      },
+      "rows": [
+        {
+          "condition": "$EXP[probe_episodic]",
+          "us": "$VAR[texture_mpaa_TVPG]",
+          "ca": "$VAR[texture_mpaa_CBSC]"
+        },
+        {
+          "us": "$VAR[texture_mpaa_MPAA]",
+          "ca": "$VAR[texture_mpaa_CHVRS]"
+        }
+      ]
+    }
+  }
+}

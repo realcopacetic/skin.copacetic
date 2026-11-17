@@ -398,14 +398,14 @@
 	</variable>
 
 	<variable name="MPAA_Description_Label">
-		<value condition="Skin.HasSetting(Preferred_Rating_BBFC)">$VAR[Certification_BBFC_Description_Label]</value>
-		<value condition="Skin.HasSetting(Preferred_Rating_MPAA)">$VAR[Certification_MPAA_Description_Label]</value>
-		<value condition="Skin.HasSetting(Preferred_Rating_CHVRS)">$VAR[Certification_CHVRS_Description_Label]</value>
-		<value condition="Skin.HasSetting(Preferred_Rating_ACB)">$VAR[Certification_ACB_Description_Label]</value>
-		<value condition="Skin.HasSetting(Preferred_Rating_FSK)">$VAR[Certification_FSK_Description_Label]</value>
-		<value condition="Skin.HasSetting(Preferred_Rating_DJCTQ)">$VAR[Certification_DJCTQ_Description_Label]</value>
-		<value condition="Skin.HasSetting(Preferred_Rating_EIRIN)">$VAR[Certification_EIRIN_Description_Label]</value>
-		<value condition="Skin.HasSetting(Preferred_Rating_KIJKWIJZER)">$VAR[Certification_KIJKWIJZER_Description_Label]</value>
+		<value condition="Skin.String(rating_system,MPAA)">$VAR[Certification_MPAA_Description_Label]</value>
+		<value condition="Skin.String(rating_system,CHVRS)">$VAR[Certification_CHVRS_Description_Label]</value>
+		<value condition="Skin.String(rating_system,ACB)">$VAR[Certification_ACB_Description_Label]</value>
+		<value condition="Skin.String(rating_system,FSK)">$VAR[Certification_FSK_Description_Label]</value>
+		<value condition="Skin.String(rating_system,DJCTQ)">$VAR[Certification_DJCTQ_Description_Label]</value>
+		<value condition="Skin.String(rating_system,EIRIN)">$VAR[Certification_EIRIN_Description_Label]</value>
+		<value condition="Skin.String(rating_system,KIJKWIJZER)">$VAR[Certification_KIJKWIJZER_Description_Label]</value>
+		<value>$VAR[Certification_BBFC_Description_Label]</value>
 	</variable>
 
 	<variable name="Certification_ACB_Description_Label">
