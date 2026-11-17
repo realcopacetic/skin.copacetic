@@ -80,7 +80,6 @@
 		<!-- General -->
 		<value condition="Control.HasFocus(1002)">$LOCALIZE[31507]</value>
 		<value condition="Control.HasFocus(1003)">$LOCALIZE[31509]</value>
-		<value condition="Control.HasFocus(10240) | Control.HasFocus(10241) | Control.HasFocus(10242)">$LOCALIZE[31587]</value>
 		<value condition="Control.HasFocus(1020)">$LOCALIZE[31522]</value>
 		<value condition="Control.HasFocus(1021)">$LOCALIZE[31523]</value>
 		<!-- Menus -->
