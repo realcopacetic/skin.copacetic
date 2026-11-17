@@ -156,7 +156,6 @@
 	<!-- Widget -->
 	<include name="GridView_Display">
 		<param name="id" />
-		<param name="art_icon" />
 		<param name="art_landscape" default="false" />
 		<param name="display" /> <!-- a Home row's display, a literal: picks the art include -->
 		<definition>
@@ -164,7 +163,7 @@
 				<param name="viewtype_label" value="Grid" />
 				<include content="GridView_Art_$PARAM[display]">
 					<param name="art_diffuse" value="!$PARAM[art_landscape]" />
-					<param name="art_icon" value="$PARAM[art_icon]" />
+					<param name="art_icon" value="widgets_$PARAM[id]_Thumbnail" />
 					<param name="target_id" value="$PARAM[id]" />
 				</include>
 			</include>

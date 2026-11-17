@@ -1,51 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-	<include name="Artwork_Transition_Fade">
-		<param name="visible" default="true" />
-		<param name="target_id" />
-		<param name="width" default="100%" />
-		<param name="height" default="100%" />
-		<param name="art_icon" default="Thumbnail" />
-		<param name="fallback" default="fallback.png" />
-		<param name="aspectratio" default="scale" />
-		<param name="art_diffuse" default="!$EXP[ListView_Display_IsThumbnails] | Window.Is(videoplaylist)" />
-		<param name="kenburns" default="false" />
-		<definition>
-			<control type="group">
-				<visible>$PARAM[visible]</visible>
-				<width>$PARAM[width]</width>
-				<height>$PARAM[height]</height>
-				<centertop>50%</centertop>
-				<nested />
-				<include content="Icon_Art">
-					<param name="texture" value="$VAR[$PARAM[art_icon](0)Content]" />
-					<param name="aspectratio" value="$PARAM[aspectratio]" />
-					<param name="fallback" value="$PARAM[fallback]" />
-					<param name="art_diffuse" value="$PARAM[art_diffuse]" />
-					<param name="fadetime" value="5" />
-					<param name="fade_on_dialog" value="false" />
-					<include content="Ken_Burns_Effect_Animation" condition="$PARAM[kenburns]" />
-					<include content="Secondary_List_Scroll_Animation" />
-				</include>
-				<include content="Icon_Art">
-					<param name="texture" value="$VAR[$PARAM[art_icon](0)Content]" />
-					<param name="aspectratio" value="$PARAM[aspectratio]" />
-					<param name="fallback" value="$PARAM[fallback]" />
-					<param name="art_diffuse" value="$PARAM[art_diffuse]" />
-					<param name="fadetime" value="360" />
-					<param name="fade_on_dialog" value="false" />
-					<include content="Ken_Burns_Effect_Animation" condition="$PARAM[kenburns]" />
-					<include content="Secondary_List_Scroll_Animation" />
-				</include>
-				<include content="Icon_Component_Indicator" condition="Skin.HasSetting(Secondary_List_Enabled)">
-					<param name="visible" value="Container($PARAM[target_id]).ListItemNoWrap($PARAM[position]).IsCollection | [Container($PARAM[target_id]).ListItemNoWrap($PARAM[position]).HasVideoVersions + !String.IsEqual(Container($PARAM[target_id]).FolderName,Container.ListItemNoWrap($PARAM[position]).Title)]" />
-					<include content="Secondary_List_Scroll_Animation" />
-				</include>
-			</control>
-		</definition>
-	</include>
-
 	<include name="ListView_Layout_Thumbnails">
 		<param name="condition" default="$EXP[ListView_Display_IsThumbnails]" />
 		<definition>

@@ -33,31 +33,26 @@
 		</definition>
 	</include>
 
-	<!-- The rails' Billboard (Home rows, info screen rails): the rail's art through the list's crossfade -->
+	<!-- The rails' Billboard (Home rows, info screen rails): C2's vue_billboard_fanart on the rail's texture_prefix and region -->
 	<include name="BillboardView_Art_Fanart">
-		<include content="Artwork_Transition_Fade">
-			<param name="target_id" value="$PARAM[target_id]" />
-			<param name="art_icon" value="$PARAM[art_icon]" />
-			<param name="kenburns" value="Skin.HasSetting(List_Ken_Burns_Effect)" />
+		<include content="vue_billboard_fanart">
+			<param name="id" value="$PARAM[id]" />
+			<param name="region" value="$PARAM[region]" />
+			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
 		</include>
 	</include>
 
+	<!-- A Home row's Billboard: the rail's art in the display's wrapper -->
 	<include name="BillboardView_Display">
-		<param name="id" default="501" />
-		<param name="art_icon" default="Thumbnail" />
-		<param name="media_view" default="true" />
-		<param name="widget_view" default="false" />
-		<definition>
-			<include content="Viewtype_Display_Template">
-				<param name="viewtype_label" value="Billboard" />
-				<param name="media_view" value="$PARAM[media_view]" />
-				<include content="Trailer_Autoplay_Fade_Animation" condition="$EXP[trailer_include_videos] | $EXP[trailer_include_home]" />
-				<include content="BillboardView_Art_Fanart">
-					<param name="target_id" value="$PARAM[id]" />
-					<param name="art_icon" value="$PARAM[art_icon]" />
-				</include>
+		<include content="Viewtype_Display_Template">
+			<param name="viewtype_label" value="Billboard" />
+			<include content="Trailer_Autoplay_Fade_Animation" condition="$EXP[trailer_include_videos] | $EXP[trailer_include_home]" />
+			<include content="BillboardView_Art_Fanart">
+				<param name="id" value="$PARAM[id]" />
+				<param name="region" value="$PARAM[region]" />
+				<param name="texture_prefix" value="$PARAM[texture_prefix]" />
 			</include>
-		</definition>
+		</include>
 	</include>
 
 	<include name="BillboardView_Details">
