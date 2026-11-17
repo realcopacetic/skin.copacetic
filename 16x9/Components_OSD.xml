@@ -480,7 +480,7 @@
 				<param name="width" value="120" />
 			</include>
 			<control type="label">
-				<visible>Integer.IsGreater(Skin.TimerElapsedSecs(video_playback),8) + Integer.IsLess(Skin.TimerElapsedSecs(video_playback),11)</visible>
+				<visible>Integer.IsGreater(Skin.TimerElapsedSecs(video_playback),8) + Integer.IsLess(Skin.TimerElapsedSecs(video_playback),11) + !String.IsEqual(Control.GetLabel(6304),flags/blank.png)</visible>
 				<include content="Video_Breadcrumb_Fade_Animation" />
 				<left>-15</left>
 				<width max="800">auto</width>
