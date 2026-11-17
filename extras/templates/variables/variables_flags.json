@@ -2,7 +2,7 @@
   "mapping": "none",
   "variables": {
     "_probe_flags_cluster": {
-      "note": "The age rating's source (probe 6345) and its show marker (6346), from one row: the player, the focused embedded list, a set's films, then the item. A source with no rating falls through, as C1's tables did.",
+      "note": "The age rating's source (probe 6345) and its show marker (6346), from one row: the player, the focused embedded list, a set's films, then the item. A source with no rating falls through, as C1's tables did. The player's marker is its show title, which add-ons set too: its TVShowDBID is empty outside the library.",
       "outputs": {
         "mpaa": "label_mpaa",
         "episodic": "label_episodic"
@@ -11,7 +11,7 @@
         {
           "condition": "VideoPlayer.IsFullscreen + !String.IsEmpty(VideoPlayer.mpaa)",
           "mpaa": "$INFO[VideoPlayer.mpaa]",
-          "episodic": "$INFO[VideoPlayer.TVShowDBID]"
+          "episodic": "$INFO[VideoPlayer.TVShowTitle]"
         },
         {
           "condition": "Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.mpaa) + [String.IsEqual(Container(3100).ListItem.DBType,tvshow) | String.IsEqual(Container(3100).ListItem.DBType,season) | String.IsEqual(Container(3100).ListItem.DBType,episode)]",
