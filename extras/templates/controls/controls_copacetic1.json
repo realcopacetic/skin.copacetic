@@ -6,6 +6,36 @@
       "label": "{label}",
       "description": "{description}"
     },
+    "title_look": {
+      "id": 1000,
+      "control_type": "label",
+      "visible": "equals({settings_category}, general)",
+      "label": "$LOCALIZE[24997]"
+    },
+    "title_artwork": {
+      "id": 1015,
+      "control_type": "label",
+      "visible": "equals({settings_category}, general)",
+      "label": "$LOCALIZE[39123]"
+    },
+    "clear_cache": {
+      "id": 1020,
+      "control_type": "button",
+      "visible": "equals({settings_category}, general)",
+      "label": "$LOCALIZE[31422]",
+      "onclick": {
+        "type": "custom",
+        "action": "RunScript(script.copacetic.helper,action=clear_cache)"
+      }
+    },
+    "Colorise_Flags": {
+      "field": "Colorise_Flags",
+      "id": 1021,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, general)",
+      "label": "$LOCALIZE[31423]",
+      "label2": ""
+    },
     "mainmenu": {
       "id": 1201,
       "control_type": "button",
@@ -26,11 +56,18 @@
         "action": "RunScript(script.copacetic.helper,action=dynamic_settings_window,name=menusettings,mapping=shutdownmenu,controls_from=mainmenu)"
       }
     },
+    "slideshow_source": {
+      "field": "slideshow_source",
+      "id": 1601,
+      "control_type": "sliderex",
+      "visible": "equals({settings_category}, background)",
+      "label": "$LOCALIZE[31426]"
+    },
     "slideshow_path": {
       "field": "slideshow_path",
       "id": 201,
       "control_type": "button",
-      "visible": "equals({settings_category}, background)",
+      "visible": "equals({settings_category}, background) + equals({slideshow_source}, custom)",
       "label": "- $LOCALIZE[31439]",
       "onclick": {
         "type": "browse_content",
@@ -40,11 +77,26 @@
         "pictures": true
       }
     },
+    "slideshow2": {
+      "field": "slideshow2",
+      "id": 1609,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, background)",
+      "label": "$LOCALIZE[31729]",
+      "label2": ""
+    },
+    "slideshow2_source": {
+      "field": "slideshow2_source",
+      "id": 1610,
+      "control_type": "sliderex",
+      "visible": "equals({settings_category}, background) + equals({slideshow2}, true)",
+      "label": "- $LOCALIZE[31730]"
+    },
     "slideshow2_path": {
       "field": "slideshow2_path",
       "id": 202,
       "control_type": "button",
-      "visible": "equals({settings_category}, background)",
+      "visible": "equals({settings_category}, background) + equals({slideshow2}, true) + equals({slideshow2_source}, custom)",
       "label": "   - $LOCALIZE[31439]",
       "onclick": {
         "type": "browse_content",
@@ -54,20 +106,119 @@
         "pictures": true
       }
     },
+    "slideshow_start": {
+      "field": "slideshow_start",
+      "id": 1613,
+      "control_type": "sliderex",
+      "visible": "equals({settings_category}, background) + equals({slideshow2}, true)",
+      "label": "   - Slideshow 1 start time"
+    },
+    "slideshow2_start": {
+      "field": "slideshow2_start",
+      "id": 1614,
+      "control_type": "sliderex",
+      "visible": "equals({settings_category}, background) + equals({slideshow2}, true)",
+      "label": "   - Slideshow 2 start time"
+    },
+    "slideshow_interval": {
+      "field": "slideshow_interval",
+      "id": 1603,
+      "control_type": "sliderex",
+      "visible": "equals({settings_category}, background)",
+      "label": "$LOCALIZE[31427]"
+    },
+    "Background_Brightness": {
+      "field": "Background_Brightness",
+      "id": 1605,
+      "control_type": "sliderex",
+      "visible": "equals({settings_category}, background)",
+      "label": "$LOCALIZE[31440]"
+    },
+    "Background_Label_Enabled": {
+      "field": "Background_Label_Enabled",
+      "id": 1604,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, background)",
+      "label": "$LOCALIZE[31495]",
+      "label2": ""
+    },
+    "Background_Opacity": {
+      "field": "Background_Opacity",
+      "id": 1606,
+      "control_type": "sliderex",
+      "visible": "equals({settings_category}, background)",
+      "label": "$LOCALIZE[31487]"
+    },
+    "Infoscreen_Brightness": {
+      "field": "Infoscreen_Brightness",
+      "id": 1607,
+      "control_type": "sliderex",
+      "visible": "equals({settings_category}, background)",
+      "label": "$LOCALIZE[31722]"
+    },
+    "OSD_Background_Brightness": {
+      "field": "OSD_Background_Brightness",
+      "id": 1608,
+      "control_type": "sliderex",
+      "visible": "equals({settings_category}, background)",
+      "label": "$LOCALIZE[31719]"
+    },
+    "title_home_background": {
+      "id": 1117,
+      "control_type": "label",
+      "visible": "equals({settings_category}, home)",
+      "label": "$LOCALIZE[31432]"
+    },
+    "Home_Background_Override_Enabled": {
+      "field": "Home_Background_Override_Enabled",
+      "id": 1118,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, home)",
+      "label": "$LOCALIZE[31433]",
+      "label2": ""
+    },
+    "title_widgets": {
+      "id": 1100,
+      "control_type": "label",
+      "visible": "equals({settings_category}, home)",
+      "label": "$LOCALIZE[31402]"
+    },
+    "Widgets_Enabled": {
+      "field": "Widgets_Enabled",
+      "id": 1101,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, home)",
+      "label": "$LOCALIZE[31429]",
+      "label2": ""
+    },
     "widgets": {
       "id": 1113,
       "control_type": "button",
-      "visible": "equals({settings_category}, home) + xml(Skin.HasSetting(Widgets_Enabled))",
+      "visible": "equals({settings_category}, home) + equals({Widgets_Enabled}, true)",
       "label": "- $LOCALIZE[31489]",
       "onclick": {
         "type": "custom",
         "action": "RunScript(script.copacetic.helper,action=dynamic_settings_window,name=widgetsettings,mapping=widgets)"
       }
     },
+    "title_search": {
+      "id": 1114,
+      "control_type": "label",
+      "visible": "equals({settings_category}, home)",
+      "label": "$LOCALIZE[31635]"
+    },
+    "GlobalSearch_Enabled": {
+      "field": "GlobalSearch_Enabled",
+      "id": 1115,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, home)",
+      "label": "$LOCALIZE[31704]",
+      "label2": ""
+    },
     "searchsettings": {
       "id": 1116,
       "control_type": "button",
-      "visible": "equals({settings_category}, home) + xml(!Skin.HasSetting(GlobalSearch_Disabled))",
+      "visible": "equals({settings_category}, home) + equals({GlobalSearch_Enabled}, true)",
       "label": "- $LOCALIZE[31705]",
       "onclick": {
         "type": "custom",
@@ -78,13 +229,13 @@
       "field": "search_optimise",
       "id": 205,
       "control_type": "cycle",
-      "visible": "equals({settings_category}, home) + xml(!Skin.HasSetting(GlobalSearch_Disabled))",
+      "visible": "equals({settings_category}, home) + equals({GlobalSearch_Enabled}, true)",
       "label": "- Optimise for"
     },
     "keyboard_layout": {
       "id": 206,
       "control_type": "button",
-      "visible": "equals({settings_category}, home) + xml(!Skin.HasSetting(GlobalSearch_Disabled)) + equals({search_optimise}, remote)",
+      "visible": "equals({settings_category}, home) + equals({GlobalSearch_Enabled}, true) + equals({search_optimise}, remote)",
       "label": "   - Onscreen keyboard layout",
       "onclick": {
         "type": "runtime_script",
@@ -94,12 +245,49 @@
     "keyboardsettings": {
       "id": 207,
       "control_type": "button",
-      "visible": "equals({settings_category}, home) + xml(!Skin.HasSetting(GlobalSearch_Disabled)) + equals({search_optimise}, remote)",
+      "visible": "equals({settings_category}, home) + equals({GlobalSearch_Enabled}, true) + equals({search_optimise}, remote)",
       "label": "   - Onscreen keyboard",
       "onclick": {
         "type": "custom",
         "action": "RunScript(script.copacetic.helper,action=dynamic_settings_window,name=keyboardsettings,mapping=keyboard)"
       }
+    },
+    "title_home_general": {
+      "id": 1104,
+      "control_type": "label",
+      "visible": "equals({settings_category}, home)",
+      "label": "$LOCALIZE[31400]"
+    },
+    "Home_Screensaver_Enabled": {
+      "field": "Home_Screensaver_Enabled",
+      "id": 1110,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, home)",
+      "label": "$LOCALIZE[31442]",
+      "label2": ""
+    },
+    "Home_Screensaver_Clearlogo_Enabled": {
+      "field": "Home_Screensaver_Clearlogo_Enabled",
+      "id": 1111,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, home) + equals({Home_Screensaver_Enabled}, true)",
+      "label": "- $LOCALIZE[31443]",
+      "label2": ""
+    },
+    "Time_Widget": {
+      "field": "Time_Widget",
+      "id": 1112,
+      "control_type": "sliderex",
+      "visible": "equals({settings_category}, home)",
+      "label": "$LOCALIZE[31444]"
+    },
+    "Time_Widget_Persistent": {
+      "field": "Time_Widget_Persistent",
+      "id": 1119,
+      "control_type": "radiobutton",
+      "visible": "equals({settings_category}, home) + not equals({Time_Widget}, None)",
+      "label": "- $LOCALIZE[31728]",
+      "label2": ""
     },
     "viewsettings": {
       "id": 1352,

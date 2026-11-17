@@ -66,7 +66,7 @@
 					<param name="unfocused_color" value="light" />
 				</include>
 				<include content="Home_Time_Widget" condition="!Skin.String(Time_Widget,None) + !Skin.HasSetting(Time_Widget_Persistent)" />
-				<include content="Search_Button" condition="!Skin.HasSetting(GlobalSearch_Disabled)" />
+				<include content="Search_Button" condition="Skin.HasSetting(GlobalSearch_Enabled)" />
 			</control>
 			<include content="Home_Widgets" condition="Skin.HasSetting(Widgets_Enabled)" />
 			<include content="Home_Time_Widget" condition="!Skin.String(Time_Widget,None) + Skin.HasSetting(Time_Widget_Persistent)" />

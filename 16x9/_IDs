@@ -125,6 +125,8 @@ SKIN SETTINGS EDITOR (copaceticsettings.xml over the skinsettings shell, ids set
 201-202       Background: slideshow 1 and 2 custom paths (controls_copacetic1.json)
 203-204, 208  Customisations: play next's card lead and "Still there?", play next on or off (controls_copacetic1.json)
 205-207       Home: search's Optimise for, keypad layout, keypad's keys (controls_copacetic1.json)
+1000-1119, 1601-1614  General, Background and Home rows but 1001-1004, 1018 (controls_copacetic1.json); a slider row is
+              {id} slider, {id}0 button, {id}1 group
 1201-1202, 1113, 1116, 1352  Menus, Configure widgets, Configure global search, View options (controls_copacetic1.json)
 9001          Rows grouplist (hand rows 1000-1523 keep their ids)
 

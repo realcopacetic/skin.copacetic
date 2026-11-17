@@ -517,12 +517,16 @@
 		</control>
 	</include>
 
-	<!-- One option row: the helper sets its label and value, moves its slider and hides it for kinds of item it doesn't apply to
-	     (controls_content_types.json). The ids are the helper's sliderex convention, {id} slider and {id}0 button (control_factory.py:62-64) -->
+	<!-- One option row: the helper sets its label and value, moves its slider and hides it where it doesn't apply
+	     (controls_content_types.json, controls_copacetic1.json). The ids are the helper's sliderex convention, {id} slider and
+	     {id}0 button (control_factory.py:62-64). The value ends 180 from the row's edge, clear of the slider -->
 	<include name="viewsettings_Slider_Row">
 		<param name="id" />
 		<param name="ondown" />
+		<param name="onright" default="415" />
 		<param name="onup" />
+		<param name="visible" default="true" />
+		<param name="width" default="690" />
 		<definition>
 			<control type="group" id="$PARAM[id]1">
 				<visible>Control.IsVisible($PARAM[id])</visible>
@@ -534,14 +538,15 @@
 					<texture border="2,2,62,2" colordiffuse="unfocused">dialogs/button_underline_except_60_right.png</texture>
 				</control>
 				<control type="button" id="$PARAM[id]0">
-					<width>690</width>
+					<width>$PARAM[width]</width>
 					<texturefocus />
 					<onup>$PARAM[onup]</onup>
 					<ondown>$PARAM[ondown]</ondown>
 					<onleft>100</onleft>
-					<onright>415</onright>
+					<onright>$PARAM[onright]</onright>
 				</control>
 				<control type="slider" id="$PARAM[id]">
+					<visible>$PARAM[visible]</visible>
 					<right>60</right>
 					<centertop>50%</centertop>
 					<width>120</width>

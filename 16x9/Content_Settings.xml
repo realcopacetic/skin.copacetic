@@ -91,14 +91,11 @@
 			<description>Clear cache</description>
 			<visible>$EXP[skinsettings_Category_General]</visible>
 			<label>$LOCALIZE[31422]</label>
-			<onclick>RunScript(script.copacetic.helper,action=clear_cache)</onclick>
 		</control>
 		<control type="radiobutton" id="1021">
 			<description>Colorise media flags</description>
 			<visible>$EXP[skinsettings_Category_General]</visible>
 			<label>$LOCALIZE[31423]</label>
-			<onclick>Skin.ToggleSetting(Colorise_Flags)</onclick>
-			<selected>Skin.HasSetting(Colorise_Flags)</selected>
 		</control>
 
 		<!-- Menus -->
@@ -113,103 +110,99 @@
 			<label>$LOCALIZE[31418]</label>
 		</control>
 
-		<!-- Background -->
-		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="$EXP[skinsettings_Category_Background]" />
-			<param name="info" value="slideshow_source" />
-			<param name="label" value="$LOCALIZE[31426]" />
-			<param name="label2" value="$VAR[skinsettings_slideshow_source_Label]" />
-			<param name="previous" value="1608" />
+		<!-- Background. A slider row is the helper's sliderex: {id} slider, {id}0 button, {id}1 group; its Up and Down name the
+			rows either side, as the grouplist does for its own rows (a hidden one is walked through) -->
+		<include content="viewsettings_Slider_Row">
 			<param name="id" value="1601" />
-			<param name="next" value="201" />
+			<param name="ondown" value="201" />
+			<param name="onright" value="3001" />
+			<param name="onup" value="1202" />
+			<param name="visible" value="$EXP[skinsettings_Category_Background]" />
+			<param name="width" value="1080" />
 		</include>
 		<control type="button" id="201">
 			<description>Slideshow 1 custom path</description>
-			<visible>$EXP[skinsettings_Category_Background] + [Skin.String(slideshow_source,custom) | !$EXP[Library_Has_Content]]</visible>
+			<visible>$EXP[skinsettings_Category_Background]</visible>
 			<label>- $LOCALIZE[31439]</label>
 		</control>
 		<control type="radiobutton" id="1609">
 			<description>Enable second background slideshow</description>
 			<visible>$EXP[skinsettings_Category_Background]</visible>
 			<label>$LOCALIZE[31729]</label>
-			<onclick>Skin.ToggleSetting(slideshow2)</onclick>
-			<selected>Skin.HasSetting(slideshow2)</selected>
 		</control>
-		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="$EXP[skinsettings_Category_Background] + Skin.HasSetting(slideshow2)" />
-			<param name="info" value="slideshow2_source" />
-			<param name="label" value="- $LOCALIZE[31730]" />
-			<param name="label2" value="$VAR[skinsettings_slideshow2_source_Label]" />
-			<param name="previous" value="1609" />
+		<include content="viewsettings_Slider_Row">
 			<param name="id" value="1610" />
-			<param name="next" value="202" />
+			<param name="ondown" value="202" />
+			<param name="onright" value="3001" />
+			<param name="onup" value="1609" />
+			<param name="visible" value="$EXP[skinsettings_Category_Background]" />
+			<param name="width" value="1080" />
 		</include>
 		<control type="button" id="202">
 			<description>Slideshow 2 custom path</description>
-			<visible>$EXP[skinsettings_Category_Background] + Skin.HasSetting(slideshow2) + [Skin.String(slideshow2_source,custom) | !$EXP[Library_Has_Content]]</visible>
+			<visible>$EXP[skinsettings_Category_Background]</visible>
 			<label>   - $LOCALIZE[31439]</label>
 		</control>
-		<include content="skinsettings_Double_Slider_Button">
-			<param name="visible" value="$EXP[skinsettings_Category_Background] + Skin.HasSetting(slideshow2)" />
-			<param name="info" value="slideshow_start" />
-			<param name="info2" value="slideshow2_start" />
-			<param name="label" value="   - $LOCALIZE[31731]" />
-			<param name="label2" value="Slideshow 1 ($VAR[skinsettings_slideshow_start_Label]) / Slideshow 2 ($VAR[skinsettings_slideshow2_start_Label])" />
-			<param name="previous" value="202" />
+		<include content="viewsettings_Slider_Row">
 			<param name="id" value="1613" />
-			<param name="next" value="1603" />
-		</include>
-		<include content="skinsettings_Slider_Button">
+			<param name="ondown" value="16141" />
+			<param name="onright" value="3001" />
+			<param name="onup" value="202" />
 			<param name="visible" value="$EXP[skinsettings_Category_Background]" />
-			<param name="info" value="slideshow_interval" />
-			<param name="label" value="$LOCALIZE[31427]" />
-			<param name="label2" value="$VAR[skinsettings_slideshow_interval_Label]" />
-			<param name="previous" value="1613" />
+			<param name="width" value="1080" />
+		</include>
+		<include content="viewsettings_Slider_Row">
+			<param name="id" value="1614" />
+			<param name="ondown" value="16031" />
+			<param name="onright" value="3001" />
+			<param name="onup" value="16131" />
+			<param name="visible" value="$EXP[skinsettings_Category_Background]" />
+			<param name="width" value="1080" />
+		</include>
+		<include content="viewsettings_Slider_Row">
 			<param name="id" value="1603" />
-			<param name="next" value="1605" />
-		</include>
-		<include content="skinsettings_Slider_Button">
+			<param name="ondown" value="16051" />
+			<param name="onright" value="3001" />
+			<param name="onup" value="16141" />
 			<param name="visible" value="$EXP[skinsettings_Category_Background]" />
-			<param name="info" value="Background_Brightness" />
-			<param name="label" value="$LOCALIZE[31440]" />
-			<param name="label2" value="$INFO[Skin.String(Background_Brightness)]" />
-			<param name="previous" value="1603" />
+			<param name="width" value="1080" />
+		</include>
+		<include content="viewsettings_Slider_Row">
 			<param name="id" value="1605" />
-			<param name="next" value="1604" />
+			<param name="ondown" value="1604" />
+			<param name="onright" value="3001" />
+			<param name="onup" value="16031" />
+			<param name="visible" value="$EXP[skinsettings_Category_Background]" />
+			<param name="width" value="1080" />
 		</include>
 		<control type="radiobutton" id="1604">
 			<description>Show the name of currently displaying background artworks</description>
 			<visible>$EXP[skinsettings_Category_Background]</visible>
 			<label>$LOCALIZE[31495]</label>
-			<onclick>Skin.ToggleSetting(Background_Label_Enabled)</onclick>
-			<selected>Skin.HasSetting(Background_Label_Enabled)</selected>
 		</control>
-		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="$EXP[skinsettings_Category_Background]" />
-			<param name="info" value="Background_Opacity" />
-			<param name="label" value="$LOCALIZE[31487]" />
-			<param name="label2" value="$VAR[skinsettings_Background_Opacity_Label]" />
-			<param name="previous" value="1604" />
+		<include content="viewsettings_Slider_Row">
 			<param name="id" value="1606" />
-			<param name="next" value="1607" />
-		</include>
-		<include content="skinsettings_Slider_Button">
+			<param name="ondown" value="16071" />
+			<param name="onright" value="3001" />
+			<param name="onup" value="1604" />
 			<param name="visible" value="$EXP[skinsettings_Category_Background]" />
-			<param name="info" value="Infoscreen_Brightness" />
-			<param name="label" value="$LOCALIZE[31722]" />
-			<param name="label2" value="$INFO[Skin.String(Infoscreen_Brightness)]" />
-			<param name="previous" value="1606" />
+			<param name="width" value="1080" />
+		</include>
+		<include content="viewsettings_Slider_Row">
 			<param name="id" value="1607" />
-			<param name="next" value="1608" />
-		</include>
-		<include content="skinsettings_Slider_Button">
+			<param name="ondown" value="16081" />
+			<param name="onright" value="3001" />
+			<param name="onup" value="16061" />
 			<param name="visible" value="$EXP[skinsettings_Category_Background]" />
-			<param name="info" value="OSD_Background_Brightness" />
-			<param name="label" value="$LOCALIZE[31719]" />
-			<param name="label2" value="$INFO[Skin.String(OSD_Background_Brightness)]" />
-			<param name="previous" value="1607" />
+			<param name="width" value="1080" />
+		</include>
+		<include content="viewsettings_Slider_Row">
 			<param name="id" value="1608" />
-			<param name="next" value="1601" />
+			<param name="ondown" value="1117" />
+			<param name="onright" value="3001" />
+			<param name="onup" value="16071" />
+			<param name="visible" value="$EXP[skinsettings_Category_Background]" />
+			<param name="width" value="1080" />
 		</include>
 		<!--Home-->
 		<control type="label" id="1117">
@@ -222,8 +215,6 @@
 			<description>Override home menu backgrounds</description>
 			<visible>$EXP[skinsettings_Category_Home]</visible>
 			<label>$LOCALIZE[31433]</label>
-			<onclick>Skin.ToggleSetting(Home_Background_Override_Enabled)</onclick>
-			<selected>Skin.HasSetting(Home_Background_Override_Enabled)</selected>
 		</control>
 		<control type="label" id="1100">
 			<description>Widgets</description>
@@ -235,8 +226,6 @@
 			<description>Enable widgets</description>
 			<visible>$EXP[skinsettings_Category_Home]</visible>
 			<label>$LOCALIZE[31429]</label>
-			<onclick>Skin.ToggleSetting(Widgets_Enabled)</onclick>
-			<selected>Skin.HasSetting(Widgets_Enabled)</selected>
 		</control>
 		<control type="button" id="1113">
 			<description>Configure widgets</description>
@@ -253,8 +242,6 @@
 			<description>Enable Global search</description>
 			<visible>$EXP[skinsettings_Category_Home]</visible>
 			<label>$LOCALIZE[31704]</label>
-			<onclick>Skin.ToggleSetting(GlobalSearch_Disabled)</onclick>
-			<selected>!Skin.HasSetting(GlobalSearch_Disabled)</selected>
 		</control>
 		<control type="button" id="1116">
 			<description>Configure global search</description>
@@ -287,31 +274,24 @@
 			<description>Enable screensaver</description>
 			<visible>$EXP[skinsettings_Category_Home]</visible>
 			<label>$LOCALIZE[31442]</label>
-			<onclick>Skin.ToggleSetting(Home_Screensaver_Enabled)</onclick>
-			<selected>Skin.HasSetting(Home_Screensaver_Enabled)</selected>
 		</control>
 		<control type="radiobutton" id="1111">
 			<description> - Show clearlogo</description>
-			<visible>$EXP[skinsettings_Category_Home] + Skin.HasSetting(Home_Screensaver_Enabled)</visible>
+			<visible>$EXP[skinsettings_Category_Home]</visible>
 			<label>- $LOCALIZE[31443]</label>
-			<onclick>Skin.ToggleSetting(Home_Screensaver_Clearlogo_Enabled)</onclick>
-			<selected>Skin.HasSetting(Home_Screensaver_Clearlogo_Enabled)</selected>
 		</control>
-		<include content="skinsettings_Slider_Button">
-			<param name="visible" value="$EXP[skinsettings_Category_Home]" />
-			<param name="info" value="Time_Widget" />
-			<param name="label" value="$LOCALIZE[31444]" />
-			<param name="label2" value="$VAR[skinsettings_Time_Widget_Label]" />
-			<param name="previous" value="1111" />
+		<include content="viewsettings_Slider_Row">
 			<param name="id" value="1112" />
-			<param name="next" value="1119" />
+			<param name="ondown" value="1119" />
+			<param name="onright" value="3001" />
+			<param name="onup" value="1111" />
+			<param name="visible" value="$EXP[skinsettings_Category_Home]" />
+			<param name="width" value="1080" />
 		</include>
 		<control type="radiobutton" id="1119">
 			<description> - Make persistent across homescreen</description>
-			<visible>$EXP[skinsettings_Category_Home] + !Skin.String(Time_Widget,None)</visible>
+			<visible>$EXP[skinsettings_Category_Home]</visible>
 			<label>- $LOCALIZE[31728]</label>
-			<onclick>Skin.ToggleSetting(Time_Widget_Persistent)</onclick>
-			<selected>Skin.HasSetting(Time_Widget_Persistent)</selected>
 		</control>
 		<!-- Views -->
 		<control type="label" id="1350">

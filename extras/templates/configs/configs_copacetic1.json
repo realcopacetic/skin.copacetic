@@ -1,6 +1,86 @@
 {
   "mapping": "copacetic1",
   "configs": {
+    "toggle_off": {
+      "items": [ "true", "false" ],
+      "defaults": { "*": "false" }
+    },
+    "toggle_on": {
+      "items": [ "true", "false" ],
+      "defaults": { "*": "true" }
+    },
+    "slideshow_source": {
+      "items": {
+        "global": "$LOCALIZE[31436]",
+        "videos": "$LOCALIZE[31437]",
+        "movies": "$LOCALIZE[342]",
+        "tvshows": "$LOCALIZE[20343]",
+        "artists": "$LOCALIZE[133]",
+        "custom": "$LOCALIZE[31438]"
+      },
+      "rules": [
+        { "condition": "xml(!Library.HasContent(video) + !Library.HasContent(music))", "value": [ "global" ] },
+        { "condition": "xml(!Library.HasContent(video))", "value": [ "videos" ] },
+        { "condition": "xml(!Library.HasContent(movies))", "value": [ "movies" ] },
+        { "condition": "xml(!Library.HasContent(tvshows))", "value": [ "tvshows" ] },
+        { "condition": "xml(!Library.HasContent(music))", "value": [ "artists" ] }
+      ],
+      "defaults": { "*": "global" }
+    },
+    "slideshow_start": {
+      "items": {
+        "0": "00:00", "1": "01:00", "2": "02:00", "3": "03:00",
+        "4": "04:00", "5": "05:00", "6": "06:00", "7": "07:00",
+        "8": "08:00", "9": "09:00", "10": "10:00", "11": "11:00",
+        "12": "12:00", "13": "13:00", "14": "14:00", "15": "15:00",
+        "16": "16:00", "17": "17:00", "18": "18:00", "19": "19:00",
+        "20": "20:00", "21": "21:00", "22": "22:00", "23": "23:00"
+      },
+      "defaults": { "*": "6" }
+    },
+    "slideshow2_start": {
+      "items": {
+        "0": "00:00", "1": "01:00", "2": "02:00", "3": "03:00",
+        "4": "04:00", "5": "05:00", "6": "06:00", "7": "07:00",
+        "8": "08:00", "9": "09:00", "10": "10:00", "11": "11:00",
+        "12": "12:00", "13": "13:00", "14": "14:00", "15": "15:00",
+        "16": "16:00", "17": "17:00", "18": "18:00", "19": "19:00",
+        "20": "20:00", "21": "21:00", "22": "22:00", "23": "23:00"
+      },
+      "defaults": { "*": "20" }
+    },
+    "slideshow_interval": {
+      "items": {
+        "5": "5 $LOCALIZE[31732]", "10": "10 $LOCALIZE[31732]", "15": "15 $LOCALIZE[31732]",
+        "30": "30 $LOCALIZE[31732]", "60": "60 $LOCALIZE[31732]", "300": "5 $LOCALIZE[31733]"
+      },
+      "defaults": { "*": "10" }
+    },
+    "Background_Brightness": {
+      "items": [ "25", "33", "50", "66" ],
+      "defaults": { "*": "33" }
+    },
+    "Background_Opacity": {
+      "items": [ "50", "66", "75", "85", "100" ],
+      "defaults": { "*": "75" }
+    },
+    "Infoscreen_Brightness": {
+      "items": [ "25", "33", "50" ],
+      "defaults": { "*": "50" }
+    },
+    "OSD_Background_Brightness": {
+      "items": [ "25", "33", "50" ],
+      "defaults": { "*": "25" }
+    },
+    "Time_Widget": {
+      "items": {
+        "None": "$LOCALIZE[31725]",
+        "Clock": "$LOCALIZE[31724]",
+        "Date": "$LOCALIZE[31726]",
+        "Weather": "$LOCALIZE[31727]"
+      },
+      "defaults": { "*": "Clock" }
+    },
     "playnext_enabled": {
       "items": [ "true", "false" ],
       "defaults": { "*": "true" }

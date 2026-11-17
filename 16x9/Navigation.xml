@@ -177,7 +177,7 @@
 		<onup condition="Window.Is(home) + !Skin.HasSetting(Widgets_Enabled)">3000</onup>
 		<ondown condition="Window.Is(home)">3000</ondown>
 		<onback condition="Window.Is(home)">3000</onback>
-		<onleft condition="Window.Is(home) + !Skin.HasSetting(GlobalSearch_Disabled)">4201</onleft>
+		<onleft condition="Window.Is(home) + Skin.HasSetting(GlobalSearch_Enabled)">4201</onleft>
 		<onback condition="$EXP[ListView_IsVisible] + !$EXP[Infoscreen_IsVisible]">50</onback>
 		<onleft condition="$EXP[ListView_IsVisible] + !$EXP[Infoscreen_IsVisible]">50</onleft>
 		<onright condition="$EXP[ListView_IsVisible] + Integer.IsLessOrEqual(Container.NumItems,11) + !$EXP[Infoscreen_IsVisible] + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onright>
@@ -206,9 +206,9 @@
 
 	<include name="Home_Menu_Navigation">
 		<onup condition="Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio">SetFocus(3500,1)</onup>
-		<onup condition="![Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio] + !Skin.HasSetting(GlobalSearch_Disabled)">4201</onup>
+		<onup condition="![Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio] + Skin.HasSetting(GlobalSearch_Enabled)">4201</onup>
 		<include content="widgets_onup">
-			<param name="condition" value="![Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio] + Skin.HasSetting(GlobalSearch_Disabled)" />
+			<param name="condition" value="![Skin.HasSetting(Music_Player_Enabled) + Player.HasAudio] + !Skin.HasSetting(GlobalSearch_Enabled)" />
 		</include>
 		<ondown>3200</ondown>
 		<include content="widgets_cursor_resets" />
