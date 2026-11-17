@@ -25,6 +25,8 @@
 	<!-- Age rating: the generated texture_mpaa_<system> tables read probe 6345 (label_mpaa), and the US and Canadian ones
 	     split TV from films by 6346 (label_episodic); rating_system mirrors Skin settings' pick, BBFC its default -->
 	<expression name="probe_episodic">!String.IsEmpty(Control.GetLabel(6346))</expression>
+	<!-- The player's item is a TV episode by its type or its show title: add-ons set either, and TVShowDBID only the library -->
+	<expression name="Player_IsEpisodic">VideoPlayer.Content(episodes) | !String.IsEmpty(VideoPlayer.TVShowTitle)</expression>
 	<variable name="MPAA_Flag">
 		<value condition="!String.IsEmpty(ListItem.Property(esrb))">$VAR[Certification_ESRB_Flags]</value>
 		<value condition="Skin.String(rating_system,MPAA)">$VAR[texture_mpaa_us]</value>

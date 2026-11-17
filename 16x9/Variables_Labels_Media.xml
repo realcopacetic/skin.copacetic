@@ -426,17 +426,18 @@
 	</variable>
 
 	<variable name="Certification_CHVRS_Description_Label">
-		<value condition="String.IsEmpty(VideoPlayer.TvShowDBID) + String.Contains(VideoPlayer.mpaa,R)">restricted to 18 years and over</value>
-		<value condition="String.IsEmpty(VideoPlayer.TvShowDBID) + String.Contains(VideoPlayer.mpaa,18A)">suitable for people 18 years of age or older</value>
-		<value condition="String.IsEmpty(VideoPlayer.TvShowDBID) + String.Contains(VideoPlayer.mpaa,14A)">suitable for people 14 years of age or older</value>
-		<value condition="String.IsEmpty(VideoPlayer.TvShowDBID) + String.Contains(VideoPlayer.mpaa,PG)">parental guidance advised</value>
-		<value condition="String.IsEmpty(VideoPlayer.TvShowDBID) + String.Contains(VideoPlayer.mpaa,G)">suitable for viewing by all ages</value>
-		<value condition="!String.IsEmpty(VideoPlayer.TvShowDBID) + String.Contains(VideoPlayer.mpaa,18)">adults</value>
-		<value condition="!String.IsEmpty(VideoPlayer.TvShowDBID) + String.Contains(VideoPlayer.mpaa,14)">over 14 years</value>
-		<value condition="!String.IsEmpty(VideoPlayer.TvShowDBID) + String.Contains(VideoPlayer.mpaa,PG)">parental guidance</value>
-		<value condition="!String.IsEmpty(VideoPlayer.TvShowDBID) + String.Contains(VideoPlayer.mpaa,G)">general</value>
-		<value condition="!String.IsEmpty(VideoPlayer.TvShowDBID) + String.Contains(VideoPlayer.mpaa,C8)">children over 8 years</value>
-		<value condition="!String.IsEmpty(VideoPlayer.TvShowDBID) + String.Contains(VideoPlayer.mpaa,C)">children</value>
+		<!-- Film or TV by Player_IsEpisodic, as the flag decides (label_episodic) -->
+		<value condition="!$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,R)">restricted to 18 years and over</value>
+		<value condition="!$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,18A)">suitable for people 18 years of age or older</value>
+		<value condition="!$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,14A)">suitable for people 14 years of age or older</value>
+		<value condition="!$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,PG)">parental guidance advised</value>
+		<value condition="!$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,G)">suitable for viewing by all ages</value>
+		<value condition="$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,18)">adults</value>
+		<value condition="$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,14)">over 14 years</value>
+		<value condition="$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,PG)">parental guidance</value>
+		<value condition="$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,G)">general</value>
+		<value condition="$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,C8)">children over 8 years</value>
+		<value condition="$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,C)">children</value>
 	</variable>
 
 	<variable name="Certification_DJCTQ_Description_Label">
