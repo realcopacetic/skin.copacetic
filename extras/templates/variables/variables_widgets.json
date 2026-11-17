@@ -2,11 +2,11 @@
   "mapping": "widgets",
   "variables": {
     "widgets_{index}_Thumbnail({range})Content": {
-      "note": "Showcase and Grid rows; a Strip or Billboard row reads texture_widgets_{index}_{art}N (variables_slots.json).",
+      "note": "Grid rows; a Strip, Billboard or Showcase row reads texture_widgets_{index}_{art}N (variables_slots.json).",
       "index": {
         "start": 3201
       },
-      "filter": "In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom]) + not In({layout}, [Strip, Billboard])",
+      "filter": "In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom]) + equals({layout}, Grid)",
       "range": {
         "start": -2,
         "end": 6

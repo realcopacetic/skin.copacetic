@@ -35,6 +35,7 @@
 			<param name="item_width" value="720" />
 			<param name="offright_slide" value="1200" />
 			<param name="outer" value="true" />
+			<param name="overlay" value="$PARAM[overlay]" />
 			<param name="player_visible" value="$EXP[Music_Player_IsVisible]" />
 			<param name="posx-1" value="-720" />
 			<param name="posx0" value="0" />
@@ -42,6 +43,7 @@
 			<param name="posx2" value="1440" />
 			<param name="posx3" value="2160" />
 			<param name="region" value="$PARAM[region]" />
+			<param name="right_visible" value="$PARAM[right_visible]" />
 			<param name="secondary" value="$PARAM[secondary]" />
 			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
 			<param name="visible" value="$PARAM[visible]" />
@@ -59,11 +61,13 @@
 			<param name="item_width" value="1080" />
 			<param name="offright_slide" value="840" />
 			<param name="outer" value="false" />
+			<param name="overlay" value="$PARAM[overlay]" />
 			<param name="posx-1" value="-1080" />
 			<param name="posx0" value="0" />
 			<param name="posx1" value="1080" />
 			<param name="posx2" value="2160" />
 			<param name="region" value="$PARAM[region]" />
+			<param name="right_visible" value="$PARAM[right_visible]" />
 			<param name="secondary" value="$PARAM[secondary]" />
 			<param name="texture_prefix" value="$PARAM[texture_prefix]" />
 			<param name="visible" value="$PARAM[visible]" />
@@ -278,10 +282,10 @@
 					</control>
 				</control>
 			</control>
-			<control type="group"><!-- C1: the overlay details over the focus, in place of C2's title -->
+			<control type="group"><!-- C1: the overlay details over the focus, in place of C2's title (the media view's only) -->
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Animation" />
-				<include content="ShowcaseView_Overlay">
+				<include content="ShowcaseView_Overlay" condition="Window.IsMedia">
 					<param name="height" value="$PARAM[item_height]" />
 					<param name="width" value="$PARAM[item_width]" />
 				</include>
@@ -322,11 +326,13 @@
 		<animation effect="fadediffuse" start="ff808080" end="ffffffff" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="$PARAM[condition]">Conditional</animation>
 	</include>
 
-	<!-- C1's marks on a tile: the progress shade (Videos), the focus border (border: the focus's tiles), the collection mark -->
+	<!-- C1's marks on a tile: the progress shade (Videos, Home), the title shade (Home), the focus border (border: the focus's tiles),
+		the collection mark -->
 	<include name="grp_reel_marks">
 		<param name="border" default="false" />
 		<definition>
-			<include content="Icon_Component_Progress_Overlay" condition="Window.Is(videos)" />
+			<include content="Icon_Component_Progress_Overlay" condition="Window.Is(videos) | Window.Is(home)" />
+			<include content="Icon_Component_Breadcrumb_Overlay" condition="Window.Is(home)" />
 			<include content="Icon_Component_Border" condition="$PARAM[border]">
 				<param name="color" value="light" />
 				<param name="size" value="11" />

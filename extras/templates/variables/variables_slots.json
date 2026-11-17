@@ -60,12 +60,12 @@
       ]
     },
     "texture_{texture_prefix}_{item}{range}": {
-      "note": "A Strip or Billboard rail's slots (Home rows, search rails and the preview, info screen rails; Billboard reads only its focus): its own art, in each scope's order of old: a Home row's chain, keyart and landscape on its fields (no landscape in Billboard); search and info rails fanart (not for an episode), then Icon, which hides an unwatched episode's thumb as Kodi's setting asks. A Home row never shows the slots left of its focus, so -3 and -2 stay empty.",
+      "note": "A Strip, Billboard or Showcase rail's slots (Home rows, search rails and the preview, info screen rails; Billboard reads only its focus, Showcase -1 to its last context tile): its own art, in each scope's order of old: a Home row's chain, keyart and landscape on its fields (no landscape in Billboard); search and info rails fanart (not for an episode), then Icon, which hides an unwatched episode's thumb as Kodi's setting asks. A Home row never shows the slots left of its focus, so -3 and -2 stay empty.",
       "templates_from": [ "widgets", "search", "infoscreen" ],
       "index": { "start": 3201 },
       "items": [ "poster", "fanart", "square" ],
       "range": { "start": -3, "end": 3 },
-      "filter": "{slot_filter} + equals({layout}, Strip) + In({art}_{item}, [Posters_poster, Fanart_fanart, Square_square]) + not In({item}{range}, [fanart-3, fanart3]) | {slot_filter} + equals({layout}, Billboard) + equals({item}{range}, fanart0)",
+      "filter": "{slot_filter} + equals({layout}, Strip) + In({art}_{item}, [Posters_poster, Fanart_fanart, Square_square]) + not In({item}{range}, [fanart-3, fanart3]) | {slot_filter} + equals({layout}, Billboard) + equals({item}{range}, fanart0) | {slot_filter} + equals({layout}, Showcase) + In({art}_{item}, [Posters_poster, Square_square]) + In({range}, [-1, 0, 1, 2, 3]) + not equals({item}{range}, square3)",
       "values": [
         { "filter": "equals({window}, home) + In({range}, [-3, -2])", "value": "" },
         { "filter": "equals({item}, poster) + equals({art_keyart}, true)", "condition": "!String.IsEmpty({listitem}NoWrap({range}).Art(tvshow.keyart))", "value": "$INFO[{listitem}({range}).Art(tvshow.keyart)]" },
