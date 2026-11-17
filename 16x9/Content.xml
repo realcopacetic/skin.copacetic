@@ -528,8 +528,9 @@
 		<param name="visible" default="true" />
 		<param name="width" default="690" />
 		<definition>
+			<!-- The caller's condition sits here: a hidden group never processes its slider, so one there would never be re-read -->
 			<control type="group" id="$PARAM[id]1">
-				<visible>Control.IsVisible($PARAM[id])</visible>
+				<visible>$PARAM[visible] + Control.IsVisible($PARAM[id])</visible>
 				<height>90</height>
 				<defaultcontrol always="true">$PARAM[id]0</defaultcontrol>
 				<!-- The row's underline, kept while Select moves focus between the button and its slider -->
@@ -546,7 +547,6 @@
 					<onright>$PARAM[onright]</onright>
 				</control>
 				<control type="slider" id="$PARAM[id]">
-					<visible>$PARAM[visible]</visible>
 					<right>60</right>
 					<centertop>50%</centertop>
 					<width>120</width>
