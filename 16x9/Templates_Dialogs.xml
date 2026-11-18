@@ -147,7 +147,6 @@
 					<param name="color" value="$PARAM[color]" />
 					<param name="label" value="$VAR[Title_Label]" />
 					<param name="align" value="$PARAM[align]" />
-					<param name="scroll" default="false" />
 				</include>
 				<include content="Common_Details_Info">
 					<param name="maxheight" value="$PARAM[info_label_max_height]" />
@@ -155,7 +154,6 @@
 					<param name="color" value="$PARAM[color]" />
 					<param name="label" value="$PARAM[info_label]" />
 					<param name="align" value="$PARAM[align]" />
-					<param name="scroll" default="false" />
 				</include>
 				<include content="Common_Details_Textbox">
 					<param name="visible" value="!String.IsEmpty(Control.GetLabel(6003))" />
@@ -164,7 +162,6 @@
 					<param name="font" value="Body" />
 					<param name="color" value="$PARAM[color]" />
 					<param name="label" value="$PARAM[plot_label]" />
-					<param name="scroll" value="true" />
 					<param name="align" value="$PARAM[align]" />
 				</include>
 				<include content="Infoscreen_Flags_Layout">

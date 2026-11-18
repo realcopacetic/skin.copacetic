@@ -309,7 +309,6 @@
 				<param name="list_icon" value="$PARAM[list_icon]" />
 				<param name="list_icon_texture" value="$PARAM[list_icon_texture]" />
 				<param name="music_rating_slide" value="$PARAM[music_rating_slide]" />
-				<param name="track_number_color" value="light" />
 				<param name="label" value="$VAR[Title_Label]" />
 				<param name="label_left" value="$PARAM[label_left]" />
 				<param name="label_maxwidth" value="$PARAM[label_maxwidth]" />
@@ -355,8 +354,6 @@
 			</include>
 			<include content="Music_Rating" condition="Window.Is(music) + Skin.HasSetting(Secondary_List_Enabled)">
 				<param name="visible" value="Control.HasFocus(3100) + !String.IsEmpty(Container(3100).ListItem.UserRating) + Integer.IsGreaterOrEqual(Container(3100).ListItem.UserRating,Skin.Numeric(like_threshold))" />
-				<param name="like_texture" value="Like_focused" />
-				<param name="color" value="$VAR[Accent_Color]" />
 				<param name="slide" value="840" />
 			</include>
 			<control type="grouplist">
@@ -438,7 +435,6 @@
 					<include content="$PARAM[layout]_List_Layout">
 						<param name="icon_slide" value="$PARAM[icon_slide]" />
 						<param name="music_rating_slide" value="$PARAM[music_rating_slide]" />
-						<param name="music_rating_like_texture" value="Like_focused" />
 						<param name="list_icon" value="false" />
 						<param name="label" value="$PARAM[label]" />
 						<param name="label_left" value="$PARAM[label_left]" />
@@ -489,7 +485,6 @@
 		<param name="color" />
 		<param name="label" />
 		<param name="align" default="left" />
-		<param name="scroll" default="false" />
 		<definition>
 			<control type="textbox">
 				<visible>$PARAM[visible]</visible>
@@ -648,7 +643,6 @@
 							<param name="font" value="Body" />
 							<param name="color" value="$VAR[Plot_Color]" />
 							<param name="label" value="$PARAM[plot_label]" />
-							<param name="scroll" value="true" />
 							<param name="align" value="$PARAM[align]" />
 						</include>
 					</control>
