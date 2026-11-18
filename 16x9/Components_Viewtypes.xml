@@ -516,8 +516,6 @@
 				<textcolor>$PARAM[color]</textcolor>
 				<label>$PARAM[label]</label>
 				<align>$PARAM[align]</align>
-				<scroll>true</scroll>
-				<scrollsuffix> / </scrollsuffix>
 			</control>
 		</definition>
 	</include>
