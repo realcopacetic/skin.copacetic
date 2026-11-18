@@ -47,7 +47,7 @@
 	</variable>
 
 	<variable name="Secondary_List_Path">
-		<value condition="Container.Content(movies) + ListItem.HasVideoVersions	">$INFO[ListItem.DBID,videodb://movies/videoversions/0?mediaid=,]</value>
+		<value condition="Container.Content(movies) + ListItem.HasVideoVersions">$INFO[ListItem.DBID,videodb://movies/videoversions/0?mediaid=,]</value>
 		<value>$INFO[ListItem.FolderPath]</value>
 	</variable>
 
