@@ -68,53 +68,10 @@
 		<value>$INFO[Container(6).ListItem.Label2]</value>
 	</variable>
 
-	<variable name="skinsettings_Hint_Label">
-		<!-- Categories (the same hints are the list's descriptions in mappings_copacetic1.json, for the hidden textbox 6) -->
-		<value condition="Control.HasFocus(100) + $EXP[skinsettings_Category_General]">$LOCALIZE[31500]</value>
-		<value condition="Control.HasFocus(100) + $EXP[skinsettings_Category_Home]">$LOCALIZE[31501]</value>
-		<value condition="Control.HasFocus(100) + $EXP[skinsettings_Category_Menus]">$LOCALIZE[31516]</value>
-		<value condition="Control.HasFocus(100) + $EXP[skinsettings_Category_Views]">$LOCALIZE[31503]</value>
-		<value condition="Control.HasFocus(100) + $EXP[skinsettings_Category_Customisations]">$LOCALIZE[31504]</value>
-		<value condition="Control.HasFocus(100) + $EXP[skinsettings_Category_Extras]">$LOCALIZE[31505]</value>
-		<value condition="Control.HasFocus(100) + $EXP[skinsettings_Category_Background]">$LOCALIZE[31532]</value>
-		<!-- General -->
+	<variable name="skinsettings_Description_Label">
+		<!-- The hand rows' hints; every other row's description is in controls_copacetic1.json -->
 		<value condition="Control.HasFocus(1002)">$LOCALIZE[31507]</value>
 		<value condition="Control.HasFocus(1003)">$LOCALIZE[31509]</value>
-		<value condition="Control.HasFocus(1020)">$LOCALIZE[31522]</value>
-		<value condition="Control.HasFocus(1021)">$LOCALIZE[31523]</value>
-		<!-- Menus -->
-		<value condition="Control.HasFocus(1201)">$LOCALIZE[31517]</value>
-		<value condition="Control.HasFocus(1202)">$LOCALIZE[31516]</value>
-		<!-- Background -->
-		<value condition="Control.HasFocus(16010) | Control.HasFocus(1601)">$LOCALIZE[31526]</value>
-		<value condition="Control.HasFocus(16030) | Control.HasFocus(1603)">$LOCALIZE[31527]</value>
-		<value condition="Control.HasFocus(16050) | Control.HasFocus(1605)">$LOCALIZE[31540]</value>
-		<value condition="Control.HasFocus(16060) | Control.HasFocus(1606)">$LOCALIZE[31587]</value>
-		<value condition="Control.HasFocus(16070) | Control.HasFocus(1607)">$LOCALIZE[31822]</value>
-		<value condition="Control.HasFocus(16080) | Control.HasFocus(1608)">$LOCALIZE[31819]</value>
-		<!-- Home -->
-		<value condition="Control.HasFocus(1101)">$LOCALIZE[31529]</value>
-		<value condition="Control.HasFocus(1110)">$LOCALIZE[31542]</value>
-		<value condition="Control.HasFocus(1111)">$LOCALIZE[31543]</value>
-		<value condition="Control.HasFocus(1118)">$LOCALIZE[31533]</value>
-		<value condition="Control.HasFocus(11120) | Control.HasFocus(1112)">$LOCALIZE[31544]</value>
-		<!-- Views -->
-		<value condition="Control.HasFocus(1355)">$LOCALIZE[31541]</value>
-		<value condition="Control.HasFocus(13320) | Control.HasFocus(1332)">$LOCALIZE[31815]</value>
-		<value condition="Control.HasFocus(1351)">$LOCALIZE[31575]</value>
-		<!-- Customisations -->
-		<value condition="Control.HasFocus(1402)">$LOCALIZE[31551]</value>
-		<value condition="Control.HasFocus(1403)">$LOCALIZE[31552]</value>
-		<value condition="Control.HasFocus(1404)">$LOCALIZE[31553]</value>
-		<value condition="Control.HasFocus(14050) | Control.HasFocus(1405)">$LOCALIZE[31554]</value>
-		<value condition="Control.HasFocus(14100) | Control.HasFocus(1410)">$LOCALIZE[31591]</value>
-		<value condition="Control.HasFocus(1408)">$LOCALIZE[31556]</value>
-		<value condition="Control.HasFocus(1421)">$LOCALIZE[31811]</value>
-		<value condition="Control.HasFocus(1424)">$LOCALIZE[31813]</value>
-		<!-- Extras -->
-		<value condition="Control.HasFocus(1502)">$LOCALIZE[31558]</value>
-		<value condition="Control.HasFocus(1513)">$LOCALIZE[31560]</value>
-		<value condition="Control.HasFocus(1523)">$LOCALIZE[31562]</value>
 	</variable>
 
 	<variable name="subtitlesearch_Label">

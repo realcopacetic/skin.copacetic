@@ -121,7 +121,7 @@ MENU EDITOR (menusettings.xml, ids set by the helper's dynamic_settings_window)
 9001          Controls grouplist
 
 SKIN SETTINGS EDITOR (copaceticsettings.xml over the skinsettings shell, ids set by the helper's dynamic_settings_window)
-6             Description textbox (hidden)
+6             Description textbox: the focused row's description (controls_copacetic1.json), else its category's
 100           Categories
 201-202       Background: slideshow 1 and 2 custom paths (controls_copacetic1.json)
 203-204, 208  Customisations: play next's card lead and "Still there?", play next on or off (controls_copacetic1.json)
@@ -131,6 +131,7 @@ SKIN SETTINGS EDITOR (copaceticsettings.xml over the skinsettings shell, ids set
 1330-1523     Views, Customisations and Extras rows but images 1336, 1401, 1501, 1511, 1521 and multiimages 1512, 1522
               (controls_copacetic1.json)
 1201-1202, 1113, 1116, 1352  Menus, Configure widgets, Configure global search, View options (controls_copacetic1.json)
+1002-1004     Hand rows: Night/Light, accent colour, reset accent; 1002 and 1003 show their hints over textbox 6
 9001          Rows grouplist (hand rows 1000-1523 keep their ids)
 
 VIEW EDITOR (viewsettings.xml, ids set by the helper's dynamic_settings_window)

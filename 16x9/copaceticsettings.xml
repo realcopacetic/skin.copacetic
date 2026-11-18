@@ -7,7 +7,6 @@
 	<onunload condition="!String.IsEmpty(Window(home).Property(host_exit_target))">ClearProperty(editor_shown,skinsettings)</onunload>
 	<defaultcontrol always="true">3001</defaultcontrol>
 	<controls>
-		<include content="editor_Description_Hidden" />
 		<include content="Default_Settings_Panel_Layout">
 			<param name="dialog" value="true" />
 			<param name="icon" value="settings/Copacetic_focused_60.png" />
@@ -37,13 +36,25 @@
 				<param name="width" value="1260" />
 				<include content="skinsettings_Right_List_Content_Home" />
 			</include>
+			<!-- The helper writes the focused row's description into textbox 6, else its category's. The hand rows Night/Light and
+				accent have none there, so their hints cover it; the switcher shows none -->
 			<include content="Description_Label">
 				<param name="bottom" value="40" />
 				<param name="height" value="100" />
-				<param name="label" value="$VAR[skinsettings_Hint_Label]" />
+				<param name="id" value="6" />
 				<param name="right" value="150" />
 				<param name="textcolor" value="light" />
 				<param name="type" value="textbox" />
+				<param name="visible" value="!Control.HasFocus(3001) + !Control.HasFocus(1002) + !Control.HasFocus(1003)" />
+			</include>
+			<include content="Description_Label">
+				<param name="bottom" value="40" />
+				<param name="height" value="100" />
+				<param name="label" value="$VAR[skinsettings_Description_Label]" />
+				<param name="right" value="150" />
+				<param name="textcolor" value="light" />
+				<param name="type" value="textbox" />
+				<param name="visible" value="Control.HasFocus(1002) | Control.HasFocus(1003)" />
 			</include>
 		</include>
 	</controls>

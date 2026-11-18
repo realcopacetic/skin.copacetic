@@ -383,7 +383,7 @@
 
 	<include name="editor_Description_Hidden">
 		<include content="Hidden_Components">
-			<control type="textbox" id="6" /> <!-- the editor's description, which C1 doesn't show -->
+			<control type="textbox" id="6" /> <!-- the editor's description, which the view and keyboard editors don't show -->
 		</include>
 	</include>
 

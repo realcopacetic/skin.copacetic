@@ -23,6 +23,7 @@
       "control_type": "button",
       "visible": "equals({settings_category}, general)",
       "label": "$LOCALIZE[31422]",
+      "description": "$LOCALIZE[31522]",
       "onclick": {
         "type": "custom",
         "action": "RunScript(script.copacetic.helper,action=clear_cache)"
@@ -34,13 +35,15 @@
       "control_type": "radiobutton",
       "visible": "equals({settings_category}, general)",
       "label": "$LOCALIZE[31423]",
-      "label2": ""
+      "label2": "",
+      "description": "$LOCALIZE[31523]"
     },
     "mainmenu": {
       "id": 1201,
       "control_type": "button",
       "visible": "equals({settings_category}, menus)",
       "label": "$LOCALIZE[31417]",
+      "description": "$LOCALIZE[31517]",
       "onclick": {
         "type": "custom",
         "action": "RunScript(script.copacetic.helper,action=dynamic_settings_window,name=menusettings,mapping=mainmenu)"
@@ -51,6 +54,7 @@
       "control_type": "button",
       "visible": "equals({settings_category}, menus)",
       "label": "$LOCALIZE[31418]",
+      "description": "$LOCALIZE[31516]",
       "onclick": {
         "type": "custom",
         "action": "RunScript(script.copacetic.helper,action=dynamic_settings_window,name=menusettings,mapping=shutdownmenu,controls_from=mainmenu)"
@@ -61,7 +65,8 @@
       "id": 1601,
       "control_type": "sliderex",
       "visible": "equals({settings_category}, background)",
-      "label": "$LOCALIZE[31426]"
+      "label": "$LOCALIZE[31426]",
+      "description": "$LOCALIZE[31526]"
     },
     "slideshow_path": {
       "field": "slideshow_path",
@@ -125,14 +130,16 @@
       "id": 1603,
       "control_type": "sliderex",
       "visible": "equals({settings_category}, background)",
-      "label": "$LOCALIZE[31427]"
+      "label": "$LOCALIZE[31427]",
+      "description": "$LOCALIZE[31527]"
     },
     "Background_Brightness": {
       "field": "Background_Brightness",
       "id": 1605,
       "control_type": "sliderex",
       "visible": "equals({settings_category}, background)",
-      "label": "$LOCALIZE[31440]"
+      "label": "$LOCALIZE[31440]",
+      "description": "$LOCALIZE[31540]"
     },
     "Background_Label_Enabled": {
       "field": "Background_Label_Enabled",
@@ -147,21 +154,24 @@
       "id": 1606,
       "control_type": "sliderex",
       "visible": "equals({settings_category}, background)",
-      "label": "$LOCALIZE[31487]"
+      "label": "$LOCALIZE[31487]",
+      "description": "$LOCALIZE[31587]"
     },
     "Infoscreen_Brightness": {
       "field": "Infoscreen_Brightness",
       "id": 1607,
       "control_type": "sliderex",
       "visible": "equals({settings_category}, background)",
-      "label": "$LOCALIZE[31722]"
+      "label": "$LOCALIZE[31722]",
+      "description": "$LOCALIZE[31822]"
     },
     "OSD_Background_Brightness": {
       "field": "OSD_Background_Brightness",
       "id": 1608,
       "control_type": "sliderex",
       "visible": "equals({settings_category}, background)",
-      "label": "$LOCALIZE[31719]"
+      "label": "$LOCALIZE[31719]",
+      "description": "$LOCALIZE[31819]"
     },
     "title_home_background": {
       "id": 1117,
@@ -175,7 +185,8 @@
       "control_type": "radiobutton",
       "visible": "equals({settings_category}, home)",
       "label": "$LOCALIZE[31433]",
-      "label2": ""
+      "label2": "",
+      "description": "$LOCALIZE[31533]"
     },
     "title_widgets": {
       "id": 1100,
@@ -189,7 +200,8 @@
       "control_type": "radiobutton",
       "visible": "equals({settings_category}, home)",
       "label": "$LOCALIZE[31429]",
-      "label2": ""
+      "label2": "",
+      "description": "$LOCALIZE[31529]"
     },
     "widgets": {
       "id": 1113,
@@ -264,7 +276,8 @@
       "control_type": "radiobutton",
       "visible": "equals({settings_category}, home)",
       "label": "$LOCALIZE[31442]",
-      "label2": ""
+      "label2": "",
+      "description": "$LOCALIZE[31542]"
     },
     "Home_Screensaver_Clearlogo_Enabled": {
       "field": "Home_Screensaver_Clearlogo_Enabled",
@@ -272,14 +285,16 @@
       "control_type": "radiobutton",
       "visible": "equals({settings_category}, home) + equals({Home_Screensaver_Enabled}, true)",
       "label": "- $LOCALIZE[31443]",
-      "label2": ""
+      "label2": "",
+      "description": "$LOCALIZE[31543]"
     },
     "Time_Widget": {
       "field": "Time_Widget",
       "id": 1112,
       "control_type": "sliderex",
       "visible": "equals({settings_category}, home)",
-      "label": "$LOCALIZE[31444]"
+      "label": "$LOCALIZE[31444]",
+      "description": "$LOCALIZE[31544]"
     },
     "Time_Widget_Persistent": {
       "field": "Time_Widget_Persistent",
@@ -301,7 +316,8 @@
       "control_type": "radiobutton",
       "visible": "equals({settings_category}, views)",
       "label": "$LOCALIZE[31475]",
-      "label2": ""
+      "label2": "",
+      "description": "$LOCALIZE[31575]"
     },
     "viewsettings": {
       "id": 1352,
@@ -319,7 +335,8 @@
       "control_type": "radiobutton",
       "visible": "equals({settings_category}, views)",
       "label": "$LOCALIZE[31441]",
-      "label2": ""
+      "label2": "",
+      "description": "$LOCALIZE[31541]"
     },
     "title_grid": {
       "id": 1330,
@@ -332,7 +349,8 @@
       "id": 1332,
       "control_type": "sliderex",
       "visible": "equals({settings_category}, views)",
-      "label": "$LOCALIZE[31715]"
+      "label": "$LOCALIZE[31715]",
+      "description": "$LOCALIZE[31815]"
     },
     "GridView_WatchedStatus_Enabled": {
       "field": "GridView_WatchedStatus_Enabled",
@@ -362,7 +380,8 @@
       "control_type": "radiobutton",
       "visible": "equals({settings_category}, customisations)",
       "label": "$LOCALIZE[31451]",
-      "label2": ""
+      "label2": "",
+      "description": "$LOCALIZE[31551]"
     },
     "rating_system": {
       "field": "rating_system",
@@ -370,6 +389,7 @@
       "control_type": "button",
       "visible": "equals({settings_category}, customisations)",
       "label": "$LOCALIZE[31452]",
+      "description": "$LOCALIZE[31552]",
       "onclick": {
         "type": "select",
         "heading": "$LOCALIZE[31452]"
@@ -381,14 +401,16 @@
       "control_type": "radiobutton",
       "visible": "equals({settings_category}, customisations)",
       "label": "$LOCALIZE[31453]",
-      "label2": ""
+      "label2": "",
+      "description": "$LOCALIZE[31553]"
     },
     "like_threshold": {
       "field": "like_threshold",
       "id": 1405,
       "control_type": "sliderex",
       "visible": "equals({settings_category}, customisations)",
-      "label": "$LOCALIZE[31454]"
+      "label": "$LOCALIZE[31454]",
+      "description": "$LOCALIZE[31554]"
     },
     "title_infoscreens": {
       "id": 1406,
@@ -415,7 +437,8 @@
       "id": 1421,
       "control_type": "edit",
       "visible": "equals({settings_category}, customisations)",
-      "label": "$LOCALIZE[31711]"
+      "label": "$LOCALIZE[31711]",
+      "description": "$LOCALIZE[31811]"
     },
     "Video_Breadcrumb_Disabled": {
       "field": "Video_Breadcrumb_Disabled",
@@ -423,7 +446,8 @@
       "control_type": "radiobutton",
       "visible": "equals({settings_category}, customisations)",
       "label": "$LOCALIZE[31713]",
-      "label2": ""
+      "label2": "",
+      "description": "$LOCALIZE[31813]"
     },
     "Prefer_TimeRemaining": {
       "field": "Prefer_TimeRemaining",
@@ -459,7 +483,8 @@
       "id": 1410,
       "control_type": "sliderex",
       "visible": "equals({settings_category}, customisations)",
-      "label": "$LOCALIZE[31491]"
+      "label": "$LOCALIZE[31491]",
+      "description": "$LOCALIZE[31591]"
     },
     "Pause_Screen_Info_Enabled": {
       "field": "Pause_Screen_Info_Enabled",
@@ -467,7 +492,8 @@
       "control_type": "radiobutton",
       "visible": "equals({settings_category}, customisations)",
       "label": "$LOCALIZE[31456]",
-      "label2": ""
+      "label2": "",
+      "description": "$LOCALIZE[31556]"
     },
     "title_musicplayer": {
       "id": 1413,
@@ -502,7 +528,8 @@
       "control_type": "radiobutton",
       "visible": "equals({settings_category}, extras)",
       "label": "$LOCALIZE[31458]",
-      "label2": ""
+      "label2": "",
+      "description": "$LOCALIZE[31558]"
     },
     "title_music_player": {
       "id": 1510,
@@ -516,7 +543,8 @@
       "control_type": "radiobutton",
       "visible": "equals({settings_category}, extras)",
       "label": "$LOCALIZE[31460]",
-      "label2": ""
+      "label2": "",
+      "description": "$LOCALIZE[31560]"
     },
     "title_multiart": {
       "id": 1520,
@@ -530,7 +558,8 @@
       "control_type": "radiobutton",
       "visible": "equals({settings_category}, extras)",
       "label": "$LOCALIZE[31462]",
-      "label2": ""
+      "label2": "",
+      "description": "$LOCALIZE[31562]"
     }
   }
 }
