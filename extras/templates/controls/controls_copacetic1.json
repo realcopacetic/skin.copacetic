@@ -437,7 +437,7 @@
       "id": 1421,
       "control_type": "edit",
       "visible": "equals({settings_category}, customisations)",
-      "label": "$LOCALIZE[31711]",
+      "label": "$LOCALIZE[286]",
       "description": "$LOCALIZE[31811]"
     },
     "Video_Breadcrumb_Disabled": {

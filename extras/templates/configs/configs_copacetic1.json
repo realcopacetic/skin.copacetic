@@ -146,7 +146,7 @@
       "defaults": { "*": "BBFC" }
     },
     "search_optimise": {
-      "items": { "remote": "Remote", "keyboard": "$LOCALIZE[35150]" },
+      "items": { "remote": "$LOCALIZE[790]", "keyboard": "$LOCALIZE[35150]" },
       "defaults": { "*": "remote" }
     },
     "search_optimise_remote": {

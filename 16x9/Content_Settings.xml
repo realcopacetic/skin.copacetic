@@ -407,7 +407,7 @@
 		<control type="edit" id="1421">
 			<description>Subtitle limiter</description>
 			<visible>$EXP[skinsettings_Category_Customisations]</visible>
-			<label>$LOCALIZE[31711]</label>
+			<label>$LOCALIZE[286]</label>
 		</control>
 		<control type="radiobutton" id="1424">
 			<description>Disable video information label during playback</description>
