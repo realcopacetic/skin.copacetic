@@ -403,6 +403,7 @@
 	</variable>
 
 	<variable name="MPAA_Description_Label">
+		<!-- In the tables below, a one-letter rung matches the whole rating, after "Rated " or after a colon, as the flag tables (variables_rating_systems.json) -->
 		<value condition="Skin.String(rating_system,MPAA)">$VAR[Certification_MPAA_Description_Label]</value>
 		<value condition="Skin.String(rating_system,CHVRS)">$VAR[Certification_CHVRS_Description_Label]</value>
 		<value condition="Skin.String(rating_system,ACB)">$VAR[Certification_ACB_Description_Label]</value>
@@ -416,14 +417,14 @@
 	<variable name="Certification_ACB_Description_Label">
 		<value condition="String.Contains(VideoPlayer.mpaa,R18)">restricted to 18 years and over</value>
 		<value condition="String.Contains(VideoPlayer.mpaa,MA15)">recommended for mature audiences</value>
-		<value condition="String.Contains(VideoPlayer.mpaa,M)">not suitable for people under 15</value>
+		<value condition="String.IsEqual(VideoPlayer.mpaa,M) | String.Contains(VideoPlayer.mpaa,rated M) | String.EndsWith(VideoPlayer.mpaa,:M)">not suitable for people under 15</value>
 		<value condition="String.Contains(VideoPlayer.mpaa,PG)">parental guidance recommended</value>
-		<value condition="String.Contains(VideoPlayer.mpaa,G)">general</value>
-		<value condition="String.Contains(VideoPlayer.mpaa,E)">exempt from classification</value>
+		<value condition="String.IsEqual(VideoPlayer.mpaa,G) | String.Contains(VideoPlayer.mpaa,rated G) | String.EndsWith(VideoPlayer.mpaa,:G)">general</value>
+		<value condition="String.IsEqual(VideoPlayer.mpaa,E) | String.Contains(VideoPlayer.mpaa,rated E) | String.EndsWith(VideoPlayer.mpaa,:E)">exempt from classification</value>
 	</variable>
 
 	<variable name="Certification_BBFC_Description_Label">
-		<value condition="String.Contains(VideoPlayer.mpaa,U)">suitable for all</value>
+		<value condition="String.IsEqual(VideoPlayer.mpaa,U) | String.Contains(VideoPlayer.mpaa,rated U) | String.EndsWith(VideoPlayer.mpaa,:U)">suitable for all</value>
 		<value condition="String.Contains(VideoPlayer.mpaa,PG)">parental guidance</value>
 		<value condition="String.Contains(VideoPlayer.mpaa,12)">suitable for 12 years and over</value>
 		<value condition="String.Contains(VideoPlayer.mpaa,15)">suitable for 15 years and over</value>
@@ -432,17 +433,17 @@
 
 	<variable name="Certification_CHVRS_Description_Label">
 		<!-- Film or TV by Player_IsEpisodic, as the flag decides (label_episodic) -->
-		<value condition="!$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,R)">restricted to 18 years and over</value>
 		<value condition="!$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,18A)">suitable for people 18 years of age or older</value>
 		<value condition="!$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,14A)">suitable for people 14 years of age or older</value>
 		<value condition="!$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,PG)">parental guidance advised</value>
-		<value condition="!$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,G)">suitable for viewing by all ages</value>
+		<value condition="!$EXP[Player_IsEpisodic] + [String.IsEqual(VideoPlayer.mpaa,G) | String.Contains(VideoPlayer.mpaa,rated G) | String.EndsWith(VideoPlayer.mpaa,:G)]">suitable for viewing by all ages</value>
+		<value condition="!$EXP[Player_IsEpisodic] + [String.IsEqual(VideoPlayer.mpaa,R) | String.Contains(VideoPlayer.mpaa,rated R) | String.EndsWith(VideoPlayer.mpaa,:R)]">restricted to 18 years and over</value>
 		<value condition="$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,18)">adults</value>
 		<value condition="$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,14)">over 14 years</value>
 		<value condition="$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,PG)">parental guidance</value>
-		<value condition="$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,G)">general</value>
+		<value condition="$EXP[Player_IsEpisodic] + [String.IsEqual(VideoPlayer.mpaa,G) | String.Contains(VideoPlayer.mpaa,rated G) | String.EndsWith(VideoPlayer.mpaa,:G)]">general</value>
 		<value condition="$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,C8)">children over 8 years</value>
-		<value condition="$EXP[Player_IsEpisodic] + String.Contains(VideoPlayer.mpaa,C)">children</value>
+		<value condition="$EXP[Player_IsEpisodic] + [String.IsEqual(VideoPlayer.mpaa,C) | String.Contains(VideoPlayer.mpaa,rated C) | String.EndsWith(VideoPlayer.mpaa,:C)]">children</value>
 	</variable>
 
 	<variable name="Certification_DJCTQ_Description_Label">
@@ -451,7 +452,7 @@
 		<value condition="String.Contains(VideoPlayer.mpaa,14)">not recommended for ages under 14</value>
 		<value condition="String.Contains(VideoPlayer.mpaa,12)">not recommended for ages under 12</value>
 		<value condition="String.Contains(VideoPlayer.mpaa,10)">not recommended for ages under 10</value>
-		<value condition="String.Contains(VideoPlayer.mpaa,L)">general audiances</value>
+		<value condition="String.IsEqual(VideoPlayer.mpaa,L) | String.Contains(VideoPlayer.mpaa,rated L) | String.EndsWith(VideoPlayer.mpaa,:L)">general audiences</value>
 		<value condition="String.Contains(VideoPlayer.mpaa,ER)">general audiences</value>
 	</variable>
 
@@ -459,7 +460,7 @@
 		<value condition="String.Contains(VideoPlayer.mpaa,18)">for persons aged 18 and above only</value>
 		<value condition="String.Contains(VideoPlayer.mpaa,15)">for persons aged 15 and above only</value>
 		<value condition="String.Contains(VideoPlayer.mpaa,PG)">parental guidance requested for young people under 12 years</value>
-		<value condition="String.Contains(VideoPlayer.mpaa,G)">general audiences</value>
+		<value condition="String.IsEqual(VideoPlayer.mpaa,G) | String.Contains(VideoPlayer.mpaa,rated G) | String.EndsWith(VideoPlayer.mpaa,:G)">general audiences</value>
 	</variable>
 
 	<variable name="Certification_FSK_Description_Label">
@@ -490,8 +491,8 @@
 		<value condition="String.Contains(VideoPlayer.mpaa,NC-17)">adults only, no one 17 and under admitted</value>
 		<value condition="String.Contains(VideoPlayer.mpaa,PG-13)">parents strongly cautioned</value>
 		<value condition="String.Contains(VideoPlayer.mpaa,PG)">parental guidance suggested</value>
-		<value condition="String.Contains(VideoPlayer.mpaa,G)">general audiences, all ages admitted</value>
-		<value condition="String.Contains(VideoPlayer.mpaa,R)">restricted</value>
+		<value condition="String.IsEqual(VideoPlayer.mpaa,G) | String.Contains(VideoPlayer.mpaa,rated G) | String.EndsWith(VideoPlayer.mpaa,:G)">general audiences, all ages admitted</value>
+		<value condition="String.IsEqual(VideoPlayer.mpaa,R) | String.Contains(VideoPlayer.mpaa,rated R) | String.EndsWith(VideoPlayer.mpaa,:R)">restricted</value>
 	</variable>
 	
 	<variable name="Like_Button_Label">
