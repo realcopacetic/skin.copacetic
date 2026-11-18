@@ -61,11 +61,11 @@
 				<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_7x" tween="sine" easing="inout" reversible="false" condition="Control.HasFocus({id})">Conditional</animation>
 			</include>
 		</template>
-		<!-- Up into a dialog's rails from below, from its last built rail: OnMove walks back through the ones that can't take focus
-			(GUIWindow.cpp:962-980). Action conditions read the topmost dialog's item -->
+		<!-- Up into the rails from below, at the last built one (the filter lists the mapping's rails with a last: keep them the same);
+			OnMove walks back past those that can't take focus (GUIWindow.cpp:962-980). Conditions read the topmost dialog's item -->
 		<template>
 			<index start="3201" />
-			<filter>In({rail}, [set_movies, director_credits, similar, similar_artists, similar_albums, similar_songs, screenshots])</filter>
+			<filter>In({rail}, [set_movies, director_credits, similar, discography, similar_artists, similar_albums, similar_songs, screenshots])</filter>
 			<include name="infoscreen_onup">
 				<onup condition="{window_is} + {last} + [$PARAM[condition]]">{id}</onup>
 			</include>
