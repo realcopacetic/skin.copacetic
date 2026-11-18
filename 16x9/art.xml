@@ -192,10 +192,10 @@
 	</include>
 
 	<include name="tpl_focus_region"><!-- A grouplist the size of the focused berth: its own scrolling stays inside it, an animated child's doesn't (clipping law) -->
+		<param name="dim_secondary" default="false" /><!-- C1: the embedded list's art half bright while this holds -->
 		<param name="height" default="720" />
 		<param name="left" default="0" />
 		<param name="orientation" default="vertical" />
-		<param name="dim_secondary" default="false" /><!-- C1: the embedded list's art half bright while this holds -->
 		<param name="secondary" default="false" /><!-- the primary view's region also draws the embedded list's art, below its own -->
 		<param name="top" default="0" />
 		<param name="visible" default="true" />
