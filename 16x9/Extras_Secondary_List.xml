@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+	<!-- Grid's data source: never focused, it serves a set's films to Grid's breadcrumb and studio flag -->
 	<include name="Secondary_List">
 		<param name="visible" default="false" />
 		<param name="left" default="0" />
 		<param name="top" default="1080" />
 		<param name="width" default="720" />
 		<param name="height" default="1080" />
-		<param name="layout" default="720x1080" />
 		<definition>
 			<control type="fixedlist" id="3100">
-				<include content="Secondary_List_Scroll_Animation">
-					<param name="fadeout" value="false" />
-				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Skin.HasSetting(Secondary_List_Enabled) + !$EXP[Content_Switching] + !$EXP[Scrollbar_HasFocus]</visible>
 				<visible>String.Contains(ListItem.FolderPath,videodb://) | String.Contains(ListItem.FolderPath,musicdb://)</visible>
-				<include content="Secondary_List_Navigation" />
-				<nested />
 				<preloaditems>2</preloaditems>
 				<left>$PARAM[left]</left>
 				<top>$PARAM[top]</top>
@@ -25,113 +20,15 @@
 				<height>$PARAM[height]</height>
 				<orientation>vertical</orientation>
 				<include content="Default_Scrolltime" />
-				<include content="$PARAM[layout]_Layout" />
+				<include content="Hidden_Layout" />
 				<content target="$VAR[Secondary_List_Target]" sortby="$VAR[Secondary_List_Sort]" sortorder="$VAR[Secondary_List_Sort_Order]" browse="never">$VAR[Secondary_List_Path]</content>
 			</control>
-		</definition>
-	</include>
-
-	<include name="Secondary_List_Hidden_Controls">
-		<control type="button" id="4100">
-			<visible allowhiddenfocus="true">false</visible>
-			<onfocus>SetFocus(4101)</onfocus>
-		</control>
-		<control type="button" id="4101">
-			<visible allowhiddenfocus="true">false</visible>
-			<animation effect="slide" end="0,0" time="Default_Transition_1x">Focus</animation>
-			<onfocus>SetFocus(3100,0,absolute)</onfocus>
-			<onfocus>SetFocus(50)</onfocus>
-		</control>
-		<control type="button" id="4102">
-			<visible allowhiddenfocus="true">false</visible>
-			<onfocus>SetFocus(4103)</onfocus>
-		</control>
-		<control type="button" id="4103">
-			<visible allowhiddenfocus="true">false</visible>
-			<animation effect="slide" end="0,0" time="Default_Transition_1x">Focus</animation>
-			<onfocus>SetFocus(3100,0,absolute)</onfocus>
-			<onfocus>SetFocus(4013)</onfocus>
-		</control>
-		<control type="button" id="4104">
-			<visible allowhiddenfocus="true">false</visible>
-			<onfocus>SetFocus(4105)</onfocus>
-		</control>
-		<control type="button" id="4105">
-			<visible allowhiddenfocus="true">false</visible>
-			<animation effect="slide" end="0,0" time="Default_Transition_1x">Focus</animation>
-			<onfocus>SetFocus(3100,0,absolute)</onfocus>
-			<onfocus>SetFocus(3000,0)</onfocus>
-		</control>
-	</include>
-
-	<include name="Secondary_List_Icon">
-		<param name="texture" default="$VAR[Default(0)Content]" />
-		<definition>
-			<control type="group">
-				<control type="image">
-					<animation effect="fadediffuse" end="ff808080" time="0" condition="$EXP[ListView_Display_IsBackground]">Conditional</animation>
-					<texture background="true">$PARAM[texture]</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-			</control>
-		</definition>
-	</include>
-
-	<include name="Secondary_List_Layout">
-		<param name="width" default="1080" />
-		<param name="height" default="720" />
-		<definition>
-			<itemlayout width="$PARAM[width]" height="$PARAM[height]">
-				<include content="Secondary_List_Icon">
-					<param name="texture" value="$PARAM[texture]" />
-				</include>
-			</itemlayout>
-			<focusedlayout width="$PARAM[width]" height="$PARAM[height]">
-				<control type="group">
-					<animation effect="fade" start="100" end="0" time="Default_Transition_1x" delay="Default_Transition_1x" tween="sine" easing="inout" reversible="true" condition="String.IsEqual(Window(home).Property(OptionsMenu),Active)">Conditional</animation>
-					<control type="group">
-						<visible>![Control.HasFocus(50) | Control.HasFocus(501) | Control.HasFocus(502) | Control.HasFocus(504)]</visible>
-						<include content="HiddenFocusButton" />
-						<include content="btn_trailer" condition="$EXP[trailer_include_videos] + Window.Is(videos)">
-							<param name="enabled" value="$EXP[trailer_visible_videos]" />
-							<param name="focus_ids" value="3100" />
-							<param name="id" value="3100" />
-							<param name="item" value="Container(3100).ListItem.Label" />
-							<param name="source_prefix" value="3100" />
-							<param name="trailer" value="Container(3100).ListItem.Trailer" />
-						</include>
-						<include content="Secondary_List_Icon">
-							<param name="texture" value="$PARAM[texture]" />
-						</include>
-					</control>
-				</control>
-			</focusedlayout>
 		</definition>
 	</include>
 
 	<include name="Hidden_Layout">
 		<itemlayout />
 		<focusedlayout />
-	</include>
-
-	<include name="1920x1080_Layout">
-		<include content="Secondary_List_Layout">
-			<param name="width" value="1920" />
-			<param name="height" value="1080" />
-		</include>
-	</include>
-
-	<include name="720x720_Layout">
-		<include content="Secondary_List_Layout">
-			<param name="width" value="720" />
-			<param name="height" value="720" />
-		</include>
-	</include>
-	<include name="720x1080_Layout">
-		<include content="Secondary_List_Layout">
-			<param name="width" value="720" />
-			<param name="height" value="1080" />
-		</include>
 	</include>
 
 	<include name="Secondary_List_Array">
@@ -147,37 +44,19 @@
 			<visible>!Control.HasFocus(3100)</visible>
 			<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Hidden</animation>
 		</control>
-		<include content="prb_secondary_art" condition="[Window.Is(videos) + [$EXP[layout_billboard_include_videos] | $EXP[layout_strip_include_videos] | $EXP[layout_showcase_include_videos]]] | [Window.Is(music) + [$EXP[layout_strip_include_music] | $EXP[layout_showcase_include_music]]]" />
+		<include content="prb_secondary_art" />
 		<control type="group">
 			<visible>!$EXP[Options_Switching] + !$EXP[Container_Switching] + !$EXP[Music_Player_HasFocus]</visible>
 			<include content="Visible_Fade_Animation" />
-			<include content="Secondary_List_Hidden_Controls" />
-			<include content="Secondary_List" condition="Window.Is(videos)">
-				<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + $EXP[Secondary_List_Video_Conditions]" />
+			<!-- Billboard, List, Showcase and Strip: off screen, its art drawn in the view's focus region (secondary.xml) -->
+			<include content="ctn_secondary" condition="Window.Is(videos)">
+				<param name="visible" value="[[$EXP[BillboardView_Media_IsVisible] | $EXP[ListView_IsVisible] | $EXP[StripView_Display_IsPosters] | $EXP[StripView_Display_IsFanart] | $EXP[ShowcaseView_IsVisible]] + $EXP[Secondary_List_Video_Conditions]] | [$EXP[ShowcaseView_Display_IsSquare] + Container.Content(artists)]" />
 			</include>
-			<include content="Secondary_List" condition="Window.Is(music)">
-				<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + Container.Content(artists)" />
-				<param name="top" value="180" />
-				<param name="height" value="720" />
-				<param name="layout" value="720x720" />
-				<animation effect="slide" start="0" end="720,0" time="0" condition="[Control.HasFocus(3100) | $EXP[Secondary_List_Container_Switching]]">Conditional</animation>
-			</include>
-			<include content="Secondary_List" condition="Window.Is(videos)">
-				<param name="visible" value="$EXP[ListView_Display_IsBackground] + $EXP[Secondary_List_Video_Conditions]" />
-				<param name="width" value="1920" />
-				<param name="layout" value="1920x1080" />
-				<animation effect="slide" start="0,0" end="1920,-1080" time="0" condition="$EXP[ListView_Display_IsBackground]">Conditional</animation>
-			</include>
-			<!-- Billboard, Showcase and Strip: off screen, its art drawn in the view's focus region (secondary.xml) -->
-			<include content="ctn_secondary" condition="Window.Is(videos) + [$EXP[layout_billboard_include_videos] | $EXP[layout_strip_include_videos] | $EXP[layout_showcase_include_videos]]">
-				<param name="visible" value="[[$EXP[BillboardView_Media_IsVisible] | $EXP[StripView_Display_IsPosters] | $EXP[StripView_Display_IsFanart] | $EXP[ShowcaseView_IsVisible]] + $EXP[Secondary_List_Video_Conditions]] | [$EXP[ShowcaseView_Display_IsSquare] + Container.Content(artists)]" />
-			</include>
-			<include content="ctn_secondary" condition="Window.Is(music) + [$EXP[layout_strip_include_music] | $EXP[layout_showcase_include_music]]">
-				<param name="visible" value="[$EXP[StripView_Display_IsSquare] | $EXP[ShowcaseView_Display_IsSquare]] + Container.Content(artists)" />
+			<include content="ctn_secondary" condition="Window.Is(music)">
+				<param name="visible" value="[$EXP[ListView_Display_IsThumbnails] | $EXP[StripView_Display_IsSquare] | $EXP[ShowcaseView_Display_IsSquare]] + Container.Content(artists)" />
 			</include>
 			<include content="Secondary_List" condition="Window.Is(videos)">
 				<param name="visible" value="Control.HasFocus(505) + ListItem.IsCollection" />
-				<param name="layout" value="Hidden" />
 			</include>
 		</control>
 	</include>

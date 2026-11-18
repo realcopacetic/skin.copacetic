@@ -35,11 +35,12 @@
 		</include>
 	</include>
 
-	<!-- The list's art: C2's vue_list_* (list.xml), each shape in the windows it can show in, and the icon for untyped content. By window,
-		not by choice: content from another window's types (video add-ons, music videos in Music) shows List whatever its choice -->
+	<!-- The list's art: C2's vue_list_* (list.xml) per shape and the icon for untyped content, by window: another window's types (video add-ons, music videos in Music)
+		show List whatever their choice. secondary: the window's embedded list draws its art in the focus region, after the view's -->
 	<include name="ListView_Display">
 		<param name="art_icon" default="Thumbnail" />
 		<param name="id" default="50" />
+		<param name="secondary" default="false" />
 		<param name="visible" default="true" />
 		<definition>
 			<include content="Viewtype_Display_Template">
@@ -54,11 +55,13 @@
 				</include>
 				<include content="vue_list_poster" condition="Window.Is(videos) | Window.Is(programs)">
 					<param name="id" value="$PARAM[id]" />
+					<param name="secondary" value="$PARAM[secondary]" /><!-- of the windows that pass secondary, only Videos loads this shape -->
 					<param name="texture_prefix" value="primary" />
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + $EXP[Containers_Posters]" />
 				</include>
 				<include content="vue_list_square" condition="Window.Is(videos) | Window.Is(music) | Window.Is(musicplaylist) | Window.Is(pictures) | Window.Is(addonbrowser)">
 					<param name="id" value="$PARAM[id]" />
+					<param name="secondary" value="[$PARAM[secondary]] + Window.Is(music)" /><!-- Music only: an artist's albums. Videos' artists (music videos) have no list -->
 					<param name="texture_prefix" value="primary" />
 					<param name="visible" value="$EXP[ListView_Display_IsThumbnails] + $EXP[Containers_Square]" />
 				</include>
@@ -77,6 +80,7 @@
 				</include>
 				<include content="vue_list_fanart" condition="!Window.Is(addonbrowser) + !Window.Is(pictures)">
 					<param name="id" value="$PARAM[id]" />
+					<param name="secondary" value="[$PARAM[secondary]] + Window.Is(videos)" /><!-- Videos only: Music's list (an artist's albums) shows only in a square berth -->
 					<param name="texture_prefix" value="primary" />
 					<param name="visible" value="[$EXP[ListView_Display_IsBackground] + !$EXP[Content_HasBackground] + !Container.Content()] | Window.Is(videoplaylist)" />
 				</include>

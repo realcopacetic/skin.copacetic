@@ -13,8 +13,8 @@
 			<ondown condition="Integer.IsGreater(Container.NumItems,1)">50</ondown>
 			<ondown condition="Integer.IsEqual(Container.NumItems,1) + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</ondown>
 			<onleft condition="$EXP[trailer_playing]">PlayerControl(Stop)</onleft>
-			<onleft condition="!$EXP[trailer_playing] + $EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)">SetFocus(3100,0)</onleft>
-			<onleft condition="!$EXP[trailer_playing] + ![$EXP[Secondary_List_Focus] + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onleft>
+			<onleft condition="!$EXP[trailer_playing] + $EXP[Secondary_List_Focus] + Control.IsVisible(3100) + Integer.IsGreater(Container(3100).NumItems,0) + !$EXP[Options_Switching] + !$EXP[Container_Switching]">SetFocus(4111)</onleft><!-- as Strip's Down -->
+			<onleft condition="!$EXP[trailer_playing] + ![$EXP[Secondary_List_Focus] + Control.IsVisible(3100) + Integer.IsGreater(Container(3100).NumItems,0)] + Integer.IsGreater(Container(3000).NumItems,0)">SetFocus(3000,0,absolute)</onleft>
 			<onright condition="$EXP[Music_Player_IsVisible]">SetFocus(3500,1)</onright>
 			<onright condition="!$EXP[Music_Player_IsVisible] + $EXP[trailer_playing]">PlayerControl(Stop)</onright>
 			<onright condition="!$EXP[Music_Player_IsVisible] + !$EXP[trailer_playing] + Integer.IsGreater(Container.NumItems,22)">SetFocus(4013)</onright>
@@ -31,19 +31,6 @@
 			<onright condition="Window.Is(musicinformation) + String.IsEqual(ListItem.DBType,album)">SetFocus(7)</onright>
 			<onright condition="!Window.Is(musicinformation) + !Container.HasNext + !Container.HasPrevious">4000</onright>
 			<onright condition="!Window.Is(musicinformation) + [Container.HasNext | Container.HasPrevious]">60</onright>
-		</definition>
-	</include>
-
-	<include name="Secondary_List_Navigation">
-		<definition>
-			<onleft condition="$EXP[trailer_playing] + $EXP[ListView_IsVisible]">PlayerControl(Stop)</onleft>
-			<onleft condition="!$EXP[trailer_playing] + $EXP[ListView_IsVisible]">SetFocus(4104)</onleft>
-			<onright condition="$EXP[trailer_playing] + $EXP[ListView_IsVisible]">PlayerControl(Stop)</onright>
-			<onright condition="!$EXP[trailer_playing] + $EXP[ListView_IsVisible]">SetFocus(4100)</onright>
-			<onup condition="$EXP[ListView_IsVisible]">0</onup>
-			<ondown condition="$EXP[ListView_IsVisible]">0</ondown>
-			<include content="atr_trailer_back" />
-			<onback condition="!$EXP[trailer_playing]">4100</onback><!-- bare id so Back is consumed: back to the list through the relay, as Right does, never up a folder -->
 		</definition>
 	</include>
 
