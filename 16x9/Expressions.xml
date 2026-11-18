@@ -108,7 +108,6 @@
 	<expression name="Music_Player_HasArt">Player.HasAudio + [$EXP[ListView_Display_IsThumbnails] | [$EXP[ShowcaseView_Display_IsPosters] + !$EXP[ShowcaseView_Details_Off]] | $EXP[StripView_Media_IsVisible] | $EXP[GridView_Media_IsVisible]]</expression>
 	<expression name="Secondary_List_Container_Switching">Control.HasFocus(4107) | String.IsEqual(System.CurrentControlID,4107) | Control.HasFocus(4108) | String.IsEqual(System.CurrentControlID,4108) | Control.HasFocus(4110) | String.IsEqual(System.CurrentControlID,4110) | Control.HasFocus(4111) | String.IsEqual(System.CurrentControlID,4111)</expression>
 	<expression name="Secondary_List_Content_Switching">[Control.IsVisible(5003) | Control.IsVisible(5004)] + !String.IsEqual(Container(3100).NumItems,1)</expression>
-	<expression name="Secondary_List_Focus">Skin.HasSetting(Secondary_List_Enabled) + [$EXP[Secondary_List_Video_Conditions] | [Container.Content(artists) + !$EXP[ListView_Display_IsBackground]]]</expression>
 	<expression name="Secondary_List_Taking_Focus">Control.HasFocus(3100) + Control.IsVisible(5008)</expression>
 	<expression name="Secondary_List_Video_Conditions">[Container.Content(movies) + ListItem.IsCollection] | [Container.Content(movies) + ListItem.HasVideoVersions + !String.IsEqual(Container.FolderName,ListItem.Title)] | Container.Content(sets) | [Container.Content(tvshows) + Integer.IsGreater(ListItem.Property(TotalSeasons),1)]</expression>
 	<!-- The art family of the list's berth in the focus region: the display field's, but List and Billboard have no fanart or poster
@@ -118,6 +117,8 @@
 	<!-- C2's name, one for both windows: a set's films, a film's versions or a show's seasons in every view but Grid; an artist's albums in Music's
 		List Thumbnails, Strip and Showcase (their square berths). Grid reads its own copy (3105) -->
 	<expression name="secondary_visible">[!$EXP[GridView_IsVisible] + $EXP[Secondary_List_Video_Conditions]] | [Window.Is(music) + Container.Content(artists) + [$EXP[ListView_Display_IsThumbnails] | $EXP[StripView_Display_IsSquare] | $EXP[ShowcaseView_Display_IsSquare]]]</expression>
+	<!-- C2's, plus where blk_secondary_media is mounted: Hidden_List's 3100 (Pictures, and Videos with the list off) has no relays to enter -->
+	<expression name="secondary_present">Skin.HasSetting(Secondary_List_Enabled) + [Window.Is(videos) | Window.Is(music)] + Control.IsVisible(3100) + Integer.IsGreater(Container(3100).NumItems,0)</expression>
 
 	<!-- Widgets -->
 	<expression name="Widget_HasLogo">$EXP[Widget_HasLogo_home] | $EXP[Widget_HasLogo_infoscreen] | $EXP[Widget_HasLogo_search]</expression>
