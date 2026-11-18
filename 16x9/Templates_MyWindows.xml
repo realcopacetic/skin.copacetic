@@ -278,7 +278,7 @@
 				<visible>$PARAM[visible] + !Window.IsVisible(smartplaylisteditor)</visible>
 				<include content="Visible_Fade_Delayed_Animation" />
 				<include content="Trailer_Autoplay_Fade_Animation" condition="$EXP[trailer_include_videos]" />
-				<include content="Secondary_List_Array" condition="Skin.HasSetting(Secondary_List_Enabled)" />
+				<include content="blk_secondary_media" condition="Skin.HasSetting(Secondary_List_Enabled)" />
 				<include content="ListView_Display">
 					<param name="secondary" value="Skin.HasSetting(Secondary_List_Enabled)" />
 				</include>

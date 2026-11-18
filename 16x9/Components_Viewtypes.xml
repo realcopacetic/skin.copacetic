@@ -320,6 +320,25 @@
 		</definition>
 	</include>
 
+	<include name="Secondary_List_Icons">
+		<control type="group">
+			<animation effect="slide" start="0,0" end="-120,0" time="0" condition="true">Conditional</animation>
+			<visible>$PARAM[visible]</visible>
+			<visible>Control.HasFocus(3100)</visible>
+			<width>120</width>
+			<height>120</height>
+			<left>$PARAM[left]</left>
+			<centertop>50%</centertop>
+			<control type="group">
+				<visible>String.IsEqual(Container(3100).ListItem.Overlay,OverlayWatched.png)</visible>
+				<include content="Check_focused">
+					<param name="color" value="light" />
+					<animation effect="slide" start="0,0" end="15,0" time="0" condition="$EXP[ListView_Display_IsThumbnails]">Conditional</animation>
+				</include>
+			</control>
+		</control>
+	</include>
+
 	<include name="Common_List_Info_Label">
 		<param name="visible" />
 		<param name="infolabel_visible" />

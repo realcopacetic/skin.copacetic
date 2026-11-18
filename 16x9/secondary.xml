@@ -15,6 +15,37 @@
 		<value>$VAR[texture_secondary_square0]</value>
 	</variable>
 
+	<!-- C1: the embedded list's block, mounted once in Videos and Music before the views, so 3100 and its probe are processed before any reader -->
+	<include name="blk_secondary_media">
+		<!-- Outside the group below: a hidden group stops updating its children, so 5003/5004 would keep their last state -->
+		<include content="User_Scroll_Delay_Template">
+			<param name="onnext_id" value="5004" />
+			<param name="onnext_trigger" value="Container(3100).OnNext" />
+			<param name="onprevious_id" value="5003" />
+			<param name="onprevious_trigger" value="Container(3100).OnPrevious" />
+		</include>
+		<!-- Holds for 1x after the list takes focus (Secondary_List_Taking_Focus), so the details wait for the region's scroll; outside the group for the same reason -->
+		<control type="group" id="5008">
+			<visible>!Control.HasFocus(3100)</visible>
+			<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Hidden</animation>
+		</control>
+		<include content="prb_secondary_art" />
+		<control type="group"><!-- The switches hide the group, not the list, so the list keeps its last visibility through them and the menu
+			key's return can still focus it (3100's second onfocus) -->
+			<visible>!$EXP[Options_Switching] + !$EXP[Container_Switching] + !$EXP[Music_Player_HasFocus]</visible>
+			<include content="ctn_secondary">
+				<param name="visible" value="$EXP[secondary_visible]" />
+			</include>
+			<include content="Hidden_List" condition="Window.Is(videos) + $EXP[layout_grid_include_videos]"><!-- Grid's own copy, for a set's year range and count: never
+				focused, so its cursor stays on the first film and ListItem(-1) is the last -->
+				<param name="id" value="3105" />
+				<param name="sortby" value="year" />
+				<param name="sortorder" value="ascending" />
+				<param name="visible" value="Skin.HasSetting(Secondary_List_Enabled) + Control.HasFocus(505) + ListItem.IsCollection + !$EXP[Content_Switching] + String.Contains(ListItem.FolderPath,videodb://)" />
+			</include>
+		</control>
+	</include>
+
 	<!-- The embedded list in Billboard, List, Showcase and Strip: off screen, its art drawn by blk_secondary_art in the view's focus region -->
 	<include name="ctn_secondary">
 		<control type="fixedlist" id="3100">

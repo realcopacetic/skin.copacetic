@@ -179,7 +179,9 @@
 	</variable>
 
 	<variable name="Info_Label_DBType_Sets">
-		<!-- 2005-2012 / 3 Movies -->
+		<!-- 2005-2012 / 3 Movies. Grid's own copy (3105, secondary.xml) first: up only in Grid on a set with the embedded list on -->
+		<value condition="Control.IsVisible(3105) + !String.IsEmpty(Container(3105).ListItem(0).Year)">[UPPERCASE]$INFO[Container(3105).ListItem(0).Year]$INFO[Container(3105).ListItem(-1).Year,-]$VAR[Copacetic_Divider_Dominant, , ]$INFO[Container(3105).NumItems,, $LOCALIZE[342]][/UPPERCASE]</value>
+		<value condition="Control.IsVisible(3105)">[UPPERCASE]$INFO[Container(3105).NumItems,, $LOCALIZE[342]][/UPPERCASE]</value>
 		<value condition="!String.IsEmpty(Container(3100).ListItem(0).Year)">[UPPERCASE]$INFO[Container(3100).ListItem(0).Year]$INFO[Container(3100).ListItem(-1).Year,-]$VAR[3100_NumItems_Divider, , ]$INFO[Container(3100).NumItems,, $LOCALIZE[342]][/UPPERCASE]</value>
 		<value condition="!String.IsEmpty(Container(3100).NumItems)">[UPPERCASE]$INFO[Container(3100).NumItems,, $LOCALIZE[342]][/UPPERCASE]</value>
 	</variable>
@@ -273,6 +275,9 @@
 		<value condition="Window.Is(musicplaylist)">$VAR[ListItem_Year_Divider_Bold,, ]$INFO[ListItem.Year]$VAR[ListItem_Album_Divider_Bold, , ]$INFO[ListItem.Album]</value>
 		<value condition="Window.Is(videoplaylist)">$VAR[Copacetic_Divider_Bold,, ]$INFO[Container.CurrentItem]$INFO[Container.NumItems,/]</value>
 		<value condition="String.IsEqual(ListItem.DBType,movie) + $EXP[GridView_IsVisible] + $EXP[GridView_Details_Breadcrumb_Movies] + !String.IsEmpty(ListItem.Year)">$VAR[ListItem_Year_Divider_Bold]$INFO[ListItem.Year, ]$VAR[Resolution_Label_Divider_Bold, ]$VAR[Resolution_Label, ]</value>
+		<!-- A set in Grid: its own copy (3105, secondary.xml) with the embedded list on, else Hidden_List's 3100 -->
+		<value condition="Control.IsVisible(3105) + $EXP[GridView_Details_Breadcrumb_Sets] + !String.IsEmpty(Container(3105).ListItem(0).Year)">$VAR[Copacetic_Divider_Bold_Dominant,, ]$INFO[Container(3105).ListItem.Year]$INFO[Container(3105).ListItem(-1).Year,-]$VAR[Copacetic_Divider_Bold_Dominant, , ]$INFO[Container(3105).NumItems,, $LOCALIZE[342]]</value>
+		<value condition="Control.IsVisible(3105) + $EXP[GridView_Details_Breadcrumb_Sets]">$VAR[Copacetic_Divider_Bold_Dominant,, ]$INFO[Container(3105).NumItems,, $LOCALIZE[342]]</value>
 		<value condition="String.IsEqual(ListItem.DBType,set) + $EXP[GridView_IsVisible] + $EXP[GridView_Details_Breadcrumb_Sets] + !String.IsEmpty(Container(3100).ListItem(0).Year)">$VAR[3100_ListItem_Year_Divider_Bold,, ]$INFO[Container(3100).ListItem.Year]$INFO[Container(3100).ListItem(-1).Year,-]$VAR[3100_NumItems_Divider_Bold, , ]$INFO[Container(3100).NumItems,, $LOCALIZE[342]]</value>
 		<value condition="String.IsEqual(ListItem.DBType,set) + $EXP[GridView_IsVisible] + $EXP[GridView_Details_Breadcrumb_Sets] + !String.IsEmpty(Container(3100).NumItems)">$VAR[3100_NumItems_Divider_Bold,, ]$INFO[Container(3100).NumItems,, $LOCALIZE[342]]</value>
 		<value condition="String.IsEqual(ListItem.DBType,tvshow) + $EXP[GridView_IsVisible] + $EXP[GridView_Details_Breadcrumb_TVShows] + !String.IsEmpty(ListItem.Year)">$VAR[ListItem_Year_Divider_Bold,, ]$INFO[ListItem.Year]$VAR[ListItem_TotalSeasons_Divider_Bold, , ]$INFO[ListItem.Property(TotalSeasons)]$VAR[Seasons_Label, ]</value>

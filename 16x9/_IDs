@@ -27,9 +27,10 @@ LISTS
 3000          Video OSD menu top row / Music OSD menu top row
 3010          Video OSD menu bottom row
 3020          Video OSD toggle row
-3100          Secondary
+3100          Embedded list (ctn_secondary): one off-screen copy in Videos and Music for every view but Grid
 3100          Secondary (on infoscreen - album tracklist)
 3100          Hidden list (for set/picture info when secondary lists disabled)
+3105          Embedded list, Grid's own copy in Videos (blk_secondary_media): never focused, serves a set's year range and count
 3200          Home rows grouplist (Home_Widgets); info dialogs rails grouplist (Infoscreen_Rails)
 32XX          Widgets (Home rows from 3201, generated; info screen rails 3201-3214 (mappings_infoscreen.json); global search rails)
 3300          Background slideshow container

@@ -115,6 +115,9 @@
 		display, so their berths are named here (square otherwise) -->
 	<expression name="secondary_art_fanart">$EXP[display_fanart_visible] | $EXP[ListView_Display_IsBackground] | $EXP[BillboardView_Media_IsVisible]</expression>
 	<expression name="secondary_art_poster">$EXP[display_posters_visible] | [$EXP[ListView_Display_IsThumbnails] + $EXP[Containers_Posters]]</expression>
+	<!-- C2's name, one for both windows: a set's films, a film's versions or a show's seasons in every view but Grid; an artist's albums in Music's
+		List Thumbnails, Strip and Showcase (their square berths). Grid reads its own copy (3105) -->
+	<expression name="secondary_visible">[!$EXP[GridView_IsVisible] + $EXP[Secondary_List_Video_Conditions]] | [Window.Is(music) + Container.Content(artists) + [$EXP[ListView_Display_IsThumbnails] | $EXP[StripView_Display_IsSquare] | $EXP[ShowcaseView_Display_IsSquare]]]</expression>
 
 	<!-- Widgets -->
 	<expression name="Widget_HasLogo">$EXP[Widget_HasLogo_home] | $EXP[Widget_HasLogo_infoscreen] | $EXP[Widget_HasLogo_search]</expression>
