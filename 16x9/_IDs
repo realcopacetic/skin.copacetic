@@ -54,10 +54,11 @@ BUTTONS
 4020          Infoscreen path tracer
 4021          Infoscreen star rating up button
 4022          Infoscreen star rating down button
-4107          Embedded list in a focus region (Billboard, List, Showcase, Strip): back to the view through the primary art in the focus region, which scrolls back (C2's 4100)
-4108          Embedded list in a focus region (Billboard, List, Showcase, Strip): entry, last in the focus region, which scrolls to the list's art (C2's 4101)
+4100          Embedded list in a focus region (Billboard, List, Showcase, Strip): back to the view through the primary art in the focus region, which scrolls back (as C2's)
+4101          Embedded list in a focus region (Billboard, List, Showcase, Strip): entry, last in the focus region, which scrolls to the list's art (as C2's)
+4106          Videos: the group around the views, Back's target while a trailer plays (atr_trailer_back), which hands focus straight back to the view
 4110          Embedded list in a focus region (Billboard, List, Showcase, Strip): through the primary art to the options menu (List's Left) or the scrollbar (Down off its last item)
-4111          Embedded list in a focus region (Billboard, List, Showcase, Strip): entry's first step, in the primary art, so 4108 is up before it takes focus
+4111          Embedded list in a focus region (Billboard, List, Showcase, Strip): entry's first step, in the primary art, so 4101 is up before it takes focus
 4201          Global search button
 4300          Set focus to screensaver
 

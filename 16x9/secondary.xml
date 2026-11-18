@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- C1's copy of the parts of C2's secondary.xml that the embedded list in a focus region uses, under C2's names so a C2 fix diffs across.
-		C1 has no jumpbar, so no entry hold or double tap; its relays are 4107-4111 -->
+		C1 has no jumpbar, so no entry hold or double tap. Its relays: C2's 4100 and 4101, and its own 4110 and 4111 -->
 
 	<!-- The family the focus region's list art is drawn from (secondary_art_*, Expressions.xml), so the probes compare that art -->
 	<variable name="texture_probe_base_secondary">
@@ -100,11 +100,11 @@
 		<ondown condition="!$EXP[trailer_playing] + !$EXP[ListView_IsVisible]">SetFocus(4110)</ondown>
 		<onleft condition="$EXP[trailer_playing]">PlayerControl(Stop)</onleft>
 		<onleft condition="!$EXP[trailer_playing] + $EXP[ListView_IsVisible]">SetFocus(4110)</onleft>
-		<onleft condition="!$EXP[trailer_playing] + !$EXP[ListView_IsVisible]">SetFocus(4107)</onleft>
+		<onleft condition="!$EXP[trailer_playing] + !$EXP[ListView_IsVisible]">SetFocus(4100)</onleft>
 		<onright condition="$EXP[trailer_playing]">PlayerControl(Stop)</onright>
-		<onright condition="!$EXP[trailer_playing]">SetFocus(4107)</onright>
+		<onright condition="!$EXP[trailer_playing]">SetFocus(4100)</onright>
 		<include content="atr_trailer_back" />
-		<onback condition="!$EXP[trailer_playing]">4107</onback><!-- bare id so Back is consumed: back to the view through the relay, never up a folder -->
+		<onback condition="!$EXP[trailer_playing]">4100</onback><!-- bare id so Back is consumed: back to the view through the relay, never up a folder -->
 	</include>
 
 	<include name="blk_secondary_art">
@@ -125,7 +125,7 @@
 					<param name="position" value="0" />
 					<param name="texture_stub" value="$PARAM[texture_stub]_base" />
 					<param name="width" value="$PARAM[width]" />
-					<control type="button" id="4108"><!-- C2's 4101: last in the focus region, so focusing it scrolls the region to this art -->
+					<control type="button" id="4101"><!-- As C2's: last in the focus region, so focusing it scrolls the region to this art -->
 						<visible allowhiddenfocus="true">false</visible>
 						<hitrect x="0" y="0" w="-1" h="-1" /><!-- as each relay: no mouse target. With no size it would cover the berth, and a pointer over the art would focus it -->
 						<onfocus>SetFocus($PARAM[id],0)</onfocus>
@@ -146,7 +146,7 @@
 	</include>
 
 	<include name="btn_secondary_redirect">
-		<control type="button" id="4107"><!-- C2's 4100: first in the focus region, so focusing it scrolls the region back. C1: it holds
+		<control type="button" id="4100"><!-- As C2's: first in the focus region, so focusing it scrolls the region back. C1: it holds
 			focus for the scroll (onfocus runs as its Focus animation ends), then resets the list out of sight -->
 			<visible allowhiddenfocus="true">false</visible>
 			<hitrect x="0" y="0" w="-1" h="-1" />
@@ -155,7 +155,7 @@
 			<onfocus>SetFocus(50)</onfocus>
 			<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Focus</animation>
 		</control>
-		<control type="button" id="4110"><!-- C1: 4107 for the list's other way out: on to the options menu from List's Left, else to the scrollbar from
+		<control type="button" id="4110"><!-- C1: 4100 for the list's other way out: on to the options menu from List's Left, else to the scrollbar from
 			Down off the last item -->
 			<visible allowhiddenfocus="true">false</visible>
 			<hitrect x="0" y="0" w="-1" h="-1" />
@@ -166,16 +166,16 @@
 			<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Focus</animation>
 		</control>
 		<control type="button" id="4111"><!-- C1: the entry's first step. Its onfocus waits for a Process (the Focus animation), in which prb_secondary_art
-			comes up, so 4108 can take focus and scroll the region, and 3100's onfocus never sends focus round again -->
+			comes up, so 4101 can take focus and scroll the region, and 3100's onfocus never sends focus round again -->
 			<visible allowhiddenfocus="true">false</visible>
 			<hitrect x="0" y="0" w="-1" h="-1" />
 			<include content="atr_secondary_hold_back" />
-			<onfocus>SetFocus(4108)</onfocus>
+			<onfocus>SetFocus(4101)</onfocus>
 			<animation effect="slide" end="0,0" time="Default_Transition_0x" reversible="false">Focus</animation>
 		</control>
 	</include>
 
-	<include name="atr_secondary_hold_back"><!-- C1: Back on a relay (4107's or 4110's hold, 4111's frame on the menu key's return) finishes in this window: the reset, then the view.
+	<include name="atr_secondary_hold_back"><!-- C1: Back on a relay (4100's or 4110's hold, 4111's frame on the menu key's return) finishes in this window: the reset, then the view.
 		A bare id so Back is consumed; the unfocus drops the relay's own onfocus -->
 		<onback>SetFocus(3100,0,absolute)</onback>
 		<onback>50</onback>
@@ -184,7 +184,7 @@
 	<include name="prb_secondary_art"><!-- C1: up while the list or a relay holds focus. One copy, processed whatever the views show, so
 		blk_secondary_art and 3100's onfocus read a current state -->
 		<control type="group" id="6315">
-			<visible>Control.HasFocus(3100) | Control.HasFocus(4107) | Control.HasFocus(4108) | Control.HasFocus(4110) | Control.HasFocus(4111)</visible>
+			<visible>Control.HasFocus(3100) | Control.HasFocus(4100) | Control.HasFocus(4101) | Control.HasFocus(4110) | Control.HasFocus(4111)</visible>
 		</control>
 	</include>
 
