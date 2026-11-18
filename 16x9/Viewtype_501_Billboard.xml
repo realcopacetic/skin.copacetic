@@ -17,8 +17,9 @@
 	</include>
 
 	<!-- The media windows' Billboard: C2's vue_billboard_fanart (billboard.xml) in the display's wrapper, which hides it while the listing
-		changes and fades it for a trailer -->
+		changes and fades it for a trailer. secondary: the window's embedded list draws its art in the focus region, below the view's -->
 	<include name="BillboardView_Media">
+		<param name="secondary" default="false" />
 		<param name="window" />
 		<definition>
 			<include content="Viewtype_Display_Template">
@@ -27,6 +28,7 @@
 				<include content="Trailer_Autoplay_Fade_Animation" condition="$EXP[trailer_include_$PARAM[window]]" />
 				<include content="vue_billboard_fanart">
 					<param name="id" value="501" />
+					<param name="secondary" value="[$PARAM[secondary]] + Window.Is(videos)" /><!-- Videos only: Music's list (an artist's albums) shows only in a square berth -->
 					<param name="texture_prefix" value="primary" />
 				</include>
 			</include>
