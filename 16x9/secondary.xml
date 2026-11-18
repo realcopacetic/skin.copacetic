@@ -3,14 +3,15 @@
 	<!-- C1's copy of the parts of C2's secondary.xml that Strip's embedded list uses, under C2's names so a C2 fix diffs across.
 		C1 has no jumpbar, so no entry hold or double tap; its ids 4100-4105 still serve the other views' lists, so these buttons are 4107-4111 -->
 
+	<!-- The family the focus region's list art is drawn from (secondary_art_*, Expressions.xml), so the probes compare that art -->
 	<variable name="texture_probe_base_secondary">
-		<value condition="$EXP[display_fanart_visible]">$VAR[texture_secondary_fanart_base0]</value>
-		<value condition="$EXP[display_posters_visible]">$VAR[texture_secondary_poster_base0]</value>
+		<value condition="$EXP[secondary_art_fanart]">$VAR[texture_secondary_fanart_base0]</value>
+		<value condition="$EXP[secondary_art_poster]">$VAR[texture_secondary_poster_base0]</value>
 		<value>$VAR[texture_secondary_square_base0]</value>
 	</variable>
 	<variable name="texture_probe_secondary">
-		<value condition="$EXP[display_fanart_visible]">$VAR[texture_secondary_fanart0]</value>
-		<value condition="$EXP[display_posters_visible]">$VAR[texture_secondary_poster0]</value>
+		<value condition="$EXP[secondary_art_fanart]">$VAR[texture_secondary_fanart0]</value>
+		<value condition="$EXP[secondary_art_poster]">$VAR[texture_secondary_poster0]</value>
 		<value>$VAR[texture_secondary_square0]</value>
 	</variable>
 
@@ -51,7 +52,10 @@
 			<onfocus condition="!Control.IsVisible(6315) + [$EXP[Options_Switching] | $EXP[Container_Switching]]">SetFocus(50)</onfocus><!-- while a switch hides the view, a copy of the list frozen visible can take focus, and 4111 would be hidden too: back to the view -->
 			<include content="atr_navigation_secondary_vertical" />
 			<include content="Default_Scrolltime" />
-			<include content="blk_layouts" />
+			<include content="blk_layouts">
+				<param name="fanart" value="$EXP[secondary_art_fanart]" />
+				<param name="posters" value="$EXP[secondary_art_poster]" />
+			</include>
 		</control>
 	</include>
 
