@@ -58,7 +58,6 @@
 				<param name="button3_id" value="28" />
 				<param name="button3_texture" value="Check" />
 				<param name="color" value="light" />
-				<param name="unfocused_color" value="light" />
 			</include>
 		</include>
 	</controls>

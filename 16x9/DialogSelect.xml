@@ -27,7 +27,6 @@
 			<include content="selectdialog_Scrollbar" />
 			<include content="Button_Group_Template">
 				<param name="color" value="$VAR[Breadcrumb_Label_Color]" />
-				<param name="toggle_button" value="true" />
 				<param name="onleft" value="4010" />
 				<param name="onright" value="noop" />
 				<param name="button1" value="Window.Is(selectdialog)" />

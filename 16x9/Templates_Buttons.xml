@@ -43,10 +43,10 @@
 				<orientation>horizontal</orientation>
 				<align>right</align>
 				<itemgap>0</itemgap>
-				<onleft>$PARAM[onleft]</onleft>
-				<onright>$PARAM[onright]</onright>
 				<onup>$PARAM[onup]</onup>
 				<ondown>$PARAM[ondown]</ondown>
+				<onleft>$PARAM[onleft]</onleft>
+				<onright>$PARAM[onright]</onright>
 				<nested />
 			</control>
 		</definition>
@@ -278,7 +278,6 @@
 		<param name="onright" default="4000" />
 		<param name="onup" default="noop" />
 		<param name="ondown" default="noop" />
-		<param name="align" default="right" />
 		<param name="color" default="$VAR[Breadcrumb_Label_Color]" />
 		<param name="include_textures" default="true" />
 		<param name="include_labels" default="false" />
@@ -303,7 +302,7 @@
 		<param name="button4_id" default="4004" />
 		<param name="button4_texture" default="Check" />
 		<param name="button4_toggle_button" default="false" />
-		<param name="button4use_alt_texture" default="false" />
+		<param name="button4_use_alt_texture" default="false" />
 		<param name="label_height" default="60" />
 		<param name="focused_font" default="Title_Breadcrumb_Label" />
 		<param name="unfocused_font" default="Info_Breadcrumb_Label" />
@@ -322,10 +321,10 @@
 					<orientation>horizontal</orientation>
 					<align>right</align>
 					<itemgap>0</itemgap>
-					<onleft>$PARAM[onleft]</onleft>
-					<onright>$PARAM[onright]</onright>
 					<onup>$PARAM[onup]</onup>
 					<ondown>$PARAM[ondown]</ondown>
+					<onleft>$PARAM[onleft]</onleft>
+					<onright>$PARAM[onright]</onright>
 					<animation effect="slide" end="0,1080" time="0" condition="$PARAM[show_labels] | !$PARAM[include_textures]">Conditional</animation>
 					<control type="button" id="$PARAM[button1_id]">
 						<visible>$PARAM[button1]</visible>

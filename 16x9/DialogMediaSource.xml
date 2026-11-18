@@ -47,7 +47,6 @@
 				<param name="ondown" value="10" />
 				<param name="onup" value="12" />
 				<param name="color" value="light" />
-				<param name="unfocused_color" value="light" />
 				<param name="button1" value="true" />
 				<param name="button1_id" value="19" />
 				<param name="button2" value="true" />

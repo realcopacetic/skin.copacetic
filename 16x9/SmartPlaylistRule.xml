@@ -41,7 +41,6 @@
         <param name="bottom" value="585" />
         <param name="right" value="360" />
         <param name="button_width" value="90" />
-        <param name="unfocused_color" value="unfocused" />
         <param name="color" value="light" />
         <param name="button1" value="true" />
         <param name="button1_id" value="20" />
@@ -52,7 +51,6 @@
         <param name="onright" value="0" />
         <param name="onup" value="20" />
         <param name="color" value="light" />
-        <param name="unfocused_color" value="light" />
         <param name="button1" value="true" />
         <param name="button1_id" value="19" />
         <param name="button1_texture" value="Cross" />

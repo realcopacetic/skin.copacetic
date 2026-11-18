@@ -47,7 +47,6 @@
 				<param name="button3" value="true" />
 				<param name="button3_id" value="12" />
 				<param name="color" value="light" />
-				<param name="unfocused_color" value="light" />
 			</include>
 		</control>
 	</controls>

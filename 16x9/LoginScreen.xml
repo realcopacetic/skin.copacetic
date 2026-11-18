@@ -39,7 +39,6 @@
 				<param name="button1_texture" value="Power" />
 				<param name="button1_onclick" value="ActivateWindow(shutdownmenu)" />
 				<param name="color" value="light" />
-				<param name="unfocused_color" value="light" />
 			</include>
 		</include>
 		<!-- The profiles in Strip (C2's strip template, texture_loginscreen_squareN), squares as the media view's but smaller: 360, focus 480 -->
