@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-	<variable name="Albums_Label">
-		<!-- Album / Albums -->
-		<value condition="Integer.IsEqual(Container(50).NumItems,1)">$LOCALIZE[558]</value>
-		<value>$LOCALIZE[132]</value>
-	</variable>
-
 	<variable name="Appearances_Label">
 		<!-- Credit / Credits  -->
 		<value condition="!String.IsEmpty(ListItem.Appearances) + String.IsEqual(ListItem.Appearances,1)">$LOCALIZE[31102]</value>
@@ -364,9 +358,9 @@
 		<!-- No season or episode number (an add-on episode): the same line without 1x01 -->
 		<value condition="String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.TVShowTitle)">[UPPERCASE]$INFO[ListItem.TVShowTitle]$VAR[ListItem_Premiered_Divider_Bold, , ]$INFO[ListItem.Premiered]$VAR[Resolution_Label_Divider_Bold, , ]$VAR[Resolution_Label]$VAR[ListItem_AudioLanguage_Divider_Bold, , ]$INFO[ListItem.AudioLanguage] $VAR[ListItem_Duration_Divider_Bold, , ]$INFO[ListItem.Duration(mins),, $LOCALIZE[31114]][CR]$VAR[Infoscreen_Writer_Label][/UPPERCASE]</value>
 		<!-- Artists (All Views): Jazz / 1980-90s / 4 albums -->
-		<value condition="String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Property(Artist_Genre))">[UPPERCASE]$INFO[ListItem.Property(Artist_Genre)][/UPPERCASE]$VAR[ListItem_Artist_YearsActive_Divider_Bold, , ]$INFO[ListItem.Property(Artist_YearsActive)][UPPERCASE]$VAR[infoscreen_albums_divider_bold, , ]$VAR[infoscreen_albums]$VAR[Albums_Label, ][/UPPERCASE]</value>
-		<value condition="String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Property(Artist_YearsActive))">$INFO[ListItem.Property(Artist_YearsActive)][UPPERCASE]$VAR[infoscreen_albums_divider_bold, , ]$VAR[infoscreen_albums]$VAR[Albums_Label, ][/UPPERCASE]</value>
-		<value condition="String.IsEqual(ListItem.DBType,artist) + String.IsEmpty(ListItem.Property(Artist_YearsActive))">[UPPERCASE]$VAR[infoscreen_albums,, ]$VAR[Albums_Label][/UPPERCASE]</value>
+		<value condition="String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Property(Artist_Genre))">[UPPERCASE]$INFO[ListItem.Property(Artist_Genre)][/UPPERCASE]$VAR[ListItem_Artist_YearsActive_Divider_Bold, , ]$INFO[ListItem.Property(Artist_YearsActive)][UPPERCASE]$VAR[infoscreen_albums_divider_bold, , ]$VAR[infoscreen_albums]$VAR[infoscreen_albums_label, ][/UPPERCASE]</value>
+		<value condition="String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Property(Artist_YearsActive))">$INFO[ListItem.Property(Artist_YearsActive)][UPPERCASE]$VAR[infoscreen_albums_divider_bold, , ]$VAR[infoscreen_albums]$VAR[infoscreen_albums_label, ][/UPPERCASE]</value>
+		<value condition="String.IsEqual(ListItem.DBType,artist) + String.IsEmpty(ListItem.Property(Artist_YearsActive))">[UPPERCASE]$VAR[infoscreen_albums,, ]$VAR[infoscreen_albums_label][/UPPERCASE]</value>
 		<!-- Albums: FKA Twigs / 2014 / Alternative
 				30 songs / 132 mins -->
 		<value condition="String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(ListItem.AlbumArtist) + !String.IsEmpty(ListItem.Genre)">[UPPERCASE]$INFO[ListItem.AlbumArtist]$VAR[ListItem_Year_Divider_Bold, , ]$INFO[ListItem.Year]$VAR[ListItem_Genre_Divider_Bold, , ]$INFO[ListItem.Genre][CR]$INFO[Container(3100).NumItems,, $LOCALIZE[134]]$VAR[ListItem_Duration_Divider_Bold, , ]$INFO[ListItem.Duration(mins),, $LOCALIZE[31114]][/UPPERCASE]</value>

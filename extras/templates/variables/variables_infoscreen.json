@@ -12,6 +12,15 @@
       "filter": "equals({rail}, discography)",
       "values": [ { "condition": "!String.IsEmpty({container}.NumItems)", "value": "$VAR[Copacetic_Divider_Bold]" } ]
     },
+    "infoscreen_albums_label": {
+      "note": "Album or Albums after that count (core 558, 132).",
+      "index": { "start": 3201 },
+      "filter": "equals({rail}, discography)",
+      "values": [
+        { "condition": "Integer.IsEqual({container}.NumItems,1)", "value": "$LOCALIZE[558]" },
+        { "value": "$LOCALIZE[132]" }
+      ]
+    },
     "Title_Label_Infoscreen_Widgets": {
       "note": "The focused rail's item as the title in its details (Title_Label).",
       "index": { "start": 3201 },
