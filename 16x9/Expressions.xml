@@ -107,7 +107,7 @@
 	<expression name="Music_Player_IsVisible">Skin.HasSetting(Music_Player_Enabled) + MusicPlayer.Offset(0).Exists</expression>
 	<expression name="Music_Player_HasFocus">Control.HasFocus(3500) | String.IsEqual(System.CurrentControlID,3500)</expression>
 	<expression name="Music_Player_HasArt">Player.HasAudio + [$EXP[ListView_Display_IsThumbnails] | [$EXP[ShowcaseView_Display_IsPosters] + !$EXP[ShowcaseView_Details_Off]] | $EXP[StripView_Media_IsVisible] | $EXP[GridView_Media_IsVisible]]</expression>
-	<expression name="Secondary_List_Container_Switching">Control.HasFocus(4100) | String.IsEqual(System.CurrentControlID,4100) | Control.HasFocus(4101) | String.IsEqual(System.CurrentControlID,4101) | Control.HasFocus(4110) | String.IsEqual(System.CurrentControlID,4110) | Control.HasFocus(4111) | String.IsEqual(System.CurrentControlID,4111)</expression>
+	<expression name="Secondary_List_Container_Switching">Control.HasFocus(4100) | Control.HasFocus(4101) | Control.HasFocus(4110) | Control.HasFocus(4111)</expression>
 	<expression name="Secondary_List_Content_Switching">[Control.IsVisible(5003) | Control.IsVisible(5004)] + !String.IsEqual(Container(3100).NumItems,1)</expression>
 	<expression name="Secondary_List_Taking_Focus">Control.HasFocus(3100) + Control.IsVisible(5008)</expression>
 	<expression name="Secondary_List_Video_Conditions">[Container.Content(movies) + ListItem.IsCollection] | [Container.Content(movies) + ListItem.HasVideoVersions + !String.IsEqual(Container.FolderName,ListItem.Title)] | Container.Content(sets) | [Container.Content(tvshows) + Integer.IsGreater(ListItem.Property(TotalSeasons),1)]</expression>
