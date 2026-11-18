@@ -584,7 +584,7 @@
 		<value condition="VideoPlayer.IsFullscreen + Integer.IsGreater(VideoPlayer.UserRating,2.5)">stars/rating_3.png</value>
 		<value condition="VideoPlayer.IsFullscreen + Integer.IsGreater(VideoPlayer.UserRating,1.5)">stars/rating_2.png</value>
 		<!-- temp fix to account for fact that DecreaseRating won't go lower than 1 for VideoPlayer.UserRating -->
-		<value condition="VideoPlayer.IsFullscreen + Integer.IsGreater(VideoPlayer.UserRating,0.5) + !String.IsEqual(Window.(videoosd).Property(VideoPlayer_Rating_Fix),true)">stars/rating_1.png</value>
+		<value condition="VideoPlayer.IsFullscreen + Integer.IsGreater(VideoPlayer.UserRating,0.5) + !String.IsEqual(Window(videoosd).Property(VideoPlayer_Rating_Fix),true)">stars/rating_1.png</value>
 		<value condition="VideoPlayer.IsFullscreen + Integer.IsGreater(VideoPlayer.Rating,9.5)">stars/rating_10.png</value>
 		<value condition="VideoPlayer.IsFullscreen + Integer.IsGreater(VideoPlayer.Rating,8.5)">stars/rating_9.png</value>
 		<value condition="VideoPlayer.IsFullscreen + Integer.IsGreater(VideoPlayer.Rating,7.5)">stars/rating_8.png</value>

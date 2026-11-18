@@ -250,7 +250,7 @@
 	<variable name="Star_Color">
 		<!-- temp fix to account for fact that DecreaseRating won't go lower than 1 for VideoPlayer.UserRating -->
 		<value condition="VideoPlayer.IsFullscreen + Integer.IsGreater(VideoPlayer.UserRating,1.5)">user_rating</value>
-		<value condition="VideoPlayer.IsFullscreen + Integer.IsGreater(VideoPlayer.UserRating,0.5) + !String.IsEqual(Window.(videoosd).Property(VideoPlayer_Rating_Fix),true)">user_rating</value>
+		<value condition="VideoPlayer.IsFullscreen + Integer.IsGreater(VideoPlayer.UserRating,0.5) + !String.IsEqual(Window(videoosd).Property(VideoPlayer_Rating_Fix),true)">user_rating</value>
 		<value condition="!String.IsEmpty(ListItem.UserRating)">user_rating</value>
 		<value condition="$EXP[Dominant_Color_Night]">$INFO[Container(9300).ListItem.Art(background_palette_logo)]</value>
 		<value>$VAR[Accent_Color]</value>
