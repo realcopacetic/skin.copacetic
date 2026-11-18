@@ -711,7 +711,7 @@
 		<value condition="String.StartsWith(Container(6).ListItem.VideoResolution,576)">$LOCALIZE[31112]</value>
 		<value condition="String.StartsWith(Container(6).ListItem.VideoResolution,540)">$LOCALIZE[31112]</value>
 		<value condition="String.StartsWith(Container(6).ListItem.VideoResolution,480)">$LOCALIZE[31112]</value>
-		<value condition="!String.IsEmpty(Container(6).ListItem.VideoResolution)">$INFO[Container(3100).ListItem.VideoResolution]</value>
+		<value condition="!String.IsEmpty(Container(6).ListItem.VideoResolution)">$INFO[Container(6).ListItem.VideoResolution]</value>
 	</variable>
 
 	<variable name="Resolution_Label_50">
@@ -727,7 +727,7 @@
 		<value condition="String.StartsWith(Container(50).ListItem.VideoResolution,576)">$LOCALIZE[31112]</value>
 		<value condition="String.StartsWith(Container(50).ListItem.VideoResolution,540)">$LOCALIZE[31112]</value>
 		<value condition="String.StartsWith(Container(50).ListItem.VideoResolution,480)">$LOCALIZE[31112]</value>
-		<value condition="!String.IsEmpty(Container(50).ListItem.VideoResolution)">$INFO[Container(3100).ListItem.VideoResolution]</value>
+		<value condition="!String.IsEmpty(Container(50).ListItem.VideoResolution)">$INFO[Container(50).ListItem.VideoResolution]</value>
 	</variable>
 
 	<variable name="Resolution_Label">
