@@ -90,6 +90,7 @@
 					<param name="width" value="$PARAM[width]" />
 					<control type="button" id="4108"><!-- C2's 4101: last in the focus region, so focusing it scrolls the region to this art -->
 						<visible allowhiddenfocus="true">false</visible>
+						<hitrect x="0" y="0" w="-1" h="-1" /><!-- as each relay: no mouse target. With no size it would cover the berth, and a pointer over the art would focus it -->
 						<onfocus>SetFocus($PARAM[id],0)</onfocus>
 					</control>
 				</include>
@@ -111,6 +112,7 @@
 		<control type="button" id="4107"><!-- C2's 4100: first in the focus region, so focusing it scrolls the region back. C1, as 4101: it holds
 			focus for the scroll (onfocus runs as its Focus animation ends), then resets the list out of sight -->
 			<visible allowhiddenfocus="true">false</visible>
+			<hitrect x="0" y="0" w="-1" h="-1" />
 			<include content="atr_secondary_hold_back" />
 			<onfocus>SetFocus(3100,0,absolute)</onfocus>
 			<onfocus>SetFocus(50)</onfocus>
@@ -118,6 +120,7 @@
 		</control>
 		<control type="button" id="4110"><!-- C1: 4107 for Down off the list's last item, which goes on to the scrollbar, as 4103 -->
 			<visible allowhiddenfocus="true">false</visible>
+			<hitrect x="0" y="0" w="-1" h="-1" />
 			<include content="atr_secondary_hold_back" />
 			<onfocus>SetFocus(3100,0,absolute)</onfocus>
 			<onfocus>SetFocus(4013)</onfocus>
@@ -126,6 +129,7 @@
 		<control type="button" id="4111"><!-- C1: the entry's first step. Its onfocus waits for a Process (the Focus animation), in which prb_secondary_art
 			comes up, so 4108 can take focus and scroll the region, and 3100's onfocus never sends focus round again -->
 			<visible allowhiddenfocus="true">false</visible>
+			<hitrect x="0" y="0" w="-1" h="-1" />
 			<include content="atr_secondary_hold_back" />
 			<onfocus>SetFocus(4108)</onfocus>
 			<animation effect="slide" end="0,0" time="Default_Transition_0x" reversible="false">Focus</animation>
