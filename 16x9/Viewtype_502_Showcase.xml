@@ -43,7 +43,7 @@
 	</include>
 
 	<!-- A Home row's Showcase: C2's vue_reel_<art> (reel.xml) in the display's wrapper, with no neighbours, border, shadows or overlay
-		(the details sit beside the art). Region: the row's own latches, so it never rides on another row's move -->
+		(the details sit beside the art) -->
 	<include name="ShowcaseView_Display">
 		<include content="Viewtype_Display_Template">
 			<param name="viewtype_label" value="Showcase" />
@@ -53,7 +53,7 @@
 				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" />
 				<include content="ShowcaseView_Art_$PARAM[display]">
 					<param name="id" value="$PARAM[id]" />
-					<param name="region" value="$PARAM[region]_$PARAM[id]" />
+					<param name="region" value="$PARAM[region]" />
 					<param name="texture_prefix" value="$PARAM[texture_prefix]" />
 				</include>
 			</control>

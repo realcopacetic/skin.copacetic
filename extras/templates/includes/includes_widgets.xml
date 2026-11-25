@@ -52,10 +52,10 @@
 				</control>
 			</include>
 		</template>
-		<!-- A Showcase or Grid row's own move, held 1x as Home's 5001/5002 are: its rides key to it (container_scrolling_widgets_{index}) -->
+		<!-- Each row's own move, held 1x as Home's 5001/5002 are: its rides key to it (container_scrolling_widgets_{index}) -->
 		<template>
 			<index start="3201" />
-			<filter>In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom]) + In({layout}, [Showcase, Grid])</filter>
+			<filter>In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom])</filter>
 			<include name="widgets_move_latches">
 				<control type="group" id="{index+2102}">
 					<visible>Container({index}).OnNext | Container({index}).OnPrevious</visible>
