@@ -93,19 +93,19 @@
       "rules": [ { "type": "append", "value": "[Control.HasFocus({rail_id}) + Integer.IsEqual(Container({rail_id}).NumItems,1)]" } ]
     },
     "container_scrolling_widgets_{index}": {
-      "note": "A Showcase row's own scroll names (reel.xml, through ShowcaseView_Display's region): Home's latches, held for every row, while the row's own move latch holds too (widgets_move_latches), so a row reached during another row's latch stays still.",
+      "note": "A Showcase or Grid row's own scroll names (reel.xml, through the display's region): Home's latches, held for every row, while the row's own move latch holds too (widgets_move_latches), so a row reached during another row's latch stays still.",
       "index": { "start": 3201 },
-      "filter": "In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom]) + equals({layout}, Showcase)",
+      "filter": "In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom]) + In({layout}, [Showcase, Grid])",
       "rules": [ { "type": "append", "value": "$EXP[container_scrolling_widgets] + Control.IsVisible({index+2102})" } ]
     },
     "container_scrolling_widgets_{index}_next": {
       "index": { "start": 3201 },
-      "filter": "In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom]) + equals({layout}, Showcase)",
+      "filter": "In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom]) + In({layout}, [Showcase, Grid])",
       "rules": [ { "type": "append", "value": "Control.IsVisible(5002) + Control.IsVisible({index+2102})" } ]
     },
     "container_scrolling_widgets_{index}_prev": {
       "index": { "start": 3201 },
-      "filter": "In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom]) + equals({layout}, Showcase)",
+      "filter": "In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom]) + In({layout}, [Showcase, Grid])",
       "rules": [ { "type": "append", "value": "Control.IsVisible(5001) + Control.IsVisible({index+2102})" } ]
     },
     "container_scrolling_{region}_next": {

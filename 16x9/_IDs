@@ -77,7 +77,7 @@ ANIMATION DELAYS
 5012          Multiart shown latch
 5200          A Home row was reached just now (Timers.xml reads it; generated widgets_container_switching)
 5203+         Home row latches, row id + 2002 (generated, widgets_latches)
-5303+         Showcase Home row move latches, row id + 2102 (generated, widgets_move_latches)
+5303+         Showcase and Grid Home row move latches, row id + 2102 (generated, widgets_move_latches)
 
 CHECKERS
 6001          Container update bounce test
