@@ -406,8 +406,9 @@
 	<include name="GridView_Rail">
 		<param name="border_protrusion" default="10" />
 		<param name="border_size" default="11" />
-		<param name="border_visible" default="true" /><!-- the focus border shows only while this holds (the bookmarks: not under their buttons) -->
+		<param name="border_visible" default="true" /><!-- the focus border and shadows show only while this holds (the bookmarks: not under their buttons) -->
 		<param name="dim_focus" default="false" /><!-- the focus half bright (Spotlight, unless the row prefers landscape) -->
+		<param name="include_progress" default="true" /><!-- an info rail's mapping: false where the dialog's ListItem isn't the rail's (cast) -->
 		<definition>
 			<control type="group">
 				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" />
@@ -418,6 +419,7 @@
 					<param name="ani_dim_leave" value="efx_reel_dim_settle" />
 					<param name="art" value="$PARAM[art]" />
 					<param name="border_color" value="$VAR[Accent_Color]" />
+					<param name="border_over" value="true" />
 					<param name="border_protrusion" value="$PARAM[border_protrusion]" />
 					<param name="border_size" value="$PARAM[border_size]" />
 					<param name="border_visible" value="$PARAM[border_visible]" />
@@ -430,7 +432,7 @@
 					<param name="item_top" value="$PARAM[item_top]" />
 					<param name="item_width" value="$PARAM[item_width]" />
 					<param name="left_visible" value="true" />
-					<param name="marks_window" value="Window.Is(videos) | Window.Is(home) | Window.Is(movieinformation)" />
+					<param name="marks_window" value="[Window.Is(videos) | Window.Is(home) | Window.Is(movieinformation)] + [$PARAM[include_progress]]" />
 					<param name="offright_slide" value="$PARAM[item_width]" />
 					<param name="outer" value="true" />
 					<param name="outer_far" value="$PARAM[outer_far]" />
@@ -462,6 +464,7 @@
 			<param name="art" value="poster" />
 			<param name="centerx" value="180" />
 			<param name="id" value="$PARAM[id]" />
+			<param name="include_progress" value="$PARAM[include_progress]" />
 			<param name="item_height" value="540" />
 			<param name="item_top" value="270" />
 			<param name="item_width" value="360" />
@@ -489,6 +492,7 @@
 			<param name="border_visible" value="$PARAM[border_visible]" />
 			<param name="centerx" value="296" />
 			<param name="id" value="$PARAM[id]" />
+			<param name="include_progress" value="$PARAM[include_progress]" />
 			<param name="item_height" value="333" />
 			<param name="item_top" value="374" />
 			<param name="item_width" value="592" />
@@ -541,6 +545,7 @@
 			<param name="art" value="square" />
 			<param name="centerx" value="180" />
 			<param name="id" value="$PARAM[id]" />
+			<param name="include_progress" value="$PARAM[include_progress]" />
 			<param name="item_height" value="360" />
 			<param name="item_top" value="360" />
 			<param name="item_width" value="360" />

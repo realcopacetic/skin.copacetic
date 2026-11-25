@@ -441,6 +441,7 @@
 		</control>
 		<include content="User_Scroll_Delay" />
 		<include content="Custom_List">
+			<param name="ladders" value="true" /><!-- LastScroll, which reel's settle slides read -->
 			<param name="type" value="fixedlist" />
 			<param name="visible" value="true" />
 			<param name="id" value="11" />

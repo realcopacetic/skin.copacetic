@@ -82,7 +82,8 @@
 		<param name="ani_dim_arrive" default="ani_fadediffuse_darken50_out" /><!-- the incoming focus's dim. Grid: efx_reel_dim_leave -->
 		<param name="ani_dim_focus" default="efx_reel_dim_focus" /><!-- Grid: efx_reel_dim_hold -->
 		<param name="ani_dim_leave" default="efx_reel_dim_leave" /><!-- the outgoing focus's dim. Grid: efx_reel_dim_settle -->
-		<param name="border_visible" default="true" /><!-- the focus border shows only while this holds too (the bookmarks: not under their buttons) -->
+		<param name="border_over" default="false" /><!-- the focus border drawn over the row, outside the focus region's clip (Grid's protrudes) -->
+		<param name="border_visible" default="true" /><!-- the focus border and the shadows show only while this holds too (the bookmarks: not under their buttons) -->
 		<param name="dim_focus" default="false" /><!-- the focus half bright, as it rides in and until it rides out (Grid's Spotlight) -->
 		<param name="dim_neighbours" default="true" /><!-- false: the neighbours at full brightness, and Showcase's ride dims off (Grid) -->
 		<param name="left_visible" default="false" /><!-- slot -1 and the left shadow also at rest and on a previous move (Grid's sliver) -->
@@ -119,7 +120,7 @@
 						<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
 						<param name="width" value="$PARAM[item_width]" />
 						<include content="grp_reel_marks">
-							<param name="border" value="true" />
+							<param name="border" value="![$PARAM[border_over]]" />
 							<param name="border_color" value="$PARAM[border_color]" />
 							<param name="border_protrusion" value="$PARAM[border_protrusion]" />
 							<param name="border_size" value="$PARAM[border_size]" />
@@ -222,7 +223,7 @@
 							<param name="slide" value="-360" />
 						</include>
 						<include content="grp_reel_marks">
-							<param name="border" value="true" />
+							<param name="border" value="![$PARAM[border_over]]" />
 							<param name="border_color" value="$PARAM[border_color]" />
 							<param name="border_protrusion" value="$PARAM[border_protrusion]" />
 							<param name="border_size" value="$PARAM[border_size]" />
@@ -376,7 +377,7 @@
 						</include>
 					</include>
 					<control type="group"><!-- C1's shadows, from the focus: one over +1, and over the outgoing focus as it rides in on next (left_visible: over -1 at rest too) -->
-						<visible>[$PARAM[right_visible]] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo) + !$EXP[Scrollbar_HasFocus] + !Control.HasFocus(3000)</visible>
+						<visible>[$PARAM[right_visible]] + [$PARAM[border_visible]] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo) + !$EXP[Scrollbar_HasFocus] + !Control.HasFocus(3000)</visible>
 						<left>$PARAM[posx0]</left>
 						<include content="Visible_Fade_Animation" />
 						<include content="DropShadow">
@@ -393,6 +394,22 @@
 							<param name="visible" value="![String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(1).Label) + String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(1).Art(thumb))]" />
 						</include>
 					</control>
+					<include content="grp_icon" condition="$PARAM[border_over]"><!-- C1, Grid: the focus border over the tiles and shadows and outside the focus region's clip, riding in with the incoming focus -->
+						<param name="height" value="$PARAM[item_height]" />
+						<param name="id" value="$PARAM[id]" />
+						<param name="left" value="$PARAM[posx0]" />
+						<param name="position" value="0" />
+						<param name="top" value="$PARAM[item_top]" />
+						<param name="visible" value="true" />
+						<param name="width" value="$PARAM[item_width]" />
+						<include content="Icon_Component_Border">
+							<param name="color" value="$PARAM[border_color]" />
+							<param name="protrusion" value="$PARAM[border_protrusion]" />
+							<param name="size" value="$PARAM[border_size]" />
+							<param name="texture" value="views/border_10px.png" />
+							<param name="visible" value="[$PARAM[right_visible]] + [$PARAM[border_visible]] + !$EXP[Scrollbar_HasFocus]" />
+						</include>
+					</include>
 				</control>
 			</control>
 			<control type="group"><!-- C1: the overlay details over the focus, in place of C2's title (the media view's only) -->
