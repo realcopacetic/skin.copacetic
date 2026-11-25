@@ -36,9 +36,10 @@
 			</include>
 		</include>
 		<include content="GridView_Art_Fanart">
-			<param name="target_id" value="11" />
-			<param name="art_icon" value="videobookmarks" />
-			<param name="focus_border_visible" value="!ControlGroup(4000).HasFocus" />
+			<param name="border_visible" value="!ControlGroup(4000).HasFocus" />
+			<param name="id" value="11" />
+			<param name="region" value="primary" />
+			<param name="texture_prefix" value="videobookmarks" />
 			<visible>![$EXP[Hidden_Focus_Setter] | Window.IsVisible(shutdownmenu) | Window.IsVisible(sliderdialog) | Window.IsVisible(selectdialog) | Window.IsVisible(filebrowser) | Window.IsVisible(subtitlesearch) | Window.IsVisible(virtualkeyboard)]</visible>
 			<include content="Visible_Fade_Delayed_Long_Animation" />
 			<animation effect="slide" start="0" end="0,234" time="0" condition="true">Conditional</animation>

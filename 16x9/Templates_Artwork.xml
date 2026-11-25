@@ -141,29 +141,6 @@
 		</definition>
 	</include>
 
-	<include name="Icon_Component_Multiart_Animated">
-		<param name="visible" default="false" />
-		<param name="fadetime" default="0" />
-		<param name="animationeffect" default="fade" />
-		<param name="animationend" default="100" />
-		<param name="animationdelay" default="0" />
-		<param name="animationcondition" default="false" />
-		<param name="animationtype" default="Conditional" />
-		<definition>
-			<include content="Icon_Art">
-				<param name="visible" value="$PARAM[visible] + !$EXP[Multiart_Container_Switching] + ![$EXP[GridView_IsVisible] + $EXP[Scrollbar_HasFocus]] + !Container.Content(files)" />
-				<param name="texture" value="$INFO[Control.GetLabel(3400)]" />
-				<param name="aspectratio" value="$PARAM[aspectratio]" />
-				<param name="fadetime" value="$PARAM[fadetime]" />
-				<param name="art_diffuse" value="$PARAM[art_diffuse]" />
-				<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
-				<param name="art_diffuse_fadeout_1" value="$PARAM[art_diffuse_fadeout_1]" />
-				<param name="art_diffuse_fadeout_2" value="$PARAM[art_diffuse_fadeout_2]" />
-				<animation effect="$PARAM[animationeffect]" end="$PARAM[animationend]" time="Default_Transition_1x" delay="$PARAM[animationdelay]" tween="sine" easing="inout" reversible="false" condition="$PARAM[animationcondition]">$PARAM[animationtype]</animation>
-			</include>
-		</definition>
-	</include>
-
 	<include name="Icon_Component_Indicator">
 		<param name="visible" />
 		<param name="top" default="0" />
@@ -266,47 +243,6 @@
 				<nested />
 				<include content="Icon_Component_Indicator" condition="Skin.HasSetting(Secondary_List_Enabled) + $PARAM[indicator]">
 					<param name="visible" value="$PARAM[container].ListItemNoWrap($PARAM[position]).IsCollection | [$PARAM[container].ListItemNoWrap($PARAM[position]).HasVideoVersions + !String.IsEqual(Container.FolderName,$PARAM[container].ListItemNoWrap($PARAM[position]).Title)]" />
-				</include>
-			</control>
-		</definition>
-	</include>
-
-	<include name="ListIcon_Animated">
-		<param name="visible" default="true" />
-		<param name="position" default="0" />
-		<param name="left" default="0" />
-		<param name="top" default="0" />
-		<param name="width" default="100%" />
-		<param name="height" default="100%" />
-		<param name="container" default="Container" />
-		<param name="indicator" default="true" />
-		<param name="animationeffect" default="fade" />
-		<param name="animationend" default="100" />
-		<param name="animationcondition" default="false" />
-		<param name="animationtype" default="Conditional" />
-		<definition>
-			<control type="group">
-				<visible>$PARAM[visible]</visible>
-				<visible>![String.IsEmpty($PARAM[container].ListItemNoWrap($PARAM[position]).Art(thumb)) + String.IsEmpty($PARAM[container].ListItemNoWrap($PARAM[position]).Label)] | Window.Is(loginscreen) | Window.Is(videobookmarks) | $EXP[ListView_IsVisible] | $EXP[BillboardView_IsVisible]</visible>
-				<animation effect="$PARAM[animationeffect]" end="$PARAM[animationend]" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="$PARAM[animationcondition]">$PARAM[animationtype]</animation>
-				<left>$PARAM[left]</left>
-				<top>$PARAM[top]</top>
-				<width>$PARAM[width]</width>
-				<height>$PARAM[height]</height>
-				<include content="Icon_Art_Unfocused">
-					<param name="texture" value="$PARAM[texture]" />
-					<param name="aspectratio" value="$PARAM[aspectratio]" />
-					<param name="fadetime" value="$PARAM[fadetime]" />
-					<param name="fallback" value="$PARAM[fallback]" />
-					<param name="art_diffuse" value="$PARAM[art_diffuse]" />
-					<param name="art_diffuse_fadein" value="$PARAM[art_diffuse_fadein]" />
-					<param name="art_diffuse_fadeout_1" value="$PARAM[art_diffuse_fadeout_1]" />
-					<param name="art_diffuse_fadeout_2" value="$PARAM[art_diffuse_fadeout_2]" />
-				</include>
-				<nested />
-				<include content="Icon_Component_Indicator" condition="Skin.HasSetting(Secondary_List_Enabled) + $PARAM[indicator]">
-					<param name="visible" value="$PARAM[container].ListItemNoWrap($PARAM[position]).IsCollection | [$PARAM[container].ListItemNoWrap($PARAM[position]).HasVideoVersions + !String.IsEqual(Container.FolderName,$PARAM[container].ListItemNoWrap($PARAM[position]).Title)]" />
-					<param name="width" value="$PARAM[icon_width]" />
 				</include>
 			</control>
 		</definition>

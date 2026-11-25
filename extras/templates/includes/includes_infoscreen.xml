@@ -29,7 +29,6 @@
 			<index start="3201" />
 			<include name="infoscreen_layouts_{dialog}">
 				<include content="Infoscreen_Rail_Layout" condition="{load}">
-					<param name="art_icon" value="infoscreen_{index}_Thumbnail" />
 					<param name="display" value="{art}" />
 					<param name="header" value="{header}" />
 					<param name="id" value="{id}" />

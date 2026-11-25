@@ -83,8 +83,6 @@
 	<expression name="Container_Plugin_Empty">!String.IsEmpty(Container.PluginName) + Container.Content()</expression>
 	<expression name="Container_Plugin_Not_Empty">!String.IsEmpty(Container.PluginName) + !Container.Content()</expression>
 	<expression name="Container_Switching">[$EXP[folder_changed] | Control.IsVisible(5011)] + !$EXP[Infoscreen_IsVisible]</expression><!-- from the listing swap until the views' hook records the new path, held 1x past by 5011 -->
-	<expression name="Content_Next">Control.IsVisible(5002)</expression>
-	<expression name="Content_Previous">Control.IsVisible(5001)</expression>
 	<expression name="Content_Switching">$EXP[Content_Switching_Base] + !$EXP[Content_Switching_Exclusions_StripView]</expression>
 	<expression name="Content_Switching_Base">[Control.IsVisible(5001) | Control.IsVisible(5002)] + [!String.IsEqual(Container.NumItems,1) | Window.Is(movieinformation) | Window.Is(musicinformation) | Window.Is(songinformation) | Window.Is(addoninformation)] + !Window.IsVisible(managevideoversions) + !Window.IsVisible(managevideoextras)</expression>
 	<!-- C2's scroll names over C1's latches (5001 previous, 5002 next) for the views on C2's code; the either-way one keeps
