@@ -7,6 +7,7 @@
 			<include name="blk_grid_layout_{grid_layout}">
 				<include content="tpl_grid_layouts">
 					<param name="border" value="{border}" />
+					<param name="border_height" value="{cell_h + 2 * border}" />
 					<param name="cell_height" value="{cell_h}" />
 					<param name="cell_width" value="{cell_w}" />
 					<param name="condition" value="$PARAM[condition]" />

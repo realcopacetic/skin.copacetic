@@ -19,8 +19,8 @@
 		</include>
 	</include>
 
-	<!-- One cell's item layouts. left: the art's inset in the cell; size: Grid size, which picks the drop shadows' columns.
-		The art and its overlays take the cell's size (100%); the border sits outside it -->
+	<!-- One cell's item layouts. left: the art's inset in the cell; size: Grid size, which picks the drop shadows' columns;
+		border_height: the art's height plus both borders. The art and its overlays take the cell's size (100%); the border sits outside it -->
 	<include name="tpl_grid_layouts">
 		<definition>
 			<itemlayout width="$PARAM[cell_width]" height="$PARAM[cell_height]" condition="$PARAM[condition]">
@@ -92,37 +92,35 @@
 							</control>
 						</include>
 					</control>
-					<!-- Border: four bars outside the art, each the art's side plus the corners -->
+					<!-- Border: four bars laid inside the art and moved out by animations. The panel clips a bar where it is laid,
+						not where an animation moves it, so the top row's and the edge columns' bars show in full -->
 					<control type="group">
 						<visible>!$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo) + !$EXP[Scrollbar_HasFocus] + !$EXP[Music_Player_HasFocus]</visible>
 						<include content="Visible_Fade_Animation" />
 						<control type="image"><!-- top -->
-							<left>-$PARAM[border]</left>
-							<right>-$PARAM[border]</right>
-							<top>-$PARAM[border]</top>
 							<height>$PARAM[border]</height>
 							<texture colordiffuse="$VAR[Accent_Color]">views/white_100.png</texture>
+							<animation effect="slide" end="0,-$PARAM[border]" time="0" condition="true">Conditional</animation>
 						</control>
 						<control type="image"><!-- bottom -->
-							<left>-$PARAM[border]</left>
-							<right>-$PARAM[border]</right>
-							<bottom>-$PARAM[border]</bottom>
+							<bottom>0</bottom>
 							<height>$PARAM[border]</height>
 							<texture colordiffuse="$VAR[Accent_Color]">views/white_100.png</texture>
+							<animation effect="slide" end="0,$PARAM[border]" time="0" condition="true">Conditional</animation>
 						</control>
+						<!-- The side bars also stretch to the art's height plus both borders, so they cover the corners -->
 						<control type="image"><!-- left -->
-							<left>-$PARAM[border]</left>
 							<width>$PARAM[border]</width>
-							<top>-$PARAM[border]</top>
-							<bottom>-$PARAM[border]</bottom>
 							<texture colordiffuse="$VAR[Accent_Color]">views/white_100.png</texture>
+							<animation effect="slide" end="-$PARAM[border],0" time="0" condition="true">Conditional</animation>
+							<animation effect="zoom" start="0,0,$PARAM[border],$PARAM[cell_height]" end="0,-$PARAM[border],$PARAM[border],$PARAM[border_height]" time="0" condition="true">Conditional</animation>
 						</control>
 						<control type="image"><!-- right -->
-							<right>-$PARAM[border]</right>
+							<right>0</right>
 							<width>$PARAM[border]</width>
-							<top>-$PARAM[border]</top>
-							<bottom>-$PARAM[border]</bottom>
 							<texture colordiffuse="$VAR[Accent_Color]">views/white_100.png</texture>
+							<animation effect="slide" end="$PARAM[border],0" time="0" condition="true">Conditional</animation>
+							<animation effect="zoom" start="0,0,$PARAM[border],$PARAM[cell_height]" end="0,-$PARAM[border],$PARAM[border],$PARAM[border_height]" time="0" condition="true">Conditional</animation>
 						</control>
 					</control>
 					<!-- Progress -->
