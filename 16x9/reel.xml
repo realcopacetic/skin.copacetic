@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<!-- C1's copy of C2's reel.xml for Showcase, under C2's names so a C2 fix diffs across. C1's look: abutting full-height tiles, the focus
+	<!-- C1's copy of C2's reel.xml for Showcase and Grid, under C2's names so a C2 fix diffs across. C1's look: abutting full-height tiles, the focus
 		at the left with C1's border, shadow, half-bright neighbours and overlay details; no ring, context fade, label, masks or diffuses -->
 
 	<include name="vue_reel">
@@ -76,10 +76,21 @@
 
 	<!-- C1: right_visible, the neighbours, border and shadows (details off or over the art); overlay, the details over the art (every tile
 		half bright); player_visible, the music player's 360 slide beside posters' details, so the incoming focus starts further left -->
+	<!-- C1, for Grid's rows: slot -1 at rest, +4 and +5, the tiles riding off its on-screen edges, bright neighbours and a focus half bright
+		while dim_focus holds, so the riding tiles take the other dims (ani_dim_*); its border and marks. Showcase passes none of them -->
 	<include name="tpl_reel">
+		<param name="ani_dim_arrive" default="ani_fadediffuse_darken50_out" /><!-- the incoming focus's dim. Grid: efx_reel_dim_leave -->
+		<param name="ani_dim_focus" default="efx_reel_dim_focus" /><!-- Grid: efx_reel_dim_hold -->
+		<param name="ani_dim_leave" default="efx_reel_dim_leave" /><!-- the outgoing focus's dim. Grid: efx_reel_dim_settle -->
+		<param name="border_visible" default="true" /><!-- the focus border shows only while this holds too (the bookmarks: not under their buttons) -->
+		<param name="dim_focus" default="false" /><!-- the focus half bright, as it rides in and until it rides out (Grid's Spotlight) -->
+		<param name="dim_neighbours" default="true" /><!-- false: the neighbours at full brightness, and Showcase's ride dims off (Grid) -->
+		<param name="left_visible" default="false" /><!-- slot -1 and the left shadow also at rest and on a previous move (Grid's sliver) -->
 		<param name="outer" default="false" />
+		<param name="outer_far" default="false" /><!-- slots +4 and +5 -->
 		<param name="overlay" default="$EXP[ShowcaseView_Details_Overlay_IsVisible]" />
 		<param name="player_visible" default="false" />
+		<param name="rides_out" default="false" /><!-- riders for a row whose edge tiles are on screen: -2 at posx-2 on next, position_out at posx_out on previous -->
 		<param name="right_visible" default="$EXP[ShowcaseView_Details_Off]" />
 		<param name="secondary" default="false" /><!-- true where the embedded list (3100) draws its art in the focus region, below the view's -->
 		<definition>
@@ -99,8 +110,8 @@
 					<param name="zoom_center_next" value="$PARAM[centerx],0" />
 					<param name="zoom_center_prev" value="$PARAM[centerx],$PARAM[item_height]" />
 					<include content="tpl_art_focused">
-						<param name="ani_dim" value="efx_reel_dim_focus" />
-						<param name="ani_dim_condition" value="[[$PARAM[overlay]] | [$EXP[TransparentDialog_IsVisible] + [$PARAM[right_visible]] + !String.IsEmpty(Window(home).Property(OptionsMenuTransition))]] + !$EXP[Infoscreen_Widget_HasFocus]" /><!-- C1: half bright under the overlay details or the options menu -->
+						<param name="ani_dim" value="$PARAM[ani_dim_focus]" />
+						<param name="ani_dim_condition" value="[[$PARAM[overlay]] | [$PARAM[dim_focus]] | [$EXP[TransparentDialog_IsVisible] + [$PARAM[right_visible]] + !String.IsEmpty(Window(home).Property(OptionsMenuTransition))]] + !$EXP[Infoscreen_Widget_HasFocus]" /><!-- C1: half bright under the overlay details or the options menu, or while dim_focus -->
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="id" value="$PARAM[id]" />
 						<param name="multiart" value="!$EXP[container_scrolling_$PARAM[region]] + [$EXP[multiart_current_3400] | $EXP[multiart_shown]] + !String.IsEqual(Container.FolderName,ListItem.Title)" /><!-- as Strip's: held through the embedded list's serve; not inside a movie's versions -->
@@ -109,9 +120,14 @@
 						<param name="width" value="$PARAM[item_width]" />
 						<include content="grp_reel_marks">
 							<param name="border" value="true" />
-							<param name="border_visible" value="[$PARAM[right_visible]] + !$EXP[Scrollbar_HasFocus]" />
+							<param name="border_color" value="$PARAM[border_color]" />
+							<param name="border_protrusion" value="$PARAM[border_protrusion]" />
+							<param name="border_size" value="$PARAM[border_size]" />
+							<param name="border_visible" value="[$PARAM[right_visible]] + [$PARAM[border_visible]] + !$EXP[Scrollbar_HasFocus]" />
 							<param name="id" value="$PARAM[id]" />
+							<param name="marks_window" value="$PARAM[marks_window]" />
 							<param name="position" value="0" />
+							<param name="title_shade" value="$PARAM[title_shade]" />
 						</include>
 						<include content="btn_secondary_redirect" condition="$PARAM[secondary]" />
 					</include>
@@ -126,9 +142,31 @@
 						<param name="item_slide" value="$PARAM[item_slide]" />
 						<param name="region" value="$PARAM[region]" />
 					</include>
-					<include content="tpl_art_unfocused"><!-- exit lane: rides off the left edge on next. C1: shown only then, as the music player's slide would bring it on screen -->
-						<param name="ani_dim" value="efx_reel_dim_leave" />
-						<param name="ani_dim_condition" value="[!Container($PARAM[id]).OnNext + $EXP[container_scrolling_$PARAM[region]_next] + [$PARAM[right_visible]]] | [$PARAM[overlay]]" /><!-- C1: dims as it leaves the focus with details off -->
+					<include content="tpl_art_unfocused" condition="$PARAM[rides_out]"><!-- C1: -2, riding off the left edge on next behind the exit lane, where the sliver is on screen -->
+						<param name="ani_dim" value="efx_reel_dim_hold" />
+						<param name="ani_dim_condition" value="$PARAM[dim_neighbours]" />
+						<param name="height" value="$PARAM[item_height]" />
+						<param name="id" value="$PARAM[id]" />
+						<param name="left" value="$PARAM[posx-2]" />
+						<param name="position" value="-2" />
+						<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+						<param name="top" value="$PARAM[item_top]" />
+						<param name="width" value="$PARAM[item_width]" />
+						<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="!$EXP[container_scrolling_$PARAM[region]_next]">Conditional</animation>
+						<include content="efx_ladder_next"><!-- off on a fast reversal, while 5002 still holds -->
+							<param name="id" value="$PARAM[id]" />
+							<param name="region" value="$PARAM[region]" />
+						</include>
+						<include content="grp_reel_marks">
+							<param name="id" value="$PARAM[id]" />
+							<param name="marks_window" value="$PARAM[marks_window]" />
+							<param name="position" value="-2" />
+							<param name="title_shade" value="$PARAM[title_shade]" />
+						</include>
+					</include>
+					<include content="tpl_art_unfocused"><!-- exit lane: rides off the left edge on next. C1: shown only then unless left_visible, as the music player's slide would bring it on screen -->
+						<param name="ani_dim" value="$PARAM[ani_dim_leave]" />
+						<param name="ani_dim_condition" value="[[$PARAM[dim_neighbours]] + [[!Container($PARAM[id]).OnNext + $EXP[container_scrolling_$PARAM[region]_next] + [$PARAM[right_visible]]] | [$PARAM[overlay]]]] | [Container($PARAM[id]).OnNext + [$PARAM[dim_focus]]]" /><!-- C1: dims as it leaves the focus with details off; Grid: brightens from dim_focus's half -->
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="id" value="$PARAM[id]" />
 						<param name="left" value="$PARAM[posx-1]" />
@@ -136,25 +174,27 @@
 						<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
 						<param name="top" value="$PARAM[item_top]" />
 						<param name="width" value="$PARAM[item_width]" />
-						<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="!$EXP[container_scrolling_$PARAM[region]_next]">Conditional</animation>
-						<include content="efx_ladder_next"><!-- C1: off on a fast reversal, while 5002 still holds -->
+						<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="!$EXP[container_scrolling_$PARAM[region]_next] + ![$PARAM[left_visible]]">Conditional</animation>
+						<include content="efx_ladder_next" condition="![$PARAM[left_visible]]"><!-- C1: off on a fast reversal, while 5002 still holds; left_visible: a plain tile, it rides both ways -->
 							<param name="id" value="$PARAM[id]" />
 							<param name="region" value="$PARAM[region]" />
 						</include>
 						<include content="img_multiart_unfocused" condition="$EXP[multiart_window]">
 							<param name="visible" value="Container($PARAM[id]).OnNext + Integer.IsGreater(Container($PARAM[id]).NumItems,1) + [[String.IsEqual(Container(9300).ListItem.Property(next_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(next),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(next),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_shown] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- C1: or the focus's held slide, while 9300 still holds the embedded list's serve (as Strip's) -->
-							<include content="efx_reel_dim_leave"><!-- C1: the slide dims with the art -->
-								<param name="condition" value="[!Container($PARAM[id]).OnNext + $EXP[container_scrolling_$PARAM[region]_next] + [$PARAM[right_visible]]] | [$PARAM[overlay]]" />
+							<include content="$PARAM[ani_dim_leave]"><!-- C1: the slide dims with the art -->
+								<param name="condition" value="[[$PARAM[dim_neighbours]] + [[!Container($PARAM[id]).OnNext + $EXP[container_scrolling_$PARAM[region]_next] + [$PARAM[right_visible]]] | [$PARAM[overlay]]]] | [Container($PARAM[id]).OnNext + [$PARAM[dim_focus]]]" />
 							</include>
 						</include>
 						<include content="grp_reel_marks">
 							<param name="id" value="$PARAM[id]" />
+							<param name="marks_window" value="$PARAM[marks_window]" />
 							<param name="position" value="-1" />
+							<param name="title_shade" value="$PARAM[title_shade]" />
 						</include>
 					</include>
 					<include content="tpl_art_unfocused"><!-- incoming focused: alpha-gated so the focus region owns the slot at rest -->
-						<param name="ani_dim" value="ani_fadediffuse_darken50_out" />
-						<param name="ani_dim_condition" value="[!Container($PARAM[id]).OnNext + !Container($PARAM[id]).OnPrevious + $EXP[container_scrolling_$PARAM[region]] + ![$PARAM[overlay]]] | ![$PARAM[right_visible]]" /><!-- C1: brightens as it rides into the focus with details off -->
+						<param name="ani_dim" value="$PARAM[ani_dim_arrive]" />
+						<param name="ani_dim_condition" value="[[$PARAM[dim_neighbours]] + [[!Container($PARAM[id]).OnNext + !Container($PARAM[id]).OnPrevious + $EXP[container_scrolling_$PARAM[region]] + ![$PARAM[overlay]]] | ![$PARAM[right_visible]]]] | [!Container($PARAM[id]).OnNext + !Container($PARAM[id]).OnPrevious + $EXP[container_scrolling_$PARAM[region]] + [$PARAM[dim_focus]]]" /><!-- C1: brightens as it rides into the focus with details off; Grid: dims into it while dim_focus -->
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="id" value="$PARAM[id]" />
 						<param name="left" value="$PARAM[posx0]" />
@@ -183,14 +223,19 @@
 						</include>
 						<include content="grp_reel_marks">
 							<param name="border" value="true" />
-							<param name="border_visible" value="[$PARAM[right_visible]] + !$EXP[Scrollbar_HasFocus]" />
+							<param name="border_color" value="$PARAM[border_color]" />
+							<param name="border_protrusion" value="$PARAM[border_protrusion]" />
+							<param name="border_size" value="$PARAM[border_size]" />
+							<param name="border_visible" value="[$PARAM[right_visible]] + [$PARAM[border_visible]] + !$EXP[Scrollbar_HasFocus]" />
 							<param name="id" value="$PARAM[id]" />
+							<param name="marks_window" value="$PARAM[marks_window]" />
 							<param name="position" value="0" />
+							<param name="title_shade" value="$PARAM[title_shade]" />
 						</include>
 					</include>
 					<include content="tpl_art_unfocused"><!-- context item at +1; the overlay below carries the prev-exit role -->
 						<param name="ani_dim" value="efx_reel_dim_hold" />
-						<param name="ani_dim_condition" value="true" /><!-- C1: the neighbours are half bright -->
+						<param name="ani_dim_condition" value="$PARAM[dim_neighbours]" /><!-- C1: the neighbours are half bright -->
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="id" value="$PARAM[id]" />
 						<param name="left" value="$PARAM[posx1]" />
@@ -201,12 +246,14 @@
 						<param name="width" value="$PARAM[item_width]" />
 						<include content="grp_reel_marks">
 							<param name="id" value="$PARAM[id]" />
+							<param name="marks_window" value="$PARAM[marks_window]" />
 							<param name="position" value="1" />
+							<param name="title_shade" value="$PARAM[title_shade]" />
 						</include>
 					</include>
 					<include content="tpl_art_unfocused"><!-- prev exit overlay: keep-alive twin of position 1, opaque only through the prev window -->
-						<param name="ani_dim" value="efx_reel_dim_leave" />
-						<param name="ani_dim_condition" value="[!Container($PARAM[id]).OnPrevious + $EXP[container_scrolling_$PARAM[region]_prev] + [$PARAM[right_visible]]] | [$PARAM[overlay]]" /><!-- as the exit lane's -->
+						<param name="ani_dim" value="$PARAM[ani_dim_leave]" />
+						<param name="ani_dim_condition" value="[[$PARAM[dim_neighbours]] + [[!Container($PARAM[id]).OnPrevious + $EXP[container_scrolling_$PARAM[region]_prev] + [$PARAM[right_visible]]] | [$PARAM[overlay]]]] | [Container($PARAM[id]).OnPrevious + [$PARAM[dim_focus]]]" /><!-- as the exit lane's -->
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="id" value="$PARAM[id]" />
 						<param name="left" value="$PARAM[posx1]" />
@@ -222,18 +269,20 @@
 						<animation effect="slide" end="$PARAM[offright_slide],0" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="!Container($PARAM[id]).OnPrevious + $EXP[container_scrolling_$PARAM[region]_prev] + Control.HasFocus($PARAM[id]) + ![$PARAM[right_visible]]">Conditional</animation><!-- C1: on to the right edge, past the details -->
 						<include content="img_multiart_unfocused" condition="$EXP[multiart_window]">
 							<param name="visible" value="Container($PARAM[id]).OnPrevious + Integer.IsGreater(Container($PARAM[id]).NumItems,1) + [[String.IsEqual(Container(9300).ListItem.Property(previous_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(previous),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(previous),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_shown] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- as the exit lane's -->
-							<include content="efx_reel_dim_leave"><!-- C1: the slide dims with the art -->
-								<param name="condition" value="[!Container($PARAM[id]).OnPrevious + $EXP[container_scrolling_$PARAM[region]_prev] + [$PARAM[right_visible]]] | [$PARAM[overlay]]" />
+							<include content="$PARAM[ani_dim_leave]"><!-- C1: the slide dims with the art -->
+								<param name="condition" value="[[$PARAM[dim_neighbours]] + [[!Container($PARAM[id]).OnPrevious + $EXP[container_scrolling_$PARAM[region]_prev] + [$PARAM[right_visible]]] | [$PARAM[overlay]]]] | [Container($PARAM[id]).OnPrevious + [$PARAM[dim_focus]]]" />
 							</include>
 						</include>
 						<include content="grp_reel_marks">
 							<param name="id" value="$PARAM[id]" />
+							<param name="marks_window" value="$PARAM[marks_window]" />
 							<param name="position" value="1" />
+							<param name="title_shade" value="$PARAM[title_shade]" />
 						</include>
 					</include>
 					<include content="tpl_art_unfocused">
 						<param name="ani_dim" value="efx_reel_dim_hold" />
-						<param name="ani_dim_condition" value="true" />
+						<param name="ani_dim_condition" value="$PARAM[dim_neighbours]" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="id" value="$PARAM[id]" />
 						<param name="left" value="$PARAM[posx2]" />
@@ -244,12 +293,14 @@
 						<param name="width" value="$PARAM[item_width]" />
 						<include content="grp_reel_marks">
 							<param name="id" value="$PARAM[id]" />
+							<param name="marks_window" value="$PARAM[marks_window]" />
 							<param name="position" value="2" />
+							<param name="title_shade" value="$PARAM[title_shade]" />
 						</include>
 					</include>
 					<include content="tpl_art_unfocused" condition="$PARAM[outer]">
 						<param name="ani_dim" value="efx_reel_dim_hold" />
-						<param name="ani_dim_condition" value="true" />
+						<param name="ani_dim_condition" value="$PARAM[dim_neighbours]" />
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="id" value="$PARAM[id]" />
 						<param name="left" value="$PARAM[posx3]" />
@@ -260,22 +311,84 @@
 						<param name="width" value="$PARAM[item_width]" />
 						<include content="grp_reel_marks">
 							<param name="id" value="$PARAM[id]" />
+							<param name="marks_window" value="$PARAM[marks_window]" />
 							<param name="position" value="3" />
+							<param name="title_shade" value="$PARAM[title_shade]" />
 						</include>
 					</include>
-					<control type="group"><!-- C1's shadows: the focus casts one over +1, and over the outgoing focus as it rides in on next -->
+					<include content="tpl_art_unfocused" condition="$PARAM[outer_far]">
+						<param name="ani_dim" value="efx_reel_dim_hold" />
+						<param name="ani_dim_condition" value="$PARAM[dim_neighbours]" />
+						<param name="height" value="$PARAM[item_height]" />
+						<param name="id" value="$PARAM[id]" />
+						<param name="left" value="$PARAM[posx4]" />
+						<param name="position" value="4" />
+						<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+						<param name="top" value="$PARAM[item_top]" />
+						<param name="visible" value="$PARAM[right_visible]" />
+						<param name="width" value="$PARAM[item_width]" />
+						<include content="grp_reel_marks">
+							<param name="id" value="$PARAM[id]" />
+							<param name="marks_window" value="$PARAM[marks_window]" />
+							<param name="position" value="4" />
+							<param name="title_shade" value="$PARAM[title_shade]" />
+						</include>
+					</include>
+					<include content="tpl_art_unfocused" condition="$PARAM[outer_far]">
+						<param name="ani_dim" value="efx_reel_dim_hold" />
+						<param name="ani_dim_condition" value="$PARAM[dim_neighbours]" />
+						<param name="height" value="$PARAM[item_height]" />
+						<param name="id" value="$PARAM[id]" />
+						<param name="left" value="$PARAM[posx5]" />
+						<param name="position" value="5" />
+						<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+						<param name="top" value="$PARAM[item_top]" />
+						<param name="visible" value="$PARAM[right_visible]" />
+						<param name="width" value="$PARAM[item_width]" />
+						<include content="grp_reel_marks">
+							<param name="id" value="$PARAM[id]" />
+							<param name="marks_window" value="$PARAM[marks_window]" />
+							<param name="position" value="5" />
+							<param name="title_shade" value="$PARAM[title_shade]" />
+						</include>
+					</include>
+					<include content="tpl_art_unfocused" condition="$PARAM[rides_out]"><!-- C1: the last tile's item, riding off the right edge on previous, where the last tile is on screen -->
+						<param name="ani_dim" value="efx_reel_dim_hold" />
+						<param name="ani_dim_condition" value="$PARAM[dim_neighbours]" />
+						<param name="height" value="$PARAM[item_height]" />
+						<param name="id" value="$PARAM[id]" />
+						<param name="left" value="$PARAM[posx_out]" />
+						<param name="position" value="$PARAM[position_out]" />
+						<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
+						<param name="top" value="$PARAM[item_top]" />
+						<param name="visible" value="$PARAM[right_visible]" />
+						<param name="width" value="$PARAM[item_width]" />
+						<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="![$EXP[container_scrolling_$PARAM[region]_prev] + Control.HasFocus($PARAM[id]) + Integer.IsGreater(Container($PARAM[id]).NumItems,1)]">Conditional</animation>
+						<include content="efx_ladder_prev"><!-- off on a fast reversal, while 5001 still holds -->
+							<param name="id" value="$PARAM[id]" />
+							<param name="region" value="$PARAM[region]" />
+						</include>
+						<include content="grp_reel_marks">
+							<param name="id" value="$PARAM[id]" />
+							<param name="marks_window" value="$PARAM[marks_window]" />
+							<param name="position" value="$PARAM[position_out]" />
+							<param name="title_shade" value="$PARAM[title_shade]" />
+						</include>
+					</include>
+					<control type="group"><!-- C1's shadows, from the focus: one over +1, and over the outgoing focus as it rides in on next (left_visible: over -1 at rest too) -->
 						<visible>[$PARAM[right_visible]] + !$EXP[TransparentDialog_IsVisible] + !Window.IsVisible(pictureinfo) + !$EXP[Scrollbar_HasFocus] + !Control.HasFocus(3000)</visible>
+						<left>$PARAM[posx0]</left>
 						<include content="Visible_Fade_Animation" />
 						<include content="DropShadow">
 							<param name="height" value="$PARAM[item_height]" />
 							<param name="left" value="-120" />
 							<param name="top" value="$PARAM[item_top]" />
-							<param name="visible" value="$EXP[container_scrolling_$PARAM[region]_next] + ![String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(-1).Label) + String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(-1).Art(thumb))]" />
+							<param name="visible" value="[$EXP[container_scrolling_$PARAM[region]_next] | [$PARAM[left_visible]]] + ![String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(-1).Label) + String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(-1).Art(thumb))]" />
 						</include>
 						<include content="DropShadow">
 							<param name="flipx" value="true" />
 							<param name="height" value="$PARAM[item_height]" />
-							<param name="left" value="$PARAM[posx1]" />
+							<param name="left" value="$PARAM[item_width]" />
 							<param name="top" value="$PARAM[item_top]" />
 							<param name="visible" value="![String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(1).Label) + String.IsEmpty(Container($PARAM[id]).ListItemNoWrap(1).Art(thumb))]" />
 						</include>
@@ -321,21 +434,33 @@
 		<animation effect="fadediffuse" end="ff808080" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="$PARAM[condition]">Conditional</animation>
 	</include>
 
+	<include name="efx_reel_dim_settle"><!-- half at once while condition, back to full over 1x as it falls: Grid's outgoing focus rides off brightening -->
+		<include content="ani_fadediffuse_darken50_out">
+			<param name="condition" value="![$PARAM[condition]]" />
+		</include>
+	</include>
+
 	<include name="ani_fadediffuse_darken50_out"><!-- C2's (animations.xml), with C1's constants: half bright while condition is false, up to full over 1x as it rises -->
 		<animation effect="fadediffuse" end="ff808080" time="0" condition="![$PARAM[condition]]">Conditional</animation>
 		<animation effect="fadediffuse" start="ff808080" end="ffffffff" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="$PARAM[condition]">Conditional</animation>
 	</include>
 
-	<!-- C1's marks on a tile: the progress shade (Videos, Home), the title shade (Home), the focus border (border: the focus's tiles),
-		the collection mark -->
+	<!-- C1's marks on a tile: the progress shade (marks_window), the title shade (title_shade), the focus border (border: the focus's tiles),
+		the collection mark. Grid passes its own windows, no title shade, and its border's colour, protrusion and size -->
 	<include name="grp_reel_marks">
 		<param name="border" default="false" />
+		<param name="border_color" default="light" />
+		<param name="border_protrusion" default="0" />
+		<param name="border_size" default="11" />
+		<param name="marks_window" default="Window.Is(videos) | Window.Is(home)" />
+		<param name="title_shade" default="Window.Is(home)" />
 		<definition>
-			<include content="Icon_Component_Progress_Overlay" condition="Window.Is(videos) | Window.Is(home)" />
-			<include content="Icon_Component_Breadcrumb_Overlay" condition="Window.Is(home)" />
+			<include content="Icon_Component_Progress_Overlay" condition="$PARAM[marks_window]" />
+			<include content="Icon_Component_Breadcrumb_Overlay" condition="$PARAM[title_shade]" />
 			<include content="Icon_Component_Border" condition="$PARAM[border]">
-				<param name="color" value="light" />
-				<param name="size" value="11" />
+				<param name="color" value="$PARAM[border_color]" />
+				<param name="protrusion" value="$PARAM[border_protrusion]" />
+				<param name="size" value="$PARAM[border_size]" />
 				<param name="texture" value="views/border_10px.png" />
 				<param name="visible" value="$PARAM[border_visible]" />
 			</include>
