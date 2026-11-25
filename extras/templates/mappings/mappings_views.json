@@ -1,0 +1,12 @@
+{
+  "views": {
+    "mode": "static",
+    "items": [ "billboard", "showcase", "strip" ],
+    "placeholders": { "key": "layout" },
+    "metadata": {
+      "billboard": { "view": "Billboard" },
+      "showcase": { "view": "Showcase" },
+      "strip": { "view": "Strip" }
+    }
+  }
+}

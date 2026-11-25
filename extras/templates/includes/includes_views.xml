@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<mapping>views</mapping>
+	<includes>
+		<!-- One view's container then art: each loads only in a window where some content type picks the view -->
+		<template>
+			<include name="blk_media_view_{layout}">
+				<include content="{view}View_Container" condition="$EXP[layout_{layout}_include_$PARAM[window]]">
+					<param name="visible" value="$EXP[layout_{layout}_visible_$PARAM[window]]" />
+				</include>
+				<include content="{view}View_Media" condition="$EXP[layout_{layout}_include_$PARAM[window]]">
+					<param name="secondary" value="$PARAM[secondary]" />
+					<param name="window" value="$PARAM[window]" />
+				</include>
+			</include>
+		</template>
+		<!-- The media windows' Billboard, Showcase and Strip in draw order; a block per view keeps each pair together,
+			since the builder repeats each child of a template on its own -->
+		<template>
+			<include name="blk_media_views">
+				<include content="blk_media_view_{layout}">
+					<param name="secondary" value="$PARAM[secondary]" />
+					<param name="window" value="$PARAM[window]" />
+				</include>
+			</include>
+		</template>
+		<!-- The same views' details, for the window's second layer -->
+		<template>
+			<include name="blk_media_details">
+				<include content="{view}View_Details" condition="$EXP[layout_{layout}_include_$PARAM[window]]" />
+			</include>
+		</template>
+	</includes>
+</xml>
