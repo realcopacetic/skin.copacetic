@@ -76,6 +76,17 @@
 		<onunload condition="!$EXP[infoscreen_visible] + [Window.IsActive(home) | Window.IsActive(videos) | Window.IsActive(music)]">NotifyAll(script.copacetic.helper,serve?mark=moved_primary&amp;is=$INFO[Window(home).Property(moved_primary)]&amp;wait=252&amp;item=$INFO[Window(home).Property(artwork_cursor_primary)])</onunload><!-- item: the cursor names its list, whose item the bind names (not the token's empty one) -->
 	</include>
 
+	<include name="Serve_Infoscreen_Item_OnLoadUnload">
+		<!-- Movie, song and music info's own list 9000 (Infoscreen_Metadata_List; song info is DialogMusicInfo.xml too, GUIDialogSongInfo.cpp:112): each open
+		     rings it on a new token, also kept on the dialog (bare SetProperty: the topmost modal, which the opening dialog is). No wait: the item moves nothing -->
+		<onload>SetProperty(moved_item,m$INFO[System.Time(hh:mm:ss)]Open,home)</onload>
+		<onload>SetProperty(moved_item,$INFO[Window(home).Property(moved_item)])</onload>
+		<onload>NotifyAll(script.copacetic.helper,serve?lists=9000:6900&amp;mark=moved_item&amp;is=$INFO[Window(home).Property(moved_item)]&amp;window=12003.10135.12001)</onload>
+		<!-- A close hands back the token of the dialog left on top (a closing dialog leaves the list before its unload runs, GUIDialog.cpp:102-109), so
+		     the net of an info dialog under it still serves its ring; over the window there is none, which ends this open's serve -->
+		<onunload>SetProperty(moved_item,$INFO[Window.Property(moved_item)],home)</onunload>
+	</include>
+
 	<include name="movieinformation_OnLoadUnload">
 		<onload condition="$EXP[trailer_playing] | $EXP[trailer_zombie]">PlayerControl(Stop)</onload>
 		<onload condition="!String.IsEmpty(ListItem.DBID)">SetProperty(SelectedItem,$INFO[ListItem.DBID],movieinformation)</onload>

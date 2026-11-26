@@ -58,7 +58,7 @@
   </timer>
   <timer>
     <name>serve_net</name>
-    <description>the net under the served lists' rings (C2's): a probe of the window on top no longer reads as the params its list was served with (prb_serve_net, 6939), so ring the bare serve, which serves those lists of the window's last ring again. Under a modal dialog the dialog's 6939 is read, and it has none. One-shot: at most a ring a second while it holds; the helper lets be a ring a serve in hand answers, and a list its handler stopped on with that text</description>
+    <description>the net under the served lists' rings (C2's): a probe of the window on top no longer reads as the params its list was served with (prb_serve_net, 6939), so ring the bare serve, which serves those lists of the window's last ring again. Under a modal dialog the dialog's 6939 is read: movie, song and music info have their own (Infoscreen_Metadata_List), any other has none. One-shot: at most a ring a second while it holds; the helper lets be a ring a serve in hand answers, and a list its handler stopped on with that text</description>
     <start>Control.IsVisible(6939)</start>
     <stop>true</stop>
     <onstart>NotifyAll(script.copacetic.helper,serve)</onstart>

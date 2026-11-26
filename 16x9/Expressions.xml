@@ -19,7 +19,7 @@
 	<expression name="Background_IsVisible">$EXP[Home_HasBackground] | $EXP[Settings_Window_IsVisible] | $EXP[Window_HasBackground] | $EXP[Container_HasBackground] | $EXP[Content_HasBackground] | $EXP[Infoscreen_HasBackground]</expression>
 	
 	<expression name="Infoscreen_IsVisible">Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(songinformation) | Window.IsVisible(addoninformation) | $EXP[Infoscreen_Widget_Transition]</expression>
-	<expression name="Infoscreen_Metadata_Ready">String.IsEqual(Container(9000).ListItem.Label,ListItem.Label) + String.IsEqual(Container(9000).ListItem.Property(dbid),ListItem.DBID)</expression> <!-- 9000 holds this item's metadata, not the last item's -->
+	<expression name="Infoscreen_Metadata_Ready">!String.IsEmpty(Container(9000).ListItem.Property(params)) + String.IsEqual(Container(9000).ListItem.Property(params),Control.GetLabel(6900))</expression> <!-- 9000 was served from the text probe 6900 reads now, which names this item (type, id and label): a kept bind of the last item never matches -->
 	<expression name="Infoscreen_Widget_HasFocus">$EXP[Infoscreen_IsVisible] + [String.IsEmpty(Window(movieinformation).Property(Focused_Button)) + String.IsEmpty(Window(musicinformation).Property(Focused_Button)) + String.IsEmpty(Window(addoninformation).Property(Focused_Button))]</expression>
 	<expression name="Infoscreen_Widget_Transition">Control.HasFocus(6001) | Control.HasFocus(6002) | String.IsEqual(Window(home).Property(Infoscreen_Transition),true)</expression>
 	<!-- An info dialog is open, under any other dialog too (as C2's infoscreen_covering): Window.IsVisible, not Window.Is, which reads the topmost modal -->

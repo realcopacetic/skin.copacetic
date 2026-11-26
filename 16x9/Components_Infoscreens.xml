@@ -45,21 +45,22 @@
 	</include>
 
 	<include name="Infoscreen_Metadata_List">
-		<!-- The dialog item's first studio and writer, a random director and genre, an album's or song's album artist.
-		     It keeps the last item's until the new one lands, so readers wait on Infoscreen_Metadata_Ready -->
+		<!-- The dialog item's first studio and writer, a random director and genre, an album's or song's album artist, served: each open rings
+		     9000:6900 (Serve_Infoscreen_Item_OnLoadUnload), and the service binds 9000 (no <content>) from probe 6900. Readers wait on Infoscreen_Metadata_Ready -->
+		<control type="label" id="6900">
+			<visible>false</visible>
+			<label>info=metadata&amp;target=item&amp;type=$INFO[ListItem.DBType]&amp;id=$INFO[ListItem.DBID]&amp;random_pick=true&amp;genre_aliases=Hip-Hop:Hip%20Hop&amp;label=$INFO[ListItem.Label]</label> <!-- label: two items outside the library share type and id. Last, so a label holding &x= cuts nothing else -->
+		</control>
 		<control type="list" id="9000">
-			<content>plugin://script.copacetic.helper/?info=metadata&amp;target=item&amp;type=$INFO[ListItem.DBType]&amp;id=$INFO[ListItem.DBID]&amp;random_pick=true&amp;genre_aliases=Hip-Hop:Hip%20Hop&amp;pass=$INFO[Window(home).Property(Infoscreen_Metadata_Pass)]&amp;label=$INFO[ListItem.Label]</content> <!-- label: two items outside the library share type and id. Last, so a label holding &x= cuts nothing else -->
 			<itemlayout />
 			<focusedlayout />
 			<include content="Hidden_Control" />
 		</control>
-	</include>
-
-	<include name="Infoscreen_Metadata_Unload">
-		<!-- A kept dialog reopens with 9000's last URL and items, and a fetch its close cut short came back empty: each close
-		     stamps pass with the time and a flipped letter (two closes in one second differ), so a reopen never finds the URL it closed on -->
-		<onunload condition="String.EndsWith(Window(home).Property(Infoscreen_Metadata_Pass),a)">SetProperty(Infoscreen_Metadata_Pass,$INFO[System.Time(hh:mm:ss)]b,home)</onunload>
-		<onunload condition="!String.EndsWith(Window(home).Property(Infoscreen_Metadata_Pass),a)">SetProperty(Infoscreen_Metadata_Pass,$INFO[System.Time(hh:mm:ss)]a,home)</onunload>
+		<!-- The net (Timers.xml's serve_net reads the topmost dialog's 6939): up while 9000 doesn't answer the probe, as when Kodi's own Information
+		     swaps the item in place with no onload (GUIDialog.cpp:156-158); the bare serve then serves this dialog's last ring again -->
+		<control type="group" id="6939">
+			<visible>!$EXP[Infoscreen_Metadata_Ready]</visible>
+		</control>
 	</include>
 
 	<include name="Infoscreen_Flags_Layout">
