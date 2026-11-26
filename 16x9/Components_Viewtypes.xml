@@ -119,7 +119,7 @@
 	<include name="atr_artwork_visit_stamp">
 		<!-- The visit, stamped when the arrival is another item than the last (or a new listing); kept on a return of focus to the same item (from 3100,
 		     a menu, the music player) and on a rebuild of its layout, so its cursor repeats and its slides carry on (C2's visit holds). Conditions read the last arrival's -->
-		<onfocus condition="$EXP[artwork_cursor_hook] + [String.IsEmpty(Window(home).Property(artwork_visit)) | !String.StartsWith(Window(home).Property(artwork_item_primary),$PARAM[id]/) | !String.IsEqual(Window(home).Property(artwork_item_position),Container($PARAM[id]).CurrentItem) | !String.IsEqual(Window(home).Property(artwork_item_dbid),Container($PARAM[id]).ListItem.DBID) | $EXP[folder_changed]]">SetProperty(artwork_visit,$INFO[System.Time(hh:mm:ss)]$INFO[Window(home).Property(LastScroll)]$INFO[Window(home).Property(artwork_holds)],home)</onfocus>
+		<onfocus condition="$EXP[artwork_cursor_hook] + [String.IsEmpty(Window(home).Property(artwork_visit)) | !String.StartsWith(Window(home).Property(artwork_item_primary),$PARAM[id]/) | !String.IsEqual(Window(home).Property(artwork_item_position),Container($PARAM[id]).CurrentItem) | !String.IsEqual(Window(home).Property(artwork_item_dbid),Container($PARAM[id]).ListItem.DBID) | !String.IsEqual(Window(home).Property(artwork_item_path),Container($PARAM[id]).ListItem.FileNameAndPath) | $EXP[folder_changed]]">SetProperty(artwork_visit,$INFO[System.Time(hh:mm:ss)]$INFO[Window(home).Property(LastScroll)]$INFO[Window(home).Property(artwork_holds)],home)</onfocus>
 	</include>
 
 	<include name="atr_artwork_cursor">
@@ -128,6 +128,7 @@
 		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_item_primary,$PARAM[id]/$INFO[Container($PARAM[id]).CurrentItem]/$INFO[Container($PARAM[id]).ListItem.DBID]/,home)</onfocus>
 		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_item_position,$INFO[Container($PARAM[id]).CurrentItem],home)</onfocus><!-- its parts, for the next arrival's visit test -->
 		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_item_dbid,$INFO[Container($PARAM[id]).ListItem.DBID],home)</onfocus>
+		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_item_path,$ESCINFO[Container($PARAM[id]).ListItem.FileNameAndPath],home)</onfocus><!-- escaped, as folder_path: a path can carry commas; an item with no DBID, or another type with the same, differs here -->
 		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_cursor_primary,$INFO[Window(home).Property(artwork_item_primary)]$INFO[Window(home).Property(artwork_visit)],home)</onfocus>
 		<onfocus condition="$EXP[artwork_cursor_hook]">ClearProperty(moved_primary,home)</onfocus><!-- an arrival ends the load ring's token: a list served for it no longer reads as current -->
 		<!-- The embedded list's arrival: the view's item and visit, then 3100's position past a letter (no "/"), so a move in 3100 ends the last ring's

@@ -49,7 +49,7 @@
       ]
     },
     "Artwork_Serve": {
-      "note": "Probe 6930 (Clearlogo_Crop_List), read by the helper's service at 9300's turn of the ring: the focused item's clearlogo crop and multiart, params with no plugin prefix. Each image is read whole by its source (clearlogo_source, icon_source, background_source), so a row carries no URL. none on a scrollbar, whose paging moves the item with no arrival (the cursor is cleared there), so the net stays quiet. The view's logo rows name the view (focus_ids): a serve that focus leaves stops unbound rather than landing unsized, as a return keeps the visit and repeats the cursor. The multiart rows' icon_source is only there so artwork() runs and seeds an item with no logo. none for anything else, last of all, so a mounted 9300 always answers.",
+      "note": "Probe 6930 (Clearlogo_Crop_List), read by the helper's service at 9300's turn of the ring: the focused item's clearlogo crop and multiart, params with no plugin prefix. Each image is read whole by its source (clearlogo_source, icon_source, background_source), so a row carries no URL. none on a scrollbar, whose paging moves the item with no arrival (the cursor is cleared there), so the net stays quiet. wait (C2's) while Kodi hasn't filled a video library item's art (libraryartfilled), so an arrival before the loader is served once it has, not with no art. The view's logo rows name the view (focus_ids): a serve that focus leaves stops unbound rather than landing unsized, as a return keeps the visit and repeats the cursor. The multiart rows' icon_source is only there so artwork() runs and seeds an item with no logo. none for anything else, last of all, so a mounted 9300 always answers.",
       "index": {
         "start": 3201
       },
@@ -58,6 +58,14 @@
         {
           "condition": "$EXP[Scrollbar_HasFocus]",
           "value": "none"
+        },
+        {
+          "condition": "Control.HasFocus(3100) + String.IsEmpty(Container(3100).ListItem.Property(libraryartfilled)) + Integer.IsGreater(Container(3100).ListItem.DBID,0) + [String.IsEqual(Container(3100).ListItem.DBType,movie) | String.IsEqual(Container(3100).ListItem.DBType,set) | String.IsEqual(Container(3100).ListItem.DBType,tvshow) | String.IsEqual(Container(3100).ListItem.DBType,season) | String.IsEqual(Container(3100).ListItem.DBType,episode) | String.IsEqual(Container(3100).ListItem.DBType,musicvideo)]",
+          "value": "wait"
+        },
+        {
+          "condition": "[Window.Is(videos) | Window.Is(music)] + !Control.HasFocus(3100) + String.IsEmpty(Container.ListItem.Property(libraryartfilled)) + Integer.IsGreater(Container.ListItem.DBID,0) + [String.IsEqual(Container.ListItem.DBType,movie) | String.IsEqual(Container.ListItem.DBType,set) | String.IsEqual(Container.ListItem.DBType,tvshow) | String.IsEqual(Container.ListItem.DBType,season) | String.IsEqual(Container.ListItem.DBType,episode) | String.IsEqual(Container.ListItem.DBType,musicvideo)]",
+          "value": "wait"
         },
         {
           "condition": "$EXP[Clearlogo_Crop_Secondary] + String.IsEqual(Container.ViewMode,Billboard)",
@@ -84,6 +92,10 @@
           "value": "info=artwork&clean_label=Container.ListItem.Art(clearlogo)&clearlogo_crop=true&clearlogo_fit=600,240&clearlogo_fit_ids=63504&clearlogo_fit_key=$INFO[Container.ListItem.DBType]:$INFO[Container.ListItem.DBID]&focus_guard=$INFO[Container.CurrentItem]&focus_ids=504$VAR[Params_Multiart]&clearlogo_source=Container.ListItem.Art(clearlogo)$VAR[Clearlogo_Palette_Primary]"
         },
         [
+          {
+            "condition": "Control.HasFocus({index}) + {focused} + String.IsEmpty(Container({index}).ListItem.Property(libraryartfilled)) + Integer.IsGreater(Container({index}).ListItem.DBID,0) + [String.IsEqual(Container({index}).ListItem.DBType,movie) | String.IsEqual(Container({index}).ListItem.DBType,set) | String.IsEqual(Container({index}).ListItem.DBType,tvshow) | String.IsEqual(Container({index}).ListItem.DBType,season) | String.IsEqual(Container({index}).ListItem.DBType,episode) | String.IsEqual(Container({index}).ListItem.DBType,musicvideo)]",
+            "value": "wait"
+          },
           {
             "filter": "equals({art_clearlogo}, true) + In({layout}, [Billboard, Showcase, Strip])",
             "condition": "$EXP[Widget_HasLogo_{window}_{index}] + {focused} + $EXP[Clearlogo_Crop_Primary]",

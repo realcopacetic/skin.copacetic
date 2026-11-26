@@ -27,7 +27,7 @@
 
   <!-- 9300 holds the focused item: its bind's item (the cursor without its visit; an info dialog's close ring binds its token as current), or (C2's)
        a load ring's serve, which names no item, while its token stands (a service started after the window: Kodi's start, a helper restart) -->
-  <expression name="multiart_item_current">[String.IsEqual(Container(9300).ListItem.Property(item),Window(home).Property(artwork_item_primary)) + !String.IsEmpty(Window(home).Property(artwork_item_primary))] | [String.IsEmpty(Container(9300).ListItem.Property(item)) + !String.IsEmpty(Window(home).Property(moved_primary)) + String.IsEqual(Container(9300).ListItem.Property(current),Window(home).Property(moved_primary))]</expression>
+  <expression name="multiart_item_current">[String.IsEqual(Container(9300).ListItem.Property(item),Window(home).Property(artwork_item_primary)) + !String.IsEmpty(Window(home).Property(artwork_item_primary))] | [String.IsEmpty(Container(9300).ListItem.Property(item)) + !String.IsEmpty(Window(home).Property(artwork_item_primary)) + !String.IsEmpty(Window(home).Property(moved_primary)) + String.IsEqual(Container(9300).ListItem.Property(current),Window(home).Property(moved_primary))]</expression>
   <!-- ...and that serve seeded register 3400 -->
   <expression name="multiart_current_3400">$EXP[multiart_item_current] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))</expression>
   <expression name="multiart_shown">Control.IsVisible(5012)</expression>
