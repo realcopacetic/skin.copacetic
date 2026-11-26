@@ -416,7 +416,7 @@
 					<param name="visible" value="Container($PARAM[id]).OnPrevious" />
 					<param name="width" value="$PARAM[focus_width]" />
 					<include content="img_multiart_unfocused" condition="$EXP[multiart_window]">
-						<param name="visible" value="Container($PARAM[id]).OnPrevious + [[String.IsEqual(Container(9300).ListItem.Property(previous_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(next),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(next),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_slide_current] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- C1: or the focus's held slide, while 9300 still holds the embedded list's serve -->
+						<param name="visible" value="Container($PARAM[id]).OnPrevious + [[String.IsEqual(Container(9300).ListItem.Property(previous_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(next),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(next),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_item_current] + $EXP[multiart_slide_current] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- C1: or the focus's held slide, while 9300 still holds the embedded list's serve -->
 					</include>
 					<include content="grp_collection_indicator">
 						<param name="id" value="$PARAM[id]" />
@@ -583,7 +583,7 @@
 					<param name="visible" value="Container($PARAM[id]).OnNext + [$PARAM[left_visible]]" />
 					<param name="width" value="$PARAM[focus_width]" />
 					<include content="img_multiart_unfocused" condition="$EXP[multiart_window]">
-						<param name="visible" value="Container($PARAM[id]).OnNext + [[String.IsEqual(Container(9300).ListItem.Property(next_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(previous),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(previous),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_slide_current] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- as the prev ladder's -->
+						<param name="visible" value="Container($PARAM[id]).OnNext + [[String.IsEqual(Container(9300).ListItem.Property(next_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(previous),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(previous),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_item_current] + $EXP[multiart_slide_current] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- as the prev ladder's -->
 					</include>
 					<include content="grp_collection_indicator">
 						<param name="id" value="$PARAM[id]" />
@@ -605,7 +605,7 @@
 					<param name="visible" value="Container($PARAM[id]).OnNext + ![$PARAM[left_visible]]" />
 					<param name="width" value="$PARAM[focus_width]" />
 					<include content="img_multiart_unfocused" condition="$EXP[multiart_window]">
-						<param name="visible" value="Container($PARAM[id]).OnNext + [[String.IsEqual(Container(9300).ListItem.Property(next_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(previous),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(previous),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_slide_current] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- as the prev ladder's -->
+						<param name="visible" value="Container($PARAM[id]).OnNext + [[String.IsEqual(Container(9300).ListItem.Property(next_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(previous),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(previous),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_item_current] + $EXP[multiart_slide_current] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- as the prev ladder's -->
 					</include>
 					<include content="grp_collection_indicator">
 						<param name="id" value="$PARAM[id]" />
