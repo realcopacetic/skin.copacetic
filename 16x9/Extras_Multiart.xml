@@ -47,8 +47,8 @@
   <include name="Multiart_Cursor">
     <param name="id" />
     <definition>
-      <!-- A move starts the next item from its main image. A return from the embedded list, a menu or the music player is no move, but its serve
-           brings a new visit, which the helper's seed keys on, so it starts from the main image too (C2's revisit). Read against the cursor before this arrival's -->
+      <!-- A move starts the next item from its main image; a return from the embedded list, a menu or the music player keeps its visit
+           (atr_artwork_visit_stamp), which the helper's seed keys on, so its rotation carries on. Read against the cursor before this arrival's -->
       <onfocus condition="$EXP[artwork_cursor_hook] + [Container($PARAM[id]).OnNext | Container($PARAM[id]).OnPrevious | !String.StartsWith(Window(home).Property(artwork_cursor_primary),$PARAM[id]/)]">ClearProperty(multiart_seed_sig_3400,home)</onfocus>
     </definition>
   </include>

@@ -117,14 +117,17 @@
 	</include>
 
 	<include name="atr_artwork_visit_stamp">
-		<!-- The visit (C2's): stamped at every arrival, a return of focus to the same item too, so each arrival's cursor is new -->
-		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_visit,$INFO[System.Time(hh:mm:ss)]$INFO[Window(home).Property(LastScroll)]$INFO[Window(home).Property(artwork_holds)],home)</onfocus>
+		<!-- The visit, stamped when the arrival is another item than the last (or a new listing); kept on a return of focus to the same item (from 3100,
+		     a menu, the music player) and on a rebuild of its layout, so its cursor repeats and its slides carry on (C2's visit holds). Conditions read the last arrival's -->
+		<onfocus condition="$EXP[artwork_cursor_hook] + [String.IsEmpty(Window(home).Property(artwork_visit)) | !String.StartsWith(Window(home).Property(artwork_item_primary),$PARAM[id]/) | !String.IsEqual(Window(home).Property(artwork_item_position),Container($PARAM[id]).CurrentItem) | !String.IsEqual(Window(home).Property(artwork_item_dbid),Container($PARAM[id]).ListItem.DBID) | $EXP[folder_changed]]">SetProperty(artwork_visit,$INFO[System.Time(hh:mm:ss)]$INFO[Window(home).Property(LastScroll)]$INFO[Window(home).Property(artwork_holds)],home)</onfocus>
 	</include>
 
 	<include name="atr_artwork_cursor">
 		<!-- The arrival's cursor (C2's), <list>/<position>/<dbid>/<visit>, after its visit stamp: the settle's ring carries it. artwork_item_primary is
 		     the same without the visit, which 9300's readers match with its bind's item (an info dialog's close ring binds its token as current) -->
 		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_item_primary,$PARAM[id]/$INFO[Container($PARAM[id]).CurrentItem]/$INFO[Container($PARAM[id]).ListItem.DBID]/,home)</onfocus>
+		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_item_position,$INFO[Container($PARAM[id]).CurrentItem],home)</onfocus><!-- its parts, for the next arrival's visit test -->
+		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_item_dbid,$INFO[Container($PARAM[id]).ListItem.DBID],home)</onfocus>
 		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_cursor_primary,$INFO[Window(home).Property(artwork_item_primary)]$INFO[Window(home).Property(artwork_visit)],home)</onfocus>
 		<onfocus condition="$EXP[artwork_cursor_hook]">ClearProperty(moved_primary,home)</onfocus><!-- an arrival ends the load ring's token: a list served for it no longer reads as current -->
 		<!-- The embedded list's arrival: the view's item and visit, then 3100's position past a letter (no "/"), so a move in 3100 ends the last ring's
@@ -162,7 +165,9 @@
 				<include content="atr_folderwatch" condition="$PARAM[folderwatch]" />
 				<!-- The arrival's visit and cursor, in Home and the media windows only: an include condition's Window.Is reads the topmost modal, and an
 				     info dialog is registered before it loads (GUIDialog.cpp:165-170), so its rails never mount these or the settle -->
-				<include content="atr_artwork_visit_stamp" condition="Window.Is(home) | Window.Is(videos) | Window.Is(music)" />
+				<include content="atr_artwork_visit_stamp" condition="Window.Is(home) | Window.Is(videos) | Window.Is(music)">
+					<param name="id" value="$PARAM[id]" />
+				</include>
 				<include content="atr_artwork_cursor" condition="Window.Is(home) | Window.Is(videos) | Window.Is(music)">
 					<param name="id" value="$PARAM[id]" />
 				</include>
