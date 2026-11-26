@@ -2,7 +2,7 @@
   "mapping": "widgets",
   "variables": {
     "label_multiart": {
-      "note": "Label 6400 (MyViews_Multiart_Labels): the family the focused item's multiart cycles, the focused Home row's or else the view's. A custom Fanart or Spotlight row showing episode thumbs (episode_thumbs) shows an episode's or video's own thumb, so one with no thumb1 cycles nothing.",
+      "note": "Label 6400 (MyViews_Multiart_Labels): the family the focused item's multiart cycles, the focused Home row's or else the view's. A custom Fanart or Spotlight row showing episode thumbs (episode_thumbs) shows an episode's or video's own thumb when it has one, so that one cycles its thumbs (thumb1 on) or nothing.",
       "index": {
         "start": 3201
       },
@@ -11,8 +11,13 @@
         [
           {
             "filter": "equals({episode_thumbs}, true) + In({art}, [Fanart, Spotlight])",
-            "condition": "Control.HasFocus({index}) + [String.IsEqual({listitem}.DBType,episode) | String.IsEqual({listitem}.DBType,video)] + String.IsEmpty({listitem}.Art(thumb1))",
+            "condition": "Control.HasFocus({index}) + [String.IsEqual({listitem}.DBType,episode) | String.IsEqual({listitem}.DBType,video)] + !String.IsEmpty({listitem}.Art(thumb)) + String.IsEmpty({listitem}.Art(thumb1))",
             "value": ""
+          },
+          {
+            "filter": "equals({episode_thumbs}, true) + In({art}, [Fanart, Spotlight])",
+            "condition": "Control.HasFocus({index}) + String.IsEqual({listitem}.DBType,video) + !String.IsEmpty({listitem}.Art(thumb)) + !String.IsEmpty({listitem}.Art(thumb1))",
+            "value": "thumb"
           },
           {
             "condition": "Control.HasFocus({index})",
