@@ -59,6 +59,11 @@
 	</include>
 
 	<include name="Serve_OnLoadUnload">
+		<!-- The load ring (C2's; helper docs/service/serve.md, The service starting), kept in serve_load for a helper that starts later and serves it
+		     under a token of its own. A landing's focus clears the token (atr_artwork_cursor) and its settle rings; wait: that settle's 252 ms -->
+		<onload>SetProperty(moved_primary,m$INFO[System.Time(hh:mm:ss)]Load,home)</onload>
+		<onload>SetProperty(serve_load,serve?lists=$VAR[serve_lists_primary]&amp;mark=moved_primary&amp;wait=252,home)</onload>
+		<onload>NotifyAll(script.copacetic.helper,$INFO[Window(home).Property(serve_load)]&amp;is=$INFO[Window(home).Property(moved_primary)])</onload>
 		<!-- Home, Videos and Music, which are kept in memory: without these the next entry's first frame would read the last visit's cursor -->
 		<onunload>ClearProperty(artwork_cursor_primary,home)</onunload>
 		<onunload>ClearProperty(artwork_item_primary,home)</onunload>

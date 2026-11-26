@@ -40,8 +40,7 @@ LISTS
 3700          PVR Options menu
 9000          Metadata (info screens, script.copacetic.helper)
 9300          Clearlogo crop (hidden helper list, Home, Videos and Music)
-9500          Set progress (hidden helper list, Home and Videos)
-9501          Set progress helper target_id (no control)
+9500          Set progress (served list, Home and Videos: probe 6910; the handler's target_id 9501 is no control)
 
 BUTTONS
 4000          Button group default
@@ -103,6 +102,7 @@ CHECKERS
 63XXX(X)      Details clearlogo sized by 9300 (63 + view id 501, 502, 504, or a Home row or info screen rail id)
 635X          GridView shadow checkers
 6400          Multiart Type
+6910          Set progress probe (Set_Progress_List): 9500's params, read by the helper's service at 9500's turn of the ring (C2's id)
 650X          Music player / Notification checkers
 
 

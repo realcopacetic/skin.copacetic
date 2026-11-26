@@ -25,13 +25,18 @@
 	</include>
 
 	<include name="Set_Progress_List">
-		<!-- The focused unwatched set's watched share and count (Set_Progress_Path). Any other item empties the URL, which keeps the
-		     last set's item until a library update empties it, so every reader also tests that the focused item is an unwatched set. -->
-		<include content="Hidden_List">
-			<param name="content" value="$VAR[Set_Progress_Path]" />
-			<param name="id" value="9500" />
-			<param name="visible" value="true" />
-		</include>
+		<!-- The focused unwatched set's watched share and count, served (helper docs/service/serve.md): at 9500's turn of the ring the service reads probe
+		     6910 and binds 9500, which has no <content> (an empty one still makes a provider). Any other item binds a blank item, so readers test for a set -->
+		<control type="label" id="6910">
+			<visible>false</visible>
+			<label>$VAR[Set_Progress_Path]</label>
+		</control>
+		<control type="list" id="9500">
+			<width>0</width>
+			<height>0</height>
+			<itemlayout />
+			<focusedlayout />
+		</control>
 	</include>
 
 	<include name="Clearlogo_Crop_List">
@@ -114,6 +119,23 @@
 		     the same without the visit, which multiart_item_current matches, as 9300's plugin URL doesn't rerun on a return to the same item -->
 		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_item_primary,$PARAM[id]/$INFO[Container($PARAM[id]).CurrentItem]/$INFO[Container($PARAM[id]).ListItem.DBID]/,home)</onfocus>
 		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_cursor_primary,$INFO[Window(home).Property(artwork_item_primary)]$INFO[Window(home).Property(artwork_visit)],home)</onfocus>
+		<onfocus condition="$EXP[artwork_cursor_hook]">ClearProperty(moved_primary,home)</onfocus><!-- an arrival ends the load ring's token: a list served for it no longer reads as current -->
+	</include>
+
+	<!-- The served lists, <list>:<probe> in serving order, for the rings (helper docs/service/serve.md). One text for Home and the media windows:
+	     a probe not mounted in a window reads empty there, and the service skips its list -->
+	<variable name="serve_lists_primary">
+		<value>9500:6910</value>
+	</variable>
+
+	<include name="btn_serve_settle">
+		<!-- Served focus calls (C2's): one ring a settle after the last move, answering the arrival's cursor. 252 ms (Default_Transition_1x), as 9300's URL
+		     waits out the scroll latches 5001-5004 that long. Not from an info dialog's rails (infoscreen_context): they have no served list -->
+		<control type="button">
+			<visible allowhiddenfocus="true">false</visible>
+			<onfocus condition="!$EXP[infoscreen_context]">NotifyAll(script.copacetic.helper,serve?lists=$VAR[serve_lists_primary]&amp;mark=artwork_cursor_primary&amp;is=$INFO[Window(home).Property(artwork_cursor_primary)])</onfocus>
+			<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Focus</animation>
+		</control>
 	</include>
 
 	<include name="HiddenFocusButton">
@@ -146,6 +168,7 @@
 				<onfocus condition="Window.Is(addonbrowser) + $EXP[Container_Addons_NonRepo]">SetProperty(Container_Addons_NonRepo,true,home)</onfocus>
 				<onfocus condition="Window.Is(addonbrowser) + !$EXP[Container_Addons_NonRepo]">ClearProperty(Container_Addons_NonRepo,home)</onfocus>
 			</control>
+			<include content="btn_serve_settle" condition="Window.Is(home) | Window.Is(videos) | Window.Is(music)" />
 		</definition>
 	</include>
 

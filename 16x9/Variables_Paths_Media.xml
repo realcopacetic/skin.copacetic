@@ -66,10 +66,12 @@
 		<value>videos</value>
 	</variable>
 
-	<!-- Keyed on the item, not its position (bare Container.CurrentItem is empty on Home); 9501 is no control, so nothing moves.
-	     No modal dialog: the helper would read the dialog's container instead. -->
+	<!-- Probe 6910 (Set_Progress_List), read by the service with the window on top: an unwatched set's params (9501 is no control, so nothing moves).
+	     Empty in the embedded list, whose ring carries the view's cursor, so 9500 keeps its set's answer; else none -->
 	<variable name="Set_Progress_Path">
-		<value condition="Container.ListItem.IsCollection + String.IsEqual(Container.ListItem.Overlay,OverlayUnwatched.png) + !System.HasVisibleModalDialog">plugin://script.copacetic.helper/?info=progressbar&amp;focus_guard=$INFO[Container.ListItem.DBType],$INFO[Container.ListItem.DBID]&amp;identity_labels=Container.ListItem.DBType,Container.ListItem.DBID&amp;target_id=9501</value>
+		<value condition="Control.HasFocus(3100)" />
+		<value condition="Container.ListItem.IsCollection + String.IsEqual(Container.ListItem.Overlay,OverlayUnwatched.png)">info=progressbar&amp;target_id=9501</value>
+		<value>none</value>
 	</variable>
 
 	<!-- The focused widget's logo box. Its row is read only once Home_Widget names that widget (art_clearlogo_visible_home) -->
