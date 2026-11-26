@@ -242,6 +242,16 @@
         }
       ]
     },
+    "art_keyart_logo_visible": {
+      "note": "Showcase Posters with its logo beside the art: an item with a clearlogo shows its keyart, so the poster's own title doesn't repeat the logo (Ash, 26 Nov); the poster slots and label_multiart test the item's clearlogo.",
+      "rules": [
+        {
+          "condition": "not equals({art_keyart}, true) + equals({layout}, showcase) + equals({display}, posters) + equals({logo}, on) + not In({details}, [off, title_overlay, info_overlay])",
+          "type": "append",
+          "value": "[{@windows:{window}.window_visible} + {condition}]"
+        }
+      ]
+    },
     "art_keyart_visible_{window}": {
       "rules": [
         {

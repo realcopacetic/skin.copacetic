@@ -30,7 +30,7 @@
       ]
     },
     "label_multiart_{texture_prefix}": {
-      "note": "C2's rows (C2 variables_content.json), each family read through its context's art aggregates: art_*_visible for the views, art_*_visible_home for the focused row. C2's TMDb and favourite rows are left out: C1 has neither. The embedded list serves no multiart. C1's own row: a Home row's fanart tile draws an album's or song's cover, never its or its artist's fanart (texture_widgets_*_fanart*), so neither cycles any.",
+      "note": "C2's rows (C2 variables_content.json), each family read through its context's art aggregates: art_*_visible for the views, art_*_visible_home for the focused row. C2's TMDb and favourite rows are left out: C1 has neither. The embedded list serves no multiart. C1's own row: a Home row's fanart tile draws an album's or song's cover, never its or its artist's fanart (texture_widgets_*_fanart*), so neither cycles any. And Showcase Posters' tile beside its logo is the keyart of an item with a clearlogo (art_keyart_logo_visible), so that item cycles keyart, or nothing.",
       "templates_from": [ "regions", "widgets" ],
       "index": {
         "start": 3201
@@ -41,6 +41,16 @@
           {
             "condition": "!String.IsEmpty({listitem}.Art(thumb1)) + [String.IsEqual({listitem}.DBType,episode) | String.IsEqual({listitem}.DBType,album) | String.IsEqual({listitem}.DBType,song) | [String.IsEqual({listitem}.DBType,artist) + $EXP[art_square_{art_context}]]]",
             "value": "thumb"
+          },
+          {
+            "filter": "equals({region}, primary)",
+            "condition": "!String.IsEmpty({listitem}.Art(keyart1)) + !String.IsEmpty({listitem}.Art(keyart)) + !String.IsEmpty({listitem}.Art(clearlogo)) + $EXP[art_keyart_logo_visible]",
+            "value": "keyart"
+          },
+          {
+            "filter": "equals({region}, primary)",
+            "condition": "!String.IsEmpty({listitem}.Art(keyart)) + !String.IsEmpty({listitem}.Art(clearlogo)) + $EXP[art_keyart_logo_visible]",
+            "value": ""
           },
           {
             "condition": "!String.IsEmpty({listitem}.Art(keyart1)) + $EXP[art_poster_{art_context}] + $EXP[art_keyart_{art_context}]",
