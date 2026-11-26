@@ -40,6 +40,7 @@ LISTS
 3700          PVR Options menu
 9000          Metadata (info screens: served list, movie, song and music info: probe 6900)
 9300          Clearlogo crop and multiart (served list, Home, Videos and Music: probe 6930)
+9400          Multiart slide (MyViews_Multiart_Labels, Home, Videos and Music): the service turns 9300's family, a bind a beat, no <content> (C2's id)
 9500          Set progress (served list, Home and Videos: probe 6910; the handler's target_id 9501 is no control)
 
 BUTTONS
@@ -106,6 +107,7 @@ CHECKERS
 6900          Info metadata probe (Infoscreen_Metadata_List, movie, song and music info): 9000's params, which the service binds as a served list (C2's id); the dialogs' net group 6939 sits beside it
 6910          Set progress probe (Set_Progress_List): 9500's params, read by the helper's service at 9500's turn of the ring (C2's id)
 6930          Art serve probe (Clearlogo_Crop_List): 9300's params (Artwork_Serve), read by the helper's service at 9300's turn of the ring (C2's id)
+6932          Multiart slide probe (MyViews_Multiart_Labels): 9400's slide params, read for each slide the service turns (C2's id)
 6939          Served lists' net (prb_serve_net, Home, Videos and Music, and the info dialogs (Infoscreen_Metadata_List)): up while a probe reads other than its list was served with; Timers.xml's serve_net rings
 
 

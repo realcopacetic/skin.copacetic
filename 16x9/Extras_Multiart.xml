@@ -41,7 +41,7 @@
   <expression name="multiart_serve">Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Control.GetLabel(6400))</expression>
 
   <variable name="Params_Multiart">
-    <value condition="$EXP[multiart_serve]">&amp;cursor_key=primary&amp;multiart=$INFO[Control.GetLabel(6400)]&amp;multiart_fadelabel=3400&amp;multiart_max=15</value>
+    <value condition="$EXP[multiart_serve]">&amp;cursor_key=primary&amp;multiart=$INFO[Control.GetLabel(6400)]&amp;multiart_fadelabel=3400&amp;multiart_max=15&amp;slides=9400:6932</value>
   </variable>
 
   <include name="Multiart_Cursor">
@@ -78,6 +78,18 @@
         <label>$VAR[Multiart_Type]</label>
       </control>
     </include>
+    <!-- C2's slides: the service turns the family 9300's bind carries on 9400, a list with no <content>, one bind a beat, each slide made with
+         probe 6932's params (helper docs/service/serve.md, Multiart). C1 draws no blur, but a slide binds only with one (serve.py _slide) -->
+    <control type="label" id="6932">
+      <visible>false</visible>
+      <label>background_blur=true</label>
+    </control>
+    <control type="list" id="9400">
+      <width>0</width>
+      <height>0</height>
+      <itemlayout />
+      <focusedlayout />
+    </control>
     <include content="Multiart_Shown_Latch" />
     <include content="Multiart_Template" />
   </include>
