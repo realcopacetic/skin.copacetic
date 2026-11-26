@@ -143,11 +143,6 @@
         { "type": "append", "value": "[Control.HasFocus({index}) + String.StartsWith(Container(9300).ListItem.Property(current),{index}/)]" }
       ]
     },
-    "Multiart_Container_Switching": {
-      "note": "The focused row was reached less than 2.5 s ago (its latch, widgets_latches).",
-      "index": { "start": 3201 },
-      "rules": [ { "type": "append", "value": "[{focused} + Control.IsVisible({index+2002})]" } ]
-    },
     "widgets_container_switching": {
       "note": "The probe 5200 reads this, so Timers.xml can (Timers.xml takes no $EXP): SkinTimerManager.cpp:73 registers the raw text.",
       "index": { "start": 3201 },
