@@ -142,8 +142,8 @@
 	     Home's probe reads none with focus off its rows (the music player): then the cursor begins with the item 9500 served -->
 	<expression name="set_progress_ready">!Control.IsVisible(9500) | String.IsEqual(Container(9500).ListItem.Property(params),Control.GetLabel(6910)) | [String.IsEqual(Control.GetLabel(6910),none) + !String.IsEmpty(Container(9500).ListItem.Property(item)) + String.StartsWith(Window(home).Property(artwork_cursor_primary),Container(9500).ListItem.Property(item))]</expression>
 	<!-- The net (prb_serve_net), one term per probe of serve_lists_primary: it names a handler (not empty or none) and reads other than its list was
-	     served with. A probe not mounted in the window reads empty there; 6910 never says wait -->
-	<expression name="serve_net_window">[!String.IsEmpty(Control.GetLabel(6910)) + !String.IsEqual(Control.GetLabel(6910),none) + !String.IsEqual(Control.GetLabel(6910),Container(9500).ListItem.Property(params))]</expression>
+	     served with. A probe not mounted in the window reads empty there; neither 6910 nor 6930 ever says wait -->
+	<expression name="serve_net_window">[!String.IsEmpty(Control.GetLabel(6910)) + !String.IsEqual(Control.GetLabel(6910),none) + !String.IsEqual(Control.GetLabel(6910),Container(9500).ListItem.Property(params))] | [!String.IsEmpty(Control.GetLabel(6930)) + !String.IsEqual(Control.GetLabel(6930),none) + !String.IsEqual(Control.GetLabel(6930),Container(9300).ListItem.Property(params))]</expression>
 
 	<!-- Sorts -->
 	<!-- Letters: Name, File, Artist, Artist/Year, Album, Title, Original title -->

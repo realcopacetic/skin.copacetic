@@ -79,13 +79,13 @@
 		<value condition="$EXP[ShowcaseView_Widget_Home_IsVisible]">660,240</value>
 		<value>600,240</value>
 	</variable>
-	<!-- Night's colourised flags (Showcase, Strip): the logo's palette colour, which the helper returns only with a background to measure (its fanart).
-	     Last in the serve's URL, after the logo's: a "|" in either (Kodi's header options) ends the plugin's params there -->
+	<!-- Night's colourised flags (Showcase, Strip): the logo's palette colour, which the helper returns only with a background to measure (its fanart),
+	     read whole by its source as the logo is (probe 6930, Artwork_Serve) -->
 	<variable name="Clearlogo_Palette_Primary">
-		<value condition="Skin.HasSetting(Colorise_Flags) + !Skin.String(Theme,Light)">&amp;background_palette=true&amp;background_url=$INFO[Container.ListItem.Art(fanart)]</value>
+		<value condition="Skin.HasSetting(Colorise_Flags) + !Skin.String(Theme,Light)">&amp;background_palette=true&amp;background_source=Container.ListItem.Art(fanart)</value>
 	</variable>
 	<variable name="Clearlogo_Palette_Secondary">
-		<value condition="Skin.HasSetting(Colorise_Flags) + !Skin.String(Theme,Light)">&amp;background_palette=true&amp;background_url=$INFO[Container(3100).ListItem.Art(fanart)]</value>
+		<value condition="Skin.HasSetting(Colorise_Flags) + !Skin.String(Theme,Light)">&amp;background_palette=true&amp;background_source=Container(3100).ListItem.Art(fanart)</value>
 	</variable>
 
 </includes>

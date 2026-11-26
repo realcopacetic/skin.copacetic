@@ -48,12 +48,18 @@
 	</include>
 
 	<include name="Clearlogo_Crop_List">
-		<!-- The focused item's art serve (Artwork_Serve): its cropped clearlogo and its multiart; readers match the logo its serve echoes (Clearlogo_Served_*) -->
-		<include content="Hidden_List">
-			<param name="content" value="$VAR[Artwork_Serve]" />
-			<param name="id" value="9300" />
-			<param name="visible" value="true" />
-		</include>
+		<!-- The focused item's art serve, served: at 9300's turn of the ring the service reads probe 6930 (Artwork_Serve) and binds 9300, which has no
+		     <content>. Its cropped clearlogo and multiart; readers match the logo its serve echoes (Clearlogo_Served_*) or the item its bind names -->
+		<control type="label" id="6930">
+			<visible>false</visible>
+			<label>$VAR[Artwork_Serve]</label>
+		</control>
+		<control type="list" id="9300">
+			<width>0</width>
+			<height>0</height>
+			<itemlayout />
+			<focusedlayout />
+		</control>
 	</include>
 
 	<include name="Clearlogo_Crop_Pass">
@@ -123,8 +129,8 @@
 	</include>
 
 	<include name="atr_artwork_cursor">
-		<!-- The arrival's cursor (C2's), <list>/<position>/<dbid>/<visit>, after its visit stamp: 9300's serve echoes it as current. artwork_item_primary is
-		     the same without the visit, which multiart_item_current matches, as 9300's plugin URL doesn't rerun on a return to the same item -->
+		<!-- The arrival's cursor (C2's), <list>/<position>/<dbid>/<visit>, after its visit stamp: the settle's ring carries it. artwork_item_primary is
+		     the same without the visit, which 9300's readers match with its bind's item (an info dialog's close ring binds its token as current) -->
 		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_item_primary,$PARAM[id]/$INFO[Container($PARAM[id]).CurrentItem]/$INFO[Container($PARAM[id]).ListItem.DBID]/,home)</onfocus>
 		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_cursor_primary,$INFO[Window(home).Property(artwork_item_primary)]$INFO[Window(home).Property(artwork_visit)],home)</onfocus>
 		<onfocus condition="$EXP[artwork_cursor_hook]">ClearProperty(moved_primary,home)</onfocus><!-- an arrival ends the load ring's token: a list served for it no longer reads as current -->
@@ -133,12 +139,12 @@
 	<!-- The served lists, <list>:<probe> in serving order, for the rings (helper docs/service/serve.md). One text for Home and the media windows:
 	     a probe not mounted in a window reads empty there, and the service skips its list -->
 	<variable name="serve_lists_primary">
-		<value>9500:6910</value>
+		<value>9500:6910.9300:6930</value>
 	</variable>
 
 	<include name="btn_serve_settle">
-		<!-- Served focus calls (C2's): one ring a settle after the last move, answering the arrival's cursor. 252 ms (Default_Transition_1x), as 9300's URL
-		     waits out the scroll latches 5001-5004 that long. Not while an info dialog is open: the hook writes no cursor then, and the close rings -->
+		<!-- Served focus calls (C2's): one ring a settle after the last move, answering the arrival's cursor. 252 ms (Default_Transition_1x), the wait 9300's
+		     plugin URL had (its scroll latches 5001-5004). Not while an info dialog is open: the hook writes no cursor then, and the close rings -->
 		<control type="button">
 			<visible allowhiddenfocus="true">false</visible>
 			<onfocus condition="!$EXP[infoscreen_visible]">NotifyAll(script.copacetic.helper,serve?lists=$VAR[serve_lists_primary]&amp;mark=artwork_cursor_primary&amp;is=$INFO[Window(home).Property(artwork_cursor_primary)])</onfocus>

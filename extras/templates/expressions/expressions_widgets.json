@@ -138,9 +138,10 @@
       ]
     },
     "Clearlogo_Served_Home": {
+      "note": "9300 was served for the focused row: its bind names the item it served (Property(item)), as an info dialog's close ring does too, whose current is its token.",
       "index": { "start": 3201 },
       "rules": [
-        { "type": "append", "value": "[Control.HasFocus({index}) + String.StartsWith(Container(9300).ListItem.Property(current),{index}/)]" }
+        { "type": "append", "value": "[Control.HasFocus({index}) + String.StartsWith(Container(9300).ListItem.Property(item),{index}/)]" }
       ]
     },
     "widgets_container_switching": {

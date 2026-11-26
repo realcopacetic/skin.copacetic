@@ -25,11 +25,11 @@
     </definition>
   </include>
 
-  <!-- 9300 holds the focused item: a serve echoes the cursor, so moving on breaks the match at once. Its item, not its visit
-       (artwork_item_primary): a return to the same item stamps a new visit, and 9300's plugin URL doesn't rerun for it -->
-  <expression name="multiart_item_current">String.StartsWith(Container(9300).ListItem.Property(current),Window(home).Property(artwork_item_primary)) + !String.IsEmpty(Window(home).Property(artwork_item_primary))</expression>
+  <!-- 9300 holds the focused item: its bind names the item it served (Property(item), the cursor without its visit), so moving on breaks the
+       match at once. Not Property(current): an info dialog's close ring serves 9300 again under its token, for the same item -->
+  <expression name="multiart_item_current">String.IsEqual(Container(9300).ListItem.Property(item),Window(home).Property(artwork_item_primary)) + !String.IsEmpty(Window(home).Property(artwork_item_primary))</expression>
   <!-- ...and that serve seeded register 3400 -->
-  <expression name="multiart_current_3400">$EXP[multiart_item_current] + !String.IsEmpty(Container(9300).ListItem.Art(multiart)) + ![Container(9300).IsUpdating + String.IsEmpty(Window(home).Property(multiart_seed_sig_3400))]</expression>
+  <expression name="multiart_current_3400">$EXP[multiart_item_current] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))</expression>
   <expression name="multiart_shown">Control.IsVisible(5012)</expression>
   <!-- The windows holding register 3400 (MyViews_Multiart_Labels): include condition for the multiart images of the views on C2's code -->
   <expression name="multiart_window">Skin.HasSetting(Multiart_Slideshow) + [Window.Is(home) | Window.Is(videos) | Window.Is(music)]</expression>
@@ -47,17 +47,17 @@
   <include name="Multiart_Cursor">
     <param name="id" />
     <definition>
-      <!-- A move starts the next item from its main image; a return from the rail or a modal has no move, so its rotation carries on.
-           Read against the cursor before this arrival's (atr_artwork_cursor): a control's conditions are all read before its actions run -->
+      <!-- A move starts the next item from its main image. A return from the embedded list, a menu or the music player is no move, but its serve
+           brings a new visit, which the helper's seed keys on, so it starts from the main image too (C2's revisit). Read against the cursor before this arrival's -->
       <onfocus condition="$EXP[artwork_cursor_hook] + [Container($PARAM[id]).OnNext | Container($PARAM[id]).OnPrevious | !String.StartsWith(Window(home).Property(artwork_cursor_primary),$PARAM[id]/)]">ClearProperty(multiart_seed_sig_3400,home)</onfocus>
     </definition>
   </include>
 
-  <!-- On when a serve seeds the focused item; held after the rail's serve replaces 9300, which echoes the same cursor with no multiart.
+  <!-- On when a serve seeds the focused item; held after the embedded list's serve replaces 9300, which names the same item with no multiart.
        Reads its own state (law: a control's visible may read its own Control.IsVisible); false at open, as the cursor is cleared on unload -->
   <include name="Multiart_Shown_Latch">
     <control type="group" id="5012">
-      <visible>[$EXP[multiart_current_3400] | Control.IsVisible(5012)] + [$EXP[multiart_item_current] | [Control.HasFocus(3100) + String.StartsWith(Container(9300).ListItem.Property(current),held/)]]</visible>
+      <visible>[$EXP[multiart_current_3400] | Control.IsVisible(5012)] + $EXP[multiart_item_current]</visible>
     </control>
   </include>
 
