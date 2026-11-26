@@ -38,13 +38,10 @@
 		<param name="fallback" default="flags/blank.png" />
 		<param name="aspectratio" default="scale" />
 		<param name="fadetime" default="0" />
-		<param name="art_diffuse" default="false" />
-		<param name="fade_on_dialog" default="true" />
 		<definition>
 			<control type="image">
 				<visible>$PARAM[visible]</visible>
-				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" condition="[Window.Is(home) | Window.IsVisible(1180) | Window.Is(movieinformation) | Window.Is(musicinformation) | Window.Is(songinformation) | Window.Is(addoninformation)] + $PARAM[fade_on_dialog]" />
-				<animation effect="fadediffuse" end="ff808080" time="0" condition="$PARAM[art_diffuse]">Conditional</animation><!-- 50% -->
+				<include content="Dialog_Over_Artwork_Fadediffuse_Animation" condition="Window.Is(home) | Window.IsVisible(1180) | Window.Is(movieinformation) | Window.Is(musicinformation) | Window.Is(songinformation) | Window.Is(addoninformation)" />
 				<nested />
 				<texture fallback="$PARAM[fallback]" background="true">$PARAM[texture]</texture>
 				<aspectratio align="center" aligny="center">$PARAM[aspectratio]</aspectratio>
@@ -61,7 +58,6 @@
 				<param name="aspectratio" value="$PARAM[aspectratio]" />
 				<param name="fadetime" value="$PARAM[fadetime]" />
 				<param name="fallback" value="$PARAM[fallback]" />
-				<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 				<animation effect="fadediffuse" end="a9ffffff" time="0" condition="$PARAM[watched_diffuse] + Skin.String(Theme,Light)">Conditional</animation>
 				<animation effect="fadediffuse" end="80ffffff" time="0" condition="$PARAM[watched_diffuse] + !Skin.String(Theme,Light)">Conditional</animation>
 			</include>
@@ -74,7 +70,6 @@
 				<param name="texture" value="$PARAM[texture]" />
 				<param name="aspectratio" value="$PARAM[aspectratio]" />
 				<param name="fallback" value="$PARAM[fallback]" />
-				<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 				<!-- C2's darken under the slide (img_art_base). C1: the delay is the overlay's 2x delayed fade plus its 4x fadetime,
 					so the base stays opaque until the overlay is -->
 				<animation effect="fadediffuse" end="80000000" time="Default_Transition_1x" delay="1512" condition="[!String.IsEmpty(Container(9300).ListItem.Art(multiart)) | $EXP[multiart_shown]] + [$PARAM[multiart]]" reversible="false">Conditional</animation>
@@ -175,7 +170,6 @@
 					<param name="fadetime" value="$PARAM[fadetime]" />
 					<param name="aspectratio" value="$PARAM[aspectratio]" />
 					<param name="fallback" value="$PARAM[fallback]" />
-					<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 					<param name="watched_diffuse" value="$PARAM[watched_diffuse]" />
 				</include>
 				<nested />
@@ -211,7 +205,6 @@
 					<param name="texture" value="$PARAM[texture]" />
 					<param name="aspectratio" value="$PARAM[aspectratio]" />
 					<param name="fallback" value="$PARAM[fallback]" />
-					<param name="art_diffuse" value="$PARAM[art_diffuse]" />
 					<param name="multiart" value="$PARAM[multiart]" />
 				</include>
 				<!-- Multiart: C2's overlay, as tpl_art_focused draws it. The cell reads register 3400 only every infoupdate (500 ms),
