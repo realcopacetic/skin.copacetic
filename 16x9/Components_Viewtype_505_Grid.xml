@@ -573,7 +573,6 @@
 				<param name="id" value="$PARAM[id]" />
 				<param name="left" value="188" />
 				<param name="bottom" value="384" />
-				<param name="progress_indicator_background" value="$VAR[Accent_Color]" />
 				<param name="slides" value="360" />
 			</include>
 		</definition>
@@ -587,7 +586,6 @@
 				<param name="left" value="136" />
 				<param name="width" value="240" />
 				<param name="bottom" value="25" />
-				<param name="progress_indicator_background" value="$VAR[Accent_Color]" />
 				<param name="slides" value="240" />
 			</include>
 		</definition>
@@ -601,7 +599,6 @@
 				<param name="left" value="120" />
 				<param name="bottom" value="281" />
 				<param name="width" value="240" />
-				<param name="progress_indicator_background" value="$VAR[Accent_Color]" />
 				<param name="slides" value="240" />
 			</include>
 		</definition>
@@ -615,7 +612,6 @@
 				<param name="left" value="120" />
 				<param name="bottom" value="371" />
 				<param name="width" value="240" />
-				<param name="progress_indicator_background" value="$VAR[Accent_Color]" />
 				<param name="slides" value="240" />
 			</include>
 		</definition>
