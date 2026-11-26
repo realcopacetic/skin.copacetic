@@ -127,6 +127,9 @@
 		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_item_primary,$PARAM[id]/$INFO[Container($PARAM[id]).CurrentItem]/$INFO[Container($PARAM[id]).ListItem.DBID]/,home)</onfocus>
 		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_cursor_primary,$INFO[Window(home).Property(artwork_item_primary)]$INFO[Window(home).Property(artwork_visit)],home)</onfocus>
 		<onfocus condition="$EXP[artwork_cursor_hook]">ClearProperty(moved_primary,home)</onfocus><!-- an arrival ends the load ring's token: a list served for it no longer reads as current -->
+		<!-- The embedded list's arrival: the view's item and visit, then 3100's position past a letter (no "/"), so a move in 3100 ends the last ring's
+		     serve, while the bind's item (the cursor up to its last "/") stays the view's -->
+		<onfocus condition="Control.HasFocus(3100) + !$EXP[infoscreen_visible]">SetProperty(artwork_cursor_primary,$INFO[Window(home).Property(artwork_item_primary)]$INFO[Window(home).Property(artwork_visit)]s$INFO[Container(3100).CurrentItem],home)</onfocus>
 	</include>
 
 	<!-- The served lists, <list>:<probe> in serving order, for the rings (helper docs/service/serve.md). One text for Home and the media windows:
