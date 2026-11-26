@@ -138,10 +138,10 @@
       ]
     },
     "Clearlogo_Served_Home": {
-      "note": "9300 was served for the focused row: its bind names the item it served (Property(item)), as an info dialog's close ring does too, whose current is its token.",
+      "note": "9300 was served for the focused row: its bind names the item it served (Property(item)), as an info dialog's close ring does too, whose current is its token; or (C2's) a load ring's serve, which names no item, while its token stands.",
       "index": { "start": 3201 },
       "rules": [
-        { "type": "append", "value": "[Control.HasFocus({index}) + String.StartsWith(Container(9300).ListItem.Property(item),{index}/)]" }
+        { "type": "append", "value": "[Control.HasFocus({index}) + [String.StartsWith(Container(9300).ListItem.Property(item),{index}/) | [String.IsEmpty(Container(9300).ListItem.Property(item)) + !String.IsEmpty(Window(home).Property(moved_primary)) + String.IsEqual(Container(9300).ListItem.Property(current),Window(home).Property(moved_primary))]]]" }
       ]
     },
     "widgets_container_switching": {
