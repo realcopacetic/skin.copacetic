@@ -25,8 +25,9 @@
     </definition>
   </include>
 
-  <!-- 9300 holds the focused item: a serve echoes the cursor, so moving on breaks the match at once -->
-  <expression name="multiart_item_current">String.IsEqual(Container(9300).ListItem.Property(current),Window(home).Property(artwork_cursor_primary)) + !String.IsEmpty(Window(home).Property(artwork_cursor_primary))</expression>
+  <!-- 9300 holds the focused item: a serve echoes the cursor, so moving on breaks the match at once. Its item, not its visit
+       (artwork_item_primary): a return to the same item stamps a new visit, and 9300's plugin URL doesn't rerun for it -->
+  <expression name="multiart_item_current">String.StartsWith(Container(9300).ListItem.Property(current),Window(home).Property(artwork_item_primary)) + !String.IsEmpty(Window(home).Property(artwork_item_primary))</expression>
   <!-- ...and that serve seeded register 3400 -->
   <expression name="multiart_current_3400">$EXP[multiart_item_current] + !String.IsEmpty(Container(9300).ListItem.Art(multiart)) + ![Container(9300).IsUpdating + String.IsEmpty(Window(home).Property(multiart_seed_sig_3400))]</expression>
   <expression name="multiart_shown">Control.IsVisible(5012)</expression>
@@ -46,9 +47,9 @@
   <include name="Multiart_Cursor">
     <param name="id" />
     <definition>
-      <!-- A move starts the next item from its main image; a return from the rail or a modal has no move, so its rotation carries on -->
+      <!-- A move starts the next item from its main image; a return from the rail or a modal has no move, so its rotation carries on.
+           Read against the cursor before this arrival's (atr_artwork_cursor): a control's conditions are all read before its actions run -->
       <onfocus condition="!Control.HasFocus(3100) + [Container($PARAM[id]).OnNext | Container($PARAM[id]).OnPrevious | !String.StartsWith(Window(home).Property(artwork_cursor_primary),$PARAM[id]/)]">ClearProperty(multiart_seed_sig_3400,home)</onfocus>
-      <onfocus condition="!Control.HasFocus(3100)">SetProperty(artwork_cursor_primary,$PARAM[id]/$INFO[Container($PARAM[id]).CurrentItem]/$INFO[Container($PARAM[id]).ListItem.DBID]/,home)</onfocus>
     </definition>
   </include>
 

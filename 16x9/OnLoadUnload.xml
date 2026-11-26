@@ -58,6 +58,12 @@
 		<onunload condition="!String.IsEmpty(Window(home).Property(folder_path))">ClearProperty(folder_path,home)</onunload>
 	</include>
 
+	<include name="Serve_OnLoadUnload">
+		<!-- Home, Videos and Music, which are kept in memory: without these the next entry's first frame would read the last visit's cursor -->
+		<onunload>ClearProperty(artwork_cursor_primary,home)</onunload>
+		<onunload>ClearProperty(artwork_item_primary,home)</onunload>
+	</include>
+
 	<include name="movieinformation_OnLoadUnload">
 		<onload condition="$EXP[trailer_playing] | $EXP[trailer_zombie]">PlayerControl(Stop)</onload>
 		<onload condition="!String.IsEmpty(ListItem.DBID)">SetProperty(SelectedItem,$INFO[ListItem.DBID],movieinformation)</onload>

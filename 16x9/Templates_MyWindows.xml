@@ -24,6 +24,7 @@
 		<control type="button" id="4013">
 			<visible allowhiddenfocus="true">false</visible>
 			<onfocus>ClearProperty(artwork_cursor_primary,home)</onfocus>
+			<onfocus>ClearProperty(artwork_item_primary,home)</onfocus>
 			<onfocus>SetFocus(60)</onfocus>
 		</control>
 		<!-- Hidden Controls for animation trigger on menu switching and resetting multiart if enabled-->

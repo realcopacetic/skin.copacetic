@@ -104,6 +104,18 @@
 		<onfocus condition="Container($PARAM[id]).OnNext">SetProperty(LastScroll,Next,home)</onfocus>
 	</include>
 
+	<include name="atr_artwork_visit_stamp">
+		<!-- The visit (C2's): stamped at every arrival, a return of focus to the same item too, so each arrival's cursor is new -->
+		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_visit,$INFO[System.Time(hh:mm:ss)]$INFO[Window(home).Property(LastScroll)]$INFO[Window(home).Property(artwork_holds)],home)</onfocus>
+	</include>
+
+	<include name="atr_artwork_cursor">
+		<!-- The arrival's cursor (C2's), <list>/<position>/<dbid>/<visit>, after its visit stamp: 9300's serve echoes it as current. artwork_item_primary is
+		     the same without the visit, which multiart_item_current matches, as 9300's plugin URL doesn't rerun on a return to the same item -->
+		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_item_primary,$PARAM[id]/$INFO[Container($PARAM[id]).CurrentItem]/$INFO[Container($PARAM[id]).ListItem.DBID]/,home)</onfocus>
+		<onfocus condition="$EXP[artwork_cursor_hook]">SetProperty(artwork_cursor_primary,$INFO[Window(home).Property(artwork_item_primary)]$INFO[Window(home).Property(artwork_visit)],home)</onfocus>
+	</include>
+
 	<include name="HiddenFocusButton">
 		<param name="folderwatch" default="false" />
 		<param name="id" default="50" />
@@ -116,6 +128,11 @@
 					<param name="id" value="$PARAM[id]" />
 				</include>
 				<include content="atr_folderwatch" condition="$PARAM[folderwatch]" />
+				<!-- The arrival's visit and cursor, in Home and the media windows (and an info dialog loaded over them, whose rails write neither) -->
+				<include content="atr_artwork_visit_stamp" condition="Window.Is(home) | Window.Is(videos) | Window.Is(music)" />
+				<include content="atr_artwork_cursor" condition="Window.Is(home) | Window.Is(videos) | Window.Is(music)">
+					<param name="id" value="$PARAM[id]" />
+				</include>
 				<!-- Grid position -->
 				<onfocus condition="Control.Hasfocus(505)">SetProperty(GridView_Column,$INFO[Container.Column],home)</onfocus>
 				<onfocus condition="Control.Hasfocus(505)">SetProperty(GridView_Row,$INFO[Container.Row],home)</onfocus>
