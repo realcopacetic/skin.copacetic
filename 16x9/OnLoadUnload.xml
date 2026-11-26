@@ -83,8 +83,10 @@
 		<onload>SetProperty(moved_item,$INFO[Window(home).Property(moved_item)])</onload>
 		<onload>NotifyAll(script.copacetic.helper,serve?lists=9000:6900&amp;mark=moved_item&amp;is=$INFO[Window(home).Property(moved_item)]&amp;window=12003.10135.12001)</onload>
 		<!-- A close hands back the token of the dialog left on top (a closing dialog leaves the list before its unload runs, GUIDialog.cpp:102-109), so
-		     the net of an info dialog under it still serves its ring; over the window there is none, which ends this open's serve -->
+		     the net of an info dialog under it still serves its ring. With no info dialog left the token is cleared, ending this open's serve: over
+		     Home, bare Window.Property falls back to Home itself (GUIInfoHelper.cpp:106), so the hand-back alone would keep it -->
 		<onunload>SetProperty(moved_item,$INFO[Window.Property(moved_item)],home)</onunload>
+		<onunload condition="!$EXP[infoscreen_visible]">ClearProperty(moved_item,home)</onunload>
 	</include>
 
 	<include name="movieinformation_OnLoadUnload">
