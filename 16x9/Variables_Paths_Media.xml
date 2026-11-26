@@ -66,11 +66,10 @@
 		<value>videos</value>
 	</variable>
 
-	<!-- Probe 6910 (Set_Progress_List), read by the service with the window on top: an unwatched set's params (9501 is no control, so nothing moves).
-	     Empty in the embedded list, whose ring carries the view's cursor, so 9500 keeps its set's answer; else none -->
+	<!-- Probe 6910 (Set_Progress_List), read by the service with the window on top: an unwatched set's params, else none. The set and its watched count
+	     (no handler reads watched) make the text change with the share, which set_progress_ready compares; 9501 is no control, so nothing moves -->
 	<variable name="Set_Progress_Path">
-		<value condition="Control.HasFocus(3100)" />
-		<value condition="Container.ListItem.IsCollection + String.IsEqual(Container.ListItem.Overlay,OverlayUnwatched.png)">info=progressbar&amp;target_id=9501</value>
+		<value condition="Container.ListItem.IsCollection + String.IsEqual(Container.ListItem.Overlay,OverlayUnwatched.png)">info=progressbar&amp;focus_guard=$INFO[Container.ListItem.DBType],$INFO[Container.ListItem.DBID]&amp;identity_labels=Container.ListItem.DBType,Container.ListItem.DBID&amp;target_id=9501&amp;watched=$INFO[Container.ListItem.Property(watched)]</value>
 		<value>none</value>
 	</variable>
 
