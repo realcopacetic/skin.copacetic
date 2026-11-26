@@ -443,7 +443,7 @@
 	</include>
 
 	<include name="Settings_Grouplist_Scrollbar">
-		<param name="target_id_id" />
+		<param name="target_id" />
 		<param name="scrollbar_id" default="61" />
 		<param name="left" default="564" />
 		<param name="onleft" />
@@ -451,7 +451,7 @@
 		<param name="onback" />
 		<definition>
 			<control type="scrollbar" id="$PARAM[scrollbar_id]">
-				<visible allowhiddenfocus="true">Control.HasFocus($PARAM[scrollbar_id]) | Control.IsVisible($PARAM[target_id_id])</visible>
+				<visible allowhiddenfocus="true">Control.HasFocus($PARAM[scrollbar_id]) | Control.IsVisible($PARAM[target_id])</visible>
 				<left>$PARAM[left]</left>
 				<width>6</width>
 				<centertop>50%</centertop>
