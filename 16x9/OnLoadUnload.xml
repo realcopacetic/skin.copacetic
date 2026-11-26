@@ -69,6 +69,13 @@
 		<onunload>ClearProperty(artwork_item_primary,home)</onunload>
 	</include>
 
+	<include name="Serve_Infoscreen_OnUnload">
+		<!-- An info dialog closing back to Home or a media window (no info dialog left: a closing dialog leaves the list before its unload runs,
+		     GUIDialog.cpp:102-109): a ring with no lists serves that window's last request again (C2's loads.xml), for a settle the dialog held -->
+		<onunload condition="!$EXP[infoscreen_visible] + [Window.IsActive(home) | Window.IsActive(videos) | Window.IsActive(music)]">SetProperty(moved_primary,m$INFO[System.Time(hh:mm:ss)]Info,home)</onunload>
+		<onunload condition="!$EXP[infoscreen_visible] + [Window.IsActive(home) | Window.IsActive(videos) | Window.IsActive(music)]">NotifyAll(script.copacetic.helper,serve?mark=moved_primary&amp;is=$INFO[Window(home).Property(moved_primary)]&amp;wait=252)</onunload>
+	</include>
+
 	<include name="movieinformation_OnLoadUnload">
 		<onload condition="$EXP[trailer_playing] | $EXP[trailer_zombie]">PlayerControl(Stop)</onload>
 		<onload condition="!String.IsEmpty(ListItem.DBID)">SetProperty(SelectedItem,$INFO[ListItem.DBID],movieinformation)</onload>
@@ -79,6 +86,7 @@
 		<include content="Widget_Position_Reset_OnLoad" />
 		<onunload>ClearProperty(Focused_Button,movieinformation)</onunload>
 		<onunload>ClearProperty(Infoscreen_Open,home)</onunload>
+		<include content="Serve_Infoscreen_OnUnload" />
 	</include>
 
 	<include name="musicinformation_OnLoadUnload">
@@ -91,6 +99,7 @@
 		<include content="Widget_Position_Reset_OnLoad" />
 		<onunload>ClearProperty(Focused_Button,musicinformation)</onunload>
 		<onunload>ClearProperty(Infoscreen_Open,home)</onunload>
+		<include content="Serve_Infoscreen_OnUnload" />
 	</include>
 
 	<include name="skinsettings_OnLoadUnload">

@@ -49,7 +49,7 @@
     <definition>
       <!-- A move starts the next item from its main image; a return from the rail or a modal has no move, so its rotation carries on.
            Read against the cursor before this arrival's (atr_artwork_cursor): a control's conditions are all read before its actions run -->
-      <onfocus condition="!Control.HasFocus(3100) + [Container($PARAM[id]).OnNext | Container($PARAM[id]).OnPrevious | !String.StartsWith(Window(home).Property(artwork_cursor_primary),$PARAM[id]/)]">ClearProperty(multiart_seed_sig_3400,home)</onfocus>
+      <onfocus condition="$EXP[artwork_cursor_hook] + [Container($PARAM[id]).OnNext | Container($PARAM[id]).OnPrevious | !String.StartsWith(Window(home).Property(artwork_cursor_primary),$PARAM[id]/)]">ClearProperty(multiart_seed_sig_3400,home)</onfocus>
     </definition>
   </include>
 

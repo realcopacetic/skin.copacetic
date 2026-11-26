@@ -138,10 +138,10 @@
 
 	<include name="btn_serve_settle">
 		<!-- Served focus calls (C2's): one ring a settle after the last move, answering the arrival's cursor. 252 ms (Default_Transition_1x), as 9300's URL
-		     waits out the scroll latches 5001-5004 that long. Not from an info dialog's rails (infoscreen_context): they have no served list -->
+		     waits out the scroll latches 5001-5004 that long. Not while an info dialog is open: the hook writes no cursor then, and the close rings -->
 		<control type="button">
 			<visible allowhiddenfocus="true">false</visible>
-			<onfocus condition="!$EXP[infoscreen_context]">NotifyAll(script.copacetic.helper,serve?lists=$VAR[serve_lists_primary]&amp;mark=artwork_cursor_primary&amp;is=$INFO[Window(home).Property(artwork_cursor_primary)])</onfocus>
+			<onfocus condition="!$EXP[infoscreen_visible]">NotifyAll(script.copacetic.helper,serve?lists=$VAR[serve_lists_primary]&amp;mark=artwork_cursor_primary&amp;is=$INFO[Window(home).Property(artwork_cursor_primary)])</onfocus>
 			<animation effect="slide" end="0,0" time="Default_Transition_1x" reversible="false">Focus</animation>
 		</control>
 	</include>
@@ -158,7 +158,8 @@
 					<param name="id" value="$PARAM[id]" />
 				</include>
 				<include content="atr_folderwatch" condition="$PARAM[folderwatch]" />
-				<!-- The arrival's visit and cursor, in Home and the media windows (and an info dialog loaded over them, whose rails write neither) -->
+				<!-- The arrival's visit and cursor, in Home and the media windows only: an include condition's Window.Is reads the topmost modal, and an
+				     info dialog is registered before it loads (GUIDialog.cpp:165-170), so its rails never mount these or the settle -->
 				<include content="atr_artwork_visit_stamp" condition="Window.Is(home) | Window.Is(videos) | Window.Is(music)" />
 				<include content="atr_artwork_cursor" condition="Window.Is(home) | Window.Is(videos) | Window.Is(music)">
 					<param name="id" value="$PARAM[id]" />
