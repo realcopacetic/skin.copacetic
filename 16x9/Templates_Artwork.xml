@@ -211,7 +211,7 @@
 					so its fade waits 2x: a first focus never fades in the previous item's slide -->
 				<include content="img_multiart_focused" condition="$EXP[multiart_window]">
 					<param name="ani_visible" value="Visible_Fade_Delayed_Long_Animation" />
-					<param name="visible" value="[$PARAM[multiart]] + [String.StartsWith(Container(9300).ListItem.Property(current),$PARAM[id]/) | $EXP[multiart_shown]]" />
+					<param name="visible" value="[$PARAM[multiart]] + [String.StartsWith(Window(home).Property(artwork_cursor_primary),$PARAM[id]/) | $EXP[multiart_shown]]" /><!-- as tpl_art_focused's: the cursor names this grid -->
 				</include>
 				<nested />
 				<include content="Icon_Component_Indicator" condition="Skin.HasSetting(Secondary_List_Enabled) + $PARAM[indicator]">

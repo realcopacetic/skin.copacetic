@@ -29,7 +29,8 @@
 				</include>
 				<include content="img_multiart_focused" condition="$EXP[multiart_window]">
 					<param name="register" value="$PARAM[multiart_register]" />
-					<param name="visible" value="[$PARAM[multiart]] + [String.StartsWith(Container(9300).ListItem.Property(current),$PARAM[id]/) | $EXP[multiart_shown]]" /><!-- a switch's first frame would draw the old container's slide; C1: the shown latch holds it through the embedded list's serve -->
+					<param name="visible" value="[$PARAM[multiart]] + [String.StartsWith(Window(home).Property(artwork_cursor_primary),$PARAM[id]/) | $EXP[multiart_shown]]" /><!-- a switch's first frame would draw the old container's slide: until its hook runs the cursor names the old one (C1: the cursor,
+						not 9300's current or item, which a load ring's token leaves without the list); C1: the shown latch holds it through the embedded list's serve -->
 					<include content="$PARAM[ani_dim]"><!-- C1: the slide dims with the art -->
 						<param name="condition" value="$PARAM[ani_dim_condition]" />
 					</include>
