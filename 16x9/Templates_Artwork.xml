@@ -72,7 +72,7 @@
 				<param name="fallback" value="$PARAM[fallback]" />
 				<!-- C2's darken under the slide (img_art_base). C1: the delay is the overlay's 2x delayed fade plus its 4x fadetime,
 					so the base stays opaque until the overlay is -->
-				<animation effect="fadediffuse" end="80000000" time="Default_Transition_1x" delay="1512" condition="[!String.IsEmpty(Container(9300).ListItem.Art(multiart)) | $EXP[multiart_slide_current]] + [$PARAM[multiart]]" reversible="false">Conditional</animation>
+				<animation effect="fadediffuse" end="80000000" time="Default_Transition_1x" delay="1512" condition="[$PARAM[multiart]]" reversible="false">Conditional</animation>
 			</include>
 		</definition>
 	</include>

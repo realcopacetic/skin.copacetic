@@ -47,7 +47,8 @@
 			<include content="img_art">
 				<param name="fadetime" value="$PARAM[fadetime]" />
 				<param name="texture" value="$VAR[texture_$PARAM[texture_stub]$PARAM[position]]" />
-				<animation effect="fadediffuse" end="80000000" time="Default_Transition_1x" delay="Default_Transition_4x" condition="[!String.IsEmpty(Container(9300).ListItem.Art(multiart)) | $EXP[multiart_slide_current]] + [$PARAM[multiart]]" reversible="false">Conditional</animation><!-- Delay matches img_multiart_focused's fadetime, so the base stays opaque until the overlay is -->
+				<animation effect="fadediffuse" end="80000000" time="Default_Transition_1x" delay="Default_Transition_4x" condition="[$PARAM[multiart]]" reversible="false">Conditional</animation><!-- Delay matches img_multiart_focused's fadetime, so the base stays opaque until the overlay is.
+					C1: every caller's multiart reads multiart_current_primary (a family or 9400's slide) or is false, so C2's family term is in it -->
 				<include content="$PARAM[ani_dim]"><!-- Dim hook on the image only: on grp_icon a fadediffuse would also tint the nested marks -->
 					<param name="condition" value="$PARAM[ani_dim_condition]" />
 				</include>
