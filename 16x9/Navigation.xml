@@ -228,12 +228,6 @@
 		<include content="Widget_Position_Reset_OnFocus" />
 	</include>
 
-	<include name="Multiart_Reset_OnLoad">
-		<!-- Home, Videos and Music are kept in memory: without these the next arrival would read the last visit's seed and skip reseeding (the cursor: Serve_OnLoadUnload) -->
-		<onunload condition="Skin.HasSetting(Multiart_Slideshow)">ClearProperty(multiart_seed_scope_3400,home)</onunload>
-		<onunload condition="Skin.HasSetting(Multiart_Slideshow)">ClearProperty(multiart_seed_sig_3400,home)</onunload>
-	</include>
-
 	<include name="Widget_Position_Reset_OnLoad">
 		<onload condition="Integer.IsGreater(Container(3000).CurrentItem,1)">Control.Move(3000,$INFO[Container(3000).CurrentItem,-])</onload>
 		<onload condition="Integer.IsGreater(Container(3000).CurrentItem,1)">Control.Move(3000,1)</onload>

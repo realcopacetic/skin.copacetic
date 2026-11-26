@@ -2,7 +2,6 @@
 <window>
 	<!-- home -->
 	<include content="Startup_Migrate_Settings" /> <!-- a skin update in place reloads the current window, not Startup -->
-	<include content="Multiart_Reset_OnLoad" />
 	<include content="Serve_OnLoadUnload" />
 	<include content="atr_trailer_window_stop" />
 	<onunload>ClearProperty(autoscroll_id,home)</onunload> <!-- a window exit sends no lost focus to the row -->

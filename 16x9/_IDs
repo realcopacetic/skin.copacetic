@@ -34,7 +34,6 @@ LISTS
 3200          Home rows grouplist (Home_Widgets); info dialogs rails grouplist (Infoscreen_Rails)
 32XX          Widgets (Home rows from 3201, generated; info screen rails 3201-3214 (mappings_infoscreen.json); global search rails)
 3300          Background slideshow container
-3400          Multiart fadelabel
 3500          Music player controls
 3600          PVR Navigation Menu
 3700          PVR Options menu

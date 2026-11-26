@@ -175,10 +175,6 @@
 				<!-- Grid position -->
 				<onfocus condition="Control.Hasfocus(505)">SetProperty(GridView_Column,$INFO[Container.Column],home)</onfocus>
 				<onfocus condition="Control.Hasfocus(505)">SetProperty(GridView_Row,$INFO[Container.Row],home)</onfocus>
-				<!-- Multiart -->
-				<include content="Multiart_Cursor" condition="Skin.HasSetting(Multiart_Slideshow) + [Window.Is(home) | Window.Is(videos) | Window.Is(music)]">
-					<param name="id" value="$PARAM[id]" />
-				</include>
 				<!-- infoline_changer timer -->
 				<onfocus condition="Skin.TimerIsRunning(infoline_changer)">Skin.TimerStop(infoline_changer)</onfocus>
 				<!-- Settings transition from addonbrowser -->

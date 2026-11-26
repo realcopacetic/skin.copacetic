@@ -40,32 +40,13 @@
     <value condition="$EXP[multiart_slide_current]">$INFO[Container(9400).ListItem.Art(slide)]</value>
     <value>$INFO[Container(9300).ListItem.Art(multiart)]</value>
   </variable>
-  <!-- Asks 9300 to seed (on a scrollbar, Artwork_Serve's first row reads none: seeding waits for focus to return) -->
+  <!-- Asks 9300 for the family (on a scrollbar, Artwork_Serve's first row reads none: it waits for focus to return) -->
   <expression name="multiart_serve">Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Control.GetLabel(6400))</expression>
 
+  <!-- cursor_key: the served handler names the bind's identity from the settle's cursor, visit and all (handlers.py artwork) -->
   <variable name="Params_Multiart">
-    <value condition="$EXP[multiart_serve]">&amp;cursor_key=primary&amp;multiart=$INFO[Control.GetLabel(6400)]&amp;multiart_fadelabel=3400&amp;multiart_max=15&amp;slides=9400:6932</value>
+    <value condition="$EXP[multiart_serve]">&amp;cursor_key=primary&amp;multiart=$INFO[Control.GetLabel(6400)]&amp;multiart_max=15&amp;slides=9400:6932</value>
   </variable>
-
-  <include name="Multiart_Cursor">
-    <param name="id" />
-    <definition>
-      <!-- A move starts the next item from its main image; a return from the embedded list, a menu or the music player keeps its visit
-           (atr_artwork_visit_stamp), which the helper's seed keys on, so its rotation carries on. Read against the cursor before this arrival's -->
-      <onfocus condition="$EXP[artwork_cursor_hook] + [Container($PARAM[id]).OnNext | Container($PARAM[id]).OnPrevious | !String.StartsWith(Window(home).Property(artwork_cursor_primary),$PARAM[id]/)]">ClearProperty(multiart_seed_sig_3400,home)</onfocus>
-    </definition>
-  </include>
-
-  <!-- The helper fills it through the artwork serve (9300): main image first, the rest in a random order -->
-  <include name="Multiart_Template">
-    <control type="fadelabel" id="3400">
-      <include content="Hidden_Control" />
-      <font>Body</font>
-      <pauseatend>Multiart_Pause</pauseatend>
-      <scroll>false</scroll>
-      <scrollout>false</scrollout>
-    </control>
-  </include>
 
   <include name="MyViews_Multiart_Labels">
     <include content="Hidden_Components">
@@ -85,7 +66,6 @@
       <itemlayout />
       <focusedlayout />
     </control>
-    <include content="Multiart_Template" />
   </include>
 
 </includes>
