@@ -140,6 +140,9 @@
 	<!-- 9500 answers the focused item (C2's progressbar_current_primary): the cursor begins with the item it served while no load ring is pending,
 	     or it answers the load ring's token. The item has no visit, so a kept bar reads as served on a return -->
 	<expression name="set_progress_ready">[!String.IsEmpty(Container(9500).ListItem.Property(item)) + String.IsEmpty(Window(home).Property(moved_primary)) + String.StartsWith(Window(home).Property(artwork_cursor_primary),Container(9500).ListItem.Property(item))] | [!String.IsEmpty(Container(9500).ListItem.Property(current)) + String.IsEqual(Container(9500).ListItem.Property(current),Window(home).Property(moved_primary))]</expression>
+	<!-- The net (prb_serve_net), one term per probe of serve_lists_primary: it names a handler (not empty or none) and reads other than its list was
+	     served with. A probe not mounted in the window reads empty there; 6910 never says wait -->
+	<expression name="serve_net_window">[!String.IsEmpty(Control.GetLabel(6910)) + !String.IsEqual(Control.GetLabel(6910),none) + !String.IsEqual(Control.GetLabel(6910),Container(9500).ListItem.Property(params))]</expression>
 
 	<!-- Sorts -->
 	<!-- Letters: Name, File, Artist, Artist/Year, Album, Title, Original title -->

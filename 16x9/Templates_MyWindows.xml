@@ -206,6 +206,7 @@
 			<description>Update library</description>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
+		<include content="prb_serve_net" />
 		<include content="Clearlogo_Crop_List" />
 	</include>
 
@@ -232,6 +233,7 @@
 			<param name="sortorder" value="ascending" />
 		</include>
 		<include content="Set_Progress_List" />
+		<include content="prb_serve_net" />
 		<include content="Clearlogo_Crop_List" />
 	</include>
 

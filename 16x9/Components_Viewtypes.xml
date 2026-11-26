@@ -39,6 +39,14 @@
 		</control>
 	</include>
 
+	<include name="prb_serve_net">
+		<!-- The net under the rings (C2's): 6939 shows while a probe that names a handler reads other than its list's Property(params) (a setting or
+		     the item's state changed at rest), and Timers.xml's serve_net rings for it. In each served window, outside anything that hides at rest -->
+		<control type="group" id="6939">
+			<visible>$EXP[serve_net_window]</visible>
+		</control>
+	</include>
+
 	<include name="Clearlogo_Crop_List">
 		<!-- The focused item's art serve (Artwork_Serve): its cropped clearlogo and its multiart; readers match the logo its serve echoes (Clearlogo_Served_*) -->
 		<include content="Hidden_List">
