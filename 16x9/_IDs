@@ -102,9 +102,9 @@ CHECKERS
 63XXX(X)      Details clearlogo sized by 9300 (63 + view id 501, 502, 504, or a Home row or info screen rail id)
 635X          GridView shadow checkers
 6400          Multiart Type
+650X          Music player / Notification checkers
 6910          Set progress probe (Set_Progress_List): 9500's params, read by the helper's service at 9500's turn of the ring (C2's id)
 6939          Served lists' net (prb_serve_net, Home, Videos and Music): up while a probe reads other than its list was served with; Timers.xml's serve_net rings
-650X          Music player / Notification checkers
 
 
 OTHER
