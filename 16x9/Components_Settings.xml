@@ -304,7 +304,6 @@
 					<param name="height" value="$PARAM[height]" />
 					<param name="onup" value="$PARAM[id]" />
 					<param name="ondown" value="$PARAM[id]" />
-					<param name="onleft" value="$PARAM[onleft]" />
 					<param name="focus_border_visible" value="$PARAM[focus_border_visible]" />
 					<param name="focus_border_margin_left" value="$PARAM[focus_border_margin_left]" />
 					<param name="focus_border_margin_right" value="0" />
@@ -367,7 +366,6 @@
 					<param name="focus_border_margin_left" value="0" />
 					<param name="focus_border_margin_right" value="$PARAM[focus_border_margin_right]" />
 					<param name="focus_color" value="$PARAM[focus_color]" />
-					<param name="textoffset" value="$PARAM[textoffset]" />
 					<param name="label_width" value="$PARAM[label_width]" />
 					<param name="label_shift" value="$PARAM[label_shift]" />
 					<param name="label" value="$PARAM[label]" />

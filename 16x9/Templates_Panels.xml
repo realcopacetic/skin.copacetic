@@ -68,7 +68,6 @@
 				<visible>$PARAM[visible]</visible>
 				<include content="Visible_Fade_Delayed_Long_Animation" />
 				<include content="SettingsCategory_Layout" condition="$PARAM[include_settings_categories]">
-					<param name="settings_level_button_visible" value="$PARAM[settings_level_button_visible]" />
 					<param name="left_list_id" value="$PARAM[left_list_id]" />
 					<param name="right_list_id" value="$PARAM[right_list_id]" />
 					<param name="alt_right_id" value="$PARAM[alt_right_id]" />
