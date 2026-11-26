@@ -586,7 +586,7 @@
 		<font>Default_Settings_Header</font>
 	</include>
 
-	<include name="skinsettings_Detfault_Image">
+	<include name="skinsettings_Default_Image">
 		<param name="height" default="450" />
 		<param name="fadetime" default="0" />
 		<definition>

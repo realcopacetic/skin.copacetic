@@ -42,7 +42,7 @@
 		<control type="image" id="1001">
 			<description>Themes screenshot</description>
 			<visible>$EXP[skinsettings_Category_General]</visible>
-			<include content="skinsettings_Detfault_Image" />
+			<include content="skinsettings_Default_Image" />
 			<texture>$VAR[skinsettings_Themes_Screenshots]</texture>
 		</control>
 		<control type="radiobutton" id="1002">
@@ -84,7 +84,7 @@
 		<control type="image" id="1018">
 			<description>Themes screenshot</description>
 			<visible>$EXP[skinsettings_Category_General]</visible>
-			<include content="skinsettings_Detfault_Image" />
+			<include content="skinsettings_Default_Image" />
 			<texture>$VAR[skinsettings_Clearlogo_Cropper_Screenshots]</texture>
 		</control>
 		<control type="button" id="1020">
@@ -332,7 +332,7 @@
 		<control type="image" id="1336">
 			<description>Grid watched screenshot</description>
 			<visible>$EXP[skinsettings_Category_Views]</visible>
-			<include content="skinsettings_Detfault_Image" />
+			<include content="skinsettings_Default_Image" />
 			<texture>$VAR[skinsettings_Grid_WatchedStatus_Screenshots]</texture>
 		</control>
 		<control type="radiobutton" id="1337">
@@ -356,7 +356,7 @@
 		<control type="image" id="1401">
 			<description>Unwatched episode count image</description>
 			<visible>$EXP[skinsettings_Category_Customisations]</visible>
-			<include content="skinsettings_Detfault_Image">
+			<include content="skinsettings_Default_Image">
 				<param name="height" value="360" />
 			</include>
 			<texture>$VAR[skinsettings_Episode_Count_Screenshots]</texture>
@@ -478,7 +478,7 @@
 		<control type="image" id="1501">
 			<description>Embedded lists image</description>
 			<visible>$EXP[skinsettings_Category_Extras]</visible>
-			<include content="skinsettings_Detfault_Image" />
+			<include content="skinsettings_Default_Image" />
 			<texture>$VAR[skinsettings_Embedded_Lists_Screenshots]</texture>
 		</control>
 		<control type="radiobutton" id="1502">
@@ -495,14 +495,14 @@
 		<control type="image" id="1511">
 			<description>Music player image</description>
 			<visible>$EXP[skinsettings_Category_Extras]</visible>
-			<include content="skinsettings_Detfault_Image" />
+			<include content="skinsettings_Default_Image" />
 			<texture>$VAR[skinsettings_Music_Player_Screenshots]</texture>
 		</control>
 		<control type="multiimage" id="1512">
 			<description>Music player multiimage</description>
 			<visible>$EXP[skinsettings_Category_Extras] + Skin.HasSetting(Music_Player_Enabled)</visible>
 			<top>-450</top>
-			<include content="skinsettings_Detfault_Image">
+			<include content="skinsettings_Default_Image">
 				<param name="fadetime" value="360" />
 			</include>
 			<imagepath>$VAR[skinsettings_Music_Player_Folder]</imagepath>
@@ -522,7 +522,7 @@
 		<control type="image" id="1521">
 			<description>Multiart slideshow image</description>
 			<visible>$EXP[skinsettings_Category_Extras]</visible>
-			<include content="skinsettings_Detfault_Image" />
+			<include content="skinsettings_Default_Image" />
 			<texture>$VAR[skinsettings_Multiart_Slideshow_Screenshots]</texture>
 		</control>
 		<control type="multiimage" id="1522">
@@ -530,7 +530,7 @@
 			<visible>$EXP[skinsettings_Category_Extras] + Skin.HasSetting(Multiart_Slideshow)</visible>
 			<top>-450</top>
 			<randomize>true</randomize>
-			<include content="skinsettings_Detfault_Image">
+			<include content="skinsettings_Default_Image">
 				<param name="fadetime" value="360" />
 			</include>
 			<imagepath>$VAR[skinsettings_Multiart_Slideshow_Folder]</imagepath>

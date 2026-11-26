@@ -565,7 +565,7 @@
 		<control type="image" id="2099">
 			<description>Layout screenshot, above the rows as in Skin settings</description>
 			<visible>!String.IsEqual(Container(100).ListItem.Property(layout),list)</visible>
-			<include content="skinsettings_Detfault_Image" />
+			<include content="skinsettings_Default_Image" />
 			<texture>$VAR[viewsettings_Screenshot]</texture>
 		</control>
 		<include content="viewsettings_Slider_Row">
