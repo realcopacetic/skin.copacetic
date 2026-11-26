@@ -247,13 +247,14 @@
 	</include>
 
 	<include name="img_multiart_focused">
+		<param name="ani_visible" default="Visible_Fade_Animation" /><!-- C1: the media Grid's cell delays it (ListIcon_Static_Focused) -->
 		<param name="register" default="3400" />
 		<definition>
 			<include content="img_art">
 				<param name="fadetime" value="Default_Transition_4x" />
 				<param name="texture" value="$VAR[texture_multiart_$PARAM[register]]" />
 				<param name="visible" value="$PARAM[visible]" />
-				<include content="Visible_Fade_Animation" />
+				<include content="$PARAM[ani_visible]" />
 				<nested />
 			</include>
 		</definition>
