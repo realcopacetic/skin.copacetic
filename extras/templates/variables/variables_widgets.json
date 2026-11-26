@@ -1,51 +1,96 @@
 {
   "mapping": "widgets",
   "variables": {
-    "Multiart_Type": {
-      "note": "The art family a row's multiart cycles; not a row's own art: every other case is Multiart_Type_Media.",
+    "label_multiart": {
+      "note": "Label 6400 (MyViews_Multiart_Labels): the family the focused item's multiart cycles, the focused Home row's or else the view's. A custom Fanart or Spotlight row showing episode thumbs (episode_thumbs) shows an episode's or video's own thumb, so one with no thumb1 cycles nothing.",
       "index": {
         "start": 3201
       },
       "filter": "In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom])",
       "values": [
+        [
+          {
+            "filter": "equals({episode_thumbs}, true) + In({art}, [Fanart, Spotlight])",
+            "condition": "Control.HasFocus({index}) + [String.IsEqual({listitem}.DBType,episode) | String.IsEqual({listitem}.DBType,video)] + String.IsEmpty({listitem}.Art(thumb1))",
+            "value": ""
+          },
+          {
+            "condition": "Control.HasFocus({index})",
+            "value": "$VAR[label_multiart_{texture_prefix}]"
+          }
+        ],
         {
-          "filter": "equals({art}, Posters) + equals({art_keyart}, true)",
-          "condition": "Control.HasFocus({index}) + String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Art(tvshow.keyart1))",
-          "value": "tvshow.keyart"
-        },
-        {
-          "filter": "equals({art}, Posters) + equals({art_keyart}, true)",
-          "condition": "Control.HasFocus({index}) + String.IsEqual(ListItem.DBType,episode) + String.IsEmpty(ListItem.Art(tvshow.keyart)) + !String.IsEmpty(ListItem.Art(tvshow.poster1))",
-          "value": "tvshow.poster"
-        },
-        {
-          "filter": "equals({art}, Posters) + not equals({art_keyart}, true)",
-          "condition": "Control.HasFocus({index}) + String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Art(tvshow.poster1))",
-          "value": "tvshow.poster"
-        },
-        {
-          "filter": "In({art}, [Fanart, Spotlight]) + equals({episode_thumbs}, true)",
-          "condition": "Control.HasFocus({index}) + String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Art(thumb1))",
-          "value": "thumb"
-        },
-        {
-          "filter": "In({art}, [Fanart, Spotlight]) + not equals({episode_thumbs}, true) + equals({art_landscape}, true)",
-          "condition": "Control.HasFocus({index}) + String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Art(tvshow.landscape1))",
-          "value": "tvshow.landscape"
-        },
-        {
-          "filter": "In({art}, [Fanart, Spotlight]) + not equals({episode_thumbs}, true)",
-          "condition": "Control.HasFocus({index}) + String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Art(tvshow.fanart1))",
-          "value": "tvshow.fanart"
-        },
-        {
-          "filter": "equals({art}, Square)",
-          "condition": "Control.HasFocus({index}) + String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Art(tvshow.square1))",
-          "value": "tvshow.square"
-        },
-        {
-          "value": "$VAR[Multiart_Type_Media]"
+          "value": "$VAR[label_multiart_primary]"
         }
+      ]
+    },
+    "label_multiart_{texture_prefix}": {
+      "note": "C2's rows (C2 variables_content.json), each family read through its context's art aggregates: art_*_visible for the views, art_*_visible_home for the focused row. C2's TMDb and favourite rows are left out: C1 has neither. The embedded list serves no multiart. C1's own row: a Home row's fanart tile draws an album's or song's cover, never its or its artist's fanart (texture_widgets_*_fanart*), so neither cycles any.",
+      "templates_from": [ "regions", "widgets" ],
+      "index": {
+        "start": 3201
+      },
+      "filter": "not equals({region}, secondary)",
+      "values": [
+        [
+          {
+            "condition": "!String.IsEmpty({listitem}.Art(thumb1)) + [String.IsEqual({listitem}.DBType,episode) | String.IsEqual({listitem}.DBType,album) | String.IsEqual({listitem}.DBType,song) | [String.IsEqual({listitem}.DBType,artist) + $EXP[art_square_{art_context}]]]",
+            "value": "thumb"
+          },
+          {
+            "condition": "!String.IsEmpty({listitem}.Art(keyart1)) + $EXP[art_poster_{art_context}] + $EXP[art_keyart_{art_context}]",
+            "value": "keyart"
+          },
+          {
+            "condition": "!String.IsEmpty({listitem}.Art(poster1)) + $EXP[art_poster_{art_context}] + [!$EXP[art_keyart_{art_context}] | String.IsEmpty({listitem}.Art(keyart))]",
+            "value": "poster"
+          },
+          {
+            "condition": "[Window.Is(home) | ![String.IsEqual({listitem}.DBType,episode) | String.IsEqual({listitem}.DBType,season)]] + !String.IsEmpty({listitem}.Art(tvshow.keyart1)) + $EXP[art_poster_{art_context}] + $EXP[art_keyart_{art_context}]",
+            "value": "tvshow.keyart"
+          },
+          {
+            "condition": "[Window.Is(home) | ![String.IsEqual({listitem}.DBType,episode) | String.IsEqual({listitem}.DBType,season)]] + !String.IsEmpty({listitem}.Art(tvshow.poster1)) + $EXP[art_poster_{art_context}] + [!$EXP[art_keyart_{art_context}] | String.IsEmpty({listitem}.Art(tvshow.keyart))]",
+            "value": "tvshow.poster"
+          },
+          {
+            "filter": "equals({region}, widgets)",
+            "condition": "[String.IsEqual({listitem}.DBType,album) | String.IsEqual({listitem}.DBType,song)] + $EXP[art_fanart_{art_context}]",
+            "value": ""
+          },
+          {
+            "condition": "!String.IsEmpty({listitem}.Art(landscape1)) + $EXP[art_fanart_{art_context}] + $EXP[art_landscape_{art_context}]",
+            "value": "landscape"
+          },
+          {
+            "condition": "!String.IsEmpty({listitem}.Art(fanart1)) + $EXP[art_fanart_{art_context}] + [!$EXP[art_landscape_{art_context}] | String.IsEmpty({listitem}.Art(landscape))]",
+            "value": "fanart"
+          },
+          {
+            "condition": "[Window.Is(home) | ![String.IsEqual({listitem}.DBType,episode) | String.IsEqual({listitem}.DBType,season)]] + !String.IsEmpty({listitem}.Art(tvshow.landscape1)) + $EXP[art_fanart_{art_context}] + $EXP[art_landscape_{art_context}]",
+            "value": "tvshow.landscape"
+          },
+          {
+            "condition": "[Window.Is(home) | ![String.IsEqual({listitem}.DBType,episode) | String.IsEqual({listitem}.DBType,season)]] + !String.IsEmpty({listitem}.Art(tvshow.fanart1)) + $EXP[art_fanart_{art_context}] + [!$EXP[art_landscape_{art_context}] | String.IsEmpty({listitem}.Art(tvshow.landscape))]",
+            "value": "tvshow.fanart"
+          },
+          {
+            "condition": "!String.IsEmpty({listitem}.Art(artist.landscape1)) + $EXP[art_fanart_{art_context}] + $EXP[art_landscape_{art_context}]",
+            "value": "artist.landscape"
+          },
+          {
+            "condition": "!String.IsEmpty({listitem}.Art(artist.fanart1)) + $EXP[art_fanart_{art_context}] + [!$EXP[art_landscape_{art_context}] | String.IsEmpty({listitem}.Art(landscape))]",
+            "value": "artist.fanart"
+          },
+          {
+            "condition": "!String.IsEmpty({listitem}.Art(square1)) + $EXP[art_square_{art_context}]",
+            "value": "square"
+          },
+          {
+            "condition": "[Window.Is(home) | ![String.IsEqual({listitem}.DBType,episode) | String.IsEqual({listitem}.DBType,season)]] + !String.IsEmpty({listitem}.Art(tvshow.square1)) + $EXP[art_square_{art_context}]",
+            "value": "tvshow.square"
+          }
+        ]
       ]
     },
     "Artwork_Serve": {

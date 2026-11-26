@@ -156,8 +156,74 @@
         }
       ]
     },
+    "art_{item}_visible": {
+      "note": "C2's names: the art family the visible window's view draws its focused item in (label_multiart_primary). List's Background and Billboard are fanart; List's Thumbnails follows Viewtype_50_List.xml: fanart (16:9) for videos and episodes, square for Containers_Square, poster for the rest. A kind shown outside its own window (music videos in Music, add-ons in Videos) gets List there (layout_list_visible_{window}'s fallback) with its List display, as display_{item}_visible counts it: so a kind on List tests no window, and one on another layout tests not its own window there. Thumbnails draws no 16:9 art outside Videos.",
+      "items": [ "poster", "fanart", "square" ],
+      "rules": [
+        {
+          "condition": "In({layout}, [showcase, strip, grid]) + In({display}_{item}, [posters_poster, fanart_fanart, square_square])",
+          "type": "append",
+          "value": "[{@windows:{window}.window_visible} + {condition}]"
+        },
+        {
+          "condition": "equals({layout}_{item}, billboard_fanart)",
+          "type": "append",
+          "value": "[{@windows:{window}.window_visible} + {condition}]"
+        },
+        {
+          "condition": "equals({layout}, list) + equals({display}, thumbnails) + In({content_type}_{item}, [videos_fanart, episodes_fanart])",
+          "type": "append",
+          "value": "[{@windows:{window}.window_visible} + {condition}]"
+        },
+        {
+          "condition": "equals({layout}, list) + equals({display}_{item}, background_fanart)",
+          "type": "append",
+          "value": "{condition}"
+        },
+        {
+          "condition": "equals({layout}, list) + equals({display}, thumbnails) + In({content_type}_{item}, [artists_square, albums_square, songs_square, addons_square, program_addons_square, images_square])",
+          "type": "append",
+          "value": "{condition}"
+        },
+        {
+          "condition": "equals({layout}, list) + equals({display}_{item}, thumbnails_poster) + not In({content_type}, [videos, episodes, artists, albums, songs, addons, program_addons, images])",
+          "type": "append",
+          "value": "{condition}"
+        },
+        {
+          "condition": "not equals({layout}, list) + equals({display}_{item}, background_fanart)",
+          "type": "append",
+          "value": "[!{@windows:{window}.window_visible} + {condition}]"
+        },
+        {
+          "condition": "In({display}, [posters, fanart, square]) + equals({item}, fanart) + In({content_type}, [movies, sets, tvshows, seasons, episodes, artists, musicvideos])",
+          "type": "append",
+          "value": "[!{@windows:{window}.window_visible} + {condition}]"
+        },
+        {
+          "condition": "not equals({layout}, list) + equals({display}, thumbnails) + In({content_type}_{item}, [artists_square, albums_square, songs_square, addons_square, program_addons_square, images_square])",
+          "type": "append",
+          "value": "[!{@windows:{window}.window_visible} + {condition}]"
+        },
+        {
+          "condition": "In({display}, [posters, fanart, square]) + In({content_type}_{item}, [albums_square, songs_square, addons_square, program_addons_square, images_square])",
+          "type": "append",
+          "value": "[!{@windows:{window}.window_visible} + {condition}]"
+        },
+        {
+          "condition": "not equals({layout}, list) + equals({display}_{item}, thumbnails_poster) + not In({content_type}, [videos, episodes, artists, albums, songs, addons, program_addons, images])",
+          "type": "append",
+          "value": "[!{@windows:{window}.window_visible} + {condition}]"
+        },
+        {
+          "condition": "In({display}, [posters, fanart, square]) + equals({item}, poster) + In({content_type}, [program_folders, program_files, favourites])",
+          "type": "append",
+          "value": "[!{@windows:{window}.window_visible} + {condition}]"
+        }
+      ]
+    },
     "art_keyart_visible": {
-      "note": "The visible window's art_keyart_visible_{window}, for art shared by every media window (texture_primary_*). Grid also shows keyart under its title or info overlay, as it always has.",
+      "note": "The visible window's art_keyart_visible_{window}, for art shared by every media window (texture_primary_*). Grid also shows keyart under its title or info overlay, as it always has. Showcase Posters under its details over the art too (the poster slots test those details themselves; this one is for label_multiart_primary, and only poster slots draw in Showcase Posters, blk_layouts).",
       "rules": [
         {
           "condition": "equals({art_keyart}, true) + In({layout}, [list, showcase, strip, grid])",
@@ -166,6 +232,11 @@
         },
         {
           "condition": "not equals({art_keyart}, true) + equals({layout}, grid) + In({details}, [title, info])",
+          "type": "append",
+          "value": "[{@windows:{window}.window_visible} + {condition}]"
+        },
+        {
+          "condition": "not equals({art_keyart}, true) + equals({layout}, showcase) + equals({display}, posters) + In({details}, [title_overlay, info_overlay])",
           "type": "append",
           "value": "[{@windows:{window}.window_visible} + {condition}]"
         }

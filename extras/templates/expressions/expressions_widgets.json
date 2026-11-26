@@ -69,13 +69,20 @@
       "index": { "start": 3201 },
       "rules": [ { "condition": "equals({art_clearlogo}, true)", "type": "append", "value": "{focused}" } ]
     },
+    "art_{item}_visible_{window}": {
+      "note": "C2's names: the focused row's art (label_multiart_widgets_*); Billboard's is Fanart, Spotlight draws the fanart chain.",
+      "index": { "start": 3201 },
+      "items": [ "poster", "fanart", "square" ],
+      "rules": [ { "condition": "In({art}_{item}, [Posters_poster, Fanart_fanart, Spotlight_fanart, Square_square])", "type": "append", "value": "{focused}" } ]
+    },
     "art_keyart_visible_{window}": {
       "index": { "start": 3201 },
       "rules": [ { "condition": "equals({art_keyart}, true)", "type": "append", "value": "{focused}" } ]
     },
     "art_landscape_visible_{window}": {
+      "note": "Not Billboard, which never draws landscape (its slot, texture_widgets_*_fanart0): the switch is hidden there but keeps a value set on another layout.",
       "index": { "start": 3201 },
-      "rules": [ { "condition": "equals({art_landscape}, true)", "type": "append", "value": "{focused}" } ]
+      "rules": [ { "condition": "equals({art_landscape}, true) + not equals({layout}, Billboard)", "type": "append", "value": "{focused}" } ]
     },
     "container_scrolling_{region}": {
       "note": "A Strip rail's scroll names (strip.xml): each rail window's User_Scroll_Delay latches, 5001 prev and 5002 next, as container_scrolling_primary reads them.",

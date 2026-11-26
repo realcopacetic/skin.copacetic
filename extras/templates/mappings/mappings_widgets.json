@@ -20,6 +20,7 @@
     },
     "default_order": [ "in_progress", "next_up", "latest_movies", "latest_tvshows" ],
     "tokens": {
+      "art_context": "visible_home",
       "focused": "String.IsEqual(Window(home).Property(Home_Widget),{index})",
       "listitem": "Container({index}).ListItem",
       "rail_id": "{index}",

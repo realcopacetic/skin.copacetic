@@ -51,7 +51,7 @@
   <include name="MyViews_Multiart_Labels">
     <include content="Hidden_Components">
       <control type="label" id="6400">
-        <label>$VAR[Multiart_Type]</label>
+        <label>$VAR[label_multiart]</label>
       </control>
     </include>
     <!-- C2's slides: the service turns the family 9300's bind carries on 9400, a list with no <content>, one bind a beat, each slide made with

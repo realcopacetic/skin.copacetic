@@ -71,12 +71,6 @@
 	<!-- Accent picker colours (Kodi's system/dialogcolors.xml) dark enough for light text: luminance 0.179 or less -->
 	<expression name="Accent_Color_IsDark">Skin.String(User_Defined_Accent_Color,FFBF3F3F) | Skin.String(User_Defined_Accent_Color,FFA43482) | Skin.String(User_Defined_Accent_Color,FF000000) | Skin.String(User_Defined_Accent_Color,FF7366BD) | Skin.String(User_Defined_Accent_Color,FFCB4154) | Skin.String(User_Defined_Accent_Color,FF2B6CC4) | Skin.String(User_Defined_Accent_Color,FF6E5160) | Skin.String(User_Defined_Accent_Color,FF616161) | Skin.String(User_Defined_Accent_Color,FF424242) | Skin.String(User_Defined_Accent_Color,FF1164B4) | Skin.String(User_Defined_Accent_Color,FF8F482F) | Skin.String(User_Defined_Accent_Color,FF3C32CD) | Skin.String(User_Defined_Accent_Color,FFCA3767) | Skin.String(User_Defined_Accent_Color,FF6B4D82) | Skin.String(User_Defined_Accent_Color,FFC8385A) | Skin.String(User_Defined_Accent_Color,FF1A4876) | Skin.String(User_Defined_Accent_Color,FF4F2CD0) | Skin.String(User_Defined_Accent_Color,FF1974D2) | Skin.String(User_Defined_Accent_Color,FF414A4C) | Skin.String(User_Defined_Accent_Color,FF5F7B4A) | Skin.String(User_Defined_Accent_Color,FF158078) | Skin.String(User_Defined_Accent_Color,FF8E4585) | Skin.String(User_Defined_Accent_Color,FF7442C8) | Skin.String(User_Defined_Accent_Color,FF212121) | Skin.String(User_Defined_Accent_Color,FF714B23) | Skin.String(User_Defined_Accent_Color,FF9F3434) | Skin.String(User_Defined_Accent_Color,FFC0448F) | Skin.String(User_Defined_Accent_Color,FF7851A9) | Skin.String(User_Defined_Accent_Color,FF757575) | Skin.String(User_Defined_Accent_Color,FF17806D) | Skin.String(User_Defined_Accent_Color,FF324AB2) | Skin.String(User_Defined_Accent_Color,FF8F509D)</expression>
 
-	<!-- Artwork -->
-	<expression name="Prefer_Keyart_Media">$EXP[art_keyart_visible_videos] + !$EXP[Infoscreen_IsVisible]</expression>
-	<expression name="Prefer_Keyart">$EXP[Prefer_Keyart_Media] | $EXP[art_keyart_visible_home]</expression>
-	<expression name="Prefer_Landscape_Media">[$EXP[art_landscape_visible_videos] | $EXP[art_landscape_visible_music] | $EXP[art_landscape_visible_programs] | [$EXP[art_landscape_visible_addonbrowser] + Window.IsVisible(addonbrowser)] | $EXP[art_landscape_visible_pictures] | $EXP[art_landscape_visible_favourites]] + !$EXP[Infoscreen_IsVisible]</expression>
-	<expression name="Prefer_Landscape">$EXP[Prefer_Landscape_Media] | $EXP[art_landscape_visible_home]</expression>
-
 	<!-- Containers and Content -->
 	<expression name="Containers_Posters">Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | $EXP[Container_Programs_IsFolders] | $EXP[Container_Programs_IsFiles]</expression>
 	<expression name="Containers_Square">Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(addons) | Container.Content(images)</expression>
@@ -315,8 +309,6 @@
 	<!-- Display: Square -->
 	<expression name="GridView_Display_IsSquare">[$EXP[GridView_Media_IsVisible] + [$EXP[display_square_visible] | Container.Content(songs) | $EXP[Container_Plugin_Empty] | [Container.Content(files) + String.Contains(Container.PluginName,YouTube)] | Container.Content()]] | $EXP[GridView_Display_IsSquare_Widget]</expression>
 	<expression name="GridView_Display_IsSquare_Widget">$EXP[GridView_Display_IsSquare_Widget_Home] | $EXP[GridView_Display_IsSquare_Widget_Infoscreen]</expression>
-	<!-- Spotlight -->
-	<expression name="GridView_Display_IsSpotlight">$EXP[GridView_Display_IsSpotlight_Widget]</expression>
 	<!-- Details -->
 	<expression name="GridView_Details_Off">$EXP[details_off_visible]</expression>
 	<expression name="GridView_Details_Title">$EXP[details_title_visible] | Container.Content(files)</expression>
