@@ -4,6 +4,7 @@
 	<onload condition="!String.Contains(Control.GetLabel(13),*)">Skin.SetString(AutoUpdate,off)</onload>
 	<onunload>ClearProperty(Focused_Button,addoninformation)</onunload>
 	<onunload>ClearProperty(AddonDetails,home)</onunload>
+	<include content="Serve_Infoscreen_OnUnload" />
 	<defaultcontrol always="true">3000</defaultcontrol>
 	<controls>
 		<control type="radiobutton" id="13">

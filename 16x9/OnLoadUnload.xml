@@ -73,7 +73,7 @@
 		<!-- An info dialog closing back to Home or a media window (no info dialog left: a closing dialog leaves the list before its unload runs,
 		     GUIDialog.cpp:102-109): a ring with no lists serves that window's last request again (C2's loads.xml), for a settle the dialog held -->
 		<onunload condition="!$EXP[infoscreen_visible] + [Window.IsActive(home) | Window.IsActive(videos) | Window.IsActive(music)]">SetProperty(moved_primary,m$INFO[System.Time(hh:mm:ss)]Info,home)</onunload>
-		<onunload condition="!$EXP[infoscreen_visible] + [Window.IsActive(home) | Window.IsActive(videos) | Window.IsActive(music)]">NotifyAll(script.copacetic.helper,serve?mark=moved_primary&amp;is=$INFO[Window(home).Property(moved_primary)]&amp;wait=252)</onunload>
+		<onunload condition="!$EXP[infoscreen_visible] + [Window.IsActive(home) | Window.IsActive(videos) | Window.IsActive(music)]">NotifyAll(script.copacetic.helper,serve?mark=moved_primary&amp;is=$INFO[Window(home).Property(moved_primary)]&amp;wait=252&amp;item=$INFO[Window(home).Property(artwork_cursor_primary)])</onunload><!-- item: the cursor names its list, whose item the bind names (not the token's empty one) -->
 	</include>
 
 	<include name="movieinformation_OnLoadUnload">
