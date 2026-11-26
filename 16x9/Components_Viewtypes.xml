@@ -62,13 +62,6 @@
 		</control>
 	</include>
 
-	<include name="Clearlogo_Crop_Pass">
-		<!-- On the view: a serve still running as focus leaves or returns (options menu, scrollbars, music player) lands unsized, and the URL stays
-		     the same. Each return stamps pass with the time and a flipped letter (two in one second differ), so the serve reruns and sizes the logo -->
-		<onfocus condition="String.EndsWith(Window(home).Property(Clearlogo_Crop_Pass),a)">SetProperty(Clearlogo_Crop_Pass,$INFO[System.Time(hh:mm:ss)]b,home)</onfocus>
-		<onfocus condition="!String.EndsWith(Window(home).Property(Clearlogo_Crop_Pass),a)">SetProperty(Clearlogo_Crop_Pass,$INFO[System.Time(hh:mm:ss)]a,home)</onfocus>
-	</include>
-
 	<include name="User_Scroll_Delay_Template">
 		<param name="onprevious_id" default="5001" />
 		<param name="onprevious_trigger" default="Container.OnPrevious | Container(50).OnPrevious | $EXP[infoscreen_onprevious] | $EXP[widgets_home_onprevious] | Container(11).OnPrevious | Container(52).OnPrevious" />

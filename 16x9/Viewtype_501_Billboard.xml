@@ -11,7 +11,6 @@
 				<param name="viewtype_label" value="Billboard" />
 				<param name="viewtype" value="wide" />
 				<param name="orientation" value="horizontal" />
-				<include content="Clearlogo_Crop_Pass" condition="Window.Is(videos) | Window.Is(music)" />
 			</include>
 		</control>
 	</include>

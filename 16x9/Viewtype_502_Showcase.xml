@@ -16,7 +16,6 @@
 				<include content="blk_layouts">
 					<param name="width" value="480" />
 				</include>
-				<include content="Clearlogo_Crop_Pass" condition="Window.Is(videos) | Window.Is(music)" />
 			</include>
 		</control>
 	</include>
