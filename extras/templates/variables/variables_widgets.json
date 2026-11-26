@@ -49,12 +49,16 @@
       ]
     },
     "Artwork_Serve": {
-      "note": "Probe 6930 (Clearlogo_Crop_List), read by the helper's service at 9300's turn of the ring: the focused item's clearlogo crop and multiart, params with no plugin prefix. Each image is read whole by its source (clearlogo_source, icon_source, background_source), so a row carries no URL. The view's logo rows name the view (focus_ids): a serve that focus leaves stops unbound rather than landing unsized, as a return keeps the visit and repeats the cursor. The multiart rows' icon_source is only there so artwork() runs and seeds an item with no logo. none for anything else, last of all, so a mounted 9300 always answers.",
+      "note": "Probe 6930 (Clearlogo_Crop_List), read by the helper's service at 9300's turn of the ring: the focused item's clearlogo crop and multiart, params with no plugin prefix. Each image is read whole by its source (clearlogo_source, icon_source, background_source), so a row carries no URL. none on a scrollbar, whose paging moves the item with no arrival (the cursor is cleared there), so the net stays quiet. The view's logo rows name the view (focus_ids): a serve that focus leaves stops unbound rather than landing unsized, as a return keeps the visit and repeats the cursor. The multiart rows' icon_source is only there so artwork() runs and seeds an item with no logo. none for anything else, last of all, so a mounted 9300 always answers.",
       "index": {
         "start": 3201
       },
       "filter": "In({widget_preset}, [in_progress, next_up, latest_movies, random_movies, latest_tvshows, random_tvshows, latest_albums, recent_albums, random_albums, liked_songs, favourites, custom])",
       "values": [
+        {
+          "condition": "$EXP[Scrollbar_HasFocus]",
+          "value": "none"
+        },
         {
           "condition": "$EXP[Clearlogo_Crop_Secondary] + String.IsEqual(Container.ViewMode,Billboard)",
           "value": "info=artwork&clean_label=Container(3100).ListItem.Art(clearlogo)&clearlogo_crop=true&clearlogo_fit=640,240&clearlogo_fit_ids=63501&clearlogo_fit_key=$INFO[Container(3100).ListItem.DBType]:$INFO[Container(3100).ListItem.DBID]&cursor_key=primary&focus_guard=$INFO[Container(3100).CurrentItem]&focus_ids=3100&target=3100&clearlogo_source=Container(3100).ListItem.Art(clearlogo)"

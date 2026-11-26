@@ -37,8 +37,8 @@
   <variable name="texture_multiart_3400">
     <value>$INFO[Control.GetLabel(3400)]</value>
   </variable>
-  <!-- Asks 9300 to seed: the scrollbars page the list without a focus change, so seeding waits for focus to return -->
-  <expression name="multiart_serve">Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Control.GetLabel(6400)) + !$EXP[Scrollbar_HasFocus]</expression>
+  <!-- Asks 9300 to seed (on a scrollbar, Artwork_Serve's first row reads none: seeding waits for focus to return) -->
+  <expression name="multiart_serve">Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Control.GetLabel(6400))</expression>
 
   <variable name="Params_Multiart">
     <value condition="$EXP[multiart_serve]">&amp;cursor_key=primary&amp;multiart=$INFO[Control.GetLabel(6400)]&amp;multiart_fadelabel=3400&amp;multiart_max=15</value>
