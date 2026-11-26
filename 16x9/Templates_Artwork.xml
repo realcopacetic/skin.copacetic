@@ -72,7 +72,7 @@
 				<param name="fallback" value="$PARAM[fallback]" />
 				<!-- C2's darken under the slide (img_art_base). C1: the delay is the overlay's 2x delayed fade plus its 4x fadetime,
 					so the base stays opaque until the overlay is -->
-				<animation effect="fadediffuse" end="80000000" time="Default_Transition_1x" delay="1512" condition="[!String.IsEmpty(Container(9300).ListItem.Art(multiart)) | $EXP[multiart_shown]] + [$PARAM[multiart]]" reversible="false">Conditional</animation>
+				<animation effect="fadediffuse" end="80000000" time="Default_Transition_1x" delay="1512" condition="[!String.IsEmpty(Container(9300).ListItem.Art(multiart)) | $EXP[multiart_slide_current]] + [$PARAM[multiart]]" reversible="false">Conditional</animation>
 			</include>
 		</definition>
 	</include>
@@ -207,11 +207,11 @@
 					<param name="fallback" value="$PARAM[fallback]" />
 					<param name="multiart" value="$PARAM[multiart]" />
 				</include>
-				<!-- Multiart: C2's overlay, as tpl_art_focused draws it. The cell reads register 3400 only every infoupdate (500 ms),
+				<!-- Multiart: C2's overlay, as tpl_art_focused draws it. The cell reads its slide only every infoupdate (500 ms),
 					so its fade waits 2x: a first focus never fades in the previous item's slide -->
 				<include content="img_multiart_focused" condition="$EXP[multiart_window]">
 					<param name="ani_visible" value="Visible_Fade_Delayed_Long_Animation" />
-					<param name="visible" value="[$PARAM[multiart]] + [String.StartsWith(Window(home).Property(artwork_cursor_primary),$PARAM[id]/) | $EXP[multiart_shown]]" /><!-- as tpl_art_focused's: the cursor names this grid -->
+					<param name="visible" value="[$PARAM[multiart]] + String.StartsWith(Window(home).Property(artwork_cursor_primary),$PARAM[id]/)" /><!-- as tpl_art_focused's: the cursor names this grid -->
 				</include>
 				<nested />
 				<include content="Icon_Component_Indicator" condition="Skin.HasSetting(Secondary_List_Enabled) + $PARAM[indicator]">

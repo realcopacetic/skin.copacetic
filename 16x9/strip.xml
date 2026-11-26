@@ -216,7 +216,7 @@
 					<include content="tpl_art_focused">
 						<param name="height" value="$PARAM[focus_height]" />
 						<param name="id" value="$PARAM[id]" />
-						<param name="multiart" value="!$EXP[container_scrolling_$PARAM[region]] + [$EXP[multiart_current_3400] | $EXP[multiart_shown]] + !String.IsEqual(Container.FolderName,ListItem.Title)" /><!-- multiart_shown holds it while the embedded list's serve replaces 9300; not inside a movie's versions -->
+						<param name="multiart" value="!$EXP[container_scrolling_$PARAM[region]] + $EXP[multiart_current_primary] + !String.IsEqual(Container.FolderName,ListItem.Title)" /><!-- 9400's slide holds it while the embedded list's serve replaces 9300; not inside a movie's versions -->
 						<param name="position" value="0" />
 						<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
 						<param name="width" value="$PARAM[focus_width]" />
@@ -416,7 +416,7 @@
 					<param name="visible" value="Container($PARAM[id]).OnPrevious" />
 					<param name="width" value="$PARAM[focus_width]" />
 					<include content="img_multiart_unfocused" condition="$EXP[multiart_window]">
-						<param name="visible" value="Container($PARAM[id]).OnPrevious + [[String.IsEqual(Container(9300).ListItem.Property(previous_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(next),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(next),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_shown] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- C1: or the focus's held slide, while 9300 still holds the embedded list's serve -->
+						<param name="visible" value="Container($PARAM[id]).OnPrevious + [[String.IsEqual(Container(9300).ListItem.Property(previous_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(next),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(next),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_slide_current] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- C1: or the focus's held slide, while 9300 still holds the embedded list's serve -->
 					</include>
 					<include content="grp_collection_indicator">
 						<param name="id" value="$PARAM[id]" />
@@ -583,7 +583,7 @@
 					<param name="visible" value="Container($PARAM[id]).OnNext + [$PARAM[left_visible]]" />
 					<param name="width" value="$PARAM[focus_width]" />
 					<include content="img_multiart_unfocused" condition="$EXP[multiart_window]">
-						<param name="visible" value="Container($PARAM[id]).OnNext + [[String.IsEqual(Container(9300).ListItem.Property(next_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(previous),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(previous),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_shown] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- as the prev ladder's -->
+						<param name="visible" value="Container($PARAM[id]).OnNext + [[String.IsEqual(Container(9300).ListItem.Property(next_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(previous),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(previous),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_slide_current] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- as the prev ladder's -->
 					</include>
 					<include content="grp_collection_indicator">
 						<param name="id" value="$PARAM[id]" />
@@ -605,7 +605,7 @@
 					<param name="visible" value="Container($PARAM[id]).OnNext + ![$PARAM[left_visible]]" />
 					<param name="width" value="$PARAM[focus_width]" />
 					<include content="img_multiart_unfocused" condition="$EXP[multiart_window]">
-						<param name="visible" value="Container($PARAM[id]).OnNext + [[String.IsEqual(Container(9300).ListItem.Property(next_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(previous),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(previous),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_shown] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- as the prev ladder's -->
+						<param name="visible" value="Container($PARAM[id]).OnNext + [[String.IsEqual(Container(9300).ListItem.Property(next_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(previous),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(previous),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_slide_current] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- as the prev ladder's -->
 					</include>
 					<include content="grp_collection_indicator">
 						<param name="id" value="$PARAM[id]" />

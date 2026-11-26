@@ -75,7 +75,7 @@
 							<param name="fallback" value="views/dark_grey_100.png" />
 							<param name="id" value="505" />
 							<param name="indicator" value="false" />
-							<param name="multiart" value="!$EXP[container_scrolling_primary] + [$EXP[multiart_current_3400] | $EXP[multiart_shown]] + !String.IsEqual(Container.FolderName,ListItem.Title)" /><!-- Strip's terms: not inside a movie's versions; ListItem is the cell's item -->
+							<param name="multiart" value="!$EXP[container_scrolling_primary] + $EXP[multiart_current_primary] + !String.IsEqual(Container.FolderName,ListItem.Title)" /><!-- Strip's terms: not inside a movie's versions; ListItem is the cell's item -->
 							<param name="texture" value="$PARAM[texture]" />
 							<!-- Progress overlay -->
 							<include content="Icon_Component_Progress_Overlay" condition="Window.Is(home) | Window.Is(videos) | Window.Is(movieinformation)">

@@ -28,14 +28,17 @@
   <!-- 9300 holds the focused item: its bind's item (the cursor without its visit; an info dialog's close ring binds its token as current), or (C2's)
        a load ring's serve, which names no item, while its token stands (a service started after the window: Kodi's start, a helper restart) -->
   <expression name="multiart_item_current">[String.IsEqual(Container(9300).ListItem.Property(item),Window(home).Property(artwork_item_primary)) + !String.IsEmpty(Window(home).Property(artwork_item_primary))] | [String.IsEmpty(Container(9300).ListItem.Property(item)) + !String.IsEmpty(Window(home).Property(artwork_item_primary)) + !String.IsEmpty(Window(home).Property(moved_primary)) + String.IsEqual(Container(9300).ListItem.Property(current),Window(home).Property(moved_primary))]</expression>
-  <!-- ...and that serve seeded register 3400 -->
-  <expression name="multiart_current_3400">$EXP[multiart_item_current] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))</expression>
-  <expression name="multiart_shown">Control.IsVisible(5012)</expression>
-  <!-- The windows holding register 3400 (MyViews_Multiart_Labels): include condition for the multiart images of the views on C2's code -->
+  <!-- ...and its family turns (C2's name): 9300's own, or 9400's slide for it, held while the embedded list's serve leaves 9300 the item with none -->
+  <expression name="multiart_current_primary">$EXP[multiart_item_current] + [!String.IsEmpty(Container(9300).ListItem.Art(multiart)) | $EXP[multiart_slide_current]]</expression>
+  <!-- 9400 has turned for the item 9300 holds (C2's multiart_band_current): the same identity, which C1's kept visit makes the arrival's (so an info
+       close carries on), or 9300's current extends it (the embedded list's serve: the cursor's s<position> suffix). Unmoved by the cursor, as 9300 is -->
+  <expression name="multiart_slide_current">!String.IsEmpty(Container(9400).ListItem.Property(identity)) + [String.IsEqual(Container(9400).ListItem.Property(identity),Container(9300).ListItem.Property(identity)) | String.StartsWith(Container(9300).ListItem.Property(current),Container(9400).ListItem.Property(identity))]</expression>
+  <!-- The windows holding 9400 (MyViews_Multiart_Labels): include condition for the multiart images of the views on C2's code -->
   <expression name="multiart_window">Skin.HasSetting(Multiart_Slideshow) + [Window.Is(home) | Window.Is(videos) | Window.Is(music)]</expression>
-  <!-- Register 3400's slide, as those images read it -->
-  <variable name="texture_multiart_3400">
-    <value>$INFO[Control.GetLabel(3400)]</value>
+  <!-- The slide on screen (C2's): 9400's once it has turned for 9300's item, else slide 0, 9300's own; 9400 keeps its slide when the turn stops -->
+  <variable name="texture_multiart">
+    <value condition="$EXP[multiart_slide_current]">$INFO[Container(9400).ListItem.Art(slide)]</value>
+    <value>$INFO[Container(9300).ListItem.Art(multiart)]</value>
   </variable>
   <!-- Asks 9300 to seed (on a scrollbar, Artwork_Serve's first row reads none: seeding waits for focus to return) -->
   <expression name="multiart_serve">Skin.HasSetting(Multiart_Slideshow) + !String.IsEmpty(Control.GetLabel(6400))</expression>
@@ -51,14 +54,6 @@
            (atr_artwork_visit_stamp), which the helper's seed keys on, so its rotation carries on. Read against the cursor before this arrival's -->
       <onfocus condition="$EXP[artwork_cursor_hook] + [Container($PARAM[id]).OnNext | Container($PARAM[id]).OnPrevious | !String.StartsWith(Window(home).Property(artwork_cursor_primary),$PARAM[id]/)]">ClearProperty(multiart_seed_sig_3400,home)</onfocus>
     </definition>
-  </include>
-
-  <!-- On when a serve seeds the focused item; held after the embedded list's serve replaces 9300, which names the same item with no multiart.
-       Reads its own state (law: a control's visible may read its own Control.IsVisible); false at open, as the cursor is cleared on unload -->
-  <include name="Multiart_Shown_Latch">
-    <control type="group" id="5012">
-      <visible>[$EXP[multiart_current_3400] | Control.IsVisible(5012)] + $EXP[multiart_item_current]</visible>
-    </control>
   </include>
 
   <!-- The helper fills it through the artwork serve (9300): main image first, the rest in a random order -->
@@ -90,7 +85,6 @@
       <itemlayout />
       <focusedlayout />
     </control>
-    <include content="Multiart_Shown_Latch" />
     <include content="Multiart_Template" />
   </include>
 

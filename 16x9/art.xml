@@ -7,7 +7,6 @@
 		<param name="ani_dim" default="efx_none" />
 		<param name="ani_dim_condition" default="false" />
 		<param name="multiart" default="false" />
-		<param name="multiart_register" default="3400" />
 		<param name="position" default="0" />
 		<param name="visible" default="true" />
 		<definition>
@@ -28,9 +27,8 @@
 					<param name="texture_stub" value="$PARAM[texture_stub]" />
 				</include>
 				<include content="img_multiart_focused" condition="$EXP[multiart_window]">
-					<param name="register" value="$PARAM[multiart_register]" />
-					<param name="visible" value="[$PARAM[multiart]] + [String.StartsWith(Window(home).Property(artwork_cursor_primary),$PARAM[id]/) | $EXP[multiart_shown]]" /><!-- a switch's first frame would draw the old container's slide: until its hook runs the cursor names the old one (C1: the cursor,
-						not 9300's current or item, which a load ring's token leaves without the list); C1: the shown latch holds it through the embedded list's serve -->
+					<param name="visible" value="[$PARAM[multiart]] + String.StartsWith(Window(home).Property(artwork_cursor_primary),$PARAM[id]/)" /><!-- a switch's first frame would draw the old container's slide: until its hook runs the cursor names
+						the old one (C1: the cursor, not 9300's current or item, which a load ring's token leaves without the list) -->
 					<include content="$PARAM[ani_dim]"><!-- C1: the slide dims with the art -->
 						<param name="condition" value="$PARAM[ani_dim_condition]" />
 					</include>
@@ -49,7 +47,7 @@
 			<include content="img_art">
 				<param name="fadetime" value="$PARAM[fadetime]" />
 				<param name="texture" value="$VAR[texture_$PARAM[texture_stub]$PARAM[position]]" />
-				<animation effect="fadediffuse" end="80000000" time="Default_Transition_1x" delay="Default_Transition_4x" condition="[!String.IsEmpty(Container(9300).ListItem.Art(multiart)) | $EXP[multiart_shown]] + [$PARAM[multiart]]" reversible="false">Conditional</animation><!-- Delay matches img_multiart_focused's fadetime, so the base stays opaque until the overlay is -->
+				<animation effect="fadediffuse" end="80000000" time="Default_Transition_1x" delay="Default_Transition_4x" condition="[!String.IsEmpty(Container(9300).ListItem.Art(multiart)) | $EXP[multiart_slide_current]] + [$PARAM[multiart]]" reversible="false">Conditional</animation><!-- Delay matches img_multiart_focused's fadetime, so the base stays opaque until the overlay is -->
 				<include content="$PARAM[ani_dim]"><!-- Dim hook on the image only: on grp_icon a fadediffuse would also tint the nested marks -->
 					<param name="condition" value="$PARAM[ani_dim_condition]" />
 				</include>
@@ -175,13 +173,12 @@
 	<include name="img_multiart_unfocused">
 		<param name="flipx" default="false" />
 		<param name="flipy" default="false" />
-		<param name="register" default="3400" />
 		<definition>
 			<include content="img_art">
 				<param name="fadetime" value="0" />
 				<param name="flipx" value="$PARAM[flipx]" />
 				<param name="flipy" value="$PARAM[flipy]" />
-				<param name="texture" value="$VAR[texture_multiart_$PARAM[register]]" />
+				<param name="texture" value="$VAR[texture_multiart]" />
 				<param name="visible" value="$PARAM[visible]" />
 				<include content="fade_animation">
 					<param name="time" value="1x" />
@@ -249,11 +246,10 @@
 
 	<include name="img_multiart_focused">
 		<param name="ani_visible" default="Visible_Fade_Animation" /><!-- C1: the media Grid's cell delays it (ListIcon_Static_Focused) -->
-		<param name="register" default="3400" />
 		<definition>
 			<include content="img_art">
 				<param name="fadetime" value="Default_Transition_4x" />
-				<param name="texture" value="$VAR[texture_multiart_$PARAM[register]]" />
+				<param name="texture" value="$VAR[texture_multiart]" />
 				<param name="visible" value="$PARAM[visible]" />
 				<include content="$PARAM[ani_visible]" />
 				<nested />

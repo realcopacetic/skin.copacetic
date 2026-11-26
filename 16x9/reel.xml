@@ -115,7 +115,7 @@
 						<param name="ani_dim_condition" value="[[$PARAM[overlay]] | [$PARAM[dim_focus]] | [$EXP[TransparentDialog_IsVisible] + [$PARAM[right_visible]] + !String.IsEmpty(Window(home).Property(OptionsMenuTransition))]] + !$EXP[Infoscreen_Widget_HasFocus]" /><!-- C1: half bright under the overlay details or the options menu, or while dim_focus -->
 						<param name="height" value="$PARAM[item_height]" />
 						<param name="id" value="$PARAM[id]" />
-						<param name="multiart" value="!$EXP[container_scrolling_$PARAM[region]] + [$EXP[multiart_current_3400] | $EXP[multiart_shown]] + !String.IsEqual(Container.FolderName,ListItem.Title)" /><!-- as Strip's: held through the embedded list's serve; not inside a movie's versions -->
+						<param name="multiart" value="!$EXP[container_scrolling_$PARAM[region]] + $EXP[multiart_current_primary] + !String.IsEqual(Container.FolderName,ListItem.Title)" /><!-- as Strip's: held through the embedded list's serve; not inside a movie's versions -->
 						<param name="position" value="0" />
 						<param name="texture_stub" value="$PARAM[texture_prefix]_$PARAM[art]" />
 						<param name="width" value="$PARAM[item_width]" />
@@ -181,7 +181,7 @@
 							<param name="region" value="$PARAM[region]" />
 						</include>
 						<include content="img_multiart_unfocused" condition="$EXP[multiart_window]">
-							<param name="visible" value="Container($PARAM[id]).OnNext + Integer.IsGreater(Container($PARAM[id]).NumItems,1) + [[String.IsEqual(Container(9300).ListItem.Property(next_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(next),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(next),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_shown] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- C1: or the focus's held slide, while 9300 still holds the embedded list's serve (as Strip's) -->
+							<param name="visible" value="Container($PARAM[id]).OnNext + Integer.IsGreater(Container($PARAM[id]).NumItems,1) + [[String.IsEqual(Container(9300).ListItem.Property(next_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(next),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(next),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_slide_current] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- C1: or the focus's held slide, while 9300 still holds the embedded list's serve (as Strip's) -->
 							<include content="$PARAM[ani_dim_leave]"><!-- C1: the slide dims with the art -->
 								<param name="condition" value="[[$PARAM[dim_neighbours]] + [[!Container($PARAM[id]).OnNext + $EXP[container_scrolling_$PARAM[region]_next] + [$PARAM[right_visible]]] | [$PARAM[overlay]]]] | [Container($PARAM[id]).OnNext + [$PARAM[dim_focus]]]" />
 							</include>
@@ -269,7 +269,7 @@
 						</include>
 						<animation effect="slide" end="$PARAM[offright_slide],0" time="Default_Transition_1x" tween="sine" easing="inout" reversible="false" condition="!Container($PARAM[id]).OnPrevious + $EXP[container_scrolling_$PARAM[region]_prev] + Control.HasFocus($PARAM[id]) + ![$PARAM[right_visible]]">Conditional</animation><!-- C1: on to the right edge, past the details -->
 						<include content="img_multiart_unfocused" condition="$EXP[multiart_window]">
-							<param name="visible" value="Container($PARAM[id]).OnPrevious + Integer.IsGreater(Container($PARAM[id]).NumItems,1) + [[String.IsEqual(Container(9300).ListItem.Property(previous_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(previous),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(previous),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_shown] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- as the exit lane's -->
+							<param name="visible" value="Container($PARAM[id]).OnPrevious + Integer.IsGreater(Container($PARAM[id]).NumItems,1) + [[String.IsEqual(Container(9300).ListItem.Property(previous_pos),Container($PARAM[id]).CurrentItem) + [String.StartsWith(Container(9300).ListItem.Property(previous),$PARAM[id]/) | !String.Contains(Container(9300).ListItem.Property(previous),/)] + !String.IsEmpty(Container(9300).ListItem.Art(multiart))] | [$EXP[multiart_slide_current] + String.IsEmpty(Container(9300).ListItem.Art(multiart))]]" /><!-- as the exit lane's -->
 							<include content="$PARAM[ani_dim_leave]"><!-- C1: the slide dims with the art -->
 								<param name="condition" value="[[$PARAM[dim_neighbours]] + [[!Container($PARAM[id]).OnPrevious + $EXP[container_scrolling_$PARAM[region]_prev] + [$PARAM[right_visible]]] | [$PARAM[overlay]]]] | [Container($PARAM[id]).OnPrevious + [$PARAM[dim_focus]]]" />
 							</include>
